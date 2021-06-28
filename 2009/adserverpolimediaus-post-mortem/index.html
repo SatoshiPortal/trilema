@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>adserver.polimedia.us, post mortem. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Joe Bidden Reales<br />La Al Paispcelea Congres!
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-1393"><div class="post" id="post-1393">                    <h1><a href="http://trilema.com/2009/adserverpolimediaus-post-mortem/" rel="bookmark" title="Permanent Link to adserver.polimedia.us, post mortem.">adserver.polimedia.us, post mortem.</a></h1>                        <div class="date">                                     Wednesday, 20 May, Year 1 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Am inceput, cum poate stiti, <a href="http://trilema.com/2009/adserverpolimediaus/">un proiect</a> care intentiona sa ajute blogeri mai putin cunoscuti sa devina mai cunoscuti, cu doua-trei saptamani in urma.</p>
+<p>Cauza imediata a fost o anumita perceptie a mea. Mi s-a parut mie ca una dintre putinele pareri comune, impartasite de o vasta majoritate intre blogerii mici este ca ar exista o diferenta intre calitatea activitatii lor, si masura recunoasterii ei. Cu alte cuvinte, ca la cat de buni sunt ei, personal, ar merita sa fie mai cunoscuti. Eu cred, cel putin intr-o anumita masura, ca exista o legatura, oricat de delicata, dar in general prezenta, intre consensul social si adevar. Sigur, se pot da nenumarate exemple de isterie de grup, in care toata lumea jura ca albu-i negru, pana pe chiar fundul prapastiei.</p>
+<p>Pe langa aceasta cauza sa-i zicem punctuala, mai exista si o cauza profunda. Romania are ceva peste douazeci de milioane de locuitori. La acesti douazeci de milioane de locuitori, Romania are, dupa estimarile mele, intre 80,000 si 100,000 de bloguri (dupa zelist, are ceva peste 30,000). Dintre acestea, active sunt probabil intre 5 si 10 mii (dupa zelist, cam 3). Aceasta stare de fapt este in sine ridicola, Statele Unite au, la o populatie cu un ordin de marime mai mare, o blogosfera mai mare cu patru ordine de marime. Patru. </p>
+<p>Daca am vorbi despre consumul de sapun, pastrand proportiile Romaniei i-ar reveni cam 20-30 grame pe cap de locuitor. Anual. Asta inseamna 4 ordine de marime, SUA consuma 30 kg/an, Europa de Vest 20 kg/an, Romania 20 grame / an, adica 0.05 grame pe zi. Indeobste consumul de sapun per capita se considera a fi o masura a civilizatiei unui loc. Daca numarul de bloguri per capita este in orice fel o indicatie ori masura a civilizatiei, Romania se afla cu drag in Evul Mediu.</p>
+<p>In aceste conditii, o perceptie a blogerilor mici ca ar fi pe nedrept marginalizati poate, cel putin in principiu, sa descrie o situatie reala, asa ca m-am gandit ca ar merita facuta o proba.</p>
+<p>Abuzand de faptul ca sunt si Director General, si proprietar la SC Polimedia SRL, am condus un proiect pentru a implementa aceasta proba. In cadrul acestui proiect, eu am facut designul, scris specificatiile si asigurat managementul, alte doua persoane au executat codul php, si o alta persoana a pregatit arhitectura bazei de date. In total, eu am lucrat pe design si spec cam 4 ore, si cei trei au finalizat implementarea in inca 2. Astfel, drumul de la idee la produsul finit (ma rog, finit e mult spus, dar un prototip utilizabil) a durat un siderant 6 ore. Am ramas absolut incantat de valoarea si profesionismul acestei echipe.</p>
+<p>Am adaugat apoi un banner pe Trilema, ceea ce a generat o reactie foare importanta in randul cititorilor acestui blog, adica a dumneavoastra. In prima saptamana, cam doua mii de oameni au dat spre zece mii de click-uri, sa vada si ei un blog nou. Am primit treizeci si ceva de emailuri in care mi se atragea atentia ca blogul X sau blogul Y sunt foarte proaste, si in cateva cazuri chiar asupra unor probleme mai serioase. Asta mi-a dovedit clar ca interes exista, in randul cititorilor, si curiozitate cat incape. Imi cer scuze pe aceasta cale, fata de toti, cei care mi-ati scris sa va plangeti, si cei care nu mi-ati scris, daca ati fost in vre-un fel nemultumiti de rezultatul apasarii pe acel banner. </p>
+<p>Datorita acestei reactii foarte pozitive, si interes manifestat de cititori, am fost in masura sa trimit cam 100 de click-uri catre fiecare din cele aproape 70 de bloguri inscrise, doar ca bonus de inscriere. Nu vreau sa insist asupra modului in care aceasta sansa, o mana intinsa, putea fi folosita de catre un bloger inteligent si cu adevarat valoros, am discutat problema <a href="http://trilema.com/2009/sistemul-adserverpolimediaus-mai-pe-larg/">intr-un alt articol</a>. Reactia beneficiarilor, adica, blogerilor mici, m-a socat in doua feluri.</p>
+<p>Pe de-o parte, un domn, pe numele lui <a href="http://reinvented.ro/">Catalin</a>, entuziasmat de idee, s-a apucat si-a creat un <a href="http://www.youtube.com/watch?v=0PORc7tCw4c">filmulet de prezentare</a>, din proprie initiativa, si a mai adus alte importante contributii, care se numesc indeobste evanghelising. Sigur, munca lui poate fi criticata, cum poate fi criticata munca oricui, mai ales de catre persoane ce n-au muncit de cand se stiu. </p>
+<p>Faptul ramane, ca din prima acest proiect si-a gasit un evanghelist dedicat si entuziast. Asa ceva nu-i tocmai de crezut, si trebuie sa recunosc ca am ramas foarte impresionat, de faptul in sine.</p>
+<p>Pe de cealalta parte, am ramas oarecum socat de ideile si comportamentele participantilor. In primul rand, cam 10 din 60-70 de oameni inscrisi n-au reusit sa-si scrie propriul lor link corect, asa incat am fost nevoit sa-l modific eu in baza de date. Oameni buni... cat e anul, 1998 ? Suntem pe AOL ?</p>
+<p>In al doilea rand, mai putin de jumatate - mult mai putin! - au catadixit sa-si puna referral link-ul pe blog. Restul nu l-au pus deloc, s-au l-au scos dupa mai putin de o zi. Dragii mei. Daca te plangi ca n-ai sanse, ca nu ti se da ocazia sa-ti arati valoarea, ca n-ai oportunitati, si un naiv vine sa-ti dea chiar acele sanse, chiar acele oportunitati, si tu-i furi pantofii...</p>
+<p>In al treilea rand, chestia care m-a scos din rabdari cel putin la fel de mult, a fost o anumita atitudine, dupa cum urmeaza : tu fraiere (adica eu, stiti), care vii sa ne ajuti, sa-ti fie clare niste chestii. Sigur ca pe tine te cauta lumea pe strada sa-ti dea bani sa-i pui bannere si link-uri pe trilema ta (a mea, adica), si tu-i refuzi, ca sa ne pui noua, gratis. Si sigur ca la blogurile noastre nu se uita nimeni, ca de-acolo incepu problema. Foarte bine. Dar sa-ti fie clar ca blogu' nostru, asa cum este el, e nemaipomenit, si ala al tau, cat o fi el de grandios dupa numere, e fix vax. Oi fi trimis tu o suta de oameni care sa vina sa ma citeasca pe mine, marele anonim, dar asta nu inseamna ca mie mi se pare normal sa-ti trimit si tie unu', doi, trei cititori inapoi. Nici vorba. </p>
+<p>Sincer va spun ca tot ce mai asteptam la un moment dat era sa-mi ceara sa le platesc hostingul si eventual, conexiunea la internet. Doara daca tot m-am apucat sa ajut, sa ajut cum trebe, nu asa. Si parca ar merge o masina mai buna, si niste bere, si eventual daca le-as face curat pe jos acasa n-ar strica, ca-i plin de chips-uri, mai ales in jurul canapelei.</p>
+<p>Concluzia mea in urma acestui mic experiment, facut, apropo, pe barba mea, si ca design, si ca executie, si ca trafic, sunt doua, si anume : Blogerii mici nu-s mici din nici un alt motiv decat pentru ca asa sunt ei. Blogosfera nu-i in urma la sapun din nici un alt motiv decat pentru ca asa e ea. </p>
+<p>Fundamental, astia suntem, asta putem, atata gandim, si de aia n-avem. Si vom avea atunci cand, si pe masura ce, vom incepe sa fim, sa putem si sa gandim. </p>
+<p>Singura pata de culoare o reprezinta varfurile, exceptiile, care chiar in mijlocul unei gloate absolut gri reusesc sa uimeasca. Deci, nici noi n-avem douazeci de milioane cum au americanii, dar nici ei n-au douazeci de oameni cum avem noi. Tot e ceva, I guess.</p>
+<p>Cu asta eu, lamurindu-mi curiozitatile de la care am inceput, inchei proiectul adserver. Pentru cazul in care cineva doreste sa-l preia si sa-l mentina in continuare, pun la dispozitie codul, sub licenta GPL, mai jos, precum si niste minime explicatii orientative. </p>
+<p><a href="http://trilema.com//codebase/adserver/register.txt">register.php</a></p>
+<ul>
+Acest script permite inregistrarea user-ilor care folosesc un invite valid, de forma ?hash=&#038;id=, cautate in invites.<br />
+Scriptul populeaza baza de date, cu un hash unic pentru a tine evidenta click-urilor furnizate, precum si intrari corespunzatoare in celelalte doua tabele.</ul>
+<p><a href="http://trilema.com//codebase/adserver/index.txt">index.php</a></p>
+<ul>
+Acest script realizeaza redirectarea si numararea clickurilor outbound.</ul>
+<p><a href="http://trilema.com//codebase/adserver/caching.txt">caching.php</a></p>
+<ul>
+Acest script realizeaza numararea click-urilor inbound, si ar trebui rulat o data pe zi.</ul>
+<p>Pentru a folosi aceste script-uri, aveti a crea o baza de date mysql, cu urmatoarele trei tabele : </p>
+<ul>
+<strong>invites</strong>, cu campurile hash si id<br />
+<strong>cache</strong>, cu campurile hashname char(32), volume bigint(20)<br />
+<strong>participants</strong>, cu campurile hashname varchar(32), url varchar(512), user varchar(32), pw varchar(32)</ul>
+
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2009/oare-s-a-gasit-veriga-lipsa/">Oare s-a gasit veriga lipsa ?</a></div>
+                <div class="alignright"><a href="http://trilema.com/2009/n-am-inteles-o-chestie-totusi/">N-am inteles o chestie totusi</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2009/adserverpolimediaus-post-mortem/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2009/adserverpolimediaus-post-mortem/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>37 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-4273" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4273" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Stau si privesc in stare de soc dashboard-ul wp. Zice :<br />
+Word count: 1337<br />
+Cineva acolo sus...</p>
+						</li>
+
+										<li id="comment-4276" class="commentbody"><div class="commenthead"><img alt='Cristian Lisandru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Cristian Lisandru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4276" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>"Blogerii mici nu-s mici din nici un alt motiv decat pentru ca asa sunt ei. Blogosfera nu-i in urma la sapun din nici un alt motiv decat pentru ca asa e ea" - cu asta ai spus totul. Păcat că unii nu au înţeles ce însemna ajutorul ăsta pentru ei.</p>
+						</li>
+
+										<li id="comment-4277" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4277" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Blogul tau imi mananca comentariile, apropo.</p>
+						</li>
+
+										<li id="comment-4278" class="commentbody"><div class="commenthead"><img alt='cacatroll`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">cacatroll</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4278" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Bine. Dumnezeu sa o ierte pe ideea ta. Nu zic ca a fost proasta chiar si de duduie ca vorba aia despre morti nu mai de bine sau cum se zice. Da nu inteleg eu comparatia cu sapunu. Deci daca tu zici ca blogu e de bine atunci ca americani au mai multe bloguri e de bine ca si cum ar consuma mai mult sapun adica sar spala. Da in experienta mea blogul nu e ca un sapun cai mai degraba cum tiai baga un ardei iute in fund. Mai ales blogul de fata ca persoanele de fata se exclud. Deci ca noi navem asa de multe bloguri nui asa de rau. Parerea mea.</p>
+						</li>
+
+										<li id="comment-4279" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4279" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Depinde cum vrei s-o iei, mei cacatrol mei.</p>
+						</li>
+
+										<li id="comment-4280" class="commentbody"><div class="commenthead"><img alt='Cristian Lisandru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Cristian Lisandru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4280" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Ce face el, e nărăvaş? Tot îl mut eu la casa lui, până la urmă, aşa cum mă sfătuiai mai demult... Nu ştiu ce-aş putea face, i-o fi foame. O fi de la temă, de la blogger, de la ochiul şi timpanul, nu pot pentru ca să ştiu. Mulţumesc pentru semnal...</p>
+						</li>
+
+										<li id="comment-4281" class="commentbody"><div class="commenthead"><img alt='Cristian Lisandru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Cristian Lisandru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4281" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>PS - ştii că aceste comentarii de la tine - pe care le aştept cu maximum de interes, recunosc - vin tot timpul la spam, pe akismetul ăla? Care ar fi explicaţia, dacă nu inoportunez?!</p>
+						</li>
+
+										<li id="comment-4282" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4282" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Mane, n-am idee, decat aia ca mai demult, anumiti blogeri mai slabuti asa, chiar si dupa propria lor parere, vazand ei cum de usor e pentru de exemplu eu sa fac blog in cateva luni cum or facut ei in cativa ani, s-or apucat sa dea click pe spam doar doar mai castiga o saptamana de existenta prin [pseudo]topuri.</p>
+<p>Si akismet nu pricepe multe.</p>
+						</li>
+
+										<li id="comment-4283" class="commentbody"><div class="commenthead"><img alt='Cristian Lisandru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Cristian Lisandru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4283" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Aha, pricepui, ce-nseamnă o minte luminată, m-ai scos din bezna profundă... Dacă te mai pune la spam iau akismetul de beregată, îl dau pe brazdă...</p>
+						</li>
+
+										<li id="comment-4284" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4284" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Cred ca esti tu prea generos cu mine :)</p>
+						</li>
+
+										<li id="comment-4285" class="commentbody"><div class="commenthead"><img alt='Cristian Lisandru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Cristian Lisandru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4285" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Dăm Cezarului ce este al Cezarului...</p>
+						</li>
+
+										<li id="comment-4287" class="commentbody"><div class="commenthead"><img alt='Baba Leana`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Baba Leana</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4287" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>Eu recunosc cinstit ca am avut trafic aproape triplu cand m-am inscris. Dar vreau sa zic ca mi-a parut ciudata chestia, adica de exemplu de la Trilema se vedeau venite x clicks dar sa zic 1/ 3 din ele erau cu time 0:00 ceea ce mie mi s-a parut suspect.</p>
+						</li>
+
+										<li id="comment-4292" class="commentbody"><div class="commenthead"><img alt='gala`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">gala</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4292" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>marea bulina neagra a generatiei 2000 este ca nu stie sa aprecieze o mana care se intinde sa o ajute, pacat mare pacat ca unii faca eforturi gratuite sa traga pe altii din prapastie si ei altii dau cu pietre<br />
+nu aruncati margaritarele porcilor nu vor stii ce sa faca cu ele!</p>
+						</li>
+
+										<li id="comment-4296" class="commentbody"><div class="commenthead"><img alt='Constantin`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Constantin</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4296" title="">Wednesday, 20 May 2009</a>
+							</div>
+						<p>buna dimineata.. si Amin. </p>
+<p>alegeti voi ce se poate spune. </p>
+<p>1. sa le fie de bine.<br />
+2. de unde nu e nici Dumnezeu nu cere.<br />
+3. mare e gradina Domnului, ea are portile deschise, dar am vazut cativa sarind gardul. </p>
+<p>Na Mircea ca ai fost si acuzat ! 0:00 la time.. :)</p>
+<p>Data viitoare cand mai ai ideei bune si gratis... ai grija. </p>
+<p>Cateodata e melanj, cateodata e pamant amar. </p>
+<p>O idee super, pacat ca s-a terminat asa.</p>
+						</li>
+
+										<li id="comment-4298" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4298" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>@<b>Cristian Lisandru</b> Acu, gluma, negluma, cand eram mic am fost la ceva sindrofie si m-or intrebat ce vreau sa fiu cand voi fi mare, si-am zis ca Cezar! (tocmai vazusem Cleopatra, si-mi placuse mie asa ideea).</p>
+<p>@<b>Baba Leana</b> Daca stai si te gandesti putin, realizezi ca notiunea de "timp petrecut pe site" nu are alt sens decat ca interval, si anume, intervalul dintre accesarea a doua pagini. Daca omul a intrat pe o singura pagina, notiunea de timp pe site nu are sens. Google Analytics, si alaturi de el altii, noteaza aceste vizite ca "0:00". </p>
+<p>E bine ca-ti da de gandit faptul ca 1/3 din vizitatori n-au gasit de cuviinta sa incarce o a doua pagina la tine pe site. Ce nu inteleg e de ce nu-ti da de gandit despre insasi continutul blogului respectiv.</p>
+<p>@<b>gala</b> N-as lua lucrurile chiar asa dramatic. Pana la urma, cercetarea consta in a incerca chestii, si beneficiile cercetarii nu sunt ale chestiilor incercate, ci ale celor care incearca. Asta, privind lucrurile din punctul de vedere egoist, al interesului meu personal. Social vorbind, ma gandesc ca ai dreptate.</p>
+<p>@<b>Constantin</b> lol @3. Nu-i bai, noi sa fim sanatosi.</p>
+						</li>
+
+										<li id="comment-4299" class="commentbody"><div class="commenthead"><img alt='Marian Smarandache`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Marian Smarandache</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4299" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>Stimate domnule,</p>
+<p>Va citesc de mai multe luni deja, dar n-am indraznit sa va scriu pana acum, pentru ca nu am simtit ca voi putea contribui ceva la un nivel comparabil cu articolele dumneavoastra. Nu sunt foarte sigur nici acum, totusi, voi incerca.</p>
+<p>Am urmarit acest proiect cu interes, nu inteleg foarte bine chestiunile de detaliu care-l compun, dar imi amintesc ca am notat la inceputul lunii mai o impresie in jurnal. Imi permit sa o reproduc :</p>
+<p>"Sunt fascinat de felul in care se repeta istoria Romaniei. Acum douazeci de ani , cu cateva zile in plus sau in minus, romani care traisera in afara tarii veneau inspre tara, manati de un gand comun, si induiosator de simplu : hai sa va ajutam. In ton cu alte cerinte, alte obiceiuri, alt curs al vietii, acesti oameni propuneau idei si aveau planuri, unele mai adecvate, altele mai putin, unele mai practicabile, altele mai putin, dar toate avand in comun o caracteristica : o anumita complexitate, o anumita luxurianta a detaliului gandit si pregatit care lipsea in practica comuna aproape cu desavarsire.</p>
+<p>Am vazut zilele trecute pe internet, intr-un blog numit interesant "Trilema", o propunere care mi-a facut exact aceeasi impresie, si mi-a amintit, acut ca o durere intr-un membru fantoma, de acele vremuri de la inceputurile... continuarii, sa o numi astfel. Autorul ei, un tanar care a petrecut dupa cum s-ar parea jumatate din ultima decada de cealalta parte a Atlanticului. </p>
+<p>Se va repeta oare istoria acestei tari nenorocite, la fel de fiecare data cand incepe cate ceva, pe oricare noi meleaguri, la debarcarea pe oricare tarmuri ?"</p>
+<p>Felul in care a continuat discutia atunci, si naufragiul - pentru mine, cu foarte mult regret, perfect previzibil - imi confirma premonitiile de atunci. Noi nu ne vindem blogul, stimati domni. Pentru ca asa cum bine spune dl. Popescu (care, bineinteles, n-a mancat Internet cu soia) : "Fundamental, astia suntem, asta putem, atata gandim, si de aia n-avem. Si vom avea atunci cand, si pe masura ce, vom incepe sa fim, sa putem si sa gandim."</p>
+<p>Ma tem ca nu vom avea niciodata, pentru ca noi pur si simplu suntem.</p>
+<p>Cu regretul ca niste midgale,<br />
+Marian Smarandache.</p>
+						</li>
+
+										<li id="comment-4301" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4301" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>@<b>Marian Smarandache</b> Nu m-as sfii, pe viitor. Pot spune ca acest blog exista cel putin pe jumatate pentru a-mi permite sa citesc pareri precum a dumneavoastra. Cele bune, cu multumiri.</p>
+						</li>
+
+										<li id="comment-4303" class="commentbody"><div class="commenthead"><img alt='urangutanita`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">urangutanita</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4303" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>Mircea, imi pare rau ca renunti si hai sa nu vorbim de moarte aici. Proiectul a intrat in vacanta, a lucrat putin si acum se bucura de vremea frumoasa de afara :)  Imi pare rau ca inca nu am apucat sa il promovez decat pe vreo 2 dintre blogurile pe care le mai citesc.</p>
+<p>Cateva observatii </p>
+<p>1. un proiect, fie el adserver, fie blog mic si istetz, trebuie promovat , nu e imoral sa te promovezi, cat timp o faci fara a leza interesele altora. Altfel nu e cunoscut si punct</p>
+<p>2. ca sa promovezi trebuie sa adaptezi discursul la nivelul de intelegere al targetului. Nu ii supraestima, un mesaj simplu ajunge mai repede la oricine.<br />
+Cei care iti folosesc in calitate de cititori proiectul, se asteapta totusi sa vada ceva cam de acelasi nivel. </p>
+<p>3. Nu m-am prins cine e Baba Leana, cred ca am dat si eu destule clicuri de durata 0:00 : daca vad o pagina cu un titlu si 2 randuri de text, si 40 de randuri in care se face ....loading... un clipulet de youtube sau chiar o poza de juma de ecran, voi da next fara sa ma gandesc prea mult. Daca vreau youtube ma duc direct acolo.</p>
+<p>4. Incerc o mica categorisire:</p>
+<p>Lumea oamenilor de pe net (cu blog sau fara)  pare ca se imparte ori in persoane Web-alfabetizate (sa zicem cei care stiu ce e aia refferal) , mare parte din ei nu prea au alte preocupari si interese in afara celor de gen + cele primare, eventual un hobby trendistic, capacitatea de exprimare si gramatica sufera, desi logica poate sa fie bunicica.<br />
+Puteti veni cu multe contraexemple, exceptiile vor iesi la suprafata pentru ca acopera si partea 2.<br />
+Partea a doua, cei care stiu sa faca un eseu cu introducere si concluzie, sau macar sa scrie o fraza coerenta si sa aduca in discutie mai multe subiecte de cultura generala, care fac uneori lucruri minunate cu ajutorul tehnicii, dar care nu se simt pe terenul lor atunci cand e vorba de clicks, cod, tracking, analytics, embed, and so on... Unii apeleaza la ajutor cand trebuie sa schimbe un link din blogroll. ... Pe de alta parte, ei sunt cei care pot aduce un suflu nou in lumea web, diversificand "pe orizontala" subiectele de discutie. Oricine a cautat informatii specific romanesti, sa zicem, date despre o ruina ciudata dintr-un sat obscur, poate confirma ca sunt zone vaste in care internetul romanesc nu spune inca nimic. </p>
+<p>Cred ca totul vine de la distinctia prea fatisa real/uman din liceu si din mintile parintilor... aa, copilul asta e artist si asta e un mic inginer....</p>
+<p>dar sa nu divaghez prea mult, oricum teoria cu cele 2 categorii se cam verifica. Daca va intrebati in ce categorie bag Trilema, e la categoria exceptii :)</p>
+						</li>
+
+										<li id="comment-4305" class="commentbody"><div class="commenthead"><img alt='mugur`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">mugur</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4305" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>:), am ras un pic, pentru modul in care ai expus post mortemul, probabil ca asa e, cum spui.  :)<br />
+dar astia-s oamenii si asta e, de multe ori vad ca e important sa ceri, nu sa dai, plus ca daca nu pricep din prima, multi au tendinta sa se apere.<br />
+nu stiam de ce nu mai functioneaza link-ul, am dat si un alt mail pentru detalii inainte, insa nu citisem obituarul, acum stiu de ce.</p>
+<p>numai bine si buna treaba. idee: poate vrea catalin sa mearga mai departe.</p>
+						</li>
+
+										<li id="comment-4308" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4308" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>@<b>urangutanita</b> Hehe imi place cum gandesti. Post-mortem nu vrea sa zica de moarte, e un termen din IT, dupa ce se sfarseste ceva, se face un post-mortem, adica un raport de ce-o fost, ca o disectie. Cel mai adesea dupa ce trebe' resetat un calculator (pe linux, se asteapta ca sistemul sa ruleze fara intreruperi ani la rand).</p>
+<p>Promovare fu facuta, au fost selectati si invitati sa participe peste 500 de blogeri. Comunicarea poate ca a suferit asa cum spui tu, eu am preferat o comunicare corecta uneia persuasive.</p>
+<p>Observatia ta ca sunt foarte multe zone de care internetul romanesc n-a auzit inca e foarte corecta, si mai multa lume competenta observa chestia asta in decursul timpului. Si da, o impartire real-uman e o tampenie atroce, mai ales daca internetul si calculatorul sunt percepute ca "ale uneia". E de fapt o prelungire a tampeniei cu barbati-femei, si anume, fuste si pantaloni, rujuri si tigari, masini de mers pe strada si masini de gatit, etc. Tu daca esti barbat ai datoria sa nu stii fierbe un ou, si tu daca esti umanist ai datoria sa nu stii unde vine ; pe tastatura. Tampenii.</p>
+<p>@<b>mugur</b> Poate mergi chiar tu insuti, codu-i acolo, nu-i chiar asa greu. Chiar daca nu-ti iese nimic, inveti ceva sigur.</p>
+						</li>
+
+										<li id="comment-4311" class="commentbody"><div class="commenthead"><img alt='romania inedit`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink">romania inedit</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4311" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>Mircea , cand eu am zis ca nu trebuie sa dai decat un click bonus , tu ce ai scris ?<br />
+Facerea de bine este invatare de minte pentru alta data ! ;)<br />
+mai bine iti puneai niste emoticoane la comentarii !</p>
+						</li>
+
+										<li id="comment-4314" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4314" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>Hehe, asta e, asa cum zici si tu.</p>
+<p>Am avut emoticoane, dar le-am scos, pentru ca din ceva motiv parserul  avea impresia ca cine foloseste emoticoane e spammer. Ceea ce, intr-un fel, mi s-a parut o gluma reusita a inteligentei artificiale care este el :D</p>
+						</li>
+
+										<li id="comment-4315" class="commentbody"><div class="commenthead"><img alt='romania inedit`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink">romania inedit</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4315" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>Al meu nu crede asta !  ;)</p>
+						</li>
+
+										<li id="comment-4332" class="commentbody"><div class="commenthead"><img alt='Sensio`s avatar' src='http://www.sensio.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink"><a href='http://www.sensio.ro' class='url'>Sensio</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4332" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>Salut. RIP si utile scripturile, thanks!</p>
+						</li>
+
+										<li id="comment-4334" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4334" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>@sensio Tu sa fii sanatos.</p>
+						</li>
+
+										<li id="comment-4357" class="commentbody"><div class="commenthead"><img alt='făniţă`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">26</div>
+								<span class="authorlink">făniţă<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4357" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>şi totuşi se învârteşte! :) :D</p>
+<p>adică, am dat click pe bannerul de pe site-ul meu şi am ajuns la tine! :D</p>
+						</li>
+
+										<li id="comment-4359" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">27</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-4359" title="">Thursday, 21 May 2009</a>
+							</div>
+						<p>WOOT, am castigat un cititor :D</p>
+						</li>
+
+										<li id="comment-32828" class="commentbody"><div class="commenthead"><img alt='Alibaba.Nasrulla`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">28</div>
+								<span class="authorlink">Alibaba.Nasrulla</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-32828" title="">Sunday, 3 October 2010</a>
+							</div>
+						<p>&#1605;&#1585;&#1610;&#1590; &#1581;&#1578;&#1609; &#1575;&#1604;&#1605;&#1608;&#1578; &#1578;&#1607;&#1576; &#1575;&#1604;&#1605;&#1575;&#1604; &#1593;&#1604;&#1609; &#1605;&#1575; &#1610;&#1587;&#1605;&#1609; &#1576; "&#1575;&#1604;&#1587;&#1610;&#1585; &#1575;&#1604;&#1601;&#1608;&#1585;&#1603;&#1587;" &#1575;&#1604;&#1584;&#1610; &#1608;&#1593;&#1583; &#1576;&#1607; "&#1571;&#1610; &#1582;&#1587;&#1575;&#1574;&#1585;" &#1608;&#1610;&#1606;&#1578;&#1607;&#1610; &#1575;&#1594;&#1578;&#1589;&#1575;&#1576; &#1581;&#1587;&#1575;&#1576;&#1603; &#1575;&#1604;&#1570;&#1604;&#1575;&#1601;&#1567; &#1578;&#1593;&#1604;&#1605; &#1587;&#1585;&#1575; &#1571;&#1606; &#1578;&#1581;&#1608;&#1604;&#1578; &#1571;&#1582;&#1610;&#1585;&#1575; &#1573;&#1604;&#1609; &#1587;&#1608;&#1602; &#1575;&#1604;&#1593;&#1605;&#1604;&#1575;&#1578; &#1575;&#1604;&#1571;&#1580;&#1606;&#1576;&#1610;&#1577; &#1576;&#1604;&#1583;&#1610; &#1575;&#1604;&#1589;&#1585;&#1575;&#1601; &#1575;&#1604;&#1570;&#1604;&#1610; &#1575;&#1604;&#1582;&#1575;&#1589; &#1578;&#1605;&#1575;&#1605;&#1575; &#1593;&#1604;&#1609; &#1575;&#1604;&#1591;&#1610;&#1575;&#1585; &#1575;&#1604;&#1570;&#1604;&#1610;... &#1576;&#1594;&#1590; &#1575;&#1604;&#1606;&#1592;&#1585; &#1593;&#1606; &#1605;&#1575; &#1578;&#1578;&#1605;&#1578;&#1593;&#1608;&#1606; &#1576;&#1607; &#1605;&#1606; &#1582;&#1576;&#1585;&#1577; &#1548; &#1608;&#1607;&#1584;&#1575; &#1575;&#1604;&#1593;&#1605;&#1604; &#1576;&#1575;&#1604;&#1606;&#1587;&#1576;&#1577; &#1604;&#1603;!<br />
+&#1607;&#1604; &#1610;&#1605;&#1603;&#1606; &#1571;&#1606; &#1610;&#1603;&#1608;&#1606; &#1610;&#1608;&#1605; &#1593;&#1591;&#1604;&#1577; &#1601;&#1610; &#1580;&#1586;&#1585; &#1575;&#1604;&#1576;&#1575;&#1607;&#1575;&#1605;&#1575; &#1548; &#1601;&#1610; &#1581;&#1610;&#1606; &#1571;&#1606; &#1607;&#1584;&#1607; &#1575;&#1604;&#1582;&#1583;&#1605;&#1577; &#1601;&#1585;&#1610;&#1583;&#1577; &#1605;&#1606; &#1606;&#1608;&#1593;&#1607;&#1575; &#1578;&#1605;&#1578;&#1589; &#1571;&#1603;&#1608;&#1575;&#1605; &#1605;&#1606; &#1575;&#1604;&#1571;&#1585;&#1576;&#1575;&#1581; &#1573;&#1604;&#1609;&#1581;&#1587;&#1575;&#1576;&#1603;!</p>
+<p>&#1580;&#1585;&#1576;&#1607;! &#1578;&#1601;&#1575;&#1589;&#1610;&#1604; &#1593;&#1606;<br />
+&#1571;&#1601;&#1590;&#1604; &#1585;&#1608;&#1576;&#1608;&#1578; &#1578;&#1580;&#1575;&#1585;&#1577; &#1575;&#1604;&#1601;&#1608;&#1585;&#1603;&#1587;</p>
+						</li>
+
+										<li id="comment-32842" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">29</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-32842" title="">Sunday, 3 October 2010</a>
+							</div>
+						<p>O hey, arabic spam. Cool!</p>
+						</li>
+
+										<li id="comment-43899" class="commentbody"><div class="commenthead"><img alt='Critic`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">30</div>
+								<span class="authorlink">Critic</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-43899" title="">Saturday, 12 March 2011</a>
+							</div>
+						<p><i>1337</i></p>
+<p>ha ha, very funny. 1337 54h47 593k1n6 nu inseamna tocmai h4xor.</p>
+<p>sunt chiar curios care-o' fi superhackerul ala de a folosit el 1337, ca mie imi suna a povestiri de interneţi.</p>
+						</li>
+
+										<li id="comment-43905" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">31</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-43905" title="">Saturday, 12 March 2011</a>
+							</div>
+						<p>Io banui ca tu ori nu citesti ori nu intelegi. Care din doua-i ?</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-132933">
+					<div class='trackhead'>
+						<div class="commentcount">32</div>
+						<span class="authorlink"><a href='http://trilema.com/2009/romanii-si-munca?b=Si%2C%20ce%20cere%20&amp;e=%20imi#select' class='url'>Romanii si munca. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132933" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] Si, ce cere el sa-i dau, nu asa ce am eu, ce-i aici ? Am mai intalnit aceasta atitudine nu doar ultima oara cand am vrut sa ajut niste romani si-am documentat ce-o iesit, dar de fiecare data de cand imi [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-133975">
+					<div class='trackhead'>
+						<div class="commentcount">33</div>
+						<span class="authorlink"><a href='http://trilema.com/2010/marian-stavaroiu-cel-mai-prost-dintre-paminteni?b=Nu%20mi-e%20clar&amp;e=arut#select' class='url'>Marian Stavaroiu, cel mai prost dintre paminteni on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-133975" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] Nu mi-e clar daca-i acelasi cu numitul Marian Smarandache, dar banuiesc ca nici intr-un caz, nu datorita diferentei de stil cit datorita faptului ca a aparut [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-134074">
+					<div class='trackhead'>
+						<div class="commentcount">34</div>
+						<span class="authorlink"><a href='http://trilema.com/2010/imi-displac-figurantii?b=ne%20recunoast&amp;e=este#select' class='url'>Imi displac figurantii on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-134074" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] ne recunoastem si sa ne asumam greselile, de inca un exemplu. Exemple se pot gasi, ca-s cu duiumul. Sa punem vizitatori in fata blogerilor care se pling ca-s valorosi dar totusi, inexplicabil, conspirativ, nu-i citeste [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-134389">
+					<div class='trackhead'>
+						<div class="commentcount">35</div>
+						<span class="authorlink"><a href='http://trilema.com/2011/delasarea?b=Romanul%20se%20t&amp;e=ile.#select' class='url'>Delasarea on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-134389" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] Romanul se teme ca de foc si se fereste cu toate puterile lui sa nu cumva sa fie fraier. Asta e principala lui groaza, frica, teama si fobie, ca s-ar putea sa fie fraier, sau sa se poarte ca un fraier, sau sa fie luat drept fraier. Asta-i nemesisul romanului, fraierul, si aceasta spaima irationala ii duce uneori discursul in cele mai ridicole fundaturi, si-i limiteaza ascutit oportunitatile. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-134873">
+					<div class='trackhead'>
+						<div class="commentcount">36</div>
+						<span class="authorlink"><a href='http://trilema.com/2011/statistica-da-rezultate-uimitoare?b=asta%20pare%20co&amp;e=a%20ca#select' class='url'>Statistica da rezultate uimitoare... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-134873" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] asta pare contraintuitiv. Pe un site creat pentru a da o sansa la expunere globala acelor "blogeri mici" care altfel se pling ca nu au sanse sa acceada la asa ceva, si intr-o lume construita pe teoria ca [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-137270">
+					<div class='trackhead'>
+						<div class="commentcount">37</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/blogul-meu-nu-are-succes-ce-i-de-facut?b=este%20Ghid%20pe&amp;e=da%22.#select' class='url'>Blogul meu nu are succes! Ce-i de facut ?!?!?! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-137270" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] este Ghid pentru inocenti, scris special. [&#8617;]Voi credeti ca glumesc da' nu glumesc deloc, e foarte adevarat. [&#8617;]Bai pe bune, tipul merita link-ul la faza asta, e un exemplu canonic de "asa da". [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="1393" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832948-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-1393")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-1393");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-1393");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

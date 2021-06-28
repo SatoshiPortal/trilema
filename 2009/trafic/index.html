@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Trafic. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The scandalous blog of a sexual predator.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-421"><div class="post" id="post-421">                    <h1><a href="http://trilema.com/2009/trafic/" rel="bookmark" title="Permanent Link to Trafic.">Trafic.</a></h1>                        <div class="date">                                     Wednesday, 18 February, Year 1 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Tin minte o vreme cand "trafic" era de rau. Mai la-nceput insemna ca te-or baga comunistii la inchisoare ca te-or prins cu mai multa ciocolata decat era ingaduit cetateanului multi-lateral dezvoltat (adica 0), ori doamne fereste cu prezervative sau ceva. Mai dupa abuziv-impuscarea conducatorului iubit, insemna tot de rau, ca umblai cu gagici, arme, droguri, lucruri grele.</p>
+<p>Trecut-au anii ca nori lungi pe sesuri, asa, vre-o zece, si se descoperi nu doar Internetul, ci de-a dreptul blogul si-n scumpa noastra patrie, cu intarzierea de rigoare. Acum, toata lumea vrea trafic, are trafic, n-are trafic, destul ori insuficient, conteaza, se compara, se deduce, se genereaza...</p>
+<p>Bine. Dar ce este, pana la urma, traficul asta pe stil nou ?</p>
+<p>Este doua lucruri, care-s trei. Astea trei sunt asa :<br />
+<strong>Uniques.</strong> Fiecare calculator de pe Internet are o adresa, unica, 8 octeti doar ai lui, grupati cate doi. Ceva de genul 78.197.66.166. I se mai spune is IP, care e prescurtarea de la IP address, care e prescurtartea de la Internet Protocol address. Deci, tehnic vorbind, 78.197.66.166 nu-i "IP-ul unui calculator", ci "IP address-ul unui calculator", dar sa trecem.</p>
+<p>Aceste adrese sunt unice dintr-o necesitate absoluta. Cand X vorbeste cu Y pe retea, X are nevoie de o metoda pentru a-l identifica pe Y in mod unic, deosebit de toti ceilalti Z ce-or fi si ei pe acolo. Ca atare, fiecare calculator are numarul lui, si aia-i adresa.</p>
+<p>Uniques atunci sunt numarul de adrese distincte cu care discuta un calculator anumit. De exemplu in lista 6,7,9,11,5,6,11,5,11,5,11,7 avem in total 12 numere, dar 5 numere unice : 5,6,7,9,11. Exact la fel se socotesc si uniques : numarul de adrese unice. Daca un website are 100 uniques intr-o zi, asta nu inseamna decat ca 100 adrese diferite au discutat cu serverul in ziua respectiva.</p>
+<p>Problema cu aceasta notiune este ca nu e aditiva. Hai sa ne lamurim printr-un exemplu : Fie ziua I, cu lista 6,7,9,11,5,6,11,5,11,5,11,7  si ziua II, cu lista 4,7,9,4,5,6,3,5,11,5,11,4. Ei, in ziua I avem 12 numere din care 5 unice. In ziua II avem tot 12 numere, din care 6 unice : 4,5,6,7,9,11. Cate numere unice avem atunci in cele <strong>doua </strong> zile, ziua I + ziua II ? 5 + 6 = 11, da ? Nu. Dupa cum puteti constata comparand listele, in total avem de fapt fix 6 numere unice.</p>
+<p>Deci, unicii zilnici din doua zile adunate vor fi in total o valoare anumita (si impredictibila) intre valoarea zilei celei mai mari si suma aritmetica a celor doua zile. Daca n-am fi vazut cele doua liste, si ni se spunea doar, ziua I : 5 unici, ziua II : 6 unici, cati unici total ? Raspunsul nu poate fi altul decat "intre 6 si 11". Nu 11. Nici 6. Ci undeva, intre. Singurul mod de a afla concret e a compara listele.</p>
+<p><strong>Pageviews.</strong> Orice website e format din pagini. Fiecare client care citeste o pagina de pe server o obtine cerand-o serverului, exact asa cum cartile in biblioteca se obtin cerandu-le bibliotecarului. Serverul poate atunci sa numere de cate ori i-au fost cerute pagini.</p>
+<p>Problema cu aceasta masura este ca nu reflecta neaparat ceva anume : Daca un oarecare apasa butonul de refresh din browser de 10 ori, serverul va nota ca pagina cutare i-a fost ceruta de 10 ori. Daca acelasi oarecare seteaza browser-ul pe auto-refresh si se culca, serverul va numara linistit sute de pagini. </p>
+<p><strong>Visits.</strong> A treia idee incearca sa raspunda unor probleme punctuale. La inceputurile Internet-ului ca fenomen de masa, AOL, un provider din SUA, a folosit un sistem prin care relativ multi utilizatori se conectau prin intermediul unui numar relativ mic de gateways, toate avand aceeasi adresa, distributia pachetelor catre clientii finali facandu-se apoi printr-o metoda proprie. Ca rezultat, multi oameni diferiti se vedeau pentru restul Internet-ului ca o singura adresa. </p>
+<p>Pentru a complica si mai bine problema, multi provideri de internet in zilele dial-up foloseau un "pool", adica o lista de adrese IP pentru a conecta un numar relativ mare de utilizatori. Daca spre exemplu AT&#038;T avea 10,000 de utilizatori de Internet prin dial-up, si 3,000 de adrese IP, ficare utilizator care se conecta la Internet primea alocata o adresa disponibila. Odata ce inchidea conexiunea, adresa revenea disponibila. In principiu, aceeasi adresa putea servi in aceeasi zi pentru a conecta la Internet sute de oameni diferiti.</p>
+<p>In plus, serverele proxy, si routere NAT aplica cam aceeasi abordare, pe o scara mai mica. Eu scriu aceste randuri, spre exemplu, de pe un calculator conectat la internet printr-un router NAT. Alaturi de acest calculator, prin acelasi router se mai conecteaza altele doua. De pe oricare dintre ele as scrie eu, Internet-ul ar vedea acelasi IP - al router-ului. Ele sunt, totusi, calculatoare diferite, si ar putea fi folosite de oameni diferiti, la etaje diferite ori in cladiri diferite, oameni ce poate nici nu se cunosc intre ei.</p>
+<p>Si mai important, acelasi utilizator poate citi pagini ale aceluiasi website de pe calculatoare (si adrese IP) diferite. Spre exemplu, acasa si la birou, sau la plimbare oprind in fiecare Internet Cafe.</p>
+<p>Teoretic vorbind, s-ar putea introduce criterii pentru a identifica o "vizita", independent strict de IP, ca spre exemplu luandu-se in considerare timpii de utilizare (daca un calculator acceseaza 5 pagini pe un website in 10 mintue, apoi pauza 2 ore, si apoi din nou, 6 pagini in 12 minute se poate spune ca doua "vizite" diferite au avut loc), ori un protocol special cu browser-ul (de exemplu, cookies), sau session-links (adica, vizitand website-ul x, adresa de web nu va fi http://x.com/index.php, ci http://x.com/index.php?sessionid=010111010, diferentiind astfel doi utilizatori intre ei).</p>
+<p>Practic vorbind, nici unul dintre aceste criterii nu masoara un lucru anumit cu vre-o certitudine precizabila. </p>
+<p>Tocmai de aceea am spus ca sunt doua lucruri care-s trei : Logic vorbind, nu putem masura decat numarul de adrese diferite cu care discutam, si numarul de pagini cerute. Practic vorbind, putem incerca sa masuram cele trei chestii discutate mai sus. </p>
+<p>Evident, toate prostiile astea nu intereseaza, in de sine, pe nimeni. Ce intereseaza lumea este de exemplu un raspuns la intrebarea simpla "Eu contez ?", cu cele doua sub-intrebari, "Cat de mult ?" Si "Pentru cati oameni ?".</p>
+<p>Ei bine, corelatia intre aceste trei intrebari si cele 2-3 masuratori la dispozitie este mai degraba slaba. 10,000 uniques lunari poate sa insemne 120,000 de oameni intr-un an, sau 10,000. 5,000,000 de pageviews poate sa insemne un tiraj echivalent cu al unui ziar mare din New York sau Tokio, sau un program defect pe undeva care citeste cu spume la gura aceasi pagina in fiecare zecime de secunda. Cinci vizite pot fi doi oameni care-au luat o pauza de facut mancare in mijlocul lecturii. </p>
+<p>Numai din aceste motive, si deja este destul de limpede cam cat de putin inseamna "traficul" in termenii intrebarilor cu adevarat angoasante, si asta fara a lua in considerare niste aspecte foarte importante :</p>
+<p>Cine sunt acesti cititori ? "Uniques" se bazeaza pe ideea ca orice doi cititori sunt egali intre ei, dar intuitiv asta e o prostie : Un website citit de 3 clase de liceu, 100 de oameni in total, e tot una cu un website citit de jumatate din participantii la forumul Davos, tot 100 de oameni in total ? As zice ca nu.</p>
+<p>Dar un website citit de 25 de fanatici, credinciosi intr-un cult bizar, e tot una cu un website citit de 25 de motoare de cautare ori agregatoare ? Daca guru scrie ca nu se poate trai fara apa de ploaie indulcita cu miere pe primul, rezultatul vor fi 25 de cumparatori de apa de ploaie indulcita cu miere. Daca scrie acelasi lucru pe al doilea, rezultatul vor fi 25 de scripturi repetand inebunite in mii de locuri chestia cu apa de ploaie indulcita.</p>
+<p>In scurt, gresala de a considera traficul masurabil, asa gresita cum este ea, paleste in comparatie cu stupizenia de a considera traficul fungibil, adica, oricare doua parti egale cu oricare altele doua. Nici vorba de asa ceva.</p>
+<p>Aceste idei sunt intr-o oarecare masura aplicabile, statistic vorbind, pentru website-uri mari (mari, dar la dimensiuni de care nu-i cazul in Romania, vorbim de milioane de utilizatori zilnici, nu anuali) din aceeasi zona de interes. In principiu, intre cei 16 de milioane de cititori ai Wall Street Journal si cei 10 sau 20 de milioane a celor catorva competitori nu exista, statistic vorbind, diferente fundamentale. </p>
+<p>Chiar si aceasta teorie este hazardata, si justificata strict din nevoia de reprezentare a realitatii in termeni economici, nu din vre-o realitate subiacenta. A aplica aceleasi aproximari unor site-uri care obtin o sutime din acelasi trafic, sau chiar in cazuri extreme, unor bloguri ce obtin nu o sutime, ci cateva sute de vizitatori e dincolo de absurd : e ridicol.</p>
+<p>Concluzia care se impune este remarcabil de scurta : Traficul nu exista. Treceti peste.</p>
+
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2009/si-a-murit-blogfestu/">Si-a murit blogfestu</a></div>
+                <div class="alignright"><a href="http://trilema.com/2009/krossfire-sau-vlad-stoiculescu/">Krossfire, sau Vlad Stoiculescu.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2009/trafic/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2009/trafic/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>33 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-1185" class="commentbody"><div class="commenthead"><img alt='Lisandru Cristian`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Lisandru Cristian</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1185" title="">Wednesday, 18 February 2009</a>
+							</div>
+						<p>Citii cu maximum de atenţie, fiindcă unele dintre informaţii îmi erau necunoscute, mea culpa. Dar mă consolai cu gândul că nimeni nu este perfect...</p>
+						</li>
+
+										<li id="comment-1186" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1186" title="">Wednesday, 18 February 2009</a>
+							</div>
+						<p>Tocmai de-aia am si scris cat de explicit, web-ul fiind foarte atractiv social, putini dintre utilizatori apuca sa-l cunoasca sistematic si in profunzime.</p>
+<p>Nu pentru ca lucrurile-s cine stie ce complicate, ca nu-s, dar nici nu se prea gasesc explicate structurat si cu rabdare.</p>
+						</li>
+
+										<li id="comment-1188" class="commentbody"><div class="commenthead"><img alt='Adrian`s avatar' src='http://blog.adrian.mihalcioiu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://blog.adrian.mihalcioiu.ro' class='url'>Adrian</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1188" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>Mircea,</p>
+<p>Legat de irelevanta traficului: DA si NU.<br />
+Da pentru ca nu putem compara vacanta ta si vacanta mea dupa cum ne put ciorapii. Nu pentru ca da, pot compara dupa mirosul ciorapilor cum au evoluat vacantele mele.</p>
+						</li>
+
+										<li id="comment-1194" class="commentbody"><div class="commenthead"><img alt='selfhelp`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">selfhelp</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1194" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>"Concluzia care se impune este remarcabil de scurta : Traficul nu exista. Treceti peste."</p>
+<p>mai exact cum anume nu exista? ... daca traficul nu exista, cum analizezi performanta unui site?</p>
+						</li>
+
+										<li id="comment-1195" class="commentbody"><div class="commenthead"><img alt='Small Wonders`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Small Wonders</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1195" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>chestia cu "numaratul" vizitatorilor unici nu o stiam. ah, si de exp, de ce exista totusi diferente destul de mari intre, sa zicem, rezultatele furnizate de trafic.ro si analytics?</p>
+						</li>
+
+										<li id="comment-1196" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1196" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>@Adrian : Intr-un sens da, Adrian, dar sub care aspect ? Al igienei personale ? Al calitatii produselor anti-put de pe piata ? Al nivelului de testosteron ? Al rezistentei la efort ? Al propensiunii spre umblet ? </p>
+<p>Sigur ca le poti compara, pe ale tale intre ele, dar la fel de bine cum le poti compara cu ale mele : fara sa poti spune concret ce compari de fapt. </p>
+<p>@selfhelp : Notiunea de "performanta unui site" aplicata unor site-uri mici este o notiune vida. Nu are sens. Este de aceeasi valoare intelectuala ca notiunea de a compara "frumusetea" a doua colege de curs. </p>
+<p>E important ca "mici" nu inseamna "oricine cu mai putin trafic decat am eu", sau "oricine cu mai putin trafic decat are bloggerul meu favorit". Mici inseamna site-uri care ating sub o miime din populatia Internet-ului, mici inseamna site-uri sub un milion de unici zilnici. Asta fel de mici.</p>
+<p>@Wonders : Am sa scriu in curand un post in care sa explic in detaliu cam cum apar asemenea diferente, e o discutie mai lunga.</p>
+						</li>
+
+										<li id="comment-1198" class="commentbody"><div class="commenthead"><img alt='taxa auto la valoarea veche`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">taxa auto la valoarea veche</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1198" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>Acest articol l-am citit de la cap la cap si mi-a placut , cu exceptia finalului .<br />
+Cel mai tare imi placu exemplu cu " daca acelasi oarecare seteaza browser-ul pe auto-refresh si se culca, serverul va numara linistit sute de pagini " ;)<br />
+Eu cred totusi ca traficul conteaza , chiar daca nu ai de unde sa stii daca te citeste toata scoala cu clasele I-IV din Ciorogarla sau partcipantii forumului Crans Montana !</p>
+						</li>
+
+										<li id="comment-1204" class="commentbody"><div class="commenthead"><img alt='selfhelp`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">selfhelp</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1204" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>@Mircea Popescu &gt;&gt; @selfhelp : Notiunea de “performanta unui site” aplicata unor site-uri mici ...</p>
+<p>Sa presupunem ca exista un site care vinde periute de dinti (or whatever produs de nisa). Sa presupunem ca din 100 de vizitatori targetati cumpara unul, iar media este undeva in jur de 1-2% in functie de calitatea sursei traficului. Procentul de conversie in vanzari sau leads variaza in functie de "oferta" care e scrisa pe site, mai exact in "vrajeala" cu care vinzi pasta de dinti.</p>
+<p>Deasemenea procentul de conversie la vanzari sau leads e influentat de mesajul publicitar (bannere, text, etc) de pe siteurile care aduc traficul.</p>
+<p>Crezi ca tooluri precum split-testing, multivariate testing (ex: google website optimizer) au fost create degeaba?</p>
+<p>Si da, toate astea sunt la fel de importante si pentru un site nu mic cum zici tu, ci minuscul, poate cu 100-200 vizitatori zilnici.</p>
+<p>Poate siteul ala e pe nisa de barci cu motir, si are 100 vizitatori si unul cumpara o barca de $100k, iar comisionul este 10%.</p>
+<p>Conteaza sau nu?</p>
+<p>Nu trebuie sa fii neaparat amazon ca sa faci analiza de performanta pe trafic.</p>
+<p>Argumentele tale nu m-au convins ca traficul nu exista si performanta este vida. Sunt la fel ca cele teologice, uneori suna bine, dar coerenta logica este 0. No offense.</p>
+						</li>
+
+										<li id="comment-1206" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1206" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>Stai frate. Tu vorbesti de site-uri de vanzari. Nu discut aici asa fungibilitatea traficului de porn, de exemplu. Evident, oamenii ce vor sa cumpere ceva sunt toti echivalenti cu alti oameni ce vor sa cumpere acelasi ceva, si asta face rationamentele statistice de mai sus mult mai bine intemeiate.</p>
+<p>Dar eu vorbeam de site-uri content-based, ca de exemplu bloguri, ziare, site-uri de news, etc.</p>
+						</li>
+
+										<li id="comment-1208" class="commentbody"><div class="commenthead"><img alt='Adrian`s avatar' src='http://blog.adrian.mihalcioiu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink"><a href='http://blog.adrian.mihalcioiu.ro' class='url'>Adrian</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1208" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>Sa spunem ca ceea ce  nu se aseamana, nu se poate compara cu folos ci doar filozofic.<br />
+Orice site de content cum ii zici tu are un target.<br />
+Si poate in timp dezvolta o formula proprie de conversie a calitatii traficului in ceea ce numeste succes.<br />
+De aceea zic: pentru fiecare site in parte traficul/calitatea lui are o relavanta.<br />
+Dreptate ai atunci cand spui ca o comparatie intre site-uri pe baza de trafic e putin relevanta.</p>
+						</li>
+
+										<li id="comment-1210" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1210" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>In masura in care are un target, si niste criterii/principii/doleante, auto-comparatia, sau comparatia istorica asa cum propui tu capata sens, cu atat mai mult cu cat ele sunt mai clar definite.</p>
+<p>Imi pare ca rar se intalneste asa ceva in practica, totusi.</p>
+						</li>
+
+										<li id="comment-1212" class="commentbody"><div class="commenthead"><img alt='Adrian`s avatar' src='http://blog.adrian.mihalcioiu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink"><a href='http://blog.adrian.mihalcioiu.ro' class='url'>Adrian</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1212" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>Exceptand "hit and run!" evaluarea istorica e cea mai solida metoda.</p>
+						</li>
+
+										<li id="comment-1228" class="commentbody"><div class="commenthead"><img alt='făniţă`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">făniţă<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1228" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>sunt curios cum esti clasat daca folosesti wireless-ul intr-un hotspot? de pe telefon, sa zicem.</p>
+						</li>
+
+										<li id="comment-1229" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1229" title="">Thursday, 19 February 2009</a>
+							</div>
+						<p>Pe IP-ul hotspot-ului.</p>
+						</li>
+
+										<li id="comment-1279" class="commentbody"><div class="commenthead"><img alt='făniţă`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">făniţă<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1279" title="">Saturday, 21 February 2009</a>
+							</div>
+						<p>bun. şi dacă te pune cumva mintea să faci prostioare pe acolo, cum dau autorităţile de tine?</p>
+						</li>
+
+										<li id="comment-1281" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1281" title="">Saturday, 21 February 2009</a>
+							</div>
+						<p>Asta cu datul autoritatilor de tine e asa o traznaie.</p>
+<p>Internetul nu are "autoritati", el se bazeaza pe ideea ca oamenii de-or ajuns pe el sunt destul de intelepti incat sa se comporte civilizat din propria lor putere.</p>
+						</li>
+
+										<li id="comment-1285" class="commentbody"><div class="commenthead"><img alt='făniţă`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">făniţă<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1285" title="">Saturday, 21 February 2009</a>
+							</div>
+						<p>nu despre asta ziceam. ci să zicem că, ipotetic ai intra de pe un terminal pe hot-spot ca să goleşti contul altora.</p>
+<p>cum ai putea fi prins dat fiind că tu intri de pe ip-ul hotspotului?</p>
+						</li>
+
+										<li id="comment-1286" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-1286" title="">Saturday, 21 February 2009</a>
+							</div>
+						<p>Ai fi prins asa cum sunt in general prinsi escrocii : dupa urma banilor.</p>
+						</li>
+
+										<li id="comment-5660" class="commentbody"><div class="commenthead"><img alt='Vanessa`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">Vanessa</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-5660" title="">Sunday, 5 July 2009</a>
+							</div>
+						<p>Domnilor...am o problema! Se poate afla IP-ul unui calculator dupa adresa de e-mail?</p>
+						</li>
+
+										<li id="comment-5661" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-5661" title="">Sunday, 5 July 2009</a>
+							</div>
+						<p>Daca te uiti in "Full headers" si scrie acolo, da. Daca nu, nu.</p>
+						</li>
+
+										<li id="comment-5669" class="commentbody"><div class="commenthead"><img alt='Vanessa`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink">Vanessa</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-5669" title="">Sunday, 5 July 2009</a>
+							</div>
+						<p>Am inteles...multumesc frumos!...dar eu nu am trimis e-mail-ul in yahoo., ci la o adressa cu... @oltenia.ro. Crezi ca se poate vedea ip-ul meu? :(</p>
+						</li>
+
+										<li id="comment-5670" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-5670" title="">Sunday, 5 July 2009</a>
+							</div>
+						<p>Depinde daca are scris IP-ul in "Full headers". Mergi frumos si cauti mesajul intre mesajele trimise, si te uiti.</p>
+						</li>
+
+										<li id="comment-5671" class="commentbody"><div class="commenthead"><img alt='Vanessa`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink">Vanessa</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-5671" title="">Sunday, 5 July 2009</a>
+							</div>
+						<p>Da, are :(((...ce nasol, sunt varza!!!! Multumesc tare mult pentru ajutor! O seara buna sa ai!</p>
+						</li>
+
+										<li id="comment-152803" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink">anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-152803" title="">Monday, 13 July 2020</a>
+							</div>
+						<p>Nua ma, <a href="https://imgur.com/4tpLybu">uite aici</a>, sa se bucure si sufletu tau al negru</p>
+						</li>
+
+										<li id="comment-152808" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-152808" title="">Tuesday, 14 July 2020</a>
+							</div>
+						<p>Da' n-am priceput, asta e ceva nou sau ? Doara Trilema se caca de la-natlime-n capu' impresarilor de limba engleza de ani si ani de zile, cum s-o cacat si-n capu' acelorasi tristi da' de limba romana cu ani in urma, iegzact la fel. Tu n-ai stiut ?</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-134285">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://trilema.com/2011/scandalul-si-promovarea?b=serveasca%20tr&amp;e=stii#select' class='url'>Scandalul si promovarea on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-134285" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] serveasca tre' sa fii mult, da' mult deasupra celuilalt. Nu in termeni de cirje si pseudopode a la trafic, ci in singurii termeni care conteaza : inteligenta, cultura, abilitatea discursiva, chestii [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-134523">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trilema.com/2011/internetcorp-distractia-continua?b=fapt%2C%20daca%20n&amp;e=i%20de#select' class='url'>InternetCorp, distractia continua on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-134523" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] fapt, daca ne apucam si adunam unic cu unic din proiecte diferite (ceea ce-i o timpenie, cum am mai explicat deja, unicii nu-s scalari sa se adune ca greutatile pe teoria ca daca avem cinci fete de cincizeci de [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-134622">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://trilema.com/2011/500k?b=Cardinalitat&amp;e=eja.#select' class='url'>500k on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-134622" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] Cardinalitatea acestui tabel tocmai ce a depasit 500,000. Asta inseamna ca jumatate de milion de IP-uri unice au vizitat Trilema in ultimele ~7 luni. Nu mai intru in discutia diferentei intre unici si "suma unicilor", ca s-a facut deja. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-135147">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://trilema.com/2011/cititorii-nu-conteaza?b=imprejurarea&amp;e=u%20mi#select' class='url'>Cititorii nu conteaza. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-135147" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] imprejurarea ca discutia despre numarul de cititori e la rindul ei confiscata de discutia despre "trafic", intr-o completa si bovina confuzie asupra diferentelor intre cele doua chestiuni. Totusi, nu mi [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-137048">
+					<div class='trackhead'>
+						<div class="commentcount">30</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/studiu-de-lolz?b=cum%20sa%20va%20sp&amp;e=a%20ca#select' class='url'>Studiu de lolz on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-137048" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] cum sa va spun cit de putin relevanti pot fi 10 mii de unici pe zi timp de o saptamina (ceea ce nu, nu inseamna 70 de mii de unici pe saptamina). Ma gindesc ca va prindeti voi. Daca nu putem eventual observa ca [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-137274">
+					<div class='trackhead'>
+						<div class="commentcount">31</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/blogul-meu-nu-are-succes-ce-i-de-facut?b=de%20statistic&amp;e=suta#select' class='url'>Blogul meu nu are succes! Ce-i de facut ?!?!?! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-137274" title="">Monday, 6 January 2020</a>
+					</div>
+					<p>[...] de statistici ? Ca poate n-ai inteles chiar exact cum e cu "masurarea" traficului astuia. Poate nu stii ca Alexa-i relevanta si reprezentativa pentru .com si trafic de pe la o suta [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142270">
+					<div class='trackhead'>
+						<div class="commentcount">32</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/alexacom-or-the-measurable-web-delusion?b=do%2C%20wat%20do%21%20&amp;e=note#select' class='url'>Alexa.com or the "measurable web" delusion. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142270" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] do, wat do! &mdash;&mdash;&mdash;A meaningless notion, in theory as well as any practical implementation (I have more examples than words). See also this footnote [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-148757">
+					<div class='trackhead'>
+						<div class="commentcount">33</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/today-in-our-cultural-history-of-internet-marketing-choim-757-class-the-tube-site-before-the-tube-site-or-whats-a-tgp/?b=economics%20of&amp;e=pire#select' class='url'>Today in our Cultural History of Internet Marketing (CHoIM-757) class : The tube site before the tube site, or what's a TGP ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148757" title="">Sunday, 12 April 2020</a>
+					</div>
+					<p>[...] economics of this Skinner machine were very simple : the "traffic" mental construct (an entirely fictitious object, exactly like Harry Catniss or Jasmine the Vampire [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="421" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832654-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-421")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-421");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-421");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>
