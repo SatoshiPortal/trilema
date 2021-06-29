@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Rift on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">024776FFD3CBD21C872ECCD26AD078C5<br />BA0586E2E57CF68515E3C4828A673A6E
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-51507"><div class="post" id="post-51507">                    <h1><a href="http://trilema.com/2013/rift/" rel="bookmark" title="Permanent Link to Rift">Rift</a></h1>                        <div class="date">                                     Sunday, 08 December, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Let me tell you what I've been up to. But before that, a quote :</p>
+<blockquote><p><strong>KRS|gotyawallet</strong> Some chatter already that btc is all over.<br />
+<strong>mircea_popescu</strong> Already ? It's been the talk of the town ever since we started raping the town, back in 2011. It's like... o buttcoins are worthless, o buttcoins aren't useful o buttcoins are a scam etc etc.</p>
+<p><strong>KRS|gotyawallet</strong> That's true forgot all that it's been good for a while..good point..<br />
+<strong>ruru</strong> Let them panic... my poor buddy sold.. 400+ BTC, got $280k. Then.. guess what. Bought back when BTC rebounded. He got fucked bothways by the market.<br />
+<strong>mircea_popescu</strong> Buttways.</p>
+<p><strong>ruru</strong> Lost around 57 BTC in the process.<br />
+<strong>mircea_popescu</strong> That BTC didn't belong in his hands obviously.</p>
+<p><strong>Duffer1</strong> I can empathize with the scammed, but not those on the losing end of speculation.<br />
+<strong>mircea_popescu</strong> Dunno whether speculation or just panic.</p>
+<p><strong>ruru</strong> It was panic... Dumped @ low 600s, put a bid @ 600.. then, pulled it for some reason. He wasn't at the right state of mind.</p>
+<p><strong>mircea_popescu</strong> Daytrading without a license.</p></blockquote>
+<p>People ask me just about daily by now, "dude, you're worth whatever, half a million to a full million BTC depending how the <a href="http://mpex.co/?mpsic=S.MPOE">stock market</a> is doing that day, how can you stand it ?!?!?!". Well, I'll tell you how I can stand it : I had a dream.</p>
+<p>I don't mean when I was a little boy or <del datetime="2013-12-08T14:08:12+00:00">retarded</del> inspirational shit like that, I mean just now, before waking up, I had a dream. It was<sup><a href="#footnote_0_51507" id="identifier_0_51507" class="footnote-link footnote-identifier-link" title="How do you introduce dreams in English ? Romanian has the ritual phrase `se facea`, which'd perhaps work to `it was being made [out]` in English, a rare case where `to make` admits the impersonal. Also stories are ritually introduced with `A fost odata ca niciodata`, which literally means `there was once like never[more]`. That one however has the `Once upon a time` ready equivalent, so English clearly is capable of the feat. Why u no more ritual, English ?">i</a></sup> something about a hunting party, which I was leading. People were there, not physically recognised, but identified by their... impression, by a feeling, a sort of aura. As often the case is in dreams. </p>
+<p>So basically I was leading the #bitcoin-assets channel harpy hunting party. Nobody had even seen a harpy, everyone however was in agreement that I know what I'm doing, and even perhaps that I hunted harpies before. Many times. I believed this too, in my dream, notwithstanding I couldn't recall a case of actually having hunted a harpy in the past. But what is the past to a dream ? I had a clear idea what a harpy looks like, not physically of course, but as an.. impression. A feeling, perhaps like an aura. And we were climbing up these jagged shards of rock in a dimly lit, reddish dusk with billowing thick smoke all around, and you could hear sqweaks and otherworldly cries in the distance. </p>
+<p>The explanation is twofold. On one hand if you've ever played Heroes of Might and Magic VI - The Mandate of Heaven<sup><a href="#footnote_1_51507" id="identifier_1_51507" class="footnote-link footnote-identifier-link" title="The 1998 NWO/3DO game, not the current bullshit Ubisoft is trying to pass as a game to further bilk the long dead and buried franchise and the clueless teenagers of today - sad, barely recognisable shadows of human beings that had the misfortune of growing up surrounded by an abundance of money they didn't earn and corporate bullshit striving to bilk their cluelessness and old, long dead and buried franchises. You know in retrospect I don't believe being born with congenital plague to a dead mother in 1350 is actually a worse fate than being born in 1998. At least the plague kills you.">ii</a></sup> you probably remember the time when you go to get the cleric promotion quests, and this includes going through those snowy peaks with the harpies all over. Those obnoxious squeaky things that CURSE YOU. Here, let me refresh your memory : </p>
+<p><a href="http://trilema.com/2013/rift/" rel="attachment wp-att-51514"><img src="http://trilema.com/wp-content/uploads/2013/12/mm6-snowcap.jpg" alt="mm6-snowcap" title="mm6-snowcap" width="580" height="435" class="alignright size-full wp-image-51514" /></a></p>
+<p>Being me I cheated, obviously, and only went there once my three wizards<sup><a href="#footnote_2_51507" id="identifier_2_51507" class="footnote-link footnote-identifier-link" title="Powerplay, baby. It's an art.">iii</a></sup> had flight (and half the time I'd only go there once my three wizards had Armageddon - those harpies never knew what hit them!). But if you're one of the people that climbed those mountains on foot... at night and in a snowstorm... well what can I say. I feel for you. </p>
+<p>The other hand of the explanation is </p>
+<p><a href="http://trilema.com/2013/rift/" rel="attachment wp-att-51519"><img src="http://trilema.com/wp-content/uploads/2013/12/rift.jpg" alt="rift" title="rift" width="560" height="420" class="alignright size-full wp-image-51519" /></a></p>
+<p>Rift is a honest WoW / EQ2 clone<sup><a href="#footnote_3_51507" id="identifier_3_51507" class="footnote-link footnote-identifier-link" title="Pretty much everything is conscientiously lifted - the food / potions mechanism, the equipment colors and mechanics, the crafting system, loads and loads of eyecandy - everything. Their CEO commented that the game cost ~50 million dollars (ie, 5x S.MG's total capital, at least for this current month), which seems an outrageous price to pay for making a copy of something. It's true that they did their own graphics, and made minor improvements here and there even, and it's true that I'm currently playing it and I never played WoW (well, I was in the closed beta and I thought it sucked). Nevertheless, reimplementing WoW is in this CEO's humble opinion a very stupid way to use your company's funds. Even if you do get a playerbase and even if you do end up making money (which is never going to be the case for Rift - they recently moved to a f2p model. They have, of course, great hopes as to the future - like everyone who dies hungry.">iv</a></sup>. I threw them the ~40 euros you'd throw on a decent new game, after playing it for about a day<sup><a href="#footnote_4_51507" id="identifier_4_51507" class="footnote-link footnote-identifier-link" title="I am perhaps the only person alive who actually does this, in spite of an entire business model being predicated on precisely this behaviour. I don't recall business models this broken since the days of the dotcom bubble.">v</a></sup> and in exchange they allowed me to learn 7 of the 9 professions<sup><a href="#footnote_5_51507" id="identifier_5_51507" class="footnote-link footnote-identifier-link" title="Normally you're limited to 3, which means either do 3 gathering professions and no actual crafting, or do two gathering and a little crafting. Well it so happens I like to do a lot of crafting.">vi</a></sup> and to access their Auction House<sup><a href="#footnote_6_51507" id="identifier_6_51507" class="footnote-link footnote-identifier-link" title="Free accounts may not sell in the AH. This is supposedly to prevent farming but I scarcely see how it works. For one, if you're farming and you can still buy on the auction house then that's that, the cash influx is assured, as you'll outbid other people thus moving hot money from the `farming` pool to the supposed `unfarming` pool. For the other, free players have a capital cap on their account, meaning they have even more incentives to spend their capital than paid accounts. I suppose any sort of even cursory understanding of how money works is a lot rarer, and a lot pricier, than the ability of making good looking 3D models. Speaking of which - for once my girl has big tits, but big in human terms. Here's a game which somehow eschewed the manga/mmorpg Humongous Udders of the Zodiac AAAA+++ would milk again. Don't they look small ?">vii</a></sup>, which I like. </p>
+<p>So, to answer the original question... how do I handle it ? I don't give a shit. Analyze that.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_51507" class="footnote">How do you introduce dreams in English ? Romanian has the ritual phrase "<em>se facea</em>", which'd perhaps work to "it was being made [out]" in English, a rare case where "to make" admits the impersonal. Also stories are ritually introduced with "<em>A fost odata ca niciodata</em>", which literally means "there was once like never[more]". That one however has the "Once upon a time" ready equivalent, so English clearly is capable of the feat. Why u no more ritual, English ? [<a href="#identifier_0_51507" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_51507" class="footnote">The 1998 NWO/3DO game, not the current bullshit <a href="http://trilema.com/2012/in-care-analizam-in-detaliu-cum-au-mai-futut-ubisoft-un-joc/">Ubisoft</a> is trying to pass as a game to further bilk the long dead and buried franchise and the clueless teenagers of today - sad, barely recognisable shadows of human beings that had the misfortune of growing up surrounded by an abundance of <a href="http://bitbet.us/bet/635/1btc-10-000-usd/#c2021">money they didn't earn</a> and corporate bullshit striving to bilk their cluelessness and old, long dead and buried franchises. You know in retrospect I don't believe being born with congenital plague to a dead mother <span style="background-color:#d3d3d3" id="select">in 1350 is actually a worse fate than being born in 1998. At least the plague kills you. [<a href="#identifier_1_51507" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_51507" class="footnote"><a href="http://trilema.com/2010/might-and-magic-vii-prooimion/">Powerplay</a>, baby. It's an art. [<a href="#identifier_2_51507" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_51507" class="footnote">Pretty much everything is conscientiously lifted - the food / potions</span> mechanism, the equipment colors and mechanics, the crafting system, loads and loads of eyecandy - everything. Their CEO commented that the game cost ~50 million dollars (ie, 5x <a href="http://trilema.com/2013/smg-ipo-succeeded-other-statements/">S.MG's total capital</a>, at least for this <a href="http://trilema.com/2013/smg-november-2013-statement/">current month</a>), which seems an outrageous price to pay for making a copy of something. It's true that they did their own graphics, and made minor improvements here and there even, and it's true that I'm currently playing it and I never played WoW (well, I was in the closed beta and I thought it sucked). Nevertheless, reimplementing WoW is in this CEO's humble opinion a very <em>stupid</em> way to use your company's funds. Even if you do get a playerbase and even if you do end up making money (which is never going to be the case for Rift - they recently moved to a f2p model. They have, of course, great <em>hopes</em> as to the future - like everyone who dies hungry. [<a href="#identifier_3_51507" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_51507" class="footnote">I am perhaps the only person alive who actually does this, in spite of an entire business model being predicated on precisely this behaviour. I don't recall business models this broken since the days of the dotcom bubble. [<a href="#identifier_4_51507" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_51507" class="footnote">Normally you're limited to 3, which means either do 3 gathering professions and no actual crafting, or do two gathering and a little crafting. Well it so happens I like to do a lot of crafting. [<a href="#identifier_5_51507" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_51507" class="footnote">Free accounts may not sell in the AH. This is supposedly to <a href="http://trilema.com/2011/economia-unui-joc-multiplayer-probleme/">prevent farming</a> but I scarcely see how it works. For one, if you're farming and you can still buy on the auction house then that's that, the cash influx is assured, as you'll outbid other people thus moving hot money from the "farming" pool to the supposed "unfarming" pool. For the other, free players have a capital cap on their account, meaning they have even more incentives to spend their capital than paid accounts. I suppose any sort of even cursory understanding of how money works is a lot rarer, and a lot pricier, than the ability of making good looking 3D models. Speaking of which - for once my girl has big tits, but big in human terms. Here's a game which somehow eschewed the manga/mmorpg Humongous Udders of the Zodiac AAAA+++ would milk again. Don't they look small ? [<a href="#identifier_6_51507" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/a-simple-example-as-to-why-fiat-institutions-cant-stand/">A simple example as to why fiat institutions can't stand</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/snsa-november-2013-statement/">S.NSA, November 2013 Statement</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/rift/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/rift/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>9 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-96675" class="commentbody"><div class="commenthead"><img alt='Alex`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Alex</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96675" title="">Monday, 9 December 2013</a>
+							</div>
+						<p>In my humble opinion, the MMORPG is being replaced by the MOBA as the Next Big Thing (yeah yeah I know it's not quite the same target demographic). </p>
+<p>Consider that the mmorpg was supposed to be the natural successor of the rpg. Should've been a world where you can take refuge from RL and interpret a fantastic character. That assumption is flawed, in that aggregated masses of people are never good actors and never can pull off convincing mass RP. Taking roleplay out, you're left with enforcing lore with game mechanics and obeying the powerplayers. Casuals just want to have the endgame fun (and therefore pour money if they can help it), hardcore players (by which I mean young adults, kids etc) just sink in time. It doesn't make sense to require an upfront payment and monthly subs, it turns off those who can't afford it. Instead, you go "f2p", meaning you cripple everyone's experience and force them to cough at least some money up.  My best example is Lotro - technically f2p, but you have to buy 1 month VIP unless you're a masochist (unlocks a lot of useful stuff), also you have to buy access to new regions (so you buy the ability to grind, lol). That's $15 for VIP and some $39.99 for all packs combined (guess it's more if you buy separately). If Turbine asked everyone to pay all that upfront, how many would do it?</p>
+<p>Anyway, the f2p debate notwithstanding, the genre is fucked because of this simple truth: in any game people want to kill monsters (or players in pvp), defeat the overload and save the princess.</p>
+<p>Well, consider MOBAs: a game takes between 30 minutes and a couple hours, but you don't have to come back daily for a raid or for well-timed quests. You start killing stuff from minute 1 and you can attempt to kill other players soon after. There's still lots of width to explore (due to the sheer pool of heroes), still some depth due to the role combinations, and overall less stress. No grinding just for the endgame. No roleplay. No daily quests which you feel compelled to complete because you're running out of stuff to do (I remember this friend playing WoW, he had to open some 1k boxes for a stupid title). Just pure, raw killing starting from minute 1.</p>
+<p>I might be wrong, of course, but I don't see much future in the MMORPG genre. Blizzard keeps offering to level old players to 80 or so, just so that they return; that's a tacit acknowledging of the grind model, and of the dwindling server population. Other games are worse off, with no serious contender for WoW even existing.</p>
+<p>tl;dr Rift is not even WoW.</p>
+						</li>
+
+										<li id="comment-96676" class="commentbody"><div class="commenthead"><img alt='Alex`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Alex</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96676" title="">Monday, 9 December 2013</a>
+							</div>
+						<p>** grind model failure, meh</p>
+						</li>
+
+										<li id="comment-96677" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96677" title="">Monday, 9 December 2013</a>
+							</div>
+						<p>I'm not so sure these "succession" arguments work so well. </p>
+<p>So Sonic and Mario have mutated into something a lot more complex these days, whereas MM/Gothic/EQ/etc have mutated into something a lot simpler. These two happen to be the same thing, exactly at the time when cost pressure make it impossible for companies to justify even moderate expenses* and so two otherwise separate genres are being merged into a single thing "with elements" of each, much like a communist dictatorship might invent a new drink to replace coffee and tea, with "taste elements" of both coffee and tea.</p>
+<p>If history is any guide we will have a scatter, a new renaissance, a new contraction and so on and so forth. The renaissance mm6 and animaniacs were part of is only the fifth or something.</p>
+<p>Hardcore players is exactly the opposite of kids/young adults. Hardcore players are in general professionally accomplished engineers past their 30s. That if your game is any good. Otherwise, they're markedly absent, with all sorts of retards doing a sort of Hardcorer of the Flies.</p>
+<p>I would debate the "cripple everyone's experience" is in any way related to the f2p model per se. I don't see how it cripples anyone's experience as implemented in Rift, for instance. It doesn't work, sure, but for fundamental reasons, this ux cripplage is strictly an implementation issue.</p>
+<p>Rift is actually better than WoW I think, but the reasons are subtle and I'm still working sussing them out. Also, Eulora is going to kick butt being precisely an old style mmorpg in Bitcoin. You shall see, do not despair just yet.</p>
+<p>---<br />
+* Sure, 50mn sounds like a shitload of money, up until you stop and think about it. Then you realise the average power plant costs billions, and power plants are quite so unremarkable as to pass unnoticed, even though they're ubiquitous. When's the last time you read an interview with a power plant manager, even though that guy manages more than the entire gaming industry combined ? Same argument about roads and so on and so forth. The big dig was 50 billion, right ?</p>
+						</li>
+
+										<li id="comment-96707" class="commentbody"><div class="commenthead"><img alt='Peter Lambert`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Peter Lambert</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96707" title="">Tuesday, 10 December 2013</a>
+							</div>
+						<p>RE note i: You could start with the biblical phrase: "And it came to pass I was leading a hunting party ...", or you could start "It so happened I was leading a hunting party ..."</p>
+						</li>
+
+										<li id="comment-96710" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96710" title="">Tuesday, 10 December 2013</a>
+							</div>
+						<p>The came to pass device sounds more like storytelling than dreams really.</p>
+						</li>
+
+										<li id="comment-96736" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96736" title="">Wednesday, 11 December 2013</a>
+							</div>
+						<p>Drugs or the game?</p>
+						</li>
+
+										<li id="comment-112323" class="commentbody"><div class="commenthead"><img alt='thestringpuller`s avatar' src='http://cookiechief.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://cookiechief.com' class='url'>thestringpuller</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-112323" title="">Thursday, 19 February 2015</a>
+							</div>
+						<p>"Hardcore players is exactly the opposite of kids/young adults. Hardcore players are in general professionally accomplished engineers past their 30s."</p>
+<p>I think this may just be centric to your observation of USian gamers, and doesn't include those <a href="http://www.hardcoregaming101.net/virtuafighter/virtuafighter4.htm" >who time the frames</a> for combos. These groups of players are far from "professionally accomplished engineers past their 30s".</p>
+<p>There was a whole culture of black arcade rats who mastered a slew of fighting games, from Killer Instinct, to Street Fighter. These competitions were happening long before the advent of Kim Dotcom's fatass competing in Call of Duty, or the Starcraft Tournaments, or the retardism that is a DoTA competition.</p>
+<p>This particular group of fighting game masters were mainly groups of teenaged delinquents, or "hoodrats". </p>
+<p>I would argue the "professional" class of player varies from genre to genre, as well as through the times.</p>
+						</li>
+
+										<li id="comment-112325" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-112325" title="">Thursday, 19 February 2015</a>
+							</div>
+						<p>Sure. You were talking mostly about RTS stuff, which isn't really my cup. I was talking about TBS and derived MMORPGs.</p>
+						</li>
+
+										<li id="comment-112333" class="commentbody"><div class="commenthead"><img alt='thestringpuller`s avatar' src='http://cookiechief.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink"><a href='http://cookiechief.com' class='url'>thestringpuller</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-112333" title="">Friday, 20 February 2015</a>
+							</div>
+						<p>Ah those people seem to have migrated to <a href="https://boardgamegeek.com/" >board game world</a>. The society surrounding the Ultima crowd methinks was a one time thing though.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="51507" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832685-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-51507")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-51507");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-51507");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

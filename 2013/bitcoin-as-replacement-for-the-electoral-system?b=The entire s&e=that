@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Bitcoin as replacement for the electoral system on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">If "waifu" is "wife"<br />should "kung-fu" be "knife" ?
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-51079"><div class="post" id="post-51079">                    <h1><a href="http://trilema.com/2013/bitcoin-as-replacement-for-the-electoral-system/" rel="bookmark" title="Permanent Link to Bitcoin as replacement for the electoral system">Bitcoin as replacement for the electoral system</a></h1>                        <div class="date">                                     Saturday, 23 November, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>The notion that Bitcoin is here to replace everything everywhere<sup><a href="#footnote_0_51079" id="identifier_0_51079" class="footnote-link footnote-identifier-link" title="Everything everywhere : the workings of the contract as fundamental to all aspects of social organisation, from plain old questions of politics, bureaucracy and allocation of resources - including for instance the complete demantelation of the welfare state, and when I say complete I do mean complete - all the way into proper mysticism as a replacement of all - not some, not certain, all - traditional religions that have survived to date but are now quite certainly going extinct. As I've said before, Bitcoin is not here to in any way adapt to suit fiat anything. Fiat everything has to and will bend over backwards to adapt to Bitcoin. And if it can't, it's going away, there's no question of hierarchy to be sorted out, there's no partial solution to be negotiated. What Bitcoin says goes. Everything else adapts or perishes.">i</a></sup> isn't exactly new if you've been reading Trilema. Let's do a case study to better understand how this works.</p>
+<p>The facts<sup><a href="#footnote_1_51079" id="identifier_1_51079" class="footnote-link footnote-identifier-link" title="Which you may read at length here - 42`417 words' worth.">ii</a></sup> of the matter are something like this : </p>
+<ul>
+<li>BitBet runs a proposition betting service. Bets listed may close at a time specified when they're proposed, or else at a prior time under certain circumstances<sup><a href="#footnote_2_51079" id="identifier_2_51079" class="footnote-link footnote-identifier-link" title="For instance a common category of bets reads `X will take place on or before Y date`. Obviously this bet closes on Y date at the latest, but otherwise can also close whenever X takes place, prior to that.">iii</a></sup>.</li>
+<p></p>
+<li>As there exists such a thing as a time-value of Bitcoin (we presume), BitBet includes the concept of <a href="http://bitbet.us/faq/#140">weight</a>, which means that out of equal bets, earlier bets will receive a larger share of the winnings pool. The exact proportions are user-settable when bets are proposed, but as a principle weight is ubiquitous.<sup><a href="#footnote_3_51079" id="identifier_3_51079" class="footnote-link footnote-identifier-link" title="Notably users can in fact enter bets without weight (technically, bets where start weight = end weight). Nevertheless, users never do, for some reason.">iv</a></sup> </li>
+<p></p>
+<li>Because of the foregoing, it can be said that if the bet closes at its announced date, the possiblity of moral hazard<sup><a href="#footnote_4_51079" id="identifier_4_51079" class="footnote-link footnote-identifier-link" title="Consider the case of a bet saying `Bitcoin difficulty will reach 1 billion - wow, huh - by December 23rd`. Today is November the 23rd, and you bet just as the proposition is accepted, so you get full weight. By December 7th new bettors would only receive about half your weight, meaning that if they want to have the same share of the winnings pool as you will have once the bet closes, they have to bet twice as much. This is fair, after all : on December the 23rd, you will have risked your Bitcoin for a month whereas they have risked theirs for two weeks. Obviously to get the same results they need to even that surface out somehow.">v</a></sup> resulting from people betting earlier or later is adequately covered : not because the evolution of weight over time necessarily reflects the fair value thereof, but because users knew aforehand how that is going to be calculated, and they can at any point in time <a href="http://trilema.com/2013/how-to-cancel-your-bitbet-bet/">adjust their actual exposure</a> accordingly to whatever differences they perceive.</li>
+<p></p>
+<li>This leaves open the problem of bets that end early. In our <a href=" http://trilema.com/2013/bitcoin-as-replacement-for-the-electoral-system/#footnote_4_51079">earlier example</a>, what would happen should the bet actually be satisfied December 7th ? Obviously, it would be closed, and the winners paid. However, in that narrow interval of time between the event actually occurring and the bet being closed, people could send bets that are credited at a high weight, which is unwarranted by the actual circumstances. The guy getting credited with half your weight in spite of betting moments before, or moments after the event taking place isn't being adequately compensated for the risk he actually undertook, which means that neither are you. After all mutual betting isn't a casino racket, dedicated to fleecing people in a <a href="http://trilema.com/2013/lets-understand-mutual-betting-together/">man-against-the-house scam</a>.</li>
+<p></p>
+</ul>
+<p>The way BitBet resolves this outstanding problem is quite simple : if a bet closes early, bets that have registered before the cutoff event are refunded (minus the BitBet 1% fee, which applies to all bets anyway). However, bets that have registered after the cutoff <a href="http://bitbet.us/faq/#151">are not refunded</a>. This means that from the position of the punter, betting on an event that just closed or is just about to close is quite a risky proposition : If his transaction makes it through the network before the BitBet mods close the bet, he will maybe make a 1% loss, or maybe make an unspecified gain, depending on the bet. However, if his transaction doesn't make it through the network before the BitBet mods close the bet, he will make a 100% loss. Since by its very nature and design the Bitcoin network is unreliable - with blocks taking as long as two hours on occasion<sup><a href="#footnote_5_51079" id="identifier_5_51079" class="footnote-link footnote-identifier-link" title="Possibly more frequently than you relise, by the way. Consider : 
+Nov 17 16:43:38 mircea_popescu	;;tslb
+Nov 17 16:43:40 gribble	Time since last block: 1 hour, 11 minutes, and 24 seconds
+">vi</a></sup> - there is absolutely nothing he can do to increase his odds at successful exploitation of this system.</p>
+<p>This then resolves the problem <em>statistically</em>, which is to say on average and generally speaking, people are unlikely to engage in morally hazardous behaviour. It also resolves the problem quite cheaply, as it requires absolutely no human intervention, the entire thing works quite mechanically. </p>
+<p>The challenge presented to this solution comes, of course, from the ignorant user (which the earlier linked source wholly describes). Fundamentally, one ignorant that this arrangement exists in the first place, and further ignorant of the actual constraints operating in the space that make this arrangement a correct and necessary solution will proceed to act immorally<sup><a href="#footnote_6_51079" id="identifier_6_51079" class="footnote-link footnote-identifier-link" title="Acording to the system. Obviously no person ever acts immorally according to their own personal outlook, if they had actually thought their action immoral they wouldn't have committed it in the first place.">vii</a></sup>. Consider the case of the man who lived his entire life in a society where rape is customary and consensual relations unheard of. Once he lands at JFK he goes straight up to a TSA agent with a cute butt, rips off her blouse and proceeds to fuck her right by the concessions stand.<sup><a href="#footnote_7_51079" id="identifier_7_51079" class="footnote-link footnote-identifier-link" title="Or maybe he just fingers her asshole in public. Would that be more palatable ?">viii</a></sup> Has he committed a most heinous crime ? Well... not according to himself he hasn't. Or, if you'd rather take something more banal, consider the goat herder that jaywalks. He's never seen street lights before, has no idea what they are, did he do anything wrong ? According to whom ?</p>
+<p>At its core ignorance reduces to an argument <em>ad bestialitatem</em>. What the ignorant is saying, fundamentally, is "I am no different from the beast of the field, it is upon you to make it so I can live as if I were in the field, except I wish to live in town". Obviously put in its nude form this could never stand, a point not quite lost on the ignorant himself. Consequently, when the problem is encountered it will always be argued in purely political terms, which is to say "Why should I have to submit to your moral system ? I want you to submit to mine!"</p>
+<p>This reflex is quite visible in the linked text, as the aggressor tries to play the role of the victim, and in spite of being the only possible thief in the room tries for his life to represent the authority as "the thief".<sup><a href="#footnote_8_51079" id="identifier_8_51079" class="footnote-link footnote-identifier-link" title="A very common reflex, consider the case of the teenage nigger that got shot recently : 
+deadweasel	Mobile County Alabama: http://www.fox10tv.com/news/local/mobile-county/suspects-family-angry-at-good-samaritan
+deadweasel	it's so surreal... `If his (the customer) life was not in danger, if no one had a gun up to him, if no one pointed a gun at him - what gives him the right to think that it's okay to just shoot someone?. said the relative. .You should have just left the store and went wherever you had to go in your car or whatever..`
+">ix</a></sup> If a kid steals another kid's piece of pie, and you come in, smack him one atop his head and confiscate his stolen piece of pie will he claim you've "stolen his pie" ? Well, why not ? What's to keep him ?</p>
+<p>Reconstructed around the political terms, this dispute would have been resolved in the old, fiat world as a "let's all just try and get along" situation, because everyone votes there : both the ignorant and the actual thief have a vote, and there's two of them and only one BitBet. Consequently, rules and regulations would have been drawn up, with the goal of better matching the statistical behaviour of the site to the individual circumstances of individual bettors. This, obviously, reflects an increase of complexity, which will necessarily create an increase of costs - which is exactly the way government intervention in the market under the guise of "regulation" and "protecting" always works out.</p>
+<p>The problem with increasing costs is that this is a burden that will actually have to be borne - Bitcoin isn't Bernankoin to <a href="http://trilema.com/2012/the-problem-of-too-much-money/">just keep printing</a> worthless fiat paper. So yes, indeed I could have a more refined system in place, that better distinguishes between plain idiots (which is what the guy involved here probably is) and actual thieves. This system would cost more. Obviously the concern trolls who are otherwise worthless, bored and utterly useless socially (but they vote!) would gladly agree that I should do exactly that. After all, they can identify more easily with the idiot, being one, than with all the people who aren't idiots, and so aren't likely to end up in the situations idiots end up in. Nevertheless, would the userbase actually want to pay 2% instead of 1% on all their bets just so the system is safe to use for any idiot ?</p>
+<p>The more important point, and where Bitcoin really shines, is that <em>it doesn't matter</em> what they or anyone else would rather or wouldn't rather. The owners of the service decide how it works, it is strictly their empire to judge if the increased fees are justified by the increased complexity. If they make the right call they will prevail in the marketplace - over the dead bodies of the butthurt idiot parade. This will be a good outcome for society as a whole, because people will have a good service they can use no matter what anyone <em>else</em> says. If they make the wrong call they will fail in the marketplace, and this will be a good outcome for society as a whole, because entrepreneurs will have one good example to guide their future behaviour by.</p>
+<p>When I say Bitcoin is here <a href="http://trilema.com/2013/bitcoin-prices-bitcoin-inflexibility/">to take over</a>, this is what I mean : the entire political process of keeping the squirrels captive while the bear and the wolf decide through democratic ballot what's for dinner is at stake. <span style="background-color:#d3d3d3" id="select">The entire system that</span> ruined the US, the unholy alliance between professional <a href="http://trilema.com/2013/soft-consensus-aka-fecal-matter/">shitslingers</a> and <a href="http://trilema.com/2013/fried-chicken/">professional looters</a> of the public treasury is being challenged, quite in the open, quite plainly. What's funny is that it doesn't have a prayer, the battle's already won. They may not know it yet, much like cartoon characters spend sometimes a second after being obliterated in their original form before collapsing in a pile of shards. They will start realising it soon enough, and watch out for the fireworks then.</p>
+<p>In point of fact any Bitcoin business is a sovereign government, making policy decisions in an autocratic manner much like some latter day Louis XIV. It's true that some businesses don't have their Mazarins and Colberts, their Turennes and Vaubans, their Molières, Racines and La Fontaines, their Le Nôtres<sup><a href="#footnote_9_51079" id="identifier_9_51079" class="footnote-link footnote-identifier-link" title="Don't you find it funny to discover that all the French names you know actually lived during the same period ? What would you say, is it a case that Louis le Grand got lucky to be the one monarch active at the time all the smart people just happened to be born and brought their contributions the way they would have done anyway, being that smart people have no choice but to share - quite freely - the very rare and thus very valuable and very expensive fruits of their talents ? Or is it a case that without that particular system there is no art, no science, no culture and no human accomplishment possible at all ? ">x</a></sup> and for that reason prefer to outsource their political duties - let me repeat that, <strong>duties</strong> - to a <a href="http://trilema.com/2012/the-politics-of-bitcoin/">provenly dysfunctional subcontractor</a>. That's not particularly important, because other businesses do in fact have their cardinals and painters and generals and architects, quite ready to take over.</p>
+<p>This is what the future looks like. There are no nation states and probably no states at all in the future<sup><a href="#footnote_10_51079" id="identifier_10_51079" class="footnote-link footnote-identifier-link" title="Unless your notion of a state is much more like the notion of an online tribe, say a WoW guild or such.">xi</a></sup>. There may be voting but there's definitely no "electorate", there will exist political organising but definitely no ACORN, there may be a Parliament but definitely nothing even vaguely similar to the current mockeries of that venerable institution. There's no room in the future for any of the modern products of Roosevelt's many follies. The future is quite strictly bourgeois, it belongs to capital, and to ability, and to knowledge, and to capacity. It doesn't belong to faux moral indignation, and to the <a href="http://trilema.com/2013/universalism-postwar-progressivism-as-a-christian-sect/">unwelcome protestant tendency</a> to organise other people's lives for them. </p>
+<p>None of this is optional, or conditional, or in any way dubious. All of it is a fact. Again tomorrow, as yesterday and the day before that and the day before that, mankind will be called to choose whether he wants to live a free and rich life, of choice and achievement, or whether he would prefer to toil in the subterraneans of socialism, hungry and cold. And some men will choose the former, and some will have no choice but to put up with the latter - which lack of alternative he'll of course be more than welcome to paint in any colors he pleases, including the pink and purple tones of "progress" and "socialist equity" and so on and so forth.</p>
+<p>It's quite clear to me which side I fall on, and I believe it's equally clear to you which side you fall on. The answer may not be too comfortable, which might explain why you don't particularly wish to answer this question, but there's exactly one guarantee in this life, and that guarantee is that at some point you will be asked the question whether you wish to or not.</p>
+<p>It seems to me one's better served by having a prepared answer.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_51079" class="footnote">Everything everywhere : the workings of the <a href="http://trilema.com/2012/gpg-contracts/">contract</a> as <a href="http://trilema.com/2013/lvm-lsa-i1ownership-4/">fundamental</a> to all aspects of social organisation, from plain old questions of <a href="http://trilema.com/2012/the-politics-of-bitcoin/">politics</a>, <a href="http://trilema.com/2012/bribes-in-bitcoins/">bureaucracy</a> and <a href="http://trilema.com/2013/all-thatll-do-is-drive-financiers-to-bitcoin/">allocation of resources</a> - including for instance the complete demantelation of the <a href="http://trilema.com/2013/squares-do-morals-a-porno/">welfare state</a>, and when I say complete I do mean complete - all the way into proper <a href="http://trilema.com/2012/bitcoin-and-the-poor/">mysticism</a> as a replacement of all - not some, not certain, <strong>all</strong> - traditional religions that have survived to date but are now quite certainly going extinct. As I've said before, Bitcoin is not here to in any way adapt to suit fiat anything. Fiat everything has to and will bend over backwards to adapt to Bitcoin. And if it can't, it's going away, there's no question of hierarchy to be sorted out, there's no partial solution to be negotiated. What Bitcoin says goes. Everything else adapts or perishes. [<a href="#identifier_0_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_51079" class="footnote">Which you may read at length <a href="http://trilema.com/wp-content/uploads/2013/11/print-page-bitbet-stole-7000-from-me-10-btc.htm">here</a> - 42`417 words' worth. [<a href="#identifier_1_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_51079" class="footnote">For instance a common category of bets reads "X will take place on or before Y date". Obviously this bet closes on Y date at the latest, but otherwise can also close whenever X takes place, prior to that. [<a href="#identifier_2_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_51079" class="footnote">Notably users can in fact enter bets without weight (technically, bets where start weight = end weight). Nevertheless, users never do, for some reason. [<a href="#identifier_3_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_51079" class="footnote">Consider the case of a bet saying "Bitcoin difficulty will reach 1 billion - <a href="http://trilema.com/2013/things-that-matter-these-days-things-that-dont-matter-these-days/">wow</a>, huh - by December 23rd". Today is November the 23rd, and you bet just as the proposition is accepted, so you get full weight. By December 7th new bettors would only receive about half your weight, meaning that if they want to have the same share of the winnings pool as you will have once the bet closes, they have to bet twice as much. This is fair, after all : on December the 23rd, you will have risked your Bitcoin for a month whereas they have risked theirs for two weeks. Obviously to get the same results they need to even that surface out somehow. [<a href="#identifier_4_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_51079" class="footnote">Possibly more frequently than you relise, by the way. Consider : </p>
+<blockquote><p>Nov 17 16:43:38 <strong>mircea_popescu</strong>	;;tslb<br />
+Nov 17 16:43:40 <strong>gribble</strong>	Time since last block: 1 hour, 11 minutes, and 24 seconds</p></blockquote>
+<p> [<a href="#identifier_5_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_51079" class="footnote">Acording to the system. Obviously no person ever acts immorally according to their own personal outlook, if they had actually thought their action immoral they wouldn't have committed it in the first place. [<a href="#identifier_6_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_51079" class="footnote">Or maybe he just <a href="http://trilema.com/2013/compliance/">fingers her asshole in public</a>. Would that be more palatable ? [<a href="#identifier_7_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_51079" class="footnote">A very common reflex, consider the case of the teenage nigger that got shot recently : </p>
+<blockquote><p><strong>deadweasel</strong>	Mobile County Alabama: http://www.fox10tv.com/news/local/mobile-county/suspects-family-angry-at-good-samaritan<br />
+<strong>deadweasel</strong>	it's so surreal... "If his (the customer) life was not in danger, if no one had a gun up to him, if no one pointed a gun at him - what gives him the right to think that it's okay to just shoot someone?. said the relative. .You should have just left the store and went wherever you had to go in your car or whatever.."</p></blockquote>
+<p> [<a href="#identifier_8_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_51079" class="footnote">Don't you find it funny to discover that all the French names you know actually lived during the same period ? What would you say, is it a case that Louis le Grand got lucky to be the one monarch active at the time all the smart people just happened to be born and brought their contributions the way they would have done anyway, being that smart people have no choice but to share - quite freely - the very rare and thus very valuable and very expensive fruits of their talents ? Or is it a case that without that particular system there is no <a href="http://trilema.com/2013/what-is-art/">art</a>, no science, no culture and no human accomplishment possible at all ?  [<a href="#identifier_9_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_51079" class="footnote">Unless your notion of a state is much more like the notion of an online tribe, say a WoW guild or such. [<a href="#identifier_10_51079" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/the-gentlemen-prefer-coeds-club/">The Gentlemen Prefer CoEds Club</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/china-sweden-and-you/">China, Sweden and you</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/bitcoin-as-replacement-for-the-electoral-system/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/bitcoin-as-replacement-for-the-electoral-system/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>10 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-96224" class="commentbody"><div class="commenthead"><img alt='pankkake`s avatar' src='http://headfucking.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://headfucking.net/' class='url'>pankkake</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96224" title="">Saturday, 23 November 2013</a>
+							</div>
+						<p>It is truly telling that our friend created a <b>poll</b> on Bitcointalk allowing any user to anonymously vote on the matter!</p>
+<p><i>Obviously no person ever acts imorally according to their own personal outlook, if they had actually thought their action imoral they wouldn’t have comitted it in the first place.</i><br />
+Even a career criminal?<br />
+Actually, I do agree, I think criminals always rationalize their actions in some way.</p>
+<p>By the way Bernankoin is a PEE (Pankkake Entertainment Enterprises) trademark. Pay up.</p>
+						</li>
+
+										<li id="comment-96225" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96225" title="">Saturday, 23 November 2013</a>
+							</div>
+						<p>You got a registration of that pee ? Is it in the trademarkchain ?</p>
+<p>But yes, the btctalk poll was a nice touch. The lolcow levels are through the roof in this case.</p>
+						</li>
+
+										<li id="comment-96936" class="commentbody"><div class="commenthead"><img alt='pankkake`s avatar' src='http://headfucking.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://headfucking.net/' class='url'>pankkake</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96936" title="">Wednesday, 18 December 2013</a>
+							</div>
+						<p>And now there really is a Bernankoin! <a href="https://bitcointalk.org/index.php?topic=375010.0">https://bitcointalk.org/index.php?topic=375010.0</a></p>
+<p>(Despite the commit dates, the work and the name started earlier, but I redid it around Primecoin, as it's way easier to fork an altcoin.)</p>
+						</li>
+
+										<li id="comment-96947" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96947" title="">Wednesday, 18 December 2013</a>
+							</div>
+						<p>Thank you for bringing the light of not repeating the mistakes of the great depression to Bitcoin.</p>
+						</li>
+
+										<li id="comment-113511" class="commentbody"><div class="commenthead"><img alt='Tuan`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Tuan</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113511" title="">Friday, 10 April 2015</a>
+							</div>
+						<p>Hello,I placed a bet of 7 Bitcoins on MVP in the Ro8 vs. Naniwa to the arddess 1AeVTTcVGE8bGXYLEk2WYHQGtX2MXHp4Q3, broken up with one payment of 4 BTC, and then 3 BTC.  You updated the post saying that payments have been sent out, but I have not received any bitcoins from you to 1HqAHZ3Ha3dyXFrVEj18zDZTzhJs944zst, which is where I transferred my bitcoins from in order to place my bet.I did not see any contact information on your site, so I am posting here.  Please contact me so we can resolve this issue.  Thanks.</p>
+						</li>
+
+										<li id="comment-113514" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113514" title="">Friday, 10 April 2015</a>
+							</div>
+						<p>As <a href=http://btcbase.org/log//?date=23-03-2015#1064943 >the expression goes</a>, link to the bet in question ?</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-139599">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/why-mpex-is-better-than-fiat-institutions-part-930458-we-don%e2%80%99t-use-lube?b=a%20while%2C%20thi&amp;e=nd%20a#select' class='url'>Why MPEx is better than fiat institutions, part 930458 : we don’t use lube on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139599" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] a while, this, but... don't you feel just a little derpy by now ? &mdash;&mdash;&mdash;Sourced from Bitcoin as replacement for the electoral system. [&#8617;]   Category: MPEx     Comments feed : RSS 2.0. Leave your own comment below, or send a [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139612">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/proper-accounting-for-stock-warrants?b=of%20fiat%20comp&amp;e=t%20of#select' class='url'>Proper accounting for stock warrants on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139612" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] of fiat companies, for Bitcoin companies it is a fact well established through both practice and legislationii that there exists no outside authority which may in any way influence any aspect or facet of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139620">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-art-of-making-friends-and-influencing-people-versus-stockholm-syndrome?b=the%20nonsense&amp;e=%20the#select' class='url'>The art of making friends and influencing people versus Stockholm Syndrome on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139620" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the nonsense that spawned it in the first place, and we're building a new thing. A thing which will NOT include any democracy whatsoever, for as long and inasmuch as democracy continues to be defined in the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139622">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-future-in-the-past?b=in%20p2p%2C%20the%20&amp;e=here#select' class='url'>The future in the past on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139622" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] in p2p, the most popular networks: ed2k and bittorrent. &mdash;&mdash;&mdash;The spark that yielded Bitcoin as replacement for the electoral system, but generally speaking, people acting in the consumer mindset, expecting that companies are there [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="51079" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832962-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-51079")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-51079");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-51079");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

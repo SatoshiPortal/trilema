@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Fetlife, the meat market on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">If "waifu" is "wife"<br />should "kung-fu" be "knife" ?
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-60010"><div class="post" id="post-60010">                    <h1><a href="http://trilema.com/2015/fetlife-the-meat-market/" rel="bookmark" title="Permanent Link to Fetlife, the meat market">Fetlife, the meat market</a></h1>                        <div class="date">                                     Friday, 13 February, Year 7 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Fetlife is a facebook clone on a niche. This rarely succeeds, but in this case it did - a decade ago collarme ruled the BSDM seas<sup><a href="#footnote_0_60010" id="identifier_0_60010" class="footnote-link footnote-identifier-link" title="It imploded recently, yielding some lulzy drama. Apparently it was run by a coufple which split up, the chick ran away with the domain, put up a lengthy if inconsistent sob story about how she had been mistreated, the guy ran off with the db/site, recreated it under a new name.">i</a></sup>, meanwhile Fetlife apparently took over. </p>
+<p>This, I will propose, is mostly "luck", in the sense that it is based on anything and everything <em>but</em> "coding skills". Just like Spolsky's success (stackexchange). Such projects need a great <a href="http://trilema.com/2012/strategic-superiority-a-saga/">strategist</a> (and I do mean great, I mean better than what fiat sovereigns can afford<sup><a href="#footnote_1_60010" id="identifier_1_60010" class="footnote-link footnote-identifier-link" title="This is possible because of that old `how much does your enemy have to pay you` dilemma. 
+Specifically, inasmuch as fiat sovereigns are by definition the natural enemies of great strategists (and great people generally, and thinking people even more generally), anyone that's not a fiat sovereign starts with a major head start.
+This, obviously, has not been known before. But Bitcoin came around and disrupted the shit out of it.">ii</a></sup>) and connections<sup><a href="#footnote_2_60010" id="identifier_2_60010" class="footnote-link footnote-identifier-link" title="Ie, membership of the relevant WoT. Obviously most niches are still run on some sort of feudal or fiat remnant, so you will rarely encounter a neat and clean implementation of a WoT that'll readily be recognizable on formal grounds. Nevertheless, in some manner and to some (likely pitiful) degree, that's what it'll be.">iii</a></sup>, that's the story of success, being the <a href="http://trilema.com/2014/a-complete-theory-of-economics/">complete story of economics</a>. Technological questions are entirely secondary considerations.<sup><a href="#footnote_3_60010" id="identifier_3_60010" class="footnote-link footnote-identifier-link" title="Think : the world existed and functioned before any arbitrarily chosen technological advance. Women rode the cock, people were happy, soups were had and bottles broken. If your idea of success is anything but `at my terminal surrounded by fetid odors` then this should be sufficient proof that technology is a second rate consideration.">iv</a></sup></p>
+<p>Its success brought out the whiny idiots <em>en force</em>, of course. Here's a quote<sup><a href="#footnote_4_60010" id="identifier_4_60010" class="footnote-link footnote-identifier-link" title="I'm not going to link to him, because he didn't publish my comment. It read `Eh, just embrace it. This derpy “feminism” thing is dead and buried, a minor niche of less interest than foreign market shut-ins.` which is no excuse not to publish it. 
+Instead, I'm going to share a pic, so he gets to feel violated even moar. Here :
+The Derpful Hipster
+Nice manboobs, Meitar!">v</a></sup> : </p>
+<blockquote><p>In my usual style, I gave a prepared talk and presented an accompanying slideshow. My talk was called “FetLife Considered Harmful: The Risks of Sex Ghettoization,” and I discussed what I see as a deeply dangerous, insular, growing monoculture within sexuality communities, epitomized by FetLife.com. This monoculture whitewashes the effects of privilege hierarchies while simultaneously reifying them in </p></blockquote>
+<p>That nonsense aside<sup><a href="#footnote_5_60010" id="identifier_5_60010" class="footnote-link footnote-identifier-link" title="By the way, did you know there's a `feminist antiporn` movement thingee ? O yeah, they're totally happening.">vi</a></sup>, Fetlife does try something or the other in the general vein of "being nice". For instance, it doesn't have a search function implemented<sup><a href="#footnote_6_60010" id="identifier_6_60010" class="footnote-link footnote-identifier-link" title="I suspect this is because the codebase sucks and the stack underlying the site is so rotten they simply couldn't economically run a search, but hey, who am I and what do I know about such matters, right ?">vii</a></sup> because "it doesn't want to turn into a meat market". Which is silly, seeing how the first driver for people getting together in the first place, and therefore the foremost underlier of all society, is exactly trade. Not to mention that the prototype of all trade is the trade of women for <em>that</em> purpose. Whether done by the women themselves or whatever way it's organised, that is still the most important function of the marketplace<sup><a href="#footnote_7_60010" id="identifier_7_60010" class="footnote-link footnote-identifier-link" title="As a complete tangent : Dreptul la constiinta
+De alt exemplu, in Cairo, care-i in Egipt, care nu-i neaparat perceput ca un varf de lance in ce priveste sofisticarea sau inteligenta organizarii societatii toate magazinele, inclusiv farmaciile sunt pline de ciurde de fete de maritat, 16-20 de ani, pentru ca ei asa fac pe post de discoteci, feisbook scl : trimit fetele sa stea in magazin. Rationamentul nu-i neaparat defect, dat fiind ca tipii care cumpara chestii au, logic vorbind, bani, si daca tot au bani poate doresc sa-si cumpere si-o vacuta bipeda si frumos bronzata. Nu ?
+which comes to
+As another example, in Cairo, which is in Egypt, which is not necessarily perceived as the bleeding edge of sophistication or the organisation of society, all the shops, pharmacies included, are packed full of gaggles of marriageable girlies, 16-20 years of age. Because that's what they do instead of Discos, facebook and so on : they send the girlies to sit in the store. The reasoning's not necessarily broken, seeing how people who buy things necessarily have money, and since they have money perhaps they also wish to buy a bipedal cowsy with a nice tan ? No ?
+">viii</a></sup>, which is the most important underpining of society. So... tough.</p>
+<p>Let's turn fetlife into a meat market together.</p>
+<blockquote><p>for i in {1..3000000}; do curl --cookie "FL=00050ee2-a893-1536-9272-047f87682456;_fl_sessionid=9c69a3c9bb86f4b1f6ff74064e788824" https://fetlife.com/users/$i | egrep -A 64 "[1-2][0-9]F " | sed 's/<[^>]*>//g' | tr -d "\n" | tr "\t" " " | tr -s " " >> fetlife.txt &#038;& printf "======$i\n" >> fetlife.txt; done</p></blockquote>
+<p>What's this then ? Well, first of all, Fetlife never heard of salted hashing (like <a href="http://trilema.com/forum-logs-for-03-jan-2015#1559051">other experts</a>) therefore their userbase is trivially enumerated at the uri level<sup><a href="#footnote_8_60010" id="identifier_8_60010" class="footnote-link footnote-identifier-link" title="This, other than horrible coding, is also very bad for business.">ix</a></sup>. So that's what the for is doing, iterating over their database.<sup><a href="#footnote_9_60010" id="identifier_9_60010" class="footnote-link footnote-identifier-link" title="They claim `over 3mn users`, which is why the upper bound. Feel free to tinker.">x</a></sup></p>
+<p>Then it calls curl, which passes along the relevant cookies<sup><a href="#footnote_10_60010" id="identifier_10_60010" class="footnote-link footnote-identifier-link" title="You obtain these by opening a session in a browser and authenticating. Fetlife doesn't allow you to see any content unless you're logged in, which is great because it keeps the search engines out, and something they should be commended for. It also has the dubious effect of creating an illusion of security among the more herbivore of its users, but I suspect that's unavoidable.">xi</a></sup> and queries pages.<sup><a href="#footnote_11_60010" id="identifier_11_60010" class="footnote-link footnote-identifier-link" title="You might pass along a benign looking user agent, with -A. I didn't bother deliberately, and to no ill effects so far.">xii</a></sup> They're then put through a match to throw out everything but the good part of the profiles made by women under the age of 30<sup><a href="#footnote_12_60010" id="identifier_12_60010" class="footnote-link footnote-identifier-link" title="Which in my experience are the more educable representatives of the gender of interest. 
+Much older than that and you run into a lot of `you don't teach old mares new tricks` plus all the attendant baggage (you might not be interested in your women having other people's children, for instance). Nevertheless, feel free to alter the `[1-2][0-9]F ` part to suit your tastes. Notice that the final space has to be there.">xiii</a></sup>. The results are then further processed (removing spurious line feeds, tabs and whitespace) and dumped into a file. From whence you can peruse it at your leisure. </p>
+<p>If you run this on a home connection you should go through about one page a second (per instance) so the whole shebang shouldn't really take you a whole month. If you fire up a server cluster it can probably be done in an afternoon.</p>
+<p>So there you have it, you've now turned Fetlife into a meat market. What now ? </p>
+<p>PS. If you're on Windows, get off, seriously. Or at least install cygwin. No, firefox plugins are not an equivalent solution for this problem, God love you.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_60010" class="footnote">It imploded recently, yielding some lulzy drama. Apparently it was run by a coufple which split up, the chick ran away with the domain, put up a lengthy if inconsistent sob story about how she had been mistreated, the guy ran off with the db/site, recreated it under a new name. [<a href="#identifier_0_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_60010" class="footnote">This is possible because of that old "<a href="http://trilema.com/2014/pushing-the-soft-tender-flesh-of-a-friend-against-the-sharp-rotating-blades-of-the-immutable-machine/">how much does your enemy have to pay you</a>" dilemma. </p>
+<p>Specifically, inasmuch as fiat sovereigns are by definition the natural enemies of great strategists (and great people generally, and thinking people even more generally), anyone that's not a fiat sovereign starts with a major head start.</p>
+<p>This, obviously, has not been known before. But Bitcoin came around and <a href="http://trilema.com/2015/ok-so-what-is-bitcoin-disrupting/">disrupted</a> the shit out of it. [<a href="#identifier_1_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_60010" class="footnote">Ie, membership of the relevant <a href="http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/">WoT</a>. Obviously most niches are still run on some sort of feudal or fiat remnant, so you will rarely encounter a neat and clean implementation of a WoT that'll readily be recognizable on formal grounds. Nevertheless, in some manner and to some (likely pitiful) degree, that's what it'll be. [<a href="#identifier_2_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_60010" class="footnote">Think : the world existed and functioned before any arbitrarily chosen technological advance. Women rode the cock, people were happy, soups were had and bottles broken. If your idea of success is anything but "at my terminal surrounded by fetid odors" then this should be sufficient proof that technology is a second rate consideration. [<a href="#identifier_3_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_60010" class="footnote">I'm not going to link to him, because he didn't publish my comment. It read "Eh, just embrace it. This derpy “feminism” thing is dead and buried, a minor niche of less interest than foreign market shut-ins." which is no excuse not to publish it. </p>
+<p>Instead, I'm going to share a pic, so he gets to feel violated even moar. Here :</p>
+<p><div id="attachment_60017" class="wp-caption aligncenter" style="width: 570px"><a href="http://trilema.com/wp-content/uploads/2015/02/the-derpful-hipster.jpg"><img src="http://trilema.com/wp-content/uploads/2015/02/the-derpful-hipster.jpg" alt="The Derpful Hipster" title="the-derpful-hipster" width="560" height="420" class="size-full wp-image-60017" /></a><p class="wp-caption-text">The Derpful Hipster</p></div></p>
+<p>Nice manboobs, Meitar! [<a href="#identifier_4_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_60010" class="footnote">By the way, did you know there's a "feminist antiporn" movement thingee ? O yeah, they're totally happening. [<a href="#identifier_5_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_60010" class="footnote">I suspect this is because the codebase sucks and the stack underlying the site is so rotten they simply couldn't economically run a search, but hey, who am I and what do I know about such matters, right ? [<a href="#identifier_6_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_60010" class="footnote">As a complete tangent : <A href=http://trilema.com/2010/dreptul-la-constiinta/>Dreptul la constiinta</a></p>
+<blockquote><p>De alt exemplu, in Cairo, care-i in Egipt, care nu-i neaparat perceput ca un varf de lance in ce priveste sofisticarea sau inteligenta organizarii societatii toate magazinele, inclusiv farmaciile sunt pline de ciurde de fete de maritat, 16-20 de ani, pentru ca ei asa fac pe post de discoteci, feisbook scl : trimit fetele sa stea in magazin. Rationamentul nu-i neaparat defect, dat fiind ca tipii care cumpara chestii au, logic vorbind, bani, si daca tot au bani poate doresc sa-si cumpere si-o vacuta bipeda si frumos bronzata. Nu ?</p></blockquote>
+<p>which comes to</p>
+<blockquote><p>As another example, in Cairo, which is in Egypt, which is not necessarily perceived as the bleeding edge of sophistication or the organisation of society, all the shops, pharmacies included, are packed full of gaggles of marriageable girlies, 16-20 years of age. Because that's what they do instead of Discos, facebook and so on : they send the girlies to sit in the store. The reasoning's not necessarily broken, seeing how people who buy things necessarily have money, and since they have money perhaps they also wish to buy a bipedal cowsy with a nice tan ? No ?</p></blockquote>
+<p> [<a href="#identifier_7_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_60010" class="footnote">This, other than horrible coding, is also very bad for business. [<a href="#identifier_8_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_60010" class="footnote">They claim "over 3mn users", which is why the upper bound. Feel free to tinker. [<a href="#identifier_9_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_60010" class="footnote">You obtain these by opening a session in a browser and authenticating. Fetlife doesn't allow you to see any content unless you're logged in, which is great because it keeps the search engines out, and something they should be commended for. It also has the dubious effect of creating an illusion of security among the more herbivore of its users, but I suspect that's unavoidable. [<a href="#identifier_10_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_60010" class="footnote">You might pass along a benign looking user agent, with -A. I didn't bother deliberately, and to no ill effects so far. [<a href="#identifier_11_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_60010" class="footnote">Which in my experience are the more educable representatives of the gender of interest. </p>
+<p>Much older than that and you run into a lot of "you don't teach old mares new tricks" plus all the attendant baggage (you might not be interested in your women having other people's children, for instance). Nevertheless, feel free to alter the "[1-2][0-9]F " part to suit your tastes. Notice that the final space has to be there. [<a href="#identifier_12_60010" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2015/the-mp-suicide-self-evaluation-scale/">The MP Suicide Self-Evaluation Scale</a></div>
+                <div class="alignright"><a href="http://trilema.com/2015/recursive-dunning-kruger/">Recursive Dunning-Kruger</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2015/fetlife-the-meat-market/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2015/fetlife-the-meat-market/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>29 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-112222" class="commentbody"><div class="commenthead"><img alt='Baku`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Baku</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-112222" title="">Saturday, 14 February 2015</a>
+							</div>
+						<p>What is salted hashing?</p>
+						</li>
+
+										<li id="comment-112224" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-112224" title="">Saturday, 14 February 2015</a>
+							</div>
+						<p>Suppose you actually have 3 mn users. What you are currently doing is, you're referencing them by a count, /user/1 to /user/3000000. </p>
+<p>The correct way to do this is : take a user variable (say, their name, "Derpy McHerperson"), add a salt to it (this will be fixed and should be long and random, say "jUlXk2RvBB695XfkyG/7/DOX5mdkwJ6VD26f+iZ"). Now, hash them together : </p>
+<p>sha512sum Derpy McHerpersonjUlXk2RvBB695XfkyG/7/DOX5mdkwJ6VD26f+iZ<br />
+3b9ff5d44b403df3bd9efb3967644facf50e638f3a03dcd8f9157c2c83b45a2fdc<br />
+9d436eb782767a186c4604ab6886bfa69664c14c81ee1e6009fbecb10849a1  -</p>
+<p>You can now reference the user as /user/3b9ff5d44b403df3bd9efb396<br />
+7644facf50e638f3a03dcd8f9157c2c83b45a2fdc9d436eb782767a186<br />
+c4604ab6886bfa69664c14c81ee1e6009fbecb10849a1</p>
+<p>If such a long url is inconvenient for whatever reason (say you wish for users to be able to jot down another user's profile link even if they don't have a computer available - how this works is anyone's guess, but maybe they have internet connected paper) you still have to remember that if your url is made out of numbers your space is merely ten digits, whereas if you use low and uppercase plus digits your space is 64 "digits". So 5 characters which may be [A-Za-z0-9] are roughly equivalent to 9 characters which may be [0-9] (by the following formula : 64<sup>5</sup> = 2<sup>6 * 5</sup> ~= 10 <sup>9</sup> - because 1024 is 2<sup>10</sup> and also is ~= 1000 so then 2<sup>10</sup> is ~= 10<sup>3</sup>).</p>
+<p>So you base64 your string, and take say the fifth to tenth characters : </p>
+<p>$ base64 3b9ff5d44b403df3bd9efb3967644facf50e<br />
+638f3a03dcd8f9157c2c83b45a2fdc9d436eb782767a186c4604ab6886bfa696<br />
+64c14c81ee1e6009fbecb10849a1</p>
+<p>M2I5Z<strong>mY1ZD</strong>Q0YjQwM2RmM2JkOWVmYjM5Njc2NDRmYWNmNTBlNjM4ZjNhMD<br />
+NkY2Q4ZjkxNTdjMmM4M2I0NWEyZmRjOWQ0MzZlYjc4Mjc2N2ExODZjNDYwNG<br />
+FiNjg4NmJmYTY5NjY0YzE0YzgxZWUxZTYwMDlmYmVjYjEwODQ5YTE=</p>
+<p>And so Derpy McHerperson becomes /user/mY1ZD</p>
+<p>Why go to all this trouble ? Simply because a 3rd party (in the article above, me) is not now able to go through your entire database and enumerate all your users : they're not ordered but distributed over the space, and their relative density is low - if you have 3mn users, and the 5 character space can keep about one billion users, then their density is about 0.3% which means that if I try a random string I have about one chance in 333 to hit on an actual user. This means that I will have to make one billion requests rather than 3 million requests to enumerate your database, or in other words you've put a 333x factor on the effort I need. And if you use six instead of five characters, that's a further 64x, taking it to over 20k tries per result.</p>
+<p>This is your first step into the wonderful world of cryptography. Make more, because survival in the future depends strictlier on familiarity with these topics than on paying your taxes.</p>
+						</li>
+
+										<li id="comment-113683" class="commentbody"><div class="commenthead"><img alt='Felipe Micaroni Lalli`s avatar' src='http://yeppudaproductions.wordpress.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='https://yeppudaproductions.wordpress.com/' class='url'>Felipe Micaroni Lalli</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113683" title="">Friday, 17 April 2015</a>
+							</div>
+						<p>lol</p>
+						</li>
+
+										<li id="comment-114042" class="commentbody"><div class="commenthead"><img alt='Sam`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Sam</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114042" title="">Monday, 4 May 2015</a>
+							</div>
+						<p>Seems like right now FetLife auto-bans user accounts for making too many requests to the server in a given period of time. Is this something they implemented after your scrape? Or did you get around it somehow? Just curious</p>
+						</li>
+
+										<li id="comment-114043" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114043" title="">Monday, 4 May 2015</a>
+							</div>
+						<p>I believe it must be novel, yes.</p>
+						</li>
+
+										<li id="comment-117971" class="commentbody"><div class="commenthead"><img alt='Sorkado`s avatar' src='http://sorkado.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink"><a href='http://sorkado.com' class='url'>Sorkado</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117971" title="">Thursday, 7 July 2016</a>
+							</div>
+						<p>Cant you just use the username ?</p>
+						</li>
+
+										<li id="comment-117972" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117972" title="">Thursday, 7 July 2016</a>
+							</div>
+						<p>I'm sure you can.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-113940">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://maybemaimed.com/2015/04/28/the-fetlife-creeplist-volume-1/' class='url'>The FetLife Creeplist, Volume 1 &laquo; Maybe Maimed but Never Harmed</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-113940" title="">Tuesday, 28 April 2015</a>
+					</div>
+					<p>[...] Of course, there&#8217;s way more interesting stuff we can do than a simple database crawl like this. For starters, what if we combined this with another, different data set? By cross-referencing the FetLife Creeplist with the database of rape accusations made against FetLife members compiled in the Predator Alert Tool for FetLife, we can begin to ask and answer questions like, &#8220;Which American city likely has the highest rate of sadomasochistic rape happening inside the so-called &#8216;safe, sane, and consensual&#8217; BDSM Scene?&#8221; And then why stop there? Using other tools I wrote like FetLife Maltego, we can automate the process of cross-referencing FetLife user profiles with Facebook data. But don&#8217;t take my word for it. Here&#8217;s how &#8220;Why the FetLife Meatlist is Just the Tip of the Iceberg&#8221; puts it, a posting in which I am quite flattered to see my works discussed at such length: In the past couple of days folks on FetLife have been getting (justifiably) upset about the now infamous misogynistic cluster fuck FetLife Meatlist. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141048">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-fetlife-meatlist-volume-i?b=if%20I%20want%20to&amp;e=%20you#select' class='url'>The Fetlife Meatlist - Volume I on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141048" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] if I want to search by different criteria ? Just run your own damned bash script, you can set it up any way you [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141050">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-fetlife-meatlist-volume-i?b=What%20could%20F&amp;e=ere.#select' class='url'>The Fetlife Meatlist - Volume I on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141050" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] What could Fetlife do that'd actually have any sort of discernible effect ? They could fix their broken code, for instance as explained for Baku's benefit here. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141068">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/sooo-fetlife-is-butthurt?b=only%20questio&amp;e=have#select' class='url'>Sooo... FetLife is butthurt. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141068" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] only question that matters in all of this is : Have they fixed the security holes putting their userbase at risk ? And the answer is that no, they have [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141232">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/since-rebecca-hiles-broke-her-wp-heres-some-comments-to-stuff-on-her-site?b=%3F%20Because%20wh&amp;e=o%20do#select' class='url'>Since Rebecca Hiles broke her WP, here's some comments to stuff on her site on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141232" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] ? Because what, derp's ignorance is the measure of existence and everything else ? How about... doing what they were told to do [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141246">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-fetlife-meatlist-volume-v?b=%20%26mdash%3B%26mda&amp;e=ll%27s#select' class='url'>The Fetlife Meatlist - Volume V on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141246" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...]  &mdash;&mdash;&mdash;For the scholarly inclined, see Fetlife, the meat market, Sooo... FetLife is butthurt and On how I ended up suing Phoenix NAP, LLC ; on how Ira R. Cadwell's [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141255">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-bitlove-llc-spin-on-their-recent-implosion-as-presented-to-their-captive-audience?b=bad%2C%20huh.%20%5B%26&amp;e=part#select' class='url'>The Bitlove LLC spin on their recent implosion, as presented to their captive audience. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141255" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] bad, huh. [&#8617;]Actually, the fix is quite trivial, but why think, right ? PR's not paid to think, PR's paid to pretend. [&#8617;]Except for the part [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141275">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-triviality-of-slaying-the-surviving-socialist-beast?b=their%20mouth%20&amp;e=much#select' class='url'>The triviality of slaying the surviving socialist beast on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141275" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] their mouth rings obscene. Here's a coupla examples as to how the former look (they're discussing Fetlife, the meat market) :  Dudebro is coming from the perspective that women as a commodity to be traded is pretty much [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141276">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-fetlife-meatlist-volume-vi?b=the%20scholarl&amp;e=ll%27s#select' class='url'>The Fetlife Meatlist - Volume VI on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141276" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the scholarly inclined, see Fetlife, the meat market, Sooo... FetLife is butthurt and On how I ended up suing Phoenix NAP, LLC ; on how Ira R. Cadwell's [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141303">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-fetlife-meatlist-volume-vii?b=by%20some%20of%20C&amp;e=ll%27s#select' class='url'>The Fetlife Meatlist - Volume VII on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141303" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] by some of Canada's most enlightened macaques. &mdash;&mdash;&mdash;For the scholarly inclined, see Fetlife, the meat market, Sooo... FetLife is butthurt and On how I ended up suing Phoenix NAP, LLC ; on how Ira R. Cadwell's [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141323">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-fetlife-meatlist-volume-ix?b=%20%26mdash%3B%26mda&amp;e=ll%27s#select' class='url'>The Fetlife Meatlist - Volume IX on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141323" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...]  &mdash;&mdash;&mdash;For the scholarly inclined, see Fetlife, the meat market, Sooo... FetLife is butthurt and On how I ended up suing Phoenix NAP, LLC ; on how Ira R. Cadwell's [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141346">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/gravatar-still-sucks?b=first%20string&amp;e=hing#select' class='url'>Gravatar still sucks on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141346" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] first string in that url is a plain unsalted (remember Fetlife ?) md5 hash of the corresponding email, which is not really all that hard to break, using something [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141395">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/on-how-the-factored-4096-rsa-keys-story-was-handled-and-what-it-means-to-you?b=a%20ton%20of%20com&amp;e=lent#select' class='url'>On how the factored 4096 RSA keys story was handled, and what it means to you. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141395" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] a ton of comments and so on. Carry on. [&#8617;]Conveniently omitting the part where Bitlove LLC wouldn't fix a vulnerability in Fetlife (still there, btw). Also incidentally forgetting to mention that entire debacle with fraudulent [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141405">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-fetlife-meatlist-volume-xii?b=%20%26mdash%3B%26mda&amp;e=ll%27s#select' class='url'>The Fetlife Meatlist - Volume XII on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141405" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...]  &mdash;&mdash;&mdash;For the scholarly inclined, see Fetlife, the meat market, Sooo... FetLife is butthurt and On how I ended up suing Phoenix NAP, LLC ; on how Ira R. Cadwell's [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141635">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/facebook-sends-traffic11eleven?b=in%20things%20do&amp;e=y%2C%20a#select' class='url'>Facebook sends traffic!!11eleven on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141635" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] in things doesn't mean things aren't interested in you. In point of fact all social media, not just Fetlife, not just any one example of the day is incredibly vulnerable. A few engineers' few hours away, a [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142015">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/files-from-the-war-on-the-web-today-literotica?b=bankrupt%20con&amp;e=t%20it#select' class='url'>Files from the War on the Web. Today, Literotica. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142015" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] bankrupt concern : skimping on all the things one can't afford to skimp on. [&#8617;]Recall some other UGC WWW item that also had 3mn users ? [&#8617;]Literotica, like all vBulletin systems, allows users to opt out of the PM system. But it [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142110">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/files-from-the-war-on-the-web-today-pbnation?b=the%20technica&amp;e=%5DThe#select' class='url'>Files from the War on the Web. Today, PBNation. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142110" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] the technically inclined : learn how to do userlists the right way.  &mdash;&mdash;&mdash;They like to say "powered", but the notion is laughable. [&#8617;]The [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142975">
+					<div class='trackhead'>
+						<div class="commentcount">25</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/stomp-a-sjw-face-today?b=made%20conserv&amp;e=ine%2C#select' class='url'>Stomp a SJW face today. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142975" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] made conserves any degree of relevancy. No, there isn't going to be a tindr of the future. There's barely any today. No, Steve Jobs wasn't important universally. He might have been important to you, which is fine, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143694">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/talent-triumphant-or-on-empathy?b=schooling%20as&amp;e=ogy%22#select' class='url'>Talent Triumphant, or : On Empathy on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143694" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] schooling as the ideal intersection of having to do the least possible work while enjoying the maximal possible sexual exposure to rich men. For similarily situated girls in Latin America "criminology" [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146329">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-a-primer-on-pedophilia-adnotated?b=is%20also%20why%20&amp;e=nse.#select' class='url'>thelastpsychiatrist.com - A Primer on Pedophilia. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146329" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] is also why all the "fetish lists" on retarded alt-sexuality wannabe websites "the user" is supposed to self-report are such fucking hysterical exercises in nonsense. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-153591">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/thelastpsychiatristcom-you-are-the-98-adnotated/?b=does%20a%20terri&amp;e=%20the#select' class='url'>thelastpsychiatrist.com - You Are The 98%. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-153591" title="">Wednesday, 12 August 2020</a>
+					</div>
+					<p>[...] does a terrible job of it very loudly ; but otherwise data mining the culture's rather on the trivial side of things. [&#8617;]What co-opted, the whole thing was "strategic" "guerilla" "tricks from the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154686">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/i-look-i-laugh-i-leave/?b=comedy%20%3A%20per&amp;e=ting#select' class='url'>I look, I laugh, I leave. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154686" title="">Sunday, 4 October 2020</a>
+					</div>
+					<p>[...] comedy : perusing the helpfully provided illustration inset to the right you perhaps remember fetlife, the canadian meat market, of great past lulz half decade ago. You perhaps similarily remember Bezos' subsidiary dedicating [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="60010" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832015-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-60010")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-60010");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-60010");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

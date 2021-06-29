@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>On namespaces on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Heretiquarium.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-78793"><div class="post" id="post-78793">                    <h1><a href="http://trilema.com/2018/on-namespaces/" rel="bookmark" title="Permanent Link to On namespaces">On namespaces</a></h1>                        <div class="date">                                     Tuesday, 03 April, Year 10 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p style="padding-left: 180px;"><strong>Motto</strong> : i suppose the question of lisp standardization, soon to be visited upon our fair republic, will be one helluva burning flame.</p>
+<p>Here's some preparatory work, then, by means of adnotation upon an old Naggum email.</p>
+<blockquote><p>
+<em>Subject: Re: Which one, Lisp or Scheme?<br />
+From: Erik Naggum <erik@naggum.no><br />
+Date: 1997/02/03<br />
+Newsgroups: comp.lang.lisp,comp.lang.scheme</em></p>
+<p>* Steve Austin<br />
+| I'm very much a newcomer to Common Lisp, and I naively assumed that the<br />
+| originators of Scheme used a common namespace to simplify the syntax of<br />
+| higher order functions. What advantages do separate namespaces provide?</p>
+<p>as others have observed, there are (at least) two schools of thought here.</p>
+<p>however, I'd like to approach this issue from a natural language point of view, instead of a formal language point of view. clearly, if you define a formal language to have only one namespace, you can argue all sorts of things from there, but the question is not ex post facto arguments, but rather the genesis of the idea.</p></blockquote>
+<p>I suspect this is the earliest statement of "<a href="http://trilema.com/2015/causes-and-purposes/">causes ; not purposes</a>" in Naggum's work. Certainly the earliest I so far found.</p>
+<blockquote><p>in natural languages, we are used to context. indeed, contextual meaning is what makes natural languages natural. we have `list' as a verb, and we have `list' as a noun. we have `listless' as an adjective describing something (like a programming language) that does not have lists, and an adjective describing someone who is sort of permanently tired. when we need to disambiguate, we do so with more words.</p></blockquote>
+<p>This actually misses the all-important mechanism. "When we need to disambiguate, we add more words such as to contradict one of the two possible solutions the string could eval to". Natural language is nothing beyhond "add a<sub>i</sub>x<sup>i</sup> terms until P has only one real root." and in this vein we could introduce for instance the only viable model to evaluate poetry : how deep is the space explored, and how precise <a href="http://trilema.com/forum-logs-for-11-aug-2017#2322410">the sliver of interest</a> chiseled out ?<sup><a href="#footnote_0_78793" id="identifier_0_78793" class="footnote-link footnote-identifier-link" title="In this view machines fail at natural language because it is a combinatorically intractable problem, strictly speaking -- much like drones fail at being dragonflies. Quick, which kind of drones did I mean ? And how did you know that ? And how would have perl known that ? And how many watts ?">i</a></sup></p>
+<blockquote><p>in Common Lisp, I can call some temporary variable `list' without having removed my ability to create new lists with the `list' function. like the natural language equivalent, `list' is both a verb and a noun, both a function and a variable. I find that this rhymes very well with me, and I also find that I would have severe problems if I could not use a word in a natural language just because it was "used up" by another part of speech. English is more prone to this than many other languages, but I happen to like English, too.</p></blockquote>
+<p>Except the argument for "multiple namespaces" has not been made. In point of fact what is being described is that in the sole namespace <em>ever possible</em> CL regards function.list as different from variable.list, even though some CL IDE some guy was at some point using opted to elide all the "variable." headers of all the variables as not contextually relevant. The fact that my penis isn't relevant to the discussion right now doesn't mean I don't have one ; and the fact that you don't need to see variable. in front of all your variables similarly doesn't imply it's not fucking there.</p>
+<blockquote><p>why is just one namespace bad for you? first, name space management is difficult. it is made more difficult by the lack of packages or other means of creating new namespaces. it is made more difficult by any means that artificially increase the collision rate of names. most languages that try to scale have had namespace manipulators added to them. e.g., in K&#038;R C, struct members shared a single namespace, which nevertheless was different from that of variables and functions. ANSI C made each struct a separate namespace. C++ introduced the pervasive typedef, which not only made class names a new type, but also a reserved word, which leads me to the second reason. by having one namespace only, you effectively create a new reserved word every time you name something globally. in Common Lisp, you can't redefine the functional meaning of symbols imported from standard packages, but you can use them in (almost) any other way, and you can (must) declare that you intend to shadow symbols. in Scheme, you need to be careful that you don't redefine symbols you will later need in their global sense.</p></blockquote>
+<p>The collection of inherited kludges is not necessarily all that interesting in the direct. Obviously <a href="http://trilema.com/forum-logs-for-02-apr-2018#2416681">incorrect exposure</a> of the path, not just to the eyes but also to the mind, is dangerous to the mind in question, as it's liable to start taking the local for general and "filenames" for identifiers.<sup><a href="#footnote_1_78793" id="identifier_1_78793" class="footnote-link footnote-identifier-link" title="Have you noticed, incidentally, how insistently repeated the errors central and typical of UStardianism are, in UStardian practice ? `Here is everywhere` doesn't just ridicule the fucktarded middle class girlie of `upper class ideals` or the equally fucktarded working class girlie of `I myself sing`. A lisp hacker from Oslo (who `mysteriously` prefers English) has the exact same fucking problem, he sees `list` and thinks that's all that's there! Just like they do it in Paris!
+Yes, yes, you like Naggum. So do I -- probably more than you. But I don't like the bits of nonsense embedded in the nougum, and if you `don't care` you may be well served by doing some thinking as to where they led him.">ii</a></sup></p>
+<blockquote><p>various counter-measures are necessary if you have only one namespace. e.g., in C, the standard prescribes certain prefixes as belonging to the compiler and the rest are up for grabs among modules that you might want to link with. of course, using lexical scope, you reduce the impact of this problem. still, you can't use reserved words where they have no other use than to make the compiler barf. `default' is a perfectly reasonable variable name. then, some compilers will introduce new reserved words just for fun, like `try' and `catch'. Scheme, lacking both a package system and a useful number of namespaces, open up for namespace management problems that we know so well from large C programs (C being slightly better than Scheme in the namespace division). a single namespace in the linker also forced C++ to include a gross counter-measure appropriately called "name mangling". lacking packages, lacking symbol types, lacking everything, a C++ name as seen by the linker is some _implementation-specific_ junk that makes life "interesting" for everything that wishes to talk with the C++ modules. as a counter-counter-measure against the collision-avoidance that you need in one namespace, C++ has C linkage (extern "C") as an option to make names visible in a predictable namespace.</p></blockquote>
+<p>The fact that C grew "from the ground up" and they tried to retrofit it with a namespace rather than design one from the beginning is very poor an argument. Yes the linker need-driven namespace recreation looks exactly like Norma Bates (yes, arguably scheme's version looks more like Norman Bates' mom -- so ?). </p>
+<blockquote><p>now, C and C++ are language we love to hate, and the more we know the more we hate them, partly because of these problems, but my point is that Scheme is even _less_ scalable because of its severe restriction on names, and doubly so because Schemers, like most Lispers, like descriptive names, not cryptic naming conventions in somewhat less than 8 characters, which means that artificial naming in Scheme looks a lot worse than artificial naming in C.</p>
+<p>it is often said that small is beautiful. now, anything can be beautiful when it is small. the ugliest person you can think of was probably a quite pretty baby.</p></blockquote>
+<p>This is patent nonsense. Most babies are ferociously ugly, and very often exactly the ones that'll in time grow into the prettiest girls. In any case about half of the real knockouts were not good looking during puberty. There's really no good relation here -- and I'd know, I looked.</p>
+<blockquote><p> it doesn't take much effort to find a beautiful 16-year-old girl, either. in fact, our modern notions of beauty and elegance are _defined_ in terms of size and maturity, so the chance of anything small and immature being beautiful is vastly higher than anything big or mature. now, despite all the marketing that seems to be aimed at telling me that I should dump a girlfriend when she becomes 25 and get a new 16-year-old (or even younger), I plan to stay with mine partly because of her ability to grow older in a way I like.</p></blockquote>
+<p><a href="http://trilema.com/2016/portrait-of-an-adult-woman/">I can't begin to imagine</a> who is the membership of that "our" ; but I expect an approximation of "nobody". Yes this sexuate species is sexually oriented towards geting the cap off the young girls ; but that anyone <em>likes</em> them is a whole 'nother matter, one that needs a little more thought given than a superficial scratch.</p>
+<p>In any case -- nothing new has yet been beautiful, nor could it ever have been. Just like <a href="http://trilema.com/2014/pro-idiotas-which-obviously-means-people-who-have-ideas-ie-idiots/#selection-149.0-153.26">idiots can't have ideas</a>, beauty is a function of familiarity not immaturity. </p>
+<blockquote><p>consequently, I take exceptions to the pedophilic attitudes to beauty and elegance that our societies have adopted over the years. this is why I don't like the "small is beautiful" model of aesthetics.</p></blockquote>
+<p>The model is misstated : <em>simple</em> is beautiful. </p>
+<p>That simplicity in <a href="http://trilema.com/2009/inchipuiti-va/">the description of ideal objects</a> is readily conflated with shortness ; and that shortness of a thoroughly different type is readily conflated with immaturity in a completely disjunct namespace (which is just another word for "context", in context, isn't it) leads the misfortunate intellect down a path steeped in nonsense -- and you know exactly what I mean by the cracks and tears the <em>simpler</em> representation of namespaces I proposed above left in your previous "understanding" of the subject. </p>
+<p>The relation between simplicity and shortness is slight ; the relation between simplicity and novelty entirely absent.</p>
+<blockquote><p>this is why I think that almost anybody could make something small and beautiful, but only a few can create something that grows from small to huge and still remains beautiful.</p></blockquote>
+<p>Like, for instance, a cell. <a href="http://trilema.com/2017/hela-matter/">Yes</a> ? Is it beautiful ? Could you make it ?</p>
+<blockquote><p>but then again, look at interior architecture -- with huge spaces come a need for size-reducing ornamentation. the scaling process _itself_ adds "junk" to what was "clean surfaces" in a small model. Schemers refer to Common Lisp's "warts", and prefer to think of Scheme as "clean". now, I wonder, would Schemers prefer to live in small houses with nothing on their walls? would they still prefer this if the walls were a 100 feet high and 200 feet long, or would they, too, desire some ornamentation that would have looked _very_ bad if it had been on a 10 by 20 feet wall?</p></blockquote>
+<p>Yes. </p>
+<p>I don't personally live in any space with ceilings at 30 meters. This is by choice, if I wanted to live in a railroad depot I very well could<sup><a href="#footnote_2_78793" id="identifier_2_78793" class="footnote-link footnote-identifier-link" title="Understand, the world is full of obsolete ones to be had for cheap. For this reason it wouldn't even be expensive, to me, technically speaking, so it's not an idle `I could`, it's a very factual `I grind ten tons of potatoes a week for pulp, if I wanted to eat some I very well fucking could`.">iii</a></sup>. I don't. I do however own and operate spaces that fit his description. They are industial properties applied towards industrial uses, and no, a chunk of solid concrete suddenly protruding from a wall is not acceptable -- even recently serious expenditure was approved to cut the damn thing out, lest who knows when in the future someone's caught with <a href="http://btcbase.org/log/2018-03-24#1789567">their pants down</a> in between unexpected circumstance and the "wall decoration". </p>
+<p>The walls of large spaces are smooth for very good reasons, specifically that accidents on their surface would break the faculties for summation of the human brain in exactly their most vulnerable spot, and conceivably with dire consequences ; but even without this the "interior decoration" line falls apart, something that was to be expected from the onset -- I don't think there's many fields in worse a shape than this misfortunate catchall where all the women dumb enough to marry the sons dumb enough to pursue a career in politics end up vomited. </p>
+<blockquote><p>Scheme's single namespace is a function of its size. Scheme with more than one namespace _would_ have had bags on its side -- it would be very inelegant. however, as applications grow and as Scheme environments grow, the single namespace becomes disproportionately _small_. therefore, people resist a growth path that would have been natural, because their notion of beauty forbid it. Common Lisp with a single namespace would be confined and forbidding, for the same reason. an analogy may be in order. in very small towns, houses may have unique names. as the town grows in size, this becomes too hard to even imagine working, and houses are instead numbered, and the number space is managed by a street name. as the town grows more, streets in neighboring towns it merges with may have the same name. but towns have names, too, and states may have many towns. the United States has lots of towns with the same name. there are even towns that bear the name of countries in the global namespace. some people may still wish to name their house, but it would be foolish to hope that that name would be globally unique.</p></blockquote>
+<p>Yet if I mention in the opening lines of a new novel the Tribune tower you know the action's taking place in Chicago, right ?</p>
+<p>Look how fucking beautiful it is : </p>
+<ul>
+<li>geoloc.usa.texas.paris != geoloc.france.ile-de-france.paris </li>
+<li>geoloc.usa.illinois.chicago.tribune-tower =<br />
+geoloc.usa.illinois.chicago.n-michigan-ave &#038; geoloc.usa.illinois.chicago.e-illinois-st</li>
+</ul>
+<p>Problem ?</p>
+<blockquote><p> all over the place, we invent namespaces to manage the huge number of things we deal with.</p></blockquote>
+<p>"Inventing" namespaces is a little like inventing gods : only <a href="http://trilema.com/2011/hai-sa-facem-un-exercitiu/">inenarrable imbeciles</a> engage in the activity. </p>
+<p>"Inventing" namespaces is a lot like inventing "feelings" or "academic disciplines" or "genders" : the sure mark of the antisocial failure busy at work trying to destroy the world.</p>
+<blockquote><p>in Scheme, there are few things to deal with, so few names are necessary. in Common Lisp, there are many things to deal with, so means to keep names apart is _necessary_. in consequence, Common Lisp has packages and symbol slots and namespaces.</p></blockquote>
+<p>Yes, means to keep them apart are necessary in the general ; but this doesn't imply the proposed means are meaningful, or useful.</p>
+<blockquote><p>why is a single name space bad for you? in addition to the reasons given above, I'd like to add</p></blockquote>
+<p>If he were honest, he'd confess it's because the pantsuit in him takes issue with the implications of authority and control that flow from there, even if that flow is purely in the manner and of the substance of dreams. He just dun like monotheism, what! Africa 4 eva!</p>
+<blockquote><p> a problem as a conclusion: nothing restricts your growth path more than a restricted ability to name your inventions or creations. the psychological factor known as "cognitive load" imposes a very heavy burden on our design, namely by having to avoid excesses in that load. a single namespace is good if you have few names, and more than one namespace would be bad. at some size of the set of names, however, a single namespace becomes bad because what you once knew (namely, what a symbol meant), _ceases_ to be rememberable. namespaces introduce context to a language. I think communication without context is a contradiction in terms, so naturally I applaud such introduction.</p>
+<p>#\Erik -- 1,3,7-trimethylxanthine -- a basic ingredient in quality software. </p></blockquote>
+<p>No body of work is larger than Trilema ; and Trilema uses a single name space to name all my creations (all the way down to the character level : <a href="http://trilema.com/2018/on-namespaces/#selection-335.144-335.145">http://trilema.com/2018/on-namespaces/#selection-335.144-335.145</a>) without impediment. Does it seem my growth is <a href="http://trilema.com/2012/filozoful-blogomirea-editie-revazuta-adaugita-si-completata/">all that restricted</a> ? </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_78793" class="footnote">In this view machines fail at natural language because it is a combinatorically intractable problem, strictly speaking -- much like drones <a href="http://trilema.com/2011/problema-scrisului/">fail at being dragonflies</a>. Quick, which <em>kind</em> of drones did I mean ? And how did you know that ? And how would have perl known that ? And how many watts ? [<a href="#identifier_0_78793" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_78793" class="footnote">Have you noticed, incidentally, how insistently repeated the errors central and typical of UStardianism are, in UStardian practice ? "Here is everywhere" doesn't just ridicule the fucktarded <span style="background-color:#d3d3d3" id="select">middle class girlie of "<a href="http://trilema.com/2013/queers/#selection-135.66-135.84">upper class ideals</a>" or the equally fucktarded working class girlie of "<a href="http://trilema.com/2016/tangerine/#selection-77.488-77.502">I myself sing</a>". A lisp hacker from Oslo (who "mysteriously" prefers English) has the exact same fucking problem,</span> he sees "list" and thinks that's all that's there! Just like they do it in Paris!</p>
+<p>Yes, yes, you like Naggum. So do I -- probably more than you. But I don't like the bits of nonsense embedded in the nougum, and if you "don't care" you may be well served by doing some thinking as to <em>where they led him</em>. [<a href="#identifier_1_78793" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_78793" class="footnote">Understand, the world is full of <a href="http://trilema.com/forum-logs-for-04-aug-2016#2141023">obsolete ones</a> to be had for cheap. For this reason it wouldn't even be expensive, to me, technically speaking, so it's not an idle "I could", it's a very factual "I grind ten tons of potatoes a week for pulp, if I wanted to eat some I very well fucking could". [<a href="#identifier_2_78793" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2018/dangerous/">Dangerous</a></div>
+                <div class="alignright"><a href="http://trilema.com/2018/no-such-labs-snsa-march-2018-statement/">No Such lAbs (S.NSA), March 2018 Statement</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2018/on-namespaces/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2018/on-namespaces/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>2 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-144533">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/medicine-tactics?b=dyslexic%2C%20wh&amp;e=tain#select' class='url'>Medicine Tactics on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144533" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] dyslexic, which is to say in the course of my business I juggle vast but strictly disjunct "namespaces", and that "strictly disjunct" comes at great cognitive expense of not being able to cross certain [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145155">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/this-gns-thing?b=could%20produc&amp;e=grow#select' class='url'>This GNS thing... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145155" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] could produce the path for such a thing ; similarily global.properties.time could produce the time and so following ; nevertheless, we're not ready with the full thing just yet, and moreover it should grow [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="78793" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835238-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-78793")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-78793");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-78793");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

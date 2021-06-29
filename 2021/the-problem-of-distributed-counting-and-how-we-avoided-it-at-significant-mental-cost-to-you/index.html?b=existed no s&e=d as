@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The problem of distributed counting, and how we avoided it (at significant mental cost to you) on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Mentula cum doleat imperio, tibi, lector, culus.<br />Non sum diuinus, sed scio quid facias.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-98674"><div class="post" id="post-98674">                    <h1><a href="http://trilema.com/2021/the-problem-of-distributed-counting-and-how-we-avoided-it-at-significant-mental-cost-to-you/" rel="bookmark" title="Permanent Link to The problem of distributed counting, and how we avoided it (at significant mental cost to you)">The problem of distributed counting, and how we avoided it (at significant mental cost to you)</a></h1>                        <div class="date">                                     Saturday, 09 January, Year 13 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>In lingering continuation of an <a href="http://trilema.com/2020/forum-logs-for-30-oct-2019/#2567938">ancient discussion</a>, we will be making some changes to the Eulora communication protocol (still specced <a href="http://trilema.com/2018/euloras-communication-protocol-restated/">here</a>).</p>
+<p>To summarize, Eulora communications rest on a layered encrypted protocol. The first layer's RSA, which is known to be secure, but it is also very intensive, both in time (exponentiation's not free) and in space (OAEP ensures sub-50% packet utilization, for instance). The second layer's [an in-house elaboration of<sup><a href="#footnote_0_98674" id="identifier_0_98674" class="footnote-link footnote-identifier-link" title="This because everyone out there sucks pustulent whore ass and call it macaronifoss. There existed no such thing as a Serpent implementation before I had my own engineer make it exist, fancy that wonder.">i</a></sup>] Serpent, which is much more comfortable but also ambiguous<sup><a href="#footnote_1_98674" id="identifier_1_98674" class="footnote-link footnote-identifier-link" title="Any buffer can be used as `key` to `decrypt` via this algorithm any buffer used as `encrypted message`, resulting in a `decrypted message` of the correct length obtained through the correct number of steps. If this makes you salivate while you've your crypto hat on, because `man, sounds just like OTP`, it'll also make you weep because there's no good ways to reject messages intrinsically. You always gotta know the item's actually a message, and actually intended for so-and-so key, you can't really do the (very useful!) old RSA trick, for instance.">ii</a></sup>. The RSA key is fixed and intrinsically melded into the notion of identity (as <a href="http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/">it should be</a>!) whereas serpent keys are just kept in a round buffer by the hundreds, intended for and destined to ephemereality.</p>
+<p>The protocol as summarily described (and naively represented in the reader's mind on a first pass read) works well enough in most practical situations : the RSA secure layer handles identity and Serpent key seeding, the Serpent workhorse layer takes over from there. Problems arise at the interface with a somewhat marginal case which is practically a ftp implementation : large quantities of data are sent over this protocol, being the game's own resources (models, animations, etcetera). UDP packets are relatively small (thousand bytes sorta thing) ; such assets are relatively large (million byte sorta thing), but an elaborate (yet remarkably flexible and functional, I must say!) algorithm cuts the files into more manageable-sized chunks, produces manifests for the lists, ships the manifests over first... it's basically torrenting but fast, cheap and altogether lite <em>not to mention <b>actually</b> encrypted</em>, because that "https" bullshit you folk do... But let's not get distracted with discussions of the pustulence and all-around misery of barbarian lands. Instead, let's say our thing works splendidly well, except...</p>
+<p>There's this naive concept of automatically burning serpent keys, see ? It seemed, at some point <em>illo tempore</em>, in continuation of and comunion with <a href="http://trilema.com/2019/being-an-engineer-the-mental-disorder/">specified idiocies</a>, that it'd be a good idea to have an implicit rule for burning Serpent keys every nth use (potentially, n=1<sup><a href="#footnote_2_98674" id="identifier_2_98674" class="footnote-link footnote-identifier-link" title="An important point to underscore here is that even n=1 (meaning, burn the key used after every packet) does not in fact equate single-usage of Serpent keys. 
+The 1472-byte Serpent packet is really a concatenation of 92 16-byte chunks, all of which were obtained by encrypting respective 16-byte payload chunks to the same Serpent key, so even the (extremely expensive!) n=1 case still means 92 reuses per Serpent key. Such is the nature of the beast : there's no self-obvious way to stretch Serpent to larger sizes ; there's not much utility to smaller UDP packets ; a procedure whereby 92 different keys are used for composing each packet could theoretically be implemented on the current protocol, however it'd increase costs substantially.">iii</a></sup>, why not, if the user's willing to pay for the mounting costs involved the server will work for pay, that's what a server is). This leads to an insolvable problem : decentralized counting. We have some mechanisms to deal with it in some favourable cases (which involve <em>private algebras</em> and other things I absolutely won't... "bother" you with, for you're unworthy), but in this particular case, where the count can increase by arbitrarily large chunks suddenly... well, nothing's doing, what can I say.</p>
+<p>We've seen all sorts of lulz as part of ongoing, for the past five or six weeks, experimental constructions to better understand the problem <em>in our own terms</em> (which is what <a href="http://trilema.com/2018/experimental-results/">the lab</a> ever was for). Such as for instance a client telling the server "hey, use THIS key from now on!" upwards of sixty times (in response to a large burst of data) only to exhaust the key's lifetime thusly and so cap the hot mess with a message to... use a different key. (Which of course doesn't even have to arrive in order, yes, it could come in next-to-last or something, why not, it's UDP after all.) Such as for instance all sorts and manner, the fact of the matter's that decentralized counting is dubious at best...</p>
+<p><center>~ <b>Part Two</b> ~</center> </p>
+<p>Hellow, an' welcome to Part Two!!! of our article. When we parted company in part one (which at the time was merely The Article) barely twenty minutes ago, I hadn't yet had breakfast, and we were discussing things and matters phylosophycal and of great depth, such as distributed counting -- this enhancedly insane situation where two people count the things they say to each other over a lossy channel and baș-never manage to arrive at any sort of reconciled count ; nor is there any hope to resolve the situation through authority, because whoever is promoted to head librarian is stuck issuing a concrete number, and the recipient can always find itself looking at a five written down next to a collection of six items all present.</p>
+<p>In other words, before this Part Two!!! came along, we were fucked. But then it occured to me<sup><a href="#footnote_3_98674" id="identifier_3_98674" class="footnote-link footnote-identifier-link" title="Here, if you wish to see raw the workings of true life I'm not one to deny : 
+mircea_popescu diana_coman, tuuuu!
+mircea_popescu pula mea noi suntem idioti complet.
+mircea_popescu de ce isi face fiecare management la ~cheile lui~ ?!
+mircea_popescu sa faca bine sa faca management la cheile celuilalt, ca NU IS ALE CELUILALT. pizda fetei ii a mea nu a ei, ea doar o poarta prin lume si-i da de mincare, PENTRU MINE.
+mircea_popescu si fix tot asa, cheia pe care primeste clientu' mesaje E A SERVERULUI nu a clientului. serverul SI DOAR SERVERUL zice cind nu mai e buna.
+mircea_popescu clientu' doar plateste chirie pe memoria ei, atit, in rest e a lui cum e si puta cuckoldului.
+mircea_popescu si-n felu' asta, nu mai e problema de distributed counting. e problema de local counting : cind ~tu~ stii ca ai trimis X mesaje pe cheia Y, te muti pe cheia Z.
+diana_coman mircea_popescu: ha!
+mircea_popescu tot verific aici dac-ai aparut din 5 in cinci minute
+mircea_popescu ha! salut!
+mircea_popescu deci ma-ntelegi ce zic ?
+diana_coman la brute force mai sus: varianta 2 din ce zici acolo adica da, eliminat treptat
+diana_coman aici pricep, numai ma mir ca abia acum a iesit in sensul ca ne-am mai invartit pe langa ea da' n-a fost clar cum ar veni mai logic
+mircea_popescu eu blamez indoctrinarea psiho-sexuala a modernitatii
+diana_coman lol
+mircea_popescu sa mor de nu
+diana_coman nu prea creditez faza, da' in fine, nu e `cauza` esentiala acu'
+mircea_popescu nici nu e, si pe urma de ce n-ai si tu dreptu' sa-ti explici propria experienta cum ti-o explici, exact ca si mine ? io asa mi-o explic, tu te descurci
+mircea_popescu da' revenind : deci fa o proba asa, ca fiecare isi numara cheia `lui` in sensul de, cheia tinuta de celalalt in care encrpteaza. nu cheia tinuta de el
+diana_coman revenind insa, zici ca fiecare si le gestioneaza pe ale lui si altminteri doar informeaza gen `vezi ca ma mut` + mutat?
+mircea_popescu nope.
+diana_coman fiecare numara ce trimite
+mircea_popescu el nu se mai muta. gata cu aia.
+mircea_popescu fiecare numara ce trimite el si ATIT
+diana_coman ah, zici ca sa nu ma mai chinui cu cele doua countere?
+mircea_popescu ba da, alea lasa-le. DOAR ca nu mai depind chei burn de ele.
+mircea_popescu ci stau acolo de curiozitate, cum erau
+mircea_popescu hai sa repet tatu clar si explicit ca te chinui degeaba. deci :
+diana_coman bun, deci sa fac proba cu key burn inca pe `nr de utilizari` da' omeneste in sensul ca adica de cate ori le foloseste ala de numara
+diana_coman ascult
+mircea_popescu se face rsa handshake. serveru' trimite niste chei, spre a fi folosite in a scrie mesaje catre server. clientu' le noteaza.
+diana_coman da
+diana_coman asa si este acum
+mircea_popescu clientu' trimite niste alte chei, spre a fi folosite de server, sa-i scrie mesaje clientului.
+diana_coman asa este.
+mircea_popescu serveru' trimite 5 mesaje pe o cheie, si i se pare ca 5 is destul, asa ca trimite al saselea : de acum, mesaje mai departe trimit pe cheia X
+diana_coman adica face burn la cheia 5 si selecteaza cheia x
+mircea_popescu clientu' trimite si el mesaje catre server. de la un moment dat, i se pare c-o folosit destul o cheie, da `de acum, trimit pe Y`
+mircea_popescu exact asa.
+diana_coman ori ma rog, la cheia y ce era
+mircea_popescu da.
+mircea_popescu asta e tot.
+diana_coman bun, si daca se pierde mesajul ala si deci de ex primeste clientul ceva la care se uita ca-n calendar?
+mircea_popescu ce era pina acum si nu va mai fi, e situatia in care unu' decide sa-i futa cheia celuilalt da' tre' cumva sa-i zica
+mircea_popescu ignora
+diana_coman pai ignora da' atunci raman deci desincronizati ori cum vezi
+diana_coman la urmatorul burn zici ca se resincronizeaza oricum?
+mircea_popescu in cel mai rau caz isi refac rsa
+diana_coman ce zic eu e ca nu *realizeaza* ca s-au desincronizat
+mircea_popescu nu au cum sa se mai resincronizeze neam, deoarece urmatoru' burn va fi si el pe noua cheie
+diana_coman drept
+diana_coman deci si mai rau: nici nu stiu si si daca stiu tot degeaba
+mircea_popescu au cum sa realizeze, pentru ca clientu' nu mai pricepe nic din ce zice asta
+diana_coman pai da, da' n-are cum sa-i spuna
+diana_coman lol
+mircea_popescu pai isi refac rsa. deci pierdut pachetul ala anumit == disconnect
+mircea_popescu == rsa handshake
+diana_coman ah, deci zici ca daca nu pricepe, tolereaza eventual da' altminteri n-are ce face decat sa trimita iar via rsa
+mircea_popescu yup
+mircea_popescu nici nu are nici nu cred ca trebuie sa aiba.
+diana_coman adica sa trimita iar un set de chei pt vorbit cu el gen, ca alta n-are ce
+mircea_popescu daca doresti poate duplica pachetul ala.
+diana_coman si alea reseteaza
+mircea_popescu dap
+mircea_popescu facem asa, ca pachetul de burn e trimis de doua ori ? ca nu s-or pierde ambele ?
+diana_coman macar e mai clar asa, cum sa zic, ca ma innebunea toata invarteala dincolo
+mircea_popescu dap! e MULT mai clar, si ce e mai important, e macar corect sa-l fut
+diana_coman apai aia ma gandesc ca tine de implementare adica fiecare poate decide de cate ori vrea sa-l trimita, nu?
+mircea_popescu pai cam da. da; la server zic
+diana_coman daca unul vrea sa-si faca implementare sa trimita de 100 de ori cine ce-are cu el
+mircea_popescu ce ne caca pe noi un pachet udp extra.
+diana_coman da, numai ca tb sa aiba ceva interval ca sa aiba orice potential efect
+mircea_popescu cam da.
+diana_coman ca daca le trimite asa foc scurt imediat cam degeaba
+diana_coman poate trimite daca e la urmatorul heartbeat ori ceva, cuget acolo, nu-i problema
+mircea_popescu daca doresti : se pot tine TOATE burn facute de la ultimul heartbeat, si retrimise daca nu apare urmatorul. da' asta e deja poate cam mult.
+diana_coman eu altminteri in cod abia ce-am facut un v-commit si pe client si pe server ca sa stiu ca nu pierd istoric nimic din ce am facut da' altminteri inca n-am intrat sa chiar modific ca na, intai sa am clar ce fac acolo exact
+mircea_popescu orisicit : fa-i asta, da-o-n teste sa videm, si io am sa termin articolu' de care ma apucasem, da' iese foarte diferit de ce aveam initial lol. ca asa mi-o si picat fisa, incercind sa scriu articol
+diana_coman ha, deci tb sa scrii mai demult!!!
+diana_coman lol
+mircea_popescu pai plm, 9 januar chiar asa tardiv e ?
+diana_coman totul e ...cine si de unde numara!
+mircea_popescu heh
+diana_coman da' cine ne alearga altminteri
+mircea_popescu i plea commonality. ca altu' cinci ani nu-i pica fisa.
+diana_coman ca oricum ei obosesc si doar sa se uite, ce sa mai
+mircea_popescu bietii
+diana_coman apai mi-a si zis unul ca l-am ...extenuat; in conversatie!
+mircea_popescu lmao
+mircea_popescu nu-ti zic ce fericit is lol
+diana_coman da' sa stii ca si eu, mai ales ca imi rezolva asa frumos si partea aia cu `cum dracu' sa decida cand ori daca e cazul de reset`
+mircea_popescu e un salt calitativ
+diana_coman este.
+And so it goes!">iv</a></sup> there's no absolute need to manage it as a <em>distributed</em> counting exercise, if (and <b>only if</b>) one lets go of the <a href="http://trilema.com/2015/the-squares-and-the-holes/">"modern democracy" poison</a> and reverts to more <a href="http://trilema.com/2016/modernism-and-traditionalism/?b=What%20do%20you%20mean&#038;e=Natasha#select">traditional values</a>. Removing spurious "communication" and assorted "<a href="http://trilema.com/2017/the-practical-costs-of-hallucinated-freedom/">anyone</a>-can-do-<a href="http://trilema.com/2016/the-darkening/">anything</a>-isms" from the pie results in... less complexity, or more properly put : <a href="http://trilema.com/2020/eulora-changes-or-hey-diana_coman/?b=aware&#038;e=Nevertheless#select">manageable</a> complexity.</p>
+<p>And so... work continues, on better footing. Always remember : #BelieveWomen <a href="http://trilema.com/2018/the-common-psychosis/">kills</a> IRL. </p>
+<p>And don't forget to love Rochester like <a href="http://trilema.com/2014/i-love-rochester-so-will-you/?b=This%20busy&#038;e=em%20out#select">I do</a>!</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_98674" class="footnote">This because everyone out there sucks pustulent whore ass and call it <del>macaroni</del>foss. There <span style="background-color:#d3d3d3" id="select">existed no such thing as a Serpent implementation before I had my own engineer make it exist, fancy <a href="http://trilema.com/2017/fake-news-are-just-one-tail-of-the-failed-female-state/">that wonder</a>. [<a href="#identifier_0_98674" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_98674" class="footnote">Any buffer can be used as</span> "key" to "decrypt" via this algorithm any buffer used as "encrypted message", resulting in a "decrypted message" of the correct length obtained through the correct number of steps. If this makes you salivate while you've your crypto hat on, because "man, sounds just like OTP", it'll also make you weep because there's no good ways to reject messages intrinsically. You always gotta know the item's actually a message, and actually intended for so-and-so key, you can't really do the (very useful!) <a href="http://trilema.com/2012/cum-sa-pastram-secrete-digitale/?b=Chestia%20asta%20are&#038;e=procedeaza#select">old RSA trick</a>, for instance. [<a href="#identifier_1_98674" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_98674" class="footnote">An important point to underscore here is that even n=1 (meaning, burn the key used after every packet) does not in fact equate single-usage of Serpent keys. </p>
+<p>The 1472-byte Serpent packet is really a concatenation of 92 16-byte chunks, all of which were obtained by encrypting respective 16-byte payload chunks to <em>the same</em> Serpent key, so even the (extremely expensive!) n=1 case still means 92 reuses per Serpent key. Such is the nature of the beast : there's <a href="http://trilema.com/2020/forum-logs-for-22-nov-2017/#2367491">no self-obvious way</a> to stretch Serpent to larger sizes ; there's not much utility to smaller UDP packets ; a procedure whereby 92 different keys are used for composing each packet could theoretically be implemented on the current protocol, however it'd increase costs substantially. [<a href="#identifier_2_98674" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_98674" class="footnote">Here, if you wish to see raw the workings of true life I'm not one to deny : </p>
+<blockquote><p><b>mircea_popescu</b> diana_coman, tuuuu!<br />
+<b>mircea_popescu</b> pula mea noi suntem idioti complet.<br />
+<b>mircea_popescu</b> de ce isi face fiecare management la ~cheile lui~ ?!<br />
+<b>mircea_popescu</b> sa faca bine sa faca management la cheile celuilalt, ca NU IS ALE CELUILALT. pizda fetei ii a mea nu a ei, ea doar o poarta prin lume si-i da de mincare, PENTRU MINE.<br />
+<b>mircea_popescu</b> si fix tot asa, cheia pe care primeste clientu' mesaje E A SERVERULUI nu a clientului. serverul SI DOAR SERVERUL zice cind nu mai e buna.<br />
+<b>mircea_popescu</b> clientu' doar plateste chirie pe memoria ei, atit, in rest e a lui cum e si puta cuckoldului.<br />
+<b>mircea_popescu</b> si-n felu' asta, nu mai e problema de distributed counting. e problema de local counting : cind ~tu~ stii ca ai trimis X mesaje pe cheia Y, te muti pe cheia Z.<br />
+<b>diana_coman</b> mircea_popescu: ha!<br />
+<b>mircea_popescu</b> tot verific aici dac-ai aparut din 5 in cinci minute<br />
+<b>mircea_popescu</b> ha! salut!<br />
+<b>mircea_popescu</b> deci ma-ntelegi ce zic ?<br />
+<b>diana_coman</b> la brute force mai sus: varianta 2 din ce zici acolo adica da, eliminat treptat<br />
+<b>diana_coman</b> aici pricep, numai ma mir ca abia acum a iesit in sensul ca ne-am mai invartit pe langa ea da' n-a fost clar cum ar veni mai logic<br />
+<b>mircea_popescu</b> eu blamez indoctrinarea psiho-sexuala a modernitatii<br />
+<b>diana_coman</b> lol<br />
+<b>mircea_popescu</b> sa mor de nu<br />
+<b>diana_coman</b> nu prea creditez faza, da' in fine, nu e "cauza" esentiala acu'<br />
+<b>mircea_popescu</b> nici nu e, si pe urma de ce n-ai si tu dreptu' sa-ti explici propria experienta cum ti-o explici, exact ca si mine ? io asa mi-o explic, tu te descurci<br />
+<b>mircea_popescu</b> da' revenind : deci fa o proba asa, ca fiecare isi numara cheia "lui" in sensul de, cheia tinuta de celalalt in care encrpteaza. nu cheia tinuta de el<br />
+<b>diana_coman</b> revenind insa, zici ca fiecare si le gestioneaza pe ale lui si altminteri doar informeaza gen "vezi ca ma mut" + mutat?<br />
+<b>mircea_popescu</b> nope.<br />
+<b>diana_coman</b> fiecare numara ce trimite<br />
+<b>mircea_popescu</b> el nu se mai muta. gata cu aia.<br />
+<b>mircea_popescu</b> fiecare numara ce trimite el si ATIT<br />
+<b>diana_coman</b> ah, zici ca sa nu ma mai chinui cu cele doua countere?<br />
+<b>mircea_popescu</b> ba da, alea lasa-le. DOAR ca nu mai depind chei burn de ele.<br />
+<b>mircea_popescu</b> ci stau acolo de curiozitate, cum erau<br />
+<b>mircea_popescu</b> hai sa repet tatu clar si explicit ca te chinui degeaba. deci :<br />
+<b>diana_coman</b> bun, deci sa fac proba cu key burn inca pe "nr de utilizari" da' omeneste in sensul ca adica de cate ori le foloseste ala de numara<br />
+<b>diana_coman</b> ascult<br />
+<b>mircea_popescu</b> se face rsa handshake. serveru' trimite niste chei, spre a fi folosite in a scrie mesaje catre server. clientu' le noteaza.<br />
+<b>diana_coman</b> da<br />
+<b>diana_coman</b> asa si este acum<br />
+<b>mircea_popescu</b> clientu' trimite niste alte chei, spre a fi folosite de server, sa-i scrie mesaje clientului.<br />
+<b>diana_coman</b> asa este.<br />
+<b>mircea_popescu</b> serveru' trimite 5 mesaje pe o cheie, si i se pare ca 5 is destul, asa ca trimite al saselea : de acum, mesaje mai departe trimit pe cheia X<br />
+<b>diana_coman</b> adica face burn la cheia 5 si selecteaza cheia x<br />
+<b>mircea_popescu</b> clientu' trimite si el mesaje catre server. de la un moment dat, i se pare c-o folosit destul o cheie, da "de acum, trimit pe Y"<br />
+<b>mircea_popescu</b> exact asa.<br />
+<b>diana_coman</b> ori ma rog, la cheia y ce era<br />
+<b>mircea_popescu</b> da.<br />
+<b>mircea_popescu</b> asta e tot.<br />
+<b>diana_coman</b> bun, si daca se pierde mesajul ala si deci de ex primeste clientul ceva la care se uita ca-n calendar?<br />
+<b>mircea_popescu</b> ce era pina acum si nu va mai fi, e situatia in care unu' decide sa-i futa cheia celuilalt da' tre' cumva sa-i zica<br />
+<b>mircea_popescu</b> ignora<br />
+<b>diana_coman</b> pai ignora da' atunci raman deci desincronizati ori cum vezi<br />
+<b>diana_coman</b> la urmatorul burn zici ca se resincronizeaza oricum?<br />
+<b>mircea_popescu</b> in cel mai rau caz isi refac rsa<br />
+<b>diana_coman</b> ce zic eu e ca nu *realizeaza* ca s-au desincronizat<br />
+<b>mircea_popescu</b> nu au cum sa se mai resincronizeze neam, deoarece urmatoru' burn va fi si el pe noua cheie<br />
+<b>diana_coman</b> drept<br />
+<b>diana_coman</b> deci si mai rau: nici nu stiu si si daca stiu tot degeaba<br />
+<b>mircea_popescu</b> au cum sa realizeze, pentru ca clientu' nu mai pricepe nic din ce zice asta<br />
+<b>diana_coman</b> pai da, da' n-are cum sa-i spuna<br />
+<b>diana_coman</b> lol<br />
+<b>mircea_popescu</b> pai isi refac rsa. deci pierdut pachetul ala anumit == disconnect<br />
+<b>mircea_popescu</b> == rsa handshake<br />
+<b>diana_coman</b> ah, deci zici ca daca nu pricepe, tolereaza eventual da' altminteri n-are ce face decat sa trimita iar via rsa<br />
+<b>mircea_popescu</b> yup<br />
+<b>mircea_popescu</b> nici nu are nici nu cred ca trebuie sa aiba.<br />
+<b>diana_coman</b> adica sa trimita iar un set de chei pt vorbit cu el gen, ca alta n-are ce<br />
+<b>mircea_popescu</b> daca doresti poate duplica pachetul ala.<br />
+<b>diana_coman</b> si alea reseteaza<br />
+<b>mircea_popescu</b> dap<br />
+<b>mircea_popescu</b> facem asa, ca pachetul de burn e trimis de doua ori ? ca nu s-or pierde ambele ?<br />
+<b>diana_coman</b> macar e mai clar asa, cum sa zic, ca ma innebunea toata invarteala dincolo<br />
+<b>mircea_popescu</b> dap! e MULT mai clar, si ce e mai important, e macar corect sa-l fut<br />
+<b>diana_coman</b> apai aia ma gandesc ca tine de implementare adica fiecare poate decide de cate ori vrea sa-l trimita, nu?<br />
+<b>mircea_popescu</b> pai cam da. da; la server zic<br />
+<b>diana_coman</b> daca unul vrea sa-si faca implementare sa trimita de 100 de ori cine ce-are cu el<br />
+<b>mircea_popescu</b> ce ne caca pe noi un pachet udp extra.<br />
+<b>diana_coman</b> da, numai ca tb sa aiba ceva interval ca sa aiba orice potential efect<br />
+<b>mircea_popescu</b> cam da.<br />
+<b>diana_coman</b> ca daca le trimite asa foc scurt imediat cam degeaba<br />
+<b>diana_coman</b> poate trimite daca e la urmatorul heartbeat ori ceva, cuget acolo, nu-i problema<br />
+<b>mircea_popescu</b> daca doresti : se pot tine TOATE burn facute de la ultimul heartbeat, si retrimise daca nu apare urmatorul. da' asta e deja poate cam mult.<br />
+<b>diana_coman</b> eu altminteri in cod abia ce-am facut un v-commit si pe client si pe server ca sa stiu ca nu pierd istoric nimic din ce am facut da' altminteri inca n-am intrat sa chiar modific ca na, intai sa am clar ce fac acolo exact<br />
+<b>mircea_popescu</b> orisicit : fa-i asta, da-o-n teste sa videm, si io am sa termin articolu' de care ma apucasem, da' iese foarte diferit de ce aveam initial lol. ca asa mi-o si picat fisa, incercind sa scriu articol<br />
+<b>diana_coman</b> ha, deci tb sa scrii mai demult!!!<br />
+<b>diana_coman</b> lol<br />
+<b>mircea_popescu</b> pai plm, 9 januar chiar asa tardiv e ?<br />
+<b>diana_coman</b> totul e ...cine si de unde numara!<br />
+<b>mircea_popescu</b> heh<br />
+<b>diana_coman</b> da' cine ne alearga altminteri<br />
+<b>mircea_popescu</b> i plea commonality. ca altu' cinci ani nu-i pica fisa.<br />
+<b>diana_coman</b> ca oricum ei obosesc si doar sa se uite, ce sa mai<br />
+<b>mircea_popescu</b> bietii<br />
+<b>diana_coman</b> apai mi-a si zis unul ca l-am ...extenuat; in conversatie!<br />
+<b>mircea_popescu</b> lmao<br />
+<b>mircea_popescu</b> nu-ti zic ce fericit is lol<br />
+<b>diana_coman</b> da' sa stii ca si eu, mai ales ca imi rezolva asa frumos si partea aia cu "cum dracu' sa decida cand ori daca e cazul de reset"<br />
+<b>mircea_popescu</b> e un salt calitativ<br />
+<b>diana_coman</b> este.</p></blockquote>
+<p>And so it goes! [<a href="#identifier_3_98674" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2021/ken-russells-70s-the-boy-friend-tommy-and-altered-states/">Ken Russell's 70s : The Boy Friend, Tommy and Altered States</a></div>
+                <div class="alignright"><a href="http://trilema.com/2021/253-269-863-261-471-958-220-370-4-21-19-24/">253 - 269 - 863 - 261 - 471 - 958 - 220 - 370 - 4 - 21 - 19 - 24</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2021/the-problem-of-distributed-counting-and-how-we-avoided-it-at-significant-mental-cost-to-you/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2021/the-problem-of-distributed-counting-and-how-we-avoided-it-at-significant-mental-cost-to-you/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>4 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-158793">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2021/01/14/rotating-in-full-colour-will-make-your-eyes-hurt/?b=short%2C%20being&amp;e=rive#select' class='url'>Rotating in Full Colour Will Make Your Eyes Hurt &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-158793" title="">Thursday, 14 January 2021</a>
+					</div>
+					<p>[...] short, being otherwise rather busy with other matters, I just added the "rotated" pattern to my previous puzzle set and then let it fill my hard-drive [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-158899">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/minigame-smg-statement-on-q4-2020/?b=is%20concerned&amp;e=f%20it#select' class='url'>MiniGame (S.MG) Statement on Q4 2020 on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-158899" title="">Sunday, 17 January 2021</a>
+					</div>
+					<p>[...] is concerned, we're in a position where (finally!) encrypted communication with key burning works now. We're also building a substantial (ada-based) graphics pipeline toolchain (large parts of it [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-159354">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/i-cant-remember-the-last-time-i-talked-to-a-dude/?b=wrinkles%2C%20so&amp;e=a%20in#select' class='url'>I can't remember the last time I talked to a dude... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-159354" title="">Saturday, 30 January 2021</a>
+					</div>
+					<p>[...] wrinkles, sorting out edge cases and all the rest of that sweet sweet systems work (just like last time),  mircea_popescu nu e o problema, las' ca e ok diana_coman ma rog, daca e chiar o problema in [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-163838">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2021/05/17/euloras-core-in-glorious-detail-and-picture/?b=Comm_Link%20pa&amp;e=hing#select' class='url'>Eulora's Core in Glorious Detail (and Picture!) &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-163838" title="">Monday, 17 May 2021</a>
+					</div>
+					<p>[...] Comm_Link package handles all the practical details and inherent complexity of keeping in sync over a lossy communication channel. This includes keeping in sync the two buffers of Serpent keys as well as providing everything [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="98674" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834140-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-98674")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-98674");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-98674");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

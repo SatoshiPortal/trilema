@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>MP's Heroes of Might and Magic VII (For Blood and Honor) Early Walkthrough &#038; Guide. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Din bube, mucegaiuri si noroi<br />Mi-am facut bici, si m-am cicat pe voi.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-70437"><div class="post" id="post-70437">                    <h1><a href="http://trilema.com/2016/mps-heroes-of-might-and-magic-vii-for-blood-and-honor-early-walkthrough-guide/" rel="bookmark" title="Permanent Link to MP&#039;s Heroes of Might and Magic VII (For Blood and Honor) Early Walkthrough &#038; Guide.">MP's Heroes of Might and Magic VII (For Blood and Honor) Early Walkthrough &#038; Guide.</a></h1>                        <div class="date">                                     Wednesday, 14 December, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Hello and welcome! </p>
+<p>Heroes of Might and Magic VII  - For Blood and Honor<sup><a href="#footnote_0_70437" id="identifier_0_70437" class="footnote-link footnote-identifier-link" title="By Jon Van Caneghem, as New World Computing (which technically was him and his wife, plus Mark Caldwell), published via 3DO (the misfortunate console player).">i</a></sup> (not to be confused with the deliberately poorly named "Might &#038; Magic Heroes VII", some recent Ubisoft<sup><a href="#footnote_1_70437" id="identifier_1_70437" class="footnote-link footnote-identifier-link" title="They bought the franchise, and turned it into the exact equivalent of an Unilever product. Because they are the exact equivalent of Unilever.">ii</a></sup> crapolade) came out in 1999, and I've been playing it ever since.<sup><a href="#footnote_2_70437" id="identifier_2_70437" class="footnote-link footnote-identifier-link" title="Most recently I did a runthrough in 2010, which resulted in a lengthy discussion and walkthrough in Romanian.
+Here's a bit for flavour : 
+Dar sa nu o dam in depresii, mai bine cu veselie sa ne veselim, ca n-am ajuns inca in sicriu doara, ci suntem bine mersi, sanatosi-voiosi, fara credite, fara condamnari definitive, fara probleme, fara nevoi, doar noi intre noi. Timp avem, curent este, deci hai sa ne apucam de o partida de MM7.
+Which says : 
+But let us not court depression, and rather joyously enjoy, because after all we're not in a casket just yet, quite the opposite, well and good, without debt, without convictions, without problems, without needs, just us among ourselves. Time we have, electricity there is, let's therefore play a game of MM7.
+">iii</a></sup></p>
+<p>Let's then giddy up<sup><a href="#footnote_3_70437" id="identifier_3_70437" class="footnote-link footnote-identifier-link" title="Wine 1.9.2 runs the GoG package splendidly.">iv</a></sup> and run through the wonderful world of Enroth! </p>
+<p><strong>I. Picking a Party</strong>. First and foremost, let it be clearly stated that nothing but a team of three Sorcerers and one<sup><a href="#footnote_4_70437" id="identifier_4_70437" class="footnote-link footnote-identifier-link" title="Theoretically it doesn't matter, you could have three Clerics and one Sorcerer - they all learn Dark Magic just as well. Practically however it matters a lot - you really only need one Cleric for the Body Magic healing school. Otherwise you want Water's Enchant Item for the free money - because a Cleric can become GM in Merchant which means you buy / sell at `cost`, and so you buy plain items, enchant them, and sell them back for huge profits ; and Air for Fly. That's already two right there. You could make the third a Cleric and lose out on Fire (Meteor Shower, mostly) but it's not at all clear what'd make it worthwhile - neither Spirit nor Mind have any actually useful spells.">v</a></sup> Cleric is worth taking into battle.<sup><a href="#footnote_5_70437" id="identifier_5_70437" class="footnote-link footnote-identifier-link" title="Melee classes are not practically useful for two reasons. The least important is their very limited instantaneous damage potetial, which is to say that if your team of Knights / Paladins / Monks / whatever is ambushed, your heroes will be able to deliver about 50 to 100 damage in the first turn, for a total of maybe 3-400, generously. Meanwhile a team of Dark Casters can spit out 3-500 damage each without breaking a sweat. This makes a difference.
+The most important however is the utility aspect of magic : Town Portal, Lloyds Beacon, Fly, these all come free to the casters. While the warrior team trudges on foot from town to kill zone and back, the caster team takes flight, gets to the kill zone four times as fast, drops sweet napalm from the very skies, far beyond the ability of most foes to seriously retaliate, and then flies right back to the temple. It can do a few full circuits in the time it takes the warrior team to just get situated on the map for chrissakes!
+Palliative solutions where you have one cleric, one sorcerer and also various melee dead weights (such as the KTCS or KATS noobs generally play) pretty much reduce to a team of two people (the casters) by the time you're halfway through the game. `Not bad for a team of two` being the most that can be said about your efforts... isn't that sad ?">vi</a></sup></p>
+<p>These (and only these) classes can learn Dark or Light Magic. We'll be learning the first. Light Magic is only worth learning if your army consists of melee types with a single caster, who then will be a Cleric because the marginal value of someone to heal the three warriors exceeds the marginal value of one unsupported DPs caster who then is well served by learning the various blesses and auras of the Light line. But if you have more than one caster, Light Magic becomes redundant, as you don't need two people to cast the same bless (they don't stack) and it has no practically usable offense spells.</p>
+<p>To settle the matter, here's a very simple calculation of D/MP<sup><a href="#footnote_6_70437" id="identifier_6_70437" class="footnote-link footnote-identifier-link" title="Damage per mana point.">vii</a></sup> : Sharpmetal (Dark Magic) spits out 7 fragments each doing 6 + 1d6 * Skill level and costs 30 mana ; Sunray (the best offense Light Magic spell) does 20 + 1d20 * Skill level, and costs 50 mana. Thus the Dark Path workhorse spits out a very credible 7<sup><a href="#footnote_7_70437" id="identifier_7_70437" class="footnote-link footnote-identifier-link" title="It's trivial to make all 7 fragments land : go stand right in front of the enemy!">viii</a></sup> * (6 + (1+6)/2 * 12<sup><a href="#footnote_8_70437" id="identifier_8_70437" class="footnote-link footnote-identifier-link" title="Grandmaster level.">ix</a></sup>) / 30 = <strong>11.2</strong> ; The Light Path alternative would give us (20 + (1+20)/2 * 12 / 50) = <strong>2.92</strong>. Clear enough. (There's other arguments in favour, such as Armageddon<sup><a href="#footnote_9_70437" id="identifier_9_70437" class="footnote-link footnote-identifier-link" title="Hurts everything on the map - supremely useful to deal with pesky monsters eg in Deyja, and definitely helpful once you're trying to wipe the Hydras. It's one thing to go around Flying and Meteor Showering groups of Hydras that have 1k HP versus 150 HP because Armageddon shredded them.">x</a></sup>, Reanimate<sup><a href="#footnote_10_70437" id="identifier_10_70437" class="footnote-link footnote-identifier-link" title="If you kill a peasant, don't loot the body - Reanimate it, pay the fine, you'll be good as new.">xi</a></sup>, Pain Reflection and especially Souldrinker<sup><a href="#footnote_11_70437" id="identifier_11_70437" class="footnote-link footnote-identifier-link" title="Sucks life out of everything in sight and heals you. Absolutely indispensable in the Arena.">xii</a></sup>. Dragon Breath<sup><a href="#footnote_12_70437" id="identifier_12_70437" class="footnote-link footnote-identifier-link" title="A sort of Fireball on steroids.">xiii</a></sup> seems useful superficially but in practice it's rarely actually used.)</p>
+<p>Obviously there could be roleplay considerations that'd point you down a different path ; but in what regards raw player power, SSCS with Dark Magic is insuperable. That settled, you will evidently want three elves and perhaps a dwarf or human for the cleric. It doesn't make so much difference, but I still prefer to minimax their starting stats : take everything out of Might and Personality/Intelligence respectively<sup><a href="#footnote_13_70437" id="identifier_13_70437" class="footnote-link footnote-identifier-link" title="Clerics don't use Int ; Sorcerers don't use Charisma.">xiv</a></sup>, pump up Personality/Intelligence respectively and Speed for whatever's left. I prefer to teach the Cleric Learning and Meditation ; and the Sorcerers Air Magic one, Water Magic another, Alchemy<sup><a href="#footnote_14_70437" id="identifier_14_70437" class="footnote-link footnote-identifier-link" title="A superficial argument for including a Druid could be made, because Sorcerers can only reach Master level, whereas Druids can get Grandmaster. I say superficial because what the extra proficiency gets you is altogether dubious - you can make Black potions, fine, but they're single use and you can usually find them in shops ; what you really want and use from Alchemy is the mana replenishing White and that they both make ; whereas what it loses you is incredibly painful - Druids can't learn Dark Magic.">xv</a></sup> a third and that's that. It makes very little difference, a few hours in you have enough money to learn all the skills you can anyway.</p>
+<p><strong>II. My very first lordship!</strong> The game starts with a "scavenger hunt", basically a sort of Noob Island, inexplicably anticipating the meta-cognition arising a decade later out of the experience of multiplayer games. Here's what you do : </p>
+<ol>
+<li>Recruit one Merchant and one Trader. They cost very little (3% of all gold found between the two of them) and deliver a lot (they pump up your Merchant skill, getting you much better shop prices). If they're not on the map, save and reload until they pop up. You will be playing with these two most of the game.</li>
+<p>
+<li>Touch the Day of the Gods pedestal, it's up on the hill next to that cannon - which you can fire by the way. This makes you hit very hard and also take a lot of punishment.</li>
+<p>
+<li>Go to the swamp northwest and lure the Dragonflies into town. Let them kill everyone and loot the bodies. You will get for your efforts, other than money - one Fireball wand<sup><a href="#footnote_15_70437" id="identifier_15_70437" class="footnote-link footnote-identifier-link" title="The asshole carrying it tries to trick you.">xvi</a></sup>, one Lute<sup><a href="#footnote_16_70437" id="identifier_16_70437" class="footnote-link footnote-identifier-link" title="Needed for the quest, and the bitch wants 500 gold for it!">xvii</a></sup> and optionally a Seashell if you're very thorough. There are no drawbacks to the carnage, you already got the people you wanted, just make sure you don't kill anyone yourself, the fines are hefty.</li>
+<p>
+<li>Go into the temple (entry is at the top of the hill, that tube with water coming out) and wipe it. It's not hard. I prefer to also kill the knights in there, because fuck 'em.</li>
+<p>
+<li>Enter the dragon cave with a Wizard Eye on, and eat all the blue dots.</li>
+<p>
+<li>Teach everyone the Bow skill (at the Weapons Shop) and have the Wand identified (so you know how many charges it has left).</li>
+<p>
+<li>Make sure you looted everything<sup><a href="#footnote_17_70437" id="identifier_17_70437" class="footnote-link footnote-identifier-link" title="You can mix Water Breathing potions if you picked Alchemy and explore the sea with them if you particularly wish.">xviii</a></sup> (there's a few chests scattered around), turn the items in, and take off. You will <em>never</em> be able to get back here so make sure.</li>
+</ol>
+<p>That's it, you're a lord now!<sup><a href="#footnote_18_70437" id="identifier_18_70437" class="footnote-link footnote-identifier-link" title="By the way if you ever manage to kill that dragon I want to hear from you!">xix</a></sup></p>
+<p><strong>III. The Elven Tour</strong>. You land in Harmondale, which is a charming little town. Your castle however is uniquely misplaced<sup><a href="#footnote_19_70437" id="identifier_19_70437" class="footnote-link footnote-identifier-link" title="Who the fuck ever heard of building castles under a hillside ?!">xx</a></sup> and quite infested. Here's what you do :</p>
+<ol>
+
+<li>Check what monster bounty's on at the Town Hall, maybe you get lucky (you do this every time you land in a town, it's free money).</li>
+<p>
+<li>Talk to the Butler in the Inn and with the guy in the house behind the Inn looking for his lost son. Also make sure you take the Initiate promotion quest.</li>
+<p>
+<li>Go to the Tullarean Forest, either via Stables or on foot.</li>
+<p>
+<li>Get the quest to talk to the King of the Faeries in Avlee.</li>
+<p>
+<li>Go fight the trees<sup><a href="#footnote_20_70437" id="identifier_20_70437" class="footnote-link footnote-identifier-link" title="Earth protection helps, there's a well and a pedestal here.">xxi</a></sup> off the main road, pick up all the bows, also buy the best bows you can find. You want four good bows.</li>
+<p>
+<li>Go to Avlee, enter the Hall under the Hill, make sure you jump out of the lift and loot that box for the Air Skill ring. If you want you can also draw Wyverns into the town and get a bunch of those Lancers etc killed.</li>
+<p>
+<li>Return to Tullarean Forest, and train. Teach your Cleric Expert Merchant, teach the Sorcerers Expert magic skills if you can afford it<sup><a href="#footnote_21_70437" id="identifier_21_70437" class="footnote-link footnote-identifier-link" title="Do not sell the single-square high value items such as gems and rings if you can help it, you get significantly better prices in Stone City.">xxii</a></sup>, and get them spells. Sparks and Fireball are most useful at this stage.</li>
+<p>
+<li>Go back to Harmondale, clear your Castle using as little wand as possible, then clear the goblin groups outside on the map (careful to not use the last charge in the wand).</li>
+<p>
+<li>Teach the Cleric Expert Body Building and get it a Regeneration spellbook.</li>
+<p>
+<li>Go south on the road, get off the road where you see that valley, follow it around, cross the bridge, enter the cave, clear the cave, get the Arcomage card set and report the find. You can and should play Arcomage in all taverns you run across - pretty much free money as it's really hard to lose.</li>
+</ol>
+<p><strong>IV. Gravediggin'</strong>. Our goal is to loot the Barrows, a complex subterranean complex of graves, catacombs, mausoleums etc. There's about 60-70k worth of freestanding gold<sup><a href="#footnote_22_70437" id="identifier_22_70437" class="footnote-link footnote-identifier-link" title="For which reason it may seem like a good idea to ditch the Trader/Merchant combo and get a Banker/Factor combo. It produces maybe 10-15k extra gold, but in my eyes it does not justify the hassle of finding Traders and Merchants afterwards. 10-15k sounds like a lot early on when you're poor, but post Barrows it really makes very little difference.">xxiii</a></sup> in there, plus a lot of items and potions, so the Barrow Downs marks the inflection point of your finances - from now on you shall never again want for money. </p>
+<ol>
+
+<li>Proceed on the road south and cross the map into Barrow Downs.</li>
+<p>
+<li>Head over the bridge to the Stone City fortress (kinda in the dead middle of the map).</li>
+<p>
+<li>Get the King's quest to rescue the dwarves in Bracada, get the quest to clear the tunnels.</li>
+<p>
+<li>Go and clear the tunnels. Just a few troglodytes, and the temple is nearby so no big deal at all. Once you complete this quest your reputation will be Liked, which significantly improves the shop prices (you should be able to get things pretty much at cost now), so go ahead and sell all that stuff you were hoarding for <em>beaucoup</em> gold pieces.</li>
+<p>
+<li>Fill your packs with food and make off for the Barrows.</li>
+</ol>
+<p>The Barrows themselves are 16 different minimaps, connected as follows : </p>
+<blockquote><p>I connects to XI, V, VI, XV<br />
+II connects to XI, XIV, XIII, V<br />
+III connects to XII, X, VIII, IV<br />
+IV connects to XII, XV, III and the Meditation Spot<sup><a href="#footnote_23_70437" id="identifier_23_70437" class="footnote-link footnote-identifier-link" title="16th Barrow, technically. The place where Hume `contacts you telepathically`.">xxiv</a></sup>.<br />
+V connects to II, IX, I, XII<br />
+VI connects to XIII, XI, I and the Meditation Spot.<br />
+VII connects to IX, X and the outside.<br />
+VIII connects to XIV, XV, III, XIII<br />
+IX connects to V, VII and the outside.<br />
+X connects to VII, III and the outside.<br />
+XI connects to II, I, XIII, VI<br />
+XII connects to XIV, V, IV, III<br />
+XIII connects to XI, VIII, II, VI<br />
+XIV connects to VIII, II, XV, XII<br />
+XV connects to VIII, IV, XIV, I</p></blockquote>
+<p>The three barrows that connect to the outside have a keyhole in the navigation panel. You loot the map, find the key, and it unlocks plates with useful navigational directions. They all connect to Barrow VII, which is why, no matter where you come in, first you look and unlock that Barrow, then you go to VII if not already there and loot/unlock that one as well, then you do the other two. If you do it this way you always know where you are and don't find yourself wandering aimlessly through unknown Barrows. Alternatively you could just build a fully-covering path here and follow that.</p>
+<p>The monsters you run into aren't terribly hard, the worst you'll see will be some Wights and Revenants. Your Expert Air Magic caster with the Air Skill ring deals enough damage to flatten them in just a few turns.</p>
+<p>Whatever you do - before you leave the Barrow Downs cross the bridge down south and open the chest with the golem chest in it! You can also buy glass bottles, then unload them in Avlee. You should be able to hold twenty-something, for a profit of about 10k or so if you want it.</p>
+<p>This pretty much brings you to a point of independence, you should now fill up on spells and nice items, complete the promotion quests<sup><a href="#footnote_24_70437" id="identifier_24_70437" class="footnote-link footnote-identifier-link" title="Avlee is easier than it seems, just move around until the nymphs leave the island. They can't hit you if you move perpendicularily. Go to Deyja early, get Learning Expert as well as the golem legs.">xxv</a></sup>. </p>
+<p>Consider crossing into Nighon once your Water Magic is 7 (it's not that hard - get some bottles of Preservation, Stone Skin etc, and force past the Minotaurs) because you get Enchant which makes you rich (and powerful - an Alchemy bonus for instance, as well as Spell Regeneration etc are very useful). Master Alchemy allows you to mix (Green+Blue) + (Green+Yellow), which takes care of your Spell Points problems. Master Air Magic allows you to learn not just Fly but also Invisibility, which allows you to loot the Titan Fortress in Avlee as well as the Dwarves Treasury in Stone City if you feel like it.</p>
+<p>As a final pro tip : the game has a hardcoded 50 day delay in between when you solve the Fort Riverstride Plans / Loren quests and when you get the Trumpet ; then another 50 days in between when you deliver the Trumpet to the Arbiter<sup><a href="#footnote_25_70437" id="identifier_25_70437" class="footnote-link footnote-identifier-link" title="Hey, not like you'd consider supporting the fiat empires, amirite ?">xxvi</a></sup> and when he dies (which allows you to choose Light or Dark). You probably want to delay your 2nd and 3rd training until then - training takes a week per level so seven levels twice just about does it.</p>
+<p>Ah, PS : the magic lamps found in Deyja etc are probably most useful at the end of October (22nd, 23rd, 24th, 25th or 28th, for +8 skill points). The alternatives are pretty much bad jokes. </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_70437" class="footnote">By Jon Van Caneghem, as New World Computing (which technically was him and his wife, plus Mark Caldwell), published via 3DO (the misfortunate console player). [<a href="#identifier_0_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_70437" class="footnote">They bought the franchise, and turned it into the exact <span style="background-color:#d3d3d3" id="select">equivalent of an Unilever product. Because they <em>are</em> the exact equivalent of Unilever. [<a href="#identifier_1_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_70437" class="footnote">Most recently I did a runthrough in</span> 2010, which resulted in a <a href="http://trilema.com/2010/might-and-magic-vii-prooimion/">l</a>e<a href="http://trilema.com/2010/might-and-magic-vii-diegesis/">n</a>g<a href="http://trilema.com/2010/might-and-magic-vii-psoriasis/">t</a>h<a href="http://trilema.com/2010/might-and-magic-vii-epizootia/">y</a> discussion and walkthrough in Romanian.</p>
+<p>Here's a bit for flavour : </p>
+<blockquote><p>Dar sa nu o dam in depresii, mai bine cu veselie sa ne veselim, ca n-am ajuns inca in sicriu doara, ci suntem bine mersi, sanatosi-voiosi, fara credite, fara condamnari definitive, fara probleme, fara nevoi, doar noi intre noi. Timp avem, curent este, deci hai sa ne apucam de o partida de MM7.</p></blockquote>
+<p>Which says : </p>
+<blockquote><p>But let us not court depression, and rather joyously enjoy, because after all we're not in a casket just yet, quite the opposite, well and good, without debt, without convictions, without problems, without needs, just us among ourselves. Time we have, electricity there is, let's therefore play a game of MM7.</p></blockquote>
+<p> [<a href="#identifier_2_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_70437" class="footnote">Wine 1.9.2 runs the GoG package splendidly. [<a href="#identifier_3_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_70437" class="footnote">Theoretically it doesn't matter, you could have three Clerics and one Sorcerer - they all learn Dark Magic just as well. Practically however it matters a lot - you really only need one Cleric for the Body Magic healing school. Otherwise you want Water's Enchant Item for the free money - because a Cleric can become GM in Merchant which means you buy / sell at "cost", and so you buy plain items, enchant them, and sell them back for huge profits ; and Air for Fly. That's already two right there. You could make the third a Cleric and lose out on Fire (Meteor Shower, mostly) but it's not at all clear what'd make it worthwhile - neither Spirit nor Mind have any actually useful spells. [<a href="#identifier_4_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_70437" class="footnote">Melee classes are not practically useful for two reasons. The least important is their very limited instantaneous damage potetial, which is to say that if your team of Knights / Paladins / Monks / whatever is ambushed, your heroes will be able to deliver about 50 to 100 damage in the first turn, for a total of maybe 3-400, generously. Meanwhile a team of Dark Casters can spit out 3-500 damage <em>each</em> without breaking a sweat. This makes a difference.</p>
+<p>The most important however is the utility aspect of magic : Town Portal, Lloyds Beacon, Fly, these all come free to the casters. While the warrior team trudges on foot from town to kill zone and back, the caster team takes flight, gets to the kill zone four times as fast, drops sweet napalm from the very skies, far beyond the ability of most foes to seriously retaliate, and then flies right back to the temple. It can do a few full circuits in the time it takes the warrior team to just get situated on the map for chrissakes!</p>
+<p>Palliative solutions where you have one cleric, one sorcerer and also various melee dead weights (such as the KTCS or KATS noobs generally play) pretty much reduce to a team of two people (the casters) by the time you're halfway through the game. "Not bad for a team of two" being the most that can be said about your efforts... isn't that sad ? [<a href="#identifier_5_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_70437" class="footnote">Damage per mana point. [<a href="#identifier_6_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_70437" class="footnote">It's trivial to make all 7 fragments land : go stand right in front of the enemy! [<a href="#identifier_7_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_70437" class="footnote">Grandmaster level. [<a href="#identifier_8_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_70437" class="footnote">Hurts everything on the map - supremely useful to deal with pesky monsters eg in Deyja, and definitely helpful once you're trying to wipe the Hydras. It's one thing to go around Flying and Meteor Showering groups of Hydras that have 1k HP versus 150 HP because Armageddon shredded them. [<a href="#identifier_9_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_70437" class="footnote">If you kill a peasant, don't loot the body - Reanimate it, pay the fine, you'll be good as new. [<a href="#identifier_10_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_70437" class="footnote">Sucks life out of <em>everything in sight</em> and heals you. Absolutely indispensable in the Arena. [<a href="#identifier_11_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_70437" class="footnote">A sort of Fireball on steroids. [<a href="#identifier_12_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_70437" class="footnote">Clerics don't use Int ; Sorcerers don't use Charisma. [<a href="#identifier_13_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_70437" class="footnote">A superficial argument for including a Druid could be made, because Sorcerers can only reach Master level, whereas Druids can get Grandmaster. I say superficial because what the extra proficiency gets you is altogether dubious - you can make Black potions, fine, but they're single use and you can usually find them in shops ; what you really want and use from Alchemy is the mana replenishing White and that they both make ; whereas what it loses you is incredibly painful - Druids can't learn Dark Magic. [<a href="#identifier_14_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_70437" class="footnote">The asshole carrying it tries to trick you. [<a href="#identifier_15_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_70437" class="footnote">Needed for the quest, and the bitch wants 500 gold for it! [<a href="#identifier_16_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_70437" class="footnote">You can mix Water Breathing potions if you picked Alchemy and explore the sea with them if you particularly wish. [<a href="#identifier_17_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_70437" class="footnote">By the way if you ever manage to kill that dragon I want to hear from you! [<a href="#identifier_18_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_19_70437" class="footnote">Who the fuck ever heard of building castles <em>under</em> a hillside ?! [<a href="#identifier_19_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_20_70437" class="footnote">Earth protection helps, there's a well and a pedestal here. [<a href="#identifier_20_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_21_70437" class="footnote">Do not sell the single-square high value items such as gems and rings if you can help it, you get significantly better prices in Stone City. [<a href="#identifier_21_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_22_70437" class="footnote">For which reason it may seem like a good idea to ditch the Trader/Merchant combo and get a Banker/Factor combo. It produces maybe 10-15k extra gold, but in my eyes it does not justify the hassle of finding Traders and Merchants afterwards. 10-15k sounds like a lot early on when you're poor, but post Barrows it really makes very little difference. [<a href="#identifier_22_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_23_70437" class="footnote">16th Barrow, technically. The place where Hume "contacts you telepathically". [<a href="#identifier_23_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_24_70437" class="footnote">Avlee is easier than it seems, just move around until the nymphs leave the island. They can't hit you if you move perpendicularily. Go to Deyja early, get Learning Expert as well as the golem legs. [<a href="#identifier_24_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_25_70437" class="footnote">Hey, not like you'd consider supporting the fiat empires, amirite ? [<a href="#identifier_25_70437" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/postcards-from-nutland/">Postcards from Nutland</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/internet-census-2016/">Internet Census, 2016.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/mps-heroes-of-might-and-magic-vii-for-blood-and-honor-early-walkthrough-guide/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/mps-heroes-of-might-and-magic-vii-for-blood-and-honor-early-walkthrough-guide/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>One Response</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-145727">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/the-state-of-the-vidya-address?b=to%20own%20my%20ga&amp;e=me%20%3F#select' class='url'>The "State of the Vidya" Address. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145727" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] to own my games" wtf does this mean in a net context ? yes, i still have and still play homm2 / mm6 / gothicviii / whatever. but how the fuck are you going to meaningfully save a multiplayer game ? [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="70437" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832688-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-70437")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-70437");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-70437");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

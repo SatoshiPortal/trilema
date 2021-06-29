@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The Bickening on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Moving targets for a fast crowd.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-68624"><div class="post" id="post-68624">                    <h1><a href="http://trilema.com/2016/the-bickening/" rel="bookmark" title="Permanent Link to The Bickening">The Bickening</a></h1>                        <div class="date">                                     Thursday, 01 September, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>I wake up, not much in the mood for anything, I stumble to the screens and within five minutes I got material for an article. Which, retrospectively, I long wanted to write, just didn't know this before now. My life is great ; I am in heaven ; etcetera.</p>
+<p>Selected <a href="http://log.mkj.lt/trilema/20160901/from:274/to:328#274">quote</a> to provide the intro : </p>
+<blockquote><p><strong>shinohai</strong> <a href="http://log.mkj.lt/trilema/20160901/from:234/to:234#234">btcbase.org/log/2016-09-01#1532863</a> <<< too much bickering over what trigger characters to use, so don't blame me. I just tried to make nice things.<br />
+<strong>mircea_popescu</strong> shinohai it's not "bickering". toldja 2x to use !~, an hour apart. next day you had changed it to > or some stupid shit and people were complaining, so it got devoiced. next time do critical fixes - such as the control sequence of a chatbot - in real time or remove it yourself. </p>
+<p><strong>shinohai</strong> Sorry that bot surgery was low on list of priorities at the time.<br />
+<strong>mircea_popescu</strong> so then say "sorry, i couldn't maintain my bot to spec" not "bickering. truth helps.</p>
+<p><strong>shinohai</strong> Well technically there *was* bickering. Some ppl were happy with original, some didn't like >, other wanted !~<br />
+<strong>mircea_popescu</strong> people doesn't enter in this conversation, it's not a fucking vote. i guess all this can get pretty confusing.<br />
+* mircea_popescu will write an article.</p></blockquote>
+<p>There are multiple strands making a Gordian knot here. Let's pull a little at the threads.</p>
+<p><strong>I have the sole power to give names</strong>. This is certainly a priviledge, in that it can be used to distinguish between one and the other. It is certainly political, in that it has something to do with people<sup><a href="#footnote_0_68624" id="identifier_0_68624" class="footnote-link footnote-identifier-link" title="Yes, anything that has to do with people is political - whether people be the object the thing acts upon ; or be they the agent that uses the thing, whatever the connection, if it's there it's there. What can you do.">i</a></sup>. Nevertheless, it is neither fair nor meaningful. This is to say, I didn't acquire it through some sort of process that is universal or repeatable<sup><a href="#footnote_1_68624" id="identifier_1_68624" class="footnote-link footnote-identifier-link" title="It's not like wealth, which while a political priviledge is nevertheless required for everyone to have, as a prequalification to participating in the social conversation. It's not like knowledge, which while a political priviledge is also required as a prequalification to participating in the social conversation. Both of these are universal (ie, anyone could, in principle, get them - and if they can't or don't, that failure describes them) and repeatable (or more properly said time-invariant). 
+It's more like being blonde (ie, not universal) in a world where no peroxide exists (ie, not repeatable) ; or like having green eyes (ie, not universal) in a world where no contacts exist (ie, not repeatable). It's like being chosen by God, or inspired by the muses (ie, not repeatable), in a world where no hard work or reason exist (ie, not universal). It is, in other words, political priviledge outside of the reach of politics ; something that people could in no way alter through any sort of political process - a state of affairs which incredibly irks a certain sort of mind.">ii</a></sup> ; and they don't have any sort of actual effects anyway - a rose by any other name would smell as sweet, a bot by any other control sequence will work as well, etcetera. </p>
+<p>Note that of course and necessarily everyone holds this exact same power, in every context that they own.<sup><a href="#footnote_2_68624" id="identifier_2_68624" class="footnote-link footnote-identifier-link" title="For instance whatever you decide to nickname others' keys in gossipd will be your own problem, as has been pluriously said. You won't be required to use the comment field in e, N, comment as provided. 
+Currently you have to type gpg --encrypt --armor -r herpy because gpg is badly designed by the avowed enemies of the free world as well as anything nice and good ; but in a sanely functioning environment it would be gpg --encrypt --armor -r kitty if your private name for herpy is kitty.
+And while we're on this, please stop using USG.DNS already! ">iii</a></sup> You can redefine "niggers" to mean "bureaucrats", <a href="http://trilema.com/2013/fried-chicken/">like I have</a>, if you wish to follow my context ; or as anything else you wish to, entirely at your option. The only ones who have no say in any of this are the niggers in question, because : a) fuck them and b) nobody asked them anything, in that order.<sup><a href="#footnote_3_68624" id="identifier_3_68624" class="footnote-link footnote-identifier-link" title="Talk about an epic example of the socialists' weapon working for them a short distance of its swing and for us the entire run of that swing. Derps figured they may gather political power through `examining` the whole naming issue ; turns out they got a little and we'll flatten them with it.">iv</a></sup></p>
+<p>Note also that you're not required to implement this in any particular way. For instance, any and all practical matters and resultant disputes in re "what string shall be my nickname in #trilema" are currently handled by nickserv, which is a process I don't even own, scarcely understand, nor do I care to. There's nothing wrong with this, or any other implementation, and the <em>reason</em> there isn't nor could there ever be anything wrong with any implementation is exactly the transcendent nature of the naming power. You can't ever lose it ; and for this reason, secure in its eternal and unyielding property like <a href="http://trilema.com/2014/on-the-superiority-of-monarchy-or-adnotations-to-why-the-worst-get-on-top/#comment-118572">that fabled beast</a>, you can do absolutely anything you damn well please, including not being too obtrusive about it, following Schelling point conventions in various groups (such as calling a cock a <em>coq</em> in Montpellier for absolutely no good reason)  etcetera.</p>
+<p><strong>People do their best.</strong> The reason shinohai didn't fix the bot on the spot, of course, is that he didn't know how to. It doesn't happen to be a major change, or difficult to do ; but it does happen to have been scary to him<sup><a href="#footnote_4_68624" id="identifier_4_68624" class="footnote-link footnote-identifier-link" title="As the actual shinohai points out, fear properly doesn't enter into it. This is a valid point.">v</a></sup>, and so even if others volunteered a cvasi-complete recipe for doing it, he still didn't approach the task. Yes, he could have been more outgoing, and just went into it notwithstanding it looked scary ; yes others could have been more explicit, and quoted exact lines of code or whatever. </p>
+<p>The problem with these "could have beens" is that they're outright idiotic, without remainder. For the latter, please review the excellent Al Schwartz piece on <a href="http://www.mazepath.com/uncleal/create.htm">complexity</a>. Yes <em>of course</em> whatever arbitrary quantity of context of any text could have been explicitly stated and so made part of the text. So ? There's always going to be some context left ; and do you have any fucking idea how much space even cursory attempts at "completeness" take ? Oh, and for the former : please review the above Al Schwartz piece on complexity. Yes of course human beings, and science as an emergent behaviour of human beings, rely on paradigms, which are lists of what you're supposed to be afraid of<sup><a href="#footnote_5_68624" id="identifier_5_68624" class="footnote-link footnote-identifier-link" title="Ever wondered why Magnetism and Electricity aren't today, nor were ever equally understood, or equally studied ? Remember that at a time electricity didn't even exist, and magnetism was moving ships around!">vi</a></sup>. It is the very heart and nature of sanity to pick the low hanging fruit first, and so that he did what came easy and didn't proceed into what <em>seemed</em> hard is the correct behaviour ; and comments to how hard or easy it "actually was" are entirely not germane to any of this.</p>
+<p>Yes, this state of affairs does have the unfortunate side effect of incomplete solutions littering the landscape, and yes this situation is getting on my fucking nerves. But the solution can't possibly be pretending the problem doesn't exist, nor any variant thereof - such as you know, <em>declaring</em> it doesn't exist, preferably "to the Universe", in the manner US libtards "solve" poverty, homelessness and whatever else the fuck they "solve".</p>
+<p><strong>People complain</strong>. This is human nature, and while the activity does attract some more than others<sup><a href="#footnote_6_68624" id="identifier_6_68624" class="footnote-link footnote-identifier-link" title="Especially because it is perceived - wrongly in the Republic, but rightly everywhere else - as a very cheap way to `political power` ; and so logically if that works why put in the elbow grease to do anything else, which is how America ended up not needing to ever be great again.">vii</a></sup>, the source of the complaint is only interesting in the second pass. If you remember the "a) fuck them and b) nobody asked them anything" algorithm from above, it applies here in the sense that the nature counts first ; and source counts second. Meaningful complaints from politically weak sources can be delayed, for a while, but at the risk of doing violence to one's own house for no good reason ; meaningless complaints however are a lot iffier - a strong enough source can actually alter the very fabric of meaning, so that what appeared as meaningless becomes magically meaningful. This magic is after all how paradigm shifts occur, be they of the nature of what alf calls "lowering into pederasty" on the basis of a concept in Russian penitentiary life, or be they of the nature of actual understanding. </p>
+<p>Willy-nilly one is then stuck with the problem of scheduling complaints, which is to say choosing to temporarily inhibit meaningful complaints for whatever contextual reason on one hand ; and to tolerate meaningless complaints for suspicion of deep meaning on the other. Neither of these is made any easier by the fact that neither meaningfulness nor meaninglessness are <em>realia</em>, but abstract notions, and so open to varying evaluations by varying parties. In principle the former can be readily resolved with a plain statement of cause - which is a proposition not unlike saying that the Byzantine generals could simply exchange messages. Of course it could be, and if the statement of cause happens to be meaningful in the context of the receiver you're home free. And if not... send another one, yes ? We'll not even discuss the latter, who ever knows why anyone understands anything, and how, and what did it. </p>
+<p>The interplay of these three threads is bound to lead to butthurt ; and not merely of the "filled with envious rage" infantile Elliotism variety, but actual honest-to-goodness sorting conflicts, the kind where one ends up with lists that look like 1, 3, 6, 8, 11, 7, 16 and has absolutely no idea what to do outside of ignore it (while that lasts) or else rage (once his cup runneth over). </p>
+<p>Traditionally this is resolved by faith, made of exactly the same substance and working on exactly the same software that informs the infant's "I love my mother, and she would never hurt me" ; but obviously one can have only so much of that - it's a qualification like any other, "must be this tall to ride" sort of affair. Alternatively, it can be resolved by understanding, which of course is <span style="background-color:#d3d3d3" id="select">a very poisonous tree - understanding takes time, and by the time it's all done life went by and, <a href="http://trilema.com/2014/i-love-rochester-so-will-you/#selection-93.317-93.400">to quote</a>, </p>
+<blockquote><p>Huddled in dirt the reasoning engine lies, who was so proud, so witty, and so</span> wise.</p></blockquote>
+<p>Even more alternatively, it can be resolved through not giving a shit, which is the exact equivalent of magic : for as long as it works it works splendidly well, and cheaply too! And once it stops working nobody's fixing it ever again.</p>
+<p>In principle there is no solution ; the bickening is and will remain a fact of life.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_68624" class="footnote">Yes, anything that has to do with people is political - whether people be the object the thing acts upon ; or be they the agent that uses the thing, whatever the connection, if it's there it's there. What can you do. [<a href="#identifier_0_68624" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_68624" class="footnote">It's not like wealth, which while a political priviledge is nevertheless required for everyone to have, as a prequalification to participating in the social conversation. It's not like knowledge, which while a political priviledge is also required as a prequalification to participating in the social conversation. Both of these are universal (ie, anyone could, in principle, get them - and if they can't or don't, that <em>failure</em> describes them) and repeatable (or more properly said time-invariant). </p>
+<p>It's more like being blonde (ie, not universal) in a world where no peroxide exists (ie, not repeatable) ; or like having green eyes (ie, not universal) in a world where no contacts exist (ie, not repeatable). It's like being chosen by God, or inspired by the muses (ie, not repeatable), in a world where no hard work or reason exist (ie, not universal). It is, in other words, political priviledge <em>outside of the reach of politics</em> ; something that people could in no way alter through any sort of political process - a state of affairs which incredibly irks <a href="http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-nine/#selection-67.0-67.293">a certain sort of mind</a>. [<a href="#identifier_1_68624" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_68624" class="footnote">For instance whatever you decide to nickname others' keys in gossipd will be your own problem, as has been pluriously said. You won't be required to use the comment field in e, N, comment <em>as provided</em>. </p>
+<p>Currently you have to type gpg --encrypt --armor -r herpy because gpg is badly designed by <a href="http://trilema.com/2016/werner-koch-confirmed-usg-stooge/">the avowed enemies</a> of the free world as well as anything nice and good ; but in a sanely functioning environment it would be gpg --encrypt --armor -r kitty if your private name for herpy is kitty.</p>
+<p>And while we're on this, <a href="http://trilema.com/2016/please-stop-using-dns-already-and-other-considerations/">please stop using USG.DNS already</a>!  [<a href="#identifier_2_68624" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_68624" class="footnote">Talk about an epic example of <a href="http://trilema.com/2015/why-representative-democracy-doesnt-work-and-doesnt-make-sense/#selection-147.266-153.105">the socialists' weapon working for them a short distance of its swing and for us the entire run of that swing</a>. Derps figured they may gather political power through "examining" the whole naming issue ; turns out they got a little and we'll flatten them with it. [<a href="#identifier_3_68624" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_68624" class="footnote">As the actual shinohai points out, fear properly doesn't enter into it. This is a valid point. [<a href="#identifier_4_68624" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_68624" class="footnote">Ever wondered why Magnetism and Electricity aren't today, nor were ever <em>equally</em> understood, or equally studied ? Remember that at a time electricity didn't even exist, and magnetism was moving ships around! [<a href="#identifier_5_68624" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_68624" class="footnote">Especially because it is perceived - wrongly in the Republic, but rightly everywhere else - as a very cheap way to "political power" ; and so logically if that works why put in the elbow grease to do anything else, which is how America ended up not needing to ever be great again. [<a href="#identifier_6_68624" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/minigame-smg-august-2016-statement/">MiniGame (S.MG), August 2016 Statement</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/qntra-sqntr-august-2016-statement/">Qntra (S.QNTR) August 2016 Statement</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/the-bickening/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/the-bickening/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>5 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-118776" class="commentbody"><div class="commenthead"><img alt='shinohai`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">shinohai</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-118776" title="">Thursday, 1 September 2016</a>
+							</div>
+						<p>Glad to see this morning's conversation inspired a trilema article, though I do find the statement "but it does happen to have been scary to him" a bit disingenuous. I have had little to no trepidation working on far "scarier" things in trb, which has far more moving parts than the bot in question. Simple laziness suffices for explanation in this regard.</p>
+						</li>
+
+										<li id="comment-118778" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-118778" title="">Thursday, 1 September 2016</a>
+							</div>
+						<p>This is a valid point, lettuce add a note.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-142616">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/how-to-participate-in-the-affairs-of-the-most-serene-republic?b=but%20afterwar&amp;e=h%3BIt#select' class='url'>How to participate in the affairs of The Most Serene Republic on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142616" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] but afterwards you're more than welcome to eg reinvent lisp. Outside of some very moderate scheduling constraints you're your own master in the Republic. Which is exactly as it should be. &mdash;&mdash;&mdash;It [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145343">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/so-they-found-it?b=is%20%28if%20I%20lik&amp;e=%20all#select' class='url'>So they found it! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145343" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] is (if I like you) ; otherwise -- you're welcome to try and guess. Why the hell not, right, "I feel anyone could" and all [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-148173">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/03/27/a-review-of-the-bitcoin-category-on-trilemacom/?b=the%20unfairne&amp;e=....#select' class='url'>A Review of the Bitcoin Category on trilema.com &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148173" title="">Sunday, 29 March 2020</a>
+					</div>
+					<p>[...] the unfairness and meaninglesness of the power to give names and the inevitable interplay between said power, people doing their best being at times not enough and human.... [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="68624" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834955-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-68624")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-68624");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-68624");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

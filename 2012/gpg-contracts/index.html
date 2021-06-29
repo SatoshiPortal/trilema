@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>GPG contracts on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">If "waifu" is "wife"<br />should "kung-fu" be "knife" ?
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-43533"><div class="post" id="post-43533">                    <h1><a href="http://trilema.com/2012/gpg-contracts/" rel="bookmark" title="Permanent Link to GPG contracts">GPG contracts</a></h1>                        <div class="date">                                     Wednesday, 24 October, Year 4 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>While economics certainly predate writing and could in principle be recognised in the functioning of simple organisms or even basic physical processes<sup><a href="#footnote_0_43533" id="identifier_0_43533" class="footnote-link footnote-identifier-link" title="Such as the trajectory of a boulder expelled from a volcano, where the kinetic energy is the capital and the trajectory the purchase ; or the life of stars where hydrogen and later helium are the means of production allowing for radiative output.">i</a></sup>, the current formalisation thereof is doubtless an invention of the later Latins<sup><a href="#footnote_1_43533" id="identifier_1_43533" class="footnote-link footnote-identifier-link" title="Lombards, Venetians, Genovese and others.">ii</a></sup> reaching us through the mediation of Blackstone's Common Law if we speak English, Napoleon's Code if we speak most any other European language and so forth. It is quite strictly a white man's invention, it is quite strictly European<sup><a href="#footnote_2_43533" id="identifier_2_43533" class="footnote-link footnote-identifier-link" title="In a non-Continental sense of that word.">iii</a></sup> and it is a central (or possibly the principal) component of "Western" cultural identity. It is, if you will, what makes white people white rather than Asian or African. </p>
+<p>Consequently it has been imposed with varying degrees of success everywhere the white man went, from the Americas to the Bengal Valley and beyond. American Indians' vague and mostly philosophically confused notions of ownership (in particular in what pertains to land) were from the very beginning the root of political tension on that continent, and ultimately congealed in "the Indian question" as well as the genocidal solution thereof. Africans' naive representation of economics were in good faith seen as sufficient cause for the inferior social position of that entire race as late as the 18th century. White people have judged all others primarily on the basis of those others' depth of understanding and craftiness in applying this central mental structure since the very beginning of time, and the Crusades have had more to do with Arabs' bizarre notions of economy than with any interest of theology or religion.</p>
+<p>We won't go into a detailed discussion of that mental structure here, fascinating as it may be<sup><a href="#footnote_3_43533" id="identifier_3_43533" class="footnote-link footnote-identifier-link" title="Both for lack of space and because I'm not being paid quite enough to be holding impromptu doctoral courses on History of Culture.">iv</a></sup>, but instead limit ourselves to observing that the contract is a central piece thereof<sup><a href="#footnote_4_43533" id="identifier_4_43533" class="footnote-link footnote-identifier-link" title="Thrice in one article, take that!">v</a></sup>. This contract, or should we maybe say Contract is quite the term of art<sup><a href="#footnote_5_43533" id="identifier_5_43533" class="footnote-link footnote-identifier-link" title="Meaning, something with a fixed and peculiar meaning which is not open to intra-discourse negotiation the way most other words are.">vi</a></sup>, and it means a. an agreement b. reached by willing participants which c. shall be enforced against them.</p>
+<p>A voids any contracts that were obtained "improperly", such as by the use of force, deceit, from participants unable to agree (properly or statutorily in later reinterpretations of this simple equation). B gives grounds for requiring particular forms, and also putting aside purported contracts that don't satisfy those forms. Because B you can say "well if the parties couldn't be bothered to at least put their contract in writing you can't say they were actually willing to enter a contract". Because B you can demand all contracts be registered with some authority or be void, because B you can demand all contracts entered carry a fee paid to some authority or be void and so forth. And finally, C is what interests us in this present article (yes, this has been a five hundred word introduction).</p>
+<p>Traditionally, contracts are instruments of torture. People agree to be married (thus entering into, of course, a Marriage Contract) and then have to suffer their spouse whether they'd like to or not. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2012/10/now-i-can-get-fat.jpg"><img src="http://trilema.com/wp-content/uploads/2012/10/now-i-can-get-fat.jpg" alt="now-i-can-get-fat" title="now-i-can-get-fat" width="560" height="833" class="aligncenter size-full wp-image-43540" /></a></p>
+<p>This is the entire point of contracts : once entered into they will be enforced, to the detriment of either party (and usually both parties). This view of contracts as instruments into which people enter wilfully and then have to respect whether they want to or not is what gave rise to the organised state as seen in post-Roman Empire Europe, this view of contracts is the proximate cause of the European standing army, the European politics and pretty much all of the history of this corner of the world. Also practically speaking of the entire world altogether, mostly because of the preminence (essentially cultural and flowing from that economical, military and so on) that this particular mental construct bestowed upon its practitioners. I will go as far as to say that the reason men everywhere, from the deserts of rural Egypt to the desolate windblown outskirts of Irkutsk wear suits today as opposed to Iroquis shaman headdresses or Hawaiian stupidskirts whatever those things are called is simply the world domination allowed by and achieved through the Contract. Suitwearer, Contractbearer, Master of the World. </p>
+<p>The problem with this holy institution that has carried us so very far and fed us so very well is that it has costs, and those costs have the unfortunate property that <strong>they mount with use</strong>. </p>
+<p>I'm not sure the full horror of the curse embodied in that bolded phrase is directly obvious, so let's dwell. The first contract ever entered into has the friction cost of explaining to everyone concerned or somehow coming into contact with its workings wtf a contract is and how it's to be used. These costs may well have been significant, but they were also limited (as opposed to infinite). Subsequent contracts cost less mostly because they'd build on already sunk-in costs. And less, and less. Unseen is the hidden seed of disaster : subsequent contracts also cost more because the cost of enforcing a contract increases with the amount of contracts already entered into. </p>
+<p>Why would the cost of enforcing a contract increase with the amount of contracts already entered into ? Well, because as people use them people also look for ways to abuse them. As these ways are found they have to be patched. As the patches are applied new holes are found, so new patches are issued. Sometimes the patches work better in some cases than others, in the end it's not even obvious which would be the proper case a contract falls into, the administration of all this has some costs and moreover due to the adversarial nature of contracts<sup><a href="#footnote_6_43533" id="identifier_6_43533" class="footnote-link footnote-identifier-link" title="Because the contract `is opposable` to either party, which really means to say contracts are there as the adversary to each party involved, joint and several.">vii</a></sup> there's always someone with an incentive to argue absolutely anything, no matter how "insane". Besides, what's insane anymore once we have contracts ? </p>
+<p>And so that seed grows, invisible at first because the comparative friction cost of burning the Sioux huts and Cherokee library to teach those "savages" once and for all wtf contracts are is larger than the hidden cost of figuring out what our contracts even mean to say, or how should that contrivance be construed (not to mention the entire advantage of adversity : obviously the contracts say the enemies suck!). The seed grows, and it is the seed of doom, for once we've conquered the entire world (as white people in fact have) and have no enemies left (as white people don't) the problem becomes internecine<sup><a href="#footnote_7_43533" id="identifier_7_43533" class="footnote-link footnote-identifier-link" title="Which word does not mean, by the way, `marked by slaughter : deadly; especially : mutually destructive` nor `of, relating to, or involving conflict within a group ` ; nor does it mean `		Destructive to both sides in a conflict: `savage internecine warfare`.` as the sorely uncultivated dictionaries available online purport. It simply means damaging within a body organised with a view to do damage without ; conflict within a space constructed for harmony not competition. A civil war, an autoimmune disorder, a quarrel between husband and wife : all fine examples.">viii</a></sup> : what do all these contracts even mean ?! </p>
+<p>I know plenty of people who have dispensed with even entering into contracts altogether, as a point of principle. Silicon Valley deals would be anywhere between one third and two thirds undocumented to any degree - only when companies are about to go public does a mad rush commence to retroactively document years' worth of... contracts, they would be, except they weren't. Why not ? Because contracts are just too damned expensive, both to enter into rationally and then to enforce against the other party. The attempts mostly end up as a competition of "who has the largest bank account" and therefore can afford the best lawyers, and since this is known at the outset the only real believers in the entire contract-with-enforcement construct are, predictably, the very large corporations. </p>
+<p>And so here we are today : contract litigation is a great way to earn a living as a lawyer, a premier way to generate that mostly fake "social mobility" and a great way for Apple, Samsung and obviously the US government to fill their otherwise idle time during board meetings. Most common claims are not pressed, and in the rare instance they are pressed would end up in something called "Small Claims", which is much akin to the lost and found box they used to keep in train stations and movie theatres. Something at any rate closer to a "reality" show premise than the solemn and citizenesque thing a good court case was back in the early days of the previous century, when every dusty, sleepy Great Plains town had its Court right across from the <del datetime="2012-10-23T21:54:15+00:00">Theatre</del> <del datetime="2012-10-23T21:54:15+00:00">Church</del> Townhall.</p>
+<p>All this is sadly both unavoidable and beyond repair : the seed has grown to fruition, and we can't either throw out the history of untold billions of contracts entered into over the centuries or meaningfully distill anything out of it. Blackstone tried desperately to codify the nonsense and to a large degree succeeded, Napoleon achieved the same exact result, and both of these happened <em>exclusively</em> because of the convenient backing of dictatorial power. Napoleon had the autocratic authority to do absolutely anything, and so he could create a new code. Blackstone had the monarch's support, a monarch both absolute and disinterested in the finer points. Thus the respective products gloss over some details that are <em>perhaps</em> irrelevant, and through this license are capable to deliver something that is coherent and doubtlessly useful. </p>
+<p>Who today would or will be able to set aside the perhaps justified objections of the disenfranchised parties (which would necessarily exist) to create a new code, and somewhat reset the clock ? Nobody, practically speaking, it'd have to be done by "consensus" and "negotiation" which is to say it'd be much better for it to not be done at all. In short, this great dragon called Contract has flown as far as he can. He is old now, and tired. His bones ache, his mood is sour, he will soon go below the ground. We will forever remember it, or at any rate I will, but for what he was in his youth, and that youth was much, much before your parents were being born I would think.</p>
+<p>So what now ? </p>
+<p>Well... I'm glad you asked. There's a spiffy young fellow I'm betting on : the GPG Contract. He's also  a. an agreement b. reached by willing participants. But that's all.</p>
+<p>What do I mean "that's all" ? I literally mean, that's all. A contract which is entered into by willing participants and <em>won't be enforced</em>. Nonsense ? IKR!</p>
+<p>Except not really. Obviously entering into a GPG Contract thinking it's an Old Contract is nonsense, and will get you burned. In fact the history of "scams" in the Bitcoin space is pretty much this, people behaving with what should really be GPG Contracts as if they were Old Contracts, and then discovering midway through that... well... it doesn't really work that way. </p>
+<p>But if you go in knowing that the contract won't be enforced, you can actually act quite rationally. Online identities are obviously a dime a dozen, in fact in the time I took to write this opus I might have made a few million. However, because of GPG they are <em>in fact</em> identities. Add to this the fact that nobody forces you to venture money in a deal with something that's worth a dime a dozen and suddenly some sense begins to emerge.</p>
+<p>Sure all identities are a dime a dozen, but with the passing of time and the accumulation of history they become differentiated, and through this differentiation acquire value. When people see 2FB7B452 at the end of a signed document they don't think "a dime a dozen", they think "a guy valued around half a million BTC or thereabouts, my fifty should be safe then". Why should his fifty be safe then ? Because the value to me of not having a fifty bitcoin default added to my track record is actually larger than fifty bitcoins, and so rationally my best choice is to actually live up to the deal, whatever it may be.</p>
+<p>This system is obviously far from perfect at the current time. For one, as it is nascent there exists the incentive to follow short term goals : build an identity up to whatever value, then strip it by taking the money and splitting. This has happened so far numerous times, and from a certain perspective it may seem the main economic activity surrounding Bitcoin at the moment, greatly compounded by the yet inept identity-valuation methods used by participants, their unwarranted self confidence (everyone thinks they're a great judge of men, and everyone thinks their particular assumptions are both correct and warranted), their imbecillic pride manifested in the stupidest way it could, ie trying to keep "things" under wraps and all the rest of typically human failure. For the other, as it is nascent very little is in fact understood or <a href="https://bitcointalk.org/index.php?topic=110861.msg1227871#msg1227871">generally known</a> about it, and so gross mistakes happen quite cavalierly.</p>
+<p>All this aside, non-enforced contracts, contracts which the participants uphold out of their own free will rather than at the behest of some third party or by the point of the sword of some blind demigoddess are a thoroughly fascinating turn of events. For one, they are fundamentally human, they're one step up on the stairwell of freedom. Do it if you think it's right is certainly a lot more empowering, civilised and overall <em>good</em> than "do it or else". For the other, they allow all the enforcing to happen <em>before</em> the actual contract is entered into. Old contracts contain unknown future costs, nobody can ever tell you exactly how much will you have to pay in legal fees to recoup this five hundred owed on whatever deal. GPG Contracts don't have any future costs at all. The cost of enforcing one after the fact is always going to be zero, pretty much because there's never going to be anything you need (or indeed can) do.</p>
+<p>And it doesn't stop here. I have always thought the principal utility of Bitcoin is that it renders any sort of mandatory taxation model unviable. I am firmly persuaded that as Bitcoin takes hold<sup><a href="#footnote_8_43533" id="identifier_8_43533" class="footnote-link footnote-identifier-link" title="As it will no matter of any other consideration, nuclear war followed by nuclear winter would not stop it any more than it would stop the Moon still in its orbit.">ix</a></sup> taxes will have to return to what they were in ancient Greece : willing donations to the state treasury, and something people openly took pride in. This shift will bring about all the improvements we were vainly trying to achieve in the old money paradigm, such as public accountability and reasonable expenditure in one fell swoop : good luck getting people to donate to the police department if they don't like the police. And good luck with the welfare programs, for sure.</p>
+<p>Add to that a shift of contracts from the old model to the new and suddenly you have - and I mean this quite literally - a new Renaissance. Man at the center of all things. Man, the willing enforcer of his own promises. Man, the willing contributor to the wealth of an obviously much reduced, but by that fact probably much nicer, lovable and huggable cute little state. </p>
+<p>I'm crying with joy over here, my toes are curling in untold glee, I have little doubt that I shall live to see this, all of it. And for the first time in many, many years I feel again like the world is worth living in.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_43533" class="footnote">Such as the trajectory of a boulder expelled from a volcano, where the kinetic energy is the capital and the trajectory the purchase ; or the life of stars where hydrogen and later helium are the means of production allowing for radiative output. [<a href="#identifier_0_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_43533" class="footnote">Lombards, Venetians, Genovese and others. [<a href="#identifier_1_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_43533" class="footnote">In a non-Continental sense of that word. [<a href="#identifier_2_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_43533" class="footnote">Both for lack of space and because I'm not being paid quite enough to be holding impromptu doctoral courses on History of Culture. [<a href="#identifier_3_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_43533" class="footnote">Thrice in one article, take that! [<a href="#identifier_4_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_43533" class="footnote">Meaning, something with a fixed and peculiar meaning which is not open to intra-discourse negotiation the way most other words are. [<a href="#identifier_5_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_43533" class="footnote">Because the contract "is opposable" to either party, which really means to say contracts are there as the adversary to each party involved, joint and several. [<a href="#identifier_6_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_43533" class="footnote">Which word does not mean, by the way, "marked by slaughter : deadly; especially : mutually destructive" nor "of, relating to, or involving conflict within a group <bitter internecine feuds>" ; nor does it mean "		Destructive to both sides in a conflict: "savage internecine warfare"." as the sorely uncultivated dictionaries available online purport. It simply means damaging within a body organised with a view to do damage without ; conflict within a space constructed for harmony not competition. A civil war, an autoimmune disorder, a quarrel between husband and wife : all fine examples. [<a href="#identifier_7_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_43533" class="footnote">As it will no matter of any other consideration, nuclear war followed by nuclear winter would not stop it any more than it would stop the Moon still in its orbit. [<a href="#identifier_8_43533" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2012/xckd-tr/">XCKD-Tr</a></div>
+                <div class="alignright"><a href="http://trilema.com/2012/that-sticky-issue-of-enforcing-contracts/">That sticky issue of enforcing contracts</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2012/gpg-contracts/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2012/gpg-contracts/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>116 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-90078" class="commentbody"><div class="commenthead"><img alt='Rudd-O`s avatar' src='http://rudd-o.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://rudd-o.com/' class='url'>Rudd-O</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90078" title="">Thursday, 25 October 2012</a>
+							</div>
+						<p>Putetumadre, what a great article.  Insight untold and unparallelled here.  Tip of my hat.  Where is the Bitcoin donation button?  How can I reprint this on my Web site?  Please e-mail me with answers.  Thanks :-)</p>
+						</li>
+
+										<li id="comment-90081" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90081" title="">Thursday, 25 October 2012</a>
+							</div>
+						<p>Trilema is based on a subscription model, if you read more than five articles a week it'll ask you to buy credits. You can proceed at that point. Otherwise, there's no donations.</p>
+<p>Thanks for the kind words, muchly appreciated!</p>
+						</li>
+
+										<li id="comment-90082" class="commentbody"><div class="commenthead"><img alt='Alex`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Alex</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90082" title="">Thursday, 25 October 2012</a>
+							</div>
+						<blockquote><p> Rudd-O.com: the latest twenty<br />
+A feed with the latest twenty articles and more, in all languages. </p></blockquote>
+<p>My money is on Rudd-O just being a comment spammer or smth.</p>
+						</li>
+
+										<li id="comment-90083" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90083" title="">Thursday, 25 October 2012</a>
+							</div>
+						<p>How much money ?</p>
+						</li>
+
+										<li id="comment-90096" class="commentbody"><div class="commenthead"><img alt='hazek`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">hazek</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90096" title="">Friday, 26 October 2012</a>
+							</div>
+						<p>Wow, what a long(had to take 4 breaks, damn my ADD) but unbelievably awesome article!</p>
+<p>I agree with you completely and I wanted to let you know that there already was such a thing as a GPG contract used back when some people in the states and else where actually had some integrity and these contracts were and are called a gentleman's agreement: <a href="http://en.wikipedia.org/wiki/Gentlemen%27s_agreement">http://en.wikipedia.org/wiki/Gentlemen%27s_agreement</a></p>
+<p>I have to disagree with you though, I do not believe gentleman's agreements can function without an individual's unique identity being tied to their promise. I believe these agreements will only start to meet their full potential when used in combination of ostracization, meaning those who break their promise get their mug shot posted on a public board for everyone to see as a warning about their character.</p>
+<p>This I believe is the missing puzzle, because anonyimity in my mind just doesn't mix with responsibility and so has no place in a GPG contract.</p>
+						</li>
+
+										<li id="comment-90097" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90097" title="">Friday, 26 October 2012</a>
+							</div>
+						<p>Hi &#038; thanks!</p>
+<p>For sure an individual's unique identity would be tied to their promise. Look at <a href=http://polimedia.us/bitcoin/mpex.php?mpsic=S.DICE >S.DICE</a> IPO details for a fine example of this. </p>
+<p>Nevertheless, no individual is (or in fact could be) required to bear one single identity. This is not currently the case, individuals can bear multiple identities as is (they can speak for themselves, they can speak for their marriage, they can speak for their unemancipated children, they can speak for their sole proprietorship company, llc etc). There's no cause for it being the case either, as long as you put the effort into building one identity it's yours. So, unique yes, only no.</p>
+<p>I'm not entirely sure of the power of ostracisation. I suspect the simple refusal of businessmen of accepting the offender's signature in business deals is the whole of the remedy, adding a pillory or w/e in the deal doesn't really add anything other than administration costs.</p>
+<p>If you think about it for a moment, anonimity is not the same as pseudonimity (which is what we have here). The moment one signs a contract, no matter under what name (thus, identity), he's no longer anonymous.</p>
+						</li>
+
+										<li id="comment-90366" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90366" title="">Friday, 9 November 2012</a>
+							</div>
+						<p>This is very interesting. I have been working on the development of a system alternative to money for enabling equitable trade. I call it a chiralkine monetary system. The system is very applicable to mutual credit, as in LETS. It is based on what I call a "chiralkine contract", which is different from a traditional contract in that there is no enforcement. Two people wishing to start a trade cycle and to issue chiralkine money (in two mirror forms) that can circulate through a community enter into a "chiralkine contract" each with the other and together with a representative of the community. As long as they complete their trade cycle as agreed, the community will use the money that they have issued. If they do not, the community will no longer allow them to issue chiralkine money, so they can only barter.</p>
+						</li>
+
+										<li id="comment-90367" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90367" title="">Friday, 9 November 2012</a>
+							</div>
+						<blockquote><p>This is very interesting. I have been working on the development of a system alternative to money for enabling equitable trade.</p></blockquote>
+<p>I'm guessing you'd be very much interested in Bitcoin then (which is really the main topic that sparked this article as an application).</p>
+						</li>
+
+										<li id="comment-90368" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90368" title="">Friday, 9 November 2012</a>
+							</div>
+						<p>It was the word "trilema" that caught my eye, and also the comments on contracts. It was someone interested in LETS that alerted me to the posting.</p>
+<p>Several people working on BITCOINS have told me that this invention would address a weakness with that system - traceability to the issuer. You would have mirror image BITCOINS issued by a pair of people initiating a trade cycle.</p>
+<p>If you search on GOOGLE for chiralkine monetary system, you will find a patent application I have filed. There is a second one just filed that has not yet been published.</p>
+						</li>
+
+										<li id="comment-90369" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90369" title="">Friday, 9 November 2012</a>
+							</div>
+						<p>I see.</p>
+						</li>
+
+										<li id="comment-90374" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90374" title="">Saturday, 10 November 2012</a>
+							</div>
+						<p>The word "trilemma" is deeply related to the concepts of property rights (in money, goods or services) and contracts (through which property rights are transferred). Human brains cannot process trilemmas. They can only solve problems by deciding between two alternatives (dilemmas). For example, think about the human face. It has a left side and a right side, yes? So is there any part that is not either on the left or the right side? You jump to the answer the middle. It extends from the front to the back (another binary pair) of your head. So now the face is made up of three parts: the left, the right and the middle? A choice between three, as in a trilemma. Put another way, you face is made up of two parts: left/right and front/back. To make BITCOIN work, you need to understand about the rotational symmetry behind the way the brain works: about trilemmas. It has to be created in two mirror opposite forms.</p>
+						</li>
+
+										<li id="comment-90375" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90375" title="">Saturday, 10 November 2012</a>
+							</div>
+						<p>I'm curious, what do you make of <a href=http://www.timecube.com/ >timecube</a> ?</p>
+						</li>
+
+										<li id="comment-90376" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90376" title="">Saturday, 10 November 2012</a>
+							</div>
+						<p>To innovate, you have to let your inquiring mind wander where others fear to go, and put up with a lot of abuse from the self-appointed experts. I was not familiar with timecube, but having now looked it up, I would comment that mathematically closed systems require four numbers to define them. This comes from the rotational symmetry of space, and is why four numbers are used to define spacetime. Debits and credits (two numbers) provide an insufficient description of a person's financial position (what you own and what you owe - these days to a bank usually!). I think you need four numbers: what you own in left, what you own in right, what you owe in left and what you owe in right. An accounting system constructed this way maps mathematically to all the steps in a trade cycle. By trade cycle I mean a cycle initiated when one person goes without something for the benefit of another, and ends when each person in the pair has both gone without and received something - as in a barter.</p>
+						</li>
+
+										<li id="comment-90377" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90377" title="">Saturday, 10 November 2012</a>
+							</div>
+						<p>Debits and credits (money) represent the unfulfilled part of a contract between two people for the exchange of goods or services. They enable barter to be broken down into component parts. Mathematically they are vectors. See: <a href="http://www.mathblog.ellerman.org/2010/02/the-math-of-double-entry-bookkeeping-part-i-scalars/">http://www.mathblog.ellerman.org/2010/02/the-math-of-double-entry-bookkeeping-part-i-scalars/</a>.</p>
+						</li>
+
+										<li id="comment-90381" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90381" title="">Saturday, 10 November 2012</a>
+							</div>
+						<p>Illustration</p>
+<p>Bob, Alice and Hamilton face starvation. They constitute a community with no means of exchange. Bob eats bread but has only apples, Alice eats apples but has only beans and Hamilton eats beans but has only bread.</p>
+<p>Hamilton has been working on a mathematical theory involving paired numbers that he calls vectors. He has an idea for applying it to the problem facing the three of them.</p>
+<p>He first redefines the problem as follows:-<br />
+	People can only trade by pairwise exchange.<br />
+	People will accept what they want, not what they don’t want.<br />
+	Bob wants bread, not apples or beans.<br />
+	Alice wants apples, not beans or bread.<br />
+	Hamilton wants beans, not apples or bread.</p>
+<p>Hamilton suggests to Bob and Alice that they should enter into a contract in which Bob will agree to exchange his apples with Alice in the return for a means to obtain bread. Bob is sceptical. He is worried that Alice will eat his apples, leaving him with nothing. Hamilton tells both of them that, while the contract remains incomplete, neither of them owns the apples. The ownership of the apples is undecided. If the contract is completed, Alice will own the apples and Bob will own bread. Bob and Alice both like this idea. They imagine that Alice will get the apples she wants and Bob will get the bread he wants, at which point their contract will be complete. Hamilton gives his friends a worried look. He points out that if this is all that happens, he will starve, even though he was the one that came up with the idea!</p>
+<p>Hamilton goes on to explain that three contracts are needed: one between Bob and Alice, one between Alice and Hamilton and one between Hamilton and Bob. Through these three contracts, Bob will receive a means to obtain bread, Alice a means to obtain apples and Hamilton a means to obtain beans.</p>
+<p>Bob and Alice look perplexed. These three means are different things. How can they be used together?</p>
+<p>Hamilton explains that each means is actually a pair of opposite things: vectors. Each of the three means is made up of these two opposite vectors. They direct how the contracts are to be fulfilled.</p>
+<p>Bob and Alice now look incredulous. How can two opposite things be equivalent to anything? Two opposite things add to zero!!</p>
+<p>Hamilton explains that since the vectors are mirror opposites, they can be described as left and right, or in shorthand L and R. In the contract between Bob and Alice, Bob will be given L and Alice R. At the end of the contract, Bob must return L and Alice R. Bob now gives L to Alice. Alice gives Bob R.  The apples no longer belong to Bob, nor do they belong to Alice. Their ownership is undecidable.</p>
+<p>Alice now goes to Hamilton. Hamilton does not have any vectors yet. They enter into a contract. In the contract between Alice and Hamilton, Alice will be given L and Hamilton R. At the end of the contract, Alice must return L and Hamilton R. Alice now gives L to Hamilton. Hamilton gives Alice R. Now, Alice has L and R (from her two contracts) and Hamilton has L. The beans no longer belong to Alice, nor do they belong to Hamilton. Their ownership is undecidable.</p>
+<p>Hamilton now goes to Bob. Bob has R and Hamilton has L. They enter into a contract.  Hamilton will give Bob bread and L. Bob will give Hamilton R. Now, each of the three has both L and R vectors. They can redeem their vectors, so that the ownership in the food is decided in favour of the person who can eat it. The three survive, thanks to Hamilton and his vectors.</p>
+<p>In this illustration, the vectors are a means of exchange. They are not the same as debits and credits, because debits and credits are allowed to cancel. Using debits and credits, Bob and Alice would both have been satisfied, but Hamilton would have starved. The vectors ensure that each person in the community gives and receives a food item. Alice is still bound by both of the contracts to which she is a party, even when she has both given and received food items (evidenced by her possession of both R and L), until all three contracts have been completed. With debits and credits, her trading balance at this stage would be zero.</p>
+						</li>
+
+										<li id="comment-90402" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90402" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>In earlier posting the "Illustration" with Bob, Alice and Hamilton, I was trying to engage with the BITCOIN community with some ideas.</p>
+<p>I agree that contracts requiring enforcement are a big problem, and a turn-off for people wanting to initiate new trading systems. However, as described in the "illustration", contracts and their performance are essential when you are setting up a medium of exchange to be used by everyone in a trading community. The contract out of which the medium of exchange arises is actually at once between the two people each to the other, and also between the two people as a whole and the rest of the community. If two people initiating a trade cycle have created a medium of exchange that has entered into use by other members of a trading community, then other members of that trading community will be damaged if the initial pair default on their contract. They will have to make adjustments so as to share the effects of the damage across the community. It seems reasonable that pairs of people who are in default of their contracts should be excluded from the trading community. Trading systems rely on peer pressure on each member to protect their trading reputations.</p>
+<p>Now to another point. Money is information, not a store of value. It consists of vectors representing the unfulfilled parts of contracts entered into by pairs of people initiating a trade cycle.</p>
+<p>Imagine that one person has a pencil that another wishes to purchase. It is agreed that money in the amount of $10,000 will be created to finance this purchase. They duly exchange the pencil for the money. Now the person with the money goes to a third person who has a car. The two agree to exchange the money for the car. Now the person who sold the pencil has a car, the person who sold the car has $10,000 and the person who bought the pencil has a debt of $10,000. Because debits are allowed to cancel credits, the person who sold the pencil and bought the car has a zero balance. You can see this happening right now all over the world: governments (taxpayers) are picking up all the debt and the people left with the pencils are facing ever tightening "austerity". In a chiralkine system, the guy with the car (the only asset of value) would have a balance of R$10,000 and L$10,000. He would still be on the hook in two contracts for the redemption of the created money. Properly treating debits and credits as vectors would ensure that the accounts maintain a memory of who created the money that everyone is using.</p>
+<p>If BITCOIN were to be created in R and L forms, it could function as vectors in an information transmission network. The two forms could be created with the initiation of a trade cycle, pass through a trading community propagating trades, and be recombined for redemption when the trade cycle is completed (on fulfilment of the contract). If BITCOIN continues to function like fiat money, as a store of value, then situations as described above will happen and when the system gets to big, it will become unstable, just like the present fiat-based monetary system has today. The rich will get richer and the poor will get poorer.</p>
+						</li>
+
+										<li id="comment-90403" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90403" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>What's not clear at all to me is why do you think a "trading system" is even something that could be "new", let alone something that someone could make. Trading systems are emergent behaviours.</p>
+<p>What's certainly clear to me is that your approach is flawed. You had an idea, you saw Bitcoin, your thought process is "how could we adapt Bitcoin to this idea I had". This is wrong, inasmuch as it presumes your idea is more important than Bitcoin. The correct aprpoach would be, "how does the existence of Bitcoin change my otherwise irrelevant idea". Try it that way.</p>
+						</li>
+
+										<li id="comment-90404" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90404" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>People working on BITCOIN in San Francisco approached me, not the other way around.</p>
+<p>All monetary systems that are based on a single token representing a store of value are inequitable. They lead to growing inequality, and for that reason are unstable. The problem is not how money is used, but in how it is created and redeemed. Money is information, not a store of value.</p>
+<p>Please look at the example I have provided of the pencil and the car. Explain the flaw in that analysis.</p>
+						</li>
+
+										<li id="comment-90405" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90405" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>In answer to your first question, it requires a conceptual jump to go from barter to a system in which a token (shell, bead, notch on a tally stick) etc represents a store of value that can be exchanged for goods or services. There is no continuous path from one to the other: only once the jump has been made can the new system evolve. Bitcoin is a development of the present (single token store of value) monetary system. It requires a further conceptual jump to envisage that a medium of exchange can be embodied in the exchange of two tokens representing mirror opposite functions. The idea has been out there hidden for hundreds of years, in double entry bookkeeping and in the tally stick system, but the dominant group has always maintained control of the system, so that everyone has been obliged to accept their dogma that money is a store of value.</p>
+						</li>
+
+										<li id="comment-90406" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90406" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>Mircea, you have been very gracious in allowing me to post comments on your website. I do not wish to abuse that kindness and trust in any way. Thank you.</p>
+<p>There are presently two broad camps: those that believe that money is a store of value and those who believe that money is information (as in mutual credit). The people who believe in money as a store of value are vastly more powerful than those that believe it is information. I see things differently. I would change the accounting system so that debits and credits can only cancel one another when money is being created or redeemed. This would allow them to act as vectors, transmitting information about the changing trading position of each person in a trading network as transactions are executed. I think this would lead to a much more equitable and hence stable system.</p>
+						</li>
+
+										<li id="comment-90409" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90409" title="">Monday, 12 November 2012</a>
+							</div>
+						<blockquote><p>All monetary systems that are based on a single token representing a store of value are inequitable.</p></blockquote>
+<p>The point of a monetary system is not to be equitable. The point of a monetary system is to be a correct representation of fact.</p>
+<p>More generally, the discussion of equitable-ness is a hallmark of the stupid in this context, seeing how "equitable" is a function of parties, and we are discussing here systems afore the introductions of any parties. Thus, inasmuch as any ulterior parties are being treated inequitably by the system it follows that those parties are wrong, either in their existence or in some characteristic they posses, and it further follows the only correct solution to the problem of inequitude is the resolution of the party : either by it ceasing to exist or else by it ceasing to posses the characteristic thus punished. </p>
+<p>Otherwise, it has been amusingly argued by celebrated idiots such as <a href=http://trilema.com/2010/feminismul-inteles-drept-cult/ >Luce Irigaray</a> that physics is "inequitable" (to women). This sort of argument can at most entertain.</p>
+<p>I fail to see how your example with the pencil is in any way relevant (to anything of any import). On the strength of this I didn't bother trying to fish out the other example (with the car ?). You painfully expound on the banal without making it at all obvious why this carries any import.</p>
+<blockquote><p>In answer to your first question, it requires a conceptual jump to go from barter to a system in which a token (shell, bead, notch on a tally stick) etc represents a store of value that can be exchanged for goods or services. There is no continuous path from one to the other: only once the jump has been made can the new system evolve. Bitcoin is a development of the present (single token store of value) monetary system. It requires a further conceptual jump to envisage that a medium of exchange can be embodied in the exchange of two tokens representing mirror opposite functions.</p></blockquote>
+<p>My refering emergence seems to have been completely wasted. This makes me think that any further attempt on my part to illuminate you will be equally wasted. I will limit myself to pointing out that your personal presumptiousness (as explained in the last paragraph of comment #17 above) is compounded to the degree that you imagine evolution is the result of some sort of "understanding". </p>
+<p>It is not the case that understanding occurs and then forces evolution, but it always is the case that evolution happens and forces understanding. The mistaken belief you hold can easily be traced to a life lived in the artificial environment of academia (since it would seem in retrospect, reading books about what happened, that events ocur because of their meaning, rather than the obvious but too often glossed over situation where meaning is only derived after the fact and it <strong>never</strong> manages to capture the fact entirely).</p>
+<blockquote><p>I do not wish to abuse that kindness and trust in any way.</p></blockquote>
+<p>There is not trust whatever involved. Trilema was always open to everyone and anyone, without regards to what they had to say. This is a choice on my part which has nothing to do with you or anyone else, it just happens to be what I believe in. </p>
+<p>However, the problem we have, you and me, is that I fail to find interest in what you say. Generally the path to pique my interest is to delineate a problem, and then present a solution. Inasmuch as the problem you are trying to solve is inequity then that can never interest me : I don't believe inequity is a problem, nor is it somethingthat should (or could be) solved. I believe inequity to be a fundamental, necessary and unavoidable property of any world worth living in (and indeed of any world where life is at all possible).</p>
+<blockquote><p>There are presently two broad camps: those that believe that money is a store of value and those who believe that money is information (as in mutual credit).</p></blockquote>
+<p>I am not aware of such camps. The camps I am aware are also two, to wit : </p>
+<p>1. the camp that believes people should suffer or rejoice strictly on their own merit and<br />
+2. the camp that believes people's sufference or happiness can come from outside.</p>
+<p>3. the camp that believes individuals are saved or doomed as individuals and<br />
+4. the camp that believes individuals depend on some group.</p>
+<p>5. the camp that believes money is the score of the worth of any individual of enterprise, and that something worth zero has no reason to exist and<br />
+6. the camp tha believes money is an impediment to "greater things" and has no reason to exist.</p>
+<p>I'm not a socialist. If you are, you are also wasting your time trying to coat your nonsense in a discussion of anything practical : I shan't be at all interested, socialist money is about as meaningless a concept as socialist welfare or the military supremacy of the Soviet Union or the moral supremacy of Iosif V.</p>
+						</li>
+
+										<li id="comment-90410" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90410" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>People will use monetary systems that they consider to be equitable. They are most willing to go without something real for the benefit of another when they believe that they will eventually receive something real back of equal value. That is how trade works. A monetary system reflects the underlying facts of this: it provides a medium of exchange: an information transmission network.</p>
+<p>Socialism, communism and capitalism all derive their origins in a monetary system that uses a single token to represent a store of value. None of those systems has proved to work in a stable manner.</p>
+<p>The fact pattern about the pencil and the car is exactly on point for our discussion. How would a BITCOIN-based monetary system represent these facts and resolve the situation? How would it avoid a person holding $10,000 in BITCOINS after selling their car from trying to enforce their ownership rights in their "store of value" against the person left holding the pencil, and so provoking social unrest as we see in Athens now?</p>
+						</li>
+
+										<li id="comment-90411" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90411" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>Here's how this story works : </p>
+<p>Phase I : People are enjoying their rights as individuals. The state is <a href=http://trilema.com/2012/let-us-revisit-cleveland/ >minimal and useful</a>. The economy is strong, the country powerful, the culture dominant in the world.</p>
+<p>Phase II : Socialists observe the benefits of demagoguery. The party of "we shall steal from everyone else and lie about it if confronted" is formed. Mandatory taxation is introduced, under various false representations. The "we shall steal from everyone else and lie about it if confronted" membership slowly swells.</p>
+<p>Phase III : Pretty much everyone has either left or joined the "we shall steal from everyone else and lie about it if confronted" party. Consequently, nobody does any useful work anymore (because it is uneconomical for them to do so), but everyone awaits handouts (which, obviously, they now need). The economy is in shambles. The country laughably weak. The culture so lost in mannerism it is barely even worth the mention by cultivated people abroad. </p>
+<p>Phase IV : Hunger and war. Collapse. The complete abandonment of the old system and reorganisation of a new one.</p>
+<p>Phase V : People are enjoying their rights as individuals. The state is <a href=http://trilema.com/2012/let-us-revisit-cleveland/ >minimal and useful</a>. The economy is strong, the country powerful, the culture dominant in the world.</p>
+<p>Phase II : Socialists observe the benefits of demagoguery. The party of "we shall steal from everyone else and lie about it if confronted" is formed. Mandatory taxation is introduced, under various false representations. The "we shall steal from everyone else and lie about it if confronted" membership slowly swells.</p>
+<p>Phase IIa : People point out that we've already played this game one. Socialists respond by yet another lie : that this is not the same old crap, but something entirely new, or to quote </p>
+<blockquote><p>Socialism, communism and capitalism all derive their origins in a monetary system that uses a single token to represent a store of value. None of those systems has proved to work in a stable manner.</p></blockquote>
+<p>This has already been done so many times I'm well sick of it. The rest of the phases continue undaunted. There's no possibility of "anything other" than capitalism, unless you mean poverty, hunger and war.</p>
+<p>Leaving this aside, I particularly take exception to the poisonous misrepresentations embodied in </p>
+<blockquote><p>How would it avoid a person holding $10,000 in BITCOINS after selling their car from trying to enforce their ownership rights in their “store of value” against the person left holding the pencil, and so provoking social unrest as we see in Athens now?</p></blockquote>
+<p>Firstly, the implications that the legitimate rights of the people holding currency should be avoided. This is false. The person holding currency should enforce their ownership rights just fine. </p>
+<p>Secondly, the implication that "social unrest" was "provoked". If I have five Bitcoins and you do not, no ammount of you hopping up and down, throwing yourself on butt-first on the ground, bawing and screaming will or should yield anything other than a sound beating for you. And if you do not dessist you should be killed.</p>
+						</li>
+
+										<li id="comment-90412" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90412" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>I thought you did not agree with contracts that require enforcement. That is what started this conversation. Killing people to enforce a viewpoint does seem a little extreme, but then some societies like the USA do have the death penalty for some breaches of the law.</p>
+<p>In my example, in a BITCOIN system, would the ownership rights in the BITCOINS be asserted against the owner of the pencil (capitalist interpretation) or the owner of the car (socialist interpretation). If they cannot be asserted against either, they have no value. How does the owner of the BITCOINS realise their value?</p>
+<p>I think this question is one that BITCOIN needs to come up with an answer for.</p>
+						</li>
+
+										<li id="comment-90414" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90414" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>What we are discussing is a trilemma!</p>
+						</li>
+
+										<li id="comment-90415" class="commentbody"><div class="commenthead"><img alt='Chett`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">26</div>
+								<span class="authorlink">Chett</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90415" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>Interesting argument guys.<br />
+I do wonder about the large percent of the population that believes 'Daddy' should take care of them in some form -  steal from others on their behalf and other such things.<br />
+I wonder if the blatant ursury practiced by all banks these days (and supported by silly governments) in the form of fractional reserve banking has distorted all real  meaning from money as it currently exists?</p>
+						</li>
+
+										<li id="comment-90416" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">27</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90416" title="">Monday, 12 November 2012</a>
+							</div>
+						<blockquote><p>I thought you did not agree with contracts that require enforcement. That is what started this conversation. Killing people to enforce a viewpoint does seem a little extreme, but then some societies like the USA do have the death penalty for some breaches of the law.</p></blockquote>
+<p>Ah but you see, you are not killing them to enforce a contract. You are killing them because they're getting in the way. That's perfectly fine, and quite common. Stand your ground laws for instance are predicated on this exact mechanism : if the offender wasn't on the defender's property he wouldn't have been shot. </p>
+<blockquote><p>If they cannot be asserted against either, they have no value. How does the owner of the BITCOINS realise their value?</p></blockquote>
+<p>This is false however. The owner of the Bitcoin asserts his rights only against <em>other people wanting bitcoins</em>. People owning cars or pencils or anything else are not naturally part of this discussion. They only become part of it if and when they become people wanting bitcoins.</p>
+						</li>
+
+										<li id="comment-90419" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">28</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90419" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>In my example, there are only three people: one with a pencil, one with a car and one with $10,000 worth of BITCOINS. The only person that wants BITCOINS is also the only person that wants to exchange them for something of real value. This is the trilemma.</p>
+<p>Property rights are of four kinds: "mine not yours", "yours not mine", everybody's and nobody's. When the property rights in money are exchanged, the rights in something real are also exchanged. In the case of me buying a car from you, the change (from your perspective) would be:</p>
+<p>Car:  "mine not yours" &gt; "yours not mine"<br />
+BITCOINS: "yours not mine" &gt; "mine not yours".</p>
+<p>Now, if I used existing BITCOINS to finance my purchase, that would seem fine. However, if I create the BITCOINS, there is a problem. How can one asset (the car) become two just because I have created BITCOINS.</p>
+<p>The creation of money involves symmetry breaking. When you break symmetry, what you do is to create two mirror opposites (out of nothing) and then privilege one of them. Debits and credits are an example. Once symmetry has been broken, the system remains changed until it the symmetry has been restored. Once BITCOINS have been created, the system works as if they have always existed. This is paradoxical, but results from symmetry breaking. If there is no way to restore symmetry, to redeem them, then they actually have no intrinsic value. The community has no reason to respect any property right in them.</p>
+						</li>
+
+										<li id="comment-90420" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">29</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90420" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>Well, if the only person that wants the Bitcoin is also the only person that has Bitcoin then the system is at rest in that position of ideal happiness where all needs are met. Why should he want to exchange something of value (Bitcoin) for something of no value (crayons, cars etc) ? Just because you posit so ?</p>
+<p>Property rights are of one single type : mine, nobody else's.</p>
+<p>The only way you create Bitcoin is through mining them, perhaps this would be a good time to take a break and read up on the constraints of that process to make sure we're not wasting out time discussing things we "know" in the sense that we merely recognize the name they bear.</p>
+						</li>
+
+										<li id="comment-90421" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">30</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90421" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>If BITCOIN cannot answer the question I posed, it is part of the problem, just like money created through fractional reserve lending, to which Chett has referred.</p>
+						</li>
+
+										<li id="comment-90423" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">31</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90423" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>How do you know "the problem" exists outside of your own mind ?</p>
+						</li>
+
+										<li id="comment-90425" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">32</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90425" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>The concept of mining provides a very good analogy for understanding how rights arise in money and real property.</p>
+<p>A shell lying on a beach belongs to no-one/everyone. If you pick it up and declare it to be "mine not yours" it does not become so unless everyone else agrees that it is so. If they do, symmetry has been broken. The ownership in the shell can now be transferred, changing its status from "mine not yours" to "yours not mine". It will stay in this symmetry state until the property right in it is extinguished, for example because its current owner puts in back on the beach.</p>
+<p>The transfer in ownership could be effected by means of a newly created IOU. This is a private contract. If the ownership is to be transferred through a newly created medium of exchange recognised by a community, then symmetry breaking is required again. Only then can the ownership in the shell be exchanged for the ownership in the medium of exchange.</p>
+<p>There is nothing magical about this. It is mathematical. The creation of money is a non-linear process. It involves symmetry breaking. It changes the state of a system. Once changed, the system continues to operate as if the change had never taken place. There is no way, using the process steps of the system (exchanging tokens for goods or services) that the tokens will ever disappear. It is as if the past has been wiped clean!</p>
+						</li>
+
+										<li id="comment-90426" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">33</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90426" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>Except the shell "found" on the beach belongs to whomever the beach belongs to.</p>
+						</li>
+
+										<li id="comment-90427" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">34</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90427" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>RE: 33. All contracts between two people that require for their performance the creation and use of a means of exchange by others are affected by an interest of those others. Those others need a means to ensure completion of the contract: either some power to exclude the two people from creating money in the future, or some means for redress in the event of default.</p>
+						</li>
+
+										<li id="comment-90428" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">35</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90428" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>How did the property right in the beach arise in the first place? There had to be a declaration of ownership that was recognised by the community (probably under pain of death by a warlord!).</p>
+						</li>
+
+										<li id="comment-90429" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">36</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90429" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>The property right arose in the first place the same exact way the first human arose in the first place.</p>
+<p>Mining in that context was a term of art. It talked about Bitcoin mining, not what you think mining may be. (And I strongly doubt you have much of an idea as to what Bitcoin is, at this point.)</p>
+						</li>
+
+										<li id="comment-90430" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">37</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90430" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>I agree. Symmetry breaking was involved in the creation of the first human.</p>
+<p>Heredity is determined by DNA. DNA is a double helix composed of four bases that are paired A:T and G:C. Each strand of DNA has a comlpement, just like with debits and credits in a double entry T-account.</p>
+<p>A mutation gives rise to a new base pairing. Once that new pairing has occurred, it will be transferred from the originator cell to all its decendents through cell division. The pairing locks the genetic information in place, just as property rights are locked in place once they have been created. There is no mechanism for extinguishing them through trade.</p>
+						</li>
+
+										<li id="comment-90431" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">38</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90431" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>All systems for enabling trade rely on the creation of two opposite functions, one of which is privileged so that circulation of goods or services is initiated in one direction rather than the opposite (clockwise vs. anticlockwise if you like). You could pass over a token with goods and services,  exchange a token for goods or services, or exchange tokens one for the other when goods or services are exchanged. It does not matter how you break the symmetry, as long as everyone does the same thing. It is like all deciding to drive on the left or right side of the road. What does matter is that the operations of creating, using and redeeming money map to trade cycles, otherwise the system becomes unstable. You end up with a lot of debt in some peoples hands, and a lot of wealth in others, then the system breaks.</p>
+						</li>
+
+										<li id="comment-90432" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">39</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90432" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>This is just about so much nonsense.</p>
+						</li>
+
+										<li id="comment-90434" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">40</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90434" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>It is not rational to believe that something imaginary called money actually has a value. Money is information about the relative positions of a pair of traders in an unfulfilled contract. It carries that information with it as it passes through a network of trading people. A store of value is not required to enable people to trade. What they need is a contract accepted by the community in which they trade, and vectors (tokens) that represent the steps they need to complete that contract. There is no need for enforcement of the contract, and no need to identify anybody as a debtor that needs to be pursued and punished if that person defaults on the contract.</p>
+						</li>
+
+										<li id="comment-90435" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">41</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90435" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>In general your output is an orgy of words used without relation to their actual meanings. </p>
+<p>In any case "the community" has absolutely no business in any of this : contracts are between the parties and the parties alone.</p>
+						</li>
+
+										<li id="comment-90436" class="commentbody"><div class="commenthead"><img alt='molecular`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">42</div>
+								<span class="authorlink">molecular</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90436" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>fucking awesome! This is the most positive outlook/idea I've read in a while. All for it.</p>
+						</li>
+
+										<li id="comment-90437" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">43</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90437" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>Two people cannot create a medium of exchange through contract. It is impossible. A medium of exchange is intentionally created for use by others. For example, dollars, pounds, euros and BITCOINS are created for use as a medium of exchange by other than their creators. Everyone that assents to use whatever has been created through the contract has an interest in the performance of the contract.</p>
+<p>There are two parts to any contract in which a medium of exchange is created: one part between the two contracting parties each to the other and a second part between the "community" and the two contracting parties together as a whole.</p>
+<p>All rights that people enjoy find their basis in opposite obligations that other people accept. We all own things only with the consent of our fellows. If we get too greedy, they will just take them from us.</p>
+						</li>
+
+										<li id="comment-90438" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">44</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90438" title="">Monday, 12 November 2012</a>
+							</div>
+						<p>@<b>molecular</b> Cheers.</p>
+<p>@<b>Martin Hay</b> "It is impossible", you say. That's fine, time will tell now won't it.</p>
+						</li>
+
+										<li id="comment-90439" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">45</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90439" title="">Tuesday, 13 November 2012</a>
+							</div>
+						<p>Time has already told! The money-creating contracts entered into between banks and the people who were selling houses to the bank's borrowers were not fulfilled, and now the world has a terrible financial crisis on its hands. The public has an interest in any contract that creates a medium of exchange. This is not a game. Social stability, indeed people's very lives. depend upon getting this right. Any medium of exchange requires the consent of the people that use it.</p>
+						</li>
+
+										<li id="comment-90440" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">46</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90440" title="">Tuesday, 13 November 2012</a>
+							</div>
+						<p>Well... then I guess you have a problem, cause looky I'm doing it and I'm not asking for anyone's permission. Now what ?</p>
+						</li>
+
+										<li id="comment-90441" class="commentbody"><div class="commenthead"><img alt='Chett`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">47</div>
+								<span class="authorlink">Chett</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90441" title="">Tuesday, 13 November 2012</a>
+							</div>
+						<p>I sense a real problem in this concept of 'symetry'. Value does not exist in symetry.<br />
+If I have food but I am not hungry but you are then that food has more value to you than to me. Perhaps you do have something of value to me that has little or no value to you? We trade. Both of us have been increased in some way, but its not really likely the deal would appear symetrical to a third party that has different degrees of interest in each of the items.<br />
+Money (currency of any kind) is really only a poor attempt to make a yardstick for all these things we value and ease the trading process. Saying something costs X dollars or bitcoins doesn't make it worth anything different than the value the current owner ascribes to it at the current time.<br />
+Gold is normally high value, but  if you are hungry enough and food is scarce enough I am sure you would trade a pound of gold for a pound of food and think you got a good deal.</p>
+						</li>
+
+										<li id="comment-90442" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">48</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90442" title="">Tuesday, 13 November 2012</a>
+							</div>
+						<p>Chett, you are absolutely right to focus on symmetry as a way to gain an understanding of how money works for us now and needs to work for us in the future.</p>
+<p>We live on a round earth in a universe that has rotational symmetry. When you are leaving your home on a journey, you are getting closer to home. The guy holding you up on the road in front of you is actually behind you. When you are in a process in which areselling something, you are also in a process in which you are buying something.</p>
+<p>In order to handle things numerically in a round world rather than a flat world, you need to use two numbers rather than one. In our everyday lives we use oppositional terms like right and left, or front and back. Accountants use debits and credits. </p>
+<p>In our current financial system, run by accountants, we make the mistake of allowing debits and credits to cancel when new money is being created. The accountants treat the world as if it is flat. We then have one number for money instead of two. Money appears to be a single thing which can be owned: a store of value. As a consequence of this, governments start to levy taxes to be paid in that money. The same fate awaits BITCOIN if its supporters continue to describe it as personal property and a store of value. That would be a tragedy.</p>
+<p>When BITCOINS are created, they should be created in pairs that circulate in countercurrent, one going with the circulation of goods and the other in the opposite direction. If this were to be done, the BITCOIN system would avoid the flaw in the fiat monetary system that debits can cancel credits. The circulating BITCOINS would not be a store of value, and would therefore not be suitable for paying taxes in. A BITCOIN-based economy would not be subject to the same boom and bust cycle that we are suffering in today.</p>
+						</li>
+
+										<li id="comment-90447" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">49</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90447" title="">Tuesday, 13 November 2012</a>
+							</div>
+						<p>What I have given here, for anyone who takes the trouble to understand it, is a proposal for using BITCOIN technology in a new way, as paired vectors that function as debits and credits respectively. At the start of a trade cycle, any two people could create these debits and credits, and at the end, when each has both received and given some goods or service, redeem them. The trading system would do its own accounting. It would solve the problem in post 16 about the three people with the pencil and the car, which is the problem underlying the present financial crisis. Nobody should go hungry if food is available just because they have no money. Money is only information, like inches and centimeters. This technology could address that most vital of human needs. It would enable all those presently excluded from participating economically, because they have no money, to be able to contribute.</p>
+						</li>
+
+										<li id="comment-90449" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">50</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90449" title="">Tuesday, 13 November 2012</a>
+							</div>
+						<p>Nah, what you've given here is testimony to your ignorance (as you have no clue what Bitcoins are or how they work), impudence (as you were told you have no clue but continue to act as if you have something to say on the subject) and lazyness (as you <em>still</em> haven't bothered to read up and find out wtf Bitcoins are and how they work).</p>
+<p>The reason you are mostly laughed at in the rare instances people don't just look through you as if you didn't exist, not just here but in your professional (such as it is) and social (such as it is) life is exactly that : you are an impudent, ignorant lazy ass. Fix these (all three), come back.</p>
+						</li>
+
+										<li id="comment-90450" class="commentbody"><div class="commenthead"><img alt='Martin Hay`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">51</div>
+								<span class="authorlink">Martin Hay</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90450" title="">Tuesday, 13 November 2012</a>
+							</div>
+						<p>Thank you once again for allowing me to use your site to respond to the people interested in BITCOIN who have approached me for more information about this idea that I have been explaining. Even if my explanation has only brought laughter into their lives, then at least they have been entertained. I have provided all the information needed, so will leave you now, regretably with the question posed in post 16 still unanswered. I wish you good fortune in your hard work. I have a great deal of respect for people who have the courage to innovate. BITCOIN is a great invention. The process of innovation will go on.</p>
+						</li>
+
+										<li id="comment-97047" class="commentbody"><div class="commenthead"><img alt='someone`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">52</div>
+								<span class="authorlink">someone</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97047" title="">Monday, 23 December 2013</a>
+							</div>
+						<p>The flaw with Martin Hay's thinking is his presumption that the audience, ie those interested in getting rich with BITCOIN, actually cares about creating an equitable means of exchange. In fact, it is more akin to a community colluding to replace the fraudulent financial elite with themselves. BITCOIN early adopters are not trying to save the world, just better themselves financially. Perhaps this is why they laugh....</p>
+						</li>
+
+										<li id="comment-97057" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">53</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97057" title="">Tuesday, 24 December 2013</a>
+							</div>
+						<p>@<b>someone</b> Those interested in getting rich aren't particularly interested in Bitcoin, they're interested in getting rich, much in the same way people looking for a lay on Saturday night aren't interested in getting laid with any particular woman (contrary to what they may be saying to any particular woman). Consequently, they aren't a particularly interesting set for the discussion at hand.</p>
+<p>People interested in making Bitcoin work, at least the vanishing thin subset of them that a) actually understand it enough to be useful and b) actually have something of substance to contribute couldn't care less about your notion of equitable, which I also suspect is well broken. Whereas they despise all things broken, which includes without limitation people and political systems. Which is exactly why they laugh : inasmuch as the rule is X, all protestation to the contrary may either anger or amuse. Sort-of like you were a child in a toy store and you weren't getting any toys : some parents would smack you for whining, some'd laugh at you. These people are the latter sort (and yes, the reason is that deep down they don't give a shit as looking at you they only see the minimal replacement cost).</p>
+						</li>
+
+										<li id="comment-102646" class="commentbody"><div class="commenthead"><img alt='Aaron`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">54</div>
+								<span class="authorlink">Aaron</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-102646" title="">Monday, 14 July 2014</a>
+							</div>
+						<p>I understand that the Web of Trust, Bitcoin-OTC is useful for Bitcoin contracts, ratings, and such. Although, I'm wondering if there is any systems in place that implement a decentralized approach to general GPG contracts? I really believe in the idea of gpg contracts, and the idea of a "voluntary deal". </p>
+<p>I would love to see a solution that allows us to be able to check the status of contracts much like how the Blockchain allows us to check bitcoin addresses, blocks, etc.</p>
+<p>A system that would allow us to register a specific gpg key id and then track contracts, completed, pending, ratings from other users, etc. The in-depth detail of your profile could be up to you (you could choose to associate your real world identity or not). I don't believe it is necessary for an individual to be "known in real life" to be trustworthy, it all depends on the person and that is why a system like the web of trust is so important.</p>
+<p>This post has certainly sparked a fire for me, thanks.</p>
+						</li>
+
+										<li id="comment-102651" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">55</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-102651" title="">Monday, 14 July 2014</a>
+							</div>
+						<p>No but listen to yourself. "A system for decentralized" ? How would that work, like a chastity belt for debauchery ? These are exactly contrary approaches, if you have a system that means it's standardized which means it's not decentralized.</p>
+<p>As it stands right now it's perfectly decentralized : gpg sign whatever you want and find a party that'll take it.</p>
+<p>Now, in regards to a central registrar of deeds, funny you should mention it : it was a topic of conversation in b-a. <a href=http://btcbase.org/log/?date=14-07-2014#754447 >Again</a>.</p>
+						</li>
+
+										<li id="comment-112574" class="commentbody"><div class="commenthead"><img alt='Otto Fahri`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">56</div>
+								<span class="authorlink">Otto Fahri</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-112574" title="">Monday, 9 March 2015</a>
+							</div>
+						<p>Have you ever considered about including a little bit more than just your articles? I mean, what you say is important and everything. But think of if you added some great pictures or videos to give your posts more, "pop"! Your content is excellent but with pics and videos, this site could definitely be one of the greatest in its niche.</p>
+						</li>
+
+										<li id="comment-112600" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">57</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-112600" title="">Monday, 9 March 2015</a>
+							</div>
+						<p>Right.</p>
+						</li>
+
+										<li id="comment-113078" class="commentbody"><div class="commenthead"><img alt='Daymo`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">58</div>
+								<span class="authorlink">Daymo</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113078" title="">Sunday, 15 March 2015</a>
+							</div>
+						<p>Greetings! I've been reading your weblog for a long time now and finally got the bravery to go ahead and give you a shout out from  Austin Tx! Just wanted to tell you keep up the fantastic job!</p>
+						</li>
+
+										<li id="comment-113096" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">59</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113096" title="">Monday, 16 March 2015</a>
+							</div>
+						<p>Cheers.</p>
+						</li>
+
+										<li id="comment-113239" class="commentbody"><div class="commenthead"><img alt='apotheon`s avatar' src='http://univacc.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">60</div>
+								<span class="authorlink"><a href='http://univacc.net' class='url'>apotheon</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113239" title="">Sunday, 22 March 2015</a>
+							</div>
+						<p>I think you mean "OpenPGP Contract", not "GPG Contract".  Once upon a time, there was PGP, whose operational model was ultimately codified in the OpenPGP protocol.  Both the modern PGP tools and GnuPG (aka GPG) are implementations of OpenPGP.  We also have OpenPGP::SDK, CalcCrypto OpenPGP, KryptoKit PGP Chrome Extension, the half-built netpgp (which might still fork and finish), and several other implementations floating around.  They should all be able to participate, mutually compatibly, in the same cryptocontract culture, with no two contractors necessarily using the same implementation.</p>
+<p>In fact, I rather suspect that GPG will fade away as other implementations gain currency.  It's old, crusty, built from barely readable source code, license terms inhibited, and maintained by people with a pathologically difficult attitude toward various important software development philosophy (e.g. API and UI design).</p>
+						</li>
+
+										<li id="comment-113240" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">61</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113240" title="">Sunday, 22 March 2015</a>
+							</div>
+						<p>While you're broadly correct, guess who those people with the pathological so and so are ?</p>
+<p>So it's not coincidence that the title reads as it reads, even if you are <em>perhaps</em> correct in observing this is a political choice.</p>
+						</li>
+
+										<li id="comment-114027" class="commentbody"><div class="commenthead"><img alt='Iang`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">62</div>
+								<span class="authorlink">Iang</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114027" title="">Sunday, 3 May 2015</a>
+							</div>
+						<p>GPG contracts appear to be agreements signed and counter-signed using cleartext mode with OpenPGP programs like gpg, as described here:</p>
+<p><a href="http://wiki.bitcoin-otc.com/wiki/GPG_Contract">http://wiki.bitcoin-otc.com/wiki/GPG_Contract</a></p>
+<p>What makes a GPG contract unenforceable?  What is it that gives a party the safety and knowledge that it can be enforced against them?</p>
+						</li>
+
+										<li id="comment-114029" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">63</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114029" title="">Sunday, 3 May 2015</a>
+							</div>
+						<p>You ask two questions which are contradictory. Which do you mean ?</p>
+						</li>
+
+										<li id="comment-115756" class="commentbody"><div class="commenthead"><img alt='bas`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">64</div>
+								<span class="authorlink">bas</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-115756" title="">Friday, 30 October 2015</a>
+							</div>
+						<p>Howdy! This is my 1st comment here so I just wanted to give a quick shout out and tell you I genuinely enjoy reading your posts. Can you suggest any other blogs/websites/forums that cover the same subjects? Thanks a lot!</p>
+						</li>
+
+										<li id="comment-115757" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">65</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-115757" title="">Friday, 30 October 2015</a>
+							</div>
+						<p>If I do they're generally linked in an article.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-90796">
+					<div class='trackhead'>
+						<div class="commentcount">66</div>
+						<span class="authorlink">Adnotated words of wisdom on the topic of online fraud pe Trilema - Un blog de Mircea Popescu.</span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-90796" title="">Tuesday, 4 December 2012</a>
+					</div>
+					<p>[...] useless, failed societies to much more manageable, limited discussion. This is the reason we won, and not by happenstance and not accidentally but quite necessarily is the reason why the classical [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-95295">
+					<div class='trackhead'>
+						<div class="commentcount">67</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2013/09/29/the-most-important-word-in-bitcoin/' class='url'>The Most Important Word in Bitcoin | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-95295" title="">Monday, 30 September 2013</a>
+					</div>
+					<p>[...] less than six months to a year you may begin to think of some entities in bitcoin as being in part well constructed contracts defining them. This is an excellent example of such a contract. If you are doing things right though, continuing [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-96040">
+					<div class='trackhead'>
+						<div class="commentcount">68</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2013/11/11/fractional-reserve-bitcoins/' class='url'>Why Fractional Reserve Can&#8217;t Work in Bitcoin | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-96040" title="">Monday, 11 November 2013</a>
+					</div>
+					<p>[...] you have go so far as to establish a formal debt instrument of some sort you hold in exchange, preferably backed by a GPG contract.1 A debt instrument backed by the best formed GPG contracts though still lack fungibility, because [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-98218">
+					<div class='trackhead'>
+						<div class="commentcount">69</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2014/02/25/a-reminder-the-most-important-word-in-bitcoin-again-because-gox/' class='url'>A Reminder &#8211; The Most Important Word in Bitcoin, Again because Gox | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-98218" title="">Wednesday, 26 February 2014</a>
+					</div>
+					<p>[...] less than six months to a year you may begin to think of some entities in bitcoin as being in part well constructed contracts defining them. This is an excellent example of such a contract. If you are doing things right though, continuing [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-112885">
+					<div class='trackhead'>
+						<div class="commentcount">70</div>
+						<span class="authorlink">Adnotated words of wisdom on the topic of online fraud pe Trilema - Un blog de Mircea Popescu.</span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-112885" title="">Tuesday, 10 March 2015</a>
+					</div>
+					<p>[...] Mircea Popescu Right. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-114087">
+					<div class='trackhead'>
+						<div class="commentcount">71</div>
+						<span class="authorlink">Your reputation is a commodity | Lego Under the Giant&#39;s Feet</span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-114087" title="">Saturday, 9 May 2015</a>
+					</div>
+					<p>[...] a Zimbabwe dollar so has little use of contracts that can&#8217;t be enforced against him &#8617;Introduction to GPG contracts &#8617;The best that I know of being bitcoin-otc [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-117848">
+					<div class='trackhead'>
+						<div class="commentcount">72</div>
+						<span class="authorlink"><a href='http://thestringpuller.com/2016/06/outer-heaven/' class='url'>Outer Heaven | Pull Your Own Strings</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-117848" title="">Tuesday, 28 June 2016</a>
+					</div>
+					<p>[...] GPG contract relies on the concept of loyalty to the end. The real citizens of Bitcoin who establish actual [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-119436">
+					<div class='trackhead'>
+						<div class="commentcount">73</div>
+						<span class="authorlink"><a href='http://thestringpuller.com/2016/10/bitcoin-four-years-in/' class='url'>Bitcoin &#8211; Four Years In | Pull Your Own Strings</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-119436" title="">Wednesday, 12 October 2016</a>
+					</div>
+					<p>[...] Imagine a business partner with whom you&#8217;ve done millions of BTC worth of business using the unenforceable GPG contract. This relationship has millions of BTC entrusted throughout the duration of its existence, without [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-127505">
+					<div class='trackhead'>
+						<div class="commentcount">74</div>
+						<span class="authorlink"><a href='http://veritasteliberabit.com/?p=4' class='url'>The First Post &laquo; Veritasteliberabit.com</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-127505" title="">Thursday, 24 January 2019</a>
+					</div>
+					<p>[...] recommend the PizarroISP hosting he works for: everything is setup securely and privately via PGP, outside of NATO/Pantsuit influence; paid for with real money. Good guy; good [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130394">
+					<div class='trackhead'>
+						<div class="commentcount">75</div>
+						<span class="authorlink"><a href='http://bingology.net/2018/11/14/censorship-resistance-in-2018-an-introduction/?b=signs&amp;e=#select' class='url'>Censorship Resistance In 2018 - An Introduction &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130394" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] signs a and publishes a statement alerting everyone to what happened, his pseudonym stays safe, any anyone who wants to verify the authenticity of the statement can thanks to public key cryptograp... This is the GPG social [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131563">
+					<div class='trackhead'>
+						<div class="commentcount">76</div>
+						<span class="authorlink"><a href='http://thewhet.net/2012/11/shall-be-delivered/?b=Follo&amp;e=#select' class='url'>Shall be Delivered &laquo; The Whet</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131563" title="">Thursday, 26 September 2019</a>
+					</div>
+					<p>[...] Following is an entry for Trilema's short-story contest concerning the future of society given the adoption of GPG contracts. A useful primer on the subject can be found here. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-138973">
+					<div class='trackhead'>
+						<div class="commentcount">77</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/voluntary-contracts-after-a-while?b=let%27s%20presum&amp;e=ary.#select' class='url'>Voluntary contracts, after a while. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-138973" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] let's presume that GPG-contracts as described here earlier are now the norm, and as discussed their enforcement is purely voluntary. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-138994">
+					<div class='trackhead'>
+						<div class="commentcount">78</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/adnotated-words-of-wisdom-on-the-topic-of-online-fraud?b=useless%2C%20fai&amp;e=ical#select' class='url'>Adnotated words of wisdom on the topic of online fraud on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-138994" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] useless, failed societies to much more manageable, limited discussion. This is the reason we won, and not by happenstance and not accidentally but quite necessarily is the reason why the classical [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139002">
+					<div class='trackhead'>
+						<div class="commentcount">79</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/perchance?b=of%20modern%20cu&amp;e=%20the#select' class='url'>Perchance... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139002" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] of modern culture &#38; civilisation that it is going to unavoidably wreak - all that good stuff I've been hinting at such as the end of compulsory taxation (not as a practice, but outright as a possibility) and the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139199">
+					<div class='trackhead'>
+						<div class="commentcount">80</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-bitcoiners-press-manual?b=Bitcoin%20is%20k&amp;e=%20tax#select' class='url'>The Bitcoiner's Press Manual on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139199" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Bitcoin is killing the welfare state. I've been saying it for a while and it's pretty obvious. Without the ability to inflate the currency and without the ability to tax [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139509">
+					<div class='trackhead'>
+						<div class="commentcount">81</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-stock-warrant-instrument-explained?b=tools%20do%20exi&amp;e=%20and#select' class='url'>The Stock Warrant instrument explained on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139509" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] tools do exist. What we're discussing today doesn't land into a vacuum. There is such a thing as a GPG contract, amply discussed and I would hope well understood. We have an entire construction of identity, and [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139532">
+					<div class='trackhead'>
+						<div class="commentcount">82</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/lvm-lsa-i1ownership-1?b=position%20bet&amp;e=eath#select' class='url'>LvM L&#38;Sa - I.1.Ownership (1) on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139532" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] position between real estate and chattels is strictly due the fact that up until the revolution of GPG contracts we have not had any serious reexamination of law since the day it was born, in feudalism's death [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139538">
+					<div class='trackhead'>
+						<div class="commentcount">83</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/lvm-lsa-i1ownership-4?b=few%20centurie&amp;e=ifts#select' class='url'>LvM L&#38;Sa - I.1.Ownership (4) on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139538" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] few centuries of Western thought is really a historical accident unlikely to long survive. Because GPG contracts, for instance. The doctrine of natural law has erred in regarding this great change, which lifts [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139575">
+					<div class='trackhead'>
+						<div class="commentcount">84</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/today-ive-learned?b=still%20happen&amp;e=n%20it#select' class='url'>Today I've learned on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139575" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] still happen on the basis of contracts, whether they're the meanwhile obsolescent fiat type or the emergent gpg type. Contracts will happen on the basis of a meeting of the minds. This part isn't changing, nor can it [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139579">
+					<div class='trackhead'>
+						<div class="commentcount">85</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/bitcoin-as-replacement-for-the-electoral-system?b=by%20having%20a%20&amp;e=ics%2C#select' class='url'>Bitcoin as replacement for the electoral system on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139579" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] by having a prepared answer. &mdash;&mdash;&mdash;Everything everywhere : the workings of the contract as fundamental to all aspects of social organisation, from plain old questions of politics, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139730">
+					<div class='trackhead'>
+						<div class="commentcount">86</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/business-whatever-that-may-mean?b=year%20and%20a%20h&amp;e=%20the#select' class='url'>"Business", whatever that may mean. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139730" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] year and a half ago (it's been a year and a half already!) I was saying Suitwearer, Contractbearer, Master of the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139760">
+					<div class='trackhead'>
+						<div class="commentcount">87</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/kink-high?b=the%20gal%20goin&amp;e=n%20is#select' class='url'>Kink High on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139760" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the gal going "o baby you're sooo biiiiggg" are not signing fucking contracts, of either the old or the new kind. They are merely audibly stimulating their sexual partner(s), and so their communication is [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139974">
+					<div class='trackhead'>
+						<div class="commentcount">88</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it?b=%5B%26%238617%3B%5DPhi&amp;e=T%20is#select' class='url'>What the WoT is for, how it works and how to use it. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139974" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] [&#8617;]Philosophical sense, entities capable of agency. [&#8617;]This means irreversible. The GPG contracts article makes for good companionship reading at this juncture. [&#8617;]Admiting the Wotania WoT is [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140265">
+					<div class='trackhead'>
+						<div class="commentcount">89</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/so-what-do-you-want?b=dead%2C%20forget&amp;e=%20its#select' class='url'>So what do you want ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140265" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] dead, forget about it, the "republic of laws not men" died the horrible thermic death of bureaucracy, the electoral system ate the last apathy pellet it can possibly fit in its [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140344">
+					<div class='trackhead'>
+						<div class="commentcount">90</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/la-serenissima-and-personal-sovereignty?b=unavoidable%2C&amp;e=%20the#select' class='url'>La Serenissima and personal sovereignty on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140344" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] unavoidable, in fact. Much like the old style contract has outlived its practical usefulness for very strong theoretical reasons, just so the old style corporation has outlived its time and is now being replaced by the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140365">
+					<div class='trackhead'>
+						<div class="commentcount">91</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/how-i-was-wrong-cuckolding-or-a-story-about-sigmas?b=aren%27t%20immun&amp;e=%20the#select' class='url'>How I was wrong : Cuckolding, or a story about sigmas on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140365" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] aren't immune to this process : people shit with their head, too, a matter amply discussed over at GPG contracts. [&#8617;]He's not even kidding, Romanian [extended] families do keep such checklist for the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140417">
+					<div class='trackhead'>
+						<div class="commentcount">92</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/i-love-rochester-so-will-you?b=no%20excuse%20an&amp;e=ter.#select' class='url'>I love Rochester. So will you. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140417" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] no excuse and no justification after the fact, much like there's no use crying over spilled milk otherwise or otherplaces. If you're going to do any thinking about killing, do it afore not after. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140559">
+					<div class='trackhead'>
+						<div class="commentcount">93</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/modern-medicine-and-the-benefits-of-democracy?b=arbitrary%20po&amp;e=ble%2C#select' class='url'>Modern medicine and the benefits of democracy on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140559" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] arbitrary powerful, based on absolute authority with no justification. That's, incidentally, how Blackstone's law dictionary came to be, too, and Napoleon's code, and fucking Linux. Everything worth the mention, and usable, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140667">
+					<div class='trackhead'>
+						<div class="commentcount">94</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-wisdom-of-crowds-apparently-it-mostly-depends-on-the-crowds-in-question?b=it.%20That%27s%20w&amp;e=were#select' class='url'>The wisdom of crowds. Apparently, it mostly depends on the crowds in question. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140667" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] it. That's what Poettering &#38; the rest of the shitgnomes are doing here : they are seeking "now I can get fat" aka marriage. With you, on your dime. Hey, it worked for their mothers, right ? And they were [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140762">
+					<div class='trackhead'>
+						<div class="commentcount">95</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/hashfast-or-why-the-fiat-legal-system-doesnt-actually-exist-and-doesnt-actually-matter?b=get%20back%20on%20&amp;e=%20now#select' class='url'>HashFast - or why the fiat legal system doesn't actually exist and doesn't actually matter on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140762" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] get back on topic here : GPG Contracts. So what now [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140776">
+					<div class='trackhead'>
+						<div class="commentcount">96</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-sexodus?b=has%20everythi&amp;e=e%20of#select' class='url'>The "sexodus". on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140776" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] has everything to do with Bitcoin killing everything. The contract. Welfarism. The entire old structure of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140927">
+					<div class='trackhead'>
+						<div class="commentcount">97</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/people-we-dont-like-fighting-each-other-an-ode?b=the%20same%20fun&amp;e=some#select' class='url'>People we don't like, fighting each other. An ode. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140927" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the same fundamental "fuck you" reasons discussed above, coupled with the Bitcoin mediated death of an entire system of organising society. I suppose if I hold my horses I will be reading some twentysomething cocklet discussing how some [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140973">
+					<div class='trackhead'>
+						<div class="commentcount">98</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/ok-so-what-is-bitcoin-disrupting?b=and%20II%20above&amp;e=on%27t#select' class='url'>Ok, so what is Bitcoin disrupting ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140973" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] and II above, but anyway). An entire history of business ? Gone. This is covered in that celebrated GPG contracts piece, I won't [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141002">
+					<div class='trackhead'>
+						<div class="commentcount">99</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/a-new-software-licensing-paradigm?b=worth%20doing%20&amp;e=hich#select' class='url'>A new software licensing paradigm on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141002" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] worth doing that's not worth paying for. The problem however is that they're wholly dependent on a meanwhile obsolete paradigm of organising commerce. You might as well defend yourself by building a physical wall around which you dig a ditch which [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141369">
+					<div class='trackhead'>
+						<div class="commentcount">100</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/in-which-orwell-avoids-what-he-does-not-wish-to-see?b=was%20not%20long&amp;e=ring#select' class='url'>In which Orwell avoids what he does not wish to see on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141369" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] was not long of this world. B, TMSR~ has rendered "governments" and "states" obsolete, and the contract's dead, and all sorts of things that seemed immutable and important and impressive will be smoldering [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141511">
+					<div class='trackhead'>
+						<div class="commentcount">101</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/prophylaxis?b=through%20the%20&amp;e=%20the#select' class='url'>Prophylaxis on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141511" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] through the mij middle of the institutional delusions of the god people ? Take the sane parts - the contract, revised, the WoT, sound money as the foundation of all things. Throw aside the useful nonsense - the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141564">
+					<div class='trackhead'>
+						<div class="commentcount">102</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-importance-of-backups-from-the-other-side?b=up%20there%20wit&amp;e=%3B%5D%20%20#select' class='url'>The importance of backups, from the other side. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141564" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] up there with social engineering. &mdash;&mdash;&mdash;Check it out btw, I found a way to wordpress proper contracts : wrap the header and signature part in pre and (optionally) font tags. Go me! [&#8617;]   [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141746">
+					<div class='trackhead'>
+						<div class="commentcount">103</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/btmsr-and-fundamental-justice-reform?b=the%20system%20i&amp;e=will#select' class='url'>B,TMSR~ and fundamental justice reform. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141746" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] the system is untenable. Even leaving aside how rotten to the core it is - a minor point that one will bemoan but that will [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143051">
+					<div class='trackhead'>
+						<div class="commentcount">104</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/a-study-in-nature-and-incompetent-twits?b=in%20the%20histo&amp;e=that#select' class='url'>A study in nature and incompetent twits. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143051" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] in the history of ballet as an artform (to contrast it with ballet as an apparent pastime for married hippos) had ankles that ever looked anything like that [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143649">
+					<div class='trackhead'>
+						<div class="commentcount">105</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/the-job-board?b=far%20as%20the%20w&amp;e=ally#select' class='url'>The Job Board on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143649" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] far as the weakness of contracts is concerned, the relevant article is the (awkwardly named) GPG Contracts article. No quote because integrally [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144169">
+					<div class='trackhead'>
+						<div class="commentcount">106</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/the-man-versus-the-state?b=The%20discussi&amp;e=%20how#select' class='url'>The Man Versus The State on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144169" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] The discussion of status and contract strikes me as a pedestrian retelling of that old story ; it should be interesting to note just how [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145276">
+					<div class='trackhead'>
+						<div class="commentcount">107</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/the-golden-fleece?b=%5B%26%238617%3B%5DYes&amp;e=%20the#select' class='url'>The Golden Fleece on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145276" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] [&#8617;]Yes, as in Levinas. [&#8617;]How things have changed! We have the WoT now, and as predicted it thoroughly supplants the antiquated models of identity grasped at as so many straws in the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145748">
+					<div class='trackhead'>
+						<div class="commentcount">108</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/the-professor?b=of%20this%20--%20I&amp;e=tive#select' class='url'>The Professor on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145748" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] of this -- I don't give a shit what your naive extensions of whatever you [think you managed] to steal from Europe would seem to indicate. Please stop "trying" just about now, it's not just woefully improductive [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146080">
+					<div class='trackhead'>
+						<div class="commentcount">109</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-51m-vioxx-verdict-overturned-adnotated?b=place%20%3A%20the%20&amp;e=t%20to#select' class='url'>thelastpsychiatrist.com - $51M Vioxx Verdict Overturned. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146080" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] place : the tort view of the world that common law tradition ended up forcing upon the world is simply untenable. "Strict liability" is a hack atop a dysfunctional tower of chairs, a long-overgrown attempt to [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146970">
+					<div class='trackhead'>
+						<div class="commentcount">110</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/prague-comes-for-you-all?b=%22mothers%20in%20&amp;e=%20and#select' class='url'>Prague comes for you all! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146970" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] "mothers in law". Not ever, not at any cost, up to and including dissolving law, up to and including systematic rape and pillage as the only social mode of life, up to and [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147086">
+					<div class='trackhead'>
+						<div class="commentcount">111</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/introducing-the-logs?b=These%20early%20&amp;e=ct%29.#select' class='url'>Introducing the logs on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147086" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] These early proto-logs run daily (with interruptions, logging was not intended to work in my absence in those early daysi) until August 11th 2012. Exactly two fragments have been elided for timeline conflict with the flow of historyii. The first oneiii came because I don't now remember who argued importantly in the manner of Internet dweebs that the reason I wasn't on #bitcoin-otc was really that I had been banned, and not personal preference, so I went and tested his theory. It turned out I hadn't been banned and the anon tard returned to the background bogonic radiation, no doubt making strong claims with no basis still, to this very day. The secondiv was part and parcel of the ample yet allegedly absentv body of evidence as to the identity of the party on top. Ever heard the self-obvious observation whereby democracy is a dubious social form owing to the happenstance that nine man gangrapes are enjoyable to nine tenths of the participants, while the tenth's underage anyway ? No, making men illegal won't change this, it'll just wreck the "rule of law" fiction (not that it's rescuable, owing to the cognitive death of the contract). [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147194">
+					<div class='trackhead'>
+						<div class="commentcount">112</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-magics-of-cereal-boxes?b=is%20illogical&amp;e=be%20a#select' class='url'>The magics of cereal boxes on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147194" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] is illogical, and rationally indefensible, but then again that's why they call it "precedent" in the dead system, and that's why "community standards" have to be a [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-148205">
+					<div class='trackhead'>
+						<div class="commentcount">113</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-strategy-of-socialism/?b=sharply%20limi&amp;e=some#select' class='url'>The strategy of socialism... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148205" title="">Sunday, 29 March 2020</a>
+					</div>
+					<p>[...] sharply limited capacity to make sense and keep track of the sense made yielded over time the unavoidable crushing of the latter, it came to denote a piece of real estate inhabited in precaria by some [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-152728">
+					<div class='trackhead'>
+						<div class="commentcount">114</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/what-i-said-was/?b=in%20practice%20&amp;e=rong#select' class='url'>What I said was... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-152728" title="">Friday, 10 July 2020</a>
+					</div>
+					<p>[...] in practice : trying to find "the right set of rules" is not only an inescapably and necessarily doomed exercise (this much wouldn't automatically bring about a moral imperative, seeing how there's nothing wrong [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-159151">
+					<div class='trackhead'>
+						<div class="commentcount">115</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/some-other-mornings-however/?b=the%20cleverly&amp;e=%27t%20a#select' class='url'>Some other mornings, however... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-159151" title="">Monday, 25 January 2021</a>
+					</div>
+					<p>[...] the cleverly ingenious bit of sheer ingenuity (and did I mention genius ?) : you pretend like the state's satisfying your needs.iii Trying to pick a better one won't do anything, because there isn't a [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-164020">
+					<div class='trackhead'>
+						<div class="commentcount">116</div>
+						<span class="authorlink"><a href='http://dorion-mode.com/2021/05/simple-steps-part-3-smiling-dialing-and-closing/?b=arbitrage%20ma&amp;e=tore#select' class='url'>Simple Steps Part 3: Smiling, Dialing and Closing &laquo; Dorion Mode</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-164020" title="">Saturday, 22 May 2021</a>
+					</div>
+					<p>[...] arbitrage mattered back before the fiat international law was eviscerated and Bitcoin and GPG contracts swooped in at the nick of time to restore [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="43533" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834557-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-43533")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-43533");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-43533");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

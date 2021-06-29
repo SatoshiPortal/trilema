@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Eulora, that chiffré land of cifre &#038; cyphers on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The scandalous blog of a sexual predator.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-67985"><div class="post" id="post-67985">                    <h1><a href="http://trilema.com/2016/eulora-that-chiffre-land-of-cifre-cyphers/" rel="bookmark" title="Permanent Link to Eulora, that chiffré land of cifre &#038; cyphers">Eulora, that chiffré land of cifre &#038; cyphers</a></h1>                        <div class="date">                                     Sunday, 07 August, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><strong>mircea_popescu</strong> Anyway, data for 6`713 bh<sup><a href="#footnote_0_67985" id="identifier_0_67985" class="footnote-link footnote-identifier-link" title="Bare handed. In Eulora you don't need any tools to dig up the soil, you can do it with your bare hands!">i</a></sup> hits (with 7 cft smalls)<sup><a href="#footnote_1_67985" id="identifier_1_67985" class="footnote-link footnote-identifier-link" title="The more common finds are Tiny, Small and Ordinary. The Small finds are remarkable in that they allow a lot of leeway to the operator : he can use anything between one and seven Coarse Frangible Threads (ie, CFT) to dig them up. The choice evidently influences output, it's just not terribly clear how. This run used 7.">ii</a></sup> : 455 cft + 773 lbn<sup><a href="#footnote_2_67985" id="identifier_2_67985" class="footnote-link footnote-identifier-link" title="Little Bits of Nothing. Literally. Obtained naturally through the decay of disused keys, or otherwise crafted - they're the result of tearing up Maculature as per Shredding Instructions. Which Maculature is made up of old recipes, blueprints, doodles scl.">iii</a></sup> used. Got low q (208) : 392 cft + 157 sb<sup><a href="#footnote_3_67985" id="identifier_3_67985" class="footnote-link footnote-identifier-link" title="Solid Branch.">iv</a></sup> + 70 sr<sup><a href="#footnote_4_67985" id="identifier_4_67985" class="footnote-link footnote-identifier-link" title="Solid Rock.">v</a></sup> + 2 rf<sup><a href="#footnote_5_67985" id="identifier_5_67985" class="footnote-link footnote-identifier-link" title="Rotten Fruit.">vi</a></sup> + 1 bn<sup><a href="#footnote_6_67985" id="identifier_6_67985" class="footnote-link footnote-identifier-link" title="Bird's Nest.">vii</a></sup> ; also 45 TPT<sup><a href="#footnote_7_67985" id="identifier_7_67985" class="footnote-link footnote-identifier-link" title="Three-pointed thorn.">viii</a></sup> q 170 ; 107 wpl<sup><a href="#footnote_8_67985" id="identifier_8_67985" class="footnote-link footnote-identifier-link" title="Worthless Putrid Leather. Apparently not so worthless after all.">ix</a></sup> q 143 ; 2 ae<sup><a href="#footnote_9_67985" id="identifier_9_67985" class="footnote-link footnote-identifier-link" title="Abandoned Eggs.">x</a></sup> q 144 ; hi q<sup><a href="#footnote_10_67985" id="identifier_10_67985" class="footnote-link footnote-identifier-link" title="Because of intricacies in how the bot works, you end up with a lower and a higher quality of each staple.">xi</a></sup> (685) : 203 cdg + 56 sb + 9 sr + 2 bn + 2 f ; also 19 wpl q 469, 3 tpt q 560.<br />
+<strong>hanbot</strong> You "got" cft? You mean cdg?</p>
+<p><strong>mircea_popescu</strong> Yeah.<br />
+<strong>hanbot</strong> Whoa 685.<sup><a href="#footnote_11_67985" id="identifier_11_67985" class="footnote-link footnote-identifier-link" title="It is pretty sweet quality, I'll grant.">xii</a></sup></p>
+<p><strong>mircea_popescu</strong> So to math this, 60<sup><a href="#footnote_12_67985" id="identifier_12_67985" class="footnote-link footnote-identifier-link" title="Base value of CDG, in ECu.">xiii</a></sup> * (392 * 208 + 203 * 685) + 58 * (157 * 208 + 56 * 685) + 79 * (70 * 208 + 9 * 685) + 159 * (45 * 170 + 3 * 560) + 152 * (107 * 143 + 19 * 460) + 71 * (208 + 2*685) 384 * 2 * 144 + 80 * <span style="background-color:#d3d3d3" id="select">2 * 208 + 88 * 2 * 685 = 245058.35 total bv<sup><a href="#footnote_13_67985" id="identifier_13_67985" class="footnote-link footnote-identifier-link" title="Base Value, ie, what the game pays for things. Players often offer more moneyz.">xiv</a></sup> loot. And 10 ordinaries, to boot<sup><a href="#footnote_14_67985" id="identifier_14_67985" class="footnote-link footnote-identifier-link" title="Ordinary claims are often exploited separately for operational convenience reasons.">xv</a></sup>. Buying the stuff <a href=http://trilema.com/eulora-shop/>from myself</a> it'd be 180*1.8* 455 for cft + 773 * 169 for lbn (iirc it sold at 1 ecu / q point ?) = 278057.</span><br />
+<strong>hanbot</strong> Not bad.</p>
+<p><strong>mircea_popescu</strong> Seeing how it took 25 hours, I'd say it made me no less than 245058 * 1.5 + 100000 for ords - 278057 = 189530 ECu, ie somewhat better than previous estimate of 100k/day.</p>
+<p>[ Intermission]</p>
+<p><strong>danielpbarron</strong> Woah!<br />
+<strong>danielpbarron</strong> wow<br />
+<strong>danielpbarron</strong> Did I get a pop on something? 1k mysterious rock just mysteriously appeared in my inventory while explore. Lol they are so heavy i can't move just from them.<br />
+<strong>mircea_popescu</strong> o.O</p>
+<p><strong>danielpbarron</strong> Yeah wow, that's like <A href= http://danielpbarron.com/2016/until-it-isnt/>a 0.8 pop</a>. Is that a record?<sup><a href="#footnote_15_67985" id="identifier_15_67985" class="footnote-link footnote-identifier-link" title="Yep, it is. Previous record was 11.6 mn ECu, ie, 0.116 BTC.">xvi</a></sup><br />
+<strong>mircea_popescu</strong> Oddly doesn't show up in pops ? Nope, there it is. No idea why the tops don't show it yet<sup><a href="#footnote_16_67985" id="identifier_16_67985" class="footnote-link footnote-identifier-link" title="This is getting fixed Wednesday.">xvii</a></sup>, but it's there. Congrats daniel, you struck it!</p>
+<p><strong>danielpbarron</strong> :D<br />
+<strong>mircea_popescu</strong> Remember like... TWO YEARS AGO ? when there was a contest to find skill items ? Before altars and everyhing ?</p>
+<p><strong>danielpbarron</strong> Vaguely...<br />
+<lobbesbot> Title: <a href=http://trilema.com/2015/eulora-sunday-event-july-the-19th/>Eulora Sunday Event - July the 19th on Trilema</a> - A blog by Mircea Popescu. (at trilema.com)</p>
+<p><strong>danielpbarron</strong> Well good thing the pop itself is worth so much 'cause I can't claim a prize in that contest.<br />
+<strong>mircea_popescu</strong> Nuts huh. Anyway, definitely largest to date.<sup><a href="#footnote_17_67985" id="identifier_17_67985" class="footnote-link footnote-identifier-link" title=" `Daniel has got 0.81 BTC worth of Boulder and assorted loot while building. Congratulations!`">xviii</a></sup><br />
+<strong>hanbot</strong> Congrats danielpbarron. yow!<br />
+<strong>DianaComan</strong> oh wow, congratulations danielpbarron !</p>
+<p><strong>mircea_popescu</strong> So in further updates of my now piddly exploration run, 8`880 attempts yielded : low q (208) : 963 sb + 445 cf + 95 sr, also 106 wpl q 142, 70 tpt q 169, 6 ae q 143 ; high q : 13 wpl q 177 ; 11 tpt q 210 ; 124 cdg q257, 34 sr q 258, 47 sb q 257. And I used 932 lbn + 144 cft.<br />
+<strong>DianaComan</strong> Not bad for bh for sure. I think it's quite exploring 2.0 with this new relentless bot-with-table.</p>
+<p><strong>mircea_popescu</strong> It is!<br />
+<strong>DianaComan</strong> If only noobs actually read this; or something.</p>
+<p><strong>mircea_popescu</strong> So altogether : 58 * (963 * 208 + 47 * 257) + 60 * (445 * 208 + 124 * 257) + 79 * (95 * 208 + 34 * 258) + 152 * (106 * 142 + 13 * 177) + 159 * (70 * 169 + 11 * 210) + 384 * (6 * 143) ie 272`533.1 bv incoming, and 180 * 1.8 * 2.54 * 144 for cft + 932 * 169 for lbn = 276`014.24 mv<sup><a href="#footnote_18_67985" id="identifier_18_67985" class="footnote-link footnote-identifier-link" title="Market value. In this case, the bv of the items considered would be 180 * 2.54 * 144 + 11 * 932 * 1.69 = 83162.68. This makes the market value a 276`014.24 / 83`162.68 = 331.9% premium over the base value in this particular case. It is not so exceptional, either.">xix</a></sup> outgoing. So the bh with 1 cft was actually a wash. I also only got 1 ord as opposed to 10 previous (shorter) run. Such variance I swear....<br />
+<strong>DianaComan</strong> Uhm, but wait, did you actually use 1 cft of 254 q??</p>
+<p><strong>mircea_popescu</strong> Yup.<br />
+<strong>DianaComan</strong> How does that make sense?</p>
+<p><strong>mircea_popescu</strong> How not ?<br />
+<strong>DianaComan</strong> If I use 1 cft I'd use the lowest q I can get ffs. </p>
+<p><strong>mircea_popescu</strong> That's what this is.<br />
+<strong>DianaComan</strong> Why to overcraft it ..just a bit, kind of style? I mean sure, you can, but it's not very surprising it didn't turn out great. </p>
+<p><strong>mircea_popescu</strong> Well... you got low q grass ? Or cft ? But you have a point, I should have used q 1 lbn and cft here, not q > 100. It's just that i dun have any.<br />
+<strong>DianaComan</strong> I am using some q3 here, lol. CFT I mean.</p>
+<p><strong>mircea_popescu</strong> What q basics do you get from it ?<br />
+<strong>DianaComan</strong> 33 with 1 single cft. You prolly still have higher sortage than me I'd guess. As for lbn I always use highest q now that I can keep them separate; I guess q11 lbn would also be an option, but I certainly don't have enough of that.</p>
+<p><strong>mircea_popescu</strong> So one q 254 cft = 8.5 q 3 cft in terms of result value.<br />
+<strong>DianaComan</strong> Mhm, you mean assuming that you get the same number of items from a claim with 1q 3 or 1q254? On this run so far (720 attempts with a basic pickaxe) I already got 1000 grass at 33 q and 276 at 371q for instance, plus 15 tlc 308q (another reason to use high q lbn right now), and some 600 sb , 200 wpl , 100 sr. But interesting how you are basically stuck overcrafting whether you want it or not if you say you don't have any cft under 100 at all.</p>
+<p><strong>mircea_popescu</strong> I usually get 1.<br />
+<strong>DianaComan</strong> That's precisely my point above: I usually get more than 1 with such low q cft.</p>
+<p><strong>mircea_popescu</strong> Hm. I rarely do.<br />
+<strong>DianaComan</strong> That's why I undercraft in the first place really: to get larger quantity faster (even if lower q). With 254 I probably wouldn't get more than 1 either, sure.</p>
+<p><strong>mircea_popescu</strong> Anyway, to cap up the mining data thing : 272533.1 * 1.6 + 10000 - 276014.24 = 170038.72 profit over 8880 tries, coming to 19.15 ECu gain per attempt. Whereas yest's 189530 profit over 6713 hits comes to 28.23 ECu gain per attempt. O look at that, i didn't add cft quality in THAT data. brb restating. <a href=http://logs.minigame.biz/2016-08-06.log.html>This line</a> should read 180*1.8*2.54* 455 for cft + 773 * 169 for lbn = 505083.8. So the next one becomes 245058 * 1.6 + 100000 for ords - 505083.8 = −12991. I made a 2 ecu loss each try rather than a gain. Hurr.<br />
+<strong>DianaComan</strong> Lol. Losses are but gains for others.</p>
+<p><strong>mircea_popescu</strong> Funny lol, this run seemed weaker than that run ; once I did the math... nope. And the math is so fucking intricate just loosely evaluating things doesn't work.<br />
+<strong>DianaComan</strong> Math kills uh oh math kills.</p>
+<p><strong>mircea_popescu</strong> ANYWAY. I don't think it's terribly fair, to count very high q items such as q 600+ grass obtained through the risky and expensive behaviour of 7-cft mining with high q cft, at the same % as normal grass. So the numbers for prev run aren't prolly all that correct. For one thing, I don't know who else can get grass in the upper half of 1k quality.<br />
+<strong>DianaComan</strong> Anybody can: they just need very high q cft. With several iterations one can get that anyway, if they really are after it.</p>
+<p><strong>mircea_popescu</strong> Well yes but it'll cost them even more. At least so I think. But sure, get q 10`000 cft, make any q grass you wish.<br />
+<strong>DianaComan</strong> Well, as long as you have highest sortage by a significant margin, you should be able to get basics at higher q with lower costs I'd say, makes sense.</p>
+<p><strong>mircea_popescu</strong> Anyway, iterations don't really help, I've seen a dampening at work. For instance, the absolute highest grass I can get is ~1060 or so. I can iterate that as many times as I want, still won't get higher.because crafting THAT into cft with the best bps<sup><a href="#footnote_19_67985" id="identifier_19_67985" class="footnote-link footnote-identifier-link" title="Blueprints. Crafting requires blueprints (which are in turn crafted), and apparently their quality influences the output item quality.">xx</a></sup> I got gets me cft q same as I used to get it in the first place.<br />
+<strong>DianaComan</strong> So that's the limitation of your bps.</p>
+<p><strong>mircea_popescu</strong> Yeah, it's a dynamic sort of multi-limit thing.<br />
+<strong>DianaComan</strong> But you know, with high q cons<sup><a href="#footnote_20_67985" id="identifier_20_67985" class="footnote-link footnote-identifier-link" title="Considerations, the blueprints for the process that produces blueprints.">xxi</a></sup> you can easily get some bps at 500q - should get you higher q cft I would say. </p>
+<p><strong>mircea_popescu</strong> this is a point. maybe i should click a few tink books see what happens.<br />
+<strong>DianaComan</strong> But for the same reason as you just (finally) acknowledged here re high q not being quite same as middle q, I would certainly not sell bps at 500q.</p>
+<p><strong>mircea_popescu</strong> I'd sell them, if I made them. Why not, I'll make more.<br />
+<strong>DianaComan</strong> I meant not at price calculated same as 150q bps. For one thing it simply doesn't add up as far as I seen until now.</p>
+<p><strong>mircea_popescu</strong> There is that. I wonder how the fuck to calculate these.<sup><a href="#footnote_21_67985" id="identifier_21_67985" class="footnote-link footnote-identifier-link" title="This is a perennial problem in Eulora, see Multivariate calculus for experts ; So you're a rational fellow, right ? ; Whoever said resource allocation is a solved problem deserves a kick in the nads. etc.">xxii</a></sup><br />
+<strong>DianaComan</strong> That was precisely "for another thing" - I have no idea how to price them properly (other than perhaps a direct: this is my cost on x runs, hence ..)</p>
+<p><strong>mircea_popescu</strong> "So one q 254 cft = 8.5 q 3 cft in terms of result value.", going on this logic, 254/3 = 84.666666667 and we want ... 8.5... so maybe should just add a factor = 10% of the q diff ? <em>Id est</em>, "how much is q 100 cft ?" "180 * 1 * 1.8 each." "and q 1 cft ?" "180 * 0.01 * 1.8 + 180 * 0.01 * 1.8 * (1 - 0.01)/10". So 324 for one and 35.316 the other. Would you sell q 3 cft for  180 * 0.01 * 1.8 + 180 * 1 * 1.8 * (1 - 0.03)/10 = 34.668 each ? Or, more's the point, would you exchange q 3 for q 254 cft, 9.345794393 to 1 ?<br />
+<strong>DianaComan</strong> Hm, good question; I have to think of it a bit.</p>
+<p><strong>mircea_popescu</strong> The problem with "this is my cost" is that buyer has the very legitimate q of "over how many runs". And if the answer isn't "I dunno, 1mn, or w/e the fuck daniel did to get the myst", or if the answer doesn't include the myst, you're on weak ground.<br />
+<strong>DianaComan</strong> 9 q 3 cft for 1 q 254 cft hm, might work;</p>
+<p><strong>mircea_popescu</strong> 9 and change!<br />
+<strong>DianaComan</strong> Lol, yes; and yeah, that's the trouble with the cost approach.</p>
+<p><strong>mircea_popescu</strong> Essentially you can't separate public and private sphere in any public way ; nor can you say "up to here it's me being lucky, from here on it's the item costing so much".<br />
+<strong>DianaComan</strong> Hm, on one hand it would mean to get at least 9 low q grass where I would get otherwise 1 high q; on the other hand it means putting in 9 cft bps (low q) instead of 1.</p>
+<p><strong>mircea_popescu</strong> Yeah, the bp question is, so to speak, "<em>smecleu' de tine titele de-olalta</em>". (Don't try and translate that to English, you'll hurt yourself.)<br />
+<strong>DianaComan</strong> lol</p>
+<p><strong>mircea_popescu</strong> Because if you have very low q bps, such as q 3 say, it is still more reasonable to rectify them by mixing with high q bps than to use them straight. I have some q 20 for instance and im not burning them.<br />
+<strong>DianaComan</strong> Aha. That's what I did with quite all my 450+ q bps - used them to up some of the low q ones I was stuck with otherwise.</p>
+<p><strong>mircea_popescu</strong> So tbh, I think the problem of "how to price very low q items" is going away by itself : we won't have any. So you know... use your q 3 grass while that lasts, showoff!<br />
+<strong>DianaComan</strong> Ahahah. </p>
+<p><strong>mircea_popescu</strong> "Oh, why are you mining with high q cft". WHAYDO YOU THINK<br />
+<strong>DianaComan</strong> That might be although some noobs will come at some point and they would get low q, no?</p>
+<p><strong>mircea_popescu</strong> Yeah but I mean... how is a noob going to produce bps.<br />
+* diana_coman was unaware of the rarity of low q grass given that she sold some stacks of it back in the day<br />
+<strong>DianaComan</strong> By getting a job to click?</p>
+<p><strong>mircea_popescu</strong> I suppose someone could show up tomorrow, deposit a coupla BTC or w/e, buy a table, buy 10mn work of tokens, buy everything and click away. Actually... so this only seems hard because people are lazy &#038; clueless.<br />
+<strong>DianaComan</strong> To be fair it is hard to make sense of it directly for sure. But that's not an excuse as to why there is nobody even trying apparently.</p>
+<p><strong>mircea_popescu</strong> "Altcoin mining" is a) much harder and b) doesn't actually pay.<br />
+<strong>DianaComan</strong> But everybody does it!!!</p>
+<p><strong>mircea_popescu</strong> Quite. "I wonder why I'm poor after a lifetime dedicated to trying what everyone else was!"<br />
+<strong>DianaComan</strong> But it worked for .. someone!</p>
+<p><strong>mircea_popescu</strong> "The only way to get ahead [if you're dedicated to trying what everyone else is] would be getting lucky or inheriting! God damned lack of opportunities! HUO!"<br />
+<strong>DianaComan</strong> Speaking of buying: I have some 50 tomes of various qualities from 149 to 265 at least; let me know if you want any of them.</p>
+<p><strong>mircea_popescu</strong> Qualities of what staple ?<br />
+<strong>DianaComan</strong> Lol, I got them out in my inventory to count them and order them by q as storage is a pain for this; now I'm playing a kind of puzzle in my inv to put them in groups by q. The unexpected games in Eulora.</p>
+<p><strong>mircea_popescu</strong> What are ya talking about ?<br />
+<strong>DianaComan</strong> Tomes don't mix; in storage you can't see quality unless right click and so just one at a time, huge pain. But in inventory they show the quality now, a pleasure.</p>
+<p><strong>mircea_popescu</strong> Oh oh.<br />
+<strong>DianaComan</strong> So got them all in inv and now sorting them by q: moving them about like in a puzzle, lol. 7 tomes 149q; 20 tomes 157q; 16 tomes 291q; 6 tomes 293q; 10 tomes 308q, mircea_popescu, danielpbarron anyone else wanting to click some cons or otherwise wipe themselves with really expensive tomes.<br />
+<strong>danielpbarron</strong> I haven't used the last batch of tomes I bought.</p>
+<p><strong>mircea_popescu</strong> I'll buy 'em.<br />
+<strong>DianaComan</strong> And that would come to... 88462*4.43*(7*1.49+20*1.57+16*2.91+6*293+10*3.08)</p>
+<p><strong>mircea_popescu</strong> I'm sorry, 3/4 bn ?!<br />
+* DianaComan is calculating again as it sounds crazy<br />
+<strong>DianaComan</strong> Do you see anything wrong in there though? As I don't.</p>
+<p><strong>mircea_popescu</strong> 7 + 20 + 16 + 6 + 10 = 59 books meaning 12`468`571 per book ?<br />
+<strong>DianaComan</strong> They are 59 books indeed.</p>
+<p><strong>mircea_popescu</strong> Yeah but im not paying 12.5mn per lol.<br />
+<strong>DianaComan</strong> Guess the high q ones get there since they'd be some 300k base value * 4.43. No, that'd be still less, ugh.</p>
+<p><strong>mircea_popescu</strong> That's 1.2mn.<br />
+<strong>DianaComan</strong> What is wrong there, lol!</p>
+<p><strong>mircea_popescu</strong> 6 * 293. Try 2.93.<br />
+<strong>DianaComan</strong> Ahahaha true, sorry.</p>
+<p><strong>mircea_popescu</strong> 53`598`338.4882<br />
+<strong>DianaComan</strong> Aha, that sounds better.<sup><a href="#footnote_22_67985" id="identifier_22_67985" class="footnote-link footnote-identifier-link" title="It also sounds like half a Bitcoin, you realise.">xxiii</a></sup></p>
+<p><strong>mircea_popescu</strong> Definitely largest trade in history. Funny thing being that by now the trades struggle to equal the pops. Before it was quite otherwise as we had dozens of trades larger than the 11 mn previously record pop.<sup><a href="#footnote_23_67985" id="identifier_23_67985" class="footnote-link footnote-identifier-link" title="Which I held.">xxiv</a></sup><br />
+<strong>DianaComan</strong> Well, it's really just this super pop of Daniel's though, isn't it?</p>
+<p><strong>mircea_popescu</strong> Hey. Daniel the superpop :D<br />
+<strong>DianaComan</strong> Lol!<br />
+<strong>danielpbarron</strong> I think I had the previous record too: the sizeable.</p>
+<p><strong>mircea_popescu</strong> Yeah tho that was never quantified. Possibly under my 11,68.<br />
+<strong>DianaComan</strong> At least these tomes are light actually.</p>
+<p><strong>mircea_popescu</strong> Hit me.<br />
+<strong>DianaComan</strong> It's 53.6 lol.</p>
+<p><strong>mircea_popescu</strong> Aha. We'll be here a while huh. 9 at a time<br />
+<strong>DianaComan</strong> Yeah, will try to keep them ordered by q at least.</p>
+<p><strong>mircea_popescu</strong> Good idea. Ok 16 291.<br />
+<strong>DianaComan</strong> Those are all the 16 at 291q. Why u busy lol.</p>
+<p><strong>mircea_popescu</strong> Cuz I gotta dump. Only like 20 slots empty or so.<br />
+<strong>DianaComan</strong> 157 q now, 2 more of those.</p>
+<p><strong>mircea_popescu</strong> Kk.<br />
+<strong>DianaComan</strong> 1 more at 308q.</p>
+<p><strong>mircea_popescu</strong> 10. word. 7 149.<br />
+<strong>DianaComan</strong> 7 at 149q. Only 6 at 293 and we are done. Phew, that was long; thank you!</p>
+<p><strong>mircea_popescu</strong> Tyvm hehe. Oh look at that : more Bitcoin trade than Bitpay processed today.<sup><a href="#footnote_24_67985" id="identifier_24_67985" class="footnote-link footnote-identifier-link" title="Eulora's come a long way since September.">xxv</a></sup><br />
+<strong>DianaComan</strong> Ahahaha, why so mean, they are doing their best, neh?</p>
+<p><strong>mircea_popescu</strong> Surely. I think we need bigger blocks for it too!<br />
+<strong>DianaComan</strong> Now that my shelves are free, gotta go mine some sg to make more gin to make more..tomes.</p>
+<p><strong>mircea_popescu</strong> I could just sell some more gt<sup><a href="#footnote_25_67985" id="identifier_25_67985" class="footnote-link footnote-identifier-link" title="Grubsilk Thread, used to make the tomes. Requires Alchemist's Cheap Gin.">xxvi</a></sup> tho ?<br />
+<strong>DianaComan</strong> What do you have?</p>
+<p><strong>mircea_popescu</strong> O wow check that out, I don't. You bought me out ?<sup><a href="#footnote_26_67985" id="identifier_26_67985" class="footnote-link footnote-identifier-link" title="She had, 16mn ie 0.16 BTC for 225 GT, q 133.">xxvii</a></sup><br />
+<strong>DianaComan</strong> Aha. Lolz.</p>
+<p><strong>mircea_popescu</strong> Hm. Want soem gin then ?<br />
+<strong>DianaComan</strong> What gin is that?</p>
+<p><strong>mircea_popescu</strong> q 133, 134, 136...<br />
+<strong>DianaComan</strong> Hm, should work; how much do you have?</p>
+<p><strong>mircea_popescu</strong> You can have 3k q133, lessee. 3230 * 1.33 * 3.27 * 7254 = 101`901`239.622. Ha! COUGH IT BACK UP!<br />
+<strong>DianaComan</strong> Hm, lemme calc with that 3.27 of yours so that I don't end up having to up the tome prices ugh.</p>
+<p><strong>mircea_popescu</strong> Check me out Mr. ATF man, I'm selling OVER A BITCOIN'S WORTH OF CHEAP GIN. Unlicensed! Bath tub distillery! No labels even! And she's probably underage.<br />
+<strong>DianaComan</strong> Uhm, trouble is that it doesn't make sense. It seems I end up cheaper if I sell to you the stuff to make gt and then buy the gt?? So will do that instead I guess.</p>
+<p><strong>mircea_popescu</strong> O okies! Course this means I'll have to craft some btks<sup><a href="#footnote_27_67985" id="identifier_27_67985" class="footnote-link footnote-identifier-link" title="Bandar Toolkits. Eulora crafting is rather complex.">xxviii</a></sup>...<br />
+<strong>DianaComan</strong> That's not my problem, lol. But it kind of makes sense too: you are supposed to be the crafter!</p>
+<p><strong>mircea_popescu</strong> A no I already did, they're stashed. Alright, so let me know when you have the gear ?<br />
+<strong>DianaComan</strong> Yeah, will see; 3.2k gin makes some 1.6k gt and needs some...3.2k sg; will see how it goes.</p>
+<p><strong>mircea_popescu</strong> I'm short about 3k sg and 50k cr.<sup><a href="#footnote_28_67985" id="identifier_28_67985" class="footnote-link footnote-identifier-link" title="Crumbly Rock. You know, like sugar, only muddier.">xxix</a></sup><br />
+<strong>DianaComan</strong> Ah, cr; right.</p>
+<p>In conclusion : noobs are still needed. What are you waiting for ?</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_67985" class="footnote">Bare handed. In Eulora you don't need any tools to dig up the soil, you can do it with your bare hands! [<a href="#identifier_0_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_67985" class="footnote">The more common finds are Tiny, Small and Ordinary. The Small finds are remarkable in that they allow a lot of leeway to the operator : he can use anything between one and seven Coarse Frangible Threads (ie, CFT) to dig them up. The choice evidently influences output, it's just not terribly clear how. This run used 7. [<a href="#identifier_1_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_67985" class="footnote">Little Bits of Nothing. Literally. Obtained naturally through the decay of disused keys, or otherwise crafted - they're the result of tearing up Maculature as per Shredding Instructions. Which Maculature is made up of old recipes, blueprints, doodles scl. [<a href="#identifier_2_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_67985" class="footnote">Solid Branch. [<a href="#identifier_3_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_67985" class="footnote">Solid Rock. [<a href="#identifier_4_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_67985" class="footnote">Rotten Fruit. [<a href="#identifier_5_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_67985" class="footnote">Bird's Nest. [<a href="#identifier_6_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_67985" class="footnote">Three-pointed thorn. [<a href="#identifier_7_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_67985" class="footnote">Worthless Putrid Leather. Apparently not so worthless after all. [<a href="#identifier_8_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_67985" class="footnote">Abandoned Eggs. [<a href="#identifier_9_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_67985" class="footnote">Because of intricacies in how the bot works, you end up with a lower and a higher quality of each staple. [<a href="#identifier_10_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_67985" class="footnote">It is pretty sweet quality, I'll grant. [<a href="#identifier_11_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_67985" class="footnote">Base value of CDG, in ECu. [<a href="#identifier_12_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_67985" class="footnote">Base Value, ie, what the game pays for things. Players often offer more moneyz. [<a href="#identifier_13_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_67985" class="footnote">Ordinary claims are often exploited separately for operational convenience reasons. [<a href="#identifier_14_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_67985" class="footnote">Yep, it is. Previous record was 11.6 mn ECu, ie, 0.116 BTC. [<a href="#identifier_15_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_67985" class="footnote">This is getting fixed Wednesday. [<a href="#identifier_16_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_67985" class="footnote"> "Daniel has got 0.81 BTC worth of Boulder and assorted loot while building. Congratulations!" [<a href="#identifier_17_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_67985" class="footnote">Market value. In this case, the bv of the items considered would be 180 * 2.54 * 144 + 11 * 932 * 1.69 = 83162.68. This makes the market value a 276`014.24 / 83`162.68 = 331.9% premium over the base value in this particular case. It is not so exceptional, either. [<a href="#identifier_18_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_19_67985" class="footnote">Blueprints. Crafting requires blueprints (which are in turn crafted), and apparently their quality influences the output item quality. [<a href="#identifier_19_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_20_67985" class="footnote">Considerations, the blueprints for the process that produces blueprints. [<a href="#identifier_20_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_21_67985" class="footnote">This is a perennial problem in Eulora, see <a href=http://trilema.com/multivariate-calculus-for-experts>Multivariate calculus for experts</a> ; <a href=http://trilema.com/so-youre-a-rational-fellow-right>So you're a rational fellow, right ?</a> ; <a href=http://trilema.com/whoever-said-resource-allocation-is-a-solved-problem-deserves-a-kick-in-the-nads>Whoever said resource allocation is a solved problem deserves a kick in the nads.</a> etc. [<a href="#identifier_21_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_22_67985" class="footnote">It also sounds like half a Bitcoin, you realise. [<a href="#identifier_22_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_23_67985" class="footnote">Which I held. [<a href="#identifier_23_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_24_67985" class="footnote">Eulora's come a long way <A href=http://trilema.com/2015/the-trade-hour/>since September</a>. [<a href="#identifier_24_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_25_67985" class="footnote">Grubsilk Thread, used to make the tomes. Requires Alchemist's Cheap Gin. [<a href="#identifier_25_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_26_67985" class="footnote">She had, 16mn ie 0.16 BTC <a href=http://logs.minigame.biz/2016-07-07.log.html#t16:40:11>for 225 GT, q 133</a>. [<a href="#identifier_26_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_27_67985" class="footnote">Bandar Toolkits. Eulora crafting is <a href=http://trilema.com/2015/eulorean-crafting-the-pickaxe-illumination/#selection-95.0-95.71>rather complex</a>. [<a href="#identifier_27_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_28_67985" class="footnote">Crumbly Rock. You know, like sugar, only muddier. [<a href="#identifier_28_67985" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/no-such-labs-snsa-july-2016-statement/">No Such lAbs (S.NSA), July 2016 Statement</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/my-rather-sad-breakfast-or-fuck-you-smart-food-company-srl-and-fuck-you-industria-argentina/">My Rather Sad Breakfast, or Fuck You "Smart Food Company SRL" and Fuck You "Industria Argentina".</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/eulora-that-chiffre-land-of-cifre-cyphers/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/eulora-that-chiffre-land-of-cifre-cyphers/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>One Response</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-132145">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/11/05/eulora-smg-taking-a-different-sort-of-stock/?b=worthmentio&amp;e=wort#select' class='url'>Eulora (S.MG) - Taking a Different Sort of Stock &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132145" title="">Tuesday, 5 November 2019</a>
+					</div>
+					<p>[...] worth mentioning it on its own too because Eulora's currency, the ECu, is pegged to Bitcoin and transactions as well as fortunes of players in the game can be quite hefty. Some items can be worth a fortune [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="67985" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832042-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-67985")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-67985");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-67985");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

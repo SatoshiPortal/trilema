@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>And Gavin moves on to the dark side. The Bitcoin project is officially hijacked on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The fates are cruel an' the chances are slim<br />so grab a good sieve and dig in.<br />~<a href=http://trilema.com/2020/nannare/#comment-147503>my elder slavegirl</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-48775"><div class="post" id="post-48775">                    <h1><a href="http://trilema.com/2013/and-gavin-moves-on-to-the-dark-side-the-bitcoin-project-is-officially-hijacked/" rel="bookmark" title="Permanent Link to And Gavin moves on to the dark side. The Bitcoin project is officially hijacked">And Gavin moves on to the dark side. The Bitcoin project is officially hijacked</a></h1>                        <div class="date">                                     Sunday, 28 July, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Back when the kids dicking around some github repository improperly named Bitcoin something or the other staunchly refused to specify and prototype, opting instead for a braindamaged "the code is the spec" line for the very transparent yet unstated reason that "code we can at least hope to hold hostage to our personal interest, specs not so much" I figured that well... on one hand they're too fucking stupid to actually manage either specification or prototyping anyway. Uncharacteristically of stupid people they actually know this, and so instead of starting a task they lack the intellectual resources to complete they wisely opt to merely steward an idea much greater than their mediocre selves in the hopes that as time goes by much better people will finally take an interest and take it places. You know, much like the beta male that doesn't dare propose to the hot chick all through highschool but instead spends his time and lunch money grooming her so she may better serve a better man later on.</p>
+<p>Coherent with these expectations they went on to do all sorts of pointless posturing (<a href="http://trilema.com/2013/of-mice-and-men-revisited/">such as</a>), got themselves involved with the Bitcoin Foundation scam<sup><a href="#footnote_0_48775" id="identifier_0_48775" class="footnote-link footnote-identifier-link" title="This thing is still a pretend NGO that takes donations from the public but never showed anyone any accounts, let alone publish them. It still enjoys a chairman that's also its treasurer and also the unsuccessful half-brain behind a number of failed ventures, a guy that uses the donated Bitcoin to prop up that crap and what's worse - with no visible benefit whatsoever. To cherry the cake, the recent SEC lawsuit in Texas clearly shows they've failed utterly in their only stated goal, as they've clearly not been educating anyone worth a shit.">i</a></sup> and generally wasted their time. Which isn't so bad as it all sounds, considering the one time they tried to do something substantial, ie replace the ancient BDB for some spiffy new Google product they caused an insta-hardfork of the entire network, something that might as well have never healed and probably won't, next time it happens. <a href="http://trilema.com/wp-content/uploads/2013/03/in-re-bitcoin-devs-are-idiots.htm">Let's reminisce</a> a little</p>
+<blockquote><p>This matter was apparently for the first time discussed <a href="https://bitcointalk.org/index.php?topic=101902.msg1601463#msg1601463">here</a>, which is in itself ridiculously late, but the recent events illustrate the need of having the various issues much more clearly delineated.</p>
+<p>Recently Bitcoin came close to unmitigated disaster, in the following way: Gavin diplomatically suggested that miners increase their block size, from the previous magic number of "250k" to something they themselves pick. This approach is flawed: the solution to the problem of having a magic number in the code is not passing the responsibility of choosing it to a larger group. It may work politically, in the sense that where large, vague groups are responsible for a bad move nobody will ever be hung. It does not work practically. </p>
+<p>This point does not begin to get sufficient emphasis: stop thinking politically, stick to thinking practically. The political importance, usefulness or competence of a dev is nil. This is not your job, and more importantly this is one of the things you suck at the most. A casual skim through the -dev sessions is ample proof for this, more ridiculous dickwad posturing and knowshitism has never before been seen (outside of the mailing lists of some meanwhile failed open source projects). Snap out of it. Stick to writing code.</p>
+<p>But we digress: as a result of a number of miners implementing their own version of a magic miner, a number of large blocks were created and mined by them, as long as they ran 0.8. Miners running 0.7 failed to mine these same blocks, and a fork developed. </p>
+<p>The reason is that Bitcoin code sucks. It's not that "the blocksize", it's not that "the database", it's not that "nobody could have foreseen their using a plane like a rocket". That shit does not belong in this discussion, passing the buck is not and cannot be accepted in Bitcoin. The reason is that Bitcoin code sucks, and Bitcoin code sucks because people want to be Bitcoin devs, people want to call each other Bitcoin devs, people want to participate in idle irc chatter as if they in fact were Bitcoin devs, but those same people do not have either the ability or intellectual resources to write dependable, usable, good, clean code. </p>
+<p>This is a problem, and this problem needs to be resolved, preferably by the people who are causing it. You know yourselves, I won't name and shame. Fix your heads. You won't be getting much more warning. </p>
+<p>Today will go down in history as the day when Bitcoin nearly died, and its fate depended on BTC-Guild staying online. Stop and think for a minute. What are you doing here? Why are you here, really?</p></blockquote>
+<p>That final question controls the matter. What are these people doing here ? Why are they here, really ? As I was saying, I originally thought Gavin is here by accident, pretty much, and he's here to try and keep things sort-of not going anywhere so thus they can't go anywhere bad, while the rest of the idiots - not really distinct enough to merit individual nomination - are just there in the hopes that some cool may rub off the project and ennoble their otherwise unbearbly marginal, pointless lives. You know, like <a href="http://trilema.com/2012/amir-taaki-has-done-and-continues-to-do-huge-disservice-to-anyone-serious-involved-in-bitcoin/">Taaki</a>.</p>
+<p>However, it seems I was sorely mistaken. Consider <a href="https://gist.github.com/gavinandresen/5616606">the latest from Gavin</a> : </p>
+<blockquote><p><strong>Thumbnail sketch: Two-factor (Yubikey or Google Authenticator) protected wallets</strong></p>
+<p>Hardware:</p>
+<p>Computer. Shared-secret authenticator (Yubikey/Google Authenticator/etc). Server (possibly shared with millions of other users).</p>
+<p>Motivating use case setup:</p>
+<p>User creates a split (2-of-2 multisig) wallet on the computer and server. Keys must be securely backed up to protect against lost. GUI to be determined, but there will be some type of "Use Authenticator" checkbox specified at setup.</p>
+<p>User also arranges for the server to know the shared secret with the shared-secret authenticator.</p>
+<p>Motivating use case, usage:</p>
+<p>Coins are sent into the wallet via P2SH 2-of-2 address(es).</p>
+<p>On spend, user is prompted for authenticator one-time-password (OTP). If it is correct, second signature is created and payment is made immediately, with no further interaction required(*). If incorrect, no payment made (server should inform user of the invalid payment attempt).</p>
+<p>(*) server might offer to further validate high-value transactions via SMS or DNA sample submission or some other authentication method. And server might enforce rules to limit BTC sent per 24-hours or have other protections.</p></blockquote>
+<p>As you can imagine, I'm outraged. </p>
+<p>It's quite plain to anyone with a clue that 2FA/GA/whatever is roughly speaking the equivalent of the Windows antivirus, or more classically of the "spray some holy water on it". Originally it was devised to patch a fundamentally broken security system<sup><a href="#footnote_1_48775" id="identifier_1_48775" class="footnote-link footnote-identifier-link" title="The `website login`, or in other words an attempt of making stateful connections over a stateless protocol. What can I say, it works good enough for the original use case, which was something to do with blogs cca 1995, ie back when nobody read them or cared.">ii</a></sup> and it works about as well as you'd expect a patch to a fundamentally broken security system to work. It doesn't do anything for security, but it does a lot for security theater, and so it's incredibly popular among the fetishistic mass, which feels a lot safer if it has something to physically clutch. Win-win, right ?</p>
+<p>Under the guise of this nonsense, which offers no value, no utility and no benefit, Gavin artfully inserts the proposal of utterly breaking Bitcoin. Having a server allow your transactions is simply taking Bitcoin and turning it back into PayPal. Does <em>your</em> government want a way to block Bitcoin transactions, Gavin ? Does all this come as part of the deal to let fatass fractional banker Karpeles outside of the pen <del datetime="2013-07-28T00:51:55+00:00">once</del> twice a week ? Is it because you're the cumrag of that Foundation thingee them scammers got going that you "have to" do this ? Has your misplaced pride of not calling me boss put you in this position where you don't have to call anyone boss just as long as you, to quote,</p>
+<blockquote><p>'I betrayed you,' she said baldly. </p>
+<p>'I betrayed you,' he said. </p>
+<p>She gave him another quick look of dislike. </p>
+<p>'Sometimes,' she said, 'they threaten you with something -- something you can't stand up to, can't even think about. And then you say, "Don't do it to me, do it to somebody else, do it to So-and-so." And perhaps you might pretend, afterwards, that it was only a trick and that you just said it to make them stop and didn't really mean it. But that isn't true. At the time when it happens you do mean it. You think there's no other way of saving yourself, and you're quite ready to save yourself that way. You want it to happen to the other person. You don't give a damn what they suffer. All you care about is yourself.' </p>
+<p>'All you care about is yourself,' he echoed.</p></blockquote>
+<p>You're a heel, Gavin. I had not this idea about you, originally, but you're a heel, and you're despicable. </p>
+<p>And we're no longer friends. Fuck you.</p>
+<p>PS. Obviously you my dear reader have little reason to care about how I feel. However, if you care at all about your Bitcoin and what all that means, the idea is to pick an older client and stick to that. Never upgrade, ever. 4.x should be reasonably safe. If you mine, <a href="https://deepbit.net/">use deepbit</a>, they don't upgrade either. I used to think this is a little silly, but I see the guy understood more than me much before me. And finally, if you're one of those better guys, even should you read this a decade or a century after I'm dead, please, specify the damned thing.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_48775" class="footnote">This thing is still a pretend NGO that takes donations from the public but never showed anyone any accounts, let alone publish them. It still enjoys a chairman that's also its treasurer and also the unsuccessful half-brain behind <a href="http://trilema.com/2013/ycombinator-continues-to-suck-jointly-and-severally/">a number of failed ventures</a>, a guy that uses the donated Bitcoin to prop up that crap and what's worse - with no visible benefit whatsoever. To cherry the cake, <a href="http://trilema.com/2013/trendon-shavers-aka-pirateat40-indicted/">the recent SEC lawsuit in Texas</a> clearly shows they've failed utterly in their only stated goal, as they've clearly not been educating anyone worth a shit. [<a href="#identifier_0_48775" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_48775" class="footnote">The "website login", or in other words an attempt of making stateful connections over a stateless protocol. What can I say, it works good enough for the original use case, which was something to do with blogs cca 1995, ie back when nobody read them or cared. [<a href="#identifier_1_48775" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/mpoe-july-2013-statement/">MPOE, July 2013 Statement</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/fuck-a-student-day/">Fuck a student day.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/and-gavin-moves-on-to-the-dark-side-the-bitcoin-project-is-officially-hijacked/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/and-gavin-moves-on-to-the-dark-side-the-bitcoin-project-is-officially-hijacked/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>24 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-94131" class="commentbody"><div class="commenthead"><img alt='Peter Todd`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Peter Todd</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94131" title="">Sunday, 28 July 2013</a>
+							</div>
+						<p>Gavin's one-time-password thing is just one proposal; I have a different one that has much the same effect without requiring a third-party, or even anything more than a pen and paper once your wallet has been setup once: <a href="http://www.mail-archive.com/bitcoin-development@lists.sourceforge.net/msg02601.html">http://www.mail-archive.com/bitcoin-development@lists.sourceforge.net/msg02601.html</a></p>
+						</li>
+
+										<li id="comment-94133" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94133" title="">Sunday, 28 July 2013</a>
+							</div>
+						<p>Yes, it is just a proposal. The problem is that it's just a proposal down the wrong path, and it's just a proposal of the wrong sort. </p>
+<p>You know, just the new kid on the baseball team makes a proposal to go get drunk the night before the game. Just a proposal.</p>
+						</li>
+
+										<li id="comment-94135" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94135" title="">Sunday, 28 July 2013</a>
+							</div>
+						<p>It is entirely possible that the sell-out sold out with eager enthusiasm, on his own initiative, rather than having been shown the ever-persuasive Rat Face Cage by a certain Mr. O'Brien.</p>
+<p>If Bitcoin really were the Schelling point many enthusiastic users seem to think it is (including, at times, yourself) - serious users would laugh at the very idea of a mere idiot fork doing any kind of palpable damage. Just try to picture some joker trying to peddle an incompatible fork of TCP/IP, for example. All you would get is a harmless circus.</p>
+<p>But it isn't a Schelling point. There is quite a bit of serious, bitter, "dekulakizing" envy at the early adopters (and successful persona of all stripes,) and this anger is - and will continue - making itself known in ways that cannot be laughed off indefinitely.</p>
+<p>As always, the idiots are mostly irrelevant. It is the reasonably-clever fellows with well-founded grudges who one ought to worry about. Like one person, who shall remain nameless, who recently posted about his eagerness to help U.S. bureaucrats in their "black budget" blockchain de-anonymization projects, when these inevitably begin. Prestige, infinite funding, an endless supply of hookers and cocaine, and an opportunity to kick your self-professed betters in the face, repeatedly and with impunity. What more could one ask for?</p>
+<p>When you advise the "young cocks" to Shut Up And Know Their Place (TM), do you seriously expect them to take the advice?</p>
+						</li>
+
+										<li id="comment-94136" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94136" title="">Sunday, 28 July 2013</a>
+							</div>
+						<blockquote><p>If Bitcoin really were the Schelling point many enthusiastic users seem to think it is (including, at times, yourself) - serious users would laugh at the very idea of a mere idiot fork doing any kind of palpable damage. Just try to picture some joker trying to peddle an incompatible fork of TCP/IP, for example. All you would get is a harmless circus.</p></blockquote>
+<p>Well... it may be an artefact of my own selection of my environment, but everyone DOES seem to laugh at it. <a href=https://trilema.com/JustusRanvier/status/361319572848128000 >Twitter</a> :</p>
+<blockquote><p>@Mircea_Popescu I'd be more concerned about it if the Btcd and Bits of Proof projects didn't exist.</p></blockquote>
+<p><a href=http://btcbase.org/log/#175348 >Irc</a> : </p>
+<blockquote><p>Namworld: I just can't be arsed to go around the world and strong-arming people not to be stupid.</p></blockquote>
+<p>And the list goes on. The agreement seems to be universal : nobody cares what stupid shit Gavin does, and it doesn't really make any difference anyway. A point I readily grant : it's not that this does anything to Bitcoin itself. It's just that I always dislike being disappointed by people.</p>
+<blockquote><p>Like one person, who shall remain nameless, who recently posted about his eagerness to help U.S. bureaucrats in their “black budget” blockchain de-anonymization projects, when these inevitably begin.</p></blockquote>
+<p>How do you know he's not there to fuck with them ? More's the point, how would <em>they</em> know ? Consider the very famous (in Romania) case of Salvador Dali : once the Ceausescu idiot decided to make himself president-king and had a sceptre actually made for this occasion all sorts of retards the world over sent congratulations. Including Dali. The prank slipped by the regime watchdogs, and ended up on the first paper of Romania's version of the New York Times, called Scinteia. (Here's <a href=http://upload.wikimedia.org/wikipedia/commons/a/ac/Ceausescu_receiving_the_presidential_sceptre_1974.jpg >a lulzy pic</a>).</p>
+<p>Would you trust some guy on the grounds of cocaine ?</p>
+<blockquote><p>When you advise the “young cocks” to Shut Up And Know Their Place (TM), do you seriously expect them to take the advice?</p></blockquote>
+<p>That all depends. But the envy of the structurally inferior has nothing to do with what is or isn't a Schelling point. Consider the illustrative case of male-female amorous relations.</p>
+						</li>
+
+										<li id="comment-94139" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94139" title="">Sunday, 28 July 2013</a>
+							</div>
+						<p>Nice gay love story.</p>
+<p>Since transactions are enforced by gpg contracts, how is bitcoin "anonymous"? Like gpg keys don't come with a name and email. If it's a private domani(not gmail), the domain can be traced to the one who bought it?!</p>
+<p>Doesn't even matter if the State doesn't know the quantity of the transaction, since if it's "illegal" you would get condemned anyway?</p>
+<p>I.e. server logs says jew downloaded TheShit2014-Xvid. It's no longer on your hdd but server says you download so copyright cash pls.</p>
+						</li>
+
+										<li id="comment-94141" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94141" title="">Sunday, 28 July 2013</a>
+							</div>
+						<p>It's a wonder you manage to find the keyboard.</p>
+						</li>
+
+										<li id="comment-94142" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94142" title="">Sunday, 28 July 2013</a>
+							</div>
+						<p>So US current law model can't be extended... that's just too bad.</p>
+<p>No srs, where's the fucking privacy. You even use your own name and freenode channel/etc publish public logs. There's even logs of which user exchanged bitcoin to dollars to whom, block addresses included.</p>
+<p>It can't be hard to trace a transaction.</p>
+						</li>
+
+										<li id="comment-94143" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94143" title="">Sunday, 28 July 2013</a>
+							</div>
+						<p>I'm talking about follow the money -&gt; find block proprietary.</p>
+<blockquote><p>U.S. bureaucrats in their “black budget” blockchain de-anonymization projects</p></blockquote>
+						</li>
+
+										<li id="comment-94402" class="commentbody"><div class="commenthead"><img alt='subSTRATA`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">subSTRATA</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94402" title="">Thursday, 8 August 2013</a>
+							</div>
+						<p>Idea for centralized server allowing or disallowing transactions is serious shit. Red alert!</p>
+						</li>
+
+										<li id="comment-94403" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94403" title="">Thursday, 8 August 2013</a>
+							</div>
+						<p>Bitcoin is already a centralized server since bitcoin software stores all history of transactions.</p>
+<p>Supposedly the public transactions are private because the bitcoin address does not list who's the owner... although you can find the owner and trace the transaction because transactions are made in a web of trust, with user rankings, with payment addresses listed.</p>
+						</li>
+
+										<li id="comment-94405" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94405" title="">Thursday, 8 August 2013</a>
+							</div>
+						<p>@<b>subSTRATA</b> Consider this : </p>
+<blockquote><p>My Fellow Users,</p>
+<p>I have been forced to make a difficult decision: to become complicit in crimes against the American people or walk away from nearly ten years of hard work by shutting down Lavabit. After significant soul searching, I have decided to suspend operations. I wish that I could legally share with you the events that led to my decision. I cannot. I feel you deserve to know what’s going on--the first amendment is supposed to guarantee me the freedom to speak out in situations like this. Unfortunately, Congress has passed laws that say otherwise. As things currently stand, I cannot share my experiences over the last six weeks, even though I have twice made the appropriate requests. </p>
+<p>What’s going to happen now? We’ve already started preparing the paperwork needed to continue to fight for the Constitution in the Fourth Circuit Court of Appeals. A favorable decision would allow me resurrect Lavabit as an American company. </p>
+<p>This experience has taught me one very important lesson: without congressional action or a strong judicial precedent, I would _strongly_ recommend against anyone trusting their private data to a company with physical ties to the United States. </p>
+<p>Sincerely,<br />
+Ladar Levison<br />
+Owner and Operator, Lavabit LLC</p></blockquote>
+<p>Integrity is becoming a luxury Americans can no longer afford. </p>
+<p>@<b>Vexare</b> You're not smart enough to be here.</p>
+						</li>
+
+										<li id="comment-94406" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-94406" title="">Thursday, 8 August 2013</a>
+							</div>
+						<p>As you wish.</p>
+<p>You could have argued that beyond the irc nick listed on otc you can't go further without third-party info, mail, ip, hacking. Yet it's easier to act retarded.</p>
+						</li>
+
+										<li id="comment-148991" class="commentbody"><div class="commenthead"><img alt='kriptopara`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">kriptopara</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148991" title="">Thursday, 16 April 2020</a>
+							</div>
+						<p>I love looking through a post that can make one think.<br />
+Also, thanks for allowing me to comment!</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-95668">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2013/10/03/bitcoiner-and-other-titles/' class='url'>Bitcoiner and other Titles | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-95668" title="">Tuesday, 22 October 2013</a>
+					</div>
+					<p>[...] implementation was better. Over time with reading and thinking, I came to realize my wrongness, the forced hijacking of this Bitcoin deal is a threat. In the aftermath I was involved in the creation of this bet:4 Probably one of Bitcoin&#8217;s most [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-99506">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2014/05/02/building-bitcoin-0-7-2-on-openbsd/' class='url'>Building Bitcoin 0.7.2 on OpenBSD | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-99506" title="">Saturday, 3 May 2014</a>
+					</div>
+					<p>[...] BOOST_LIB_SUFFIX=-mt  These instructions are also on Github. Probably the last version by the so titled core developers to give too much attention to &nbsp;&#8617; This means accounting for changes that came with version 0.8 which lead to the great [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130409">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://bingology.net/2014/05/02/building-bitcoin-0-7-2-on-openbsd/?b=instr&amp;e=#select' class='url'>Building Bitcoin 0.7.2 on OpenBSD &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130409" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] instructions are also on Github. Probably the last version by the so titled core developers to give too much attention to [&#8617;] This means accounting for changes that came with version 0.8 which lead to the great fork [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139332">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/eve-forums-deliver?b=with%20this%20so&amp;e=is%20a#select' class='url'>EVE forums deliver. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139332" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] with this some people worry and some people laugh. I usually torment.  &mdash;&mdash;&mdash;In this the libertard scum is a [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139795">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/mtgox-and-ancient-bitcoin-history-the-straight-dope?b=the%20BFL%20disp&amp;e=ents#select' class='url'>MtGox and ancient Bitcoin history - the straight dope. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139795" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the BFL displaying empty boxes with fans attached at CES 2013 ? [&#8617;]Hey, remember back when Gavin Andresen was more than a footnote in the story of early Bitcoin ? [&#8617;]   Category: Bitcoin     Comments [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141013">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/gerald-davis-is-wrong-heres-why?b=too%20little%2C%20&amp;e=%20the#select' class='url'>Gerald Davis is wrong. Here's why. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141013" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] too little, too much, not enough or so on capacity will become an issue once someone who isn't on the dark side raises the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141474">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-actual-state-of-the-bitcoin-network?b=more%20recent%20&amp;e=like#select' class='url'>The actual state of the Bitcoin network on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141474" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] more recent Power Ranger braindamage. Most people stuck on 0.8 because they noticed Gavin's turning late and don't like [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141530">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-news-in-brief-hearn-is-a-shitstain-mp-is-right-fuck-reddit-love-satoshi?b=again.%20Are%20y&amp;e=ised#select' class='url'>The news, in brief : "Hearn is a shitstain, MP is right, fuck reddit. Love, Satoshi" on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141530" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] again. Are you counting ? [&#8617;]2013 : And Gavin moves on to the dark side. The Bitcoin project is officially hijacked ; 2014 : USGavin, the lolcow ; 2015 : Let's address some of the more common pseudo-arguments raised [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141814">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/usg-in-btc-a-history-of-constant-failure?b=longer%20fashi&amp;e=e%20at#select' class='url'>USG in BTC, a history of constant failure on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141814" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] longer fashionable to call them that ? Hm ? [&#8617;]That Gavin Andresen was an USG mole had been a matter of public record for a few years at this point. I don't recall anyone ever regarding Mike Hearn as anything else at [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147087">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/forum-logs-for-23-aug-2013?b=along%20the%20li&amp;e=hose#select' class='url'>Forum logs for 23 Aug 2013 on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147087" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] along the lines of Alt chains are important for those times when you decide being an idiot is "best for all those [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147706">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://fixpoint.welshcomputing.com/2020/jfws-130-top-trilema-picks-to-date/?b=And%20Gavin%20mo&amp;e=cked#select' class='url'>JFW's 130 top Trilema picks to date &laquo; Fixpoint</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147706" title="">Saturday, 7 March 2020</a>
+					</div>
+					<p>[...] And Gavin moves on to the dark side. The Bitcoin project is officially hijacked [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="48775" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834192-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-48775")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-48775");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-48775");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

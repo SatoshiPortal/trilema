@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Dear Guardian : stop being retarded. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The fates are cruel an' the chances are slim<br />so grab a good sieve and dig in.<br />~<a href=http://trilema.com/2020/nannare/#comment-147503>my elder slavegirl</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-49762"><div class="post" id="post-49762">                    <h1><a href="http://trilema.com/2013/dear-guardian-stop-being-retarded/" rel="bookmark" title="Permanent Link to Dear Guardian : stop being retarded.">Dear Guardian : stop being retarded.</a></h1>                        <div class="date">                                     Saturday, 05 October, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<blockquote><p><strong>dexX7</strong> <a href=http://www.theguardian.com/world/2013/oct/04/tor-attacks-nsa-users-online-anonymity>Attacking Tor: how the NSA targets users' online anonymity</a>  << i recommend this one, very rich of information<br />
+<strong>mircea_popescu</strong> dexX7 it's really very badly written, nonsensical goop.<br />
+<strong>mircea_popescu</strong> i can't imagine schneider actually penned that. he must have sent sometyhing that got "edited for clarity"<br />
+<strong>dexX7</strong> are you saying "the content is inconsistent" or "the presentation is just bad"?<br />
+<strong>mircea_popescu</strong> i am saying that numerous concepts are employed in a way which belies unfamiliarity with the field, and the general structuring of the narrative is such that you suspect the author does not have a birds eye view of the topic.<br />
+<strong>mircea_popescu</strong> neither of those goes with the alleged author, unless he was very very drunk at the time.<br />
+<strong>mircea_popescu</strong> but anyway, i guess now i have to go into details as otherwise this is all useless nonsense. brb.
+</p></blockquote>
+<p>Let's consider the damned thing.</p>
+<blockquote><p>The online anonymity network Tor is a high-priority target for the National Security Agency. The work of attacking Tor is done by the NSA's application vulnerabilities branch, which is part of the systems intelligence directorate, or SID. The majority of NSA employees work in SID, which is tasked with collecting data from communications systems around the world.</p></blockquote>
+<p>The problem with this paragraph is chiefly its circular nature. It proceeds as : "A is B, the work to B is done by C, which is part of D, which is where most people doing B stuff work. D is tasked with the job of D."  </p>
+<p>Related to that problem, but distinguishable from it, the very poor formalism employed. On top of common currency terms such as "world" or "employees", the following exotic concepts are involved : 1. Tor ; 2. NSA ; 3. Application Vulnerabilities Branch ; 4. Systems Intelligence Directorate ; 5. Data ; 6. Communications systems. None of these are defined, explicitly or even implicitly in the text.<sup><a href="#footnote_0_49762" id="identifier_0_49762" class="footnote-link footnote-identifier-link" title="There are available an array of methods to implicitly define terms of art and exotic concepts in texts intended for a mass audience, such as the simile, or effectual limitation etc. ">i</a></sup> None of these work in any particular way in the context, nor is it indeed possible on the strength of the text presented to distinguish any from each other or from a box of shoe wax. </p>
+<p>Flowing directly from the "exotic concept soup" problem, the liberal use of otherwise meaningless interjections known as "buzzwords". The most egregious case is the "around the world" finale, which in no way adds any meaning but merely creates the (false) impression in the reader that he has generally understood the text on the grounds of familiarity, having recognised a semantic symbol seen other places. This very cheap sort of fake comprehensibility, together with the absolute poverty of meaning being conveyed, and supported by the conceptual confusion at the root of the construction mark this text as the product of an anonymous representative of the unthinking herd of cattle (such as, for instance, a journalist) rather than the product of a technical expert (such as, for instance, Bruce Schneier).</p>
+<p>The three problems described, ie. lack of knowledge of the field (as shown in poor, absent or dysfunctional implicit definitions for terms used), lack of understanding generally (as shown in nonsensical constructions that are both logically unsuited for the task at hand and ineffectual from a praxis standpoint) and a tendency to fake comprehensibility through the "recognition=understanding" trick do not subside as the text progresses, but indeed build to an eventual fever pitch. Consider : </p>
+<blockquote><p>one successful technique the NSA has developed involves exploiting the Tor browser bundle, a collection of programs designed to make it easy for people to install and use the software. The trick identified Tor users on the internet and then executes an attack against their Firefox web browser.</p></blockquote>
+<p>The opening "one" requires that  the subsequent text briefly explain the particulars of the one item considered along its specific differences that allow it be distinguished from "another" similar item. This may only proceed once a general category has been established (which the text itself fails to do). Here's a cannonical example : </p>
+<blockquote><p>[Animals are conventionally considered those live beings which use hemoglobin to transport respiration gases to and from cells, thus allowing them to grow significantly past diffusion size]. One such animal is the finch. In the case of the finch, as with most birds, the metabolic rates are relatively high, which supports the large energy cost of flight, and also results in a higher body temperature. Other animals with lower metabolic rates are usually terrestrial or aquatic. </p></blockquote>
+<p>Now consider how the "computer security" write-up would sound if the same structure it employs were preserved to describe the much more familiar topic of animal biology : </p>
+<blockquote><p>One animal that exists involves the parabronchi, a collection of small air capillaries that have cross-current gas exchange and thus provide oxygen. This happens to birds when they are in flight through the air, and then they can land on a branch.</p></blockquote>
+<p>So rendered, it's quite obvious that the author is simultaneously very, very bad at biology and also very, very bad at thinking in general. Unless the author is mentally handicapped such text would not normally be an acceptable submission past freshman year in junior high. The unfortunate happenstance that cryptography, machine security and more generally the Internet or programming of numeric machines are entirely exotic, Martian topics for most of the population, much more so than the banal characteristics of birds in spite of same population spending more time keyboard warrior-ing than birdwatching, does not meaningfully alter the sad state of the text being considered. </p>
+<p>It's still very bad, even if most readers lack the requisite factual knowledge to readily discover the appalling quality of the writing. It is much worse in its effects than simple stupidity however, because inasmuch as young or otherwise naive minds read nothing but this goop, they naturally end up with very distorted expectations as to what thinking looks like when captured in written form, and generally as to how the business of the mind proceeds along its merry way.</p>
+<p>It's still very bad, and it still gets worse : </p>
+<blockquote><p>The first step of this process is finding Tor users. To accomplish this, the NSA relies on its vast capability to monitor large parts of the internet. This is done via the agency's partnership with US telecoms firms under programs codenamed Stormbrew, Fairview, Oakstar and Blarney.</p>
+<p>The NSA creates "fingerprints" that detect http requests from the Tor network to particular servers. These fingerprints are loaded into NSA database systems like XKeyscore, a bespoke collection and analysis tool which NSA boasts allows its analysts to see "almost everything" a target does on the internet.</p></blockquote>
+<p>The putative "vast capability to monitor" is introduced without explanation. This is bad form. A number of four words without immediate meaning or any particular manner to distinguish one from the other are also introduced. They serve no purpose within the text, except for the exact same purpose served by "around the world" in the first paragraph considered : they create a superficial similarity with other broken texts produced by other broken minds on the topic, and by virtue of this broken process a superficial impression in the mind of the reader that he has gained familiarity, and thus ease with the topic at hand. </p>
+<p>This is all a fraud : asked "what is Oakstar ?" the avid student of the topic of journalistic nonsense will promptly answer something along the lines of "one of the four codenames" and expect a gold star for his intellectual performance. Unfortunately for him, the gold star is reserved for the response that reads "one of the arbitrary and otherwise meaningless strings employed for unknown reasons by a troop of illiterate monkeys belabouring unexplainably under the delusion that they are discussing computer security, the Internet and US privacy infringement."</p>
+<p>Moving on,</p>
+<blockquote><p>Using powerful data analysis tools with codenames such as Turbulence, Turmoil and Tumult, the NSA automatically sifts through the enormous amount of internet traffic that it sees, looking for Tor connections.</p></blockquote>
+<p>This is the very dreary banal. Using unfortunately-not-as-powerful-as-advertised data analysis tools with codenames such as "Cisco router", every single computer in the history of the web sifts through the enormous amounts of traffic such as they are in its day and time, routing it all every which way as requested. There is literally nothing here, and the need for a codename is grossly exaggerated, let alone three of them!</p>
+<blockquote><p>Last month, Brazilian TV news show Fantastico showed screenshots of an NSA tool that had the ability to identify Tor users by monitoring internet traffic.</p></blockquote>
+<p>Do I even need to consider this ? Completely nonsequitur, planted here about in the manner and after the fashion of commercial copy for pinksheet fraud and miraculous tooth whitening. Seriously, a TV show in a country that speaks a different language showed screenshots of someone else's tool that did something for the conveyance of which both video and still pictures are notoriously inadequate ? I am impressed, I can only hope they also showed footage of someone typing on a keyboard without ever touching the space bar or either shift, and in general limiting themselves to pressing a lot of F keys. </p>
+<p>If my argument for the higher metabolism of finches was something along the lines of "last month Brazilian TV news show Fantastico<sup><a href="#footnote_1_49762" id="identifier_1_49762" class="footnote-link footnote-identifier-link" title="What a name for a news show, it sounds exactly like what onion.tv would name it.">ii</a></sup> showed"... I am sorry, I have to take a break at the point where the news show showed showings. Is this text intended to be read by brains made out of wood shavings ?</p>
+<blockquote><p>The very feature that makes Tor a powerful anonymity service, and the fact that all Tor users look alike on the internet, makes it easy to differentiate Tor users from other web users. </p></blockquote>
+<p>This statement is nonsensical on its face. It essentially says that whatever makes an item indistinguishable from another of its class also makes it stand out from all the others in the class. This would be the exact equivalent of the paralogism embodied in selling mass produced identical shirts inviting the wearer to "be unique" through the use of a mass marketed uniform item. This approach to writing is wrong.</p>
+<blockquote><p>On the other hand, the anonymity provided by Tor makes it impossible for the NSA to know who the user is, or whether or not the user is in the US.</p></blockquote>
+<p><em>In nucet</em>, that which distinguishes damns yet damnation is impersonal. This is not an embodiment of reasoning, this is pure metaphysics (and banal metaphysics at that) re-written by unskilled hands to appear technical in nature. It is not, and I must say it's sad to consider just how much and how varied ignorance the author betrays by writing down a thousand words on a topic he doesn't understand. </p>
+<blockquote><p>After identifying an individual Tor user on the internet, the NSA uses its network of secret internet servers to redirect those users to another set of secret internet servers, with the codename FoxAcid, to infect the user's computer. FoxAcid is an NSA system designed to act as a matchmaker between potential targets and attacks developed by the NSA, giving the agency opportunity to launch prepared attacks against their systems.</p></blockquote>
+<p>Considering that in the previous paragraph it was being held as impossible "for the NSA to know who the user is, or whether or not the user is in the US", it comes as a surprise to see the opening of this current paragraph treating the exact opposite as a given. What the original author intended to convey, and what the mangled remains of his text fail to even vaguely suggest, is that Tor users are in principle and as advertised indistinguishable from one another, but may be in most circumstances distinguished from non-Tor users, and also in some circumstances may be in fact distinguished from one another, contrary to what Tor is advertised to do. This version is still tense<sup><a href="#footnote_2_49762" id="identifier_2_49762" class="footnote-link footnote-identifier-link" title="Because the correct statement would be `Tor is broken`, which statement the author does not wish to make for purely political reasons.">iii</a></sup>, but at least it doesn't read like chickens pecking at a keyboard penned it.</p>
+<p>As a side serving, the mysterious and unexplained process of using "secret servers" to redirect to other, presumably equally "secret servers" belies the following problem : how do we distinguish between putative "sets" of "different" equally secret, unidentifiable servers ? </p>
+<p>All this offensive offal aside, the actual facts of the matter are : </p>
+<ul>
+<li>That the NSA, alongside other nations' dedicated programs, currently are and historically always have, watched as broad a spectrum of signals as feasible on the day's technology. This includes the Internet, it includes the sounds perceptible on the ocean floor, it includes radiopulsar emissions from outer space and everything else.</li>
+<p>	
+<li>That contrary to planted disinformation of which the Guardian article is a fine example, the NSA has complete and unlimited, instantaneous access to any and all information passed through the TOR network in its entirety, as a matter of course and by design.</li>
+<p>
+<li>That the NSA, through a program of dubious legality that is nevertheless well documented<sup><a href="#footnote_3_49762" id="identifier_3_49762" class="footnote-link footnote-identifier-link" title="Reuters, Washington Post etc.">iv</a></sup> introduces false information into legal proceedings, such as <a href="http://trilema.com/2013/law-enforcement-never-fails-to-unintentionally-entertain-part-2/">most recently falsely claiming to have had identified Ross William Ulbricht</a> through an amusing collection of "rookie mistakes" on his part, when in fact he was identified through the normal, ordinary working of the Tor network.</li>
+<p>
+<li>That since the embarrassing Snowden defection, the USG has been marshaling any resources available in an attempt to represent the by now well known and well documented, fundamental and intentional Tor vulnerabilities as unrelated to Tor itself, but a function of "bundles", "secret servers acting as matchmakers", "codenames" and assorted goop. This is understandable, as the significant upfront investment made by the USG in creating the Tor network has not yet been defrayed by the few prosecutions of gullible kids it has so far allowed.</li>
+</ul>
+<p>Now, would it be possible, dear Guardian, to hire some people that can actually write ? Instead of having social sciences undergrads butcher Bruce's text to the degree it only serves to further intellectually embarrass those you seek to protect ?</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_49762" class="footnote">There are available an array of methods to implicitly define terms of art and exotic concepts in texts intended for a mass audience, such as the simile, or effectual limitation etc.  [<a href="#identifier_0_49762" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_49762" class="footnote">What a name for a news show, it sounds exactly like what onion.tv would name it. [<a href="#identifier_1_49762" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_49762" class="footnote">Because the correct statement would be "Tor is broken", which statement the author does not wish to make for purely political reasons. [<a href="#identifier_2_49762" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_49762" class="footnote"><a href=http://www.reuters.com/article/2013/08/05/us-dea-sod-idUSBRE97409R20130805>Reuters</a>, <a href=http://www.washingtonpost.com/blogs/the-switch/wp/2013/08/07/nsa-data-was-supposed-to-make-the-deas-job-easier-instead-it-makes-prosecutors-jobs-harder/>Washington Post</a> etc. [<a href="#identifier_3_49762" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/why-you-need-bitcoin-simply-put/">Why you need Bitcoin, simply put.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/so-this-urbit-thing/">So this Urbit thing...</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/dear-guardian-stop-being-retarded/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/dear-guardian-stop-being-retarded/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>40 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-95391" class="commentbody"><div class="commenthead"><img alt='Anotheranon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Anotheranon</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95391" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p>Let's just focus on one aspect:</p>
+<p>[A} The very feature that makes Tor a powerful anonymity service,<br />
+[B] and the fact that all Tor users look alike on the internet,<br />
+[C] makes it easy to differentiate Tor users from other web users.</p>
+<p>To:</p>
+<p>[A] Tor has a distinguishable feature<br />
+[B] Tor users look alike<br />
+[C] All Tor users are distinguishable</p>
+<p>Thus whenever [A] Tor has a distinguishable feature and [B] Tor users look alike, [C] all Tor users are distinguishable.</p>
+<p>--</p>
+<p>On the other hand, the anonymity provided by Tor makes it impossible for the NSA to know who the user is, or whether or not the user is in the US.</p>
+<p>[B]  NSA is unable to distinguish a Tor user from another Tor user</p>
+<p>---</p>
+<p>After identifying an individual Tor user on the internet,<br />
+the NSA uses its network of secret internet servers to redirect those users to another set of secret internet servers,<br />
+with the codename FoxAcid, to infect the user’s computer.</p>
+<p>The term "individual" Tor user may be misleading, but because [B] Tor users look alike, it follows that individual Tor users look alike, too, and this boils down to: _all_ Tor users are (potential targets, redirected and) infected.</p>
+<p>Did I miss something here? This seems critical, because of the huge difference between "some Tor users" and "all Tor users".</p>
+						</li>
+
+										<li id="comment-95392" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95392" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p>The perennial problem with self contradictory axioms is that any conclusion can be derived from them. So I don't think in that sense anyone can answer whether you did or didn't miss something here.</p>
+<p>That aside, "based on my training and experience" as well as general fucking common sense, it would stand to reason that the theoretical construct proposed by the NSA (in lieu of a naked admission of just how broken Tor actually is) to explain how it obtains supposedly encrypted / otherwise unavailable information would work in the manner you describe, which is to say it would infect all Tor users indiscriminately. This is actually coherent with documented NSA practice of scooping up everything and re-defining "collection" to mean "looking through the data we have already collected" rather than the more normal "collecting data in the first place". Because if you're not a terrorist you have nothing to fear from having your computer infected.</p>
+						</li>
+
+										<li id="comment-95404" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95404" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p>Yes, "parallel construction." But it is possible that "this cigar is just a cigar."</p>
+<p>I admit that I am quite enamored of the "TOR is a honeypot, lock stock and barrel" hypothesis.  But it would be a considerably more solid hypothesis if they cornered someone other than DPR - who by all indications really is an idiot, one who more or less wrote several public, signed confessions.</p>
+						</li>
+
+										<li id="comment-95407" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95407" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p>That'd be quite difficult, seeing how nobody of any import ever seriously used the thing. Its structure is tailored for the bleating kind, its fundamental proposition "come be unique with all the rest of us". That's quite the opposite of how competence works.</p>
+						</li>
+
+										<li id="comment-95409" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95409" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p>&gt; nobody of any import ever seriously used the thing</p>
+<p>MP, here is a very educational exercise. Switch on a TOR exit node (ten minutes' work) and run 'ettercap' (or the like) there for a week or so. Prepare to be very surprised.</p>
+						</li>
+
+										<li id="comment-95412" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95412" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p>Actually this isn't such a bad idea, perhaps one of the bloggers perusing Trilema for his amusement &#038; enlightenment will try that exercise. Not the worst way to go about establishing oneself.</p>
+						</li>
+
+										<li id="comment-95413" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95413" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p><a href="http://seekerblog.com/2006/01/31/the-murray-gell-mann-amnesia-effect/">http://seekerblog.com/2006/01/31/the-murray-gell-mann-amnesia-effect/</a></p>
+						</li>
+
+										<li id="comment-95417" class="commentbody"><div class="commenthead"><img alt='Dr.A`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Dr.A<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95417" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p>Pretending a secret communication tool developed by a US Gov. agency and offered "for free" to the world would protect one from snooping by US Gov. agency is utter nonsense. Like writing a paper pretending Microsoft has any trouble silent installing updates on internet connected PC's.</p>
+						</li>
+
+										<li id="comment-95419" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95419" title="">Saturday, 5 October 2013</a>
+							</div>
+						<p>Certainly on the first part. Microsoft however... I'm not so sure. Half the time they have trouble installing updates even if the user is actively trying to do so.</p>
+						</li>
+
+										<li id="comment-95599" class="commentbody"><div class="commenthead"><img alt='fd`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">fd</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95599" title="">Thursday, 17 October 2013</a>
+							</div>
+						<p>Kind of disappointed. I'm not interested in Schneier et al. (he finally managed to upgrade his key from DSA 1024, but still uses windoze - ?).</p>
+<p>In short,</p>
+<p>&gt; That contrary to planted disinformation of which the Guardian article is a fine example, the NSA has complete and unlimited, instantaneous access to any and all information passed through the TOR network in its entirety, as a matter of course and by design.</p>
+<p>Evidence or GTFO, Mircea.<br />
+(You'll do whatever you like but it doesn't have the same ring to it.)</p>
+<p>Do you propose they cracked DH key exchange, or own the vast majority of nodes, or have zerodays in core Tor codebase, or wtf? Or do you mean that all the people (e.g. me) who've met other people who run a considerable portion of the network are gobmint spies / talking bullshit (I suppose the latter is kind of reasonable)?</p>
+<p>I assume you know how onion routing works. I assume you know of previous mix(master, etc.) networks, of research that has gone into understanding lower-latency anonymity systems such as Tor, and all the very much ongoing research that people do in order to understand the limitations of Tor (see the Anonbib, in particular, one of the more interesting very recent papers, <a href="http://freehaven.net/anonbib/#ccs2013-usersrouted">http://freehaven.net/anonbib/#ccs2013-usersrouted</a>). I also assume you know of Tor's history (Roger Dingledine wrote Tor, got funding from NRL, people joined in (Nick Mathewson in particular), later on funding from EFF; majority of current Tor funding still comes from USG, which sucks balls indeed.) If not, if you haven't even gotten acquainted with this context, what the hell are you blabbering about, even?</p>
+						</li>
+
+										<li id="comment-95600" class="commentbody"><div class="commenthead"><img alt='fd`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">fd</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95600" title="">Thursday, 17 October 2013</a>
+							</div>
+						<p>Apropos: note that user deanonymization over time is a very realistic threat. But that "instantaneous access to any and all information passed through the TOR network in its entirety, as a matter of course and by design" part - both the universal quantifiers as well as the "by design" do sound very far fetched to me. Could you point me to your research? (hint: "omg parallel construction of course they wont tell how they got to SR" / "look how much sense it would make" is not research, which you of course know. Hence my confusion in regards to your stance.)</p>
+						</li>
+
+										<li id="comment-95601" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95601" title="">Thursday, 17 October 2013</a>
+							</div>
+						<p>Don't get too fired up by this. Let's start obliquely, considering a case much remote from our (or anyone else's) actual point of interest.</p>
+<p><a href=http://trilema.com/2012/amir-taaki-has-done-and-continues-to-do-huge-disservice-to-anyone-serious-involved-in-bitcoin/ >A certain tard</a> you may know of has the following to say recently : </p>
+<blockquote><p>I'm a opensource coder (still here and giving tools for the people since 3+ years), and no money supported by friends around me. I'm not trying to get sympathy, but some people are under the mistaken assumption we (Intersango) were some kind of rich company.</p></blockquote>
+<p>This is in fact a kid who's lived in poverty his entire life, and after blowing the one shot at getting out will doubtlessly spend the remainder of his life in poverty - it's one thing to be poor and without friends, it's another to be poor and with powerful enemies. </p>
+<p>Nevertheless, for that vanishingly short interval during which he was either factually or deludedly having a shot, he represented the "Bitcoin Consultancy" as an actual market leader, thought leader, serious business, rich company and what have you. Because "that's what's done", or so he perceives it. For that short half year or so in early 2012 I was still laughing at them, all of them, including Patrick "I accidentally emailed everyone everyone's address" Strateman, but I was the only one doing so (and people were saying "proof or GTFO, Mircea", of course).</p>
+<p>So now, to come to terms : I have no idea if you are a mole or not, and for that matter I have only a vague idea who you are. Nevertheless, you must admit that your skills in distinguishing whether those people talking to you actually are what they represent themselves or actually aren't what they represent themselves may be, at least in principle, lacking. For that matter, the one person that did in fact run a considerable portion of the network is currently in jail, under child porn charges. For that matter it was discovered only a month after the fact that his websites were being used. </p>
+<p>So basically... you know some people over the Internet. What's that worth, and why do you think it's worth anything ?</p>
+						</li>
+
+										<li id="comment-95602" class="commentbody"><div class="commenthead"><img alt='fd`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">fd</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95602" title="">Thursday, 17 October 2013</a>
+							</div>
+						<p>Right, fair enough. Let's see now. I'm not entirely sure what to do with the red herring / a kind of association you're trying to draw, but that can be addressed later on.</p>
+<p>As you might agree, Russel's teapot is a great concept (burden of proof, striving not to shift it to other people, all that.) It's not much use debating any kind of argumentative illustration of you not having proved anything: it is simply not productive. It would be much more productive, honest (and I'd say, genuinely interesting)) if you actually tried to support your claims. Because there might be some support, and if you have any, please do share. Otherwise I'll resort to trying to understand technical research that's being done (even if NSA is doing x times that behind closed doors, and what have you not.) ;)</p>
+<p>Now. Are you seriously suggesting that because you predicted that the intersango dude is lame and would fail and everybody was trying to ask you to bear the burden of proof - that you will be right this time? Maybe yes; but that's so woo my head starts hurting. :( You are associating one kind event and, crucially, one kind of context with another. Are you sure they are comparable? Again, I'm not the one claiming things. (I guess I'm a sneaky bastard who has the easy way out?)</p>
+<p>&gt; For that matter, the one person that did in fact run a considerable portion of the network is currently in jail</p>
+<p>See, things like this make me consider the idea that you don't really know how Tor works, which is crucial if you want to say its design was premeditated by someone with sinister goals. I mean, it's really considerably / much less secure than originally thought (though depends on whom you ask, etc etc), but you should at least get acquainted with its architecture and stuff, you know? Tor hidden services were added as an afterthought, and Tor is/was mostly about exit relays, not hidden services. (It's been iterated again and again by core devs that hidden services need more support and attention (https://blog.torproject.org/blog/hidden-services-need-some-love , etc.)) But no matter. Thing is, the *network* is composed of Tor relays. The majority of traffic is not hidden service traffic. The exit nodes bear a lot of the weight. The point is, when there's one or several servers (serving lots of different hidden services) like in the case of FH, it's still only those several servers in a large relay network. "Running considerable portion of the network" is simply incorrect (afaik). I'm sorry to be nitpicking, I'm simply kind of sad to think that everyone else will simply assume you are right when it might seem that you don't know how Tor works. I mean, it's their fault and everything, but still.</p>
+<p>(Re: end, I happen to have met core devs in person this summer - but you are right, this means absolutely nothing. Perhaps it's simply human nature - I've worked with my mentor there (also a core developer) over the summer, and I choose to claim to know him as a person; if I am mistaken and they're all in here for the long con, and doing all those personal consultations for people from Syria etc is just a guise - well then my cognitive abilities fail to the extent that I shouldn't be able to be trusted to carry out *any* kind of argument. Which is one avenue to take, for sure. In that sense, consider my impromptu response as expressing generic sadness, and my frustration with being naive. But I choose to maintain that the core people who wrote the first implementation of Tor were (i) smart enough not to get sidetracked / tricked by anyone; (ii) not evil (in whatever relevant sense.))</p>
+						</li>
+
+										<li id="comment-95603" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95603" title="">Thursday, 17 October 2013</a>
+							</div>
+						<blockquote><p>As you might agree, Russel’s teapot is a great concept </p></blockquote>
+<p>If you're preoccupied by the entire procedural angle, I could point out that you're belabouring under a triple misapprehension. </p>
+<p>The first is that you would see this as some sort of scientific endeavour. This is completely wrong : we are not discussing science here, we are discussing business, and politics, and on occasion when I feel so inclined we maybe dabble in anthropology. Consequently, Russel's teapot may be as great a concept as cubic wheels, it has very little bearing. </p>
+<p>To better understand this, the standard of evidence for civil proceedings is "a preponderence of evidence", significantly weaker a standard than the "reasonable doubt" used in criminal proceedings, it in turn a significantly weaker standard than "scientific proof". </p>
+<p>And since we're on the topic, a tendency to represent circumstances that are squarely not scientific in scientific terms makes what you call a red herring quite germane to our discussion. The same sort of mild autism drives both.</p>
+<p>The second is that you seem to imagine yourself some sort of judge, or court, or otherwise empowered to solicit anything from me. This couldn't be more widely inappropriate, the relation that exists between us is strictly that I will say as much or as little as I feel like and you're absolutely welcome to like it just fine. You're not owed proof for anything, and taking into consideration that proof is generally speaking in business as well as in politics quite valuable, you're a strange man indeed to imagine simply asking as if you're owed other people's expensive shit.</p>
+<p>The third and last is that the burden of evidence always and in all circumstances solidly rests on he who makes the affirmative statement. If you wish to prove to me any particular one thing about TOR, such as for instance that it works in any one certain way, you're more than welcome to do so, and if I disagree it will be sufficient for me to point to one single example where this TOR thing didn't in fact work as you propose it works. This situation can never be reversed, and you can under no circumstances demand of me to prove that the broken cup is indeed broken, and how, and where's the missing pieces spread inside the shag. Go ahead, carry water with it.</p>
+<p>This aside, there's nothing wrong with you trying to understand technical research that's being done, just as long as you strongly hold on to two very important points. One, that security strictly depends on chain integrity, and if you have a very good and secure chain fifty links long that dangles at the top end you've still got nothing and the entire "understanding" effort has been as much masturbation. The other is the same thing, in the form of the point discussed above, about the autism and all that.</p>
+<blockquote><p>Now. Are you seriously suggesting that because you predicted that the intersango dude </p></blockquote>
+<p>In a word, yes. I am stating, quite seriously, that to the man that has a long list of correct predictions behind him, derpanon doth not come asking for proofs. We're not equals in this story, as much as that may conflict with what misguided teachers might have told you about how the world works. Like it or not I'm your elder, and you're stuck dealing with me as your elder, not as your equal.</p>
+<blockquote><p>“Running considerable portion of the network” is simply incorrect (afaik)</p></blockquote>
+<p>Where's your teapot now ? It's one thing to go about being all scientific and whatnot. It's another to go about imagining you're the judge and I'm the respondent, somehow, inexplicably. It's quite the motherfucking third to imagine that because you live in your own head the I in afaik is worth two shits. Who the fuck are you and how did you get the idea you get to think in the first place ? </p>
+<blockquote><p>core devs</p></blockquote>
+<p>On the anthropological side of things, it sometimes seems to me human society is veering dangerously close to this scavenger world cargo cult where poorly educated, intellectually destructured youths worship a complete rendition of the old nonsense. </p>
+<p>Do core devs wear special robes yet ? </p>
+<blockquote><p>they’re all in here for the long con</p></blockquote>
+<p>This is not what was said, this is what you have had in your head and so preferred to read. What was said was that the poorly educated, intelectually destructured youths of today don't have the mental werewithal to understand what's going on, at all. Something like a dork in an airport, holding on a bag because some chick in a low cut top told him to. Is he a narcoterrorist, in it for the money ? No, he's just a dork.</p>
+<blockquote><p>doing all those personal consultations for people from Syria</p></blockquote>
+<p>I think we may close on this note. How old are you ?</p>
+						</li>
+
+										<li id="comment-95608" class="commentbody"><div class="commenthead"><img alt='fd`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">fd</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95608" title="">Thursday, 17 October 2013</a>
+							</div>
+						<p>Ok, good, I feel elated, tbh. :) But this is it, hopefully.</p>
+<p>&gt; Russel’s teapot</p>
+<p>Fair enough, this is not an appropriate frame of mind. I think you understand where I'm coming from, though; but there's no way I can repel generic "onion routing doesn't work because the more general mechanism / state of affairs / x doesn't work /' is different from what you think it is." Why not reduce the blog to a simple "I'm awesome" masturbatorium in that case, though? :) (yes, I've a shitty sense of humour)</p>
+<p>Likewise, this is your blog and so on and you have no obligation, by the very definition of the type of venture that you do here. I'm sorry to have been rude (I was.)</p>
+<p>&gt; This aside, there’s nothing wrong with you trying to understand technical research that’s being done, just as long as you strongly hold on to two very important points. One, that security strictly depends on chain integrity, and if you have a very good and secure chain fifty links long that dangles at the top end you’ve still got nothing and the entire “understanding” effort has been as much masturbation.</p>
+<p>A totally honest question: by "chain integrity", do you mean (a general type of) onion routing (of whatever sorts), or something more metaphorical? I'm genuinely curious, because if the former, it's not as if people are not thinking about it, either.</p>
+<p>&gt; Like it or not I’m your elder, and you’re stuck dealing with me as your elder, not as your equal.</p>
+<p>Of course, OK. I simply expected something more concrete, as far as "I'm right" goes. But, I totally see what you mean. I'm delighted that you are responding, even.</p>
+<p>&gt;&gt; “Running considerable portion of the network” is simply incorrect (afaik)</p>
+<p>&gt; Where’s your teapot now ?</p>
+<p>Bad wording on my side. Should have been: "as far as I recall the nomenclature/definitions of 'network' and so on." (See <a href="https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=tor-spec.txt">https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=tor-spec.txt</a> ("1. System overview") and somewhat <a href="https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=rend-spec.txt">https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=rend-spec.txt</a> , but I assume you're not actually interested to read anything more from me, so I won't ramble more. much.)</p>
+<p>&gt; Do core devs wear special robes yet ?</p>
+<p>No, they write public research and open source code. It's a term. It has a reference, in the sense of an extension: I could point them out. They do stuff. I can follow their commits, when not completely destructured. It's a useful denotation. You're the one to presume here.</p>
+<p>&gt; What was said was that the poorly educated, intelectually destructured youths of today don’t have the mental werewithal to understand what’s going on, at all. [...] I think we may close on this note. How old are you ?</p>
+<p>FWIW, I tried to do some sarcasm there, and failed. Also for statistics and fun, I'm 22 +/- 1 - and I do feel young - but the comments are so inviting! - here are a couple of pitchforks: Ψ Ψ</p>
+<p>Anyway, I'll go back to assuming that there isn't a genius in Romania who has figured out client deanonymization in real time, and hence back to my deranged state. Cheers!</p>
+						</li>
+
+										<li id="comment-95610" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95610" title="">Thursday, 17 October 2013</a>
+							</div>
+						<p>Ha! If you think Trilema doesn't easily reduce to an I'm awesome masturbatorioum you've not been paying attention. It's a blog, you know ? </p>
+<blockquote><p>A totally honest question: by “chain integrity”</p></blockquote>
+<p>I mean a reference to the actual first rule of security. Consider cases : </p>
+<p>1. The door to the horse barn is solidly locked in place, by two Clapco D-29 deadbolts (the most impenetrable lock on the market today) and one chewed bit of licorice gum stuffed in the frame. The windows are well closed, this has been last checked half hour ago. The wall is without structural defect of any kind. The horses have long left.</p>
+<p>2. Alexandra has never left the house since six months ago when she married John except to go places with him or his mother. Therefore her child is John's.</p>
+<p>Security is in that sense quite alike science : you can't extrapolate fifty years of records BACK into time to then create a "dataset" which you use to extrapolate into the future. It just doesn't work that way.</p>
+<blockquote><p>I assume you’re not actually interested to read anything more from me, so I won’t ramble more.</p></blockquote>
+<p>I don't particularly mind, it's the OTHER thing that goes with the blog. For that matter, I find the fuckwits that start blogs to benefit from the earlier discussed advantages but then get indignant that the participants to the conversation don't fit better into the preselected audiences one'd see in a lecture hall quite amusingly deluded. You either control the message or the audience. If you start a blog and expect to wield the "because fuck you, that's why" stick at will you'd better be comfortable talking to absolutely anyone, and in terms comprehensible to them. If you're not either able or willing to do that it's time to drop the pretense and go phd.</p>
+<blockquote><p>It has a reference, in the sense of an extension</p></blockquote>
+<p>It also has, or moreover is developing a problem. </p>
+<p>I can appreciate the intellectual beauty and moral elegance of the published code part, you'll have to appreciate the practical difficulties of reading. Nobody reads.</p>
+<blockquote><p>who has figured out client deanonymization</p></blockquote>
+<p>If this was the concern we could have resolved it a lot sooner. I don't currently have code that can satisfy the implied test. I'm not trying to make it, either, this particular field is of marginal interest to me at the moment. This, of course, doesn't make Tor any less broken.</p>
+						</li>
+
+										<li id="comment-95615" class="commentbody"><div class="commenthead"><img alt='анон`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">анон</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95615" title="">Friday, 18 October 2013</a>
+							</div>
+						<blockquote><p> I’m 22 +/- 1 - and I do feel young</p></blockquote>
+<p>this nsa - anonymous thing is becoming some bad false-flag joke.</p>
+						</li>
+
+										<li id="comment-95618" class="commentbody"><div class="commenthead"><img alt='BingoBoingo`s avatar' src='http://www.thedrinkingrecord.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink"><a href='http://www.thedrinkingrecord.com' class='url'>BingoBoingo</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95618" title="">Friday, 18 October 2013</a>
+							</div>
+						<p>анон the joke could be worse. I once saw a puppy David Freese to death.</p>
+<p>(Go Dodgers)</p>
+						</li>
+
+										<li id="comment-96075" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96075" title="">Thursday, 14 November 2013</a>
+							</div>
+						<p>Time. Time cures all disagreements : </p>
+<blockquote><p><strong>asciilifeform</strong> <a href="http://cryptome.org/2013/10/nsa-tor-disinfo.htm">http://cryptome.org/2013/10/nsa-tor-disinfo.htm</a><br />
+<strong>mircea_popescu</strong> hahaha<br />
+<strong>mircea_popescu</strong> man, i tell you, being right about things i know about, like business, when everyone who thinks themselves just as qualified was wrong, and it took months is one thing. i know business.<br />
+<strong>mircea_popescu</strong> but being right about shit i don't know about, like this....<br />
+<strong>asciilifeform</strong> told ya it was 'b-team'<br />
+<strong>mircea_popescu</strong> it's a wholle different flute of champagne<br />
+<strong>mircea_popescu</strong> so you did, so you did.</p></blockquote>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-139401">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/mpex-breach-post-mortem?b=is%20the%20%231%20th&amp;e=u%27re#select' class='url'>MPEx breach - post mortem on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139401" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] is the #1 threat you face. Appallingly coded pieces of crap made by mentally feeble dorks (such as Tor or Bitdaytrade) are defeated through technical means all the time, sure. Nevertheless, if you're [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139414">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/why-i-suspect-schneier-is-an-us-agent?b=write%20blogs%20&amp;e=%20NSA#select' class='url'>Why I suspect Schneier is an US agent. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139414" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] write blogs on the topic of computer security. [&#8617;]Most recently half hour ago. [&#8617;]From Dear Guardian : stop being retarded : That contrary to planted disinformation of which the Guardian article is a fine example, the NSA [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139415">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/why-i-suspect-schneier-is-an-us-agent?b=article%20even&amp;e=that#select' class='url'>Why I suspect Schneier is an US agent. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139415" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] article even includes an oblique reference to Schneier in footnote 3. [&#8617;]Roughly a restatement of the well known Parkinson law of triviality. While it's true that [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139434">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/foregin-intelligence-analysts-peering-into-the-us-morass?b=is%20why%20proph&amp;e=arge#select' class='url'>Foregin intelligence analysts peering into the US morass on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139434" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] is why prophecies are such an important tool in the faithster'si bag of tricks. Making good use of the difference between science and business discussed here recently a particularly competent (or particularly lucky) faithster might just as well convince a large [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139435">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-disadvantage-of-teaching-people-the-alphabet-and-nothing-more-is-that-you-have-to-somehow-put-up-with-a-bunch-of-retards-that-can-now-express-themselves-in-writing?b=is%20a' class='url'>The disadvantage of teaching people the alphabet and nothing more is that you have to somehow put up with a bunch of retards that can now express themselves in writing. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139435" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] is all about and all for adolescents with nary a clue of anything and a rather tenuous grasp of the few teapots they know about. It then becomes politically expedient to manipulate the userbase : if your definition of a thing [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139755">
+					<div class='trackhead'>
+						<div class="commentcount">25</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/no-argument?b=Tor%20is%20a%20com&amp;e=coin#select' class='url'>No argument on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139755" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Tor is a complex topic (not least because it is a honeypot, not a legitimate service). Perhaps best left aside herbijudlestoids I guess it will be hard for me to convince you Bitcoin [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139880">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/lets-do-the-telegraph?b=guy%20did%20come&amp;e=%20the#select' class='url'>Let's do the telegraph on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139880" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] guy did come out with a book recently, which doesn't really merit a mention by name but which The Guardianix and the rest of the establishment have been duly pushing. Perhaps it's the case that it's not the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139949">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/gotta-love-that-negro-speak?b=you%20glad%20you&amp;e=%20and#select' class='url'>Gotta love that negro speak on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139949" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] you glad you've been still using Tor, much after MP told you to gtfo, because whatever, you're just equal to MP except for those places where you know better, and [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140501">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/dear-derps-you-are-being-herded?b=your%20nudies%20&amp;e=name#select' class='url'>Dear derps : you are being herded. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140501" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] your nudies on the iPad, it worked just for all those other retardedii chicks. &mdash;&mdash;&mdash;theguardian.com, wsj.com, washingtonpost.com, forbes.com, cnet.com, bloomberg.com, businessweek.com, you name [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140643">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-lulz-of-today-ddos-attacks-ransom-notes-tor-anonimity-and-other-faits-darmes-of-the-retarded-generation?b=be%20told%2C%20Tor&amp;e=king#select' class='url'>The lulz of today : DDoS attacks, ransom notes, Tor anonimity and other faits d'armes of the retarded generation on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140643" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] be told, Tor is not just a honeypot, run by the USG in the manner of crankbait. It's also the much larger pile of idiots flocking [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140780">
+					<div class='trackhead'>
+						<div class="commentcount">30</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-sexodus?b=which%20nobody&amp;e=uite#select' class='url'>The "sexodus". on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140780" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] which nobody reads ; new media companies nobody cares about. But yes, it is a last gasp, and yes it is quite [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141166">
+					<div class='trackhead'>
+						<div class="commentcount">31</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/so-hows-magic-work?b=the%20secret%20f&amp;e=ated#select' class='url'>So how's magic work ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141166" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the secret for good #3 magic is leadership. If your god isn't awesome, nobody will be bothered to hear the droning story of his mediated [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141203">
+					<div class='trackhead'>
+						<div class="commentcount">32</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/curriculum-vitae?b=designing%20a%20&amp;e=more#select' class='url'>Curriculum Vitae on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141203" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] designing a game so started a game publisher. IPO collected ~10k BTC. October 5th, 2013 : Published plain statements as to the true nature and actual function of the Tor network - dismissed at the time by the more [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141539">
+					<div class='trackhead'>
+						<div class="commentcount">33</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/so-the-broomstick-fired?b=wallets%2C%20%22tr&amp;e=g%20to#select' class='url'>So the broomstick fired. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141539" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] wallets, "trade" "Bitcoins" on Bitfinex, answer "legitimate" KYC questions, pay your taxes, read the newspaper, and dream about how you're still going to get to participate in the future. Someone's going to [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141759">
+					<div class='trackhead'>
+						<div class="commentcount">34</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/internoc24-llc-aka-internoc24com-is-a-scam-or-how-milan-dragan-slatjovic-stole-700-euro-from-me?b=selves.%20Anyw&amp;e=%20for#select' class='url'>Internoc24 LLC aka internoc24.com is a scam, or how Milan &#38; Dragan Slatjovic stole ~700 euro from me. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141759" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] selves. Anyway, I told the guy in no uncertain terms what exactly are the odds of me ever running NSA's alt-Tor, which yielded the funniest bit in the entire exchange yet :  Dragan Slatjovic // Staff Thanks for [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141776">
+					<div class='trackhead'>
+						<div class="commentcount">35</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/continut-platit-no-more?b=the%20cables%20%3F&amp;e=teen#select' class='url'>Continut platit no more. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141776" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] the cables ? They were going to do the usual "sit on the goodies and work them over with the Guardian" routine they do, except an "unknown" Romanian blogger decided to publish a subsection. Sixteen [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141815">
+					<div class='trackhead'>
+						<div class="commentcount">36</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/usg-in-btc-a-history-of-constant-failure?b=at%20any%20point&amp;e=%20for#select' class='url'>USG in BTC, a history of constant failure on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141815" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] at any point, if not everyone was equally public about the matter. The workings of media, be it "mainstream" or "social" or otherwise as propaganda instruments devoid of other utility or value shouldn't, for [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142535">
+					<div class='trackhead'>
+						<div class="commentcount">37</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-nine?b=and%20in%20the%20s&amp;e=lity#select' class='url'>The Story of Elliot Rodger. By Elliot Rodger. Adnotated. Part Nine. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142535" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] and in the same way, and for the same exact reasons, and to the same degree. Not just this, or that, but everything you ever had, everything your forefathers ever left you, as well as the possibility [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142712">
+					<div class='trackhead'>
+						<div class="commentcount">38</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/mps-definitive-dark-deep-etc-web-faq?b=Tor%2Fonion%2Fth&amp;e=mick#select' class='url'>MP's Definitive Dark / Deep / Etc Web FAQ on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142712" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Tor/onion/the rest of the crap, for another instance - you can't read what was said unless you're the NSA or any of the other guys spying on Tor traffic as a matter of course. There's always some gimmick [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143204">
+					<div class='trackhead'>
+						<div class="commentcount">39</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/stop-being-so-fucking-poor?b=to%20make%20him%20&amp;e=e%20of#select' class='url'>Stop being so fucking poor! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143204" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] to make him respectableiii, but we also don't happen to give much of a shit about all that -- it's tor after all, for the love of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146029">
+					<div class='trackhead'>
+						<div class="commentcount">40</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-3-important-things-about-the-new-wikileaks-controversy-adnotated?b=Assange%20want&amp;e=o%20to#select' class='url'>thelastpsychiatrist.com - 3 Important Things About The New Wikileaks Controversy. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146029" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Assange wanted to leak to the NYT, Der Spiegel, and the Guardian. However, he wanted the NYTto publish first to avoid the U.S. charge that he was leaking info to [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="49762" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833240-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-49762")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-49762");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-49762");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

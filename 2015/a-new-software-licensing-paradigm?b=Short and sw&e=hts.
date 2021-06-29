@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>A new software licensing paradigm on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">If "waifu" is "wife"<br />should "kung-fu" be "knife" ?
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-59725"><div class="post" id="post-59725">                    <h1><a href="http://trilema.com/2015/a-new-software-licensing-paradigm/" rel="bookmark" title="Permanent Link to A new software licensing paradigm">A new software licensing paradigm</a></h1>                        <div class="date">                                     Tuesday, 03 February, Year 7 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><strong>The problem with commercial software licenses</strong> isn't, as you might think, that they are commercially motivated. Sure, someone somewhere's making money off of it. So they should, if it's any good, because nothing's worth doing that's not worth paying for. The problem however is that they're wholly dependent on a <a href="http://trilema.com/2012/gpg-contracts/">meanwhile obsolete paradigm of organising commerce</a>. You might as well defend yourself by building a physical wall around which you dig a ditch which you fill with water. Cool story, but it didn't even work too well against cannonballs, and we have rockets and helicopters now. What's that moat going to do ?<sup><a href="#footnote_0_59725" id="identifier_0_59725" class="footnote-link footnote-identifier-link" title="If you think that protecting yourself with obsolete fiat contracts is not quite as laughable as Bashar al-Assad digging a water filled ditch around Syria, you've not spent too much time thinking about these matters. But then again, neither has Oliver Bussmann, and he's convinced UBS he knows about Information even! Sure, you'll starve in the near future, but at least you'll starve in good company. Just like all those dukes, counts, princes and fursts overfilling Paris in the XIXth century - at least you'll have your honor! Meanwhile your daughter won't, but... parents can't think of everything now can they.">i</a></sup></p>
+<p><strong>The problem with FOSS software licenses</strong><sup><a href="#footnote_1_59725" id="identifier_1_59725" class="footnote-link footnote-identifier-link" title="People that have been looking at this for too long from too close to the point they've given themselves mechanical myopia tend to imagine there's some sort of difference between open source and rmsource. There isn't, not really.">ii</a></sup> is that they aim to use the same mechanisms that make commercial software licenses powerful (ie, a reliance on the enforcement borne out of the obsolete, fiat-contract) but without any of the actual underpinings that make such an approach work (control of capital, through which of the means of production, through which of the pseudo-democratic political process). The recent <a href="http://btcbase.org/log-search?q=embrace+extend">decay of "open source"</a> as perhaps best typified by the <a href="http://btcbase.org/log-search?q=systemd">systemd rot</a> is simply that old wrathbird coming home to roost. Of course they were going to <a href="http://trilema.com/2013/youre-the-guy-who-wasnt-good-enough-to-sling-dope/">let a bunch of excited kids work their excitement into perhaps some sort of useful stuff</a>, and of course they were going to come and root through that, find the eggs and keep them.</p>
+<p>To remedy these defects - wilful as they may be they do not reflect either our will nor our best interests - and to enforce once and for all a properly functioning network<sup><a href="#footnote_2_59725" id="identifier_2_59725" class="footnote-link footnote-identifier-link" title="Freedom is not a matter of rights. Freedom is that which is traded to slavery by virtue of the accounting mechanism of rights. 
+Similarly, `net neutrality` is not in any way related to network freedom. To best understand the competing paradigms : the artificial perspective - as proposed by the obsolete governments and the rest of the numerously various paper fiat arrays - revolves around the `rights` of the `owners` of hardware, and the `intentions` of the writers of software. In this perspective, using a computer `against the will of its owner`, even if you're using it exactly in the manner it allows itself to be used, is `criminal` whatever that may mean anymore.
+Exactly contrary to that, the natural perspective : if you don't want me to use your server to print all the nude photos your users entrusted you, write your software and provision your hardware in such a way that I can't. Because if I can, then it is not my right but my freedom to do so.
+A parallel with human sexuality is not unwarranted here. At a past time when the ownership of female humans was the principal method to control capital formation and the political process, the same sort of dead hand fictions proposed that they in fact control the usage of women, that anyone owning a woman does so only as a sublicense from their sovereign ownership of all women, and may proceed only in furtherance of the regulation they emitted as to how women may be used and may not be used and so on and so forth. Specifically excluded from all this - the woman in question. Particularly `criminal` at the time - using a woman in the manner she herself wishes to be used. 
+Times have changed, women are now worthless, but computers aren't, and these same dead hand fictions propose anew : that they own all computers, that if you own a computer it's only a sublease from them, subject to furthering their regulations and so on and so forth. Specifically excluded from all this - what the code actually says and does. Particularly `criminal` - using a computer in the manner it itself allows to be used.
+I will never subscribe to this point of view. I own my women, as well as my computers, outright and immediately. Anyone wishes to dispute this point better bring along a [large enough] army, for I'm not merely willing to kill in its defense : I am entirely willing to destroy the entire world, if the choice ever comes between destroying the entire world and having as much as a hair snipped off my freedom.">iii</a></sup>, here's a proposed alternative software license : </p>
+<blockquote><p>I. You do not have, nor can you ever acquire the right to use, copy or distribute this software ;</p>
+<p>II. Should you use this software for any purpose, or copy and distribute it, to anyone or in any manner, you are breaking the laws of whatever <em>soi-disant</em> "sovereign jurisdiction" you may be deemed to be located within, and you promise to continue doing so in the indefinite future.</p></blockquote>
+<p><span style="background-color:#d3d3d3" id="select">Short and sweet. Let the whole old world burn, it wasn't any good to anyone anyway.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_59725" class="footnote">If you think that protecting yourself with obsolete fiat contracts is not quite as laughable as Bashar al-Assad digging a water filled ditch around Syria, you've not spent too much time thinking about these matters. But then again, neither has <a href=http://qntra.net/2015/02/ubs-groups-cio-wants-to-throw-bitcoin-under-the-buss/#comment-9164>Oliver Bussmann</a>, and he's convinced UBS he knows about Information even! Sure, you'll starve in the near future, but at least you'll starve in good company. Just like all those dukes, counts, princes and fursts overfilling Paris in the XIXth century - at least you'll have your honor! Meanwhile your daughter won't, but... parents can't think of everything now can they. [<a href="#identifier_0_59725" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_59725" class="footnote"><a href="http://trilema.com/2015/people-we-dont-like-fighting-each-other-an-ode/">People</a> that have been looking at this for too long from too close to the point they've given themselves mechanical myopia tend to imagine there's some sort of difference between open source and rmsource. There isn't, not really. [<a href="#identifier_1_59725" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_59725" class="footnote">Freedom is not a matter of rights. Freedom is that which is traded to slavery by virtue of <a href="http://trilema.com/2013/compliance/#identifier_4_50583">the accounting mechanism of rights</a>. </p>
+<p>Similarly, "net neutrality" is not in any way related to network freedom. To best understand the competing paradigms : the artificial perspective - as proposed by the obsolete governments and the rest of the numerously various paper fiat arrays - revolves around the "rights" of the "owners" of hardware, and the "intentions" of the writers of software. In this perspective, using a computer "against the will of its owner", even if you're using it exactly in the manner it allows itself to be used, is "criminal" whatever that may mean anymore.</p>
+<p>Exactly contrary to that, the natural perspective : if you don't want me to use your server to print all the nude photos your users entrusted you, write your software and provision your hardware in such a way that I can't. Because if I can, then it is not my right but my freedom to do so.</p>
+<p>A parallel with human sexuality is not unwarranted here. At a past time when the ownership of female humans was the principal method to control capital formation and the political process, the same sort of dead hand fictions proposed that they in fact control the usage of women, that anyone owning a woman does so only as a sublicense from their sovereign ownership of all women, and may proceed only in furtherance of the regulation they emitted as to how women may be used and may not be used and so on and so forth. Specifically excluded from all this - the woman in question. Particularly "criminal" at the time - using a woman in the manner she herself wishes to be used. </p>
+<p>Times have changed, women are now worthless, but computers aren't, and these same dead hand fictions propose anew : that they own all computers, that if you own a computer it's only a sublease from them, subject to furthering their regulations and so on and so forth. Specifically excluded from all this - what the code actually says and does. Particularly "criminal" - using a computer in the manner it itself allows to be used.</p>
+<p>I will never subscribe to this point of view. I own my women, as well as my computers, outright and immediately. Anyone wishes to dispute this point better bring along a [large enough] army, for I'm not merely willing to kill in its defense : I am entirely willing to destroy the entire world, if the choice ever comes between destroying the entire world and having as much as a hair snipped off my freedom. [<a href="#identifier_2_59725" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2015/bitbet-sbbet-january-2015-statement/">BitBet (S.BBET) January 2015 Statement</a></div>
+                <div class="alignright"><a href="http://trilema.com/2015/mps-rant-on-specification-work-as-to-why-all-dictionaries-suck-a-challenge-for-you/">MP's rant on specification work ; As to why all dictionaries suck ; A challenge for you</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2015/a-new-software-licensing-paradigm/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2015/a-new-software-licensing-paradigm/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>14 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-111958" class="commentbody"><div class="commenthead"><img alt='Gabriel Laddel`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Gabriel Laddel</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-111958" title="">Wednesday, 4 February 2015</a>
+							</div>
+						<p>"Our right lies in force. The word "right" is an abstract thought and proved by nothing. The word means no more than: -- Give me what I want in order that thereby I may have proof that I am stronger than you. Where does right begin? Where does it end?"</p>
+<p>From the Learned Protocols of the Elders of Zion</p>
+						</li>
+
+										<li id="comment-111961" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-111961" title="">Wednesday, 4 February 2015</a>
+							</div>
+						<p>In the context of the article, "right" is understood as a grant from an authority. Using a right necessarily reinforces both said authority and the submissive relationship with it. Oposite to this, freedom. So if there's a spring, freely taking water means one thing, rightfully taking water means quite another.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-131737">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://thetarpit.org/2018/on-intellectual-ownership?b=Or,t&amp;e=#select' class='url'>On intellectual ownership &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131737" title="">Friday, 11 October 2019</a>
+					</div>
+					<p>[...] Or, to quote a wise man: [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141561">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/no-such-labs-releases-v-for-victory?b=%23%23%23%23%23%23%23%23%23%23%23%23&amp;e=bute#select' class='url'>No Such lAbs releases V for Victory. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141561" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] ############################################################################## prolog = ''' (C) 2015 NoSuchlAbs. You do not have, nor can you ever acquire the right to use, copy or distribute [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142659">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/observations-on-certain-documents-contained-in-the-history-of-the-united-states-for-the-year-1796-in-which-the-charge-of-speculation-against-alexander-hamilton-late-secretary-o' class='url'>Observations on certain documents contained in the history of the United States for the year 1796 in which the charge of speculation against Alexander Hamilton, late secretary of the treasury is fully refuted. Written by himself. Adnotated by myself. on T</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142659" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] instead to be using her father's daughter ; or the priest's own god-given cunt he borrowed under license ; or some such theoretical device is however pretty expensive, not to mention very inconvenient - [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145408">
+					<div class='trackhead'>
+						<div class="commentcount">6</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/word-by-fucking-word-you-understand-me?b=here%20in%20mine&amp;e=ning#select' class='url'>Word by fucking word, you understand me ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145408" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] here in mine own arm, it is mine and not yours, to use as I please " ??? But that's what they had been blaring, off fifty foot tall breakfast cereal advertisements and during early morning [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145458">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/angels-with-dirty-faces-2?b=itself%20%22Chri&amp;e=ence#select' class='url'>Angels with Dirty Faces on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145458" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] itself "Christianity" and the poor Torah rescript calling itself "Islam" : that the former has the insolence to pretend god owns women, whereas the latter recognize men own women. By manner of consequence [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145568">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/pe-un-franc-poet?b=ultimate%20as%20&amp;e=aten#select' class='url'>Pe-un franc poet. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145568" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] ultimate as it is definitive -- is the consumption of the body of the erstwhile girl, the body so long cared and protected, now chained and welted, the body turned by the spirit of the slave hidden within, the body eaten [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145693">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/black-or-white-the-day-of-saturday?b=not%20even%20rem&amp;e=ons%2C#select' class='url'>Black or White (The day of Saturday) on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145693" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] not even remotely alike. We're not even remotely alike not merely because I own my whores outright. Outright, you understand me ? Outright, without license or permission, without licenses or conditions, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146164">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-8-characteristics-of-family-annihilators-adnotated?b=attempting%20t&amp;e=bout#select' class='url'>thelastpsychiatrist.com - 8 Characteristics of Family Annihilators. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146164" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] attempting that. It's stupid ; and no, it never did anything for you, either. [&#8617;]Aren't you starting to think just about [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147395">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://ztkfg.com/2019/10/v-study-reference-links/?b=A%20new%20softwa&amp;e=ell.#select' class='url'>V Study Reference Links &laquo; whaack</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147395" title="">Saturday, 1 February 2020</a>
+					</div>
+					<p>[...] A new software licensing paradigm   This post has links to other useful material some of which I include on this post as well. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154901">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/travolti-da-un-insolito-destino-nellazzurro-mare-dagosto/?b=commanded%20to&amp;e=much#select' class='url'>Travolti da un insolito destino nell'azzurro mare d'agosto on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154901" title="">Monday, 12 October 2020</a>
+					</div>
+					<p>[...] commanded to -- if she's any good, and if the virile imperator's commanding intra vires, which is an impossible conundrum to resolve. (Yes, I'm aware you stand quite ready to "propose a resolution" ; thank you very much [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154950">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://thetarpit.org/2018/shithub-2018-06?b=definitely%20n&amp;e=that#select' class='url'>May-June 2018 Shithub SSH key harvest, data and preliminary analysis &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154950" title="">Wednesday, 14 October 2020</a>
+					</div>
+					<p>[...] definitely not for the GitHub git admins maintaining their shitty infrastructure. What can I say, life's so unfair when it's filled to the brim with hallucinated choice. Or how did that [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-163901">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/the-cabin-in-the-cotton/?b=just%20like%20th&amp;e=%20for#select' class='url'>The Cabin in the Cotton on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-163901" title="">Wednesday, 19 May 2021</a>
+					</div>
+					<p>[...] just like they do it in Blowywood. [&#8617;]Or do you spell it with an "aah" ? [&#8617;]And don't let anyone tell you any different. [&#8617;]  &laquo; A bottle of whiskey for me ; and a can of whiskas for [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="59725" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834998-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-59725")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-59725");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-59725");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

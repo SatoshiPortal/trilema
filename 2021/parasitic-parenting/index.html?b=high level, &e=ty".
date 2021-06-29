@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Parasitic parenting on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">024776FFD3CBD21C872ECCD26AD078C5<br />BA0586E2E57CF68515E3C4828A673A6E
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-100077"><div class="post" id="post-100077">                    <h1><a href="http://trilema.com/2021/parasitic-parenting/" rel="bookmark" title="Permanent Link to Parasitic parenting">Parasitic parenting</a></h1>                        <div class="date">                                     Thursday, 25 March, Year 13 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>We're gonna do a source &#038; translation thing, because I don't feel like taking the<sup><a href="#footnote_0_100077" id="identifier_0_100077" class="footnote-link footnote-identifier-link" title="Utterly inordinate amount of, and for absolutely no good reason.">i</a></sup> time to produce actual English equivalent for literary Romanian expression on one hand, and you're as helpless as newborn kittens on the other (ie, machine translation's just about worthless for anything worth translating in the first place, though admittedly it works well enough for all the dumb shit that needn't be translated at all). </p>
+<p>So... first, the source : </p>
+<blockquote><p><b>diana_coman</b> ajuta in sensul ca a. nu mai tot trimit listele alea de vertices si triunghiuri pt ce e oricum mereu la fel b. face acolo cs ca are deja forma regulata si gata<br />
+<b>diana_coman</b> deci da, ajuta<br />
+<b>diana_coman</b> da' nu-mi dau seama daca ne-o parea rau dupa aia sau ceva, cum sa zic<br />
+<b>mircea_popescu</b> pia atunci hai sa facem asa. cerul e mereu aceelasi mesh, fa-l ca un sferoid turtit. si texturi punem dupa locatie, sau "cer" sau "ceiling" ce e<br />
+<b>mircea_popescu</b> auzi, fa-l tu ca un sfert de sfera si va fi foarte ok.</p>
+<p><b>diana_coman</b> lol, cum tu un sfert ?<br />
+<b>diana_coman</b> trebuie sa acopere totusi acolo<br />
+<b>mircea_popescu</b> deci o sfera sectionata nu la mijloc, ci r/2 distanta e centru</p>
+<p><b>diana_coman</b> a, a, nu un sfert ci ca partea de mai sus<br />
+<b>diana_coman</b> hm, sa vad ca stiu ca cs are pt sfera si pt hemisfera da' am asa o banuiala ca e bou si n-are parametru sa ii zici cat vrei<br />
+<b>mircea_popescu</b> pai un sfert lol :)<br />
+<b>mircea_popescu</b> tai in patru felii si iei una<br />
+<b>mircea_popescu</b> doar ca tai plane paralele</p>
+<p><b>diana_coman</b> ahaha, asa-s sferturile la tine? oricare 1 din 4? lolz<br />
+<b>mircea_popescu</b> pai ce-ti pasa de cs daca-i dai tu mesh ?</p>
+<p><b>diana_coman</b> pai la cer mai sus ai zis ca sa nu-i dau?<br />
+<b>diana_coman</b> deci : daca ii dam mesh oricum, poate fi orice<br />
+<b>mircea_popescu</b> pai ii dai ~o data~. nu ? il tot pui sa-si faca ca bou' ?</p>
+<p><b>diana_coman</b> tu, da' "o data" ala ca adica ce, ii fac acolo hard-coded zici?<br />
+<b>mircea_popescu</b> exact</p>
+<p><b>diana_coman</b> ca de incarcat tot le incarca<br />
+<b>diana_coman</b> ugh<br />
+<b>mircea_popescu</b> nush, nu insist.<br />
+<b>mircea_popescu</b> io doarzic, bine ?</p>
+<p><b>diana_coman</b> ma rog, presupun ca intr-un final o sa ma chiar uit cat dracu' e de mare in fapt meshul si daca-l fac pe server si daca nu e urias il si trimit si termin<br />
+<b>mircea_popescu</b> da' io nici intr-un caz nu vreau sa-l trimiti de fiecare data. ca ie stupid ce plm</p>
+<p><b>diana_coman</b> ca pana la urma de ce e fix asta fix sa ma trezesc apoi ca ma impiedic in el sau ceva<br />
+<b>mircea_popescu</b> nu e doar asta. si caracterul il dai gen o data.<br />
+<b>mircea_popescu</b> fa-l sa fie un singur obiect mereu, si nui ti-l tot cere atunci. nu ?</p>
+<p><b>diana_coman</b> pai teoretic fiind *acelasi mesh* nu-l trimiti de fiecare data ca na, are fisierul si deci nu-l mai cere, nu?<br />
+<b>diana_coman</b> aia, asa<br />
+<b>mircea_popescu</b> asa da. asa ar fi f bine.</p>
+<p><b>diana_coman</b> dar na, il trimit odata *per client*, drept<br />
+<b>mircea_popescu</b> deci" i-l dai de fiecare data" da' aia inseamna ca tre' sa ceara, si tu nu il schimbi deci el nu il cere.</p>
+<p><b>diana_coman</b> exact<br />
+<b>mircea_popescu</b> io zic ca asa ar fi ideal. leverage si ce design frumos avem noi fix pentru a fi util asa.</p>
+<p><b>diana_coman</b> cam asa<br />
+<b>mircea_popescu</b> noa. asa io zic ca e f bine.</p>
+<p><b>diana_coman</b> bine, tb deci sa schimb ierarhia aia da' aia e oricum in lucru asa ca nici nu ma asteptam sa n-am de schimbat la ea, nu e incotro<br />
+<b>mircea_popescu</b> si apa ca i-o tot dai per sector nu conteaza daca zici ca e douar 2 tri, si gata.<br />
+<b>mircea_popescu</b> pai noa, astea-s schimbari foarte benefice imo</p>
+<p><b>diana_coman</b> da, practic cu asta atunci chiar sunt linistita ca sunt toate in fapt decise real pe server si deci putem schimba daca e ce si cum vrem<br />
+<b>mircea_popescu</b> si e si frumos ca nu tot calculeaza dobi</p>
+<p><b>diana_coman</b> iar clientul pune ce i se da si basta<br />
+<b>mircea_popescu</b> sa vezi ca taie juma din load din asta</p>
+<p><b>diana_coman</b> ahaha<br />
+<b>diana_coman</b> dar hai, ca la load era rapid deja<br />
+<b>diana_coman</b> ce astepta sa primeasca fisierele si atat<br />
+<b>mircea_popescu</b> pai si ce daca e rapid nu se poate taia jumate ?</p>
+<p><b>diana_coman</b> lol, ba chiar si asa, un sfert de sfera!<br />
+<b>mircea_popescu</b> vai ce haterita si invidioasa pe succesu meu te-ai facut<br />
+<b>mircea_popescu</b> tu, io am si instafan! tu ai ?<br />
+<b>mircea_popescu</b> noa ? ATUNCI CE MAI VB!</p>
+<p><b>diana_coman</b> intre timp ma rontaie pe creier ca in fapt ar tb la generatorul de texturi sa ii pun sa genereze totodata si normalmap<br />
+<b>mircea_popescu</b> pai ar.<br />
+<b>mircea_popescu</b> dat fiindca</p>
+<p><b>diana_coman</b> pt ca e si util real si se si poate si e algoritm in ma-sa, si si si<br />
+<b>diana_coman</b> da<br />
+<b>mircea_popescu</b> da.</p>
+<p><b>diana_coman</b> da' am facut lista proaspata azi dimineata ca teoretic "nu era nimic" si tot creste, lol<br />
+<b>mircea_popescu</b> asa, asa.</p>
+<p><b>diana_coman</b> ah, am vazut ca ai fanfan<br />
+<b>diana_coman</b> i-ai schimbat si viata, ca acu' pune poze cu tine nu cu altul<br />
+<b>mircea_popescu</b> ceva arabel lol,<br />
+<b>mircea_popescu</b> uneori ma si intreb stii, plm, pustime din teheran. da peste trilema. ce plm hemoragie cerebrala<br />
+<b>mircea_popescu</b> daca ma gindesc la mine in cluj gen 1991... tu infarct faceam</p>
+<p><b>diana_coman</b> tu, mie astia tot imi par asa de... feminini in ma-sa, cum sa si zic<br />
+<b>diana_coman</b> ca nu fac si ei infarct masculin sa puna mana sa faca ceva de nervi<br />
+<b>mircea_popescu</b> apai is foarte muieratici. ca copchii bizantini in epoca iegzact.</p>
+<p><b>diana_coman</b> ci fac asa feminin ca lesina la tine pe prag si iti canta osanale<br />
+<b>mircea_popescu</b> asa, ce frumos era, mai retii /<br />
+<b>mircea_popescu</b> acu' mnoa, se tem sa nu cumva sa violeze pe vre-una.</p>
+<p><b>diana_coman</b> iaca, scrii tu pt femei da' 90% din "ele" sunt din astia, pfft<br />
+<b>mircea_popescu</b> aia ar fi grav. sa nu faca nic tata ziua nu e problema. numa' sa nu fie vre-una plinsa pe undeva ca ei nu i-o venit.<br />
+<b>mircea_popescu</b> da lol, ne cracanam de ris prin casa ca 90% din readership e fix asa, soymale 15-30</p>
+<p><b>diana_coman</b> dadad, se "tem" ca adica ce bine e sa aiba scuza aia, cum sa zic<br />
+<b>mircea_popescu</b> ie. ca femeia-i facuta din vise si nori, poti s-o omori asa, fara sa-ti dai seama.<br />
+<b>mircea_popescu</b> fantasme.</p>
+<p><b>diana_coman</b> ce pot zice, macar nu ma aia la cap pe mine astia ca m-ar si enerva<br />
+<b>mircea_popescu</b> ma rog, acu' fair is fair, s-o apucat ala sa puna tot musulmance in situatii compromitatoare si poze de prin trilema, nu poti zice ca nu face<br />
+<b>mircea_popescu</b> cu dumbphonu', ma rog, da "face"</p>
+<p><b>diana_coman</b> eu nu pricep ce facut e ala ca pui poze, da' in fine, multe din astea nu pricep eu<br />
+<b>mircea_popescu</b> nu ne e dat noua sa pricepem totul</p>
+<p><b>diana_coman</b> asa, asa<br />
+<b>mircea_popescu</b> si asta nu e chiar asa rau cum suna<br />
+<b>mircea_popescu</b> nici io nu pricep, da'... plm, teheranu' lor, sa si-l aia.</p>
+<p><b>diana_coman</b> ooo, nici nu, chiar sunt unele chestii de sper sa nu ajung sa le chiar pricep, lol<br />
+<b>mircea_popescu</b> ce sa si faca ?<br />
+<b>mircea_popescu</b> e o chestie deschisa asa. ce sa faca ? se baga in boko haram ? </p>
+<p><b>diana_coman</b> lasa ca gasisem si eu unul de scria de grafica asa chiar cu cap si coada si sens si matematica, pfuai. Am tot cautat sa-i gasesc un email, ceva, neam, da' am gasit - e din egipt, bun, da' ...e clar cu totul in blender, ugh<br />
+<b>mircea_popescu</b> io is de acord cu obiectia, "pune poze cu tine nu cu altul." bun. sa faca ifarct asa ca barbatii, macar ca baietii. sa faca ceva. bun, ce ? </p>
+<p><b>diana_coman</b> adica descrie si algoritm si tot dupa care ca-cum sa faci din "nodes" si nu stiu ce, sa tot plimbi cu mouse-ul in blender, ugh<br />
+<b>diana_coman</b> si lucreaza pt ei chiar<br />
+<b>mircea_popescu</b> apai nu ma mir.<br />
+<b>mircea_popescu</b> tu, daca vrei sa lucreze pentru noi vezi ce cere. io is pentru sa evaluam un egiptean</p>
+<p><b>diana_coman</b> pai sa iasa din casa, sa dea un party si sa faca poze la el cu fete ori ma rog, la fete, nabii<br />
+<b>mircea_popescu</b> ahahahahaah</p>
+<p><b>diana_coman</b> sa se duca la coltul strazii si sa faca poze daca chiar e asa greu<br />
+<b>mircea_popescu</b> meri tu<br />
+<b>mircea_popescu</b> tu nu esti normala la cap. tu vrei sa VORBEASCA CU O FATA ?! </p>
+<p><b>diana_coman</b> da, precum s-a exprimat unu' revenit anul trecut ca a vazut younghands "tu tot asa ai ramas de pui lumea la treaba"<br />
+<b>mircea_popescu</b> dilia vietii, SI AIA SA VORBEASCA CU EL !?<br />
+<b>mircea_popescu</b> tu de pe ce planeta esit, astia n-or mai vorbit de 20 de ani.</p>
+<p><b>diana_coman</b> pai atunci sa clipoceasca numai din mobil la ea, in fine<br />
+<b>diana_coman</b> da' macar asa cu directie, cum sa zic<br />
+<b>diana_coman</b> sa-si faca o instalatie cu 10 brate cu mobile si merge cu aia pe strada de face cate 10 poze simultan din diverse unghiuri<br />
+<b>mircea_popescu</b> tu se caca pe ei. si pe-aici, merge sclava la ceva pisi, "imi place de tine, cine esti ?" alea. aia "maimi mami!! MAMI!!!!!" fuge dupa ma-sa.</p>
+<p><b>diana_coman</b> poftim<br />
+<b>mircea_popescu</b> aia ar fi ceva.</p>
+<p><b>diana_coman</b> pai zau, am stat si-am "gandit" aici 3 minute da' el "n-are ce sa faca", cacat cu perje<br />
+<b>mircea_popescu</b> da' pe bune acuma, tu nu stii ca nu te-ai dus sa incerci. da' nu is capabili sa interactioneze social cu necunoscuti. s-o pierdut aia.<br />
+<b>mircea_popescu</b> meri si vezi daca nu ma crezi, vorbeste cu una.</p>
+<p><b>diana_coman</b> zici ca or reveni la "nu ne-a facut nimeni cunostinta"?<br />
+<b>diana_coman</b> o fi, tot parte din revenire, lol<br />
+<b>mircea_popescu</b> iar aialalta, ca-si face robotel... ma rog, cum e diferit de clipocit ? ca "l-o facut el" ? pai tot din bucati il face, nu e ca si cum il face din sine.<br />
+<b>mircea_popescu</b> fix acolo, da. nu IS CAPABILI sa negocieze social cu necunoscuti. daca-i ceri directions pare 100% ok, daca-i iesi din cele 2-3 scripturi de-astea de 2-3 replici e 0%.<br />
+<b>mircea_popescu</b> nu au nici o conceptie de limita, nici o practica sociala, nimic. </p>
+<p><b>diana_coman</b> apai in afara cazului cand il face din matele proprii, tot nu e din sine, da' macar nu e reteta existenta, cum sa zic, acolo de clasa 1<br />
+<b>mircea_popescu</b> aia zic, ca nu mai e posibil. acum si ca sa se descurce cu un robinet ce n-o mai vazut intra pe reddit sa vada.</p>
+<p><b>diana_coman</b> mda, aia cred pt ca si de unde experienta aia cu negociat ca na, nu e voie nu se poate nu aia nu ailalta<br />
+<b>mircea_popescu</b> nu mai au incredere in ei insisi sa faca ceva ei pentru ei. deloc.<br />
+<b>mircea_popescu</b> ca noa, cam toti astia de ~20 or crescut fara parinti</p>
+<p><b>diana_coman</b> mda, cam aia e de fapt. Doar acu' cateva zile chiar i-am zis unuia ca bai, tu esti "helpless" de fapt, aia-i problema ta, ce sa mai<br />
+<b>diana_coman</b> si mda<br />
+<b>mircea_popescu</b> prin care intelegem fara tati. ci cu doua pizde anxioase, una "mami" cealalta "tati" da' la fel de cum sa zic... nici maica-mea nici maica-ta nici a nimanui n-o fost veci asa ghei ca astea</p>
+<p><b>diana_coman</b> mai rau decat fara parinti ca daca erau fara, n-aveau incotro si trebuiau sa se dumireasca singuri cumva<br />
+<b>mircea_popescu</b> exact. or crescut cu paraziti.<br />
+<b>mircea_popescu</b> aia e. nitwits exact. nici macar orfani, ci parazitati emotional.</p>
+<p><b>diana_coman</b> cam asa, ugh<br />
+<b>mircea_popescu</b> si atunci n-au nici resursele, nici rezultatele practicii istotrice a acumularii resurselor.<br />
+<b>mircea_popescu</b> si iata. intr-adevar. mi-am scris articol pe azi, numa' bine.</p>
+<p><b>diana_coman</b> lol, tb sa gasesc cumva si eu o modalitate sa scot cod din conversatii.<br />
+<b>mircea_popescu</b> stii ?<br />
+<b>mircea_popescu</b> chiar ma gindeam aici, bai da' o exploatezi la singe, nu ase numa'.</p></blockquote>
+<p>And <em>second</em>, as it behooves it, the (summarized<sup><a href="#footnote_1_100077" id="identifier_1_100077" class="footnote-link footnote-identifier-link" title="You're in luck, this term is formally defined! 
+Summary translation is that equivalent of a given text in a different language which includes some but not all points of the original with the explicit promise that given a measure for importance, all missing points will fall under it, and all points over will make it into the translation.">ii</a></sup>, centralized<sup><a href="#footnote_2_100077" id="identifier_2_100077" class="footnote-link footnote-identifier-link" title="You're in luck, this term is formally defined! 
+In the context of translation, centralization denotes the organization of the act of translation around an idea or philosophical proposition, such that all Gordian knots are forever cut and all ambiguities are reliably resolved in the same direction.">iii</a></sup> and homogenized<sup><a href="#footnote_3_100077" id="identifier_3_100077" class="footnote-link footnote-identifier-link" title="You're in luck, this term is formally defined!
+In the context of translation, homogenization is the process whereby implicit literary reference is kept to the same level for all nodes of the translation tree (this necessarily drags in the implication it won't be a very high level, as is the case with most equalizations), and therefore it has a lot in common with what simple minds fail to express usefully (or at all) when discussing their half-baked notions of `simplicity`.">iv</a></sup> ; but also checked for root failure<sup><a href="#footnote_4_100077" id="identifier_4_100077" class="footnote-link footnote-identifier-link" title="You're in luck, this term is formally defined!
+Checking for root failure is the process whereby an omniscient owner prevents the natural compounding of errors from ever exceeding a certain epsilon, and blocks their propagation up the tree of meaning.">v</a></sup>) transation : </p>
+<ol>
+<li>"It helps in the sense that I don't have to keep sending descriptors for immutables, they're just built in place. I just can't tell if we won't live to regret it is all."<br />
+"Do it that way, the sky a flattened spheroid and textures will go in by location, sky or ceiling or whatever. make the flattened spheroid a quarter sphere and it'll be fine."</li>
+<p><br >
+<li>"What do you mean a quarter ? It's a dome, it's supposed to cover the rectangle."<br />
+"A sphere cut not in the middle, but half a radius away from the center."<br />
+"Ah you don't mean a proper quarter, just the topmost section"<br />
+"What do you think a quarter is ? Cut something in four parts and take one. Just, you cut parallel planes."</li>
+<p><br >
+<li>"That's your notion of a quarter ? Any of four non-equivalent pieces ?"<br />
+"What do you care about the client's doings if you give it out explicitly anyway ?"</li>
+<p><br >
+<li>"Didn't you just tell me not to give it explicitly ? If I do, sure, it can be whatever you want."<br />
+"But it's given once, not re-computed all the time."</li>
+<p><br >
+<li>"What's that once to mean ? Hard-coded in there ?"<br />
+"Sure."</li>
+<p><br >
+<li>"Otherwise it still gets loaded... ugh."<br />
+"I don't know. I'm not about to insist. I'm just saying things by the book here, theoretically."</li>
+<p><br >
+<li>"In the end I guess I'm going to check it for size. If it's not huge generate it server-side and be done with it."<br />
+"I don't want you to keep sending it over the wire. That's just dumb."</li>
+<p><br >
+<li>"If you want this one thing fixed it'll keep cropping up for being different."<br />
+"It's not just this one thing. The character mesh you send over just once, and other things. Make its hash immutable, it doesn't keep asking for it then, does it ?"</li>
+<p><br >
+<li>"At least in theory it being the same it won't be sent but once. Right, that."<br />
+"Alright, yes. That'd be very good."</li>
+<p><br >
+<li>"It still gets sent once <em>per client</em>, that's all."<br />
+"In this sense 'send it each time' becomes each time it's asked for, and its hash doesn't change so it doesn't get asked for."</li>
+<p><br >
+<li>"That's exact."<br />
+"I'd say it's also ideal. Leveraging the perfect design we have, made to support this very case and so on."<br />
+"Right."<br />
+"Very good then. And water doesn't matter if you say it's just two triangles, and that's that."</li>
+<p><br >
+<li>"Alright, I'm going to have to alter the hierarchy model, but it was being worked on anyway so I didn't even expect it stays put, there's no way out."<br />
+"These are deeply beneficial changes in my opinion."</li>
+<p><br >
+<li>"Yes, this puts to rest the matter, everything's done server side and so usefully mutable. The client paints what it's given to paint and that's that."<br />
+"It also takes out all the spurious local calculations which is beautiful. Watch it'll cut half the load away."</li>
+<p><br >
+<li>"Hahaha. Come, come, the load's quick already. Net-bound only pretty much."<br />
+"So if it's quick it can't be halved ?"</li>
+<p><br >
+<li>"Sure, even quarter-sphered!"<br />
+"What a hateful person invidious of my success you've become.<sup><a href="#footnote_5_100077" id="identifier_5_100077" class="footnote-link footnote-identifier-link" title="There's no way out of this, massive decade-old Gayromeo in-joke.
+The gist of it being that some `Internet expert` (the period equivalent of the `social media influencer`) with serious socialization issues (and all the rest of the... difficulties, let's say, stereotipically perceived as attendant in such circumstances) made some comments which were remarkably structured given their utter left-field nonsensical composition, and... it stuck.
+So stuckily it stuck, in fact, that the whole world has to undergo `social distancing` because the (absent!) parents failed in their mission while all these Vali Perfus multiplied to the point there has to be some kinda societal response to their sheer inability to comprehend personal space. Or in other words : my private jokes are only private to me ; to you they're the very substance of your daily life. Well, `your`, whatevers.
+Your life is mine.">vi</a></sup>. Listen, you! I've even got a fan on instagram. Do you ? Well ? WHAT ARE WE EVEN TALKING ABOUT!"</li>
+<p><br >
+<li>"Meanwhile it's eating me that the texture generator should also spit out normalmaps."<br />
+"It should. Given that therefore."<sup><a href="#footnote_6_100077" id="identifier_6_100077" class="footnote-link footnote-identifier-link" title="The Romanian construction `dat fiindca` is circular in a comedic sense that can't be rendered in English because English has no humour (and barely any rhymes at all). It's just not a fun language, in any sense.
+It's fucken dour. Just like you.">vii</a></sup><br />
+"It's both actually useful and definitely possible, and algorithmic and and and. Yep."<br />
+"Yep."</li>
+<p><br >
+<li>"I started a fresh to-do list this morning, for there was 'nothing left' theoretically, and I'm getting more sheets for it."<br />
+"Good, good."</li>
+<p><br >
+<li>"But yes, I've seen you've got a fanfan. Even changed his life for him, now he posts pictures with you instead of someone else."</li>
+<p><br >
+<li>"Some Arabic kid<sup><a href="#footnote_7_100077" id="identifier_7_100077" class="footnote-link footnote-identifier-link" title="Technically `arabel` is diminutive and perhaps even vaguely derogatory, denoting the slender build and complaisant social presentation of young Arab kids of reasonably middle class extraction such as'd be encountered in the (very narrow) Romanian social practice some years ago.">viii</a></sup>. Sometimes I wonder, you know... fuck, kiddos from Teheran. Rus into Trilema. Da fuck, cerebralo hemorrhage. If I think of myself back in 1991... It'd have stopped my ticker."</li>
+<p><br >
+<li>"Nevertheless they seem to me so... feminine, how shall I put it. They're not having a male heart attack to set themselves to doing something out of that fury."<br />
+"They're very girly, that's true. Like perio Byzantine kiddos exactly. How <a href="http://trilema.com/2020/nannare/?b=vorta&#038;e=quer#select">nice it was</a>, do you recall ?"<br />
+"They do it very feminine-like, fainting on your doorstep and singing hossanahs."<br />
+"Whadday ya want, they're concerned they might rape some chick. That'd be regrettable. Doing nothing all day long's no problem, just as long as there's no cryied out chickie anywhere who didn't feel like it right then."</li>
+<p><br >
+<li>"Yeah, you write for women of which 90% are this kinda woman, pffft."<br />
+"Yea lol, it's a subject of constant amusement what large proprotion of the readership's exactly the 15 to 30yo soysexual."</li>
+<p><br >
+<li>"Yeah, yeah. They're 'concerned' in the sense of, what a great excuse it is."<br />
+"It is. Because woman's made of dreams and clouds, you can kill her just like that, without even realising it. Phantasmes<sup><a href="#footnote_8_100077" id="identifier_8_100077" class="footnote-link footnote-identifier-link" title="As in, the sort of `imaginary` beings that suck one's life away. Vampires.">ix</a></sup>."</li>
+<p><br >
+<li>"At least they don't come bothering me."<br />
+"But, fair's fair, he took to posting muslim chicks in compromising situations and pictures culled from Trilema. Can't say he's not doing anything. With the phone, it's true, but it's still 'doing'."</li>
+<p><br >
+<li>"What kinda doing is that, posting pictures... but whatever, many such I don't understand."\<br />
+"It's not given us to understand everything."<br />
+"Hear, hear."<br />
+"Nor is it as bad a lot as it may sound. Their Teheran, let them mind it."</li>
+<p><br >
+<li>Very much so, there's things I hope never to come to understand."<br />
+"What could he do ? It's open enough. What ? Join Boko Haram<sup><a href="#footnote_9_100077" id="identifier_9_100077" class="footnote-link footnote-identifier-link" title="Do you suppose the name comes from the niggardly miscomprehension of the French word `beaucoup`, as in, `a whole lotta things forbidden` ? The `very useful` tardpedia doesn't deem this point worthy of their darkening elucidation, and... well... (I intended for a link to go in there, to whichever article where I went into detail as to how `a quote` exists `on the web` in hundreds of EXACT copies, but never ever with any more context, even to the ludicrous lengths that if the quote were to include a [...] token, out of the hundreds of google-paste quotists NOT ONE will have filled in the blank. After spending some time looking I didn't turn it up, so it stays... blank.">x</a></sup>) ? I can subscribe to the objection, 'at least pictures of yourself rather than another', ok, let him have male heart attacks, or at least boyish, fine. let him do something. what ?"</li>
+<p><br >
+<li>"Forget it, I had found someone writing sensibly on graphics, math included, everything. I searched and searched for some contact, eventually it turns out guy's from Egypt, ok, and... fully invested in <a href="http://trilema.com/2015/minigame-smg-june-2015-statement/#footnote_6_62044">Blender</a> of all things."<br />
+"I am not surprised. If you want him to work for us see what he wants. I'm not against evaluating some Egyptian."</li>
+<p><br >
+<li>"Get out of the house. Throw a party and shoot the girls piled up on him. Or girls in general, from a distance, bloody hell."<br />
+"Hahahahahaha"<br />
+"Let him go out on the street corner and take pictures."<br />
+"Go away. You're unhealthy in the head. You want him to TALK TO A GIRL ?!"<br />
+"Yeah, I'm sure. Like some loser checking in to see if younghands maybe folded into his fold put it, 'you haven't changed, still putting people to work'."<br />
+"Nut of all time. HER TALK BACK TO HIM ?! Da fuck planet are you from, these idiots haven't talked in twenty years."<br />
+"Let him blink his dumbphone at her then, whatever. At least it should have some directionality, some intentionality. Something [that breaks <a href="http://trilema.com/2020/lets-talk-about-power/?b=nobody%20could&#038;e=accuse#select">the PD fantasy</a>]. Let him build a ten arm robot and drive it down the street and take 10 simultaneous shots from angles. There, I spent two minutes with it, but he 'has not what to do' bullcrap."<br />
+"They'll just shit themselves. It's no different anywhere in the world. Slavegirl goes over to some kitten, 'hey, I like you, who are you ?' like God meant it. The 'victim' runs off, 'Mom!<sup><a href="#footnote_10_100077" id="identifier_10_100077" class="footnote-link footnote-identifier-link" title="`Mom!` being the exact opposite of `Mom ?`.">xi</a></sup> MOM!!!' immediately. Seriously, you don't know about it for lack of trying, but they're not capable of social interaction with unknowns. That's lost. Go check for yourself if you don't wish to believe me, try and talk to some girlie."
+</li>
+<p><br >
+<li>"You're saying it's running back to '<a href="http://trilema.com/2013/regulation-for-our-lord-regulos/#footnote_0_51832">we were not introduced</a>' ? I guess, part of the general... <em>re</em>volution."<br />
+"And on the other hand, making robots... I beg your pardon, how's it different from blinking ? He did it ''himself' ? Still made from parts, not like he can make it from 'himself' neh. The broader issue's right there : they lack the capability of social negotiation with unknowns. If you're <a href="http://trilema.com/2010/nu-exista-prosti-online/">limiting the interaction</a>" to asking for directions or something it might seem 100% working ; but if you go out of the coupla preloaded scripts worth two-three replies each, it suddenly and irretrievably drops to 0%. They've no conception of limit, no social practice whatever, nothing at all." </li>
+<p><br >
+<li>"Ok, unless he makes it out of his own viscera it's not 'from himself' absolutely. But at least it's not a pre-existing recipe on the primary school level."<br />
+"That's what I'm saying is gone. Nowadays even a faucet he's not encountered before he'll phone-reddit to see 'examples'."<br />
+"That I can belive. Whence's that experience to come, this is not allowed that is not possible the other's bla bla."<br />
+"They've not the self-confidence to do something by themselves, for themselves. Not at all."<br />
+"Myeah, that's it isn't it. Days ago I told off one, 'dude, you're substantially helpless, that's <em>what</em> you are'.<br />
+"The entire cohort around 20 years old grew up without parents. By which we mean, without fathers. Two <a href="http://trilema.com/2020/toxic-feminity/">anxious cunts</a> instead, one 'mami' the other 'papi' but both equally... how shall I put it, neither my mother nor yours nor nobody's ever was this fucking faggoty."</li>
+<p><br >
+<li>"Worse than without parents. If they were truly without they'd have figured it out as best they could under that pressure."<br />
+"Right you are, they grew up with parasites. Nitwits exactly. Not even orphans, merely parasitized emotionally."</li>
+<p><br >
+<li>"That'd be it, ew."<br />
+"Thus they've neither the resources, nor the results of the historical practice of accumulating resources. And there you go. Indeed I've written today's article, not bad."</li>
+<p><br >
+<li>"Lol. I've gotta find some way to squeeze code out of convos."<br />
+"You know ? I was just thinking, 'man, you're truly exploiting her, not just a little.'"</li>
+</ol>
+<p>As the man once famously said... that should be good enough, anyways.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_100077" class="footnote">Utterly inordinate amount of, and for absolutely no good reason. [<a href="#identifier_0_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_100077" class="footnote">You're in luck, this term is formally defined! </p>
+<p>Summary translation is that equivalent of a given text in a different language which includes some but not all points of the original with the explicit promise that given a measure for importance, all missing points will fall under it, and all points over will make it into the translation. [<a href="#identifier_1_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_100077" class="footnote">You're in luck, this term is formally defined! </p>
+<p>In the context of translation, centralization denotes the organization of <em>the act of translation</em> around an idea or philosophical proposition, such that all Gordian knots are forever cut and all ambiguities are reliably resolved in the same direction. [<a href="#identifier_2_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_100077" class="footnote">You're in luck, this term is formally defined!</p>
+<p>In the context of translation, homogenization is the process whereby implicit literary reference is kept to the same level for all nodes of the translation tree (this necessarily drags in the implication it won't be a very <span style="background-color:#d3d3d3" id="select">high level, as is the case with most equalizations), and therefore it has a lot in common with what <a href="http://trilema.com/2016/there-has-not-yet-been-seen-a-simple-thing-even-if-were-drowning-in-simple-people/">simple minds</a> fail to express usefully (or at all) when discussing their half-baked notions of "simplicity". [<a href="#identifier_3_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_100077" class="footnote">You're in luck, this term is formally defined!</p>
+<p>Checking for root failure is the process whereby an <a href="http://trilema.com/2017/dupa-dealuri/?b=The%20secret&#038;e=perdition%20find#select">omniscient owner</a> prevents the natural compounding of errors from ever exceeding a certain epsilon, and blocks their propagation up the tree of meaning. [<a href="#identifier_4_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_100077" class="footnote">There's no way out of this, <a href="http://trilema.com/2012/the-man-with-the-golden-arm/?b=maxim&#038;e=romeo#select">massive</a> decade-old <a href="http://trilema.com/2012/semne-clare-ca-esti-gay-despre-care-nici-macar-nu-ti-dai-seama/?b=gay%20de-ala&#038;e=romeo#select">Gayromeo</a> <a href="http://trilema.com/2012/ovidiu-stresu-va-invita-la-minunata-lume-a-internetului/?b=Gay&#038;e=Romeo#select">in-joke</a>.</p>
+<p>The gist of it being that some "<a href="http://trilema.com/2010/i-am-very-smart/">Internet expert</a>" (the period equivalent of the "social media influencer") with <a href="http://trilema.com/2010/spatiu-personal/">serious socialization issues</a> (and all the rest of the... difficulties, let's say, stereotipically perceived as attendant in such circumstances) made some comments which were remarkably structured given their utter left-field nonsensical composition, and... it stuck.</p>
+<p>So stuckily it stuck, in fact, that the whole world has to undergo "social distancing" because the (absent!) parents failed in their mission while all these Vali Perfus multiplied to the point there has to be some kinda societal response to their sheer inability to comprehend personal space. Or in other words : my private jokes are only private to me ; to you they're <a href="http://trilema.com/2014/spamming-reddit-an-experiment/#identifier_3_56442">the very substance</a> of your daily life. Well, "your", whatevers.</p>
+<p>Your life is mine. [<a href="#identifier_5_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_100077" class="footnote">The Romanian construction "dat fiindca" is circular in a comedic sense that can't be rendered in English because English has no humour (and barely any rhymes at all). It's just not a <em>fun</em> language, in any sense.</p>
+<p>It's fucken dour. Just like you. [<a href="#identifier_6_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_100077" class="footnote">Technically "arabel" is diminutive and perhaps even vaguely derogatory, denoting the slender build and complaisant social presentation of young Arab kids of reasonably middle class extraction such as'd be encountered in the (<a href="http://trilema.com/2019/din-togo-din-togo-da-de-a-cui/?b=Din%20Togo&#038;e=cui#select">very narrow</a>) Romanian social practice some years ago. [<a href="#identifier_7_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_100077" class="footnote">As in, the sort of "imaginary" beings that suck one's life away. Vampires. [<a href="#identifier_8_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_100077" class="footnote">Do you suppose the name comes from <a href="http://trilema.com/2020/pimp-by-robert-beck-aka-iceberg-slim-adnotated-without-permission-chapter-5-the-jungle-fauna/#identifier_11_97318">the niggardly miscomprehension</a> of the French word "<a href="http://trilema.com/2012/pfoai-deci-cititoarele-nu-intelege-nimic/">beaucoup</a>", as in, "a whole lotta things forbidden" ? The "very useful" <a href="http://trilema.com/2013/wikipedia-the-special-olympics-for-the-mentally-retarded/">tardpedia</a> doesn't deem this point worthy of their darkening elucidation, and... <a href="">well</a>... (I intended for a link to go in there, to whichever article where I went into detail as to how "a quote" exists "on the web" in hundreds of EXACT copies, but never <em>ever</em> with any more context, even to the ludicrous lengths that if the quote were to include a [...] token, out of the hundreds of google-paste quotists NOT ONE will have filled in the blank. After spending some time looking I didn't turn it up, so it stays... blank. [<a href="#identifier_9_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_100077" class="footnote">"Mom!" being the exact opposite of "<a href="http://trilema.com/2017/mom/">Mom ?</a>". [<a href="#identifier_10_100077" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2021/sextette/">Sextette</a></div>
+                <div class="alignright"><a href="http://trilema.com/2021/hello-frisco-hello/">Hello, Frisco, Hello</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2021/parasitic-parenting/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2021/parasitic-parenting/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>11 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-161722" class="commentbody"><div class="commenthead"><img alt='No. 1 Fan`s avatar' src='http:///fakemirceapopescu/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='/fakemirceapopescu/' class='url'>No. 1 Fan</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-161722" title="">Thursday, 25 March 2021</a>
+							</div>
+						<p>Instagram account is big deal. Has over 1 milion follower. Before I was only get 10-15 thousand like per picture once a day or week but now I change and yesterday has <a href="https://www.instagram.com/p/CM1LSkAs8cd/?utm_source=ig_web_copy_link">65939</a> likes on whole account in 24 hour. This as much as best most brand gets, like @bmw or @dior only has about same.</p>
+						</li>
+
+										<li id="comment-161723" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-161723" title="">Friday, 26 March 2021</a>
+							</div>
+						<p>You'll excuse me if my perspective on the matter's rather informed by tidbits such as <a href="https://www.insider.com/instagrammer-arii-2-million-followers-cannot-sell-36-t-shirts-2019-5">https://www.insider.com/instagrammer-arii-2-million-followers-cannot-sell-36-t-shirts-2019-5</a></p>
+						</li>
+
+										<li id="comment-161724" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-161724" title="">Friday, 26 March 2021</a>
+							</div>
+						<p>Not to mention lulz like <a href="https://theurbantwist.com/2020/06/05/journalist-gets-fired-for-pretending-to-board-up-vandalized-business-for-photo/">https://theurbantwist.com/2020/06/05/journalist-gets-fired-for-pretending-to-board-up-vandalized-business-for-photo/</a></p>
+						</li>
+
+										<li id="comment-161725" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-161725" title="">Friday, 26 March 2021</a>
+							</div>
+						<p>Bwahahaha.</p>
+<p>Black lives evidently matter... for something.</p>
+						</li>
+
+										<li id="comment-161777" class="commentbody"><div class="commenthead"><img alt='Okan`s avatar' src='http://nan/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://nan' class='url'>Okan</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-161777" title="">Saturday, 27 March 2021</a>
+							</div>
+						<p>hello everyone like before my dreams work :) maybe :)</p>
+						</li>
+
+										<li id="comment-163369" class="commentbody"><div class="commenthead"><img alt='Evadbe`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Evadbe</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-163369" title="">Tuesday, 4 May 2021</a>
+							</div>
+						<p>About footnote vi...what is <a href="https://zoso.ro/mircea-popescu-este-cel-mai-influent-si-mai-destept-om-din-lume-si-din-romania/">this</a>?</p>
+						</li>
+
+										<li id="comment-163381" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-163381" title="">Tuesday, 4 May 2021</a>
+							</div>
+						<p>@<b>Evadbe</b> I dunno. A heaping helping of ye olde &#038; ever self-same rural righteousness ? </p>
+<p>That's what it looks to me like, anyways -- incantation work, whereby structurally marginal nobodies attempt a retelling of phenomena &#038; the world at large in more familiar, and so more palatable terms. It's all there, the reusing of typical narratives, the narrow-mindedness of pre-closed horizons, the whole mental apparatus of the <del>peasant</del> subsistence farmer once removed. Caragiale's perennial "Cine-o fost Traian ?" "Un om bun." "Bun, dragutul de el, zic zau lu' dumnezau ca tare bun om o mai fost si Traian cela." precisely.</p>
+						</li>
+
+										<li id="comment-163399" class="commentbody"><div class="commenthead"><img alt='Moromete`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Moromete</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-163399" title="">Wednesday, 5 May 2021</a>
+							</div>
+						<p>Pardon scuzati deranjul, dar ai dvs parinti D-le Popescu ce erau ei, aviatori?</p>
+						</li>
+
+										<li id="comment-163400" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-163400" title="">Wednesday, 5 May 2021</a>
+							</div>
+						<p>Mei asta, hai saț zic un banc. Cica se suie un negru in copac, si careva fara treaba repede ca "Us la maimuta! Ce sa mai pricepe!" </p>
+<p>La care ie problema negrului sa se deie jos de-acolo, sa se a apuce sa explice ca daca tacsu' o fost negru ca si el nu inseamna neaparat ca o fi fost si maimuta ca maimutele, si tot asa mai departe. Cum se agita el pe-acolo poate chiar si incepe sa semene asa vag cu una... da' astea is pana la urma strict problemele lui de negru/maimuta, ca din punctu' nostru de vedere nu-i nici clar nici interesant daca o fi sau n-o fi, sau o fi fost sau a fi-n curand etcetera. Ca noi suntem oameni, fapt pentru care problemele negrilor si-ale maimutelor ne intereseaza de la distanta si neasumat, mai mult pentru potentialul lor de entertainment decat de informare. Poate vre-unu' mai fara treaba (recte mucalit) chiar si da pe goarna observatia ca "uite ma, chiar ca maimuta si maimuta!" ori eventual se ridica problema cadece are nevasta-sa sfircurile maro, ca doara uite, fetele de om le cam au roz -- si da-i, si lupta, cu argumentatii, argutii si altele filosofice pana-i de-ajuns.</p>
+<p>Asa ca, problema taranetului de-a fi taranete i-a lui ca de el se lipeste, pe el il urmeaza si de el se intereseaza.  Eu n-am nici o treaba de-acolo, fiind prin cine mi-s eu insumi chiar definitia figurii centrale in jurul careia se organizeaza lumea, inclusiv marginile nenarabile unde traiesc si mor (de preferinta, in tacere) toate fulciniile si batorii saracii. Poti alerga dupa mine cu aia cit doresti, ori pina te ia cu lesinu' disperarii de la lingurica, da' nici n-are ea lipici indesine, nici n-ai tu jvung in picere pentru asa ceva.</p>
+<p>Ma-ntelegi cum zic ?</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-161765">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/check-out-this-demented-fuck/?b=parent%20the%20d&amp;e=irst#select' class='url'>Check out this demented fuck on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-161765" title="">Saturday, 27 March 2021</a>
+					</div>
+					<p>[...] parent the decrepit remains of a hundred million narcissistic fathers' perigenital experiments, fifteen to twenty years neglected. That's what he's gonna do. And he's gonna do it by... yelling. It truly worked so well the first [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-161881">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/the-current-instagram-algorithm-or-monkeys-and-microscopes-again/?b=have%20a%20laugh&amp;e=eady#select' class='url'>The current Instagram algorithm, or monkeys and microscopes again on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-161881" title="">Sunday, 28 March 2021</a>
+					</div>
+					<p>[...] have a laugh, if you didn't have enough already [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="100077" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834507-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-100077")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-100077");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-100077");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The question of the year in BTC on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The scandalous blog of a sexual predator.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-45221"><div class="post" id="post-45221">                    <h1><a href="http://trilema.com/2013/the-question-of-the-year-in-btc/" rel="bookmark" title="Permanent Link to The question of the year in BTC">The question of the year in BTC</a></h1>                        <div class="date">                                     Tuesday, 01 January, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>For a little context, here's a snippet culled off irc :</p>
+<blockquote><p><strong>Bugpowder</strong> Well... I'm just posting a rolling update for this morning's action. Betting pace is around 10BTC / s.<br />
+<strong>mircea_popescu</strong> Oy vey.</p>
+<p><strong>Bugpowder</strong> Shit. +300. I have to stop looking. It's like 2000 BTC a minute swings.<br />
+<strong>mircea_popescu</strong> Lol fascinating is it.</p>
+<p><strong>Bugpowder</strong> Yes it's like I'M betting! Also fascinating, who is doing this?<br />
+<strong>mircea_popescu</strong> Srsly. Chinese ppl ? I have no idea. Can the addies be traced at all to anything ? Single entity ? Wide diversity ? Something in between ?</p>
+<p><strong>Bugpowder</strong> I wish we could trace them.<br />
+<strong>mircea_popescu</strong> Isn't something like taint analysis usable in principle to do it ? You're the research scientist cum brain surgeon, do something.</p>
+<p><strong>Bugpowder</strong> You know more about bitcoin and network analysis than me. Not a happy <a href="http://blockchain.info/charts/balance?address=1B5h9sf6xNLYGa3NBk48hwYbxyNZ22PRJk">account graph</a> :)<br />
+<strong>mircea_popescu</strong> So basically someone bought 200k worth of btc and bet it all ?</p>
+<p><strong>Bugpowder</strong> They are all going to be traced back to evorhees.<br />
+<strong>mircea_popescu</strong> O ?</p>
+<p><strong>Bugpowder</strong> Just recycling the profits to boost the traffic. This is my new theory heheh.<br />
+<strong>mircea_popescu</strong> I tell you what, if you can prove that one you're the new bitcoin star. You can even be my forum pr. Even tho you're not a girl.</p></blockquote>
+<p>Also from the man himself (privately) :</p>
+<blockquote><p>Not sure who this/these big betters are, but I'd love to know also! I'd love to know who is betting so much, and why.</p></blockquote>
+<p>So now, here's the thing : <a href="http://www.satoshidice.com/">SatoshiDICE</a> (aka <a href="http://mpex.co/?mpsic=S.DICE">S.DICE</a>) is doing something to the tune of half a million BTC in monthly turnover. There's one hour intervals when people bet over ten thousand Bitcoins, and these occur with more than weekly frequency. The site's rake for the current month is a whopping 20`000 BTC, which makes it the most profitable Bitcoin venture <strong>of all time</strong><sup><a href="#footnote_0_45221" id="identifier_0_45221" class="footnote-link footnote-identifier-link" title="A status quite a lot more meaningful in BTC than any fiat for the reason that BTC has no inflation to gradually wash everything out, and ensure that the Beatles or Elvis Presley will eventually be surpassed in sales by people who never could even dream of playing in their league simply through dilution of what a dollar is. Consequently, the most profitable business of all time in Bitcoin will likely be set early, and definitively. This may very well be it.">i</a></sup> and by a comfortable margin at that.</p>
+<p>All this phenomenal success of course begs a bunch of questions, chief among them "who are these people!" (which isn't technically a question as much as a sort of English drawn out oy vey, but still, let's pretend it functions like one) and also "how do we know it's not the site doing it itself ?".</p>
+<p>This latter one is particularly problematic because of the very nature of Bitcoin itself. You really want an anonymous currency ? Well guess what, that <strong>necessarily</strong> means you can't do business. You can't do insurance in BTC, currently, for the simple reason that you have no practical way of knowing the insured isn't betting against himself (which could eventually end up with the dreadful scenario of him making more money by failing than by succeeding). </p>
+<p>Fortunately Satoshi was at least an inkling wiser than the large troop of monkeys populating the BTC forums and imagining they're constituting "the community" on the strength of their ignominious absence from the <a href="http://bitcoin-otc.com/">WoT</a>, their flat inability to use PGP in any implementation and their collected assets of almost twenty whole Bitcoins if we count all the wallets they've meanwhile accidentally lost. Consequently, Bitcoin <strong>is not anonymous</strong>. It's pseudonymous, which is quite a different thing altogether.</p>
+<p>It may or may not be possible to establish whether there's any truth to that suspicion (or indeed that there's no truth to that suspicion) through clever traversal of the public transaction ledger known as the blockchain. Unfortunately, in spite of what my generous friend declares I'm not much of a Bitcoin guru myself. I have a working but basic understanding of what it is and how it works, but I'm by no means in a position to be the one doing this. I am after all finance, not tech, in this rudimentary and recent division of labour that we've got going in this yet tiny corner of the virtual space.<sup><a href="#footnote_1_45221" id="identifier_1_45221" class="footnote-link footnote-identifier-link" title="And for that matter I'm pretty sure Greifeld didn't comprehend exactly what brought their system shamefully and painfully to its knees on the occasion of the FB listing. I'm mentioning this mostly to remind everyone that while we're very harsh - and rightly so! - on BTC site operators (and I am possibly harshest of all), our fiat counterparts are ordinarily doing a much worse job of it, on all scores. It's just that it's such a lame comparison, someone in BTC saying they're doing poorly but better than the pretend-banks, pretend-stock exchanghes and what have you in fiat is much akin to an able bodied kid delighting in having surpassed a paraplegic octogenarian on the Olympic track. Well, so he has, and what of it ?">ii</a></sup></p>
+<p>Still, there's no reason my limitations would have to be yours. Quite the contrary, let's use my advantages to your advantage and vice-versa. I am hereby offering one 100 BTC reward to anyone who presents conclusive proof that either : a) the site is betting with itself or b) the site is not betting with itself. I am further offering three 10 BTC rewards to anyone that I deem has done significant service towards such conclusive proof<sup><a href="#footnote_2_45221" id="identifier_2_45221" class="footnote-link footnote-identifier-link" title="Principally for but not limited to theoretical advances in the field, and also for practically usable tools that'd allow such proof be obtained in an arbitrary situation.">iii</a></sup>. </p>
+<p>Let the traversals begin! </p>
+<p>And yes, I am pretty certain that the most important question we have before us in 2013 is something of this nature. I think this type of questions, logically legitimate as they may be, are one of the main drags to business development in BTC at the present time. If we manage to somehow find an answer, irrespective of what it spells out in the case at hand we will not only have made one step further on the road of actually being a community, but more importantly we'll be much better equipped to handle a much larger future, which means quite simply that the much larger future will become present, and consequently all these current tiny market caps a thing of the past. </p>
+<p>Oh, you don't think hundreds of thousands of BTC is tiny ? Well... I guess you're not in finance. </p>
+<p><strong>UPDATE</strong> Erik Voorhees commented to add that if anyone comes up with some way he can prove he's not doing it he'll split the reward. </p>
+<p><strong>LATER UPDATE</strong> As S.DICE has been a privately held concern <a href="http://trilema.com/2013/the-list-of-discontinued-assets-on-mpex/">for a while now</a>, this reward is no longer offered. </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_45221" class="footnote">A status quite a lot more meaningful in BTC than any fiat for the reason that BTC has no inflation to gradually wash everything out, and ensure that the Beatles or Elvis Presley will eventually be surpassed in sales by people who never could even dream of playing in their league simply through dilution of what a dollar is. Consequently, the most profitable business of all time in Bitcoin will likely be set early, and definitively. This may very well be it. [<a href="#identifier_0_45221" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_45221" class="footnote">And for that matter I'm pretty sure Greifeld didn't comprehend exactly what brought their system shamefully and painfully to its knees on the occasion of the FB listing. I'm mentioning this mostly to remind everyone that while we're very harsh - and rightly so! - on BTC site operators (and I am possibly <a href="http://trilema.com/2012/and-another-one-bites-the-dust-bitmarketeu/">harshest of all</a>), our fiat counterparts are ordinarily doing a much worse job of it, on all scores. It's just that it's such a lame comparison, someone in BTC saying they're doing poorly but better than the pretend-banks, pretend-stock exchanghes and what have you in fiat is much akin to an able bodied kid delighting in having surpassed a paraplegic octogenarian on the Olympic track. Well, so he has, and what of it ? [<a href="#identifier_1_45221" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_45221" class="footnote">Principally for but not limited to theoretical advances in the field, and also for practically usable tools that'd allow such proof be obtained in an arbitrary situation. [<a href="#identifier_2_45221" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2012/shampoo/">Shampoo</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/splendor-in-the-grass/">Splendor in the Grass</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/the-question-of-the-year-in-btc/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/the-question-of-the-year-in-btc/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>17 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-91168" class="commentbody"><div class="commenthead"><img alt='Anonymous`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Anonymous</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91168" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>The rate of winning wagers can be (and is being) calculated at anytime from the blockchain data. Because all the other wagers would still be winning 98.1% of the time (as the house edge is 1.9%), the winning wagers would increase above that.  </p>
+<p>So if half of all the wagers on SatoshiDICE were from a party that knows the secret (e.g., the operators themselves) then that winning ratio would rise about 99%.</p>
+<p>Looking at the charts doogius provides, the winning rate bounces around but is approaching the 1.9% rate.</p>
+						</li>
+
+										<li id="comment-91170" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91170" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>This is true, but the operator himself is not forced to use his knowledge of the secret when betting.</p>
+						</li>
+
+										<li id="comment-91171" class="commentbody"><div class="commenthead"><img alt='Erik Voorhees`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Erik Voorhees</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91171" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>I'm also curious if this can be figured out. The irony is that in my head I have proof that it's not me recycling the funds on SD, but how can I prove this? If I can figure out how to prove my innocence, I'll earn 100 btc :)</p>
+<p>I will also point out that "betting with myself" would perhaps have short term advantages for me (making the site look more popular, etc) but in the medium term it would mean I'd have to pay out more to the S.DICE holders (if they're really owed 50btc in a month from legit bets, and I inflate the betting volumes, then perhaps I'll have to pay out 500btc to them). </p>
+<p>I'll make this more interesting... if anyone knows how I can prove that I'm -not- betting against myself, please contact me and tell me, then I'll split the 100btc bounty with you.</p>
+						</li>
+
+										<li id="comment-91172" class="commentbody"><div class="commenthead"><img alt='BladeMcCool`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">BladeMcCool</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91172" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>If the outputs of the transactions that are the profit are used as inputs in new bets on the site, that would seem pretty conclusive. If the site ops were using a mixer service to swap their profit coins for other coins to use to bet on their site, you couldn't know.</p>
+						</li>
+
+										<li id="comment-91173" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91173" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>@<b>Erik Voorhees</b> Possibly the hardest 100 BTC you'll ever earn, too, because that's just how BTC rolls.</p>
+<p>Interesting proposition there. I'll add it to the main article.</p>
+<p>@<b>BladeMcCool</b> Well, from what I understand the rake isn't taken out of each transaction individually, but moreover it's the result of EV. However, we can modify what you say to read "if the coins remaindered after a lost bet are used to further bet on the site", and yea, I guess it'd be pretty conclusive.</p>
+<p>I'm not entirely sure just how well mixers work. I guess this could be a good test for the mixer principle at the same time.</p>
+						</li>
+
+										<li id="comment-91174" class="commentbody"><div class="commenthead"><img alt='malaimo`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">malaimo</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91174" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>My money is on pirateat40 being bored with all the BTC he gathered.</p>
+						</li>
+
+										<li id="comment-91175" class="commentbody"><div class="commenthead"><img alt='Rassah`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Rassah</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91175" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>The mixers work pretty damn well. About the only way to prove that the earnings are being reused is to see if the profits are going to any mixing services, instead of stock holders, and then make a big assumption about where they go next.<br />
+Actually, one way Erik could prove his innocence is by funneling all the earnings into a collection of publicly known addresses, with all the outputs declared and easily traced (some go as dividends, specified amount goes to keep being going, rest stays there), and see if the large wages continue to go on. If the sum of wages is greater than the sum pushed back onto the site to keep it going, and especially if the sum of wages doesn't change from the previous period, then that could be somewhat of a proof. Though this would depend entirely on Erik's cooperation, thanks to the publicly verifiable blockchain record this can all be publicly confirmed.</p>
+						</li>
+
+										<li id="comment-91176" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91176" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>@<b>malaimo</b> Now that's a theory.</p>
+<p>Then again, it's not quite clear how much of the 500k notional he was owing when it blew up is anything but notional.</p>
+<p>@<b>Rassah</b> Well, profits going to mixers isn't necessarily proof of anything, as a legitimate user would have plenty of legitimate reasons to mix the winnings before using them for anything else.</p>
+<p>Profits wouldn't go to stock holders directly anyway, I suppose they could go to MPEx's deposit address, but then again S.DICE is being net sold still so the operator can just not withdraw as much and never have to deposit.</p>
+<p>I'm not sure what the "all winnings go to one address" scheme would add to what we know currently. As it is, all bets go to a set of 20 or so addresses, which are known and fixed, and it's also known which of those are losses. So it'd seem it's there anyway.</p>
+						</li>
+
+										<li id="comment-91177" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91177" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>It's probably just being used as a mixer itself, by somebody who doesn't care about paying 2% for the service.</p>
+						</li>
+
+										<li id="comment-91178" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91178" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>Nah, that does not work. Suppose Herp sends some btc to SDICE. If he wins, he will get the winnings back at one of the addresses he used to send from, which means that the sender is linked to the receiver, no washing occured. If he loses, he will still get a little sent at one of the addresses he used to send from, which idem.</p>
+<p>In point of fact SDICE is pretty useless as a mixer.</p>
+						</li>
+
+										<li id="comment-91179" class="commentbody"><div class="commenthead"><img alt='Rassah`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Rassah</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91179" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>If all the company profits are going to a set of known addresses already, anyway, then why not just see if any of the profit outputs are going to betting inputs? The profits in this case are company's, and thus only go to Erik and the stockholders, so just ask Erik not to use any mixers for a while, and see if any profits from known addresses are recycled into the bets. Sounds like it should be fairly straightforward.</p>
+						</li>
+
+										<li id="comment-91180" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91180" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>Sure. Sounds like a perfectly reasonable approach to the matter.</p>
+						</li>
+
+										<li id="comment-91181" class="commentbody"><div class="commenthead"><img alt='Rassah`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Rassah</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91181" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>Addendum: profits go to Erik, stockholders, and bet payouts (losses). None should be turning around and going into the bet addresses.</p>
+						</li>
+
+										<li id="comment-91182" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-91182" title="">Tuesday, 1 January 2013</a>
+							</div>
+						<p>Well not really, for sure winners bet again all the time.</p>
+						</li>
+
+										<li id="comment-95166" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-95166" title="">Sunday, 22 September 2013</a>
+							</div>
+						<p>Updated.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-139216">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/i-have-a-problem-which-i-dont-know-how-to-resolve-so-do-you?b=Who%20knows%2C%20m&amp;e=tly.#select' class='url'>I have a problem which I don't know how to resolve. So do you. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139216" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Who knows, maybe a solution emerges. Together with the (still unresolved, but much more technical) payments problem these are pretty much the only considerations of any import in any field of research currently. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-148130">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/03/27/a-review-of-the-bitcoin-category-on-trilemacom/?b=operating%20in&amp;e=tial#select' class='url'>A Review of the Bitcoin Category on trilema.com &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148130" title="">Friday, 27 March 2020</a>
+					</div>
+					<p>[...] operating in Bitcoin due to Bitcoin's anonymous (rather: pseudonymous) nature, illustrated with S.DICE's case of being unable to prove it didn't indulge in insider trading. MP offers 100 BTC bounty for anyone coming up with a solution (and even a split for a partial [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="45221" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834085-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-45221")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-45221");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-45221");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

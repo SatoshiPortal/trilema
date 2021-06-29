@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>My AI problems, a humble confession. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">024776FFD3CBD21C872ECCD26AD078C5<br />BA0586E2E57CF68515E3C4828A673A6E
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-71009"><div class="post" id="post-71009">                    <h1><a href="http://trilema.com/2017/my-ai-problems-a-humble-confession/" rel="bookmark" title="Permanent Link to My AI problems, a humble confession.">My AI problems, a humble confession.</a></h1>                        <div class="date">                                     Sunday, 08 January, Year 9 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Oh, you didn't think you'd live to see that, did you ? Really, <em>a confession</em> on Trilema ? The title must be lying, huh!</p>
+<p>It is not ; but I'm with you -- I didn't think I'd live to see that either. Confessions are hard, in that in order to confess one must believe he is surrounded by people. This is the sticking point, surrounded by goats one can't confess<sup><a href="#footnote_0_71009" id="identifier_0_71009" class="footnote-link footnote-identifier-link" title="Have you seen Visconti's Stranger, by the way ?">i</a></sup>, not strictly and not exactly because "you can't confess to goats", but because <span style="background-color:#d3d3d3" id="select">confessions are meaningless in a goat world. So therefore I will add that not only I didn't think <a href="http://trilema.com/2011/de-pe-cind-eram-io-mai-tinar/">I</a>'d live to see it ; but that I am very happy to have lived to see it! 'Tis a wonderful thing, I tell</span> you, an acquired property of the self readily capable to rival others (such as "being rich" or "owning slaves") and to make the sad fact of ever approaching old age much more bearable. I know of no greater blessing than eventually integrating the capacity for confession.</p>
+<p>So no, the title does not lie. Yossi Kreinin <a href="http://yosefk.com/blog/ai-problems.html">says</a> : </p>
+<blockquote><p>Programmers develop their own problems. Today, we'll talk about AI problems some of us are having. As you probably already know, but my trademark thoroughness still obliges me to say, AI stands for "Artificial Intelligence" and comes in two flavors, "deterministic" (like minmax) and "statistical" (like SVM). The combined efforts of various researches lead to an important breakthrough in this field, known to meteorologists as "the AI winter". This is the season when you can't get any VC money if you mention AI anywhere in your business plan. During this season, an alternate term was invented for AI, "Machine Learning". I think that the money/no money distinction between "ML" and "AI" isn't the only one, and that in other contexts, AI=deterministic and ML=statistical, but I don't care. In real systems, you do both. Lots of things labeled as "AI" work and are useful in practical contexts. Others are crap. It's always like that, but this isn't what I came to talk about today. By "AI problems", I didn't mean the problems that people face which require the application of methods associated with the term "AI". I meant "problems" in the psychiatric sense.</p>
+<p>A certain kind of reader will wonder whether I have the necessary qualifications to deal with a psychiatric issue so advanced. My credentials are humble, but I do work on hairy computer vision applications. The general problem computer vision deals with (identify, classify and track "objects" in real-world scenes) is considered "AI complete" by some, and I tend to agree. I don't actually work on the AI bits – the algorithms are born a level and a half above me; I'm working on the hardware &#038; software that's supposed to run them fast. I did get to see how fairly successful AI stacks up, with different people approaching it differently. Some readers of the credential-sensitive kind will conclude that I still have no right to tackle the deep philosophical bullshit underlying Artificial Intelligence, and others will decide otherwise. Anyway, off we go.</p>
+<p>The AI problems make a vast area; we'll only talk about a few major ones. First of all, we'll deal with my favorite issue, which is of course The Psychophysical Problem. There are folks out there who actually think they believe that their mind is software, and that consciousness can be defined as a certain structural property of information processing machines. They don't really believe it, as the ground-breaking yosefk's Mind Expansion Experiment can easily demonstrate. I'll introduce that simple yet powerful experiment in a moment, but first, I want to pay a tribute to the best movie of the previous century, which, among other notable achievements, provided the most comprehensive treatment of the psychophysical problem in the popular culture. That motion picture is of course The Terminator, part I and, to an extent, part II. World-class drama. Remarkable acting (especially in part I – there are a couple of facial expressions conveying aggressive, hopeless, cowardly and impatient stupidity previously unheard of). Loads of fun.</p>
+<p>Back to our topic, the movie features a digital computer with an impressive set of peripheral devices, capable of passing the Turing test. The system is based on Atari hardware, as this guy has figured out from the assembly listings cleverly edited into the sequences depicting the black-and-red "perspective" of the machine. According to the mind-is-software AI weenies, the device from the movie has Real Consciousness. The fascinating question whether this is in fact the case is extensively discussed in the witty dialogs throughout the film. "I sense injuries", says the Atari-powered gadget. "This information could be called pain". Pain. The key to our elusive subject. I'm telling you, these people know their stuff.</p>
+<p>The mind-is-software approach is based on two assumptions: the Church-Turing thesis and the feelings-are-information axiom. In my trademark orderly fashion, I'll treat the first assumption second and the second assumption first. To show the invalidity of the feelings-are-information assumption, we'll use yosefk's Mind Expansion Experiment. It has two versions: the right-handed and the left-handed, and it goes like this. If you're right-handed, put a needle in your right hand and start pushing it into your left arm. If you're left-handed, put a needle in your left hand and start pushing it into your right arm. While you're engaged in this entertaining activity, consider the question: "Is this information? How many bits would it take to represent?" Most people will reach enlightenment long before they'll cause themselves irreversible damage. Critics have pointed out that the method can cause die-hard AI weenies to actually injure themselves; the question whether this is a bug or a feature is still a subject of a hot debate in the scientific community. Anyway, we do process something that isn't exactly information, because it fucking hurts; I hope we're done with this issue now.</p></blockquote>
+<p>Now, while I am no programmer myself<sup><a href="#footnote_1_71009" id="identifier_1_71009" class="footnote-link footnote-identifier-link" title="Yes, I can program computers. Similarly, you can bake. Are you a baker ? So then, I'm not a programmer.">ii</a></sup> and while I fully sympathize both with the notion that computer programmers are generally speaking broken in the head<sup><a href="#footnote_2_71009" id="identifier_2_71009" class="footnote-link footnote-identifier-link" title="Much like the math teachers they come from.">iii</a></sup> and with the proposition that a preoccupation with "AI" belies fundamental breakage at the organic level of the brain supporting the preoccupation -- exactly in the way Morgellons<sup><a href="#footnote_3_71009" id="identifier_3_71009" class="footnote-link footnote-identifier-link" title="A clincally relevant preoccupation with fibers found in or emanating from one's own body.">iv</a></sup> or motherly fixation<sup><a href="#footnote_4_71009" id="identifier_4_71009" class="footnote-link footnote-identifier-link" title="The normal evolution of the human brain has children around the age of maybe 10 simply stop listening to their mothers. At all. It drives most women to the brink of insanity, especially because that's just about the time their father is also starting to look elsewhere. Nevertheless, it is normal, a necessary part of the maturation of the human brain exactly like the impetuus to walk around the age of six months or the tendency to go around screaming `mine` a little later. Its absence is a diseased state, literally mental retardation, and almost always an indication of future morbidity, which generally manifests as schizophrenia. 
+This then has supported in the classical discipline of psychology the notion of the `schizogenic mother`, supposedly a kind of mother who induces the disease in her children. The 1800s observers noticed the relation and made an assumption, which is only partially incorrect : there is a genetic component to the disease, which is obviously in part shared with the mother. There isn't however a behavioural component to it in the sense there contemplated -- it's not the mother that somehow contributes to the development of the disease. On the contrary, it's the child that fails to separate, and then that failure drives scarification in the woman, which then appears pathological to later examination but hasn't in any sense caused either the situation or the condition.">v</a></sup> belie significant dysfunction even if they're not directly related to it -- I must nevertheless confess : I am fully persuaded of what is here called "the psychophysical problem".</p>
+<p>To start the discussion from the accessible end : if I drive a needle in my arm, what will happen is that some cells will get destroyed ; through their destruction will release toxic substances, much like you trying to burn down your couch ; these toxic substances will find their way to nerves, which will fire ; the firing of the nerves will be interpreted in the base of the brain, a cellular structure we share with many animals, not all of which mammal, and drive a reaction. </p>
+<p>You know this is so from a number of directly and easily accessible events and circumstances, briefly enumerated here :</p>
+<ul>
+<li>The pain caused by a wound is in direct relation to cell rupture, not to "seriousness" or any such measure. This is why very fine needles cause a lot less pain than thicker ones, even if they should drive deeper ; and also why a smooth blade hurts less than a piece of slag.</li>
+<p>	
+<li> Internal bruising, for instance, does not hurt, even if the same exact wound would hurt something fierce were it obtained through skin breaching trauma. This is because the very same signals are interpreted differently.</li>
+<p>	
+<li>If you grab one pipe traversed by warm water, you will perceive the sensation of having grabbed on one pipe traversed by warm water. If you instead grab one pipe traversed by cold water, you will perceive the sensation of having grabbed on one pipe traversed by cold water. If however you grab on an assemblage of two intertwining pipes which each carry warm and cold water respectively, you will not experience anything other than an intense and urgent burning sensation -- notwithstanding that neither cold nor warm nor their combination in any sense hurts your grabber. This is because simultaneous firing of both kinds is interpreted <em>in a certain way</em>, irrespective of reality.</li>
+</ul>
+<p>So then yes, I fully believe that pain is simply information and strictly nothing else. I can also estimate the bit count, for courtesy : the nerve density in the human arm is about 10 per thousand basal cells ; a human cell is about 100 micrometers in diameter, meaning that a surface of 1mm<sup>2</sup> would contain about 10<sup>8</sup> basal cells or something like one million neurons. These million neurons can fire their sodium-potassium powered charges about 500 times per second<sup><a href="#footnote_5_71009" id="identifier_5_71009" class="footnote-link footnote-identifier-link" title="The observed refractory rate (directly equivalent to the penile property) is somewhere around 2ms, so we'll go with that.">vi</a></sup> ; admitting for the sake of simplicity that these firings are single-bit rather than single-byte<sup><a href="#footnote_6_71009" id="identifier_6_71009" class="footnote-link footnote-identifier-link" title="Nothing keeps the wetware from measuring potential levels, there's no rule every information processing machine must be binary.">vii</a></sup> we are looking at about 500 Mbps worth of information exchange to relay the discrete "needle in arm" phenomena.</p>
+<p>But this isn't really the crux of the matter : the fact that Yossi  Kreinin can and does use the example of a needle in arm already defeats his argument : if it <em>didn't</em> convey information, then what did it convey ? On what basis can he evaluate what will happen to me if I do what he says ? </p>
+<p>If I aim to convey non-informational content to others, such as through the use of metaphor, or <a href="http://trilema.com/forum-logs-for-07-jan-2017#2224235">beatings</a>, the situation I confront is fundamentally ambiguous : even if I have some guesses as to a class of possible outcomes (which are almost always vague things like "we're either going to make a new friend or a new enemy"), I have no idea what <em>exactly</em> will happen. Yossi K. does not find himself in this situation, and the reason he doesn't find himself in this situation is precisely that pain is information. What else ?</p>
+<p>I understand the pedestrian "oh, people are speshul" touchy-feely low level socialism that animates him, "living things shouldn't be used" bla bla. Nevertheless, as convenient as the soul would be for his infantile political and ideological commitments, the case still stands that such a thing as a soul doth not exist. Whether from this it then follows that indeed consciousness, and from there on outright humanity, is merely an emergent property of matter, be it its structure as currently fashionable, be it its substance (as the Greeks believed - I for instance am supposed to be made of gold, Yossi, of silver) is mostly besides the point. Two men stabbed identically with identical needles will be both in pain, and two sacks of flesh identical to the two men but not arbitrarily called "two men" by Yossi K or Kindergarten Block B will still be identical to them.</p>
+<p>I get that the preteen proposition "what if your wife was snatched by the wife snatchers while you slept and replaced with a seemingly identical Japanese fuckpillow" gives <em>a certain class of people</em> the hibby-jibbies. These people are usually called children, and are distinguished from the actual adults by that sign that they've never taken a girl from the environment and beaten her into her improved version, called a woman. Consequently they naively imagine that "daddy is hurting mommy", and other such, as adequate to their age.</p>
+<p>That, then, is my confession ; by my hand and my rod -- my deed. </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_71009" class="footnote">Have you seen Visconti's Stranger, by the way ? [<a href="#identifier_0_71009" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_71009" class="footnote">Yes, I can program computers. Similarly, you can bake. Are you a baker ? So then, I'm not a programmer. [<a href="#identifier_1_71009" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_71009" class="footnote">Much like the math teachers they come from. [<a href="#identifier_2_71009" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_71009" class="footnote">A clincally relevant preoccupation with fibers found in or emanating from one's own body. [<a href="#identifier_3_71009" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_71009" class="footnote">The normal evolution of the human brain has children around the age of maybe 10 simply stop listening to their mothers. At all. It drives most women to the brink of insanity, especially because that's just about the time their father is also starting to look elsewhere. Nevertheless, it is normal, a necessary part of the maturation of the human brain exactly like the impetuus to walk around the age of six months or the tendency to go around screaming "mine" a little later. Its absence is a diseased state, literally mental retardation, and almost always an indication of future morbidity, which generally manifests as schizophrenia. </p>
+<p>This then has supported in the classical discipline of psychology the notion of the "schizogenic mother", supposedly a kind of mother who induces the disease in her children. The 1800s observers noticed the relation and made an assumption, which is only partially incorrect : there is a genetic component to the disease, which is obviously in part shared with the mother. There isn't however a behavioural component to it in the sense there contemplated -- it's not the mother that somehow contributes to the development of the disease. On the contrary, it's the child that fails to separate, and then that failure drives scarification in the woman, which then appears pathological to later examination but hasn't in any sense caused either the situation or the condition. [<a href="#identifier_4_71009" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_71009" class="footnote">The observed refractory rate (directly equivalent to the penile property) is somewhere around 2ms, so we'll go with that. [<a href="#identifier_5_71009" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_71009" class="footnote">Nothing keeps the wetware from measuring potential levels, there's no rule every information processing machine must be binary. [<a href="#identifier_6_71009" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2017/postcards-from-retardistan/">Postcards from Retardistan</a></div>
+                <div class="alignright"><a href="http://trilema.com/2017/counterfictive-validation/">Counterfictive validation</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2017/my-ai-problems-a-humble-confession/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2017/my-ai-problems-a-humble-confession/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>19 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-120998" class="commentbody"><div class="commenthead"><img alt='Pete Dushenski`s avatar' src='http://www.contravex.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://www.contravex.com' class='url'>Pete Dushenski</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-120998" title="">Monday, 9 January 2017</a>
+							</div>
+						<p>"A Stoic is someone who transforms fear into prudence, pain into transformation, mistakes into initiation, and desire into undertaking." ~Taleb</p>
+<p>But what do you call someone who actually does the math ?</p>
+						</li>
+
+										<li id="comment-120999" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-120999" title="">Monday, 9 January 2017</a>
+							</div>
+						<p>I dunno, a stoic scholar ?</p>
+						</li>
+
+										<li id="comment-121007" class="commentbody"><div class="commenthead"><img alt='nicknaem`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">nicknaem</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121007" title="">Tuesday, 10 January 2017</a>
+							</div>
+						<p>I know it is a bit besides the discussion but what do you make of qualia / the hard problem of consciousness then? While cell damage and pulses can certainly be physically measured and compared, qualia can most definitely not. All judgments of other minds' experiences are in the end based on a common sense approach, not on an ability to truly see what goes on in other minds, as of yet.<br />
+The other person's pain is literally unfeelable for us, even if our brain tricks us tp believe so through empathy maybe.</p>
+						</li>
+
+										<li id="comment-121008" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121008" title="">Tuesday, 10 January 2017</a>
+							</div>
+						<p>What is this "qualia", other than the dragon part in "fuck you i'm a dragon" ?</p>
+						</li>
+
+										<li id="comment-121011" class="commentbody"><div class="commenthead"><img alt='nicknaem`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">nicknaem</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121011" title="">Tuesday, 10 January 2017</a>
+							</div>
+						<p>I just had the weirdest dream, I was watching a huge aquarium, and saw a giant muraena devouring a bunch of clown fish. Meanwhile, some turtles were shuffling about on the floor. The dream ended horribly with me meeting a girl I used to white knight back when I didn't understand how the world works.<br />
+Anyway, it struck me that the muraena, the clown fish and the turtle all have absolutely nothing to say to each other. There are no shared goals at all, no hope of ever understanding each other's experience, or even wanting to. Between the muraena and the turtle, as well as the clownfish and the turtle, there is pure apathy. The muraena and clownfish are predator and prey, that is all.<br />
+To answer your question, it would be strange to deny the existence of subjective experience, like how the color blue looks to you. We cannot deny this experience exists. We can also not share it, my blue could be your red and vice versa and there are no falsifiable statements we can make about this. We can only make common sense arguments. Measuring the impulses in our nerves only covers a physical phenomenon correlated with this experience, not the experience itself. I am not championing the ideas of the existence of a soul, or "mind as software and brain as hardware", by the way.</p>
+						</li>
+
+										<li id="comment-121016" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121016" title="">Tuesday, 10 January 2017</a>
+							</div>
+						<p>It's not a matter of "denying the existence of subjective experience" ; and let me point out to you that your tendency to conflate "similar" (in your subjective experience) but otherwise entirely unrelated items is the deep reason for the whiteknighting, then as now. But we'll get back to this.</p>
+<p>As to the matter at hand : those "subjective experiences" are either classificable or else they are not. </p>
+<p>If they are not classificable, they are also not useful for the purpose at hand - the fact that random special snowflake's internal states are entirely incomprehensible from the exterior protects the special snowflake from analysis just as it protects the robot snowflake from analysis. So, for all you know the AI, or for that matter the chair you sit on ALSO have these incomprehensible "qualia" just as you do and they don't matter in a discussion of whether any given item is chair or person.</p>
+<p>If they are classificable, then the portion that allows the classification is exactly information, by the definition of the terms, and just as it can be used to distinguish <em>zoon politikon</em> from artifact just so it can be used to ~build~ the artifact <em>zoon politikon</em>. </p>
+<p>To get back to the stupidity of white knighting, a portion of log : </p>
+<blockquote><p>
+<b>asciilifeform</b> in yet other noose, <a href="https://archive.is/3aDwi">https://archive.is/3aDwi</a> &lt;&lt; 'A Florida man pleaded guilty on Monday to charges that he conspired to operate an illegal bitcoin exchange .... Anthony Murgio, 33, entered his plea in federal court in Manhattan to three counts, including conspiracy to operate an unlicensed money transmitting business and conspiracy to commit bank fraud, a month before he was to face trial. Under a plea agreement, Murgio agreed not to appeal any prison sentence of about 12-1/2 years in prison or less. U.S. District Judge Alison Nathan scheduled his sentencing for June 16.'<br />
+<b>mircea_popescu</b> lmao<br />
+<b>mircea_popescu</b> what the fuck must be going on in a 33 yo dork's head to agree not to appeal a prison sentence of 12 years ?<br />
+<b>mircea_popescu</b> what's his endgame, he comes out aged 40something and... ? what, enjoys medicare ?<br />
+<b>mircea_popescu</b> spends most of his productive years filling in for all the black slave jobs abraham lincoln disappeared out of the south to recreate in the north ?<br />
+<b>asciilifeform</b> i can almost see the pleabargain-of-the-fyootoor: 'mr idiot, 33, to forgo impalement or the anthill, agreed not appeal any death sentence of beheading or less'<br />
+<b>mircea_popescu</b> let them at least work it wtf.<br />
+<b>mircea_popescu</b> ustards are worse than ww2 jews i swear, "oh, dug own grave". dude, what ?
+</p></blockquote>
+<p>This is you, essentially. Whenever you buy into the theory that one thing is the other thing, this is you. A good citizen, a good taxpayer, a good defendant, a good consumer and whatever the fuck else. Not a person. I don't mean "not a good person", I mean not a person at all in any sense or to any degree ; as much a person as a rock is parrot.</p>
+<p>I didn't ask the girl if she thinks I'm any good or not. This is neither her business nor something within her purview. I asked the girl if she thinks she has it in her to try and survive once the world (WHICH I OWN) is no longer friendly to her. I didn't ask the DA for his evaluation of me. I couldn't give less of a shit what some random bureaucrat thinks on any topic. I asked the DA if he thinks he has it in him to survive once the world which I control is no longer tolerant of him. I don't ask for permission, to be here, to anything else. I may grant it, maybe, and that's as far as permission goes.</p>
+<p>Either stop confusing unrelated things or else stop pretending to independence. "Qualia" is an extremely poor substitute for a spine, and will absolutely never carry you to pass any sort of identity test.</p>
+						</li>
+
+										<li id="comment-121148" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121148" title="">Friday, 20 January 2017</a>
+							</div>
+						<p>Just a bit of nitpicking:</p>
+<p>&gt; a human cell is about 100 micrometers in diameter, meaning that a surface of 1mm^2 would contain about 10^8 basal cells or something like one million neurons.</p>
+<p>Do you mean, 100 nanometers? At least that's what I get from reversing 10^8 basal cells/mm^2. That is, assuming we approximate a cell as a square, which is... fair? I don't know, I suck at biology and Google is not very helpful.</p>
+						</li>
+
+										<li id="comment-121149" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121149" title="">Friday, 20 January 2017</a>
+							</div>
+						<p>A man is about 2 meters long, thus a canvas of 100 sqm made of man will need how many men ? About 50 ? Or about 2500 ?</p>
+						</li>
+
+										<li id="comment-121150" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121150" title="">Friday, 20 January 2017</a>
+							</div>
+						<p>The number is wrong but the result is right.</p>
+<blockquote><p> 1 µm Diameter of human nerve cell process</p></blockquote>
+						</li>
+
+										<li id="comment-121152" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121152" title="">Friday, 20 January 2017</a>
+							</div>
+						<p>Ah that's a good point.</p>
+						</li>
+
+										<li id="comment-121155" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121155" title="">Friday, 20 January 2017</a>
+							</div>
+						<p>&gt; A man is about 2 meters long, thus a canvas of 100 sqm made of man will need how many men ? About 50 ? Or about 2500 ?</p>
+<p>Hm, that depends on the man's other dimensions and how he is placed on the canvas.</p>
+<p>Assuming men lying on their backs (shoulder-to-shoulder length of about 0.5 meters), then the canvas could be covered by about 100 men, e.g. if its dimensions are 2x50 or 4x25, etc. So some number between 50 and 100 works as a maximum, depending on the layout... and assuming we don't want to cut the poor men into pieces -- although if we wanted, that would be achievable; but we're talking about cells now.</p>
+<p>Assuming standing men, then I suppose the first option above is closer, but the *minimum* is around 100, based on the observation that it's difficult to fit 25 men into a (1mx1m) elevator. Actually, I think the elevator metric is pretty good, so our canvas could fit any number between 100 and 500 men, 600 if it's a very crowded day.</p>
+<p>Assuming men crawling into fetal position... well, this is getting complicated. :D</p>
+<p>Anyway, Anon's answer sort of cleared up my confusion.</p>
+						</li>
+
+										<li id="comment-121183" class="commentbody"><div class="commenthead"><img alt='nicknaem`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">nicknaem</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121183" title="">Tuesday, 24 January 2017</a>
+							</div>
+						<p>Funny that my, admittedly bait-y, unrelated tirade prompted you to go into the white knighting part... Aside from some nostalgia I guess that part is mostly wasted on me, your points I found out the best way, by experiencing and overcoming them where possible. The inefficiencies that linger I can live with.<br />
+To put some decoration on this cake, let me add to your disappointment and tell you that I indeed entertain the thought of chairs, or at least the components they consist of, possessing some form of consciousness. But this might not interest you, and I concur that these kind of ideas seemingly serve no practical use at the moment. I merely hoped you had something interesting to say on the topic, since there are good thinkers interested in the possibility of panpsychism, or concepts like Nietzsche's will to power, etc. As noted in my first reaction, I was not really commenting on the article, it just triggered the resurfacing of some ideas I had been mulling over for some time.<br />
+Lastly, there is no special snowflake-ism or escapism involved with me being interested in, reading up on and pondering these things. It comes from a more noble origin, a personal trait that surprisingly to me seems to be rare as gold. Amusingly, this makes me a true special snowflake, just as your alpha-ness makes you an actual dragon probably.</p>
+						</li>
+
+										<li id="comment-121184" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121184" title="">Tuesday, 24 January 2017</a>
+							</div>
+						<p>And why the components rather than the whole ?</p>
+						</li>
+
+										<li id="comment-121185" class="commentbody"><div class="commenthead"><img alt='nicknaem`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">nicknaem</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121185" title="">Tuesday, 24 January 2017</a>
+							</div>
+						<p>Well suppose we take as a given that each atom has to it a subjective "conscious"component, just as it has weight or electrical charge properties, then just as molecules made up out of atoms have their peculiar physical properties, so would they have their peculiar subjective properties.<br />
+So like complex proteins in muscles have physical properties that allow for body movement when grouped by the billions, so complex proteins in the brain have subjective properties that allow for complex consciousness to arise.<br />
+Then we use common sense to suppose that a chair will not have the complex consciousness a human brain has. Probably the chair molecules do not work together like the brain molecules do.</p>
+<p>An interesting corollary would be that for those looking to make artificial consciousnesses (something a part of the AI community has always hoped I guess), they have been going about it totally wrong. Like throwing together a bunch of silicon and hoping muscle movement will somehow arise.</p>
+						</li>
+
+										<li id="comment-121186" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121186" title="">Tuesday, 24 January 2017</a>
+							</div>
+						<p>The question was directed at you not at the nonsense.</p>
+<p>Consider yourself for a moment. Here you stand, a man who won't name himself -- which is to say : a man who despises himself, and his parents, and the world, entirely and without measure -- and say to me : the good is rather of the parts than of the whole.</p>
+<p>Who would think such a thing, and why would they ?</p>
+<p>Yes, atoms are the smaller parts and then the quarks are smaller and then the etcetera, the endless droning of the game of anxiety assuaging itself even as it maintains and enforces itself can go on forever. Maybe the smaller parts of the smaller parts are even smaller than the other smaller parts and the world's gained itself a metaphysician.</p>
+<p>Except it hasn't, which is why this discussion ended up <a href=http://trilema.com/2017/dupa-dealuri/ >dupa dealuri</a>.</p>
+						</li>
+
+										<li id="comment-121188" class="commentbody"><div class="commenthead"><img alt='nicknaem`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">nicknaem</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121188" title="">Tuesday, 24 January 2017</a>
+							</div>
+						<p>Well that ended with a disappointing whimper... and my dream explanation being spot on... Feel free to have the last word.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-142982">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/stomp-a-sjw-face-today?b=in%20the%20white&amp;e=ther#select' class='url'>Stomp a SJW face today. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142982" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] in the white-knight-waiting-for-his-accolade-and-monthly-cage-unlocking version of that encounter, she either [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143000">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/late-to-the-party-as-usual?b=is%20classific&amp;e=rior#select' class='url'>Late to the party. As usual. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143000" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] is classification, we're discussing not acting, gnosis not ontos, and therefore all we ever do is classify ; and the bread and butter of classification is the finding of the superior [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143035">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/do-you-understand-how-the-world-works?b=Ah%20yeah.%20mir&amp;e=pure#select' class='url'>Do you understand how the world works ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143035" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Ah yeah. mircea_popescu That's the true font of sadness, that as you follow and classify the world you discover that all that fabled "endless diversity of life on Earth" is in fact pure [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="71009" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834750-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-71009")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-71009");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-71009");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

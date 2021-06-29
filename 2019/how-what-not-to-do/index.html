@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>How what not to do. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Din bube, mucegaiuri si noroi<br />Mi-am facut bici, si m-am cicat pe voi.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-88564"><div class="post" id="post-88564">                    <h1><a href="http://trilema.com/2019/how-what-not-to-do/" rel="bookmark" title="Permanent Link to How what not to do.">How what not to do.</a></h1>                        <div class="date">                                     Thursday, 24 October, Year 11 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Bad grammar ? Fuck you.</p>
+<blockquote><p>Dear MP,</p>
+<p>ssh -p 13336 root@205.134.172.4</p>
+<p>pw: ***</p>
+<p>Plox to change pw / regen hostkey / abolish pw-powered ssh login, as usually done.</p>
+<p>Plz lemme know if you see any oddities in the operation of this box,<br />
+it is experimental iron.</p>
+<p>znc configs are in /home/znc/.znc .<br />
+trb in /home/trb .</p>
+<p>to switch off either, su to'em and crontab -e .</p>
+<p>If q's/observations, plox to write in.</p>
+<p>Yours,<br />
+-S
+</p></blockquote>
+<p><strong>How what not to do #1</strong> : no forced CR. </p>
+<p>The unit of computer text is the line, and the line ==== the paragraph. There shall be no mixing of mark-up into the text ; if you don't like how your terminal flows long lines, <em>fix your terminal</em>. </p>
+<p>The CR represents <em>auctorial intent</em>. It is not open to dillution / rewriting on the basis of the needs of the dumb fucking piece of shit iron. Either the dumb piece of shit iron works well enough to be tolerable in human society, or else it gets thrown out. Adults don't adjust their conversation/mores/behaviours/thoughts/anything else to fit in with children, nor humans to fit in with computers. </p>
+<ul>
+<li>box,\nit is <font color=red><strong>bad</strong></font>, </li>
+<li>box, it is <font color=green><strong>good</strong></font>. </li>
+</ul>
+<p>Say it with me now!</p>
+<p><strong>How what not to do #2</strong> No dangling questions.</p>
+<p>If your recipe runs me into a question it doesn't also provide the answer for, your recipe is broken and the process dies there. It is <em>not</em> acceptable to expect the user to produce "obvious" answers that are in fact not obvious ; the criteria to discern the "in fact obvious" from the "not in fact obvious" <em>is the given recipe</em>.</p>
+<p><strong>How what not to do #2.1</strong> Include the fucking fingerprint.</p>
+<p>Yes, I get it, ssh sucks, bla bla bla. Whenever you provide a login <em>include the fucking fingerprint</em> holy shit what the fuck, why the hell not, it costs nothing to do.</p>
+<p><strong>How what not to do #3</strong> No false statements.</p>
+<blockquote><p>znc configs are in /home/znc/.znc</p></blockquote>
+<p>No, they aren't. ZNC configs are in /home/znc/.znc/configs/znc.conf not in fucking half the path there. The only transformation that can be applied to the correct path to produce the given path yields </p>
+<blockquote><p>znc configs are in /home/znc/.znc/??????/???.????</p></blockquote>
+<p>which while correct <em>self-obviously</em> falls foul of #2 above, and is fucking ridiculous to boot. </p>
+<p><strong>How what not to do #3.1</strong> No hiding of self-obvious idiocy into not so self obvious idiocy.</p>
+<p>If you're going to fuck around with the path, you <b>must</b> quote the <em>full</em> /home/znc/.znc/??????/???.???? rather than the ablated /home/znc/.znc, so everyone watching can point and laugh at what a terrible job you did, rather than dubiously not understand what a terrible job you did.  </p>
+<p><strong>How what not to do #4</strong> No broken installs.</p>
+<p>znc.conf says : </p>
+<blockquote><p>// Do NOT edit this file while ZNC is running!<br />
+// Use webadmin or *controlpanel instead.</p></blockquote>
+<p>Do I know whether ZNC is running or not ? Well, I suspect it's probably running, and of course </p>
+<ol>
+<li>linuxtards have made a mess of stopping/starting things, I don't know if I should just signal-kill it or service stop or maybe there's an apachectl or who the fuck even knows!</li>
+<li>no mechanism is specifically given for this task I will obviously have to do -- see #2 yet again</li>
+</ol>
+<p>I suppose I should use the webadmin whatever the fuck that is then.</p>
+<blockquote><p>How can I access webadmin with my browser?</p>
+<p>By default webadmin runs on the same PORT as your ZNC is accessible. So if you connect your IRC client to ZNC with server example.com and port 6667, then you would access webadmin by opening your web browser and going to the address http://example.com:6667.</p></blockquote>
+<p>Needless to say, this doesn't work (transparently because probably shut off "for safety", thus producing, out of the unreviewed and unpredicted interplay of various lobes of the rule tree, <em>broken installs</em>, which is the fucking point).</p>
+<p>But let's suppose we don't know all that, and so we persevere : </p>
+<blockquote><p>If ZNC listens using SSL, use the HTTPS protocol (https://) instead of just HTTP (http://). If your web interface won't come up, please ensure that you are using the correct protocol for connecting. </p></blockquote>
+<p>Oh, I see, let's try that then... o look at that, it didn't work <em>either</em>, therefore we've wasted the time trying, we could have thrown our hands up earlier to better results, meaning, very practically, that we're being actively trained here to <em>not</em> follow things down the path. </p>
+<p>Let's then sit together an' wonder why everyone  all around seems to have been very well trained to superficiality. I wonder why it could be. Could it be because systematically the reward system's arranged in such a way ? </p>
+<p>And who's responsible for that ?</p>
+<p>Make the world a <em>better</em> place ; not an enlarged version of the same old shit. Thank you. </p>
+
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2019/prague-comes-for-you-all/">Prague comes for you all!</a></div>
+                <div class="alignright"><a href="http://trilema.com/2019/kotelna/">Kotelna</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2019/how-what-not-to-do/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2019/how-what-not-to-do/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>12 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-131941" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131941" title="">Thursday, 24 October 2019</a>
+							</div>
+						<p>Thanks for testing and taking the time to write a barfology.<br />
+The instructions were written hastily.</p>
+<p>Re: webconfigs, I must still disagree though -- why would you want to configure a software package with passwords sent via plaintext ?</p>
+						</li>
+
+										<li id="comment-131942" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131942" title="">Thursday, 24 October 2019</a>
+							</div>
+						<p>I don't particularly. The problem here is this : if you disallow webadmin of a proggy that (stupidly, sure) disallows nano-config (ie, direct editing of the config file, <em>even while running</em>, as a valid configuration method), you leave me stranded because I can't use either of the two possible config methos that don't fucking serialize.</p>
+<p>I am not saying blocking webadmin is indefensible ; I am not saying blocking nano-config is a good idea. I am however saying that pretty fucking please with sugar on top let me select-config rather than serial-config. I don't think this is necessarily something you did wrong or that's on your shoulders, but as a more general point I think it has to be said -- if for no other reason then because nobody the fuck seems to even realise it. Serial-configing <b>is fucking stupid</b>, and in no case an acceptable venue for configuration of any fucking thing. You know ?</p>
+						</li>
+
+										<li id="comment-131944" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131944" title="">Thursday, 24 October 2019</a>
+							</div>
+						<p>ZNC is a terribly-engineered piece, incidentally. But I currently do not know of a ready replacement for it.</p>
+						</li>
+
+										<li id="comment-131948" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131948" title="">Friday, 25 October 2019</a>
+							</div>
+						<p>Conversely, I do not currently know of any utility for it. </p>
+<p>What specifically is it supposed to do for me ? I get it, the sort of moron who never travels (in the insane redefinition of the term that reads "never leaves the house") has speciffic difficulties with his environment driven by his particular insanity. I don't ; as it was evinced in the very logs both during the <a href=http://logs.ossasepia.com/log/trilema/2019-10-11#1944848 >limpdick "ddos"</a> last week and during teh week of shitty interwebs in Prague, there's perfectly fine solutions consisting of maintaining a buncha interfaces and that's that.</p>
+<p>Incidentally, irc would be <em>extremely</em> resilient, if not fucked by idiots into relatively inferior (but still remarkably good) resiliency through <a href=http://logs.ossasepia.com/log/trilema/2019-10-11#1944889 >their idiocy</a>.</p>
+						</li>
+
+										<li id="comment-131949" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131949" title="">Friday, 25 October 2019</a>
+							</div>
+						<p>I didn't know why this reminded me painfully of CrystalSpace and graphics but now I finally got it: ALL the graphics with it is precisely a repeated exercise in extreme serial config! And a sort of serial config of a serial config inside another serial config, what the fuck am I going to do.</p>
+						</li>
+
+										<li id="comment-131950" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131950" title="">Friday, 25 October 2019</a>
+							</div>
+						<p>Fuck it ; I dunno.</p>
+						</li>
+
+										<li id="comment-131957" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131957" title="">Friday, 25 October 2019</a>
+							</div>
+						<p>&gt;  know of any utility for it</p>
+<p>Then, indeed, "The best machine -- is no machine"(tm)(r)(Altschuller).</p>
+						</li>
+
+										<li id="comment-131959" class="commentbody"><div class="commenthead"><img alt='lru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">lru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131959" title="">Friday, 25 October 2019</a>
+							</div>
+						<p>I find it rather hilarious and insightful that you started your list with a complaint about carriage returns.  It is probably a symptom of the root of all the rest of the problems too.  Since some people see CR line wraps as The Right Thing, and find otherwise vaguely distasteful.  And other people see automatic line wrap and CR=paragraph as the One True Way of writing.</p>
+<p>Follow the trail and toss in a cornucopia of aesthetic preferences and various tradeoff choices along the way, and you end up with computing today.</p>
+						</li>
+
+										<li id="comment-131961" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131961" title="">Friday, 25 October 2019</a>
+							</div>
+						<p>Good thing you don't find it coincidental.</p>
+						</li>
+
+										<li id="comment-131982" class="commentbody"><div class="commenthead"><img alt='Roberto Vlad`s avatar' src='http://Ixcoin.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink"><a href='http://Ixcoin.net' class='url'>Roberto Vlad</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131982" title="">Monday, 28 October 2019</a>
+							</div>
+						<p>Mircea, loveștemă sus, fratele meu.  [Hit me up, bro].</p>
+<p>Big things coming next year and BTC won’t find a safe-space.</p>
+<p>Thanks,</p>
+<p>Vlad<br />
+Drobeta Turnu Severin </p>
+<p>PS - Fratele meu, website-ul meu de ixcoin este jos că m-au falit hackerii.  </p>
+<p>O să fie repercusiuni.  </p>
+<p>Cheers!</p>
+						</li>
+
+										<li id="comment-131985" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-131985" title="">Monday, 28 October 2019</a>
+							</div>
+						<p>Or you could talk to <a href=http://logs.ossasepia.com/log >Diana Coman</a> like normal people.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-164687">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/the-state-of-the-fart/?b=past%29%20yielde&amp;e=hich#select' class='url'>The State of the (f)Art on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-164687" title="">Wednesday, 9 June 2021</a>
+					</div>
+					<p>[...] past) yielded exactly what one'd expect on the strenght of the foregoing -- v.py dies early (if unhelpfully, failing to even name the file in question) but depends on a python repackaging of gnupg which [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="88564" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833384-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-88564")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-88564");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-88564");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

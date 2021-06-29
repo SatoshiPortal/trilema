@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>On how the factored 4096 RSA keys story was handled, and what it means to you. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The fates are cruel an' the chances are slim<br />so grab a good sieve and dig in.<br />~<a href=http://trilema.com/2020/nannare/#comment-147503>my elder slavegirl</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-61676"><div class="post" id="post-61676">                    <h1><a href="http://trilema.com/2015/on-how-the-factored-4096-rsa-keys-story-was-handled-and-what-it-means-to-you/" rel="bookmark" title="Permanent Link to On how the factored 4096 RSA keys story was handled, and what it means to you.">On how the factored 4096 RSA keys story was handled, and what it means to you.</a></h1>                        <div class="date">                                     Monday, 18 May, Year 7 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><center><br />
+<hr />
+<h1>Part One - The Handling</h1>
+<hr /></center></p>
+<p><a href="http://trilema.com/2015/full-disclosure-4096-rsa-key-in-the-strongset-factored/">Something happened</a>. </p>
+<p>Sane people did sane things as a result, such as independently verify that the key was factorizable (it was), try and figure out where the key was used (turns out it wasn't), try to figure out how dangerous the situation is (unclear, but it doesn't seem likely that the key can be used as-is in most circumstances), examine the key (turns out it's a fragment of a valid key to which a signature for a different key was attached) and so on. This is all good stuff, and in an ideal world the only sort of stuff that matters. Consequently, we won't be talking about it. That's the tradition.</p>
+<p>Insane people (<a href="http://btcbase.org/log-search?q=viragh">such as</a>) went on about their usual pastime of boxing with the shadows in their minds. We won't be talking about them all that much either.</p>
+<p>Which leaves TPTWB<sup><a href="#footnote_0_61676" id="identifier_0_61676" class="footnote-link footnote-identifier-link" title="Short for `The Powers That Wanna Be`. Because that's how it is.">i</a></sup>. These guys have a standard playbook for when something happens, and while pretty retarded it nevertheless gets applied verbatim, each and every time. Each.and.every.fucking.time, like some sort of Walmart three ring binder thingee. </p>
+<p>At this point, I could just let the circumstances speak for themselves - they speak quite very loudly indeed. If I were a lesser man, or poorer, or less powerful indeed I might. As it happens however I'm not your random pasty ass geek, afraid of whatever bugaboos and hobgoblins terrorize the geekdom ; nor am I a "scientist"/academitard, entirely, consumately dependent on governmental largesse for life. I am powerhouse in my own right, with an Intel service at my disposal as befitting a proud  lord of a sovereign nation and so forth. </p>
+<p>Consequently, I have sought <em>and obtained</em> confirmation from folk actually still working<sup><a href="#footnote_1_61676" id="identifier_1_61676" class="footnote-link footnote-identifier-link" title="You should see what the turnover for intelligence jobs @USG is like - you'd think you've died and gone to fast food heaven.
+And speaking of which, if you're one of those poor souls that for whatever reason remain mired in that fetid swamp - do consider if it makes any sort of sense on the mid term, and for that matter if you even want to be there at all. 
+Yes, I'm aware that as The Narrative goes, `there's nowhere else`. This is patently false - unlike USG's future, The Most Serene Republic is an actual thing.">ii</a></sup> in the numerous, amply bureaucratic, broadly ineffectual, often overalapping, always struggling  programs fielded by the USG to "hearts and minds" the Internet<sup><a href="#footnote_2_61676" id="identifier_2_61676" class="footnote-link footnote-identifier-link" title="Which is why this article was delayed for a day in the first place. Turns out, plausible deniability cuts both ways.">iii</a></sup>. </p>
+<p>So : no, this wasn't happenstance, yes, this was a job<sup><a href="#footnote_3_61676" id="identifier_3_61676" class="footnote-link footnote-identifier-link" title="It's not clear if ongoing or not, it's definitely clear it burned like a red hot iron poker.">iv</a></sup>, no it won't likely do anything, yes life is hard, no it's not particularly fair, yes someone's getting paid for it, no the money doesn't do anything for them - gotta pay the mortgage, gotta pay the college debt, gotta keep blowing out or else the shit's flooding in.</p>
+<p>Back to the playbook :</p>
+<p><strong>I. Outright suppression.</strong> Apparently, the US Department of Fake Entrepreneurship learned something from the previous debacle<sup><a href="#footnote_4_61676" id="identifier_4_61676" class="footnote-link footnote-identifier-link" title="Back in January Reddit did a very botchy job of deleting the entry of a Qntra article guilty of making the very simple point that the Bitcoin Power Rangers don't even have much to do with Bitcoin at all, let alone any sort of consensus worth the mention on changing it. That simple point was apparently very problematic for The Narrative, because at the time The Narrative went something like `it's definitely happening` and much like any other socialistoid construct The Narrative is very, very fragile. 
+In the intervening few months the putative `consensus` was degraded in official verbiage to a mere `controversy`, for absolutely no reason given whatsoever. That strange notwithstanding, it nevertheless was still obviously going to come out the way the USG wanted it to come out, The Narrative went. Because of course. 
+But then, in a clearly shocking move nobody could have foreseen... it didn't go that way. Instead, it went exactly the opposite. Because... seriously now, when is the last time the USG managed to get anything it wanted ? The `Tikrit* offensive` ? The `Embargo on Putin` ? Laissez.
+---
+* For the record, that quote comes from the best episode of the best cartoon Romania ever produced : RObotzi S02 Ep14 Subtil. It's pretty damned good.">v</a></sup>, so they didn't dare delete the thing outright. Nevertheless, they did not really learn enough.<sup><a href="#footnote_5_61676" id="identifier_5_61676" class="footnote-link footnote-identifier-link" title="As Gavin's painfully enlarged rectum should have told you, no, I can't be suppressed. Whatever you may like to believe or wish really really hard to be the case, it's not gonna work. Find a better strategy.
+Sucking the cock would probably work best, but don't let me get in the way of this wunderbar `do the effectual thing just as soon as all alternatives have been exhausted` thing you got going.">vi</a></sup> </p>
+<p>Here's a quick comparison between the evolution of the actual story and the evolution of <a href="http://blog.hboeck.de/archives/872-No,-nobody-has-factored-a-4096-bit-RSA-key.html">its hastily released replacement</a><sup><a href="#footnote_6_61676" id="identifier_6_61676" class="footnote-link footnote-identifier-link" title="Which yes, was prepared (in broad strokes, ready to be released with a few changes as needed) for just such an eventuality. 
+That's right : this was part of a contingency plan, just in case someone rocks the boat. A major victory for No Such lAbs in the struggle with its large but largely inept competitor for that three letter initialism, but nevertheless : sources didn't know (or didn't care to share) what boat that exactly is in question. So I dunno. Which sucks.
+Do you know ? Tell me!">vii</a></sup> :</p>
+<p><a href="http://trilema.com/wp-content/uploads/2015/05/story.png"><img src="http://trilema.com/wp-content/uploads/2015/05/story.png" alt="story" title="story" width="560" height="352" class="aligncenter size-full wp-image-61698" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2015/05/counter-story.png"><img src="http://trilema.com/wp-content/uploads/2015/05/counter-story.png" alt="counter-story" title="counter-story" width="560" height="352" class="aligncenter size-full wp-image-61699" /></a></p>
+<p>One to two hour reaction times are not bad, I suppose, judging from what can be achieved with men and a budget. Kudos to whatever conclave of faceless bureaucrats struggling to earn that luscious retirement package. One to two hour reaction times are also not really useful, judging from the opposite angle, of what the Internet is and does. <em>C'est la vie.</em></p>
+<p>Anyway, coupla hours in, once it became obvious nothing else works, they got ol' Paulie G to push the button<sup><a href="#footnote_7_61676" id="identifier_7_61676" class="footnote-link footnote-identifier-link" title="Yes yes, you know all about how hacker news ranking really works dot html and so can tell by some pixels that it's all automated and due to the comments etc. Notwithstanding that the replacement also got a ton of comments and so on. Carry on.">viii</a></sup>. Herp.</p>
+<p><strong>II. Throw shit at the wall, maybe something sticks.</strong> This is the easiest, cheapest and most commonly seen approach, mostly because the Internet tends to irradiate itself periodically in a doomed attempt to rid itself of the cancer that it itself is. Nevertheless, just like grass grows naturally but is distinguishable from astroturf, just so ordinary Internet shitwallism is distinguishable from organised Internet shitwallism. Some of the choicest bits : </p>
+<blockquote><p>[1] He's been scraping the profiles of young women (specifically) and posting links, names, and hometowns on his blog. Yes, as technologists, we know that this kind of indexing is trivial. That's no reason<sup><a href="#footnote_8_61676" id="identifier_8_61676" class="footnote-link footnote-identifier-link" title="Conveniently omitting the part where Bitlove LLC wouldn't fix a vulnerability in Fetlife (still there, btw). Also incidentally forgetting to mention that entire debacle with fraudulent DMCA claims and whatnot. Because that's exactly how random Internet twerp would behave.">ix</a></sup>, as a decent human being, to terrorize innocent people.</p></blockquote>
+<blockquote><p>You shouldn't be surprised to see blatant lies from Mircea Popescu, who also claims that he's a billionare, that English literature literally does not exist, that bitcoin literally makes states and laws obsolete, and that nuclear weapons are ineffective.<sup><a href="#footnote_9_61676" id="identifier_9_61676" class="footnote-link footnote-identifier-link" title="Apparently, SA is still very, very butthurt over that fiat lulz incident. Seriously doods, it's not my fault you're easily triggered and then end up saying stupid shit you did mean but didn't really wanna sign. Okay ?
+Anyway, what I actually said was that I think you drastically overestimate the military importance of nuclear weapons ; that `The proposition that there even exists any sort of English literature of the 1900s - as a thing, as a fact, as a fruit of that forsaken realm - seems entirely ludicrous today (and the 1800s aren't really feeling any better).` and so on and so forth. The `argument`'s not quite the same without the strawman, huh. A well.">x</a></sup> </p></blockquote>
+<p>I could go on, but it'd just be more of the same - the problem with jobsworths is that they bore something fierce.</p>
+<p><strong>III. Teaching the controversy.</strong> Apparently the contention is whether "RSA" as an ideal, idolized construct has or has not been broken. Go ahead and argue about that, like you'd argue about whether the repumocrats or the deblicans would best "save the country". Notwithstanding what the article in question says, notwithstanding that Stan actually bothered to go in the idiot pit and state explicitly that no, that's not what's being discussed, The Narrative must has The Controversy and so this thread is now about kittens. </p>
+<p><strong>IV. It <span style="background-color:#d3d3d3" id="select">never happened, but had it happened we did it first anyway.</strong> Two didn't work, specifically because <a href="http://trilema.com/2012/strategic-superiority-a-saga/">I am smarter than</a> whatever's left in the USG HR pen. Three didn't work, as you'd expect seeing how fucking retarded</span> it is, and so time for four with a dash of one and all should be good. Not like it'll work, but heck, they've tried and therefore nobody should criticize them. They've done "the industry standard", forget about it.</p>
+<p>The way four works is that random asset comes in with a blatant lie, something thickly ridiculous like </p>
+<blockquote><p>"The reason factorizable keys appear associated with the names of well known FOSS people and bearing <em>their signature copied over from a different key</em> is that... umm... bits were flipped in transit. You know, on the Internet. This happens."<br />
+"Somebody should tell RIAA then. Turns out filesharing never worked all along! Who knew!"<br />
+"Uhh... actually there's a really obscure German email program that does this."<br />
+"Which one ?"<br />
+"Nevermind. Hey, did I ever tell you about that time when I derped at Stanford ?"
+</p></blockquote>
+<p> which he/she/xze/twe/we then wraps in another blatant lie, something like </p>
+<blockquote><p>"Oh, I did this before except I never published anything nor told anyone but srsly guise, it's real, believe me."<br />
+"Who're you again ?"<br />
+"Nobody on a stick."<br />
+"Sounds legit."</p></blockquote>
+<p>Then it gets all packaged by more assets going on with the derpage - some chick that has "credentials"<sup><a href="#footnote_10_61676" id="identifier_10_61676" class="footnote-link footnote-identifier-link" title="Here's something that may come as a shock, although it should not come even as mild surprise in a sane world : you don't get to package other people's work, present it before a collection of your peeridiots and pretend like you did something. It didn't work when Gavin Andresen repackaged Bitcoin to sell before the NSA - Gavin Andresen doesn't own Bitcoin, and the actual owners are very much present and very much capable to bitchslap him into oblivion. It doesn't work when Nadia Heninger goes to sell Phuctor before Stanford - Nadia Heninger doesn't own Phuctor, and the actual owners are very much present and very much capable to bitchslap her into oblivion. I am aware that all this USG-wank subsists by repackaging work they `found on the Internet`, and I'm aware they're reading the #b-a logs, and I don't specifically care - but do not expect that it will wash. Even if Stanford, NSA etc claim it did. They aren't the authorities on this matter, not by a long shot.
+Which brings us to the all-important matter of credentials. There are anons, on the Internet. Their personal value is zero. There are people with sound credentials. You may find these in the WoT. There are people with negative credentials. These are people like Nadia above. Stanford does not increase your value, it decreases it. An association with Stanford is not a positive, and it's not even nil. It is a negative, it costs you, it lowers you below the anon derps. 
+Consequently, given a collection of nobodies and Stanfordites, the question is not whether it sums up to above epsilon or below epsilon. Epsilon is off the table. Zero is off the table. The sum is necessarily negative, and the whole charade can be readily ignored.">xi</a></sup> gave a speech before Retard Club going generally over banal shit vaguely related, so <em>clearly</em> ; some derp from the Bitcoin scam club<sup><a href="#footnote_11_61676" id="identifier_11_61676" class="footnote-link footnote-identifier-link" title="Who's `zmanian` ? Zaki Manian. What's keybase.io ? A wanna-be WoT implementation, the same exact `here's where we did Phuctor except it doesn't work and we forgot to publish any results` play but applied to the WoT this time. Who uses it ? The sort of twerps you'd find pushing The Narrative on social media, assorted Bitcoin scammers like Meni Rosenfeld, the whole shitcrème. In their hallucinations this even works, I suppose.">xii</a></sup> has seen it all with his own eyes so <em>obviously</em> and so on and so forth. </p>
+<p>I am altogether at a loss to explain who in his right mind seriously imagines this would further their interest, or what is this pile of unadulterated idiocy &#038; refined nonsense even supposed to achieve. Four point strageties to accomplish what exactly, have Hacker News run another two hours', weeks', years' worth of <a href="http://trilema.com/forum-logs-for-17-may-2015#1732119">pointless drivel</a> ? Because what, it matters to the source of news whether the spigot delivers news or crap to the audience ? It's the Internet, yo. The audience that's not retarded can find the news with or without you, and the rest you can keep, for all the good they'll do you, or themselves, or anyone else.</p>
+<p>It's ridiculous, sure, but for one thing it's <a href="http://trilema.com/2013/america-and-intellectual-relevance/#footnote_0_49396">nothing new</a>. In any case, if I am supposed to care... I'm sorry. I don't care. <a href="http://trilema.com/2014/this-is-me-being-completely-spaced-out/">Who cares</a> ? I get it, bureaucrats don't actually want to achieve anything, they're just trying to make it to the next paycheck unfired, but really ? This is what you do with your time ? Sad.</p>
+<p><center><br />
+<hr />
+<h1>Part Two - The Meaning</h1>
+<hr /></center></p>
+<p><strong>Generally speaking</strong>, we hit on something here. What exactly, it is altogether uncertain, but by the pained wincing of <a href="http://trilema.com/wp-content/uploads/2015/05/satellite-logo-for-spying.jpg">the octopus</a> (isn't it cute, with its eight legs and five neurons ?) I would suspect it's big enough. </p>
+<p>Phuctor will, of course, continue to work the keybase. As <a href="http://www.loper-os.org/?p=1504">Stan explains</a>, there's exactly zilch anyone can do to deter this. The things that need doing and you can help by doing them are broadly of two kinds : </p>
+<ul>
+<li>Review the various available GPG implementations, as exemplified by jurov <a href="http://btcbase.org/log/?date=17-05-2015#1135551">here</a>. The problem with FOSS is that everyone hopes, and in that hope deludes himself to believe, that because the code <em>could have been</em> reviewed by millions of eyes it magically somehow <em>actually was</em> reviewed by millions of eyes. In practice, this could be no further than the truth<sup><a href="#footnote_12_61676" id="identifier_12_61676" class="footnote-link footnote-identifier-link" title="There are a billion people online, and your website is online, so therefore it could have been seen by a billion people. There are however many teenage sluts in your town, and you're horny, so therefore you could have fucked them all. On it goes, this, and it never starts making any sense.">xiii</a></sup>, and I would guess that a good half of all lines of code deployed currently have never been read - including by their very author. </li>
+<p></p>
+<li>Help us find a diddled GPG implementation. The idea is that if these manufactured keys are an attack - a much more plausible hypothesis than the "someone accidentally a complex fraud" theory<sup><a href="#footnote_13_61676" id="identifier_13_61676" class="footnote-link footnote-identifier-link" title="Among other reasons because key servers have a serious incentive to not keep bad data around. They go as far as to wipe the comment section from keys, which is a reasonable space saving measure, but supposedly they just keep useless cruft because... Doesn't seem too likely, does it.
+Also among those reasons, the directly evident `so someonething took a length of bytes, copied two thirds of them, then accidentally took another very specific length of bytes which was the signature for the previous set and copied it over verbatim and in the right place`. Because yes, this is how accidents happen, a crane fails so it just turns into a train engine for a week. Or a plane. Definitely one of these two. No piles of random scraps of metal have been seen in this alt-world for thousands of years, you just crash two cars together and get orderly arrangements of forks and three inch nuts flying every which way. ">xiv</a></sup> - then the more likely attack mechanism would be something like this : </p>
+<blockquote><p>Suppose someone needs to talk to hpa - either to verify his signature or to send him encrypted communications. With a correctly working PGP implementation, the user connects to a key server, discards the wrong key and proceeds as expected. If however his PGP implementation is compromised in a specific way, the wrong key on the server may very well be the magic packet, causing it to behave in an unexpected - and not otherwise detectable - manner. Such as, encrypt to the weak key, or email the NSA, or whatever else. This sort of thing (the so called "fail to pass" testing) is the exact sort of stuff we've seen from the NSA to date, and so it would mesh with that experience. But it is a theory - until someone produces such a diddled implementation it stays a theory.</p></blockquote>
+<p>The proposition that hpa is the victim is naive at best and disinfo at the worst. The likely victim would be whosoever tries to look for/at him. There's by no means any certainty that there's anything here, <em>but there might well be</em>. Always remember : the factoring of keys was not going to yield anything... until it did. Work pays.
+ </li>
+<p></p>
+<li>There could be a third. BYOT.</li>
+</ul>
+<p><strong>Practically speaking</strong>, understand that one does not get to exist in the US sphere without being a tool of the USG. </p>
+<p>You can't have a bank that does banking : either it does policing work for the USG or it gets burned down. You can't be an investor : either you push the USG agenda <em>ad idem</em> or else they come take your shit. The notion that there's a website owned by USG agents that follows, upholds or defends <em>your interests</em> is about as ridiculous as the notion that someone could own a website over there and not be an agent. Wake up and smell the coffee, that's just not how that country works. Paul Graham exists as an unofficial USG Agency, the USG Czar for Geeky Teens, living off printed money which he may have for just as long as he behaves. His minions are in no way different from any other social worker. What they publish or delete from Hacker News, Reddit, and the rest of the propaganda machine is decided by the propaganda needs of the USG, not by other, <em>spurious</em> considerations. </p>
+<p>If you care about your independence, get the fuck out of the shithole already. You won't, because lazy, and because the diamond train must have its customers, but anyway. If you care about truth, <a href="http://btcbase.org/log/?date=17-05-2015#1135524">learn dialectics</a>. Most importantly, try and rid yourself of this ridiculous acquired mental handicap where you imagine that if you don't like reality as it is, you can hallucinate a better reality in its place. It doesn't work. Getting more idiots to agree with you does not help. </p>
+<p>Life is somewhere else.</p>
+<p>In closing, for the <strong>tl;dr / eli5 / etc</strong> crowd : this article is not for you. Go back to doing the dishes, we'll wake you up once you need to buy a new flag. </p>
+<p><center><br />
+<hr />
+<h1>Part Three - The Later Update<sup><a href="#footnote_14_61676" id="identifier_14_61676" class="footnote-link footnote-identifier-link" title="On September 5th, 2015.">xv</a></sup></h1>
+<hr /></center></p>
+<p>USG's Departpent of Red Hat's very own Florian Weimer dutifully included an alternate construction point for this entire discussion in his "research paper" burning some (known) vulnerabilities in that stack-of-shit PKI thing. Apparently the USG didn't previously know "the terrorists" were also wise to the particular holes.</p>
+<p>As the government would have you believe it, during "research" it was "discovered" that <a href="http://qntra.net/2015/09/many-network-appliances-leak-master-tls-private-keys-through-forward-secrecy/">forward secrecy as generally implemented by available hardware is nothing more than a side channel to leak private keys</a>. According to them this was neither known nor deliberate, but, you know... an accident. That was then discovered later. Thank the stars above for Weimer's "research", no other man could have done it. Literally.</p>
+<p>Also part of that divinely inspired contribution to human welfare (the GI story goes), they "noticed" exactly what Phuctor announced four months ago. It just so happened. The "cosmic rays" nonsense is restated for good measure and guess what ? If you're the sort of mentally slow individual that actually buys government paper, you now have a reference point for that mythical "research" that the hastily written replacement article promoted by slashdot references (without actually referencing). It was Weimer's August thing! Back in May! Problem ?</p>
+<p>Any dumber than this and they'd be meatballs.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_61676" class="footnote">Short for "The Powers That Wanna Be". Because <a href="http://trilema.com/2015/full-disclosure-4096-rsa-key-in-the-strongset-factored/#comment-114230">that's how it is</a>. [<a href="#identifier_0_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_61676" class="footnote">You should see what the turnover for intelligence jobs @USG is like - you'd think you've died and gone to fast food heaven.</p>
+<p>And speaking of which, if you're one of those poor souls that for whatever reason remain mired in that fetid swamp - do consider if it makes any sort of sense <a href="http://trilema.com/2014/georg-ritter-von-flondor-and-what-his-unhappy-life-can-teach-us/">on the mid term</a>, and for that matter if you even want to be there <a href="http://trilema.com/2014/pushing-the-soft-tender-flesh-of-a-friend-against-the-sharp-rotating-blades-of-the-immutable-machine/?b=How%20much%20does%20your&#038;e=?#select">at all</a>. </p>
+<p>Yes, I'm aware that as The Narrative goes, "there's nowhere else". This is patently false - unlike USG's future, <a href="http://trilema.com/2015/the-definitive-sovereign/">The Most Serene Republic</a> is an actual thing. [<a href="#identifier_1_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_61676" class="footnote">Which is why this article was delayed for a day in the first place. Turns out, plausible deniability cuts both ways. [<a href="#identifier_2_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_61676" class="footnote">It's not clear if ongoing or not, it's definitely clear it burned like a red hot iron poker. [<a href="#identifier_3_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_61676" class="footnote">Back in January Reddit did a very botchy job of <a href="http://trilema.com/2015/these-fools-have-been-handed-a-technology-so-clever-so-disruptive-and-revolutionary-that-the-rulers-of-the-world-would-have-to-fully-unmask-themselves-as-ruthless-tyrants-in-order-to-suppress-it/">deleting the entry</a> of a <a href="http://qntra.net/2015/01/the-hard-fork-missile-crisis/">Qntra article</a> guilty of making the very simple point that the <a href="http://trilema.com/wp-content/uploads/2013/03/in-re-bitcoin-devs-are-idiots.htm">Bitcoin Power Rangers</a> don't even have much to do with Bitcoin at all, let alone any sort of consensus worth the mention on changing it. That simple point was apparently very problematic for The Narrative, because at the time The Narrative went something like "it's definitely happening" and much like any other socialistoid construct The Narrative is very, very fragile. </p>
+<p>In the intervening few months the putative "<a href="http://trilema.com/2013/soft-consensus-aka-fecal-matter/">consensus</a>" was degraded in official verbiage to a mere "controversy", for absolutely no reason given whatsoever. That strange notwithstanding, it nevertheless was still <em>obviously</em> going to come out the way the USG wanted it to come out, The Narrative went. Because of course. </p>
+<p>But then, in a clearly shocking move <a href="http://trilema.com/2013/nobody-could-have-foreseen-their-using-a-plane-like-a-rocket/">nobody could have foreseen</a>... it didn't go that way. Instead, it went exactly the opposite. Because... seriously now, when is the last time the USG managed to get anything it wanted ? The "<a href="http://trilema.com/forum-logs-for-21-feb-2015#1624977">Tikrit</a>* <a href="http://trilema.com/forum-logs-for-02-mar-2015#1637270">offensive</a>" ? The "Embargo on Putin" ? Laissez.</p>
+<p>---<br />
+* For the record, that quote comes from the best episode of the best cartoon Romania ever produced : RObotzi S02 Ep14 Subtil. It's pretty damned good. [<a href="#identifier_4_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_61676" class="footnote">As Gavin's painfully enlarged rectum should have told you, no, I can't be suppressed. Whatever you may like to believe or wish really really hard to be the case, it's not gonna work. Find a better strategy.</p>
+<p><a href="http://trilema.com/2014/interacting-with-fiat-institutions-a-guide/">Sucking the cock</a> would probably work best, but don't let me get in the way of this wunderbar "do the effectual thing just as soon as all alternatives have been exhausted" thing you got going. [<a href="#identifier_5_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_61676" class="footnote">Which yes, was prepared (in broad strokes, ready to be released with a few changes as needed) for just such an eventuality. </p>
+<p>That's right : this was part of a contingency plan, just in case someone rocks the boat. A major victory for No Such lAbs in the struggle with its large but largely inept competitor for that three letter initialism, but nevertheless : sources didn't know (or didn't care to share) what boat that exactly is in question. So I dunno. Which sucks.</p>
+<p>Do you know ? Tell me! [<a href="#identifier_6_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_61676" class="footnote">Yes yes, you know all about <A href=http://www.righto.com/2013/11/how-hacker-news-ranking-really-works.html>how hacker news ranking really works dot html</a> and so can tell by some pixels that it's all automated and due to the comments etc. Notwithstanding that the replacement also got a ton of comments and so on. Carry on. [<a href="#identifier_7_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_61676" class="footnote">Conveniently omitting the part where Bitlove LLC <a href="http://trilema.com/2015/fetlife-the-meat-market/">wouldn't fix a vulnerability in Fetlife</a> (still there, btw). Also incidentally forgetting to mention that entire debacle with <a href="http://trilema.com/2015/on-how-i-ended-up-suing-phoenix-nap-llc-on-how-ira-r-cadwells-mom-stephanies-going-to-lose-her-chula-vista-home-on-how-marcus-bohn-is-going-to-catch-a-lot-of-shit-for-that-on-assorted-othe/">fraudulent DMCA claims</a> and whatnot. Because that's exactly how random Internet twerp would behave. [<a href="#identifier_8_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_61676" class="footnote">Apparently, SA is still very, very butthurt over that <a href="http://trilema.com/2013/valiant-prince-mp-explores-the-mother-of-all-echo-chambers-a-saga-of-our-times/">fiat lulz</a> incident. Seriously doods, it's not my fault you're easily triggered and then end up saying stupid shit you did mean but didn't really wanna sign. Okay ?</p>
+<p>Anyway, what I actually said was that <a href=http://trilema.com/2015/i-think-you-drastically-overestimate-the-military-importance-of-nuclear-weapons>I think you drastically overestimate the military importance of nuclear weapons</a> ; that "<a href="http://trilema.com/2015/in-which-orwell-avoids-what-he-does-not-wish-to-see/?b=The%20proposition&#038;e=feeling%20any%20better#select">The proposition that there even exists any sort of English literature of the 1900s - as a thing, as a fact, as a fruit of that forsaken realm - seems entirely ludicrous today (and the 1800s aren't really feeling any better).</a>" and so on and so forth. The "argument"'s not quite the same without the strawman, huh. A well. [<a href="#identifier_9_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_61676" class="footnote">Here's something that may come as a shock, although it should not come even as mild surprise in a sane world : you don't get to package other people's work, present it before a collection of your peeridiots and pretend like you did something. It didn't work when Gavin Andresen repackaged Bitcoin to sell before the NSA - Gavin Andresen doesn't own Bitcoin, and the actual owners are very much present and very much capable to bitchslap him into oblivion. It doesn't work when Nadia Heninger goes to sell Phuctor before Stanford - Nadia Heninger doesn't own Phuctor, and the actual owners are very much present and very much capable to bitchslap her into oblivion. I am aware that all this USG-wank subsists by repackaging work they "found on the Internet", and I'm aware they're reading the #b-a logs, and I don't specifically care - but do not expect that it will wash. Even if Stanford, NSA etc claim it did. They aren't the authorities on this matter, not by a long shot.</p>
+<p>Which brings us to the all-important matter of credentials. There are anons, on the Internet. Their personal value is zero. There are people with sound credentials. You may find these in the <a href="http://wot.deedbot.org/">WoT</a>. There are people with negative credentials. These are people like Nadia above. Stanford does not increase your value, it <em>decreases</em> it. An association with Stanford is not a positive, and it's not even nil. It is a negative, it costs you, it lowers you below the anon derps. </p>
+<p>Consequently, given a collection of nobodies and Stanfordites, the question is not whether it sums up to above epsilon or below epsilon. Epsilon is off the table. Zero is off the table. The sum is necessarily negative, and the whole charade can be <a href="http://trilema.com/2014/how-to-deal-with-pseudoscience/">readily ignored</a>. [<a href="#identifier_10_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_61676" class="footnote">Who's "zmanian" ? Zaki Manian. What's keybase.io ? A wanna-be WoT implementation, the same exact "here's where we did Phuctor except it doesn't work and we forgot to publish any results" play but applied to the <a href="http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/">WoT</a> this time. Who uses it ? The sort of twerps you'd find pushing The Narrative on social media, assorted Bitcoin scammers like <a href="http://trilema.com/2013/recapitulatio/">Meni Rosenfeld</a>, the whole shit<em>crème</em>. In their hallucinations this even works, I suppose. [<a href="#identifier_11_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_61676" class="footnote">There are a billion people online, and your website is online, so therefore it could have been seen by a billion people. There are however many teenage sluts in your town, and you're horny, so therefore you could have fucked them all. On it goes, this, and it never starts making any sense. [<a href="#identifier_12_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_61676" class="footnote">Among other reasons because key servers have a serious incentive to not keep bad data around. They go as far as to wipe the comment section from keys, which is a reasonable space saving measure, but supposedly they just keep useless cruft because... Doesn't seem too likely, does it.
+<p>Also among those reasons, the directly evident "so some<del datetime="2015-05-18T06:12:27+00:00">one</del>thing took a length of bytes, copied two thirds of them, then accidentally took another very specific length of bytes which was the signature for the previous set and copied it over verbatim and in the right place". Because yes, this is how accidents happen, a crane fails so it just turns into a train engine for a week. Or a plane. Definitely one of these two. No piles of random scraps of metal have been seen in this alt-world for thousands of years, you just crash two cars together and get orderly arrangements of forks and three inch nuts flying every which way.  [<a href="#identifier_13_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_61676" class="footnote">On September 5th, 2015. [<a href="#identifier_14_61676" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2015/full-disclosure-4096-rsa-key-in-the-strongset-factored/">Full disclosure : 4096 RSA key in the strongset factored.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2015/the-fetlife-meatlist-volume-xii/">The Fetlife Meatlist - Volume XII</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2015/on-how-the-factored-4096-rsa-keys-story-was-handled-and-what-it-means-to-you/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2015/on-how-the-factored-4096-rsa-keys-story-was-handled-and-what-it-means-to-you/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>28 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-114244" class="commentbody"><div class="commenthead"><img alt='B. Obama`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">B. Obama</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114244" title="">Monday, 18 May 2015</a>
+							</div>
+						<p>Just a note:</p>
+<p>&gt;&gt; Oh, I did this before except I never published anything [...]</p>
+<p>Research of the same kind with results of the same kind has been published since at least 2012. Example (this one has been linked to in the context of this particular story quite a few times, maybe you've seen it already): <a href="https://eprint.iacr.org/2012/064.pdf">https://eprint.iacr.org/2012/064.pdf</a></p>
+<p>/meaning no harm<br />
+B. O.</p>
+						</li>
+
+										<li id="comment-114245" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114245" title="">Monday, 18 May 2015</a>
+							</div>
+						<p>Sure. More generally, research of this kind (ie, with numbers) has been published since at least 300 BC, for some definitions of published. I don't suppose the idea ever was, or ever could be, that "hey, we invented the number 7 over here, and check out the interesting implications it has for the GPG keyset".</p>
+<p>Research of this kind (ie, here's how trivial it is to factorize a key appearing on hpa's page) has not, to my knowledge, been published.</p>
+						</li>
+
+										<li id="comment-114246" class="commentbody"><div class="commenthead"><img alt='Lynne Meade`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Lynne Meade</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114246" title="">Monday, 18 May 2015</a>
+							</div>
+						<p>The trolls at /r/Buttcoin summarized this article before you wrote it, but as a subscriber you already knew that.</p>
+<p>Also, how is your bandwidth topped out at 7 MBps? PRQ.se gives more bandwidth for your bitcoins. You should try them!</p>
+						</li>
+
+										<li id="comment-114247" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114247" title="">Monday, 18 May 2015</a>
+							</div>
+						<p>I actually hadn't, link ?</p>
+<p>And no it's not capped. That's how far the traffic actually went, its natural peak.</p>
+						</li>
+
+										<li id="comment-114248" class="commentbody"><div class="commenthead"><img alt='B. Obama`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">B. Obama</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114248" title="">Tuesday, 19 May 2015</a>
+							</div>
+						<p>&gt; Research of this kind (ie, here's how trivial it is to factorize a key appearing on hpa's page) has not, to my knowledge, been published.</p>
+<p>Fair enough, and in any regard the findings and the methodology are I think valuable and interesting, but have you e.g. seen this (just glance over it, maybe I'm mistaken re. overlaps in methodology and Phuctor's mechanism is fundamentally different) (it is an interesting paper): <a href="https://factorable.net/weakkeys12.conference.pdf">https://factorable.net/weakkeys12.conference.pdf</a></p>
+<p>they used a thing called "Quasilinear GCD finding" (fancy name) on actual keys on teh internets.</p>
+						</li>
+
+										<li id="comment-114249" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114249" title="">Tuesday, 19 May 2015</a>
+							</div>
+						<p>What exactly "Quasilinear GCD finding" is doesn't seem to be published anywhere, so I have no idea (the term does strictly seem to be used in half a dozen documents originating from the same source).</p>
+<p>The algorithm Phuctor uses really needs no further words or explanation than "Euclid's GCD" because it is exactly what it is. Some minor implementation optimizations have been applied over time (such as moving from python to GMP, altering memory usage and db interaction patterns, scl) which do yield major "improvements" on the basis of the weakness of previous versions and that alone. None of these are really worthy of mention in this discussion - Phuctor is really no better and no different from any sane man's implementation of Euclid's GCD on a contemporary computer.</p>
+						</li>
+
+										<li id="comment-114250" class="commentbody"><div class="commenthead"><img alt='B. Obama`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">B. Obama</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114250" title="">Tuesday, 19 May 2015</a>
+							</div>
+						<p>Re. GCD finding, that particular algo is documented in Figure 1, section 3.3 (it's very short) (fwiw it's attributed to djb (if your ssh is enabled to use elliptic curves, it's most likely that it's his algos spinning there) and the thing is covered in detail in his 2004 paper: <a href="http://cr.yp.to/factorization/smoothparts-20040510.pdf">http://cr.yp.to/factorization/smoothparts-20040510.pdf</a>) Just putting this here for teh record.</p>
+						</li>
+
+										<li id="comment-114526" class="commentbody"><div class="commenthead"><img alt='Prince Leopold Gbanga III, Esq`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Prince Leopold Gbanga III, Esq</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114526" title="">Monday, 15 June 2015</a>
+							</div>
+						<p>&gt; and that nuclear weapons are ineffective</p>
+<p>Señor Popescu, have you made such a claim or (more likely) some other claim which is being construed as such?</p>
+<p>If so, in either case, would you kindly direct us to it?</p>
+<p>I suspect it will be most entertaining.</p>
+<p>GBANGA!</p>
+						</li>
+
+										<li id="comment-114534" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114534" title="">Monday, 15 June 2015</a>
+							</div>
+						<p>The claim was specifically "<a href=http://trilema.com/2015/i-think-you-drastically-overestimate-the-military-importance-of-nuclear-weapons/ >I think you drastically overestimate the military importance of nuclear weapons.</a>", and see in particular </p>
+<blockquote><p>In any case, the proposition here isn't that nuclear weapons don't exist, or don't work, or can't be had or can't be made to work. The proposition is that their principal utility lies in military marketing rather than military operations, and that the general public's apparent ignorance on the topic seems to have a lot to do with the propaganda needs therein incumbent.</p></blockquote>
+						</li>
+
+										<li id="comment-115871" class="commentbody"><div class="commenthead"><img alt='lothrop.s`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">lothrop.s</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-115871" title="">Saturday, 14 November 2015</a>
+							</div>
+						<p>| and that nuclear weapons are ineffective</p>
+<p><a href="https://www.youtube.com/watch?v=_bB9_hsETP4">https://www.youtube.com/watch?v=_bB9_hsETP4</a><br />
+"Four Myths About Nuclear Weapons"<br />
+tldr: they are not militarily useful except to terrorists.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-141422">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/more-factored-rsa-keys-and-assorted-other-considerations?b=hold%20Paul%20Gr&amp;e=ches#select' class='url'>More factored RSA keys, and assorted other considerations on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141422" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] hold Paul Graham personally responsible for the fraudulent shenanigans dissected in On how the factored 4096 RSA keys story was handled, and what it means to you, and I expect an apology. Let me also underscore that I smushed the last too-big-for-his-britches [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141443">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/no-such-labs-snsa-may-2015-statement?b=System%2C%20NSA%27&amp;e=cken#select' class='url'>No Such lAbs (S.NSA), May 2015 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141443" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] System, NSA's star male lead spent a lot of time loaned out to other studios this Spring. The critically panned "RSA In The Soup!" trilogy was just packaged recently, while filming for the Thermonuked Chicken [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141529">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-jerking-around-a-modern-bedtime-pattern?b=Yes%2C%20I%27m%20sur&amp;e=ore.#select' class='url'>The jerking around, a modern bedtime pattern. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141529" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Yes, I'm sure now that #b-a has picked it up it'll suddenly and retrospectively will have been very important all along, and "some researchers" will have retrospectively said (undocumentably) everything we say, and so on and so forth. Like we've seen it play out before. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141816">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/usg-in-btc-a-history-of-constant-failure?b=if%20not%20every&amp;e=sane#select' class='url'>USG in BTC, a history of constant failure on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141816" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] if not everyone was equally public about the matter. The workings of media, be it "mainstream" or "social" or otherwise as propaganda instruments devoid of other utility or value shouldn't, for sane [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141870">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/minigame-smg-january-2016-statement?b=Then%20again%2C%20&amp;e=e%20in#select' class='url'>MiniGame (S.MG), January 2016 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141870" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Then again, everyone in cryptography posturing on social media about being in cryptography has other concerns, just like everyone in lisp is blesfully unaware of how lisp matters today and everyone in [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142027">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/bitbet-final-settlement?b=%22community%22%20&amp;e=%20the#select' class='url'>BitBet final settlement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142027" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] "community" consensus was quick to form, on the usual lines :  Then that theory didn't work out, but no matter, the same "consensus"i reformed itself along the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142050">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/the-recent-phuctor-finds-explained?b=infamous%20amo&amp;e=ress#select' class='url'>The recent Phuctor finds, explained. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142050" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] infamous among non-governmental and anti-governmental communities for the various shenanigans government-aligned websites have engaged in to try and suppress [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142109">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/files-from-the-war-on-the-web-today-pbnation?b=the%20spinmeis&amp;e=your#select' class='url'>Files from the War on the Web. Today, PBNation. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142109" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] the spinmeisters : the discussion as to how nobody cares how you editorialize this is to be found here, save your [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142645">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/florence-foster-jenkins?b=are%20familiar&amp;e=on%27t#select' class='url'>Florence Foster Jenkins on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142645" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] are familiar with this nonsense, yes ? For it's alive and well, in 2015 like in 1915, as American as apple pie. No, they don't [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142685">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/ideological-history-of-the-republic?b=for%20Republic&amp;e=g%20it#select' class='url'>Ideological History of the Republic on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142685" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] for Republican process begins. It will yield many interesting results over the years (Imperial attempts at unhappening it [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142933">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/handled-badly?b=beating%20them&amp;e=ble.#select' class='url'>Handled ; badly. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142933" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] beating them black and bloody with their broken off arms never happened and doesn't exist. Which pretense has a cost, and it is a most burdensome cost indeed : it makes communication outright impossible. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142991">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/google-ycombinates-also?b=poor%20quality&amp;e=ople#select' class='url'>Google Ycombinates also! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142991" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] poor quality of the work is readily reminescent of the rest of the USG, but the twist may well be that perhaps I wasn't supposed to ever notice. As it turns out, people [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143025">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/global-warming-on-triton?b=go%20re-read%20t&amp;e=ent%2C#select' class='url'>Global Warming on Triton on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143025" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] go re-read the tombstone of Hacker News and start understanding the world you live in already. [&#8617;]Not exactly a small accomplishment, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143197">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/stop-being-so-fucking-poor?b=relating%20to%20&amp;e=xual#select' class='url'>Stop being so fucking poor! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143197" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] relating to "inconvenient persons" (as distinct and distinguishable from the playbook relating to inconvenient events) is putting forth numerous false claims of sexual [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143281">
+					<div class='trackhead'>
+						<div class="commentcount">25</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/no-such-labs-snsa-april-2017-statement?b=rationale%20fo&amp;e=o%20it#select' class='url'>No Such lAbs (S.NSA), April 2017 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143281" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] rationale for this value is that since S.NSA is providing phuctor as a free (and very much talked / untalked about) service to the world, the costs it incurs doing so accrue as a sort of diffuse benefit to it [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144611">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/and-in-things-that-didnt-happen-today-heres-192-cracked-github-keys-some-hotties-in-tech-included-yes?b=this%20in%20mind&amp;e=ount#select' class='url'>And in things that "didn't happen" today : here's 192 cracked github keys (some hotties in "tech" included, yes). on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144611" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] this in mind for next time you feel the itch to "handle" reality : a) you will fail and b) your failure will have costs for you, which costs b.1) mount [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145230">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/i-dont-get-it?b=a%20list%20of%20st&amp;e=ame%2C#select' class='url'>I don't get it... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145230" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] a list of strings to choose from at least in the thousands. [&#8617;]Which of course it's not, slug knows no scarier salt. What next, hallucinated optionality poseurs admitting their existence to date was not just lame, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145793">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/lifes-a-helva-gumdrop-you-know?b=did%20less%20dam&amp;e=d%20by#select' class='url'>Life's a helva gumdrop, you know ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145793" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] did less damage than the inept "reconstruction" afterwards, and the important point is rather how the story was handled, specifically that before I pointed it out, you had no idea Europe was trundled over roughshod by [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="61676" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835265-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-61676")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-61676");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-61676");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

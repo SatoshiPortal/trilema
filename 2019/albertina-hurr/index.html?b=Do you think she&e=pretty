@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Albertina hurr on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Joe Bidden Reales<br />La Al Paispcelea Congres!
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-88217"><div class="post" id="post-88217">                    <h1><a href="http://trilema.com/2019/albertina-hurr/" rel="bookmark" title="Permanent Link to Albertina hurr">Albertina hurr</a></h1>                        <div class="date">                                     Sunday, 06 October, Year 11 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>After girl's been weeping on my feet in despair, suddenly... "What the fuck is happening to your toes ?"<br />
+"What ?"<br />
+"Are they getting constricted ? Looks like burst capilaries maybe ?"<br />
+So I inspect what the fuck, and well... "It's... filth."<br />
+"Red filth ?!"<br />
+"How about... lipstick ?"</p>
+<p>First class problems.</p>
+<p>But be that as it may -- brace yourselves, dear reader, for this is going to be the largest visual deluge Trilema's yet blessed you with, immense (but still countable) as fascinating ; and generally wunderbar.<sup><a href="#footnote_0_88217" id="identifier_0_88217" class="footnote-link footnote-identifier-link" title="For he interested in reproducing the results : first, place your selection of a few hundred raw images chosen from among the thousands upon thousands on your camera in a directory of their own. Then :
+let cnt=0; for f in *.JPG ; do ((cnt++&#41;&#41;; convert `$f` -auto-orient -geometry 1024 albertina-`$cnt`.jpg ; done
+and
+let cnt=0; for f in *.JPG ; do ((cnt++&#41;&#41;; convert `$f` -auto-orient -geometry 560 albertina-`$cnt`-560px.jpg ; done
+The auto-orient is there so that portrait and landscape are correctly separated ; the -geometry  produces images that wide (scaling them so they fit and adjusting the height so proportions are maintained). The rest should be self-explanatory : it creates the 1024 px fixwidth large versions and the 560 px fixwidth inline versions of images. The magic numbers are set for Trilema, feel free to fiddle with the values if your theme takes say 640 px wide images instead of 560 or whatever.
+Then
+tar -czvf albertina.tar.gz albertina-*
+to compress,
+scp albertina.tar.gz [your user]@[your ip]:[path to]/wp-content/uploads/2019/10/albertina.tar.gz
+to copy over and 
+tar -xzvf albertina.tar.gz
+in the console of your server, to decompress (followed by a rm albertina.tar.gz, why not). Then finally
+hd=`albertina`; for cnt in {1..270}; do echo '&lt;a href=`http://trilema.com/wp-content/uploads/2019/10/'$hd'-'$cnt'.jpg`>&lt;img src=`http://trilema.com/wp-content/uploads/2019/10/'$hd'-'$cnt'-560px.jpg` alt=`'$hd'-'$cnt'` title=`'$hd'-'$cnt'` width=`560` class=`aligncenter size-large wp-image-'$((cnt+88120&#41;&#41;'` />&lt;/a>' >> article.txt ; done
+to produce the html scaffolding for inserting the proper references to all these into your article (again, this is taylored to the instant Trilema case, yours will perhaps take some self-obvious jiggling).">i</a></sup> </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-1.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-1-560px.jpg" alt="albertina-1" title="albertina-1" width="560" class="aligncenter size-large wp-image-88121" /></a></p>
+<p>Above &#038; below : beautiful Autumnal Osterreicher skyies above Stephen's Cathedral. A building standing in that same place has served for a church since the mid 1100s, so we could almost suspect the sky's used to it yet.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-2.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-2-560px.jpg" alt="albertina-2" title="albertina-2" width="560" class="aligncenter size-large wp-image-88122" /></a></p>
+<p>Above &#038; below : details of same. We're carefully avoiding the other side, where a criminal hand hung a large poster advertising some contemporary plastic inanity.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-3.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-3-560px.jpg" alt="albertina-3" title="albertina-3" width="560" class="aligncenter size-large wp-image-88123" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-4.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-4-560px.jpg" alt="albertina-4" title="albertina-4" width="560" class="aligncenter size-large wp-image-88124" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-5.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-5-560px.jpg" alt="albertina-5" title="albertina-5" width="560" class="aligncenter size-large wp-image-88125" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-6.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-6-560px.jpg" alt="albertina-6" title="albertina-6" width="560" class="aligncenter size-large wp-image-88126" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-7.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-7-560px.jpg" alt="albertina-7" title="albertina-7" width="560" class="aligncenter size-large wp-image-88127" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-8.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-8-560px.jpg" alt="albertina-8" title="albertina-8" width="560" class="aligncenter size-large wp-image-88128" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-9.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-9-560px.jpg" alt="albertina-9" title="albertina-9" width="560" class="aligncenter size-large wp-image-88129" /></a></p>
+<p>Above &#038; below : horsy watering station. There's lots of carriages in the Innerstadt, pulled by well groomed, healthy horses. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-10.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-10-560px.jpg" alt="albertina-10" title="albertina-10" width="560" class="aligncenter size-large wp-image-88130" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-11.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-11-560px.jpg" alt="albertina-11" title="albertina-11" width="560" class="aligncenter size-large wp-image-88131" /></a></p>
+<p>Above : pit stop, Wienerschnitzel and local unfiltered beer on the tap. </p>
+<p>Below : entrance to the Spanische Hofreitschule. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-12.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-12-560px.jpg" alt="albertina-12" title="albertina-12" width="560" class="aligncenter size-large wp-image-88132" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-13.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-13-560px.jpg" alt="albertina-13" title="albertina-13" width="560" class="aligncenter size-large wp-image-88133" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-14.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-14-560px.jpg" alt="albertina-14" title="albertina-14" width="560" class="aligncenter size-large wp-image-88134" /></a></p>
+<p>"Are these antique relics ?"</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-15.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-15-560px.jpg" alt="albertina-15" title="albertina-15" width="560" class="aligncenter size-large wp-image-88135" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-16.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-16-560px.jpg" alt="albertina-16" title="albertina-16" width="560" class="aligncenter size-large wp-image-88136" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-17.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-17-560px.jpg" alt="albertina-17" title="albertina-17" width="560" class="aligncenter size-large wp-image-88137" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-18.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-18-560px.jpg" alt="albertina-18" title="albertina-18" width="560" class="aligncenter size-large wp-image-88138" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-19.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-19-560px.jpg" alt="albertina-19" title="albertina-19" width="560" class="aligncenter size-large wp-image-88139" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-20.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-20-560px.jpg" alt="albertina-20" title="albertina-20" width="560" class="aligncenter size-large wp-image-88140" /></a></p>
+<p>We're in the Kunsthistorisches Museum (right of the Maria Theresa statuary ensemble F. J. built to try and convince people to listen to him). Above, those are elephant teeth, hand carved. Below, various things I kept wanting to take home. Anybody got any ideas on how to steal all this shit ? Especially that blue pitcher below with the dragon head... but most everything, really. But especially that one.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-21.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-21-560px.jpg" alt="albertina-21" title="albertina-21" width="560" class="aligncenter size-large wp-image-88141" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-22.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-22-560px.jpg" alt="albertina-22" title="albertina-22" width="560" class="aligncenter size-large wp-image-88142" /></a></p>
+<p>This is a pretty good business idea even today, actually -- buy whole geodes, polish them into various objects, such as cups and whatnot. Amethyst inclusions for the win!</p>
+<p>The world could certainly do with a lot more carefully handcrafted artwork, and correspondingly therefore a lot less wankish plastic, beton brut and the rest of the sad materials of the ADD generation, these inconsequential schmucks that are <em>so</em> very important (in their mind only) they can't possibly do anything well for all the rush to do something <em>else</em> (that they'll do just as poorly, of course). But at least nobody could accuse them of not doing things, or some such idiotically transparent bit of nonsense.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-23.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-23-560px.jpg" alt="albertina-23" title="albertina-23" width="560" class="aligncenter size-large wp-image-88143" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-24.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-24-560px.jpg" alt="albertina-24" title="albertina-24" width="560" class="aligncenter size-large wp-image-88144" /></a></p>
+<p>Young Polish commander (ie, <a href=http://trilema.com/2016/sobieski-si-romanii/>Sobieski</a>) in traditional fur hat.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-25.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-25-560px.jpg" alt="albertina-25" title="albertina-25" width="560" class="aligncenter size-large wp-image-88145" /></a></p>
+<p>Above : the results of healthy competition with the Ottoman craftsmen, testimony of the simple if "mysogynistic" fact that war is always better than peace. </p>
+<p>Below : not even the most elaborate backgammon set in there. No idea how they could muster the patience, but there it is.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-26.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-26-560px.jpg" alt="albertina-26" title="albertina-26" width="560" class="aligncenter size-large wp-image-88146" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-27.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-27-560px.jpg" alt="albertina-27" title="albertina-27" width="560" class="aligncenter size-large wp-image-88147" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-28.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-28-560px.jpg" alt="albertina-28" title="albertina-28" width="560" class="aligncenter size-large wp-image-88148" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-29.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-29-560px.jpg" alt="albertina-29" title="albertina-29" width="560" class="aligncenter size-large wp-image-88149" /></a></p>
+<p>As the habit at the time was for most plebs to be kept outdoors working the fields in line with the other beasts of burden while the vehehehery occasional choice bit of cunt might've been permitted indoors but always on her knees futzing with the floors and never allowed to look up, it must be thus pointed out that these ceilings must've never been all that important, seeing how they never got that many views. No ?</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-30.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-30-560px.jpg" alt="albertina-30" title="albertina-30" width="560" class="aligncenter size-large wp-image-88150" /></a></p>
+<p>A triptich. Spoiler : it <a href=http://trilema.com/2009/problema-cu-casatoria/>doesn't work out</a> for her.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-31.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-31-560px.jpg" alt="albertina-31" title="albertina-31" width="560" class="aligncenter size-large wp-image-88151" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-32.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-32-560px.jpg" alt="albertina-32" title="albertina-32" width="560" class="aligncenter size-large wp-image-88152" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-33.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-33-560px.jpg" alt="albertina-33" title="albertina-33" width="560" class="aligncenter size-large wp-image-88153" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-34.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-34-560px.jpg" alt="albertina-34" title="albertina-34" width="560" class="aligncenter size-large wp-image-88154" /></a></p>
+<p>Above : Alexander the Great by Andrea della Robbia, glazed terracotta, prolly Florence cca 1500. This item is an echo, of a treasure trove Lorenzo de' Medici sent in 1480 as a gift to Matthias Corvinus (it included also a profile of Darius to go with one of Alexander, and some fine armour).  </p>
+<p>Below : bust of Maximillian I attributed to Jorg hmmm... the piece doesn't actually appear among the KHM's <a href=https://www.khm.at/en/objectdb/?id=11227&#038;L=1&#038;query=bronze&#038;q[]=Maximilian+I.>otherwise excellent</a> online list. O wait, yes, of course it does : Jorg <a href=https://www.khm.at/en/objectdb/detail/91493/?offset=1&#038;lv=list>Muskat</a>. Also some other guy. What need to remember anything anymore once there's databases, amirite ?</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-35.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-35-560px.jpg" alt="albertina-35" title="albertina-35" width="560" class="aligncenter size-large wp-image-88155" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-36.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-36-560px.jpg" alt="albertina-36" title="albertina-36" width="560" class="aligncenter size-large wp-image-88156" /></a></p>
+<p>The satyr's bottom's actually signed by Adriano Fiorentino (di Giovanni de Maestri). The [otherwise] idealized bust's by Simone Bianco.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-37.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-37-560px.jpg" alt="albertina-37" title="albertina-37" width="560" class="aligncenter size-large wp-image-88157" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-38.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-38-560px.jpg" alt="albertina-38" title="albertina-38" width="560" class="aligncenter size-large wp-image-88158" /></a></p>
+<p>Above : young couple by Tullio Lombardo, most likely made in the 2nd half of the very first decade of the 1500s. It's a major piece in that it started Venetian Renaissance sculpture ; in a break with what came before T.L. produced these <em>non-functional</em> pieces. Think of it if you will, carvings that aren't really knives or bedposts. Carvings that are really <em>nothing</em>, just there to be admired, to be thought about as such, like trading cards or pornographic stories. In which context, isn't it pretty shocking just how similar their tits came out ?</p>
+<p>Below : Pietro Lombardo, not getting with the programme. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-39.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-39-560px.jpg" alt="albertina-39" title="albertina-39" width="560" class="aligncenter size-large wp-image-88159" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-40.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-40-560px.jpg" alt="albertina-40" title="albertina-40" width="560" class="aligncenter size-large wp-image-88160" /></a></p>
+<p>This is most likely Petrarca's Laura. <span style="background-color:#d3d3d3" id="select">Do you think she's pretty</span> <em>enough</em> ? </p>
+<p>You don't, do you.</p>
+<p>There could actually be much prettier, just waiting to show up tomorrow. Maybe her letter's <a href=http://trilema.com/2014/the-gui-the-twerk-and-the-most-valuable-resource/?b=Maybe%20you&#038;e=tomorrow#select>already in the mail</a>. Maybe she's just about to turn the corner. There's so much more to come, hay <em>so much more</em> futuro, how could anyone possibly be that obsessed with <em>merely</em> this Laura ?</p>
+<p>Evidently, Petrarca did not hold the same notions.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-41.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-41-560px.jpg" alt="albertina-41" title="albertina-41" width="560" class="aligncenter size-large wp-image-88161" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-42.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-42-560px.jpg" alt="albertina-42" title="albertina-42" width="560" class="aligncenter size-large wp-image-88162" /></a></p>
+<p>Above : Domenico da Venezia dish, gods having a party. </p>
+<p>Below : Something rather in the same vein. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-43.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-43-560px.jpg" alt="albertina-43" title="albertina-43" width="560" class="aligncenter size-large wp-image-88163" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-44.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-44-560px.jpg" alt="albertina-44" title="albertina-44" width="560" class="aligncenter size-large wp-image-88164" /></a></p>
+<p>Above : Zoppo (probably), some scholar (from Padua ?). 2nd half of 1500s aka teh Cinquecento.</p>
+<p>Below : dollhouse.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-45.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-45-560px.jpg" alt="albertina-45" title="albertina-45" width="560" class="aligncenter size-large wp-image-88165" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-46.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-46-560px.jpg" alt="albertina-46" title="albertina-46" width="560" class="aligncenter size-large wp-image-88166" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-47.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-47-560px.jpg" alt="albertina-47" title="albertina-47" width="560" class="aligncenter size-large wp-image-88167" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-48.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-48-560px.jpg" alt="albertina-48" title="albertina-48" width="560" class="aligncenter size-large wp-image-88168" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-49.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-49-560px.jpg" alt="albertina-49" title="albertina-49" width="560" class="aligncenter size-large wp-image-88169" /></a></p>
+<p>Above &#038; below : no possible depiction outside of direct ownership can do these miniatures any sort of justice. I swear to god I can barely repress the impulse to ingurgitate a few even as I'm sitting here separated by miles and days from the damned things.</p>
+<p>Glurgh!</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-50.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-50-560px.jpg" alt="albertina-50" title="albertina-50" width="560" class="aligncenter size-large wp-image-88170" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-51.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-51-560px.jpg" alt="albertina-51" title="albertina-51" width="560" class="aligncenter size-large wp-image-88171" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-52.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-52-560px.jpg" alt="albertina-52" title="albertina-52" width="560" class="aligncenter size-large wp-image-88172" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-53.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-53-560px.jpg" alt="albertina-53" title="albertina-53" width="560" class="aligncenter size-large wp-image-88173" /></a></p>
+<p>Above is Neptune on a door knocker, an earlier version of Christ on a cracker. There's also two hippocampi, for good measure.</p>
+<p>Below you find an actual android, of Italian (possibly Juanello Toriano) mid 1600s make. It plays the damned citern, moves about the table and <em>keeps its fucking mouth shut</em>. Well, mostly, anyway.  </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-54.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-54-560px.jpg" alt="albertina-54" title="albertina-54" width="560" class="aligncenter size-large wp-image-88174" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-55.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-55-560px.jpg" alt="albertina-55" title="albertina-55" width="560" class="aligncenter size-large wp-image-88175" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-56.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-56-560px.jpg" alt="albertina-56" title="albertina-56" width="560" class="aligncenter size-large wp-image-88176" /></a></p>
+<p>Delicious horse a bit. Poor him.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-57.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-57-560px.jpg" alt="albertina-57" title="albertina-57" width="560" class="aligncenter size-large wp-image-88177" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-58.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-58-560px.jpg" alt="albertina-58" title="albertina-58" width="560" class="aligncenter size-large wp-image-88178" /></a></p>
+<p>Give it up. Baby give it up. Na, na, na, na, na, na, na, na, na, na, na. Baby give it up...</p>
+<p>And speaking of complaints, uneasements and displeasures, the principal problem with Vienna that I've so far discovered is that the Romanian language's tied with English for 2nd most spoken in public. What in the actual fuck! Go home, louts! </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-59.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-59-560px.jpg" alt="albertina-59" title="albertina-59" width="560" class="aligncenter size-large wp-image-88179" /></a></p>
+<p>The practical utility of most of these miniature wood and stone sculptures is that they're to be carefully filleted in gold and then sold. Hence the attention to detail. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-60.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-60-560px.jpg" alt="albertina-60" title="albertina-60" width="560" class="aligncenter size-large wp-image-88180" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-62.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-62-560px.jpg" alt="albertina-62" title="albertina-62" width="560" class="aligncenter size-large wp-image-88182" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-63.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-63-560px.jpg" alt="albertina-63" title="albertina-63" width="560" class="aligncenter size-large wp-image-88183" /></a></p>
+<p>Chick's got tubes...</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-64.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-64-560px.jpg" alt="albertina-64" title="albertina-64" width="560" class="aligncenter size-large wp-image-88184" /></a></p>
+<p>This tapestry only actually looks good in a picture. From up close it comes across rather... dingy.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-65.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-65-560px.jpg" alt="albertina-65" title="albertina-65" width="560" class="aligncenter size-large wp-image-88185" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-66.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-66-560px.jpg" alt="albertina-66" title="albertina-66" width="560" class="aligncenter size-large wp-image-88186" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-67.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-67-560px.jpg" alt="albertina-67" title="albertina-67" width="560" class="aligncenter size-large wp-image-88187" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-68.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-68-560px.jpg" alt="albertina-68" title="albertina-68" width="560" class="aligncenter size-large wp-image-88188" /></a></p>
+<p>"Blood!"</p>
+<p>Doesn't he look just like a 1600s vampire, seriously now ?</p>
+<p>If the doctors can do this retrospective diagnosis of imaginary diseases they came up with, why can't pulp fiction authors recognize "their" nonsense in the artefacts of the past ? After all, the Marius brothers were fighting for Clintonicity all along, neh ?!</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-69.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-69-560px.jpg" alt="albertina-69" title="albertina-69" width="560" class="aligncenter size-large wp-image-88189" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-70.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-70-560px.jpg" alt="albertina-70" title="albertina-70" width="560" class="aligncenter size-large wp-image-88190" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-71.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-71-560px.jpg" alt="albertina-71" title="albertina-71" width="560" class="aligncenter size-large wp-image-88191" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-72.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-72-560px.jpg" alt="albertina-72" title="albertina-72" width="560" class="aligncenter size-large wp-image-88192" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-73.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-73-560px.jpg" alt="albertina-73" title="albertina-73" width="560" class="aligncenter size-large wp-image-88193" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-74.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-74-560px.jpg" alt="albertina-74" title="albertina-74" width="560" class="aligncenter size-large wp-image-88194" /></a></p>
+<p>You with me ?</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-75.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-75-560px.jpg" alt="albertina-75" title="albertina-75" width="560" class="aligncenter size-large wp-image-88195" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-76.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-76-560px.jpg" alt="albertina-76" title="albertina-76" width="560" class="aligncenter size-large wp-image-88196" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-77.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-77-560px.jpg" alt="albertina-77" title="albertina-77" width="560" class="aligncenter size-large wp-image-88197" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-78.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-78-560px.jpg" alt="albertina-78" title="albertina-78" width="560" class="aligncenter size-large wp-image-88198" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-79.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-79-560px.jpg" alt="albertina-79" title="albertina-79" width="560" class="aligncenter size-large wp-image-88199" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-80.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-80-560px.jpg" alt="albertina-80" title="albertina-80" width="560" class="aligncenter size-large wp-image-88200" /></a></p>
+<p>I just... I seriously can't even.</p>
+<p>Can you even ?</p>
+<p>I 3, 5, 7, 11 can no further even.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-81.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-81-560px.jpg" alt="albertina-81" title="albertina-81" width="560" class="aligncenter size-large wp-image-88201" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-82.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-82-560px.jpg" alt="albertina-82" title="albertina-82" width="560" class="aligncenter size-large wp-image-88202" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-83.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-83-560px.jpg" alt="albertina-83" title="albertina-83" width="560" class="aligncenter size-large wp-image-88203" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-84.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-84-560px.jpg" alt="albertina-84" title="albertina-84" width="560" class="aligncenter size-large wp-image-88204" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-85.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-85-560px.jpg" alt="albertina-85" title="albertina-85" width="560" class="aligncenter size-large wp-image-88205" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-86.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-86-560px.jpg" alt="albertina-86" title="albertina-86" width="560" class="aligncenter size-large wp-image-88206" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-87.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-87-560px.jpg" alt="albertina-87" title="albertina-87" width="560" class="aligncenter size-large wp-image-88207" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-88.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-88-560px.jpg" alt="albertina-88" title="albertina-88" width="560" class="aligncenter size-large wp-image-88208" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-89.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-89-560px.jpg" alt="albertina-89" title="albertina-89" width="560" class="aligncenter size-large wp-image-88209" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-90.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-90-560px.jpg" alt="albertina-90" title="albertina-90" width="560" class="aligncenter size-large wp-image-88210" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-91.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-91-560px.jpg" alt="albertina-91" title="albertina-91" width="560" class="aligncenter size-large wp-image-88211" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-92.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-92-560px.jpg" alt="albertina-92" title="albertina-92" width="560" class="aligncenter size-large wp-image-88212" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-93.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-93-560px.jpg" alt="albertina-93" title="albertina-93" width="560" class="aligncenter size-large wp-image-88213" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-94.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-94-560px.jpg" alt="albertina-94" title="albertina-94" width="560" class="aligncenter size-large wp-image-88214" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-95.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-95-560px.jpg" alt="albertina-95" title="albertina-95" width="560" class="aligncenter size-large wp-image-88215" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-96.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-96-560px.jpg" alt="albertina-96" title="albertina-96" width="560" class="aligncenter size-large wp-image-88216" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-97.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-97-560px.jpg" alt="albertina-97" title="albertina-97" width="560" class="aligncenter size-large wp-image-88217" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-98.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-98-560px.jpg" alt="albertina-98" title="albertina-98" width="560" class="aligncenter size-large wp-image-88218" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-99.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-99-560px.jpg" alt="albertina-99" title="albertina-99" width="560" class="aligncenter size-large wp-image-88219" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-100.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-100-560px.jpg" alt="albertina-100" title="albertina-100" width="560" class="aligncenter size-large wp-image-88220" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-101.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-101-560px.jpg" alt="albertina-101" title="albertina-101" width="560" class="aligncenter size-large wp-image-88221" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-102.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-102-560px.jpg" alt="albertina-102" title="albertina-102" width="560" class="aligncenter size-large wp-image-88222" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-103.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-103-560px.jpg" alt="albertina-103" title="albertina-103" width="560" class="aligncenter size-large wp-image-88223" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-104.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-104-560px.jpg" alt="albertina-104" title="albertina-104" width="560" class="aligncenter size-large wp-image-88224" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-105.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-105-560px.jpg" alt="albertina-105" title="albertina-105" width="560" class="aligncenter size-large wp-image-88225" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-106.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-106-560px.jpg" alt="albertina-106" title="albertina-106" width="560" class="aligncenter size-large wp-image-88226" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-107.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-107-560px.jpg" alt="albertina-107" title="albertina-107" width="560" class="aligncenter size-large wp-image-88227" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-108.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-108-560px.jpg" alt="albertina-108" title="albertina-108" width="560" class="aligncenter size-large wp-image-88228" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-109.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-109-560px.jpg" alt="albertina-109" title="albertina-109" width="560" class="aligncenter size-large wp-image-88229" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-110.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-110-560px.jpg" alt="albertina-110" title="albertina-110" width="560" class="aligncenter size-large wp-image-88230" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-111.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-111-560px.jpg" alt="albertina-111" title="albertina-111" width="560" class="aligncenter size-large wp-image-88231" /></a></p>
+<p>And my feet hurt.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-112.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-112-560px.jpg" alt="albertina-112" title="albertina-112" width="560" class="aligncenter size-large wp-image-88232" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-113.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-113-560px.jpg" alt="albertina-113" title="albertina-113" width="560" class="aligncenter size-large wp-image-88233" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-114.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-114-560px.jpg" alt="albertina-114" title="albertina-114" width="560" class="aligncenter size-large wp-image-88234" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-115.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-115-560px.jpg" alt="albertina-115" title="albertina-115" width="560" class="aligncenter size-large wp-image-88235" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-116.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-116-560px.jpg" alt="albertina-116" title="albertina-116" width="560" class="aligncenter size-large wp-image-88236" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-117.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-117-560px.jpg" alt="albertina-117" title="albertina-117" width="560" class="aligncenter size-large wp-image-88237" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-118.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-118-560px.jpg" alt="albertina-118" title="albertina-118" width="560" class="aligncenter size-large wp-image-88238" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-119.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-119-560px.jpg" alt="albertina-119" title="albertina-119" width="560" class="aligncenter size-large wp-image-88239" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-120.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-120-560px.jpg" alt="albertina-120" title="albertina-120" width="560" class="aligncenter size-large wp-image-88240" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-121.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-121-560px.jpg" alt="albertina-121" title="albertina-121" width="560" class="aligncenter size-large wp-image-88241" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-122.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-122-560px.jpg" alt="albertina-122" title="albertina-122" width="560" class="aligncenter size-large wp-image-88242" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-123.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-123-560px.jpg" alt="albertina-123" title="albertina-123" width="560" class="aligncenter size-large wp-image-88243" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-124.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-124-560px.jpg" alt="albertina-124" title="albertina-124" width="560" class="aligncenter size-large wp-image-88244" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-125.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-125-560px.jpg" alt="albertina-125" title="albertina-125" width="560" class="aligncenter size-large wp-image-88245" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-126.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-126-560px.jpg" alt="albertina-126" title="albertina-126" width="560" class="aligncenter size-large wp-image-88246" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-127.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-127-560px.jpg" alt="albertina-127" title="albertina-127" width="560" class="aligncenter size-large wp-image-88247" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-128.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-128-560px.jpg" alt="albertina-128" title="albertina-128" width="560" class="aligncenter size-large wp-image-88248" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-129.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-129-560px.jpg" alt="albertina-129" title="albertina-129" width="560" class="aligncenter size-large wp-image-88249" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-130.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-130-560px.jpg" alt="albertina-130" title="albertina-130" width="560" class="aligncenter size-large wp-image-88250" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-131.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-131-560px.jpg" alt="albertina-131" title="albertina-131" width="560" class="aligncenter size-large wp-image-88251" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-132.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-132-560px.jpg" alt="albertina-132" title="albertina-132" width="560" class="aligncenter size-large wp-image-88252" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-133.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-133-560px.jpg" alt="albertina-133" title="albertina-133" width="560" class="aligncenter size-large wp-image-88253" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-134.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-134-560px.jpg" alt="albertina-134" title="albertina-134" width="560" class="aligncenter size-large wp-image-88254" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-135.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-135-560px.jpg" alt="albertina-135" title="albertina-135" width="560" class="aligncenter size-large wp-image-88255" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-136.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-136-560px.jpg" alt="albertina-136" title="albertina-136" width="560" class="aligncenter size-large wp-image-88256" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-137.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-137-560px.jpg" alt="albertina-137" title="albertina-137" width="560" class="aligncenter size-large wp-image-88257" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-138.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-138-560px.jpg" alt="albertina-138" title="albertina-138" width="560" class="aligncenter size-large wp-image-88258" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-139.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-139-560px.jpg" alt="albertina-139" title="albertina-139" width="560" class="aligncenter size-large wp-image-88259" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-140.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-140-560px.jpg" alt="albertina-140" title="albertina-140" width="560" class="aligncenter size-large wp-image-88260" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-141.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-141-560px.jpg" alt="albertina-141" title="albertina-141" width="560" class="aligncenter size-large wp-image-88261" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-142.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-142-560px.jpg" alt="albertina-142" title="albertina-142" width="560" class="aligncenter size-large wp-image-88262" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-143.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-143-560px.jpg" alt="albertina-143" title="albertina-143" width="560" class="aligncenter size-large wp-image-88263" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-144.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-144-560px.jpg" alt="albertina-144" title="albertina-144" width="560" class="aligncenter size-large wp-image-88264" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-145.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-145-560px.jpg" alt="albertina-145" title="albertina-145" width="560" class="aligncenter size-large wp-image-88265" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-146.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-146-560px.jpg" alt="albertina-146" title="albertina-146" width="560" class="aligncenter size-large wp-image-88266" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-147.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-147-560px.jpg" alt="albertina-147" title="albertina-147" width="560" class="aligncenter size-large wp-image-88267" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-148.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-148-560px.jpg" alt="albertina-148" title="albertina-148" width="560" class="aligncenter size-large wp-image-88268" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-149.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-149-560px.jpg" alt="albertina-149" title="albertina-149" width="560" class="aligncenter size-large wp-image-88269" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-150.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-150-560px.jpg" alt="albertina-150" title="albertina-150" width="560" class="aligncenter size-large wp-image-88270" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-151.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-151-560px.jpg" alt="albertina-151" title="albertina-151" width="560" class="aligncenter size-large wp-image-88271" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-152.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-152-560px.jpg" alt="albertina-152" title="albertina-152" width="560" class="aligncenter size-large wp-image-88272" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-153.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-153-560px.jpg" alt="albertina-153" title="albertina-153" width="560" class="aligncenter size-large wp-image-88273" /></a></p>
+<p>Gotta get the fuck out already, it is not humanly possible. </p>
+<p>We did most of the left side of one floor out of three in one of three buildings in one of howeverthefuckmany zones, but IT IS NOT POSSIBLE!</p>
+<p>O btw, doesn't he have quite the expression on him ? Like, "this chick's retarded, will swallow anything" or such. "Let me shove this shovel handle up her butt with my left while she's looking that way and then pretend a branch fell or something, she'll totally go for it."</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-154.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-154-560px.jpg" alt="albertina-154" title="albertina-154" width="560" class="aligncenter size-large wp-image-88274" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-155.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-155-560px.jpg" alt="albertina-155" title="albertina-155" width="560" class="aligncenter size-large wp-image-88275" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-156.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-156-560px.jpg" alt="albertina-156" title="albertina-156" width="560" class="aligncenter size-large wp-image-88276" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-157.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-157-560px.jpg" alt="albertina-157" title="albertina-157" width="560" class="aligncenter size-large wp-image-88277" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-158.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-158-560px.jpg" alt="albertina-158" title="albertina-158" width="560" class="aligncenter size-large wp-image-88278" /></a></p>
+<p>"But are these antique relics ?!"</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-159.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-159-560px.jpg" alt="albertina-159" title="albertina-159" width="560" class="aligncenter size-large wp-image-88279" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-160.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-160-560px.jpg" alt="albertina-160" title="albertina-160" width="560" class="aligncenter size-large wp-image-88280" /></a></p>
+<p>MP's guide to getting a rare strand of syphilis, not the common garden variety alive in used up crack whores today : rub the tit everyone's rubbed since 1400 or so, on the side of the Minorite church. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-161.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-161-560px.jpg" alt="albertina-161" title="albertina-161" width="560" class="aligncenter size-large wp-image-88281" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-162.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-162-560px.jpg" alt="albertina-162" title="albertina-162" width="560" class="aligncenter size-large wp-image-88282" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-163.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-163-560px.jpg" alt="albertina-163" title="albertina-163" width="560" class="aligncenter size-large wp-image-88283" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-164.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-164-560px.jpg" alt="albertina-164" title="albertina-164" width="560" class="aligncenter size-large wp-image-88284" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-165.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-165-560px.jpg" alt="albertina-165" title="albertina-165" width="560" class="aligncenter size-large wp-image-88285" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-168.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-168-560px.jpg" alt="albertina-168" title="albertina-168" width="560" class="aligncenter size-large wp-image-88288" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-169.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-169-560px.jpg" alt="albertina-169" title="albertina-169" width="560" class="aligncenter size-large wp-image-88289" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-170.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-170-560px.jpg" alt="albertina-170" title="albertina-170" width="560" class="aligncenter size-large wp-image-88290" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-171.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-171-560px.jpg" alt="albertina-171" title="albertina-171" width="560" class="aligncenter size-large wp-image-88291" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-172.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-172-560px.jpg" alt="albertina-172" title="albertina-172" width="560" class="aligncenter size-large wp-image-88292" /></a></p>
+<p>Time for a repast. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-173.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-173-560px.jpg" alt="albertina-173" title="albertina-173" width="560" class="aligncenter size-large wp-image-88293" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-174.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-174-560px.jpg" alt="albertina-174" title="albertina-174" width="560" class="aligncenter size-large wp-image-88294" /></a></p>
+<p>It's not that it says "Vienna's prettiest garden", but rather that it has <em>two</em> exclamation points.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-175.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-175-560px.jpg" alt="albertina-175" title="albertina-175" width="560" class="aligncenter size-large wp-image-88295" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-176.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-176-560px.jpg" alt="albertina-176" title="albertina-176" width="560" class="aligncenter size-large wp-image-88296" /></a></p>
+<p>French embassy. So far from what we've seen (Espana, Kasachsteen, Turkiyie Cum-Houryie-yet, some others) it'd be the better one.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-177.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-177-560px.jpg" alt="albertina-177" title="albertina-177" width="560" class="aligncenter size-large wp-image-88297" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-178.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-178-560px.jpg" alt="albertina-178" title="albertina-178" width="560" class="aligncenter size-large wp-image-88298" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-179.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-179-560px.jpg" alt="albertina-179" title="albertina-179" width="560" class="aligncenter size-large wp-image-88299" /></a></p>
+<p>Franz Brahms-Liszt von Wagner and slavegirl. He only has one. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-180.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-180-560px.jpg" alt="albertina-180" title="albertina-180" width="560" class="aligncenter size-large wp-image-88300" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-181.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-181-560px.jpg" alt="albertina-181" title="albertina-181" width="560" class="aligncenter size-large wp-image-88301" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-182.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-182-560px.jpg" alt="albertina-182" title="albertina-182" width="560" class="aligncenter size-large wp-image-88302" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-183.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-183-560px.jpg" alt="albertina-183" title="albertina-183" width="560" class="aligncenter size-large wp-image-88303" /></a></p>
+<p>Time for a little repast anyways. As it happens, the absolutely excellent Italian restaurant is up the street from both the Goulash Museum and the <a href=http://trilema.com/2019/can-you-imagine-what-a-panorama-fartd-be/?b=Porterhouse&#038;e=%20#select>famous</a> Porterhouse, which in turn turns out to be exactly around the corner from the equally famous <a href=http://trilema.com/2019/drei-hacken-undt-hings/>3 hackers eateria</a>. As it turns out<sup><a href="#footnote_1_88217" id="identifier_1_88217" class="footnote-link footnote-identifier-link" title="We've tried, and tried, and tried. Including this utterly inept Indian place, extremely intensively advertised all over (Demi Toss), that turned out to be a shitty six table joint with insufferably terrible service. Also including this supposedly excellent Georgian place (Alaverdi) that had the shittiest menu I've yet seen in any Georgian place. Including all sort and manner of thing, we try, that's what we do.">ii</a></sup>, all the good restaurants in Vienna are on the same one block. </p>
+<p>PS. The burrata was phenomenal.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-184.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-184-560px.jpg" alt="albertina-184" title="albertina-184" width="560" class="aligncenter size-large wp-image-88304" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-185.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-185-560px.jpg" alt="albertina-185" title="albertina-185" width="560" class="aligncenter size-large wp-image-88305" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-186.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-186-560px.jpg" alt="albertina-186" title="albertina-186" width="560" class="aligncenter size-large wp-image-88306" /></a></p>
+<p>You really expect the sign reads "Parking", don't you ?</p>
+<p>Well, that's just not how zee Germanz do it, okay ?</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-187.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-187-560px.jpg" alt="albertina-187" title="albertina-187" width="560" class="aligncenter size-large wp-image-88307" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-188.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-188-560px.jpg" alt="albertina-188" title="albertina-188" width="560" class="aligncenter size-large wp-image-88308" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-189.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-189-560px.jpg" alt="albertina-189" title="albertina-189" width="560" class="aligncenter size-large wp-image-88309" /></a></p>
+<p>I also got a new hat! It's most Vienese in its crepuscular.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-190.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-190-560px.jpg" alt="albertina-190" title="albertina-190" width="560" class="aligncenter size-large wp-image-88310" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-191.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-191-560px.jpg" alt="albertina-191" title="albertina-191" width="560" class="aligncenter size-large wp-image-88311" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-192.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-192-560px.jpg" alt="albertina-192" title="albertina-192" width="560" class="aligncenter size-large wp-image-88312" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-193.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-193-560px.jpg" alt="albertina-193" title="albertina-193" width="560" class="aligncenter size-large wp-image-88313" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-194.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-194-560px.jpg" alt="albertina-194" title="albertina-194" width="560" class="aligncenter size-large wp-image-88314" /></a></p>
+<p>"Yeah dude, it's totally a pleasure working with you."<br />
+"I am very impressed with your performance."<br />
+"We're so going to win this war..."<br />
+"That was a great joke. Know any others ?"<br />
+"Do you also sing ?"<br />
+"That's a great hairdo."</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-195.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-195-560px.jpg" alt="albertina-195" title="albertina-195" width="560" class="aligncenter size-large wp-image-88315" /></a></p>
+<p>So he always wanted to wear a skirt. What of it!</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-196.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-196-560px.jpg" alt="albertina-196" title="albertina-196" width="560" class="aligncenter size-large wp-image-88316" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-197.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-197-560px.jpg" alt="albertina-197" title="albertina-197" width="560" class="aligncenter size-large wp-image-88317" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-198.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-198-560px.jpg" alt="albertina-198" title="albertina-198" width="560" class="aligncenter size-large wp-image-88318" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-199.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-199-560px.jpg" alt="albertina-199" title="albertina-199" width="560" class="aligncenter size-large wp-image-88319" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-200.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-200-560px.jpg" alt="albertina-200" title="albertina-200" width="560" class="aligncenter size-large wp-image-88320" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-201.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-201-560px.jpg" alt="albertina-201" title="albertina-201" width="560" class="aligncenter size-large wp-image-88321" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-202.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-202-560px.jpg" alt="albertina-202" title="albertina-202" width="560" class="aligncenter size-large wp-image-88322" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-203.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-203-560px.jpg" alt="albertina-203" title="albertina-203" width="560" class="aligncenter size-large wp-image-88323" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-204.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-204-560px.jpg" alt="albertina-204" title="albertina-204" width="560" class="aligncenter size-large wp-image-88324" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-205.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-205-560px.jpg" alt="albertina-205" title="albertina-205" width="560" class="aligncenter size-large wp-image-88325" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-206.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-206-560px.jpg" alt="albertina-206" title="albertina-206" width="560" class="aligncenter size-large wp-image-88326" /></a></p>
+<p>Cultural exchange of ideas.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-207.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-207-560px.jpg" alt="albertina-207" title="albertina-207" width="560" class="aligncenter size-large wp-image-88327" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-208.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-208-560px.jpg" alt="albertina-208" title="albertina-208" width="560" class="aligncenter size-large wp-image-88328" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-209.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-209-560px.jpg" alt="albertina-209" title="albertina-209" width="560" class="aligncenter size-large wp-image-88329" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-210.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-210-560px.jpg" alt="albertina-210" title="albertina-210" width="560" class="aligncenter size-large wp-image-88330" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-211.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-211-560px.jpg" alt="albertina-211" title="albertina-211" width="560" class="aligncenter size-large wp-image-88331" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-212.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-212-560px.jpg" alt="albertina-212" title="albertina-212" width="560" class="aligncenter size-large wp-image-88332" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-213.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-213-560px.jpg" alt="albertina-213" title="albertina-213" width="560" class="aligncenter size-large wp-image-88333" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-214.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-214-560px.jpg" alt="albertina-214" title="albertina-214" width="560" class="aligncenter size-large wp-image-88334" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-215.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-215-560px.jpg" alt="albertina-215" title="albertina-215" width="560" class="aligncenter size-large wp-image-88335" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-216.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-216-560px.jpg" alt="albertina-216" title="albertina-216" width="560" class="aligncenter size-large wp-image-88336" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-217.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-217-560px.jpg" alt="albertina-217" title="albertina-217" width="560" class="aligncenter size-large wp-image-88337" /></a></p>
+<p>Yep, they were actually re-doing the floor panneling. It instantly made me think of mod6 for some reason.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-218.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-218-560px.jpg" alt="albertina-218" title="albertina-218" width="560" class="aligncenter size-large wp-image-88338" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-219.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-219-560px.jpg" alt="albertina-219" title="albertina-219" width="560" class="aligncenter size-large wp-image-88339" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-220.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-220-560px.jpg" alt="albertina-220" title="albertina-220" width="560" class="aligncenter size-large wp-image-88340" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-221.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-221-560px.jpg" alt="albertina-221" title="albertina-221" width="560" class="aligncenter size-large wp-image-88341" /></a></p>
+<p>Breast implant envy clearly a thing as early as the late 1700s!</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-222.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-222-560px.jpg" alt="albertina-222" title="albertina-222" width="560" class="aligncenter size-large wp-image-88342" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-223.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-223-560px.jpg" alt="albertina-223" title="albertina-223" width="560" class="aligncenter size-large wp-image-88343" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-224.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-224-560px.jpg" alt="albertina-224" title="albertina-224" width="560" class="aligncenter size-large wp-image-88344" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-225.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-225-560px.jpg" alt="albertina-225" title="albertina-225" width="560" class="aligncenter size-large wp-image-88345" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-226.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-226-560px.jpg" alt="albertina-226" title="albertina-226" width="560" class="aligncenter size-large wp-image-88346" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-227.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-227-560px.jpg" alt="albertina-227" title="albertina-227" width="560" class="aligncenter size-large wp-image-88347" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-228.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-228-560px.jpg" alt="albertina-228" title="albertina-228" width="560" class="aligncenter size-large wp-image-88348" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-229.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-229-560px.jpg" alt="albertina-229" title="albertina-229" width="560" class="aligncenter size-large wp-image-88349" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-230.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-230-560px.jpg" alt="albertina-230" title="albertina-230" width="560" class="aligncenter size-large wp-image-88350" /></a></p>
+<p>I guess it's clear enough who won this face-off.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-231.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-231-560px.jpg" alt="albertina-231" title="albertina-231" width="560" class="aligncenter size-large wp-image-88351" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-232.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-232-560px.jpg" alt="albertina-232" title="albertina-232" width="560" class="aligncenter size-large wp-image-88352" /></a></p>
+<p>Both above and below, Michelangelo drawings. Could you tell ?</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-233.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-233-560px.jpg" alt="albertina-233" title="albertina-233" width="560" class="aligncenter size-large wp-image-88353" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-234.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-234-560px.jpg" alt="albertina-234" title="albertina-234" width="560" class="aligncenter size-large wp-image-88354" /></a></p>
+<p>Klimt. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-235.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-235-560px.jpg" alt="albertina-235" title="albertina-235" width="560" class="aligncenter size-large wp-image-88355" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-236.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-236-560px.jpg" alt="albertina-236" title="albertina-236" width="560" class="aligncenter size-large wp-image-88356" /></a></p>
+<p>Above : Rubens' daughter (Clara Serena). Unremarkably, the least voluptuous of anyone he ever drew.</p>
+<p>Below : Peter Bruguel's sorrow, eating smaller sorrows feeding on yet smaller sorrows in turn.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-237.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-237-560px.jpg" alt="albertina-237" title="albertina-237" width="560" class="aligncenter size-large wp-image-88357" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-238.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-238-560px.jpg" alt="albertina-238" title="albertina-238" width="560" class="aligncenter size-large wp-image-88358" /></a></p>
+<p>Yet another Klimt slut, whatevs. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-239.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-239-560px.jpg" alt="albertina-239" title="albertina-239" width="560" class="aligncenter size-large wp-image-88359" /></a></p>
+<p>We kept running into bridal parties, mostly toasty Eastern girls tryna pretend to Gypsy paradise on the cheap. I wonder though, how many actually had the gall to conceive in that very bed ? </p>
+<p>Because that'd be something. I mean if you're going to all that trouble, might as fucking well, neh ? </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-240.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-240-560px.jpg" alt="albertina-240" title="albertina-240" width="560" class="aligncenter size-large wp-image-88360" /></a></p>
+<p>This'd be the esteemed right honorable &#038; respectable Generalissimus Archduke-ErzHerzog Carl. Moe was busy that day.</p>
+<p>It's also not true he looks like a fish. He merely regards like one. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-241.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-241-560px.jpg" alt="albertina-241" title="albertina-241" width="560" class="aligncenter size-large wp-image-88361" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-242.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-242-560px.jpg" alt="albertina-242" title="albertina-242" width="560" class="aligncenter size-large wp-image-88362" /></a></p>
+<p>Yours truly admiring the complex votives of meanwhile disappeared empires. "Oh, so <em>there</em> is where you add the Providentia horse pair!"</p>
+<p>It's like lego, all this statal aedification, you see. Godda make sure you've god enough spuriously overdressed middle aged women posing as abstracts with the appropriate labels and voila! </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-243.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-243-560px.jpg" alt="albertina-243" title="albertina-243" width="560" class="aligncenter size-large wp-image-88363" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-244.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-244-560px.jpg" alt="albertina-244" title="albertina-244" width="560" class="aligncenter size-large wp-image-88364" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-245.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-245-560px.jpg" alt="albertina-245" title="albertina-245" width="560" class="aligncenter size-large wp-image-88365" /></a></p>
+<p>Above and below, Albrecht Durer.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-246.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-246-560px.jpg" alt="albertina-246" title="albertina-246" width="560" class="aligncenter size-large wp-image-88366" /></a></p>
+<p>And with that we say goodbye to humanity, leave it all behind and firmly progress towards the sad and broken fields of "what happens if you <a href=http://trilema.com/2016/i-am-firmly-against-universal-franchise/>enfranchise the peons</a>". Not that they <a href=http://trilema.com/2018/the-republic-without-mp/?b=Rustics&#038;e=were#select>didn't try and warn us</a>, of course ; but if there were only one directly recognizable and absolutely cosubstantial attribute of idiocy, "knowing better" would necessarily have to be it. So we "knew better", and now here we are, look at all this shit.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-247.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-247-560px.jpg" alt="albertina-247" title="albertina-247" width="560" class="aligncenter size-large wp-image-88367" /></a></p>
+<p>Above : Modigliani, "Sorta portrait I had no patience for".</p>
+<p>Below : Monet, "Almost drawing, I got bored midway of drawing it". </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-248.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-248-560px.jpg" alt="albertina-248" title="albertina-248" width="560" class="aligncenter size-large wp-image-88368" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-249.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-249-560px.jpg" alt="albertina-249" title="albertina-249" width="560" class="aligncenter size-large wp-image-88369" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-250.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-250-560px.jpg" alt="albertina-250" title="albertina-250" width="560" class="aligncenter size-large wp-image-88370" /></a></p>
+<p>Above : Renoir, "Just some little thing I made, it doesn't represent me or anything. Do you like it ?"</p>
+<p>Below : Signac, "Hey, doing it like this is way the fuck faster, it'll leave me more time for not doing anything useful or important in another ten dozen ways. Huzzah for <a href=http://trilema.com/2018/democracy-sucks-the-two-thousand-four-hundred-and-change-years-old-version/>tardocracy</a>!"</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-251.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-251-560px.jpg" alt="albertina-251" title="albertina-251" width="560" class="aligncenter size-large wp-image-88371" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-252.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-252-560px.jpg" alt="albertina-252" title="albertina-252" width="560" class="aligncenter size-large wp-image-88372" /></a></p>
+<p>Above : van Ryssselehwhatsthepointanyways, "Sorta-kinda... whatever."</p>
+<p>Below : Moll, "I only noticed my easel was misoriented after I sat down, so fuck it, I ain't standing up again".</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-253.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-253-560px.jpg" alt="albertina-253" title="albertina-253" width="560" class="aligncenter size-large wp-image-88373" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-254.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-254-560px.jpg" alt="albertina-254" title="albertina-254" width="560" class="aligncenter size-large wp-image-88374" /></a></p>
+<p>Above : Klimt, "You know, I totally could do good work, <a href=http://trilema.com/2015/the-anal-child/>I just don't</a>".</p>
+<p>Below : Delaunay, "If we're <a href=http://trilema.com/2011/cum-era-sa-il-pleznesc-pe-unu/>lazy enough</a>, maybe the bitches will start behaving out of sheer boredom. They'll be like, 'comfortable' and shit, for as long as nothing can possibly happen nobody can accuse anyone of anything!"</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-255.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-255-560px.jpg" alt="albertina-255" title="albertina-255" width="560" class="aligncenter size-large wp-image-88375" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-256.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-256-560px.jpg" alt="albertina-256" title="albertina-256" width="560" class="aligncenter size-large wp-image-88376" /></a></p>
+<p>Above : Manguin, "Bleah".</p>
+<p>Below : a whole fucking reservation of the intolerable products of these sad fucks not managing to be bothered.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-257.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-257-560px.jpg" alt="albertina-257" title="albertina-257" width="560" class="aligncenter size-large wp-image-88377" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-258.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-258-560px.jpg" alt="albertina-258" title="albertina-258" width="560" class="aligncenter size-large wp-image-88378" /></a></p>
+<p>This being the most galling part of post-humanity : the self-obviousness of the failure, the transparent capacity being wasted without whip. Evidently all these idle, coddled morons <em>could</em> have made excellent palaces and paintings and wharever else is useful for the glorification of the glory <a href=http://trilema.com/2013/what-is-art/>of the sovereign</a>. They just "choose not to", because what the fuck already. Slowly and painfully drawing the last drop of lifeblood out of their <em>offensive</em> bodies is not really sufficient expiation for the utterly impermissible whatchamacall it, sinful evil, whatever, words can't also possibly do justice.</p>
+<p>The nameless labourers dead among hungry children after a lifetime spent patiently going blind on repetitive detail so that each single fucking arch of the ten thousand arches of the palace has proper, adequate decoration weren't speshul enough, these unbearable fucks can't sit down for five minutes to do something right because "why be an architect when you could be a city planner", they gotta meta-paint and meta-game everything they're so fucking <em>inconsequentially</em> important in their own mind (and there only).</p>
+<p>I perceive no value in "modern" art. Nor do you -- pompous self-delusions to the contrary notwithstanding. Because there can't be, not value, not importance, not meaning, not anything, not <em>anything whatsoever</em> absent the sovereign root to anchor it all, in a value system and in a meaning system, and in realia generally.</p>
+<p>I perceive no difference between this whole accretted pile of spurious bullshit <a href=http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-one/#footnote_0_68378>and any other</a>, because <em>there <b>can't be</b> any</em>. Elliotts they were and Elliotts they stay, there's nothing further there. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-259.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-259-560px.jpg" alt="albertina-259" title="albertina-259" width="560" class="aligncenter size-large wp-image-88379" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-260.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-260-560px.jpg" alt="albertina-260" title="albertina-260" width="560" class="aligncenter size-large wp-image-88380" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-261.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-261-560px.jpg" alt="albertina-261" title="albertina-261" width="560" class="aligncenter size-large wp-image-88381" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-262.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-262-560px.jpg" alt="albertina-262" title="albertina-262" width="560" class="aligncenter size-large wp-image-88382" /></a></p>
+<p>Female "art", just in case you thought I forgot about you dumb cunts. It's <em>not good</em>, not for this or that reason but specifically because it tries to enact the female gaze into human interest, something positively impossible and doomed from the onset, <em>in principle</em>. That's why the "mysterious, enigmatic" expression pasted impossibly atop an "anatomically correct" torso looks like a work of mongoloids with scissors : because it is. There's no objective substance to the female torso besides what males see in it ; nor is there any possibility of "enigmatic" besides that, it's not <em>the fucking face</em> that carries the enygmatic in women, <a href=http://trilema.com/2015/say-my-name-say-my-name/>it's the cunt</a>.</p>
+<p>This isn't "art", it's not even an intellectual production. It's rude and crude wishful thinking, the daydreaming byproducts <em>of a stupid mind</em>, Kelly Bundy collecting "K" letters cut off the Kellogg's cereal box to buy herself a sportscar.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-263.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-263-560px.jpg" alt="albertina-263" title="albertina-263" width="560" class="aligncenter size-large wp-image-88383" /></a></p>
+<p>Above : Modern democracy and <a href=http://trilema.com/2014/modern-medicine-and-the-benefits-of-democracy/>the fruits of your stupid</a>.</p>
+<p>See ? <em>Now</em> it suddenly became art, now it means and values and is important and whatever. For as long as I hold it up in that symbolic relationship, and <em>no longer</em>. For as long as I say "this here is a metaphorical depiction of so and so political concept", that long and no longer is the metaphorical depcition <em>anything at all</em>.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-264.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-264-560px.jpg" alt="albertina-264" title="albertina-264" width="560" class="aligncenter size-large wp-image-88384" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-265.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-265-560px.jpg" alt="albertina-265" title="albertina-265" width="560" class="aligncenter size-large wp-image-88385" /></a></p>
+<p>Above and below : Chagall. Exactly like before : good ideas ruined through listlessness, sparkles of possible talent gone to waste for lack of cuffs and chains and small boxes with metal bars. Yes, Madonna belongs depicted butt first, but no, getting bored and moving on before the supposed butt looks more like a butt than like a tree trunk is <em>not acceptable</em>.</p>
+<p>Now go fucking clean your room. Morons.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-266.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-266-560px.jpg" alt="albertina-266" title="albertina-266" width="560" class="aligncenter size-large wp-image-88386" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-267.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-267-560px.jpg" alt="albertina-267" title="albertina-267" width="560" class="aligncenter size-large wp-image-88387" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-268.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-268-560px.jpg" alt="albertina-268" title="albertina-268" width="560" class="aligncenter size-large wp-image-88388" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-269.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-269-560px.jpg" alt="albertina-269" title="albertina-269" width="560" class="aligncenter size-large wp-image-88389" /></a></p>
+<p><a href="http://trilema.com/wp-content/uploads/2019/10/albertina-270.jpg"><img src="http://trilema.com/wp-content/uploads/2019/10/albertina-270-560px.jpg" alt="albertina-270" title="albertina-270" width="560" class="aligncenter size-large wp-image-88390" /></a></p>
+<p>He fucking left the straightedge pencil marks in there, "at the edges", towards the bottom of the painting where "nobody cares", where the doorframes spring out of nothingness like the Summoner's Palace in Diablo 2. Because yes, all these modern morons are captive in a video game ; they don't live, they play, and after they're done... except they're never done. To be done they'd need souls, and there's no souls in video games. After <em>I'm</em> done there's <a href=http://trilema.com/2017/what-are-you-being-distracted-from/?b=Pretty&#038;e=connection#select>exactly nothing</a> left. Ian Murdock <a href=>thinks he invented the <a href=http://trilema.com/2016/asscience/?b=App&#038;e=Store#select>Apple Marketplace</a> ? Keks, get in line, blubbermouth. What about Renoir ?!</p>
+<p>All you fuckwits keep "inventing" the same thing over and over <em>and over</em> <b>and over</b> <a href=http://trilema.com/2015/why-is-it-the-end/?b=looking%20for&#038;e=and...#select>again</a>.</p>
+<p>It's not so much that I don't have any time for modern art. It's that modern art doesn't exist.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_88217" class="footnote">For he interested in reproducing the results : first, place your selection of a few hundred raw images chosen from among the thousands upon thousands on your camera in a directory of their own. Then :</p>
+<blockquote><p>let cnt=0; for f in *.JPG ; do ((cnt++&#41;&#41;; convert "$f" -auto-orient -geometry 1024 albertina-"$cnt".jpg ; done</p></blockquote>
+<p>and</p>
+<blockquote><p>let cnt=0; for f in *.JPG ; do ((cnt++&#41;&#41;; convert "$f" -auto-orient -geometry 560 albertina-"$cnt"-560px.jpg ; done</p></blockquote>
+<p>The auto-orient is there so that portrait and landscape are correctly separated ; the -geometry <value> produces images that wide (scaling them so they fit and adjusting the height so proportions are maintained). The rest should be self-explanatory : it creates the 1024 px fixwidth large versions and the 560 px fixwidth inline versions of images. The magic numbers are set for Trilema, feel free to fiddle with the values if your theme takes say 640 px wide images instead of 560 or whatever.</p>
+<p>Then</p>
+<blockquote><p>tar -czvf albertina.tar.gz albertina-*</p></blockquote>
+<p>to compress,</p>
+<blockquote><p>scp albertina.tar.gz [your user]@[your ip]:[path to]/wp-content/uploads/2019/10/albertina.tar.gz</p></blockquote>
+<p>to copy over and </p>
+<blockquote><p>tar -xzvf albertina.tar.gz</p></blockquote>
+<p>in the console of your server, to decompress (followed by a rm albertina.tar.gz, why not). Then finally</p>
+<blockquote><p>hd="albertina"; for cnt in {1..270}; do echo '&lt;a href="http://trilema.com/wp-content/uploads/2019/10/'$hd'-'$cnt'.jpg">&lt;img src="http://trilema.com/wp-content/uploads/2019/10/'$hd'-'$cnt'-560px.jpg" alt="'$hd'-'$cnt'" title="'$hd'-'$cnt'" width="560" class="aligncenter size-large wp-image-'$((cnt+88120&#41;&#41;'" />&lt;/a>' >> article.txt ; done</p></blockquote>
+<p>to produce the html scaffolding for inserting the proper references to all these into your article (again, this is taylored to the instant Trilema case, yours will perhaps take some self-obvious jiggling). [<a href="#identifier_0_88217" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_88217" class="footnote">We've tried, and tried, and tried. Including this utterly inept Indian place, extremely intensively advertised all over (Demi Toss), that turned out to be a shitty six table joint with insufferably terrible service. Also including this supposedly excellent Georgian place (Alaverdi) that had the shittiest menu I've yet seen in any Georgian place. Including all sort and manner of thing, we try, that's what we do. [<a href="#identifier_1_88217" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2019/can-you-imagine-what-a-panorama-fartd-be/">Can you imagine what a Panorama Fart'd be ?!</a></div>
+                <div class="alignright"><a href="http://trilema.com/2019/the-famous-schlob-and-other-stories/">The Famous Schlob, and other stories.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2019/albertina-hurr/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2019/albertina-hurr/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>9 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-154784" class="commentbody"><div class="commenthead"><img alt='george`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">george</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154784" title="">Wednesday, 7 October 2020</a>
+							</div>
+						<p>hi haw are u</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-132285">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://thewhet.net/2019/10/central-european-retrospective-austria/?b=It%20ought%2&amp;e=It%20ought%20to%20be%20noted%20that%20these%20images%20are%20at%20best%20faint%20and%20distant%20twig-lets%20to%' class='url'>Central European Retrospective: Austria &laquo; The Whet</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132285" title="">Friday, 15 November 2019</a>
+					</div>
+					<p>[...] It ought to be noted that these images are at best faint and distant twig-lets to the far more comprehensive treatment of the same lands, monuments, and mischeviousnesses on [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132333">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://fixpoint.welshcomputing.com/2019/blogging-photos-and-chat-logs-some-handy-scripts/?b=deferred%20m&amp;e=deferred%20my%20ever%20so%20carefully%20planned%20dig%20into%20photo%20blogging%20for%20q' class='url'>Blogging photos and chat logs: some handy scripts &laquo; Fixpoint</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132333" title="">Saturday, 16 November 2019</a>
+					</div>
+					<p>[...] deferred my ever so carefully planned dig into photo blogging for quite so long. I started from Popescu's recipe and made it into a script, including doing the necessary jiggling so I wouldn't have to recall the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132448">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://thewhet.net/2019/11/a-little-bit-of-tinyscheme-a-lot-of-cozonac/?b=and%20sparse&amp;e=and%20sparseness%2C%20we%20can%20proceed%20to%20actually%20make%20some%20of%20this%20stuff.%20Except%20that' class='url'>A Little Bit of TinyScheme, a Lot of Cozonac &laquo; The Whet</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132448" title="">Monday, 25 November 2019</a>
+					</div>
+					<p>[...] and sparseness, we can proceed to actually make some of this stuff. Except that I wanted to try out Mircea Popescu's image processor for blog articles, and also jfw's version of the same. Except! It turns out the box I'm using for [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146889">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/the-famous-schlob-and-other-stories?b=how%20easy%20%28an&amp;e=with#select' class='url'>The Famous Schlob, and other stories. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146889" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] how easy (and therefore likely) "mega"-picture articles became since the bashing of the whole procedure. Do you even recall anymore the olden days of yore, back when articles with [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147001">
+					<div class='trackhead'>
+						<div class="commentcount">6</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/tara-tara-vrem-ostasi?b=There%27s%20noth&amp;e=ers.#select' class='url'>Tara, tara, vrem ostasi! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147001" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] There's nothing in the whistling halls of the empty palace but a decaying whale skeleton some jews bought for their country back in the 1800s (Bohemia being perhaps the only place outside of Austria proper where the jews did manage to well, productively and effectually integrate) and otherwise scammy sadness of the Romanian ilk. Sad, isn't it ? Especially if one compares/contrasts with the Vienese wonders. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147051">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/of-tits-and-masks-and-other-things?b=you%27re%20curio&amp;e=lt%3Ba#select' class='url'>Of tits, and masks, and other things on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147051" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] you're curious, the thumbnail pile was produced by a slightly altered version of the same method : for cnt in {1..150}; do echo '&lt;td&gt;&lt;a [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-158036">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/halt-hammerzeit/?b=count%20goes%20u&amp;e=ther#select' class='url'>Halt! Hammerzeit!!! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-158036" title="">Saturday, 26 December 2020</a>
+					</div>
+					<p>[...] count goes up to 173, so it's not even close (excepting, of course, for all the other [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-158769">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/higher-order-effects-a-pizdillustration/?b=were%20so%20disa&amp;e=it%20I#select' class='url'>Higher order effects, a pizdillustration. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-158769" title="">Thursday, 14 January 2021</a>
+					</div>
+					<p>[...] were so disappointed by the Prague "Mucha Museum" (seriously, Euro museums broadly underwhelm, with exceptions) that I apparently didn't even mention the visit. She's a great fan, and when we ran across it I [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="88217" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832437-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-88217")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-88217");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-88217");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

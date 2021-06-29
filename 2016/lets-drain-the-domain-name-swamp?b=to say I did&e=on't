@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Let's drain the domain name swamp on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Lucruri fine pentru oameni subtiri.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-69885"><div class="post" id="post-69885">                    <h1><a href="http://trilema.com/2016/lets-drain-the-domain-name-swamp/" rel="bookmark" title="Permanent Link to Let&#039;s drain the domain name swamp">Let's drain the domain name swamp</a></h1>                        <div class="date">                                     Saturday, 12 November, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>For many years I was hiring <strong>namecheap</strong>.com to do <a href="http://trilema.com/2013/the-wonderful-powers-of-make-believe/#selection-247.0-249.114">nothing whatsoever</a><sup><a href="#footnote_0_69885" id="identifier_0_69885" class="footnote-link footnote-identifier-link" title="Please see the linked discussion of Torrens title and understand what's going on. The US has a fundamentally broken way of doing things. All things. AML/KYC is stupid, spending hours for no reason at the airport is stupid, feeding a bunch of leeches in order to real estate is stupid. 
+However, just because the USians are fundamentally broken in the fucking head doesn't mean anyone else is supposed, or may, implement the end products of their stupidity. Let's make America forgotten again, shall we ?">i</a></sup> for me wrt various domain names I hold (and <a href="http://trilema.com/2016/please-stop-using-dns-already-and-other-considerations/">don't want</a>). Then they decided to "upgrade" their website, because this is somehow how bullshit leech services work, it's not enough to get money for nothing, you gotta also break the process flow of the unfortunate victims. </p>
+<p>Needless to say <a href="http://trilema.com/2014/namecheap-goes-off-the-deep-end-anyone-know-a-decent-domain-registrar/">I didn't stand for it</a>, and so a decade+ parasite relationship ended on January 27th 2014 over "website upgrades". Don't let anyone <em>ever</em> tell you that upgrading won't have an effect on your bottom line. It will. It does like it did here.</p>
+<p>Also needless to say, the new registrar, <strong>Internetbs</strong>.net decided to change its payment processing. Because bait and switch is now a legitimate approach to business, I make an account <em>because</em> you support Bitcoin payments, then you discontinue processing Bitcoin "for legal reasons" and that's it, I'm going to move to fucking wires now. Apparently that's how things work in these idiots' heads, I'm not married to Bitcoin and will consider a shoeshine like Internetbs. Oh no, on the contrary - I'm married to Internetbs. They're that important, I care that deeply about a set of fucking leeches that have no reason to exist in the first place.</p>
+<p>So I moved again, November 11th 2016. First I tried <strong>gandi</strong>.net, because all the kids seem to like them for some reason. That yielded</p>
+<blockquote><p>Me: Your prices are ridiculous ? 17.28 to renew .biz vs 10.83 everywhere else ? 15 for .eu ? I'm getting that for 5.96 currently. .com .net 15 each ? Is this some kind of a joke that's funny in your culture ?</p>
+<p>Dante Customer support: Hello</p>
+<p>Me: aha</p>
+<p>Dante Customer support: The current pricing reflects our cost of registration and services</p>
+<p>Me: so basically you're a joke registrar that can't price competiively ?</p>
+<p>Dante Customer support: There is nothing I can do regarding our pricing. I would advise going with the lower cost competitor if you're unsatisfied with our costs. Keep in mind that lower cost come with a lower service level usually</p>
+<p>Me: nice knowing ya.</p></blockquote>
+<p>Services! Fucking imagine this, the title deed company is offering me free cookies that I could have bought for a quarter myself at the fast food joint next door, admitting <em>quia absurdum</em> that I'd actually want either to obtain such cookies or to pay such cookie producers anything. In their broken heads this apparently works, I'll pay $2`500 for a bill worth $1`200 because an unemployable dicklet told me the former comes with "a higher level of services". This is America, you understand, and it doesn't belong on the map.</p>
+<p>I'm currently using <strong>namesilo</strong>.com, but as someone aptly observed "give it a year or two". Obviously.</p>
+<p>So how about we actually drain the dns swamp ? Set up a Republican dns server, let people register domains - <em>any</em> domains, including whitehouse.org and random.arbitrary - for a Bitcent or whatever and that's that. Can use the current dns format for feeding data so people can just drop-in replace their current dns servers with ours. Can have an automated admin interface <em>direct to the server</em> so you can update anything at any time with a signed pgpgram and that's the end of the story. </p>
+<p>No, you don't need "dnssec", nor does it work. No you don't need all the bullshit they make up about how great their "dns server infrastructure" is, a single machine will suffice for a long time ; and once it doesn't replicating the whole current dns set-up costs a few thousand not a few million. Yes it's "oh so important" as they keep bleating, but only because it's pointlessly and irresponsibly a single point of failure.</p>
+<p>Republican dns. Today. Who's doing it ?</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_69885" class="footnote">Please see the linked discussion of Torrens title and understand what's going on. The US has a fundamentally broken way of doing things. All things. <a href="http://trilema.com/2013/time-for-europe-to-repeal-the-us-backed-aml-crap/">AML/KYC</a> is stupid, <a href="http://trilema.com/forum-logs-for-10-nov-2016#2191597">spending hours for no reason at the airport</a> is stupid, feeding a bunch of leeches in order to real estate is stupid. </p>
+<p>However, just because the USians are fundamentally broken in the fucking head doesn't mean anyone else is supposed, or may, implement the end products of their stupidity. Let's make America forgotten again, shall we ? [<a href="#identifier_0_69885" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/say-a-prayer/">Say a prayer...</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/and-they-wont-fucking-yield/">And they won't fucking yield.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/lets-drain-the-domain-name-swamp/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/lets-drain-the-domain-name-swamp/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>28 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-119679" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119679" title="">Saturday, 12 November 2016</a>
+							</div>
+						<p>DDOS magnet.</p>
+						</li>
+
+										<li id="comment-119680" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119680" title="">Saturday, 12 November 2016</a>
+							</div>
+						<p><strong>Stanislav Datskovskiy</strong>: Simplistic anti-DDoS would be, say, a whitelist of client IP addresses?..</p>
+<p><strong>Mircea Popescu</strong>: So just how incompatible with the vanilla DNS would this be, in terms of contents / entries? I assume you imagined this to be completely distinct from the internet's current network of DNS servers? Ideally a client should be able to resolve whitehouse.gov using this <em>or</em> the default DNS server set, but I guess this would be up to the client to do (cue MP: "if you want to do stupid, nobody's gonna object, but don't expect any help [from the server-side of things]")? Symlinking resolver.conf on the client's system to whichever set of servers is currently preferred is one simplistic way, I guess (give or take the need to flush DNS cache).</p>
+						</li>
+
+										<li id="comment-119681" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119681" title="">Saturday, 12 November 2016</a>
+							</div>
+						<p>Framedragger: a single-box+public-ip item is a candidate for shitflooding. Filters will make 0 difference.</p>
+						</li>
+
+										<li id="comment-119682" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119682" title="">Saturday, 12 November 2016</a>
+							</div>
+						<p>Stanislav: you mean a flood a layer below that of DNS, I suppose? (Say, classical SYNflood).</p>
+						</li>
+
+										<li id="comment-119683" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119683" title="">Saturday, 12 November 2016</a>
+							</div>
+						<p>Framedragger: the usual UDP DDOS. (And on a DNS server you could not even apply mircea_popescu's traditional pill of blocking UDP upstream..)</p>
+						</li>
+
+										<li id="comment-119684" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119684" title="">Saturday, 12 November 2016</a>
+							</div>
+						<p>@<b>Framedragger</b> It would be entirely compatible from the client pov (ie, data formatting), I expect, exactly for the reason given : a client should be able to resolve names via this or that as his preference dictates.</p>
+<p>It would be entirely incompatible from an actual data pov : unless Apple somehow magically smartens up, registers a key and uses it to register apple.com, they aren't going to own apple.com.</p>
+<p>@<b>Stanislav Datskovskiy</b> If/when floods become a thing you get a new box. </p>
+<p>This is a vastly overstated concern, from experience.</p>
+						</li>
+
+										<li id="comment-119688" class="commentbody"><div class="commenthead"><img alt='мимокрокодил`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">мимокрокодил</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119688" title="">Saturday, 12 November 2016</a>
+							</div>
+						<p>Any opinions on <a href="https://www.opennicproject.org/">https://www.opennicproject.org/</a> ?</p>
+						</li>
+
+										<li id="comment-119699" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119699" title="">Sunday, 13 November 2016</a>
+							</div>
+						<p><strong>@MP</strong> Right. More of a jurisdictional question, then: in your view, should a holder of any key (in deedbot's WoT?) be able to register <em>any</em> domain? Would it perhaps make sense to restrict a specific TLD (e.g. .tmsr) so that second-level domains under the TLD in question could only be registered if (say) the registration request was signed by &gt;= $min_num keys in WoT L1?</p>
+<p>To make it more particular, say someone with a valid GPG key rushes to register trilema.com in the Republican DNS before yourself. I suppose that is all well and good, and you negrating the key would only be appropriate in the instance of that person pretending that they are MP?</p>
+						</li>
+
+										<li id="comment-119702" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119702" title="">Sunday, 13 November 2016</a>
+							</div>
+						<p>I imagine like any serious country, we first handle the claims of the elite privately. </p>
+<p>In practical terms, da fuck, I'm not going to support a dns system where some dork registered trilema ; and easier and faster than forcing me to sideline one and spin up a competitor would simply be to not allow the nonsense from the get-go.</p>
+						</li>
+
+										<li id="comment-119706" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119706" title="">Sunday, 13 November 2016</a>
+							</div>
+						<p>@<b>мимокрокодил</b> Your comment ended up in the clutches of the antispam system, sorry about that.</p>
+<p>I have no idea what "open" or "democratic" means, but I don't see who's in charge of it nor are they registered with deedbot, and so opennicproject doesn't in any sense exist in this world.</p>
+						</li>
+
+										<li id="comment-119713" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119713" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>Some possibly disorganized comments, may be useful:</p>
+<p>The way DNS and currently available DNS servers work suggests to me that it would be more prudent to pick a (set of) TLD(s), and run a Republican DNS Root <em>for those TLDs only</em>. Note, this could very well be ".com", ".gov", etc. - I am not suggesting some kind of consensus compatibility attempt with Reich DNS Root.</p>
+<p>The whole system is <a href="http://btcbase.org/log/2016-11-14#1566990" >supposed to be hierarchical in terms of control</a> of top-level -&gt; second-level -&gt; ... -&gt; n-th level domains. Furthermore, having a root zone file which may change every minute (someone registers a ".cocks" TLD, etc.) means more of a single point of failure in terms of everything relying on a root DNS server (vs. being able to cache to additional servers, and no need to keep root zone file up to date to the last minute).</p>
+<p>I may be overcomplicating my own thoughts though, especially as regards the latter ("scale it when it comes time to scale it, kid"), and may be out of my element. Interesting problem.</p>
+						</li>
+
+										<li id="comment-119714" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119714" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>I don't give a shit what the idiots do. Any string is any string.</p>
+<p>I don't give a shit what the idiots do. Any string is any string.</p>
+<p>So... myeah.</p>
+						</li>
+
+										<li id="comment-119715" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119715" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>That's great, but to have an "any string" infrastructure whereby, among other things, "trilema.com" would not be owned (in terms of control of DNS zone) by owner of ".com" may require non-trivial modifications of existing DNS server software. But maybe someone knows better.</p>
+						</li>
+
+										<li id="comment-119716" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119716" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>The obvious solution to this problem is to allow registration of "fuckgoats" but not of ".fuckgoats", and so if nobody can register "tld"s the problem's gone.</p>
+						</li>
+
+										<li id="comment-119719" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119719" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>Some notes - if anyone picks up the torch, these may be of some use - correct me if I'm not making sense, or got it wrong:</p>
+<p>1. The general idea is to offer, from the point of view of DNS, an alternative ("the") DNS Root - or, in more general terms, a general internet name system. The "D" in DNS may be a bit confusing, as domains are traditionally to do with, well, <em>domains</em> of authority ("realm of administrative autonomy"), and the Republican system would be more akin to a (WoT-protected) key-value store, I think.</p>
+<p>2. This key-value store, update-able via PGP-signed messages, should ideally be compatible with the <em>transport</em> part of current DNS (a DNS client should ideally be able to send a normal DNS Question to the store, and get a normal DNS Answer). Note, the <a href="https://en.wikipedia.org/wiki/Domain_Name_System#RFC_documents" >bulk of the current DNS complexity</a> is (for obvious reasons) in the whole extended administrative-realms/delegation/storage system (plus DNS extensions, etc.) The <em>transport</em> is <a href="http://www.freesoft.org/CIE/Topics/77.htm" >relatively straightforward</a>. Note also that caching of key-value data structures with clear TTLs should be simple enough; there are no sessions between DNS clients and servers; and interchange can take place over simple datagrams; all of these allow for elegant infrastructure; the latter could in principle be serviced by a future <a href="http://trilema.com/2016/gossipd-design-document/" >gossipd</a>.</p>
+<p>3. Checking DNS packets in the open is a simple matter of starting a Wireshark capture session on your NIC, and filtering on DNS (filter rule "port 53"). It'll show the datagram envelopes as well as the internal DNS question/answer structures nicely.</p>
+<p>4. For quickly prototyping things, it may make sense to use a DNS parser library, possibly with a built-in server, e.g. <em>dnslib</em> for Python. (Install; do e.g. `python -m dnslib.fixedresolver --port 20000`, and then on the same machine `nslookup -port=20000 somestring localhost`). There's a client, an interception+proxy example that you can subclass, etc.</p>
+<p>5. Some browsers/systems (e.g. Windows resolver) may, if requested to resolve "something", add the Windows domain TLD to make it into a FQDN (e.g. something.home). This sucks. Easiest way to avoid this is to instead resolve "something.", which in DNS land is the "proper" string anyway ("." terminates the "field").</p>
+<p>6. Should strings of any length be allowed for registration? Some options here, etc.</p>
+						</li>
+
+										<li id="comment-119720" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119720" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>1. General Name System works. It's not limited to the Internet, just because it's principally queried over the net.</p>
+<p>It would in principle solve pretty neatly the problem of "who REALLY is LordHurr on Facebook/Linkedin/whatever" just as well as it solved the problem of "what IP is that google.com".</p>
+<p>2. No I'm aware transport's the easy part. That's why we're keeping it. The rest has no reason to exist. Also why the comment in article, "replicating the whole current dns set-up costs a few thousand not a few million".</p>
+<p>3-4. Sure. </p>
+<p>5. Broken clients are really not our concern. As we speak, at this very moment, an <a href=http://trilema.com/2010/femeia-nesuferita/ >aged girly somewhere</a> is "rejecting" a generous offer of perfectly serviceable cock because she's too busy being <a href=http://btcbase.org/log/2016-11-13#1566907 >Lisa Kudrow</a>. I'm not rewriting <em>her</em> software for her, either. </p>
+<p>6. No.</p>
+						</li>
+
+										<li id="comment-119721" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119721" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>Re: 5., fair enough, but just so you know, that my very well include all of Windows. (I'm not sure.) Just to keep in mind. But, yeah.</p>
+						</li>
+
+										<li id="comment-119722" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119722" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>It also includes all of greco-roman antiquity.</p>
+						</li>
+
+										<li id="comment-119723" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119723" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>Oh, also, what about subdomain ownership/control (or in GNS terms, I guess, <em>substring prefixes</em>, or something like that)? If I buy cocks.com and want sucking.cocks.com to point somewhere, do I need to purchase another name? Or if I buy cocks.com do I in effect have wildcard control of *.cocks.com (<em>.cocks.com.</em> in DNS terms, I guess)?</p>
+						</li>
+
+										<li id="comment-119724" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119724" title="">Monday, 14 November 2016</a>
+							</div>
+						<p>If you want the name server to return IP x for string "cocks.com" you then register the string "cocks.com" with IP x. If you want the name server to return IP y for "sucking.cocks.com" you then register the string "sucking.cocks.com" with IP y. </p>
+<p>Whether GNS enforces a rule saying that "all longer strings must be registered by the owner of the shorter string that regexp matches it" is an absurd question - of course fucking not. Whether GNS enforces a rule saying that "all longer strings must be registered by the owner of the shorter string that php-substr matches it" is an even more braindamaged statement of the same concept, and the fact that this is how dear empire found in its wisdom to have things work speaks of the terminal braindeadedness of said empire, not to the merit of the scheme.</p>
+<p>If you want to register mp-is-an-idiot.trilema.com you <em>should be able to</em>. If it is a subdomain mentally, it probably should be a subdomain notationally also.</p>
+						</li>
+
+										<li id="comment-119727" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119727" title="">Tuesday, 15 November 2016</a>
+							</div>
+						<p>MP: Okay, gotcha, I think. Makes sense. (I would object to the notion that the domain/subdomain is completely brain<em>dead</em> - in classical DNS, a domain is a "realm", a distinct namespace controlled by the owner of the realm. The FQDN concept is quite useful. But not going to argue any further regarding this. And aware that the "distinct realm" concept may not be quite... tenable.)</p>
+<p>By the way, given that, supposedly, the current DNS protocol is to be honoured <em>to a point</em>, each unique string would, I imagine, map to a key-value map of its own: record type -&gt; value ("A" -&gt; IP address, "MX" -&gt; mail server address, etc.) Overall this, this makes for an elegant scheme overall.</p>
+						</li>
+
+										<li id="comment-119728" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119728" title="">Tuesday, 15 November 2016</a>
+							</div>
+						<p>Pretty much. I'm not entirely sure how many of the numerous types of extant dns crapolade should be kept, for which reason I expect the choice should be passed on to the user. Suppose the owner of domain "google.com" is free to register responses for types "A", "MX", as well as "witches" and "dragons" or whatever else arbitrary nonsense he comes up with.</p>
+						</li>
+
+										<li id="comment-119748" class="commentbody"><div class="commenthead"><img alt='Framedragger`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink">Framedragger</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119748" title="">Tuesday, 15 November 2016</a>
+							</div>
+						<p>Yes, was thinking the same. Two more nuances to note, for posterity - apologies if this is getting to be redundant:</p>
+<p>1) A name may have more than one record of the same record type (for redundancy / load balancing purposes, e.g. multiple mail servers, front-side web servers, etc.)</p>
+<p>2) I suppose the scheme as envisioned here would create a GNS such that there would be no "delegated nameservers", etc. (Then again, if the client wanted to have that and interpreted a record to designate such, that's all well and good.) An initial GNS would handle registration as well as DNS-record-keeping, all in one.</p>
+						</li>
+
+										<li id="comment-119749" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119749" title="">Tuesday, 15 November 2016</a>
+							</div>
+						<p>Yeah, domain names are unique, records however needn't be. I suppose the way this works is that it'll charge per-record (update or creation, no difference) as opposed to "per year" or whatever nonsense.</p>
+<p>It's quite obvious that client-facing "delegation" is a kludge. Let the dns servers handle the delegation themselves as is right and proper, the client has no business being involved.</p>
+						</li>
+
+										<li id="comment-121989" class="commentbody"><div class="commenthead"><img alt='StupiderNameThanEver`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink">StupiderNameThanEver</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121989" title="">Monday, 8 May 2017</a>
+							</div>
+						<p>ok, MORE comedy relief. How do you prove p=np????</p>
+<p>Simple. Very simple, can you prove that integer factorization can be done in polywhatsits time? Yes, reduce it to an O(1) problem. 1 is a polywants a cracker to solve it. Takes a german physical ed major to do it though. There is an interesting contention that every integer function can be reduced to an O(1) operation if you are willing to make the tradeoff. I was willing and told those fucks how to do it. the only other thing would be to have a peer review, and I am peerless cause no one will taLK TO ME. I am that anti-social, that even the other smart kids hated my guts growing up. Don't matter, I like me, and I am my own peer.</p>
+<p>T0ld you I was comedy gold. Except I always tell the truth, even when I am lying down. Hopefully this shit will be cut off or not posted, cause they are alwaYS LISTENUING.</p>
+						</li>
+
+										<li id="comment-121991" class="commentbody"><div class="commenthead"><img alt='sTUPIDERSTILLSHOUTING`s avatar' src='http://neverfillinoptionalfields/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">26</div>
+								<span class="authorlink"><a href='http://neverfillinoptionalfields' class='url'>sTUPIDERSTILLSHOUTING</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121991" title="">Monday, 8 May 2017</a>
+							</div>
+						<p>yUO NO MY NAME, AND I BET you alreadf fuck, drunk already. You may know myt number, it's 666 tyhe beast, or maybe it's my Mac addy or my other addy. Don't call me, I won't caLL YOU.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-119955">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trinque.org/2016/11/29/namecheap-the-incompetent-namecheap-the-nameless/' class='url'>Namecheap the Incompetent, Namecheap the Nameless &laquo; trinque</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-119955" title="">Wednesday, 30 November 2016</a>
+					</div>
+					<p>[...] amply chronicled elsewhere, DNS is a steaming heap of imperial dung. At 7:27 PM my time, Lord mod6 and shinohai kindly brought [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-148101">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/03/27/a-review-of-the-bitcoin-category-on-trilemacom/?b=the%20need%20for&amp;e=some#select' class='url'>A Review of the Bitcoin Category on trilema.com &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148101" title="">Friday, 27 March 2020</a>
+					</div>
+					<p>[...] the need for Republican DNS and a simple way to do it, with a direct call to action, asking who wants to do it. There's some [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="69885" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834938-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-69885")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-69885");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-69885");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

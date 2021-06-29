@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Working Perfect Tower II Mining AI Script on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Aici este pragul cel de sus,<br />unde v-o zis tati ca'ti da cu capul.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-100307"><div class="post" id="post-100307">                    <h1><a href="http://trilema.com/2021/working-perfect-tower-ii-mining-ai-script/" rel="bookmark" title="Permanent Link to Working Perfect Tower II Mining AI Script">Working Perfect Tower II Mining AI Script</a></h1>                        <div class="date">                                     Friday, 02 April, Year 13 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Not being one to waste too much time, here it directly is<sup><a href="#footnote_0_100307" id="identifier_0_100307" class="footnote-link footnote-identifier-link" title="If you're curious, that base64 encoding decodes to the lulziest of mixed-binary-xmlish nonsense...
+00000000: 054d 696e 6572 0100 0000 096f 7065 6e2e  .Miner.....open.
+00000010: 6d69 6e65 0000 0000 0c00 0000 0d6c 6f63  mine.........loc
+00000020: 616c 2e69 6e74 2e73 6574 0863 6f6e 7374  al.int.set.const
+00000030: 616e 7404 074d 494e 4554 4142 0863 6f6e  ant..MINETAB.con
+00000040: 7374 616e 7402 0200 0000 0d6c 6f63 616c  stant......local
+00000050: 2e69 6e74 2e73 6574 0863 6f6e 7374 616e  .int.set.constan
+00000060: 7404 094d 494e 454c 6179 6572 0863 6f6e  t..MINELayer.con
+00000070: 7374 616e 7402 0000 0000 0d6c 6f63 616c  stant......local
+00000080: 2e69 6e74 2e73 6574 0863 6f6e 7374 616e  .int.set.constan
+00000090: 7404 064d 494e 4558 5908 636f 6e73 7461  t..MINEXY.consta
+000000a0: 6e74 0200 0000 0008 6d69 6e65 2e64 6967  nt......mine.dig
+000000b0: 0e61 7269 7468 6d65 7469 632e 696e 740d  .arithmetic.int.
+000000c0: 6c6f 6361 6c2e 696e 742e 6765 7408 636f  local.int.get.co
+000000d0: 6e73 7461 6e74 0406 4d49 4e45 5859 0863  nstant..MINEXY.c
+000000e0: 6f6e 7374 616e 7404 034d 4f44 0863 6f6e  onstant..MOD.con
+000000f0: 7374 616e 7402 0400 0000 0e61 7269 7468  stant......arith
+00000100: 6d65 7469 632e 696e 740d 6c6f 6361 6c2e  metic.int.local.
+00000110: 696e 742e 6765 7408 636f 6e73 7461 6e74  int.get.constant
+00000120: 0406 4d49 4e45 5859 0863 6f6e 7374 616e  ..MINEXY.constan
+00000130: 7404 012f 0863 6f6e 7374 616e 7402 0400  t../.constant...
+00000140: 0000 0d6c 6f63 616c 2e69 6e74 2e73 6574  ...local.int.set
+00000150: 0863 6f6e 7374 616e 7404 064d 494e 4558  .constant..MINEX
+00000160: 590e 6172 6974 686d 6574 6963 2e69 6e74  Y.arithmetic.int
+00000170: 0d6c 6f63 616c 2e69 6e74 2e67 6574 0863  .local.int.get.c
+00000180: 6f6e 7374 616e 7404 064d 494e 4558 5908  onstant..MINEXY.
+00000190: 636f 6e73 7461 6e74 0401 2b08 636f 6e73  constant..+.cons
+000001a0: 7461 6e74 0201 0000 000e 6765 6e65 7269  tant......generi
+000001b0: 632e 676f 746f 6966 0863 6f6e 7374 616e  c.gotoif.constan
+000001c0: 7402 0400 0000 0e63 6f6d 7061 7269 736f  t......compariso
+000001d0: 6e2e 696e 740d 6c6f 6361 6c2e 696e 742e  n.int.local.int.
+000001e0: 6765 7408 636f 6e73 7461 6e74 0406 4d49  get.constant..MI
+000001f0: 4e45 5859 0863 6f6e 7374 616e 7404 013c  NEXY.constant..">i</a></sup> : </p>
+<blockquote class="breakup"><p><a href="http://trilema.com/wp-content/uploads/2021/04/perfect-tower-ii-scripting-interface.png"><img src="http://trilema.com/wp-content/uploads/2021/04/perfect-tower-ii-scripting-interface-100x100.png" alt="perfect-tower-ii-scripting-interface" title="perfect-tower-ii-scripting-interface" width="100" height="100" class="alignright size-thumbnail wp-image-100323" /></a>BU1pbmVyAQAAAAlvcGVuLm1pbmUAAAAADAAAAA1sb2NhbC5pbnQuc2V0CGNvbnN0YW50BAdNSU5FVEFCCGNvbnN0YW50AgIAAAANbG9jYWwuaW50LnNldAhjb25zdGFudAQJTUlORUxheWVyCGNvbnN0YW50AgAAAAANbG9jYWwuaW50LnNldAhjb25zdGFudAQGTUlORVhZCGNvbnN0YW50AgAAAAAIbWluZS5kaWcOYXJpdGhtZXRpYy5pbnQNbG9jYWwuaW50LmdldAhjb25zdGFudAQGTUlORVhZCGNvbnN0YW50BANNT0QIY29uc3RhbnQCBAAAAA5hcml0aG1ldGljLmludA1sb2NhbC5pbnQuZ2V0CGNvbnN0YW50BAZNSU5FWFkIY29uc3RhbnQEAS8IY29uc3RhbnQCBAAAAA1sb2NhbC5pbnQuc2V0CGNvbnN0YW50BAZNSU5FWFkOYXJpdGhtZXRpYy5pbnQNbG9jYWwuaW50LmdldAhjb25zdGFudAQGTUlORVhZCGNvbnN0YW50BAErCGNvbnN0YW50AgEAAAAOZ2VuZXJpYy5nb3RvaWYIY29uc3RhbnQCBAAAAA5jb21wYXJpc29uLmludA1sb2NhbC5pbnQuZ2V0CGNvbnN0YW50BAZNSU5FWFkIY29uc3RhbnQEATwIY29uc3RhbnQCEQAAAA1taW5lLm5ld2xheWVyDWxvY2FsLmludC5zZXQIY29uc3RhbnQECU1JTkVMQVlFUg5hcml0aG1ldGljLmludA1sb2NhbC5pbnQuZ2V0CGNvbnN0YW50BAlNSU5FTGF5ZXIIY29uc3RhbnQEASsIY29uc3RhbnQCAQAAAA5nZW5lcmljLmdvdG9pZghjb25zdGFudAIDAAAADmNvbXBhcmlzb24uaW50DWxvY2FsLmludC5nZXQIY29uc3RhbnQECU1JTkVMQVlFUghjb25zdGFudAQBPAhjb25zdGFudAILAAAACG1pbmUudGFiDWxvY2FsLmludC5nZXQIY29uc3RhbnQEB01JTkV0QUINbG9jYWwuaW50LnNldAhjb25zdGFudAQHTUlORVRBQg5hcml0aG1ldGljLmludA1sb2NhbC5pbnQuZ2V0CGNvbnN0YW50BAdNSU5FVEFCCGNvbnN0YW50BAErCGNvbnN0YW50AgEAAAAOZ2VuZXJpYy5nb3RvaWYIY29uc3RhbnQCAgAAAA5jb21wYXJpc29uLmludA1sb2NhbC5pbnQuZ2V0CGNvbnN0YW50BAdNSU5FVEFCCGNvbnN0YW50BAE8CGNvbnN0YW50Ag4AAAA=</p></blockquote>
+<p>And here's how it looks while it's working :</p>
+<p><div id="attachment_100324" class="wp-caption aligncenter" style="width: 570px"><a href="http://trilema.com/wp-content/uploads/2021/04/perfect-tower-ii-mining-ai-script.png"><img src="http://trilema.com/wp-content/uploads/2021/04/perfect-tower-ii-mining-ai-script-560x315.png" alt="Perfect Tower II Mining Script at work -- don&#039;t mind the primitive drill, it&#039;s unupgraded yet." title="perfect-tower-ii-mining-ai-script" width="560" height="315" class="size-large wp-image-100324" /></a><p class="wp-caption-text">Perfect Tower II Mining Script at work -- don't mind the primitive drill, it's unupgraded yet.</p></div></p>
+<p><center><br />
+<hr />~ * ~<br />
+<hr /></center></p>
+<p><a href="http://trilema.com/wp-content/uploads/2021/04/perfect-tower-ii-battle-screen.png"><img src="http://trilema.com/wp-content/uploads/2021/04/perfect-tower-ii-battle-screen-100x100.png" alt="perfect-tower-ii-battle-screen" title="perfect-tower-ii-battle-screen" width="100" height="100" class="alignright size-thumbnail wp-image-100325" /></a>For everyone else, <a href="">Perfect Tower II</a> (illustrated to the right) is an... unfinished, how shall we say this, <em>alpha</em><sup><a href="#footnote_1_100307" id="identifier_1_100307" class="footnote-link footnote-identifier-link" title="You know how `beta` means `a rough prototype that doesn't work but might illustrate the contemplated concepts for deeply specialized minds that are generously inclined` everywhere, yet in software `engineering` it somehow means `eh, ship it to production, whatever` ?">ii</a></sup> tower defense game.<sup><a href="#footnote_2_100307" id="identifier_2_100307" class="footnote-link footnote-identifier-link" title="Pro tip : don't use a skill point to get the Detector Mine skill. Just not worth anything (even if by level 30 or so you'll have spare points not worth using anyways).">iii</a></sup></p>
+<p>It's been in development for a year or two (it just hit the <a href="http://trilema.com/2019/the-state-of-the-vidya-address/">Steam</a><font color="white">ing Pile Of Shit</font> as an early release maybe last month) ; but it's interesting to me because it makes a very peculiar set of choices in terms of what to develop. </p>
+<p><a href="http://trilema.com/wp-content/uploads/2021/04/perfect-tower-ii-workshop.png"><img src="http://trilema.com/wp-content/uploads/2021/04/perfect-tower-ii-workshop-100x100.png" alt="perfect-tower-ii-workshop" title="perfect-tower-ii-workshop" width="100" height="100" class="alignright size-thumbnail wp-image-100326" /></a>The graphics, for instance, are very much neglected (as you can see) ; whereas the interface <em>level of access</em> is extremely refined (as you can also see). I mean, there's an actual <del>Basic</del> Ada strap-on for crying out loud<sup><a href="#footnote_3_100307" id="identifier_3_100307" class="footnote-link footnote-identifier-link" title="And no, THERE IS NOTHING WRONG WITH GOTO PROGRAMMING. 
+Yes, I know they insistently told you there is, and you ended up believing (just like you ended up believing there's something wrong with html's table element, or inline styling, or whatever the fuck else). Because back in the 80s it was the early age of human thinking, apparently, and you buncha simpletons simply believed what everyone insisted upon. Because `that's how it worked back in school`, right, and  d'oh, why's the world not simply school-continued, and thank you very much for ruining EVERYTHING because look now, 30 years later every last halfwit in existence is trying to nigger out of insisting in that manner (meanwhile called `consensus`). You had to ruin it, you buncha sheepcows. Didn't you!
+Yet there's nothing wrong with goto programming (nor is `recursion` gonna earn you brownie `intelligent kid` points ; nor is it the right solution in every fucking context) ; and you really did ruin the world.">iv</a></sup>! I can script game activity to the level of peeling off layers and moving through tabs, <em>and it's all natively supported</em>. </p>
+<p>Needless to say this is <em>exactly</em> the sort of balancing choice I tend to favour (and have been favouring systematically throughout Minigame's tenure, especially as seen in Eulora development). I happen to believe it's the right choice, because you can always paint <em>later</em> upon the many edges and panes of a well made game (<em>even if that "later" never in practice comes</em>) ; but you can never "make" a game out of a set of very expensive, elaborately hand-painted... paintings. And, most importantly at all, everyone must wait while the smartest are satisfied <em>first</em> -- always and everywhere <a href="http://trilema.com/2014/namecheap-goes-off-the-deep-end-anyone-know-a-decent-domain-registrar/?b=I%20warn%20you&#038;e=gone#select">FIRST</a>, and always and thoroughly <b>SATISFIED</b>. If this should mean there'll be no resources left for "everyone else" left waiting in line, <a href="http://trilema.com/2018/the-republic-without-mp/?b=I%20understand&#038;e=whatsoever#select">all the better</a>. Nobody cares. Let all-but-the-smartest <a href="http://trilema.com/2016/an-immodest-proposal/">whither</a> and <a href="http://trilema.com/2013/the-dead-jew-and-the-raped-girl/">die</a> for <a href="http://trilema.com/2017/when-did-america-end/#identifier_0_76183">lack of basics</a>, <a href="http://trilema.com/2017/in-scams-today-disk-less-terminal-sa-dba-laesquinadelamazmorra/#footnote_3_72501">I don't give a shit</a>. Nor should you! Actually, strike that : <b>nor may you</b>.</p>
+<p>Because the alternative, where "everyone gets the basics", results in atrocities like the present situation. Do you know there doesn't exist <em>anywhere</em>, <a href="http://trilema.com/2017/lets-revisit-the-google-is-irrelevant-discussion/#footnote_7_76296">google be damned</a>, a working<sup><a href="#footnote_4_100307" id="identifier_4_100307" class="footnote-link footnote-identifier-link" title="Check out this nutfarm offering :
+:global int atr_layer
+:global int atr_index
+:local int index
+  index = atr_index
+  atr_index = atr_index + 1
+  gotoif(7, atr_index == 17)
+  execute(`auto_tiler_recursive`)
+5: dig(index % 4, index / 4)
+  goto(5)
+7: waituntil(atr_layer > 0)
+8: newlayer()
+  atr_layer = atr_layer - 1
+  gotoif(8, atr_layer > 0)
+  goto(7)
+It's on the game site's own wiki, perfecttower2.com/wiki/AI_Script_Repository. It recurses (!), yet nevertheless can't peel layers or move tabs (!!!) and what the fuck holy shit. There's more cowpigfoot offerings on rettardit (apparently the gamedevs are byproducts of that cowpie fermenter) and they're no better! I spent five minutes searching and ten minutes writing, and this is the state of the world you've wrought.
+Nothing for `everyone`. Not even the basics.">v</a></sup> mining script<sup><a href="#footnote_5_100307" id="identifier_5_100307" class="footnote-link footnote-identifier-link" title="Speaking of `working` : mine has this interesting property that it doesn't start mining on tab 1, it starts mining on the current tab, whatever that is, and continues from there to the 2nd and so on in order. This is important because right after a tier-up, all the resources being depleted, the mine white box finds are the best means to kickstart the tower modules into higher gear so you can start making some serious resources TD-ing. This means you'll be depleting the first few 5-6 tabs (the one for which the dig cost was reduced all the way to 1) way before you can afford to dig the further ones out (and in particular the 1st tab you deplete to even get enough orange resources to get going in the first place). Notwithstanding the tenuous circumstances, nothing is lost with my script because it will happily dig your current tab whichever it is, and then you have plenty of time to stop it while it drones impuissantly on tab 2.
+There's something to be said for `coding sloppiness`, especially when that `sloppiness` matches underlying characteristics of the world.">vi</a></sup> for this <em>year old</em> game ? I had to make my own ; always and perpetually whenever I want something I gotta <span style="background-color:#d3d3d3" id="select">make my own, because nobody does anything useful, because everyone's way too busy <a href="http://trilema.com/2017/the-world-has-changed/">jacking off</a> and "<a href="http://trilema.com/2014/agency-and-other-notes/">helping everyone get the basics</a>". Fuck that dumb</span> shit.</p>
+<p>Fuck that dumb shit with a red hot poker, the only interesting problem in the world is the complete satisfaction of the very best and nothing else matters.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_100307" class="footnote">If you're curious, that base64 encoding decodes to the lulziest of mixed-binary-<a href="http://ossasepia.com/2021/03/20/the-space-it-takes-xml-binary-and-raw-mesh-formats/">xml</a>ish nonsense...</p>
+<blockquote><p>00000000: 054d 696e 6572 0100 0000 096f 7065 6e2e  .Miner.....open.<br />
+00000010: 6d69 6e65 0000 0000 0c00 0000 0d6c 6f63  mine.........loc<br />
+00000020: 616c 2e69 6e74 2e73 6574 0863 6f6e 7374  al.int.set.const<br />
+00000030: 616e 7404 074d 494e 4554 4142 0863 6f6e  ant..MINETAB.con<br />
+00000040: 7374 616e 7402 0200 0000 0d6c 6f63 616c  stant......local<br />
+00000050: 2e69 6e74 2e73 6574 0863 6f6e 7374 616e  .int.set.constan<br />
+00000060: 7404 094d 494e 454c 6179 6572 0863 6f6e  t..MINELayer.con<br />
+00000070: 7374 616e 7402 0000 0000 0d6c 6f63 616c  stant......local<br />
+00000080: 2e69 6e74 2e73 6574 0863 6f6e 7374 616e  .int.set.constan<br />
+00000090: 7404 064d 494e 4558 5908 636f 6e73 7461  t..MINEXY.consta<br />
+000000a0: 6e74 0200 0000 0008 6d69 6e65 2e64 6967  nt......mine.dig<br />
+000000b0: 0e61 7269 7468 6d65 7469 632e 696e 740d  .arithmetic.int.<br />
+000000c0: 6c6f 6361 6c2e 696e 742e 6765 7408 636f  local.int.get.co<br />
+000000d0: 6e73 7461 6e74 0406 4d49 4e45 5859 0863  nstant..MINEXY.c<br />
+000000e0: 6f6e 7374 616e 7404 034d 4f44 0863 6f6e  onstant..MOD.con<br />
+000000f0: 7374 616e 7402 0400 0000 0e61 7269 7468  stant......arith<br />
+00000100: 6d65 7469 632e 696e 740d 6c6f 6361 6c2e  metic.int.local.<br />
+00000110: 696e 742e 6765 7408 636f 6e73 7461 6e74  int.get.constant<br />
+00000120: 0406 4d49 4e45 5859 0863 6f6e 7374 616e  ..MINEXY.constan<br />
+00000130: 7404 012f 0863 6f6e 7374 616e 7402 0400  t../.constant...<br />
+00000140: 0000 0d6c 6f63 616c 2e69 6e74 2e73 6574  ...local.int.set<br />
+00000150: 0863 6f6e 7374 616e 7404 064d 494e 4558  .constant..MINEX<br />
+00000160: 590e 6172 6974 686d 6574 6963 2e69 6e74  Y.arithmetic.int<br />
+00000170: 0d6c 6f63 616c 2e69 6e74 2e67 6574 0863  .local.int.get.c<br />
+00000180: 6f6e 7374 616e 7404 064d 494e 4558 5908  onstant..MINEXY.<br />
+00000190: 636f 6e73 7461 6e74 0401 2b08 636f 6e73  constant..+.cons<br />
+000001a0: 7461 6e74 0201 0000 000e 6765 6e65 7269  tant......generi<br />
+000001b0: 632e 676f 746f 6966 0863 6f6e 7374 616e  c.gotoif.constan<br />
+000001c0: 7402 0400 0000 0e63 6f6d 7061 7269 736f  t......compariso<br />
+000001d0: 6e2e 696e 740d 6c6f 6361 6c2e 696e 742e  n.int.local.int.<br />
+000001e0: 6765 7408 636f 6e73 7461 6e74 0406 4d49  get.constant..MI<br />
+000001f0: 4e45 5859 0863 6f6e 7374 616e 7404 013c  NEXY.constant..<<br />
+00000200: 0863 6f6e 7374 616e 7402 1100 0000 0d6d  .constant......m<br />
+00000210: 696e 652e 6e65 776c 6179 6572 0d6c 6f63  ine.newlayer.loc<br />
+00000220: 616c 2e69 6e74 2e73 6574 0863 6f6e 7374  al.int.set.const<br />
+00000230: 616e 7404 094d 494e 454c 4159 4552 0e61  ant..MINELAYER.a<br />
+00000240: 7269 7468 6d65 7469 632e 696e 740d 6c6f  rithmetic.int.lo<br />
+00000250: 6361 6c2e 696e 742e 6765 7408 636f 6e73  cal.int.get.cons<br />
+00000260: 7461 6e74 0409 4d49 4e45 4c61 7965 7208  tant..MINELayer.<br />
+00000270: 636f 6e73 7461 6e74 0401 2b08 636f 6e73  constant..+.cons<br />
+00000280: 7461 6e74 0201 0000 000e 6765 6e65 7269  tant......generi<br />
+00000290: 632e 676f 746f 6966 0863 6f6e 7374 616e  c.gotoif.constan<br />
+000002a0: 7402 0300 0000 0e63 6f6d 7061 7269 736f  t......compariso<br />
+000002b0: 6e2e 696e 740d 6c6f 6361 6c2e 696e 742e  n.int.local.int.<br />
+000002c0: 6765 7408 636f 6e73 7461 6e74 0409 4d49  get.constant..MI<br />
+000002d0: 4e45 4c41 5945 5208 636f 6e73 7461 6e74  NELAYER.constant<br />
+000002e0: 0401 3c08 636f 6e73 7461 6e74 020b 0000  ..<.constant....<br />
+000002f0: 0008 6d69 6e65 2e74 6162 0d6c 6f63 616c  ..mine.tab.local<br />
+00000300: 2e69 6e74 2e67 6574 0863 6f6e 7374 616e  .int.get.constan<br />
+00000310: 7404 074d 494e 4574 4142 0d6c 6f63 616c  t..MINEtAB.local<br />
+00000320: 2e69 6e74 2e73 6574 0863 6f6e 7374 616e  .int.set.constan<br />
+00000330: 7404 074d 494e 4554 4142 0e61 7269 7468  t..MINETAB.arith<br />
+00000340: 6d65 7469 632e 696e 740d 6c6f 6361 6c2e  metic.int.local.<br />
+00000350: 696e 742e 6765 7408 636f 6e73 7461 6e74  int.get.constant<br />
+00000360: 0407 4d49 4e45 5441 4208 636f 6e73 7461  ..MINETAB.consta<br />
+00000370: 6e74 0401 2b08 636f 6e73 7461 6e74 0201  nt..+.constant..<br />
+00000380: 0000 000e 6765 6e65 7269 632e 676f 746f  ....generic.goto<br />
+00000390: 6966 0863 6f6e 7374 616e 7402 0200 0000  if.constant.....<br />
+000003a0: 0e63 6f6d 7061 7269 736f 6e2e 696e 740d  .comparison.int.<br />
+000003b0: 6c6f 6361 6c2e 696e 742e 6765 7408 636f  local.int.get.co<br />
+000003c0: 6e73 7461 6e74 0407 4d49 4e45 5441 4208  nstant..MINETAB.<br />
+000003d0: 636f 6e73 7461 6e74 0401 3c08 636f 6e73  constant..<.cons<br />
+000003e0: 7461 6e74 020e 0000 00                   tant.....
+</p></blockquote>
+<p>Da fuck is that "arithmetic.int.local.int.set.constant" / "local.int.get.constant" spelled out shit ? What is this, the spurious machine spelling bee competition ?! (Check it out btw, Layer / LAYER.) But do you have any idea what wonders zip/deflate would do to it !??! AND WHY DO I KNOW THIS, GOD DAMN IT!eleventy</p>
+<p>Anyway, if you wish to reproduce such wonders at home, it's not hard to do with all-standard tools : </p>
+<blockquote><p>echo "VGhpcyBpcyBzb21lIHRleHQu" | base64 -d | xxd</p></blockquote>
+<p>  [<a href="#identifier_0_100307" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_100307" class="footnote">You know how "beta" means "a rough prototype that doesn't work but might illustrate the contemplated concepts for <a href="http://trilema.com/2010/hai-sa-studiem-gramatica-impreuna/?b=Insist%20si%20subliniez&#038;e=Pentru%20ca%20meriti#select">deeply specialized minds</a> that are generously inclined" everywhere, yet in software "<a href="http://trilema.com/2019/the-alleged-crisis-of-the-supposed-engineering-or-mistaken-identities-pantomiming-a-comedy-of-manners/">engineering</a>" it somehow means "eh, ship it to production, whatever" ? [<a href="#identifier_1_100307" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_100307" class="footnote">Pro tip : don't use a skill point to get the Detector Mine skill. Just not worth anything (even if by level 30 or so you'll have spare points not worth using anyways). [<a href="#identifier_2_100307" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_100307" class="footnote">And no, <b><font color="red">THERE IS NOTHING WRONG WITH GOTO PROGRAMMING</font></b>. </p>
+<p>Yes, I know <a href="http://trilema.com/2020/desperation-in-desolation-or-the-woes-of-the-contemporary-entrepreneur-or-what-came-of-my-first-attempt-at-running-the-second-generation-eulora-client-ornery-in-any-case/?b=poisonous&#038;e=shitheads#select">they</a> insistently told you there is, and you ended up believing (just like you ended up believing there's something wrong with html's table element, or inline styling, or whatever the fuck else). Because <a href="http://trilema.com/2013/dazed-and-confused/">back in the 80s</a> it was the early age of human thinking, apparently, and you buncha simpletons simply believed what everyone insisted upon. Because "that's how it worked back in school", right, and  d'oh, why's the world not simply school-continued, and thank you very much for ruining <b>EVERYTHING</b> because look now, 30 years later <a href="http://trilema.com/2014/the-nigger-a-practical-exercise/#identifier_1_52821">every last halfwit in existence</a> is <a href="http://trilema.com/2013/fried-chicken/">trying to nigger</a> out of insisting in that manner (meanwhile called "<a href="http://trilema.com/2013/soft-consensus-aka-fecal-matter/">consensus</a>"). You had to ruin it, you buncha sheepcows. Didn't you!</p>
+<p>Yet there's nothing wrong with goto programming (nor is "recursion" gonna earn you brownie "intelligent kid" points ; nor is it the right solution in every fucking context) ; and you really <em>did</em> ruin the world. [<a href="#identifier_3_100307" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_100307" class="footnote">Check out this nutfarm offering :</p>
+<blockquote><p>:global int atr_layer<br />
+:global int atr_index<br />
+:local int index</p>
+<p>  index = atr_index<br />
+  atr_index = atr_index + 1<br />
+  gotoif(7, atr_index == 17)<br />
+  execute("auto_tiler_recursive")<br />
+5: dig(index % 4, index / 4)<br />
+  goto(5)<br />
+7: waituntil(atr_layer > 0)<br />
+8: newlayer()<br />
+  atr_layer = atr_layer - 1<br />
+  gotoif(8, atr_layer > 0)<br />
+  goto(7)</p></blockquote>
+<p>It's on the game site's own wiki, perfecttower2.com/wiki/AI_Script_Repository. It <em>recurses</em> (!), yet nevertheless can't peel layers or move tabs (!!!) and what the fuck holy shit. There's more cowpigfoot offerings on rettardit (apparently the gamedevs are byproducts of that cowpie fermenter) and they're no better! I spent five minutes searching and ten minutes writing, and this is the state of the world you've wrought.</p>
+<p>Nothing for "everyone". <em>Not even the basics.</em> [<a href="#identifier_4_100307" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_100307" class="footnote">Speaking of "working" : mine has this interesting property that it doesn't start mining on tab 1, it starts mining on the <em>current</em> tab, whatever that is, and continues from there to the 2nd and so on in order. This is important because right after a tier-up, all the resources being depleted, the mine white box finds are the best means to kickstart the tower modules into higher gear so you can start making some serious resources TD-ing. This means you'll be depleting the first few 5-6 tabs (the one for which the dig cost was reduced all the way to 1) way before you can afford to dig the further ones out (and in particular the 1st tab you deplete to even get enough orange resources to get going in the first place). Notwithstanding the tenuous circumstances, nothing is lost with my script because it will happily dig your current tab whichever it is, and then you have plenty of time to stop it while it drones impuissantly on tab 2.</p>
+<p>There's something to be said for "coding sloppiness", especially when that "sloppiness" matches <a href="http://trilema.com/2015/the-downtrodden-are-downtrodden-for-a-reason-step-on-their-faces/">underlying characteristics of the world</a>. [<a href="#identifier_5_100307" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2021/george-whites-scandals/">George White's Scandals</a></div>
+                <div class="alignright"><a href="http://trilema.com/2021/the-skin/">The Skin</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2021/working-perfect-tower-ii-mining-ai-script/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2021/working-perfect-tower-ii-mining-ai-script/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+
+
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="100307" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832898-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-100307")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-100307");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-100307");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

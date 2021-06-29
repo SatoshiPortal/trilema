@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>How I found some area of expertise in mathematical cryptography one expects to find here and there ; plus divers spots missed while shaving. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The scandalous blog of a sexual predator.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-72757"><div class="post" id="post-72757">                    <h1><a href="http://trilema.com/2017/how-i-found-some-area-of-expertise-in-mathematical-cryptography-one-expects-to-find-here-and-there-plus-divers-spots-missed-while-shaving/" rel="bookmark" title="Permanent Link to How I found some area of expertise in mathematical cryptography one expects to find here and there ; plus divers spots missed while shaving.">How I found some area of expertise in mathematical cryptography one expects to find here and there ; plus divers spots missed while shaving.</a></h1>                        <div class="date">                                     Friday, 28 April, Year 9 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><em>If you've read <a href="http://trilema.com/2016/cat-vorg-adnotated/">the cat-v story</a> you're probably thinking something along the lines of "apparently he tends to do one of these every six months or so". What can I say, apparently I do.</em></p>
+<p>It all started quaintly enough in #<a href="http://trilema.com/forum-logs-for-27-apr-2017#2274211">trilema</a> : </p>
+<blockquote><p><strong>Framedragger</strong> btw there are like 770 people sitting and talking on ##crypto, it might not even be 100% hopeless, curious if they would respond well to FUCKGOATS advertising<br />
+<strong>asciilifeform</strong> 'people'<br />
+<strong>Framedragger</strong> usg sybils deliberately working to blackhole asciilifeform's emails!<br />
+<strong>trinque</strong> check it out; he learned the splitting<br />
+<strong>asciilifeform</strong> Framedragger: 'people' in the sense of the randos hanging out, e.g., here, and never saying a word, is the idea.</p></blockquote>
+<p>Not one to theorize, I simply joined<sup><a href="#footnote_0_72757" id="identifier_0_72757" class="footnote-link footnote-identifier-link" title="Turns out I had been there cca July 2014, but very little has changed in the intervening three years' experience : 
+mircea_popescu	any advice on how to deal with people proposing specific measures to `harden` various crypto against `quantum computing` ?
+mcpherrin	mircea_popescu: there's plenty of papers on post-quantum cryptography.
+mircea_popescu	i know ;/
+Hopefully they find a new pin-up dollie soon enough, this one's getting full.">i</a></sup> and the conversation flew thickly thereupon<sup><a href="#footnote_1_72757" id="identifier_1_72757" class="footnote-link footnote-identifier-link" title="To save myself the effort later, 
+cat crypto.log | grep -Pv `\*\t` | cut -f4-  -d ` ` | sed 's%>%&lt;/b>%' | sed 's/&lt;/&lt;b>/' > crtpyo.txt
+-P turns on perl-style notation which then requires the \ before the *.">ii</a></sup> :</p>
+<p><b>Framedragger</b>	just going throw this out there: there's an *auditable* hardware trng available here: http://nosuchlabs.com/ ; anyone interested please do drop by #trilema.<br />
+<b>Captain_Beezay</b>	Framedragger: why do you call it "true"?<br />
+<b>Captain_Beezay</b>	also,I'd never touch anything named that,regardless of quality. onerng is out there fyi</p>
+<p><b>Framedragger</b>	Captain_Beezay: it doesn't hash or do any other stupid things like that, just gives you entropy; it doesn't whiten.<br />
+<b>mircea_popescu</b>	link for this onerng thing ?<br />
+<b>Captain_Beezay</b>	same<sup><a href="#footnote_2_72757" id="identifier_2_72757" class="footnote-link footnote-identifier-link" title="This is not actually true. The site he links specifically says 
+Entropy is collected from an avalanche diode circuit and optionally an RF circuit, whitened and presented over a USB/Serial connection.
+">iii</a></sup> with onerng,I have it<br />
+<b>Captain_Beezay</b>	http://onerng.info/<br />
+<b>Captain_Beezay</b>	and I don't have to tell people I'm comitting beastiality when all I want to  tell them is I have a nice hrng</p>
+<p><b>mircea_popescu</b>	ah, i recall reviewing onerng cca 2014. there's serious problems with it. such as, micro is under same shielding as rf amp.<br />
+<b>sarnold</b>	eightyeight: a new hardware token to add to your pile :) http://nosuchlabs.com/<br />
+<b>mircea_popescu</b>	Captain_Beezay your self-broadcasting needs might be separable and for others separate from the rng issue.<br />
+<b>mircea_popescu</b>	also, as per the schematic, the AP3105' switching voltage-booster is very likely to induce artefacts into the output. all in all it's a terrible design made by perhaps well intended yet obvious amateurs.</p>
+<p><b>Captain_Beezay</b>	mircea_popescu: be it so.there was no need to call it that. I'm sure there will be people that won't mind the name<br />
+<b>mircea_popescu</b>	anyway, got a contact for the people involved ? help them out with the "We are not aware of any other equivalent device that promotes this essential feature of security for you, the user." claim.</p>
+<p><b>Captain_Beezay</b>	mircea_popescu: are you affiliated with nosuchlabs?<br />
+<b>mircea_popescu</b>	i'm a principal.<sup><a href="#footnote_3_72757" id="identifier_3_72757" class="footnote-link footnote-identifier-link" title="Old name for significant owners with some involvement in conducting the day-to-day affairs of a company. This is not the same as officers (such as say the CEO) -- with regards to the principals, the officers fullfill the agent portion of the principal-agent relationship.">iv</a></sup><br />
+<b>Riastradh</b>	That's...quite the product name.<br />
+<b>Riastradh</b>	Do you have a USB vendor and product id assigned for vendor NOSUCHLABS product FUCKGOATS?<br />
+<b>mircea_popescu</b>	nope.<br />
+<b>Ganymed</b>	:)<br />
+<b>mircea_popescu</b>	also not going to happen, the republic is rather unfriendly to fiat pretense of the sort.</p>
+<p><b>Captain_Beezay</b>	mircea_popescu: did you publish your onerng review?<br />
+<b>Riastradh</b>	Guess I can't write a native NetBSD device driver for it<sup><a href="#footnote_4_72757" id="identifier_4_72757" class="footnote-link footnote-identifier-link" title="It's very dubious what this driver would do, but then again I'm no NetBSD expert. In any case, the implication that I stand to lose something in this race is lulzy in itself.">v</a></sup>, then, like I did for my Finnish arachnoid alternative last week (which, admittedly, is not terribly auditable).<br />
+<b>mircea_popescu</b>	Captain_Beezay back in 2014, http://btcbase.org/log/2014-10-28#900086<br />
+<b>asciilifeform</b>	Riastradh: FUCKGOATS is an rs232 device. works equally well with, e.g., msdos, as with bsd. and with pdp11 as well as with pentium.<br />
+<b>mircea_popescu</b>	speaking of which, is there a log website for this channel ? or how do i search past conversations ?</p>
+<p><b>Riastradh</b>	Yes, but I can't detect that it is a FUCKGOATS device and automatically feed it to the entropy pool.  It will look just like any other serial device, requiring operator intervention to know to use a userland program to connect to the serial interface and feed data from that to /dev/random.<br />
+<b>asciilifeform</b>	that's actually deliberate.<br />
+<b>asciilifeform</b>	it is meant to be used ~instead of~ whatever crock of shit your kernel came with.<br />
+<b>mircea_popescu</b>	Riastradh you get something for that.<br />
+<b>mircea_popescu</b>	eg the fact that someone else snooping around can't distinguish it from a keyboard.<br />
+<b>asciilifeform</b>	well, from modem.<br />
+<b>sarnold</b>	"boy this modem sure spits out a bunch of  random gibberish"<br />
+<b>mircea_popescu</b>	from line device, anyways.</p>
+<p><b>Captain_Beezay</b> has a serious problem with the name,anything that wants to be used professionally needs to have a sfw non-profane name.<br />
+<b>Riastradh</b>	mircea_popescu: To get logs for the channel, send your resume to jobs@nsa.gov, go through a long security clearance process, &#038;c., and then you will know what to do.<br />
+<b>mircea_popescu</b>	Captain_Beezay the idea is to wholesale replace your notion of "professional", so that it is no longer socially acceptable to go around saying "sfw".<br />
+<b>Riastradh</b>	asciilifeform: Not sure what you're getting at here with `crock of shit your kernel came with'.<br />
+<b>mircea_popescu</b>	Riastradh it is a more important question than meets the eye. the fact that trilema has fully searchable logs significantly improves the quality of discussion going on and at the same time the quality of throughts thought by the participants.</p>
+<p><b>Captain_Beezay</b>	mircea_popescu: No,the author is just being an inconsiderate self centered jerk<sup><a href="#footnote_5_72757" id="identifier_5_72757" class="footnote-link footnote-identifier-link" title="
+
+A This doesn't fit with my worldview.
+B. The idea is to make your worldview untenable.
+A. No, the guy is just a jerk.
+Fancy that wonder.">vi</a></sup><br />
+<b>mircea_popescu</b>	aha.<br />
+<b>Riastradh</b>	mircea_popescu: Your profundity is duly noted.  I suggest you redirect your commentary on what constitutes professionalism to a channel more suited to the topic, say ##ideologies.<br />
+<b>mircea_popescu</b>	remind me why i care what you suggest ; explain what exactly "noted" is supposed to mean here, you don't have a public log ; it's not directly clear what you're talking about anyway, i wasn't discussing what constitutes professionalism.</p>
+<p>*	Captain_Beezay missed the line about mircea_popescu saying he was the principal. sorry for the rudeness<br />
+<b>Captain_Beezay</b>	mircea_popescu: I just don't appreciate others pushing their ideology on me using their technical achievements.<br />
+<b>mircea_popescu</b>	Captain_Beezay i dun care about rudeness either way, but i like it when people make sense. otherwise, the whole point of technology is to push ideology on others.<br />
+<b>mircea_popescu</b>	that's what it does.</p>
+<p><b>Captain_Beezay</b>	you have the right to name it anything you want<br />
+<b>Framedragger</b>	Riastradh: re. 'crock of shit', i think what was meant was that there is implicit trust in the kernel's csprng (with additional dubious operations done, including but not limited to whitening)<br />
+<b>Captain_Beezay</b>	I will oppose acceptance of any such product as well.<br />
+<b>Riastradh</b>	mircea_popescu: That's all very nice.  Now please take your ideological proselytism back to a channel where it's on-topic.<br />
+<b>Framedragger</b>	you people do realise that *you* raised the 'ideology' topic, right?<br />
+<b>sarnold</b>	Framedragger: you trust the kernel for -everything-<br />
+<b>sarnold</b>	Framedragger: in the same way that you trust the cpu for -everything-<br />
+<b>Framedragger</b>	what, no, that's a classical slippery slope falacy.<br />
+<b>Framedragger</b>	there is no need to trust the kernel to be the source of your randomness.<br />
+<b>Captain_Beezay</b>	mircea_popescu: technology is a tool,how we use it is according to our own beliefs<sup><a href="#footnote_6_72757" id="identifier_6_72757" class="footnote-link footnote-identifier-link" title="I expect he also imagines he needs `just the facts`. ">vii</a></sup></p>
+<p><b>Framedragger</b>	so x86 chips are broken and contain complex backdoor'y firmware. i should install malware, then?<br />
+<b>Captain_Beezay</b>	a tool shouldn't tell me what to think or what to believe.<br />
+<b>Riastradh</b>	Framedragger: Really not interested in arguing whether commentary around `the idea is to wholesale replace your notion of "professional"' is ideological proselytism.  It's off-topic here.<br />
+<b>asciilifeform</b>	incidentally FUCKGOATS works fine with machines having no kernel, and no os in the customary sense. for instance, fpga that fills sd card with random, for onetimepad.<br />
+<b>mircea_popescu</b>	Riastradh do you find this "hurr durr" "now please take your hurr durr somewhere else" approach works in general ?</p>
+<p><b>mircea_popescu</b>	Captain_Beezay "a tool" can't really work unless it comes with an ideology. that's what differentiates the tool from the piece of art.<br />
+<b>sarnold</b>	mircea_popescu: in general people are more polite :)<br />
+<b>mircea_popescu</b>	there is that.<br />
+<b>Riastradh</b>	My patience is running pretty thin, and it's normally quite thick.  If you folks have anything to discuss about crypto, feel free to bring it up; otherwise take it back to #trilema or whatever your usual haunt is.<br />
+<b>mircea_popescu</b>	Riastradh i'd quote log lines if you have a log. as it is : "there's serious problems with it. such as, micro is under same shielding as rf amp." and "also, as per the schematic, the AP3105' switching voltage-booster is very likely to induce artefacts into the output." re the onerng thing.<br />
+<b>sarnold</b>	asciilifeform: that's a fine point, and serial makes it way easier to use than usb too<br />
+<b>mircea_popescu</b>	sarnold the problem with soldering an usb down is also that usb is a pretty opaque cliquish thing one might find himself willing to jettison in this lifetime.</p>
+<p><b>asciilifeform</b>	incidentally, in case it were not obvious, mircea_popescu and asciilifeform are the co-authors of the linked device. and asciilifeform naively thought that a chan called 'crypto' might contain folks interested in the particulars of a (public design!) inexpensive nonwhitened rng.<br />
+<b>sarnold</b>	asciilifeform: I think the mistake was mircea_popescu getting sucked into a debate about the name by Captain_Beezay. hehe. :)<br />
+<b>sarnold</b>	asciilifeform: where a simple "that's name, name your own device whatever you want" would have sufficed. :)<br />
+<b>mircea_popescu</b>	mno, apparently $random-nobody<sup><a href="#footnote_7_72757" id="identifier_7_72757" class="footnote-link footnote-identifier-link" title="The question is still open. Mylord phf knows the guy, but that says little about how both github and pkgsrc stand empty on that name.">viii</a></sup> with user-settable levels of "patience" is very interested in hijacking a technical discussion to talk about his feelings.</p>
+<p><b>Captain_Beezay</b>	mircea_popescu: in other words,I'd much rather be talking crypto or rng right now than ideology. I'd rather buy your work and use it,but if you made it for only people that have no problem being vulgar and profane and/or won't respect the preference of others to not speak about beastiality or in a profane way in a professional setting then it's certainly not<br />
+<b>Captain_Beezay</b>	for me and I'll discourage anyone from using it based on that non-technical merit alone.<br />
+<b>asciilifeform</b>	the name, apparently, is working quite well. exposes folks who have... issues<br />
+<b>mircea_popescu</b>	Captain_Beezay but by all means, go right ahead.<br />
+<b>mircea_popescu</b>	the discussion is you saying "onerng exists" me explaining i see some problems, and now you discussing technology rather than anything else, please do.<sup><a href="#footnote_8_72757" id="identifier_8_72757" class="footnote-link footnote-identifier-link" title="You might be totally shocked by the fact that no, the fellow really had nothing else to say after all.">ix</a></sup></p>
+<p><b>Riastradh</b>	Design of RNGs for crypto is on-topic, though physical phenomona that lead to them is at the edge of the topic of this channel -- not because it's irrelevant but because it lies outside the area of expertise in mathematical cryptography one expects to find here.<sup><a href="#footnote_9_72757" id="identifier_9_72757" class="footnote-link footnote-identifier-link" title="And we shall soon get a load of this expertise. I hope you have your Ito calculus at the ready.">x</a></sup><br />
+<b>Captain_Beezay</b>	mircea_popescu: I can't even mention your rng without being profane,you have excluded me from it by calling it that. even if I liked your work I'd have to violate my beliefs in order to speak about it,very unfair. but I respect your right to name your work anything.<br />
+<b>mircea_popescu</b>	you can just call it "FG" or for that matter anything else you wish. stet<sup><a href="#footnote_10_72757" id="identifier_10_72757" class="footnote-link footnote-identifier-link" title="No, this is not a mistake. There is such a thing as flexion in Latin, even if you don't much encounter it in English.">xi</a></sup> rosa pristina etc.</p>
+<p><b>mircea_popescu</b>	but anyway, since we're here : dieharder seems to spin over samples. this is (at least to my eyes) very strange behaviour, as it introduces artefacts in the extended "sample" it considers. anyone know either the author so i can ask him why or else can explain why ?<br />
+<b>mircea_popescu</b>	(other, of course, than the obvious "pre FG entropy samples were tiny and thus it was needed and besides they were so terribad it made little difference anyway.")</p>
+<p><b>sarnold</b>	"spin over"?<br />
+<b>Captain_Beezay</b>	mircea_popescu: forget about my little opinion,what if someone willing to audit your work or help you out doesn't because of something as silly as that. but I'll step away and allow other discussions<br />
+<b>mircea_popescu</b>	sarnold yes. loop, if you prefer. processed kn bytes for a sample n bytes long.<br />
+<b>sarnold</b>	mircea_popescu: that .. seems insane.<br />
+<b>mircea_popescu</b>	it's in the code though.<br />
+<b>mircea_popescu</b>	boyfawkes do you happen to know a girlfawkesy btw ?<br />
+<b>Riastradh</b>	mircea_popescu: Why don't you email the author and find out?<br />
+<b>mircea_popescu</b>	i have emailed ; haven't found out yet.</p>
+<p><b>eightyeight</b>	sarnold: cool it's auditable, but .... ugh<br />
+<b>eightyeight</b>	"[A] digital computer per se is uniquely unsuited to the task of producing entropy, in much the same way that a blast furnace is uniquely unsuitable for refrigeration."<br />
+<b>eightyeight</b>	le sigh<sup><a href="#footnote_11_72757" id="identifier_11_72757" class="footnote-link footnote-identifier-link" title="If anyone feels inclined to delve, please do. Le sigh what ?">xii</a></sup></p>
+<p><b>CiPHPer</b>	by the way, this is a thing: https://www.gofundme.com/security-audit-for-sodiumcompat<br />
+<b>CiPHPer</b>	I think I mentioned it in ##security<br />
+<b>eightyeight</b>	his "Is there such a thing as better or worse entropy ?" paragraph is equally as painful to read<br />
+<b>eightyeight</b>	he clearly doesn't understand the differences between shannon entropy and entropy as defined by the 2nd law of thermodynamics<br />
+<b>Pilfers</b>	refer<br />
+<b>Framedragger</b>	eightyeight: if you were to read a couple more paras down, it's addressed<br />
+<b>mircea_popescu</b>	eightyeight what are the differences, for my curiosity ?<sup><a href="#footnote_12_72757" id="identifier_12_72757" class="footnote-link footnote-identifier-link" title="This mystery was eventually unraveled. Spoiler : it turns out they all drank from the same waterhole and someone dropped a little methylene blue in it so now they piss unphysiological colors. 
+The >9000 irony crit being that alf's site is actually linked in there.">xiii</a></sup><br />
+<b>eightyeight</b>	Framedragger: ah. indeed.<br />
+<b>eightyeight</b>	Framedragger: it is unfortunate that the author (you?) is not admitting that there can exist "malicious entropy"<br />
+<b>eightyeight</b>	and feeding such entropy into a system compromises it<sup><a href="#footnote_13_72757" id="identifier_13_72757" class="footnote-link footnote-identifier-link" title="This is not so unlike claiming that there exists a `malicious level`, and building your tower to be level with such a level will crumble it. I suppose this is how the whole `global warming` pseudoscience was concocted at the micro level : they threw out the `malicious data`. It's a rather powerful concept as far as folly goes. (The notion is not novel, by the way -- the classical Japanese had it, something with spirits flying.">xiv</a></sup>)</p>
+<p><b>eightyeight</b>	(which is sort of the reason the hardware and firmware is auditable, as to prove it's not malicious)<br />
+<b>Framedragger</b>	eightyeight: (it's a product of asciilifeform and mircea_popescu; writing's probably asciilifeform's)<br />
+<b>mircea_popescu</b>	no, the part where i liberally confuse shannon and thermodynamic entropy is mine.<br />
+<b>Framedragger</b>	ha :)<br />
+<b>eightyeight</b>	where can i read the source code to the firmware?<br />
+<b>mircea_popescu</b>	eightyeight first five links on the site are the v tree, the compiled binary and two schematics<br />
+<b>eightyeight</b>	the .vpatch files?<br />
+<b>mircea_popescu</b>	yes. it uses the V.<br />
+<b>mircea_popescu</b>	(V being a strong cryptographic versioning system)</p>
+<p><b>mircea_popescu</b>	!~later tell ciphper hmm, key apparently belongs to one michael alexander arthur cordingley. other than being born in athens ohio nov 12 1983, who's he ?<br />
+<b>mircea_popescu</b>	oh, no bots either is it. sigh.<sup><a href="#footnote_14_72757" id="identifier_14_72757" class="footnote-link footnote-identifier-link" title="This sigh is actually quite substantial. How is one supposed to get any work done without the bots ? And without the knowledge of the bots being there to bridge the various gaps of circumstance, how is one to motivate himself to even do the work ?
+TMSR. No small matter, because anything else makes you dumber.">xv</a></sup><br />
+<b>mircea_popescu</b>	anyway. i know for a fact the key didn't exist six months ago because phuctor <A href=http://phuctor.nosuchlabs.com/gpgkey/B458F9A2EF876E80145EC516BAC931622DD63896CCB15A04E3CDE1BD085C3A22>doesn't know it</a>. what exactly is signing stuff like that with a new key supposed to accomplish.</p>
+<p><b>andytoshi</b>	how parallelizable is shor's algo? if i want to break 100 discrete logs is this much faster to do in batch than to do them separately?<br />
+<b>mircea_popescu</b>	andytoshi the whole point of it is being parallelizable yes ?<br />
+<b>andytoshi</b>	mircea_popescu: right, "parallelizable" is not what i mean, what i mean is are there batch speedups<br />
+<b>andytoshi</b>	like, for pollard-rho, a clasical algorithm, you can break 100 discrete logs in much less than 100 times as long as it takes 1<br />
+<b>asciilifeform</b>	andytoshi: idea for shor's was to 'parallelize' by running on parallel universes.<br />
+<b>asciilifeform</b>	(supposing anyone knew how.)<br />
+<b>andytoshi</b>	asciilifeform: that's really not how shor's algorithm, or any quantum computation, works<br />
+<b>mircea_popescu</b>	the item not existing, this is entirely speculative, but in the theoretical theory of it you'd take the same local time to do 1 or n.<br />
+<b>asciilifeform</b>	angels/pinhead.</p>
+<p><b>Riastradh</b>	andytoshi: I don't think Shor's algorithm factors nicely into an expensive generic precomputation followed by a cheap per-target attack.  But since it would run so fast, I also don't think that's likely to matter.<br />
+<b>Riastradh</b>	andytoshi: Why do you ask?<br />
+<b>andytoshi</b>	Riastradh: because if you can break a lot of discrete logs (like 2^30) then wagner's generalized birthday attack becomes applicable in situations that it otherwise wouldn't be<br />
+<b>andytoshi</b>	in particular if i give you an unlimited stream of uniformly random EC points, assuming DL is hard you won't be able to find a subset of them that sums to zero. but if you can break the DL of each point, then you can do this efficiently using wagner's algorithm<br />
+<b>sarnold</b>	but isn't shor's algorithm itself closer to 2^16? or less?<br />
+<b>andytoshi</b>	o.O is it really that low? for a 256-bit group?<br />
+<b>Riastradh</b>	andytoshi: The cost of Shor's algorithm is roughly quadratic in the number of bits in the group in question.<br />
+<b>mircea_popescu</b>	there's two parts. the fourier transform is supposed to be fast ; the exponentiation is supposedly slow.<br />
+<b>andytoshi</b>	and the exponentiation is classical right?<br />
+<b>mircea_popescu</b>	doesn't have to be<br />
+<b>mircea_popescu</b>	but afaik that's the state of the art atm.<br />
+<b>andytoshi</b>	i guess there's an implicit assumption that classical computers will have way higher clock speends that quantum computers<sup><a href="#footnote_15_72757" id="identifier_15_72757" class="footnote-link footnote-identifier-link" title="I hope you're taking down all this mathematical expertise. Yes ?">xvi</a></sup><br />
+<b>mircea_popescu</b>	anyway, it bears pointing out that allegedly the largest factored number had about five digits ; more documented examples involve the factoring of number 15.<br />
+<b>andytoshi</b>	heh, yeah, i'm not worried today, but i'm trying to design systems now with "how badly will a QC wreck this" mindset<br />
+<b>mircea_popescu</b>	heck, if you could get 1k "qbits" together you could prolly write the exponentiation as a fourrier transform.</p>
+<p><b>andytoshi</b>	usually "QC will break everyone's privacy" is ok, but "QC will allow silent printing of bitcoins" is not<br />
+<b>mircea_popescu</b>	qc does not allow silent printing of bitcoins as it is.<sup><a href="#footnote_16_72757" id="identifier_16_72757" class="footnote-link footnote-identifier-link" title="You knew it was coming to this.">xvii</a></sup><br />
+<b>andytoshi</b>	and when i'm actually concerned about quantum computers, i won't even be ok with privacy loss :)<br />
+<b>andytoshi</b>	understood. but with confidential transactions it would<br />
+<b>andytoshi</b>	we understand how to do unconditionally sound CT now ... i'm thinking about unconditionally sound confidential assets, which is a bit harder<br />
+<b>mircea_popescu</b>	this is altogether dubious. as far as bitcoin works today, in order to spend you must reference an extant transaction. no qc will help you make people's copies of the blockchain contain an inexistent transaction.<br />
+<b>mircea_popescu</b>	spending other's bitcoins is a differenty problem from printing bitcoins on your own, and "silently" is yet another layer on that.<br />
+<b>andytoshi</b>	yes, fine, i know. i'm not talking about the actual bitcoin system<br />
+<b>bascule</b>	andytoshi: there are remarkably few problems where the ability to break 1 vs n discrete logs is helpful. I think I'm working on one of them... it's not exactly an area where that's something you want to formulate a defense around<br />
+<b>mircea_popescu</b>	ah ok.<br />
+<b>andytoshi</b>	bascule: yeah, i think this is the first time i've ever encountered this being a useful distinction<br />
+<b>andytoshi</b>	well, actually bitcoin (the real bitcoin :P) is kinda an example because there are a lot of public keys floating around that have money associated to them, and breaking any one of them lets you steal<br />
+<b>andytoshi</b>	(though not silently, and not in an inflating way)<br />
+<b>mircea_popescu</b>	the bitcoin key scheme is a little more complex though. not just ec.<br />
+<b>andytoshi</b>	yeah, agreed. most keys are not exposed like this because they aren't EC group keys<br />
+<b>andytoshi</b>	it's only those that have been used before, and the underlying EC key exposed<br />
+<b>bascule</b>	andytoshi: that's a multitarget attack... but that's a boring example of the property I'm talking about<br />
+<b>mircea_popescu</b>	in principle the address is a ripemd of a sha of the public key. but yes, you can also find the public key by finding previous txn spent from that address.</p>
+<p><b>bascule</b>	sure each key you break provides incremental value<br />
+<b>bascule</b>	that's different from "you have to break N discrete logs to break X"<br />
+<b>andytoshi</b>	bascule: ah, true! i guess then my current problem is the first one i've encountered where "you have to break N discrete logs to break X" actually applies..<br />
+<b>bascule</b>	because in the case of "you have to break N discrete logs" the question becomes "how big should N be?"<br />
+<b>andytoshi</b>	well, in my case N is "big enough that Wagner's algorithm is tractable given all the discrete logs"<br />
+<b>mircea_popescu</b>	this entire discussion vaguely reminds me of a well known naggum piecew<br />
+<b>mircea_popescu</b>	http://www.xach.com/naggum/articles/3233532779857997@naggum.net.txt to be specific.<br />
+<b>bascule</b>	mircea_popescu: haha the YAGNI argument<br />
+<b>bascule</b>	funny thing about YAGNI<br />
+<b>bascule</b>	the acronym swings both ways<br />
+<b>mircea_popescu</b>	not really how it reads to me.<br />
+<b>mircea_popescu</b>	long before it becomes a discussion as to whether yagni or yangni, one has to be seated at the table, and that requires passing the more pressing fogotp<sup><a href="#footnote_17_72757" id="identifier_17_72757" class="footnote-link footnote-identifier-link" title="Fuck Or Get Off The Pig.">xviii</a></sup> <span style="background-color:#d3d3d3" id="select">caudine forks.<br />
+<b>mircea_popescu</b>	dennis hopper does a great statement of that, if you've seen <a href="http://trilema.com/2013/search-and-destroy/#selection-65.1-67.23">seek and destroy</a>.<br />
+<b>bascule</b>	mircea_popescu: I can't tell what that person is arguing<br />
+<b>mircea_popescu</b>	who ?<br />
+<b>bascule</b>	but it sounds like "you aren't going to need it"<br />
+<b>bascule</b>	o_O<br />
+<b>bascule</b>	I'll give you three guesses, and the first two don't count<br />
+<b>mircea_popescu</b>	the matter isn't whether you are or aren't going to need it. before we get to that, we're stuck with "are you even going to be there".<br />
+<b>mircea_popescu</b>	that's what he's arguing : that you aren't even going to be there, to need anything or not need it.<br />
+<b>bascule</b>	in 20/20 hindsight, this looks so very very quaint<br />
+<b>bascule</b>	"The only applications I know of that require multiple<br />
+<b>bascule</b>	  gigabytes of memory (and then tens of gigabytes) are those that require<br />
+<b>bascule</b>	  multiple terabytes of disk space"<br />
+<b>bascule</b>	(let me introduce you to zkSNARKs)<sup><a href="#footnote_18_72757" id="identifier_18_72757" class="footnote-link footnote-identifier-link" title="You know, `whole idea behind zcash / here's an Ethereum blabla`. He has no idea who he's talking to, obviously, and this is okay. Why is it okay ? Because people tend to be more polite!
+I'm sure they are, and I shit in their stupid mother's gaping cunts.">xix</a></sup><br />
+<b>mircea_popescu</b>	you are aware that you're producing a circular argument, yes ?<br />
+<b>bascule</b>	the gigantic paragraph of shit in the middle of the email is riddled with statements like that<br />
+<b>bascule</b>	are you fucking kidding me?<br />
+<b>bascule</b>	this email may be "I can't imagine a future where more than 1 out of 1000 humans will actually have a need for electrical power"<br />
+<b>mircea_popescu</b>	simply relabelling the imaginary work to be done from "reversing 20k wide matrix" to "blablaznarks" does not improve the standing of the child trying to fiddle with father's tools.<br />
+<b>mircea_popescu</b>	so no, today as then, the only items actually needing gbs of memory also need tbs of disk space.<br />
+<b>bascule</b>	the only conclusion I can draw from this email is this person is a moron<br />
+<b>mircea_popescu</b>	yes, but</span> the conclusions you draw tend to speak about you rather than about the world.<br />
+<b>mircea_popescu</b>	let me know when you actually run an application that uses gbs of memory, i might have a better impression of them things then.<sup><a href="#footnote_19_72757" id="identifier_19_72757" class="footnote-link footnote-identifier-link" title="Because obviously.">xx</a></sup></p>
+<p><b>sarnold</b>	bascule: eh I thought they were fun stories of how hard it used to be collect a byte of data<br />
+<b>sarnold</b>	bascule: nowadays we have more bytes of data than we can shake a stick at<br />
+<b>mircea_popescu</b>	and we have to shake a lot of sticks at them to get actual data out of the deluge, too ;/</p>
+<p>Such are my days and times. How about yours ?</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_72757" class="footnote">Turns out I had been there cca July 2014, but very little has changed in the intervening three years' experience : </p>
+<blockquote><p><b>mircea_popescu</b>	any advice on how to deal with people proposing specific measures to "harden" various crypto against "quantum computing" ?<br />
+<b>mcpherrin</b>	mircea_popescu: there's plenty of papers on post-quantum cryptography.<br />
+<b>mircea_popescu</b>	i know ;/</p></blockquote>
+<p>Hopefully they find a new pin-up dollie soon enough, this one's getting full. [<a href="#identifier_0_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_72757" class="footnote">To save myself the effort later, </p>
+<blockquote><p>cat crypto.log | grep -Pv "\*\t" | cut -f4-  -d " " | sed 's%>%&lt;/b>%' | sed 's/&lt;/&lt;b>/' > crtpyo.txt</p></blockquote>
+<p>-P turns on perl-style notation which then requires the \ before the *. [<a href="#identifier_1_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_72757" class="footnote">This is not actually true. The site he links specifically says </p>
+<blockquote><p>Entropy is collected from an avalanche diode circuit and optionally an RF circuit, whitened and presented over a USB/Serial connection.</p></blockquote>
+<p> [<a href="#identifier_2_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_72757" class="footnote">Old name for significant owners with some involvement in conducting the day-to-day affairs of a company. This is not the same as officers (such as say the CEO) -- with regards to the principals, the officers fullfill the agent portion of the principal-agent relationship. [<a href="#identifier_3_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_72757" class="footnote">It's very dubious what this driver would do, but then again I'm no NetBSD expert. In any case, the implication that I stand to lose something <A href=http://trilema.com/forum-logs-for-16-jan-2017#2229860>in this race</a> is lulzy in itself. [<a href="#identifier_4_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_72757" class="footnote"><br />
+<blockquote>
+A This doesn't fit with my worldview.<br />
+B. The idea is to make your worldview untenable.<br />
+A. No, the guy is just a jerk.</p></blockquote>
+<p>Fancy that wonder. [<a href="#identifier_5_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_72757" class="footnote">I expect he also imagines he needs "<a href=http://trilema.com/2016/please-stop-using-dns-already-and-other-considerations/#selection-711.223-711.610>just the facts</a>".  [<a href="#identifier_6_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_72757" class="footnote">The question is still open. Mylord phf <a href=http://trilema.com/forum-logs-for-27-apr-2017#2274348>knows the guy</a>, but that says little about how both github and pkgsrc stand empty on that name. [<a href="#identifier_7_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_72757" class="footnote">You might be totally shocked by the fact that no, the fellow really had nothing else to say after all. [<a href="#identifier_8_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_72757" class="footnote">And we shall soon get a load of this expertise. I hope you have your <A href=http://btcbase.org/log-search?q=ito+calculus>Ito calculus</a> at the ready. [<a href="#identifier_9_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_72757" class="footnote">No, this is not a mistake. There is such a thing as flexion in Latin, even if you don't much encounter it in English. [<a href="#identifier_10_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_72757" class="footnote">If anyone feels inclined to delve, please do. Le sigh what ? [<a href="#identifier_11_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_72757" class="footnote">This mystery was eventually <a href=http://trilema.com/forum-logs-for-27-apr-2017#2274403>unraveled</a>. Spoiler : it turns out they all drank from the same waterhole and someone dropped a little methylene blue in it so now they piss unphysiological colors. </p>
+<p>The >9000 irony crit being that alf's site is actually linked in there. [<a href="#identifier_12_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_72757" class="footnote">This is not so unlike claiming that there exists a "malicious level", and building your tower to be level with such a level will crumble it. I suppose this is how the whole "global warming" pseudoscience was concocted at the micro level : they threw out the "malicious data". It's a rather powerful concept as far as folly goes. (The notion is not novel, by the way -- the classical Japanese had it, something with spirits flying. [<a href="#identifier_13_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_72757" class="footnote">This sigh is actually quite substantial. How is one supposed to get any work done without the bots ? And without <em>the knowledge</em> of the bots being there to bridge the various gaps of circumstance, how is one to motivate himself to even do the work ?</p>
+<p>TMSR. No small matter, because anything else makes you dumber. [<a href="#identifier_14_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_72757" class="footnote">I hope you're taking down all this mathematical expertise. Yes ? [<a href="#identifier_15_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_72757" class="footnote">You knew it was coming to this. [<a href="#identifier_16_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_72757" class="footnote">Fuck Or Get Off The Pig. [<a href="#identifier_17_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_72757" class="footnote">You know, "whole idea behind zcash / here's an Ethereum blabla". He has no idea <A href=http://trilema.com/2016/to-the-dao-and-the-ethereum-community-fuck-you/>who he's talking to</a>, obviously, and this is okay. Why is it okay ? Because people tend to be more polite!</p>
+<p>I'm sure they are, and I shit in their stupid mother's gaping cunts. [<a href="#identifier_18_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_19_72757" class="footnote">Because <a href=http://trilema.com/forum-logs-for-17-dec-2015#1958202>obviously</a>. [<a href="#identifier_19_72757" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2017/mathilde-the-ant-or-mathilde-the-data-processing-system-at-your-option-with-extras-either-way/">Mathilde the ant or Mathilde the Data Processing System, at your option. With extras either way.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2017/friday-was-a-good-day/">Friday was a good day.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2017/how-i-found-some-area-of-expertise-in-mathematical-cryptography-one-expects-to-find-here-and-there-plus-divers-spots-missed-while-shaving/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2017/how-i-found-some-area-of-expertise-in-mathematical-cryptography-one-expects-to-find-here-and-there-plus-divers-spots-missed-while-shaving/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>5 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-121916" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121916" title="">Monday, 1 May 2017</a>
+							</div>
+						<p><a href="http://trilema.com/2012/the-circlejerk/" >The Circlejerk</a>.</p>
+						</li>
+
+										<li id="comment-121917" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121917" title="">Monday, 1 May 2017</a>
+							</div>
+						<p>Ca bine zici.</p>
+						</li>
+
+										<li id="comment-121975" class="commentbody"><div class="commenthead"><img alt='Satoshi Nakawaka`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Satoshi Nakawaka</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121975" title="">Sunday, 7 May 2017</a>
+							</div>
+						<p>Wiped out in timeout, damn, if only I had saved the copy, it would be here. I hope you saved one when it threw it away. Not that it matters anyhoo.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-143274">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/largo-al-factotum-della-citta-della-citta-della?b=yes%20%3F%20It%20mea&amp;e=four#select' class='url'>Largo al factotum della citta, della citta, della... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143274" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] yes ? It meant about the same before, back when a factory was the place where the factors (ie, agents) gathered, to pile up and crudely process the furs they bought from the native hunters, some four [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143283">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/no-such-labs-snsa-april-2017-statement?b=you%20perhaps%20&amp;e=e%20of#select' class='url'>No Such lAbs (S.NSA), April 2017 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143283" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] you perhaps are aware, we had some fun with the "area of expertise in mathematical cryptography one expects to find" this month. Nevertheless,  NSA will continue its work, designing and manufacturing the future of [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="72757" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833931-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-72757")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-72757");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-72757");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

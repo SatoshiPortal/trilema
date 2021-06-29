@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Unicode is fucking stupid - the definitive article. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Din bube, mucegaiuri si noroi<br />Mi-am facut bici, si m-am cicat pe voi.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-70190"><div class="post" id="post-70190">                    <h1><a href="http://trilema.com/2016/unicode-is-fucking-stupid-the-definitive-article/" rel="bookmark" title="Permanent Link to Unicode is fucking stupid - the definitive article.">Unicode is fucking stupid - the definitive article.</a></h1>                        <div class="date">                                     Tuesday, 29 November, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p> This piece isn't going to focus on the <strong>technical</strong> reasons Unicode is stupid, because if it's not directly obvious to you that a data structure may not include an "encoding" ie its own interpretation rules, there's very little that can be said to help you<sup><a href="#footnote_0_70190" id="identifier_0_70190" class="footnote-link footnote-identifier-link" title="Chiefly because whatever may be said won't come in the `encoding` you use because you're broken in the head, and so you'll just ignore it as `unreadable`.">i</a></sup>. You must be beaten, often and <a href="http://trilema.com/2015/the-anal-child/">hard</a>. </p>
+<p>Instead, we'll discuss the <strong>social</strong> and <strong>cultural</strong> reasons that allowed Unicode to exist, and the motivations and projects of the <em>hostis humani generis</em><sup><a href="#footnote_1_70190" id="identifier_1_70190" class="footnote-link footnote-identifier-link" title="To be perfectly clear - support for Unicode is not merely the wrong choice, it is actively evil. It is not unethical, it is anti-ethical. It is not immoral, it is anti-moral. It is not fucking one child that one time because you really liked her and she really wanted it - it is fucking children. Not in general. All of them. Supporting Unicode is fucking all children, in fact and in principle, forever. Including two year olds. And foetuses via deep aminocentesis. Meditate on that for a second.">ii</a></sup> that push it. </p>
+<p>In general, computers are inadherent to language, while humans are inadherent to anything else<sup><a href="#footnote_2_70190" id="identifier_2_70190" class="footnote-link footnote-identifier-link" title="This is no small matter. I didn't just come up with a throwaway dichotomy because unlike you, I'm not the intellectual product of cracked.com
+Stop to consider that human experience is always mediated, review the sad failure of the AI lab, read your 1800s Austrians and so on and so forth, there's millions of pages detailing the situation.">iii</a></sup>. To bridge this fundamental gap, it was observed that sufficiently lengthy mathematical structures can have their constituent parts labeled with words plucked out of natural language, and while it makes about as much sense to call the resultant concoction "a language" as it makes to call it "a bridge" or "an anthill", nevertheless it is the case that people don't, subjectively, so much mind all the ways<sup><a href="#footnote_3_70190" id="identifier_3_70190" class="footnote-link footnote-identifier-link" title="Which ways are those ? All of them. There is exactly no way whatosever in which a computer language is actually a language. They stay and remain forever Zahlrings, or if you prefer the set theory approach... you would, wouldn't you ? Go read Wittgenstein already.">iv</a></sup> in which a computer language is not in fact a language. </p>
+<p>This human tolerance for failure (that'd have raised so many exceptions, errors and failed assertions as to fill everyone's hard drives if they spoke computer) is readily misunderstood by iliterate people, from <a href="http://trilema.com/2016/to-the-dao-and-the-ethereum-community-fuck-you/#comment-117601">MIT</a> and the farms alike, who to this day think computers actually use language, ever. These same mentally inadequate excrements of the human race also make up the bureaucracy - but I repeat myself. To the bureaucratic mind, there exists little better than Unicode, of course, but we'll get to this in a minute.</p>
+<p>Entirely separate from the above discussion of what language computers use, there's also the discussion of computer graphics. From the perspective of the iliterate user, computers come in two kinds - the ones with a screen and the ones without<sup><a href="#footnote_4_70190" id="identifier_4_70190" class="footnote-link footnote-identifier-link" title="Ask your girlfriend or your mother what she thinks `server` means, and then find out if she perceives the need for more categories in the field than `computers with monitor` and `computers without monitor`.
+Oh, I'm sorry, I shouldn't assume you spawned out of a dumbass and fuck a dumbass (when she feels like being fucked) ? Why not ? It's the case, isn't it ?">v</a></sup>. The ones with a screen can display whatever you want them to, which (if you recall your early years) is universally a major selling point of computing altogether. The things they display may be numerous and varied, all which variation strictly reduces to pornography.<sup><a href="#footnote_5_70190" id="identifier_5_70190" class="footnote-link footnote-identifier-link" title="To understand each other on the topic of pornography : in the case a) where I fuck your girlfriend and in the case b) where she tells you all about how it was for me to fuck her we're not `both having sex with your girlfriend`. I'm having sex with your girlfriend ; you're watching your girlfriend have sex. With me. These two aren't the same, and in fact they aren't even related.">vi</a></sup> Now the exact types of pornography the luser prefers to make its computer display vary - some are into "babes" with their panties on while others prefer 2girls1cup. Still others prefer to torture the poor machine into spitting out "War and Peace", or the garish colors and screeching sounds of <a href="http://trilema.com/forum-logs-for-28-nov-2016#2200287">Heroes II</a>. But the machine doesn't care just as it doesn't understand. Like a mongoloid puppy with nothing left but an ovewhelming desire to please, it will. It will do anything - display <a href="http://btcbase.org/log-search?q=bestseller">any idiocy</a>, in any manner at any time. <em>Epistola non erubiscit</em> is nothing, you should see computers! </p>
+<p>But that's okay, and in all honesty we absolutely prefer it that way - which is how the "Internet Neutrality" got to be such an obviously correct cause to support for such large a section of derps bereft of the most minute understanding of the matters involved. To them, Net Neutrality was evidently right good and proper, and opponents necessarily evil<sup><a href="#footnote_6_70190" id="identifier_6_70190" class="footnote-link footnote-identifier-link" title="Which still translates in their mind to `money grubbing` via `Jews`, because hey, they're all antifa and shit.">vii</a></sup> <em>because</em> computers don't understand language and we like it that way.</p>
+<p>It was at some point observed by purveyors of truly exotic pornography, as found in the Far East, Russia and other such allegedly-to-exist places that computers <em>don't</em> actually display any porn. They shy away from truly scandalous corners and edges of the explicit world, they're inadherent to truly filthy stuff like தᛃ ܐܪܡܝܐ강 etc. See<sup><a href="#footnote_7_70190" id="identifier_7_70190" class="footnote-link footnote-identifier-link" title="Which of those don't you see properly ? The first's from Tamil, the 2nd's the rune for `good harvest`, then there's some Aramaic bs and then some Hangul.">viii</a></sup> ? </p>
+<p>This then was offensive, and we agree - it is. If computers are going to be masturbation toys then god damn it let them display women of all skin shades as a camera may be ever pointed at, not print out purple and green blobs where truly gut-wrenchingly ugly tarts should be. </p>
+<p>The respective barbarians &#038; assorted alleged-people however, being just as iliterate as the MIT students &#038; unemployed farmhands, misrepresented their displeasure with "mah computobox dun show my wife, what is she, a vamp[ire]?!?!?" as "hello sir this computer not speak language right sir." This is wrong, obviously, but also the best their moderate intellect could support, so we'll have to do with it.</p>
+<p>The problems began when the "computer scientist community", which is to say its least valuable<sup><a href="#footnote_8_70190" id="identifier_8_70190" class="footnote-link footnote-identifier-link" title="Least valuable in the sense that -1 is the least positive number in the set {1, 3, 5}.">ix</a></sup> and therefore most vocal component, the MIT students &#038; unemployed farmhands, being just as iliterate as random barbarians &#038; assorted alleged-people <em>carried on the misunderstanding</em>, instead of re-encoding it as would have been sensible.</p>
+<p>Out of nowhere an entirely imaginary problem of "computers don't write languages correctly" sprang into "being", which is funny considering the absolute and fundamental bars to its actual existence. This problem, as with all imaginary problems springing around decaying ivory towers<sup><a href="#footnote_9_70190" id="identifier_9_70190" class="footnote-link footnote-identifier-link" title="See the `global warming` nonsense as a fine equivalent.">x</a></sup>, was immediately appropriated by the bureaucrats, and a "foundation" dedicated to the nonsensical task of "creating an infinite alphabet"<sup><a href="#footnote_10_70190" id="identifier_10_70190" class="footnote-link footnote-identifier-link" title="The very point of the alphabet is that in being finite, it forces complexity to manifest where it belongs*, rather than where it inconveniences.
+------
+* To quote F.O.C.A., `la ma-ta-n uter, ca le place unde pute`. ">xi</a></sup> was established. You could be a member too, if you pay your dues!</p>
+<p>The nonsense then spread, with various groups of mouthbreathers introducing "support" for this infinite-alphabet, the exact opposite of the notion of alphabet and in this fundamentally obscurantist and essentially anti-cultural. The mouthbreather's goal is quite evident : imagine a world in which you're given a codebase to maintain, but can't do any work not only because of the current reasons (dependency hell, poorly thought out reference schemes, data models, calling paradigms etc) but also for the entirely novel reason that... you first have to have it translated. Because half the functions are in Nazgul and the guy who wrote the networking interface was from Washitistan, so that whole module is written in poop. I don't mean the <em>comments</em> include a lot of scatological references, nor do I mean the <em>function names</em> look like someone put them through a blender. I mean literally, the guy's from Washitistan, they write things with their own excrement there, and the Unicode Foundation introduced actual excrement in the standard so now whenever someone asks for the networking code in your project they are delivered physical faeces on cardboard. About fifty eight acres of it. Where would you like this put, sir ?</p>
+<p>So - not only do all the bureaucrats get to hire all their stupid girlfriends, wives and daughters to do translation work between insane, pointlessly complicated versions of what should have been the same code<sup><a href="#footnote_11_70190" id="identifier_11_70190" class="footnote-link footnote-identifier-link" title="Imagine that delightful situation where you don't know whether the bug is a bug or a translation error. 
+The Romanian word for this sort of utter, irredeemable mess is `varza`, ie, cabbage. In a characteristic display of Romanian language wisdom (because yes the Romanians themselves are dumb as doornails - but their language inexplicably is not), the superlative of cabbage is called... `varza de Bruxelles`. That's what you got here in the making : a fine Brussels mess.">xii</a></sup>, but <em>also</em> you get too afraid to even ask to review anything. </p>
+<p>That's the Unicode world, a world where impotence was legislated a litte further, and as always under the guise of you know, "being nice to people". Apparently I'm supposed to be so disinclined to tell a Washitistani that he literally has shit for a language and should a) wash and b) learn a proper one, in that order, that I will tolerate the situation where a demand for code results in a latrine flood in my office.</p>
+<p>Forget all this crap. No computer ever made spoke any language. The matter of how you display your pornography is entirely separate from the matter of programming computers. Support for shitlangs is not worth anyone's time.</p>
+<p>Forget about Unicode. It's a waste of <a href="http://trilema.com/forum-logs-for-28-nov-2016#2200421">your best years</a>, years that you will never <em>ever</em> get back. It's a stupid waste, a pretend-problem, created exactly by the sort of people who <em>can't</em> tackle actual problems, and with the express purpose of giving their pretense that actual problems can't even be approached as much solid ground to sit on as at all possible.</p>
+<p>Forget about Unicode ; but shoot anyone who pushes it in the fucking head. Which, to be perfectly accurate, is most likely to be found so far up their ass they can't even hear you coming.<sup><a href="#footnote_12_70190" id="identifier_12_70190" class="footnote-link footnote-identifier-link" title="Hillary 2016!">xiii</a></sup></p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_70190" class="footnote">Chiefly because whatever may be said won't come in the "<a href="http://trilema.com/2013/racists-and-socialists/">encoding</a>" you use <a href="http://trilema.com/2016/kids-born-after-the-world-went-to-shit-arent-progressive-theyre-just-lazy/">because you're broken in the head</a>, and so you'll just ignore it as "unreadable". [<a href="#identifier_0_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_70190" class="footnote">To be perfectly clear - support for Unicode is not merely the wrong choice, it is actively evil. It is not unethical, it is anti-ethical. It is not immoral, it is anti-moral. It is not fucking one child that one time because you really liked her and she really wanted it - it is fucking children. Not in general. All of them. Supporting Unicode is fucking all children, in fact <em>and</em> in principle, forever. Including two year olds. And foetuses via deep aminocentesis. Meditate on that for a second. [<a href="#identifier_1_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_70190" class="footnote">This is no small matter. I didn't just come up with a throwaway dichotomy because unlike you, I'm not the intellectual product of cracked.com</p>
+<p>Stop to consider that human experience is <em>always mediated</em>, review the sad failure of the AI lab, read your 1800s Austrians and so on and so forth, there's millions of pages detailing the situation. [<a href="#identifier_2_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_70190" class="footnote">Which ways are those ? <em>All of them</em>. There is exactly no way whatosever in which a computer language is actually a language. They stay and remain forever Zahlrings, or if you prefer the set theory approach... you would, wouldn't you ? Go read Wittgenstein already. [<a href="#identifier_3_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_70190" class="footnote">Ask your girlfriend or your mother what she thinks "server" means, and then find out if she perceives the need for more categories in the field than "computers with monitor" and "computers without monitor".</p>
+<p>Oh, I'm sorry, I shouldn't assume you spawned out of a dumbass and fuck a dumbass (when she feels like being fucked) ? Why not ? It's the case, isn't it ? [<a href="#identifier_4_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_70190" class="footnote">To understand each other on <span style="background-color:#d3d3d3" id="select">the topic of pornography : in the case a) where I fuck your</span> girlfriend and in the case b) where she <a href="http://trilema.com/2014/how-i-was-wrong-cuckolding-or-a-story-about-sigmas/#selection-663.0-663.396">tells you all about how it was</a> for me to fuck her we're not "both having sex with your girlfriend". I'm having sex with your girlfriend ; you're watching your girlfriend have sex. With me. These two aren't the same, and in fact they aren't even related. [<a href="#identifier_5_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_70190" class="footnote">Which still translates in their mind to "money grubbing" via "Jews", because hey, they're all antifa and shit. [<a href="#identifier_6_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_70190" class="footnote">Which of those don't you see properly ? The first's from Tamil, the 2nd's the rune for "good harvest", then there's some Aramaic bs and then some Hangul. [<a href="#identifier_7_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_70190" class="footnote">Least valuable in the sense that -1 is the least positive number in the set {1, 3, 5}. [<a href="#identifier_8_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_70190" class="footnote">See the "global warming" nonsense as a fine equivalent. [<a href="#identifier_9_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_70190" class="footnote">The very point of <a href="http://btcbase.org/log-search?q=alphabet+from%3Amircea">the alphabet</a> is that in being finite, it forces complexity to manifest where it belongs*, rather than where it inconveniences.<br />
+------<br />
+* To quote F.O.C.A., "<em>la ma-ta-n uter, ca le place unde pute</em>".  [<a href="#identifier_10_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_70190" class="footnote">Imagine that delightful situation where you don't know whether the bug is a bug or a translation error. </p>
+<p>The Romanian word for this sort of utter, irredeemable mess is "<em>varza</em>", ie, cabbage. In a characteristic display of Romanian language wisdom (because yes the Romanians themselves are dumb as doornails - but their language inexplicably is not), the superlative of cabbage is called... "<em>varza de Bruxelles</em>". That's what you got here in the making : a fine Brussels mess. [<a href="#identifier_11_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_70190" class="footnote">Hillary 2016! [<a href="#identifier_12_70190" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/minigame-is-probably-never-going-to-support-python-3/">Minigame is probably never going to support Python 3.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/argentina-smaller-than-eulora/">Argentina, smaller than Eulora</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/unicode-is-fucking-stupid-the-definitive-article/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/unicode-is-fucking-stupid-the-definitive-article/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>13 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-119958" class="commentbody"><div class="commenthead"><img alt='1234`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">1234</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119958" title="">Wednesday, 30 November 2016</a>
+							</div>
+						<p>There's  in the  of this webpage.</p>
+						</li>
+
+										<li id="comment-119960" class="commentbody"><div class="commenthead"><img alt='Cristian`s avatar' src='http://ciupicri.github.io/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink"><a href='http://ciupicri.github.io/' class='url'>Cristian</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-119960" title="">Thursday, 1 December 2016</a>
+							</div>
+						<p>From the source code of this page:</p>
+<p><em>meta http-equiv="Content-Type" content="text/html; <strong>charset=UTF-8</strong>"</em></p>
+<p>:-)))))</p>
+						</li>
+
+										<li id="comment-120104" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-120104" title="">Thursday, 15 December 2016</a>
+							</div>
+						<p>I might just be up for a good beating, so</p>
+<p>&gt; a data structure may not include an "encoding" ie its own interpretation rules</p>
+<p>But what about ASCII? Or S-exprs for that matter. I mean yes, everybody can serialize their data structures however they want, but the whole point of "encoding" (or rather "format") is that it allows two agents A and B to agree on a common interpretation (or rather machine-understandable representation). On the contrary, I would say that Unicode is stupid from a technical point of view precisely because it's anything but "a common interpretation".</p>
+<p>So I'm probably misreading. How?</p>
+						</li>
+
+										<li id="comment-120105" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-120105" title="">Thursday, 15 December 2016</a>
+							</div>
+						<p>ASCII doesn't include its encoding in the datastructure ; nor do s-expr. The fact that ~you know~ this is ASCII, or Romanian, or whatever the hell is not the same as the text starting with "Si acum urmeaza un scurt text in limba Romana!".</p>
+						</li>
+
+										<li id="comment-120106" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-120106" title="">Friday, 16 December 2016</a>
+							</div>
+						<p>Oh! My bad, I was reading "data structure" as "data structure specification" instead of thinking about the actual object.</p>
+						</li>
+
+										<li id="comment-132528" class="commentbody"><div class="commenthead"><img alt='Gypsy Kings`s avatar' src='http://adevarul.ro/locale/botosani/cum-sfarsit-epurat-propriii-tovarasi-comunist-legendar-simtea-superior-celorlalti-sfarsit-jocurile-putere-1_5b8d2bdcdf52022f7515bc58/index.html/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink"><a href='https://adevarul.ro/locale/botosani/cum-sfarsit-epurat-propriii-tovarasi-comunist-legendar-simtea-superior-celorlalti-sfarsit-jocurile-putere-1_5b8d2bdcdf52022f7515bc58/index.html' class='url'>Gypsy Kings</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132528" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p><a href="https://unicodepowersymbol.com/" >Unicode Power Symbol</a></p>
+<blockquote cite="https://unicodepowersymbol.com/"><p>
+Update! The power symbols are now part of Unicode 9.0!</p>
+<p>Unicode contains many useful and interesting characters – ☺, ☃, ❄, ☆, ♫, ⌨, ☏, ☂, ⏏ etc.</p>
+<p>We felt that it was missing a crucial character which has practical value in everyday life – The IEC Power Symbol.</p>
+<p>bla bla</p>
+<p>This table shows the HTML Entity Number for each symbol.</p>
+<p>Character       Escape Code     Symbol<br />
+Power           &#x23FB;        ⏻<br />
+Toggle Power    &#x23FC;        ⏼<br />
+Power On        &#x23FD;        ⏽<br />
+Power Off       &#x2B58;        ⭘<br />
+Sleep Mode      &#x23FE;        ⏾</p>
+</blockquote>
+<p>Am ânvins, am ânvins!</p>
+						</li>
+
+										<li id="comment-132529" class="commentbody"><div class="commenthead"><img alt='Gypsy Kings`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Gypsy Kings</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132529" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p>muie html</p>
+<p>Character       Escape Code     Symbol<br />
+Power           &#x23FB;        ⏻<br />
+Toggle Power    &#x23FC;        ⏼<br />
+Power On        &#x23FD;        ⏽<br />
+Power Off       &#x2B58;        ⭘<br />
+Sleep Mode      &#x23FE;        ⏾</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-124373">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://thetarpit.org/posts/y03/05b-https-war-declaration.html' class='url'>The Tar Pit - A declaration of war on the HTTP of Shit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-124373" title="">Friday, 26 January 2018</a>
+					</div>
+					<p>[...] This &quot;universality&quot; snake oil is not new in the world of technology. See for example Popescu's article on Unicode.↩ [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131678">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://wp.thetarpit.org/2017/https-war-declaration?b=This&amp;e=#select' class='url'>A declaration of war on the HTTP of Shit &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131678" title="">Tuesday, 8 October 2019</a>
+					</div>
+					<p>[...] This "universality" snake oil is not new in the world of technology. See for example Popescu's article on Unicode.&#160;&#8617; [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132279">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://fixpoint.welshcomputing.com/2019/yrc-a-unix-irc-client-genesis/?b=things%20tha&amp;e=things%20that%20it%20does%20NOT%20intend%20to%20support%20include%20Unicode%20and%20SSL.%20Notable%20missing' class='url'>yrc, a Unix IRC client: genesis &laquo; Fixpoint</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132279" title="">Thursday, 14 November 2019</a>
+					</div>
+					<p>[...] things that it does NOT intend to support include Unicode and SSL. Notable missing features it ought to have, quoting the manual, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142853">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/argentina-smaller-than-eulora?b=measurement.&amp;e=r%20or#select' class='url'>Argentina, smaller than Eulora on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142853" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] measurement. It works not in the systematic manner you expect measurements to work, but in a very Unicode-like manner : it includes its own encoding scheme, resulting in knight's fees that were larger or [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142876">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/modernism-and-traditionalism?b=What%20cares%20t&amp;e=ies.#select' class='url'>Modernism ; and traditionalism on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142876" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] What cares the cotton ginny whether you are white or black skinned ? And this is what all the Unicode wastage is : they, the lost souls of a dead world, are trying to make computers more like cotton ginnies. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-153014">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-last-blog/?b=it%27s%20meanwhi&amp;e=eign#select' class='url'>The last blog on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-153014" title="">Friday, 24 July 2020</a>
+					</div>
+					<p>[...] it's meanwhile grown into the entire web. What else is there ? [&#8617;]Meanwhile it became Unicode, a genuine systems language in and of and by itself. [&#8617;]The only pantsuit agenda for foreign [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="70190" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834572-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-70190")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-70190");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-70190");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

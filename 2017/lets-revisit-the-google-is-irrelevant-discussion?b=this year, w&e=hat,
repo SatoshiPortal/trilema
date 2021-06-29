@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Let's revisit the Google-is-irrelevant discussion. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">If "waifu" is "wife"<br />should "kung-fu" be "knife" ?
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-76296"><div class="post" id="post-76296">                    <h1><a href="http://trilema.com/2017/lets-revisit-the-google-is-irrelevant-discussion/" rel="bookmark" title="Permanent Link to Let&#039;s revisit the Google-is-irrelevant discussion.">Let's revisit the Google-is-irrelevant discussion.</a></h1>                        <div class="date">                                     Sunday, 03 December, Year 9 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Back in 2014, we were looking at <a href="http://trilema.com/2014/google-exploring-the-bottomless-pit-of-irrelevance-since-2004-or-so/">how google works for search</a> -- and it turned out it... doesn't work for search. It hasn't improved hence, in any sense. On the contrary. </p>
+<p>Earlier <span style="background-color:#d3d3d3" id="select">this year, we were looking at how google works for "added value" services, such as <a href="http://trilema.com/2017/fake-news-are-just-one-tail-of-the-failed-female-state/">locating restaurants</a> or other businesses -- and it turned out it... doesn't work for anything like that,</span> either.<sup><a href="#footnote_0_76296" id="identifier_0_76296" class="footnote-link footnote-identifier-link" title="I mechanized another girl recently. She, being in the age range, immediately asked for a navigational aid in the shape of a smartphone. I told her that if she can prove utility, she can has her smartphone. 
+She proceeded to try, by going on google maps / driving directions / whatever and making detailed notes as to how to get to various places. On the three passes of this before I formally forbade her from ever visiting the god damned thing ever again, we enjoyed navigational mayhem in the sense of `turn left at the roundabout` / `wait, that was an UNADVERTISED roundabout, should have gone straight there, left at the NEXT one`. How are you to know this ? The fucking point of the driving directions is that you don't ask these sorts of questions!
+Each case was the same, unexpected 90 degree turns in the road that weren't in the notes (or on the map), `first left` that turned out to be third left, `second left` that turned out to be first, because no such thing as what the map purported to show exists in reality, and so following.
+Each case was the same, I lowered the window, asked a local, and got us there with a navigational management burden of half a minute or less. She, with her worse-than-useless Google-powered navigational aids, spending upwards of an hour `preparing` useless notes that didn't match the field. At all.
+In this one Californite's own experience, Google was worse than nothing at all. And yes, before you jump in, I'm sure it works for you. That's because you never go anywhere ; just like the `restaurant finder` works fine for you because you never eat out ; just like the great socialist state `works for you` because you uncritically assign all the good it had no part in creating to it and all the ill it actually created to imaginary racists, misogynists and other terrorists. 
+As far as your needs are concerned, as a poor-but-stupid rottinculo, the unsubstantial impression of shops and roads and knowledge and understanding, placed colorfully on the sides of a track you'll never leave, are absolutely sufficient. You're just ecstatic that your Matrix shows `Restaurant` or `Bar` or whatever printed on the sides of the cardboard box. You don't care that the door is not a door but just a painted image of a door because you weren't ever going to try and go in anyway.
+It's very sad to be you, yes, but wake up and smell the coffee : your experiences carry no importance and offer no value! Not to you, and not to anyone!">i</a></sup></p>
+<p>Today I went through the 2017 traffic logs on Trilema. Here's the salient points : </p>
+<ul>
+<li>Direct address / Bookmark / Link in email...	253,324,420<sup><a href="#footnote_1_76296" id="identifier_1_76296" class="footnote-link footnote-identifier-link" title="Various spammy shit like for instance the WP DDoS we keep discussing and Automattic deliberately won't fix (yes, it's fixed in MP-WP, use that instead of Automattic's crapolade) is not part of this figure, but counted separately. I served an extra 52,292,672 pages with 53,562,363 hits worth 852.62 GB to that sort of crap so far in 2017. (If you're curious, the large BW figure is due to my tendency to ban repeat offenders -- some IPs attempt to load /xmlrpc.php in excess of 100k times as part of the DDoS scheme -- which means they no longer receive the 54 byte error message they ignore but a soft 404 worth however many kb a Trilema page is worth. This does make them stop trying in a day or a week or whenever next the BW bill hits ; but there's of course other 17yo experts waiting in the wings and ready to pick up the slack. Kinda how sexuate reproduction works in the first place, amirite ?) ">ii</a></sup>	<strong>99.1 %</strong></li>
+<li>Links from an Internet Search Engine	1,428,425	<strong>0.5 %</strong></li>
+<li>Links from an external page (other web sites except search engines)	792,476	<strong>0.3 %</strong></li>
+</ul>
+<p>The Search is mostly Google, with a smattering of others. The external pages is mostly <a href="http://trilema.com/2015/facebook-sends-traffic11eleven/">Facebook</a><sup><a href="#footnote_2_76296" id="identifier_2_76296" class="footnote-link footnote-identifier-link" title="I am not paying anything for the service. I tried that back in 2014 and well...">iii</a></sup>, with a smattering of others.<sup><a href="#footnote_3_76296" id="identifier_3_76296" class="footnote-link footnote-identifier-link" title="No, Reddit is not visible in the pile. (And don't give me the `because it doesn't want to or try to` bullshit, there's about a hundred different reddit urls referring in.)
+Neither is slashdot, ycombinator/hackernews, whatever other self-important `platforms`. Their practical value is zero, I understand that the few unfortunate souls caught within the resonance room end up with confirmation bias convincing them their paper bag matters deeply, but reality diverges from this purely psychogenic hallucination. And yes it's true that twenty years ago they were a big deal. Not anymore, not for many many years now.
+The principal non-Facebook `others` are actually various RSS readers. As for the logotrons : btcbase 3,576 ; mkj 314 ; bvulpes 278. (The methodology here used varies from last time, in that I simply took the first occurence rather than bothering to add all.) ">iv</a></sup> </p>
+<p>It could, of course, be said that some of those directs are simply privacy-conscious surfers that deliberately set up their browser to not pass referrer<sup><a href="#footnote_4_76296" id="identifier_4_76296" class="footnote-link footnote-identifier-link" title="Or, for that matter, visitors from privacy-minded websites that set the rel=`noreferrer noopener` attribute (which is why Fetlife, for instance, appears nowhere in the referral logs).">v</a></sup>, but then again all sorts of things could be said and <a href="http://trilema.com/2011/gindirea-oamenilor-furiosi/#selection-129.0-129.421">have historically been said</a><sup><a href="#footnote_5_76296" id="identifier_5_76296" class="footnote-link footnote-identifier-link" title="Yes, back in 2011 Trilema direct traffic was moar like 40%. Times have changed, I guess, and besides the ESL is a lot more paranoid than his RSL counterpart.">vi</a></sup>. Moreover, I sometimes google to find Trilema articles in lieu of the more common "type in the first few letters"<sup><a href="#footnote_6_76296" id="identifier_6_76296" class="footnote-link footnote-identifier-link" title="Did you know that trilema.com/lets-r actually resolves to this article ? You need the r because without it will resolve to the older one about idiots and Gavin.">vii</a></sup> and while this is probably counted as a "google referral" it is in no possible way different from a direct. I can't possibly be the only one. </p>
+<p>In any case, the moral that I see here is that the cattle internet consists of facebook &#038; google in approximately equal proportions, and it doesn't matter anyway.<sup><a href="#footnote_7_76296" id="identifier_7_76296" class="footnote-link footnote-identifier-link" title="Consider that ancient point : why would you be happy to get a click through google ? If it's an old reader, google is irrelevant in your relationship. If he's a recommended reader, which means someone who already reads you sent him over, google couldn't be less relevant in the relationship. If he's neither, well... let's quote :
+Moreover, of all the people interested in one particular topic, or niche, or segment, a vast majority already have a hierarchical structure of sources in their head. If you wish to hear the Republican talking points on the shutdown you don't go to google and type `please show me some representative Republican sites`. You already know where to look, which incidentally makes Google significantly less useful in aggregate : sure it can send some visits, but the users it sends aren't representative of the Internet population. They're a selected group, and they're selected for cluelessness. Who would want to pay to be visited by more clueless people ? Some some sort of scammer, perhaps, like a patent toy vendor or something - unless you're selling cheap goods for massive mark-ups, google advertising makes absolutely no sense for you.)
+And yes things have changed a lot around here since the million-a-month early days of 2014. Recall sponsoring 8chan in 2015 ? Recall the very many and numerous other things I can't be bothered to fish out ? Anyone want to assemble a list of all my great exploits online in the interval ?">viii</a></sup></p>
+<p>Does Google do <a href="http://trilema.com/2013/google-numerology/">anything else</a> ?<sup><a href="#footnote_8_76296" id="identifier_8_76296" class="footnote-link footnote-identifier-link" title="Don't you find the fact that Alphabet created `Artificial Intelligence` sorta capable to win a game of Go years ago but you've not heard anything of it since kind-of suspicious in the `you're fucked` vein ?">ix</a></sup> How about Facebook ? Because whatever it is they're doing... <em>la vie, c'est ailleurs</em>.</p>
+<p>PS. There's no cloudflare, there's no google analytics, there's no https to force every pageload to call home @ fort meade<sup><a href="#footnote_9_76296" id="identifier_9_76296" class="footnote-link footnote-identifier-link" title="Lmao, why did you think the whole `https everywhere` was being pushed ? Huh ?">x</a></sup>, there's no imported javascript, tracking pixels, foreign cookies etcetera on Trilema. I imagine it gives the NSA&#038;friends hives that there's so much activity entirely outside of their crystal ball. A well!</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_76296" class="footnote">I mechanized another girl recently. She, being in the age range, immediately asked for a navigational aid in the shape of a smartphone. I told her that if she can prove utility, she can has her smartphone. </p>
+<p>She proceeded to try, by going on google maps / driving directions / whatever and making detailed notes as to how to get to various places. On the three passes of this before I formally forbade her from ever visiting the god damned thing ever again, we enjoyed navigational mayhem in the sense of "turn left at the roundabout" / "wait, that was an UNADVERTISED roundabout, should have gone straight there, left at the NEXT one". How are you to know this ? The fucking point of the driving directions is that you don't ask these sorts of questions!</p>
+<p>Each case was the same, unexpected 90 degree turns in the road that weren't in the notes (or on the map), "first left" that turned out to be third left, "second left" that turned out to be first, because no such thing as what the map purported to show exists in reality, and so following.</p>
+<p>Each case was the same, I lowered the window, asked a local, and got us there with a navigational management burden of half a minute or less. She, with her worse-than-useless Google-powered navigational aids, spending upwards of an hour "preparing" useless notes that didn't match the field. At all.</p>
+<p>In this one Californite's own experience, Google was worse than nothing at all. And yes, before you jump in, <em>I'm sure it works for you.</em> That's because you never go anywhere ; just like the "restaurant finder" works fine for you because you never eat out ; just like the great socialist state "works for you" because you uncritically assign all the good it had no part in creating to it and all the ill it actually created to imaginary racists, misogynists and other terrorists. </p>
+<p>As far as your needs are concerned, as a <a href="http://trilema.com/2017/when-did-america-end/#selection-393.0-413.243">poor-but-stupid</a> <em>rottinculo</em>, the unsubstantial impression of shops and roads and knowledge and understanding, placed colorfully on the sides of a track you'll never leave, are absolutely sufficient. You're just ecstatic that your Matrix shows "Restaurant" or "Bar" or whatever printed on the sides of the cardboard box. You don't care that the door is not a door but just a painted image of a door because you weren't ever going to try and go in anyway.</p>
+<p>It's very sad to be you, yes, but wake up and smell the coffee : your experiences carry <a href="http://trilema.com/2015/on-how-i-ended-up-suing-phoenix-nap-llc-on-how-ira-r-cadwells-mom-stephanies-going-to-lose-her-chula-vista-home-on-how-marcus-bohn-is-going-to-catch-a-lot-of-shit-for-that-on-assorted-othe/#selection-199.0-217.246">no importance</a> and offer <a href="http://trilema.com/2012/bitcoin-and-the-poor/#selection-69.0-73.362">no value</a>! Not to you, and not to anyone! [<a href="#identifier_0_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_76296" class="footnote">Various spammy shit like for instance the <a href="http://trilema.com/category/logs/2017-04-25#1647817">WP DDoS</a> we <a href="http://trilema.com/2017/remember-the-security-hole-automattic-refused-to-fix-back-in-2014/">keep</a> <a href="http://trilema.com/2014/o-hai-let-me-wanna-be/">discussing</a> and <a href="http://trilema.com/2015/mika-epstein-aka-ipstenu-is-a-thoroughly-clueless-poser/">Automattic deliberately won't fix</a> (yes, it's fixed in <a href="http://btcbase.org/log-search?q=mp-wp">MP-WP</a>, use that instead of Automattic's crapolade) is not part of this figure, but counted separately. I served an extra 52,292,672 pages with 53,562,363 hits worth 852.62 GB to that sort of crap so far in 2017. (If you're curious, the large BW figure is due to my tendency to ban repeat offenders -- some IPs attempt to load /xmlrpc.php in excess of 100k times as part of the DDoS scheme -- which means they no longer receive the 54 byte error message they ignore but a soft 404 worth however many kb a Trilema page is worth. This <em>does</em> make them stop trying in a day or a week or whenever next the BW bill hits ; but there's of course other <a href="http://trilema.com/2012/bitcoin-is-creating-a-whole-new-set-of-problems/">17yo experts</a> waiting in the wings and <a href="http://trilema.com/2012/and-another-one-bites-the-dust-bitmarketeu/#selection-65.0-77.311">ready to pick up the slack</a>. Kinda <a href="http://trilema.com/2017/the-boundless-burden/#selection-175.26-175.41">how sexuate reproduction works</a> in the first place, amirite ?)  [<a href="#identifier_1_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_76296" class="footnote">I am not paying anything for the service. I tried that back in <a href="http://trilema.com/2014/hello-everyone-im-facebook-martin-and-this-is-the-racquetball-trick/">2014</a> and well... [<a href="#identifier_2_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_76296" class="footnote">No, <a href="http://trilema.com/2015/just-how-stupid-is-the-redditard-crowd/">Reddit</a> is not visible in the pile. (And don't give me the "because it doesn't want to or try to" bullshit, there's about a hundred different reddit urls referring in.)</p>
+<p>Neither is slashdot, ycombinator/hackernews, whatever other self-important "platforms". Their practical value is zero, I understand that the few unfortunate souls caught within the resonance room end up with confirmation bias convincing them their paper bag matters deeply, but reality diverges from this purely psychogenic hallucination. And yes it's true that twenty years ago they were a big deal. Not anymore, not for many many years now.</p>
+<p>The principal non-Facebook "others" are actually various RSS readers. As for the logotrons : <a href="http://trilema.com/category/logs/">btcbase</a> 3,576 ; <a href="http://log.mkj.lt/trilema/today">mkj</a> 314 ; <a href="http://logs.bvulpes.com/trilema">bvulpes</a> 278. (The methodology here used varies from <a href="http://trilema.com/2017/logotron-marketshare-comparison/">last time</a>, in that I simply took the first occurence rather than bothering to add all.)  [<a href="#identifier_3_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_76296" class="footnote">Or, for that matter, visitors from privacy-minded websites that set the rel="noreferrer noopener" attribute (which is why Fetlife, for instance, appears nowhere in the referral logs). [<a href="#identifier_4_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_76296" class="footnote">Yes, back in 2011 Trilema direct traffic was moar like 40%. Times have changed, I guess, and besides the ESL is a lot more paranoid than his RSL counterpart. [<a href="#identifier_5_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_76296" class="footnote">Did you know that trilema.com/lets-r actually resolves to this article ? You need the r because without it will resolve to the older one about idiots and Gavin. [<a href="#identifier_6_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_76296" class="footnote">Consider that ancient point : why would you be <em>happy</em> to get a click through google ? If it's an old reader, google is irrelevant in your relationship. If he's a recommended reader, which means someone who already reads you sent him over, google couldn't be less relevant in the relationship. If he's neither, well... <a href="http://trilema.com/2014/awstats-and-stuff/#selection-85.0-97.204">let's quote</a> :</p>
+<blockquote><p>Moreover, of all the people interested in one particular topic, or niche, or segment, a vast majority already have a hierarchical structure of sources in their head. If you wish to hear the Republican talking points on the shutdown you don't go to google and type "please show me some representative Republican sites". You already know where to look, which incidentally makes Google significantly less useful in aggregate : sure it can send some visits, but the users it sends aren't representative of the Internet population. They're a selected group, and they're selected for cluelessness. Who would want to pay to be visited by more clueless people ? Some some sort of scammer, perhaps, like a patent toy vendor or something - unless you're selling cheap goods for massive mark-ups, google advertising makes absolutely no sense for you.)</p></blockquote>
+<p>And yes things have changed a lot around here since the million-a-month early days of 2014. Recall <a href="http://trilema.com/category/logs/2015-05-14#1131553">sponsoring 8chan</a> in 2015 ? Recall the very many and numerous other things I can't be bothered to fish out ? Anyone want to assemble a list of all my great exploits online in the interval ? [<a href="#identifier_7_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_76296" class="footnote">Don't you find the fact that Alphabet created "Artificial Intelligence" <a href="http://trilema.com/2014/agency-and-other-notes/#selection-181.0-178.2">sorta capable to win a game of Go</a> years ago but you've not heard anything of it since kind-of suspicious in the "<a href="http://trilema.com/2017/the-day-of-failure-trilemma/#comment-122822">you're fucked</a>" vein ? [<a href="#identifier_8_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_76296" class="footnote">Lmao, why did you think the whole "https everywhere" was being pushed ? Huh ? [<a href="#identifier_9_76296" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2017/integration-is-bad-for-bitcoin/">Integration is bad for Bitcoin.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2017/minigame-smg-november-2017-statement/">MiniGame (S.MG), November 2017 Statement</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2017/lets-revisit-the-google-is-irrelevant-discussion/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2017/lets-revisit-the-google-is-irrelevant-discussion/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>30 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-123788" class="commentbody"><div class="commenthead"><img alt='cazalla`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">cazalla</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123788" title="">Monday, 4 December 2017</a>
+							</div>
+						<p>Reading the 'When did America end ?' article from the other day, I was curious as to what a 'legionnaire's bag' is, so I google it.</p>
+<p>Google asks me.. Did you mean legionnaire's disease? No, I didn't meant that, so I check images, and Google tells me it could be a bag, a bag of compost, or perhaps a hat or black guys with bags of money. </p>
+<p>Who knows what its fucking boggle is.</p>
+						</li>
+
+										<li id="comment-123789" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123789" title="">Monday, 4 December 2017</a>
+							</div>
+						<p>A bag in the context there is the protection suit jet pilots wear.</p>
+						</li>
+
+										<li id="comment-123790" class="commentbody"><div class="commenthead"><img alt='lru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">lru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123790" title="">Monday, 4 December 2017</a>
+							</div>
+						<p>What is this talk of https calling home to fort meade?  Nothing in the protocol requires that.</p>
+						</li>
+
+										<li id="comment-123791" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123791" title="">Monday, 4 December 2017</a>
+							</div>
+						<p>Really now. And how do you verify a SSL certificate ? </p>
+<p>Like for instance say USG.Verisign, USG.Comodo, USG.StrictlyAnyOtherCAImplicitlyTrustedByAllUSGbrowsers manages to lose a public key, like they ALL have to date, which is why https is not even "<a href=http://btcbase.org/log-search?q=nobus >nobus</a>" in the first place (no, USG.PKI, <em>without exception</em>, and especially including https/ssl was NEVER designed or intended to be secure, they're always intended to be vulnerable to NSA and that vulnerability hidden from you)... what happens ? What is a "CLR" per the protocol, and how is it populated ?</p>
+<p>"Nothing in the protocol requires that" entirely misses the point. What in the "protocol" of <a href=http://trilema.com/2016/please-stop-using-dns-already-and-other-considerations/ >DNS</a> "requires" idiocy like <a href="http://btcbase.org/log/2017-09-30#1718499">http://btcbase.org/log/2017-09-30#1718499</a> ?</p>
+						</li>
+
+										<li id="comment-123794" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123794" title="">Monday, 4 December 2017</a>
+							</div>
+						<p>Mircea Popescu : oughta be 1) "lose a private key" and 2) "CRL"</p>
+						</li>
+
+										<li id="comment-123795" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123795" title="">Monday, 4 December 2017</a>
+							</div>
+						<p>Damn, dilsexya strikes again!</p>
+						</li>
+
+										<li id="comment-123799" class="commentbody"><div class="commenthead"><img alt='lru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">lru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123799" title="">Tuesday, 5 December 2017</a>
+							</div>
+						<p>I can see why adding the complexity and government overhead of https to a site like trilema, which makes everything public anyway, including logs, doesn't make sense.</p>
+<p>If your only threat model is "the government" then yeah, I see your point.  But if you don't want the guy beside you in the internet cafe to sniff your traffic, https still has some value.</p>
+<p>And boasting that trilema is outside of NSA's crystal ball when it is all in plain text, with the likes of Eschelon lurking at a router near you, makes me scratch my head too.</p>
+						</li>
+
+										<li id="comment-123800" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123800" title="">Tuesday, 5 December 2017</a>
+							</div>
+						<p>> And boasting that trilema is outside of NSA's crystal ball</p>
+<p>You're missing the point. Yes obviously THE TEXT is plaintext. However YOUR DETAILS, as a reader, AREN'T transparent. On every other site, NSA gets it from google, which gets it via google analytics, via google adwords, via google ten thousand doohickeys ; and NSA further gets it from amazon, and the cloud hosters (including google), which host all the javascript crud you're forcefed ; and all the 3rd party cookies, and all the etcetera. Here -- no such luck.</p>
+<p>> If your only threat model is "the government" then yeah, I see your point.</p>
+<p>The only threat model ever is the government. </p>
+<blockquote><p>just like the great socialist state "works for you" because you uncritically assign all the good it had no part in creating to it and all the ill it actually created to imaginary racists, misogynists and other terrorists.</p></blockquote>
+<p>You understand me ? No one else BESIDES the government is ever a legitimate threat model. Lies to the contrary are government-issued propaganda and naught else.</p>
+						</li>
+
+										<li id="comment-123801" class="commentbody"><div class="commenthead"><img alt='Alex`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Alex</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123801" title="">Tuesday, 5 December 2017</a>
+							</div>
+						<blockquote><p>And yes, before you jump in, I'm sure it works for you.</p></blockquote>
+<p>Hm, perhaps it's a question of how many derps bother to fix the information that's constantly going out of date. In California, probably there's enough hipsters to care about doing it, so "GMaps works", in the sense that the info hasn't gone stale (yet). In Bumfuck Nowhere, no such luck.</p>
+<p>I had the displeasure to experience this in Bucharest last summer. Look up pizzeria that "used to be nice". According to GMaps it's still there, 5 years later. We go to the place and .. it's of course closed. Since last year.</p>
+<p>Btw, the problem isn't limited to Google by any means. Waze "knows" that the Popa Sapca street is closed for repairs. Waze servers can see, for weeks, that cars are nevertheless travelling on said road, since it was unofficially reopened. But hey, no drivers bothered to report the mismatch, and no one at Waze could be arsed to care enough to investigate, so for weeks it kept telling drivers to take long detours around the place. You just had to be in the know about it.</p>
+<p>Crowdsourcing win (?).</p>
+						</li>
+
+										<li id="comment-123802" class="commentbody"><div class="commenthead"><img alt='lru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">lru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123802" title="">Tuesday, 5 December 2017</a>
+							</div>
+						<p>While this respect for MY privacy is certainly appreciated, it does look a bit like enclosing the envelope inside the letter, with the words on the ouside, which is inverse to what I normally expect for encrypted communications.</p>
+<p>But be that as it may.  Assuming the government is the threat model, that they are recipients of all major cloud traffic stats, including google, and assuming they still have Eschelon running so as to see even trilema's traffic and visitors, and assuming they can issue fake certificates at will to fool end users into thinking their browsing is safe.....</p>
+<p>Then encrypted traffic AND a verifiable PKi is needed to guard against this threat.  CRL is bad enough, OCSP is even worse, and OCSP stapling is weak, none of which provide an audit trail.</p>
+<p>This, though, appears to be the right direction.... and it is by Google no less.</p>
+<p><a href="http://www.certificate-transparency.org/what-is-ct">http://www.certificate-transparency.org/what-is-ct</a></p>
+<p>It's like blockchain for certs.</p>
+						</li>
+
+										<li id="comment-123803" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123803" title="">Tuesday, 5 December 2017</a>
+							</div>
+						<p>@<b>Alex</b> In other words, <b>yet another</b> "<a href=http://trilema.com/2016/files-from-the-war-on-the-web-today-literotica/#selection-393.0-393.767 >UGC</a>" platform, "USG.Google is powerful because it is useful and it is useful because and for as long as a horde of NEETs supported by the public treasury continue to donate extremely expensive work to it" ? Exactly like USG.Wikipedia ? Exactly like <a href=http://trilema.com/2017/lets-revisit-the-google-is-irrelevant-discussion/#selection-177.121-177.343 >the very USG</a> that spawned them ? Awww!</p>
+<p>If Bucharest is not urban enough for <a href="https://archive.is/20YJV" >the engine</a> to work...</p>
+<p>@<b>lru</b> A large portion of the problem appears to be that you're <a href=http://trilema.com/2015/recursive-dunning-kruger/ >not actually in a position</a> to evaluate the situation or form expectations. Try and understand what <em>exactly</em> is meant by "<a href=http://btcbase.org/log-search?q=from%3Amircea+%22i+don%27t%22+private+know > i don't hold private conversations with people i don't know</a>", what the <a href=http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/ >WoT</a> is, why <a href=http://trilema.com/2016/gossipd-design-document/ >gossipd</a> is designed the way it is and so on.</p>
+<p>It's not entirely clear what you mean by "Eschelon" or what do you expect it does here ; it's entirely clear however that you didn't actually understand the above ssl discussion -- issuing fake certificates was not part of it. In short, there's a lot you don't understand, and it's not altogether clear why and wherefore you expect you should.</p>
+						</li>
+
+										<li id="comment-123808" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123808" title="">Tuesday, 5 December 2017</a>
+							</div>
+						<p>&gt; Look up pizzeria that "used to be nice"</p>
+<p>I went to one of these ( via -- take a guess... Google's map+reviews thing ) in Timis. It was not merely dead, but the house itself had become a total ruin; could even suppose, from what was available to my naked eye, that there had never been a restaurant of any kind at all at anywhere near the given coordinates, not since WW2 at any rate.</p>
+						</li>
+
+										<li id="comment-123809" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123809" title="">Tuesday, 5 December 2017</a>
+							</div>
+						<p>&gt; Waze servers can see, for weeks, that cars are nevertheless travelling on said road, since it was unofficially reopened. But hey, no drivers bothered to report the mismatch</p>
+<p>"Google Maps" and "Waze" are, not so far from where I live, quite happy to lead the careless driver into a square km of wet cement -- and, not so long ago, into a six-metre-deep pit.</p>
+<p>"Car were moving through there just the other week", you see. Ergo - legit shortcut...</p>
+						</li>
+
+										<li id="comment-123812" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123812" title="">Tuesday, 5 December 2017</a>
+							</div>
+						<p>I suppose the way this works is that the vast majority of ESLtards never go anywhere anyway, so to them it seems to work in the exact same sense their healthcare system works : they're too young to need it ergo it's fine. They went to college after all, without at any juncture missing the entirely absent college in their collegiate experience.</p>
+						</li>
+
+										<li id="comment-123813" class="commentbody"><div class="commenthead"><img alt='aetc`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">aetc<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123813" title="">Wednesday, 6 December 2017</a>
+							</div>
+						<p>A murit regele ba, tinet si voi doliu.</p>
+<p>I've never had any problems with MAPS.me/openstreet locations, guess it sucks using services for profit like Waze. Or the botnet.</p>
+<p>First thing to do when you buy the smartphone is to remove all Google Apps <a href="https://www.theregister.co.uk/2016/09/12/turn_off_location_services_go_ahead_says_google_well_still_track_you/" >cause whatever you delete is still implemented in some other place anyway</a> just in case botnet misses you.</p>
+						</li>
+
+										<li id="comment-123817" class="commentbody"><div class="commenthead"><img alt='lru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">lru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123817" title="">Wednesday, 6 December 2017</a>
+							</div>
+						<p>I understand what a WoT is, and it's advantages over centralized pki.  I can see multiple reasons why not having private dealings with people you don't know is a smart move, though I'm not sure it is worth discussing that right now.</p>
+<p>What I haven't seen yet is why https appears worthy of a "lmao" response from you.  And I'm asking from a technical perspective, since you imply it is not secure due to not needing fake certificates to access the encrypted content.  I'm sure you have analyzed it and found it to not meet your requirements, but it doesn't follow that everyone else is a fool for using it, even if all they care about doing is making it slightly more difficult for the wire sniffers out there, whether they be teenage hackers or government agents.</p>
+<p>The "Echelon" I was referring to (I misspelled it earlier) is the multi-country surveillance program that went from conspiracy theory to fact after Edward Snowden's revelations.   It was only after Snowden that "https everywhere" gained traction.  While there are probably leaks in https that the NSA can still benefit from, I'd be surprised indeed if the NSA wouldn't prefer to go back to the unencrypted days.  They never seemed too eager for encryption before Snowden.</p>
+<p>And in an Echelon-sniffing world, https does not seem like a useless wrench to toss into the government wheel, even when talking to entities you know but don't trust (Google) that are managed by people you don't know (their employees and other agents).</p>
+						</li>
+
+										<li id="comment-123818" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123818" title="">Wednesday, 6 December 2017</a>
+							</div>
+						<blockquote><p>I understand the many reasons ridiculous nonsense is worthy of a curt lmao response from you but I haven't seen yet why ridiculous nonsense appears worthy of a lmao response from you.</p></blockquote>
+<p>What's the problem, the proof insufficiently proofy for your needs or what is it ?</p>
+<p>Don't tell me "we're not going to discuss how 2 &lt; 3 now" because "I want to instead focus on how 3 is the largest even number" sorta reasoning ?</p>
+						</li>
+
+										<li id="comment-123819" class="commentbody"><div class="commenthead"><img alt='lru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">lru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123819" title="">Wednesday, 6 December 2017</a>
+							</div>
+						<p>Ok, maybe a more direct question will help.</p>
+<p>Are you able to read the plaintext of a https data transfer without installing some fake certs along the line, so it is not noticed by the browser?</p>
+<p>If yes, https is completely broken and worthy of a lmao.  If no, then https is merely lacking in decentralized design and still potentially useful in specific contexts.</p>
+						</li>
+
+										<li id="comment-123820" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123820" title="">Wednesday, 6 December 2017</a>
+							</div>
+						<p>The notion that "potentially useful in specific contexts" is completely broken and worthy of a lmao.</p>
+						</li>
+
+										<li id="comment-123821" class="commentbody"><div class="commenthead"><img alt='lru`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">lru</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123821" title="">Wednesday, 6 December 2017</a>
+							</div>
+						<p>I'll take that as a no, thanks.</p>
+						</li>
+
+										<li id="comment-123822" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123822" title="">Wednesday, 6 December 2017</a>
+							</div>
+						<p>As per <a href=http://trilema.com/2013/dear-guardian-stop-being-retarded/#comment-95603 >tradition</a>.</p>
+						</li>
+
+										<li id="comment-127283" class="commentbody"><div class="commenthead"><img alt='Test`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink">Test</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127283" title="">Wednesday, 26 December 2018</a>
+							</div>
+						<p>This is a test comment!</p>
+<p><b><a href="http://btcbase.org/log/2018-12-26#1883098">http://btcbase.org/log/2018-12-26#1883098</a></b> This is b<br />
+<strong><a href="http://btcbase.org/log/2018-12-26#1883098">http://btcbase.org/log/2018-12-26#1883098</a></strong> This is strong</p>
+<blockquote><p><a href="http://btcbase.org/log/2018-12-26#1883098">http://btcbase.org/log/2018-12-26#1883098</a></p></blockquote>
+<p> This is blockquote<br />
+<em><a href="http://btcbase.org/log/2018-12-26#1883098">http://btcbase.org/log/2018-12-26#1883098</a></em> This is em<br />
+<i><a href="http://btcbase.org/log/2018-12-26#1883098">http://btcbase.org/log/2018-12-26#1883098</a></i> This is i</p>
+<p>This is<br />
+<blockquote>inline</p></blockquote>
+<p> blockquote.<br />
+This is<br />
+<blockquote><b><a href="http://btcbase.org/log/2018-12-26#1883098" >A bold link with <em>some</em> italics.</a></b><br />
+<blockquote></blockquote>
+</blockquote>
+						</li>
+
+										<li id="comment-160872" class="commentbody"><div class="commenthead"><img alt='BarsukSH`s avatar' src='http://ru.wikipedia.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink"><a href='https://ru.wikipedia.org' class='url'>BarsukSH</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-160872" title="">Monday, 8 March 2021</a>
+							</div>
+						<p>GO!!!<br />
+This phrase was said by the first cosmonaut on Earth - Yuri Gagarin. (Yuri Gagarin)<br />
+He was the first astronaut on Earth. He was Russian! ...<br />
+Now Russia is becoming a strong country, gas pipelines, a vaccine against COVID-19, an army.<br />
+Is this very reminiscent of the communist Soviet Union?<br />
+How do you think?<br />
+Now we have total control in our country. I am interested in the opinion of foreigners. </p>
+<p>ПОЕХАЛИ!!</p>
+						</li>
+
+										<li id="comment-160881" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-160881" title="">Monday, 8 March 2021</a>
+							</div>
+						<p>I vaguely considered visiting, in the end couldn't be arsed [going past <a href="http://trilema.com/2019/minsk-nightlife-or-the-orphans-strip-clubs/">Minsk</a>]. </p>
+<p>The opinion of this foreigner is that the differences you perceive are illusory, and that the russki kids are substantially and reliably <a href="http://trilema.com/2019/so-why-cant-they-be-trained/?b=the%20russki&#038;e=kids#select">the exact same sort</a> of spineless, gutless <a href="http://trilema.com/2018/the-problems/#footnote_0_81859">punk</a> the reddit-facebook-etcetera made out of the scions of Roosevelt-socialism.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-144013">
+					<div class='trackhead'>
+						<div class="commentcount">25</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/heres-why-you-will-end-your-days-in-a-concentration-camp?b=Trilema%20traf&amp;e=t%20be#select' class='url'>Here's why you will end your days in a concentration camp on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144013" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Trilema traffic these days -- not the pantsuit press, not the USG.IAB properties, not facebook, not google, nothing, period and full stop. You can put those concerns to rest. [&#8617;]No, idiots can't be [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145061">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/occasional-discourse-on-the-negro-question-1849?b=sorry%2C%20what%2C&amp;e=ated#select' class='url'>Occasional Discourse On The Negro Question, 1849 on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145061" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] sorry, what, did you imagine freed from fetters the barn animals will step up to produce UGC ? Reheheheally ?! [&#8617;]The eternal temptation of the acquarium miniworld. Its insulated [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145279">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/trilema-images-no-longer-showing?b=so%20following&amp;e=%20are#select' class='url'>Trilema images no longer showing ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145279" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] so following, because totally, what's google for if not to repackage my fucking content into their pretense of "the world is" and "smartphones are [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146593">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-being-the-main-character-in-your-own-tv-show-is-sort-of-a-delusion-adnotated?b=small%2C%20and%20e&amp;e=t...#select' class='url'>thelastpsychiatrist.com - Being The Main Character In Your Own TV Show Is Sort Of A Delusion. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146593" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] small, and even less relevant than numerous) set of wankers might like to believe, google's about as marginal as it gets. [&#8617;]Does this remind you of anyone ? [&#8617;]Abslolutely. [&#8617;]Lumea s-a schimbat... [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-152761">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/survivor-legacy-or-vidya-games-are-dead/?b=defy%20you%20to%20&amp;e=g%20ad#select' class='url'>Survivor Legacy, or vidya games are dead on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-152761" title="">Saturday, 11 July 2020</a>
+					</div>
+					<p>[...] defy you to search, using whatever piece of shit you unconscionably favor : you will find absolutely nothing besides spun "content", stating ad [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-162148">
+					<div class='trackhead'>
+						<div class="commentcount">30</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/working-perfect-tower-ii-mining-ai-script/?b=results%20in%20a&amp;e=ally#select' class='url'>Working Perfect Tower II Mining AI Script on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-162148" title="">Friday, 2 April 2021</a>
+					</div>
+					<p>[...] results in atrocities like the present situation. Do you know there doesn't exist anywhere, google be damned, a workingv mining script for this year old game ? I had to make my own ; always and perpetually [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="76296" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834119-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-76296")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-76296");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-76296");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

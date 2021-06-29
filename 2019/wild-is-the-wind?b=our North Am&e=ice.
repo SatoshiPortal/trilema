@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Wild is the Wind on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Lucruri fine pentru oameni subtiri.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-82681"><div class="post" id="post-82681">                    <h1><a href="http://trilema.com/2019/wild-is-the-wind/" rel="bookmark" title="Permanent Link to Wild is the Wind">Wild is the Wind</a></h1>                        <div class="date">                                     Tuesday, 19 February, Year 11 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Wild is the Wind<sup><a href="#footnote_0_82681" id="identifier_0_82681" class="footnote-link footnote-identifier-link" title="1957, by George Cuckor, with Anna Magnani, Anthony Quinn.">i</a></sup> is yet another run-of-the-mill Tennessee Williams play (this time written by a certain Arnold Schulban or Schultan or whatever). It sports the usual whack-a-mole portable Universal Story Board, including the family fortune, the loose woman, the assortment of holes she could go into -- much like you'd expect a pinball machine include the three flags and the four bumpers, or how you'd expect a highschool chemistry set include flashpaper and whatnot. Writers, these people, like <a href="http://trilema.com/2017/zuleika-dobson-or-an-proper-love-story/#selection-239.24-239.128">Zuleika Dobson</a>'s an "enchantress".</p>
+<p>Nevertheless, the assembly line product's not without its charm -- even assembly lines must live out of some kind of reality, and somehow fit within finite energy footprint. This means in practice ever so often some reality makes it in, not molested beyond all possible recognition. The <a href="http://trilema.com/2019/the-secret-of-santa-vittoria/#selection-53.0-53.102">usual ham</a>, for instance, produces a character that's quite coincidentally authentic, as the literary character of Gigi Becali<sup><a href="#footnote_1_82681" id="identifier_1_82681" class="footnote-link footnote-identifier-link" title="Somewhat famous Romanian TV personality of the 90s -- perhaps the most important thing that could be said about the fellow would be to point out that 
+mysql> select id, post_title, post_category from tril_posts where post_status=`Publish` and post_content LIKE `%Gigi%` and post_content Like `%Becali%`;
++-------+---------------------------------------+---------------+
+| id    | post_title                            | post_category |
++-------+---------------------------------------+---------------+
+|   909 | Twitter, sau placerea de-a ciripi.    |             0 |
+| 24965 | Wikileaks - MDCXVIII                  |            18 |
+| 24872 | Wikileaks - MDXXV                     |            18 |
+| 24868 | Wikileaks - MDXXI                     |            18 |
+| 24862 | Wikileaks - MDXV                      |            18 |
+| 24719 | Wikileaks - MCCCLXXII                 |            18 |
+| 24674 | Wikileaks - MCCCXXVII                 |            18 |
+| 24550 | Wikileaks - MCCIII                    |            18 |
+| 24242 | Wikileaks - DCCCXCV                   |            18 |
+| 24235 | Wikileaks - DCCCLXXXVIII              |            18 |
+| 24228 | Wikileaks - DCCCLXXXI                 |            18 |
+| 24163 | Wikileaks - DCCCXVI                   |            18 |
+| 24101 | Wikileaks - DCCLIV                    |            18 |
+| 24094 | Wikileaks - DCCXLVII                  |            18 |
+| 24069 | Wikileaks - DCCXXII                   |            18 |
+| 24068 | Wikileaks - DCCXXI                    |            18 |
+| 24030 | Wikileaks - DCLXXXIII                 |            18 |
+| 24017 | Wikileaks - DCLXX                     |            18 |
+| 23970 | Wikileaks - DCXXIII                   |            18 |
+| 23892 | Wikileaks - DXLV                      |            18 |
+| 23873 | Wikileaks - DXXVI                     |            18 |
+| 23822 | Wikileaks - CDLXXV                    |            18 |
+| 23785 | Wikileaks - CDXXXVIII                 |            18 |
+| 23755 | Wikileaks - CDVIII                    |            18 |
+| 23494 | Wikileaks - CXLVII                    |            18 |
+| 23725 | Wikileaks - CCCLXXVIII                |            18 |
+| 23726 | Wikileaks - CCCLXXIX                  |            18 |
+| 34089 | C-asa-i romanu' cind se sumeteste...  |             0 |
+| 35089 | I'm in a transitional phase right now |             0 |
++-------+---------------------------------------+---------------+
+29 rows in set (0.14 sec)
+
+Twenty-six out of twenty-nine references to the character on Trilema coming from my inaugural leak of USG.Blue `encrypted` cables that you've come to know later as `wikileaks` should make it plain enough who constructed it as part of `the conversation` (constructed out of an extant, physically existing fool, of course, captured in the environment live, of course, yet nevertheless) and perhaps even why.">ii</a></sup> would most humorously, across the oceans confirm. A shepherd's a shepherd, at least if taken out of his environment and caged at the city zoo. Have you seen, by the way, that all fish have epilepsy ? It's just in the fish nature, what can you do.</p>
+<p>The product makes in passing the obvious point that <span style="background-color:#d3d3d3" id="select">our North American colony spent its formative years importing A-class women and <a href="http://trilema.com/2016/house-of-strangers/">breeding D-class</a> <a href="http://trilema.com/2013/the-graduate/">men locally</a>... but then again that's not the sort of point an audience's expected, or even intended, to notice.</span> Unless you're a scholar studying these <em>disgraziati</em> I can't imagine what could possibly impel you to watch this thing.</p>
+<p>Boredom, I guess, the listless sort of boredom that gets one started smoking.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_82681" class="footnote">1957, by George Cuckor, with Anna Magnani, Anthony Quinn. [<a href="#identifier_0_82681" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_82681" class="footnote">Somewhat famous Romanian TV personality of the 90s -- perhaps the most important thing that could be said about the fellow would be to point out that </p>
+<blockquote><p>mysql> select id, post_title, post_category from tril_posts where post_status="Publish" and post_content LIKE "%Gigi%" and post_content Like "%Becali%";<br />
++-------+---------------------------------------+---------------+<br />
+| id    | post_title                            | post_category |<br />
++-------+---------------------------------------+---------------+<br />
+|   909 | Twitter, sau placerea de-a ciripi.    |             0 |<br />
+| 24965 | Wikileaks - MDCXVIII                  |            18 |<br />
+| 24872 | Wikileaks - MDXXV                     |            18 |<br />
+| 24868 | Wikileaks - MDXXI                     |            18 |<br />
+| 24862 | Wikileaks - MDXV                      |            18 |<br />
+| 24719 | Wikileaks - MCCCLXXII                 |            18 |<br />
+| 24674 | Wikileaks - MCCCXXVII                 |            18 |<br />
+| 24550 | Wikileaks - MCCIII                    |            18 |<br />
+| 24242 | Wikileaks - DCCCXCV                   |            18 |<br />
+| 24235 | Wikileaks - DCCCLXXXVIII              |            18 |<br />
+| 24228 | Wikileaks - DCCCLXXXI                 |            18 |<br />
+| 24163 | Wikileaks - DCCCXVI                   |            18 |<br />
+| 24101 | Wikileaks - DCCLIV                    |            18 |<br />
+| 24094 | Wikileaks - DCCXLVII                  |            18 |<br />
+| 24069 | Wikileaks - DCCXXII                   |            18 |<br />
+| 24068 | Wikileaks - DCCXXI                    |            18 |<br />
+| 24030 | Wikileaks - DCLXXXIII                 |            18 |<br />
+| 24017 | Wikileaks - DCLXX                     |            18 |<br />
+| 23970 | Wikileaks - DCXXIII                   |            18 |<br />
+| 23892 | Wikileaks - DXLV                      |            18 |<br />
+| 23873 | Wikileaks - DXXVI                     |            18 |<br />
+| 23822 | Wikileaks - CDLXXV                    |            18 |<br />
+| 23785 | Wikileaks - CDXXXVIII                 |            18 |<br />
+| 23755 | Wikileaks - CDVIII                    |            18 |<br />
+| 23494 | Wikileaks - CXLVII                    |            18 |<br />
+| 23725 | Wikileaks - CCCLXXVIII                |            18 |<br />
+| 23726 | Wikileaks - CCCLXXIX                  |            18 |<br />
+| 34089 | C-asa-i romanu' cind se sumeteste...  |             0 |<br />
+| 35089 | I'm in a transitional phase right now |             0 |<br />
++-------+---------------------------------------+---------------+<br />
+29 rows in set (0.14 sec)
+</p></blockquote>
+<p>Twenty-six out of twenty-nine references to the character on Trilema coming from <a href="http://trilema.com/2011/primul/">my inaugural leak</a> of USG.Blue "encrypted" cables that you've come to know later as "wikileaks" should make it plain enough <a href="http://trilema.com/forum-logs-for-25-oct-2017#2354135">who</a> constructed it as part of "the conversation" (constructed out of an extant, physically existing fool, of course, captured in the environment live, of course, yet nevertheless) and perhaps even why. [<a href="#identifier_1_82681" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2019/the-secret-of-santa-vittoria/">The Secret of Santa Vittoria</a></div>
+                <div class="alignright"><a href="http://trilema.com/2019/the-rose-tattoo/">The Rose Tattoo</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2019/wild-is-the-wind/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2019/wild-is-the-wind/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>3 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-127988" class="commentbody"><div class="commenthead"><img alt='pletzalcoatl`s avatar' src='http://thewhet.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://thewhet.net' class='url'>pletzalcoatl</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127988" title="">Tuesday, 19 February 2019</a>
+							</div>
+						<p>This thing was pretty much the Spaghetti version of Taylor's 1956 Giant; import dame, watch her struggle with established hausfrauen, watch her try not to get entangled with localyokel, and meanwhile a fuckton of spurious horse/sheep/mountain shots. </p>
+<p>Pretty sure Giant featured live bovine, rather than ovine, birth footage, however.</p>
+						</li>
+
+										<li id="comment-127990" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127990" title="">Tuesday, 19 February 2019</a>
+							</div>
+						<p>That thing at least had life in its body.</p>
+						</li>
+
+										<li id="comment-161596" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-161596" title="">Tuesday, 23 March 2021</a>
+							</div>
+						<p>I reviewed this recently, and... well, there's a certain inescapable charm in the woman's struggle, as bare life, as an animal, between the birthgiving sheep and the deathmarked horse. There's a certain boko haram beauty to the daughterless woman telling the motherless girl not to cry, because... well... There's indisputedly a frank yet warm, warmly forcible rendition of the strings of female flesh. Tres recherche, of course, but then again how's one to make films otherwise ?</p>
+<p>And Bene loves her, and she's not ashamed, and...</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="82681" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835321-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-82681")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-82681");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-82681");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

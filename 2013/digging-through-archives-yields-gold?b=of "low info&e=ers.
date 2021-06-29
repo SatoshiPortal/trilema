@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Digging through archives yields gold on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Lucruri fine pentru oameni subtiri.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-46817"><div class="post" id="post-46817">                    <h1><a href="http://trilema.com/2013/digging-through-archives-yields-gold/" rel="bookmark" title="Permanent Link to Digging through archives yields gold">Digging through archives yields gold</a></h1>                        <div class="date">                                     Friday, 15 March, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>The old cryptography mail list where Satoshi originally <strong>s</strong><em>p</em><strong>e</strong><em>c</em><strong>i</strong><em>f</em><strong>i</strong><em>e</em><strong>d</strong><sup><a href="#footnote_0_46817" id="identifier_0_46817" class="footnote-link footnote-identifier-link" title="He also proceeded to implement a prototype of that original specification, prototype of which he obviously didn't think much if at all, judging by the quality of the code he output and the sort of design choices he made - it was to be a quick and dirty example of the specification, certainly nothing more than that.">i</a></sup> his idea for a next generation <a href="http://trilema.com/2012/the-reasons-why-bitcoin-securities-cant-be-regulated-by-the-sec/">game currency</a> contains some <a href="http://www.mail-archive.com/cryptography@metzdowd.com/msg09968.html">invaluable nuggets</a>. Not penned by Satoshi himself, but by <a href="http://jim.com/">James A. Donald</a>. To quote : </p>
+<blockquote><p>If I understand Simplified Payment Verification correctly:</p>
+<p>New coin issuers need to store all coins and all recent coin transfers.</span></p>
+<p>There are many new coin issuers, as many as want to be issuers, but far more coin users.</p>
+<p>Ordinary entities merely transfer coins.  To see if a coin transfer is OK, they report it to one or more new coin issuers and see if the new coin issuer accepts it. New coin issuers check transfers of old coins so that their new coins have valid form, and they report the outcome of this check so that people will report their transfers to the new coin issuer.</p>
+<p>If someone double spends a coin, and one expenditure is reported to one new coin issuer, and the other simultaneously reported to another new coin issuer, then both issuers to swifly agree on a unique sequence order of payments.  This, however, is a non trivial problem of a massively distributed massive database, a notoriously tricky problem, for which there are at present no peer to peer solutions.  Obiously it is a solvable problem, people solve it all the time, but not an easy problem. People fail to solve it rather more frequently.</p>
+<p>But let us suppose that the coin issue network is dominated by a small number of issuers as seems likely.</p>
+<p>If a small number of entities are issuing new coins, this is more resistant to state attack that with a single issuer, but the government regularly attacks financial networks, with the financial collapse ensuing from the most recent attack still under way as I write this.</p>
+<p>Government sponsored enterprises enter the business, in due course bad behavior is made mandatory, and the evil financial network is bigger than the honest financial network, with the result that even though everyone knows what is happening, people continue to use the paper issued by the evil financial network, because of network effects - the big, main issuers, are the issuers you use if you want to do business.</p>
+<p>Then knowledgeable people complain that the evil financial network is heading for disaster, that the government sponsored enterprises are about to cause a "collapse of the total financial system", as Wallison and Alan Greenspan complained in 2005, the government debates shrinking the evil government sponsored enterprises, as with "S. 190 [109th]: Federal Housing Enterprise Regulatory Reform Act of 2005" but they find easy money too seductive, and S. 190 goes down in flames before a horde of political activists chanting that easy money is sound, and opposing it is racist, nazi, ignorant, and generally hateful, the recent S. 190 debate on limiting portfolios (bond issue supporting dud mortgages) by government sponsored enterprises being a perfect reprise of the debates on limiting the issue of new assignats in the 1790s.</p>
+<p>The big and easy government attacks on money target a single central money issuer, as with the first of the modern political attacks, the French Assignat of 1792, but in the late nineteenth century political attacks on financial networks began, as for example the Federal reserve act of 1913, the goal always being to wind up the network into a single too big to fail entity, and they have been getting progressively bigger, more serious, and more disastrous, as with the most recent one.  Each attack is hugely successful, and after the cataclysm that the attack causes the attackers are hailed as saviors of the poor, the oppressed, and the nation generally, and the blame for the the bad consequences is dumped elsewhere, usually on Jews, greedy bankers, speculators, etc, because such attacks are difficult for ordinary people understand.  I have trouble understanding your proposal - ordinary users will be easily bamboozled by a government sponsored security update.  Further, when the crisis hits, to disagree with the line, to doubt that the regulators are right, and the problem is the evil speculators, becomes political suicide, as it did in America in 2007, sometimes physical suicide, as in Weimar Germany.</p>
+<p>Still, it is better, and more resistant to attack by government sponsored enterprises, than anything I have seen so far.</p></blockquote>
+<p>I am quoting this because I wish to lend it my signature<sup><a href="#footnote_1_46817" id="identifier_1_46817" class="footnote-link footnote-identifier-link" title="Italian firma, whence firm in English. Believe it or not this is not the first time around when people end up represented, symbolised and meaningful through their signature alone. It's at the very least the second time.">ii</a></sup> and whatever weight that may carry. The man is absolutely correct, in that crystal clear manner which scarcely finds more time in the public eye than the fleeting second of an obscure mail list.<sup><a href="#footnote_2_46817" id="identifier_2_46817" class="footnote-link footnote-identifier-link" title="Vulgus ex veritate pauca, ex opinione multa aestimat. Also in Italian.">iii</a></sup></p>
+<p>I think this pretty much sums up the situation we have been enduring since that very first time the socialist borg broke into the mainstream of public discussion, in France, in 1789. Without respite since then increasingly organised hordes of grasshoppers raid the increasingly elusive ants of this world.<sup><a href="#footnote_3_46817" id="identifier_3_46817" class="footnote-link footnote-identifier-link" title="The fact that wikipedia rates that ancient fable as `morally ambivalent` is quite indicative of the degree of decay.">iv</a></sup></p>
+<p>The entire system is based on two pillars. Population increase is one of them, because : </p>
+<ul>
+<li>the larger the population, the more grasshoppers available. If you wish to cause trouble more is better than few, that's all there is to it, large groups of mindless zombies are more impressive to the individual eye than smaller groups of same.</li>
+<li>people are born stupid, and so the more of them there are around the greater the cost and effort needed to educate them into humanity, which means the less likely it is someone might be able to do it.</li>
+<li>people require resources to live, which means the larger the population the larger the pressures it puts on the environment, which can then be recycled into justifications for the perverse system itself. This is always how socialism works politically - it manufactures crisis, it then blames it on "<em>вредительство</em>", then the socialists intervene to "fix" the problem, everyone takes a pay cut<sup><a href="#footnote_4_46817" id="identifier_4_46817" class="footnote-link footnote-identifier-link" title="If you compare quality of life since the late 1700s you might discover that in objective terms it's moving slowly but monotonically towards zero.">v</a></sup> and everyone's happy. What can I tell you, it works with zombies.</li>
+</ul>
+<p>The other is debasement of... well... pretty much everything. The currency must be debased because that's the only way to hide the fact that your parents worked less than you and enjoyed their life more, and their parents in turn worked less than them and enjoyed their life more and on and on. Culture must be debased, and for this end education is perverted into something very akin to penitentiary - under the guise of making prison more like school the reverse is of course accomplished. </p>
+<p>Hierarchy must be debased, in all places and venues. Nothing serves better to ruin the natural hierarchy of politics as electing slime by the fateful combination of "low information voters" with prisonguard "educators", all this covered under an array of <a href="http://trilema.com/2013/soft-consensus-aka-fecal-matter/">fecal matter</a> generously distributed as "commentary" by an array of grasshoppers promoted to bugle blowers. Nothing serves better to ruin the natural hierarcy of business as promoting idiotic representations about how "money doesn't matter", well backed by careful and perpetual debasement of the currency (for the greater good, of course). Nothing serves better to ruin the natural hierarchy of everyday social life than creating strange, nonsensical "rules of conduct" prohibiting the most natural acts like touching or <a href="http://trilema.com/2012/the-nigger-homeowners-and-other-niggers/">using magic words</a>.</p>
+<p>There's a catch though : pretty much all this infernal machinery of doom depends upon the continual, endless and unavoidable debasement of the currency. If inflation is no longer a fact, if avoiding it becomes not common but even possible, nothing in the grand scheme of socialism works anymore. Nothing at all, everything depends on that. And so we end up with meaningless disputes about the <a href="http://trilema.com/2012/lets-dig-a-little-deeper-into-this-entire-deflation-problem/">completely imaginary dangers</a> of an undebasable currency. Soon enough we'll end up with the blaming of all the problems socialism generates on the non-debasable currency - and in fact the only reason this is not happening today is that in the estimation of the socialists not enough people know about it yet. </p>
+<p>I understand why Mr. Donald is so conservatively guarded about the prospects of this clash. I, on the other hand, am a little younger than him. </p>
+<p>PS. Incidentally, what he mentions, a "government sponsored security update" has just happened. Ordinary users were just bamboozled by it. Funny how being young is no protection against being wrong, contrary to what one might otherwise think.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_46817" class="footnote">He also proceeded to implement a prototype of that original specification, prototype of which he obviously didn't think much if at all, judging by the quality of the code he output and the sort of design choices he made - it was to be a quick and dirty example of the specification, certainly nothing more than that. [<a href="#identifier_0_46817" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_46817" class="footnote">Italian <em>firma</em>, whence firm in English. Believe it or not this is not the first time around when people end up represented, symbolised and meaningful through their signature alone. It's at the very least the second time. [<a href="#identifier_1_46817" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_46817" class="footnote"><em>Vulgus ex veritate pauca, ex opinione multa aestimat</em>. Also in Italian. [<a href="#identifier_2_46817" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_46817" class="footnote">The fact that <a href="http://trilema.com/2013/wikipedia-the-special-olympics-for-the-mentally-retarded/">wikipedia</a> rates that ancient fable as "morally ambivalent" is quite indicative of the degree of decay. [<a href="#identifier_3_46817" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_46817" class="footnote">If you compare quality of life since the late 1700s you might discover that in objective terms it's moving slowly but monotonically towards zero. [<a href="#identifier_4_46817" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/of-men-and-mice/">Of men and mice</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/boys-and-girls-i-got-news-were-being-probed/">Boys and girls, I got news : we're being probed.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/digging-through-archives-yields-gold/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/digging-through-archives-yields-gold/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>23 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-92339" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92339" title="">Friday, 15 March 2013</a>
+							</div>
+						<p>You have quotes &lt;3.</p>
+						</li>
+
+										<li id="comment-153225" class="commentbody"><div class="commenthead"><img alt='G`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">G</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153225" title="">Friday, 31 July 2020</a>
+							</div>
+						<p>What do you make of the said clash now, 7 years after the article?<br />
+How do you think it will play out, as people realize Bitcoin being the best way of protecting against inflation, government taking note and cracking down on it, because they don't want the power of debasing currency and engaging in socialist idiocy taken away?<br />
+What do you make of SegWit, making its way into Bitcoin like cancer, or other proposed "improvements" like Taproot and whatnot? (If not government sponsored, at least very deluded updates, difference doesn't really matter in the end).</p>
+						</li>
+
+										<li id="comment-153226" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153226" title="">Friday, 31 July 2020</a>
+							</div>
+						<p>I don't think talking of "government" is adequate in any serious context. One might as well talk of Santa Claus or Divine Wrath. It's true that at some point in the past a large-ish number of people actually thought such a thing as this "government" dohickey exists or might be existing -- but those times are well past. One could of course attempt to ignore that fact, but anachronism is anachronism, at best quaint, in all cases ineffectual.</p>
+<p>"Government" aside, the idiot wave, as exemplified by the recent <a href=http://trilema.com/2020/san-jose-vive-and-other-narrative-fancies-of-the-failed-female-state/ >WHO-led hysterics</a>, is strictly incapable of any sort of meaningful action, and entirely irrelevant to any discussion of Bitcoin or its phenomenological downstream -- much like a discussion of sheep herding behaviours is irrelevant to stews and cooking. The people abducting highschoolers for <a href=http://trilema.com/2014/caged-tit/ >the basic purpose</a> don't tend to seriously review whatever "<a href=http://trilema.com/2012/cum-ne-prezentam-si-cum-nu-ne-prezentam-online/?b=oraco&#038;e=le#select>oracles</a>" the girls that were compiled right before being helped across the chasm (ay quinto regimiento de mi vida, quinto quinto quinto regimiento de mi muerte)  ; and I really don't give much of a shit about the equivalent minutia, nor is anyone else that I know of (and mind <a href=http://trilema.com/2014/a-compendium-of-basic-points-about-bitcoin-for-the-benefit-of-various-confused-noobs/?b=ancient&#038;e=and#select>the gap</a>). </p>
+<p>Other than that, my last word on "common people" being in any sense or to any degree involved occurred <a href=http://trilema.com/2020/closure/ >earlier this year</a>. All I can say to you personally is drop dead, that was your last chance.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-139300">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-wonder-of-inflation?b=use%20to%20creat&amp;e=that#select' class='url'>The wonder of inflation on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139300" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] use to create their imaginary arguments about how the imperial finances should be managed. In other words, If a small number of entities are issuing new coins, this is more resistant to state attack that [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139309">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/in-which-life-moves-on?b=asked%20me%20poi&amp;e=d%20of#select' class='url'>In which life moves on. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139309" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] asked me point blank and well... Bitcoin happened. I stumbled on the original paper, then followed some of the original discussions and within days I was buying my first Bitcoins.viii Maybe one of these days I will get a hold of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139379">
+					<div class='trackhead'>
+						<div class="commentcount">6</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/playing-with-words?b=That%27s%20what%20&amp;e=will#select' class='url'>Playing with words on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139379" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] That's what those are there for, "human soul extract" would work just as good for a label. [&#8617;]Firma [&#8617;]If mathematically inclined, call them constants, why not. [&#8617;]In which case you will [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139699">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-basics-of-banking-a-discussion?b=has%20quit%20%28Pi&amp;e=%20wit#select' class='url'>The basics of banking. A discussion. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139699" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] has quit (Ping timeout: 260 seconds) &mdash;&mdash;&mdash;Don't ask to ask. Just ask. [&#8617;]Once the organised thieves started their attack on prosperity, inflation was redefined to "mean" something meaningless, to wit [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140517">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/progress-and-revolution?b=statistics%20o&amp;e=%20hop#select' class='url'>"Progress" and "Revolution" on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140517" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] statistics of is some sort of recent innovation. Guess what : not only is it not at all recent (the French socialists did it, also in the XVIIIth century) but it is certainly no innovation. Unless you count the rabbit's hop [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140546">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/usgavin-the-lolcow?b=an%20older%20dis&amp;e=made#select' class='url'>USGavin, the lolcow on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140546" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] an older discussion of this topic, back in 2009, on the original boards Satoshi frequented :  Government sponsored enterprises enter the business, in due course bad behavior is made [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140564">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/old-texts-on-traditional-marriage-vampirism-and-gayety?b=makes%20the%20fo&amp;e=into#select' class='url'>Old texts on traditional marriage ; vampirism and gayety. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140564" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] makes the forced mistake of taking its payment obligations seriously, which France does not even seriously consider, not even for a moment. This is a forced mistake for reasons we won't get into [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140666">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-wisdom-of-crowds-apparently-it-mostly-depends-on-the-crowds-in-question?b=any%20kind%20of%20&amp;e=%20you#select' class='url'>The wisdom of crowds. Apparently, it mostly depends on the crowds in question. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140666" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] any kind of surrender. Consider yourself : why is money attacked by the socialist horde ? Because there's something there to attack. The correct solution, then, is to make banking optional, and issuance immutable. What, if you [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140786">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/time-to-recuperate-this-chauvinism-thing?b=French%20Socia&amp;e=ill%29#select' class='url'>Time to recuperate this chauvinism thing. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140786" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] French Socialist Republic would have honored the obligations it itself undertook (which of course it did not, like the US Socialist Republic isn't going to, like no socialist state ever did or ever will) [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141744">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/btmsr-and-fundamental-justice-reform?b=was%20briefly%20&amp;e=from#select' class='url'>B,TMSR~ and fundamental justice reform. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141744" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] was briefly stemmed by a decree that no new types of writs may issue, and within a few short years this resulted in a fundamental redefinition of the legal process, towards "justice" and away from [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142683">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/ideological-history-of-the-republic?b=2013%5D%20A%20conc&amp;e=ping#select' class='url'>Ideological History of the Republic on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142683" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] 2013] A concise explanation of the functioning of inflation in socialism is unearthed. While in no sense novel, this snippet will nevertheless prove extremely influential in shaping [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142917">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/how-the-other-half-lives-a-very-seriously-funny-article?b=sitting%20some&amp;e=book#select' class='url'>How the other half lives - a very seriously funny article. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142917" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] sitting somewhere on a piece of paper as a purely notional asset waiting for "someone" to decide to roll it up into an even larger... purely notional asset ? I recall Microsoft paying 50 bn for Webvan, Facebook [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143339">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/the-bitcoin-learning-tournament?b=To%20celebrate&amp;e=gn%29%2C#select' class='url'>The Bitcoin learning tournament. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143339" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] To celebrate nine years since the original publication of the original paper at the foundation of The Most Serene Republic (the world's only sovereign), [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144364">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/its-2018-but-the-average-guy-still-belongs-in-chains?b=how%20socialis&amp;e=ood%2C#select' class='url'>It's 2018, but the "average guy" still belongs in chains on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144364" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] how socialism always works, in all fields, because that's what socialism fundamentally is : ruin and destruction of everything right, good, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146798">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-chicago-tea-party-adnotated?b=There%27s%20also&amp;e=oint#select' class='url'>thelastpsychiatrist.com - Chicago Tea Party. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146798" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] There's also an article explaining how democracy attacks sanity (no, not the economic discussion, a sociological one) through inflating the basis so as to lower the average quality to the point [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147707">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://fixpoint.welshcomputing.com/2020/jfws-130-top-trilema-picks-to-date/?b=Digging%20thro&amp;e=gold#select' class='url'>JFW's 130 top Trilema picks to date &laquo; Fixpoint</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147707" title="">Saturday, 7 March 2020</a>
+					</div>
+					<p>[...] Digging through archives yields gold [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-151074">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-dire-signs-in-the-sky/?b=the%20guise%20of&amp;e=list#select' class='url'>The dire signs in the sky on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-151074" title="">Friday, 22 May 2020</a>
+					</div>
+					<p>[...] the guise of "fightin' crime" &#38; such superheroic nonsense (really, for the transparent purpose of promoting the "legitimate"i interests of the welfare recipient), the worldwide socialist [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-155406">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/pimp-by-robert-beck-aka-iceberg-slim-adnotated-without-permission-chapter-14-the-mistake?b=%22defense%20pla&amp;e=n%20of#select' class='url'>Pimp. By Robert Beck aka Iceberg Slim. Adnotated without permission. Chapter 14 -- The mistake. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-155406" title="">Monday, 26 October 2020</a>
+					</div>
+					<p>[...] "defense plants" aka federal power grab will "put on the market" (in the sense of force-flooding the market with) its own, watered down, ineffectual version of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-161875">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/the-current-instagram-algorithm-or-monkeys-and-microscopes-again/?b=after%20his%29%20a&amp;e=%5DAnd#select' class='url'>The current Instagram algorithm, or monkeys and microscopes again on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-161875" title="">Sunday, 28 March 2021</a>
+					</div>
+					<p>[...] after his) and Sandoz didn't approve. [&#8617;]By which we mean -- other profiles. Notice perhaps the inflation? Yes, it's absolutely necessary, because of the nonsense cockroaches in your head. [&#8617;]And [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-162912">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/degeneration-by-max-nordau-adnotated-the-symptoms/?b=best%2C%20the%20mo&amp;e=%20the#select' class='url'>Degeneration, by Max Nordau. Adnotated. The Symptoms. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-162912" title="">Tuesday, 20 April 2021</a>
+					</div>
+					<p>[...] best, the more stubbornly perdurant as it is perfectly baseless ; then "expanding the franchise" to mix the worthless with the worthy "indistinguishably", as the fantasy goes, until the flood of low value "equals" brings down the [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="46817" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835115-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-46817")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-46817");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-46817");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

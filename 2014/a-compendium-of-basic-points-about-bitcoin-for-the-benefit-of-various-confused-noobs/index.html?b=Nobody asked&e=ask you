@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>A compendium of basic points about Bitcoin for the benefit of various confused noobs. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The fates are cruel an' the chances are slim<br />so grab a good sieve and dig in.<br />~<a href=http://trilema.com/2020/nannare/#comment-147503>my elder slavegirl</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-52959"><div class="post" id="post-52959">                    <h1><a href="http://trilema.com/2014/a-compendium-of-basic-points-about-bitcoin-for-the-benefit-of-various-confused-noobs/" rel="bookmark" title="Permanent Link to A compendium of basic points about Bitcoin for the benefit of various confused noobs.">A compendium of basic points about Bitcoin for the benefit of various confused noobs.</a></h1>                        <div class="date">                                     Wednesday, 26 February, Year 6 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><strong>Point 1 :</strong> #bitcoin-assets is the forum.</p>
+<blockquote><p><strong>ninjashogun</strong><sup><a href="#footnote_0_52959" id="identifier_0_52959" class="footnote-link footnote-identifier-link" title="The whole story of this guy's interaction with the forum is interesting, so take the time to read it. Seems to me like it will make the blueprint for many future such interactions.
+Most of the lesson is contained in my text excusing him :
+ninjashogun listen, you're really misbehaving here, albeit perhaps unintentionally. The correct approach is to lurk and read the logs for about half a year. Then you'll be in a position to meaningfully engage th dragons here. I get that this doesn't help you any in the sense of getting you to do what you want to do right now, and while that is unfortunate, it's nevertheless what it is.
+and his parting words : 
+guys I've received some suggestions to `lurk` and `read logs` here, which I wouldn't really have time to do. It was nice meeting you all though and I may be back as the project progresses. Overall I don't think I will be spending a ton of time building WoT, advisors, etc - as I have real-world references for the moment that I would expect anyone to consult.
+His mistake, of course, is to imagine this self-proclaimed `real world` is worth two shits. We, of course, are in the business of reducing it to cinders, much in the manner that very real world reduced feudalism to nothing. I'm sure cca 1400 some knight somewhere went `I care not for building a good reputation with the Hansa, for my lords know me`. Arguably that approach wasn't the most effective or desirable for him and especially for his children. Unarguably, Internet time flows a lot faster than medieval time.
+">i</a></sup>	So what I was thinking is that this isn't a real 'forum' (in that most IRC channels are basically just trolls etc) and that I would just escalate to another form of contact (skype etc) and be in touch while it gets rolled out.<br />
+<strong>mircea_popescu</strong>	No, this is the real forum. When the SEC wanted to talk to me I forced them to come here..<br />
+<strong>ninjashogun</strong>	You're kidding right?<br />
+<strong>mircea_popescu</strong>	I'm dead serious. This is the forum. </p></blockquote>
+<p>Note that the knowledge of this fact <em>does not</em> give you blanket license <em>to speak there</em>. See the <a href="http://trilema.com/2013/bitcoin-assets-rules-and-regulations/">rules and regulations</a>, spend <em>at least</em> <u>six months</u> reading the <a href="http://trilema.com/category/logs/">logs</a>, and generally follow the behaviour expected of children<sup><a href="#footnote_1_52959" id="identifier_1_52959" class="footnote-link footnote-identifier-link" title="The behaviour expected of children is active submission. That is, you are not to make assertions, of any kind. We are not interested in your needs as a person, and you aren't a person in any sense, as far as we're concerned. Go make assertions to your mother, girlfriend or absent these pet.
+You are to ask questions, and of the sort that denotes an active and well oiled intellectual life inside your head. A good primer of how such a thing is accomplished, albeit written from a CS rather than Finance perspective is Eric Raymond's How To Ask Questions The Smart Way.
+Notably, Freenode has the following turd floating in its Channel Guidelines : 
+Don't be elitist. Today's newbies are tomorrow's experts. A support channel is a place where people with knowledge lead by example. Is the example you want to set that technical knowledge is a hierarchy of control, or that people with knowledge have an inherent social advantage over people who don't? Please think before referring people to links such as this one, which combine suggestions for making support requests with a casual attitude of superiority over the newbie. Helping other people takes patience. It's better not to answer a question than to use the opportunity to emphasize the limitations of the person you're trying to help.
+This is singled out in order to specify that it is exactly wrong and entirely broken a perspective. Bitcoin is elitist by nature - in fact the only reason Bitcoin even exists in the first place is to force any human endeavour aimed at limiting elitism outside of the realm of possibility. This includes welfare, and the US Congress, with its bizarre notions of `equality` among people, and Hollywood, which apparently can't fucking make a movie these days that's not `affirmative` of some unimportant bullshit out of business. If you have a problem digesting these points and mentally aligning yourself with Bitcoin, find a better hobby, something that closer suits your mental impactions. Trading Magic the Gathering cards, for instance.">ii</a></sup> in civilised societies.<sup><a href="#footnote_2_52959" id="identifier_2_52959" class="footnote-link footnote-identifier-link" title="The United States are not currently, nor have they been generally speaking throughout their history a civilised society. The historical problem is both obvious and outside of our current interest, but the current problem is aptly explained by the classics : 
+That was a test which the spectators could apply for themselves; the whole audience, instead of being mute, became vociferous, and a theatrocracy took the place of an aristocracy. Could the judges have been free, there would have been no great harm done; a musical democracy would have been well enough--but conceit has been our ruin. Everybody knows everything, and is ready to say anything; the age of reverence is gone, and the age of irreverence and licentiousness has succeeded. 'Most true.' And with this freedom comes disobedience to rulers, parents, elders,--in the latter days to the law also; the end returns to the beginning, and the old Titanic nature reappears--men have no regard for the Gods or for oaths; and the evils of the human race seem as if they would never cease. Whither are we running away? Once more we must pull up the argument with bit and curb, lest, as the proverb says, we should fall off our ass.
+">iii</a></sup></p>
+<hr /> <center>~ * ~</center><br />
+<hr />
+<p><strong>Point #2</strong>, ancient and <a href="http://trilema.com/2013/in-re-noobs-and-conventions/">oft repeated</a> : </p>
+<blockquote><h1><font color=red>TALKING ABOUT BITCOIN, EVEN IF IN A GROUP, DOES NOT MAKE YOU PART OF BITCOIN.</font></h1>
+</blockquote>
+<p>This specifically includes all groups of foreigners to <a href="http://trilema.com/2014/the-most-serene-republic-and-its-laws/">our esteemed Republic</a>, and equally so : whether it be irrelevant derps such as <A href=http://trilema.com/category/logs/?date=25-02-2014#531372>Tom Carper</a><sup><a href="#footnote_3_52959" id="identifier_3_52959" class="footnote-link footnote-identifier-link" title="He's the guy derping about 
+“My staff is working closely with relevant federal agencies to determine what lessons can be learned from this failure to help ensure this does not happen here in the United States.
+“As any industry matures it will face growing pains and there will be individuals who believe they can use the fog of uncertainty to cover up their follies.  When it comes to policy, it is the responsibility of the federal government to steer the boat, not row the boat.  Our Committee will continue to work closely with relevant U.S. government entities to steer the boat away from nefarious actors - and it’s up to legitimate, law abiding industry partners to row the boat into law abiding waters.”
+">iv</a></sup> or such as The Bitcoin Wife<sup><a href="#footnote_4_52959" id="identifier_4_52959" class="footnote-link footnote-identifier-link" title="She's the chick derping about
+
+">v</a></sup>, it's all the same.</p>
+<p>Bitcoin is not here for you to opine about it. Bitcoin is here to profoundly and oft times painfully change your life. Whether you agree or not, whether you give permission or not, whether you think it "acceptable" or "called for" or whatever else. <span style="background-color:#d3d3d3" id="select">Nobody asked you, nobody intends to ask you</span>. </p>
+<p>The available stategies open before you are quite the same as the raped woman has historically encountered : either learn to love your rapist and make him an excellent wife - or else die, beaten black and blue. </p>
+<p><strong>You are the raped woman.</strong> Get used to it, because this Bitcock ain't gonna suck itself.</p>
+<hr /> <center>~ * ~</center><br />
+<hr />
+<p><strong>Point #3</strong>. We <a href="http://trilema.com/category/logs/?date=10-02-2014#495848">keep track</a>, and <a href="http://trilema.com/category/logs/?date=07-02-2014#487026">we know where you live</a>. It isn't a matter of Bitcoin "being anonymous" or not. It's a matter of you not being anonymous. Not now, not ever.</p>
+<p>You may think you're at liberty to write any idiocy, to emit any stupidity, to engage in any activity. This delusion of yours is both unwelcome and dangerous (for you). Whatever you think shields you now and hope will in the future shield you from the consequences of your actions - be it self-allocated "immunity" in the manner the various Nazi officials told each other that they won't ever prosecute themselves for anything they do ; be it a misunderstanding of the freedom of the press<sup><a href="#footnote_5_52959" id="identifier_5_52959" class="footnote-link footnote-identifier-link" title="The press is free to publish sense, not nonsense.">vi</a></sup> ; be it the Caliban nature of youth<sup><a href="#footnote_6_52959" id="identifier_6_52959" class="footnote-link footnote-identifier-link" title="As I explained before : the problem Bitcoin presents for teenagers is marked indeed. 
+Factually, both as a function of normal development of the human brain right around puberty as well as a result of quite common societal pressures, teenagers and especially teenager males engage in deceitful behaviour. This is in part in order to `try on` the roles of adulthood, in part to continue their play (which obviously means training) in more advanced (ie, meta) fields. Just like the 9yo wishes to jump up and down trees so as to train his fine motor control, just so the 15 yo wishes to pretend like he's an executive or whatever.
+Bitcoin currently knows of no such thing : you've made a claim, it's been proven wrong, you're fucked. Permanently. 
+This is a serious problem, and incidentally the reason why you are well advised to never deal with either minors or entities which refuse to disclose their identity : in strictly following such policy you help carve a little space for humanity in this unforgiving, Borg mathematic reality of the coin ; and I suspect it would be good for you and for me and for all of us. Insulate children from the harm they do not themselves know or recognize, and in so doing be a responsible part of the world. Don't be one of the idiots fawning over Bitcoinica because it tickles your nonsensical expectations of `you can do anything`-ism when a 17 yo kid throws himself in the active volcano `for fun`. Instead, think that by staying away from nonsense you become less likely to be slain by nonsense in the future.
+Also, the difficulty of doing even this little bit, as clearly useful as it may be, and as necessary and welcome, may help you understand why Point #2 above reads as it reads. ">vii</a></sup> - will probably not behave in the way you expect. This is why you're encouraged to only speak once you understand enough of the forum and of reality : to protect you. From yourself, historically your biggest enemy.</p>
+<p>You will in the future need a job, just like you need a job today. You will need friends in the future, just like you need friends today. You will need many plurious things you need today without even knowing about it. Careful what you say about Bitcoin and careful what you do. We sure as all hell keep track and there is no force on earth which may wash your public record any more than it can wash the blockchain. It's forever, Bitcoin plays for keeps, and this may well end up <a href="http://thewhet.net/2012/shall-be-delivered/">costing you</a>.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_52959" class="footnote">The <a href="http://trilema.com/category/logs/?date=25-02-2014#528073">whole story</a> of this guy's interaction with the forum is interesting, so take the time to read it. Seems to me like it will make the blueprint for many future such interactions.</p>
+<p>Most of the lesson is contained in my text excusing him :</p>
+<blockquote><p>ninjashogun listen, you're really misbehaving here, albeit perhaps unintentionally. The correct approach is to lurk and read the logs for about half a year. Then you'll be in a position to meaningfully engage th dragons here. I get that this doesn't help you any in the sense of getting you to do what you want to do right now, and while that is unfortunate, it's nevertheless what it is.</p></blockquote>
+<p>and his parting words : </p>
+<blockquote><p>guys I've received some suggestions to "lurk" and "read logs" here, which I wouldn't really have time to do. It was nice meeting you all though and I may be back as the project progresses. Overall I don't think I will be spending a ton of time building WoT, advisors, etc - as I have real-world references for the moment that I would expect anyone to consult.</p></blockquote>
+<p>His mistake, of course, is to imagine this self-proclaimed "real world" is worth two shits. We, of course, are in the business of reducing it to cinders, much in the manner that very real world reduced feudalism to nothing. I'm sure cca 1400 some knight somewhere went "I care not for building a good reputation with the Hansa, for my lords know me". Arguably that approach wasn't the most effective or desirable for him and especially for his children. Unarguably, Internet time flows a lot faster than medieval time.<br />
+ [<a href="#identifier_0_52959" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_52959" class="footnote">The behaviour expected of children is active submission. That is, you are not to make assertions, of any kind. We are not interested in your needs as a person, and you aren't a person in any sense, as far as we're concerned. Go make assertions to your mother, girlfriend or absent these pet.</p>
+<p>You are to ask questions, and of the sort that denotes an active and well oiled intellectual life inside your head. A good primer of how such a thing is accomplished, albeit written from a CS rather than Finance perspective is Eric Raymond's <a href=http://www.catb.org/~esr/faqs/smart-questions.html>How To Ask Questions The Smart Way</a>.</p>
+<p>Notably, Freenode has the following turd floating in its Channel Guidelines : </p>
+<blockquote><p><strong>Don't be elitist.</strong> Today's newbies are tomorrow's experts. A support channel is a place where people with knowledge lead by example. Is the example you want to set that technical knowledge is a hierarchy of control, or that people with knowledge have an inherent social advantage over people who don't? Please think before referring people to links such as this one, which combine suggestions for making support requests with a casual attitude of superiority over the newbie. Helping other people takes patience. It's better not to answer a question than to use the opportunity to emphasize the limitations of the person you're trying to help.</p></blockquote>
+<p>This is singled out in order to specify that it is exactly wrong and entirely broken a perspective. Bitcoin is elitist by nature - in fact the only reason Bitcoin even exists in the first place is to force any human endeavour aimed at limiting elitism outside of the realm of possibility. This includes welfare, and the US Congress, with its bizarre notions of "equality" among people, and Hollywood, which apparently can't fucking make a movie these days that's not "affirmative" of some unimportant bullshit out of business. If you have a problem digesting these points and mentally aligning yourself with Bitcoin, find a better hobby, something that closer suits your mental impactions. Trading Magic the Gathering cards, for instance. [<a href="#identifier_1_52959" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_52959" class="footnote">The United States are not currently, nor have they been generally speaking throughout their history a civilised society. The historical problem is both obvious and outside of our current interest, but the current problem is aptly explained by <a href="http://www.gutenberg.org/cache/epub/1750/pg1750.txt">the classics</a> : </p>
+<blockquote><p>That was a test which the spectators could apply for themselves; the whole audience, instead of being mute, became vociferous, and a theatrocracy took the place of an aristocracy. Could the judges have been free, there would have been no great harm done; a musical democracy would have been well enough--but conceit has been our ruin. Everybody knows everything, and is ready to say anything; the age of reverence is gone, and the age of irreverence and licentiousness has succeeded. 'Most true.' And with this freedom comes disobedience to rulers, parents, elders,--in the latter days to the law also; the end returns to the beginning, and the old Titanic nature reappears--men have no regard for the Gods or for oaths; and the evils of the human race seem as if they would never cease. Whither are we running away? Once more we must pull up the argument with bit and curb, lest, as the proverb says, we should fall off our ass.</p></blockquote>
+<p> [<a href="#identifier_2_52959" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_52959" class="footnote">He's the guy derping about </p>
+<blockquote><p>“My staff is working closely with relevant federal agencies to determine what lessons can be learned from this failure to help ensure this does not happen here in the United States.</p>
+<p>“As any industry matures it will face growing pains and there will be individuals who believe they can use the fog of uncertainty to cover up their follies.  When it comes to policy, it is the responsibility of the federal government to steer the boat, not row the boat.  Our Committee will continue to work closely with relevant U.S. government entities to steer the boat away from nefarious actors - and it’s up to legitimate, law abiding industry partners to row the boat into law abiding waters.”</p></blockquote>
+<p> [<a href="#identifier_3_52959" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_52959" class="footnote">She's the chick derping about<br />
+<a href="http://trilema.com/category/logs/?date=24-02-2014#524452"><img src="http://trilema.com/wp-content/uploads/2014/02/thebitcoinderp.png" alt="thebitcoinderp" title="thebitcoinderp" width="520" height="395" class="alignleft size-full wp-image-52967" /></a><br />
+ [<a href="#identifier_4_52959" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_52959" class="footnote">The press is free to publish sense, not nonsense. [<a href="#identifier_5_52959" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_52959" class="footnote">As I explained before : the problem Bitcoin presents for teenagers is marked indeed. </p>
+<p>Factually, both as a function of normal development of the human brain right around puberty as well as a result of quite common societal pressures, teenagers and especially teenager males engage in deceitful behaviour. This is in part in order to "try on" the roles of adulthood, in part to continue their play (which obviously means training) in more advanced (ie, meta) fields. Just like the 9yo wishes to jump up and down trees so as to train his fine motor control, just so the 15 yo <a href="http://www.imdb.com/title/tt0091042/">wishes to pretend like he's an executive</a> or whatever.</p>
+<p>Bitcoin currently knows of no such thing : you've made a claim, it's been proven wrong, you're fucked. Permanently. </p>
+<p>This is a serious problem, and incidentally the reason why you are well advised to never deal with either minors or entities which refuse to disclose their identity : in strictly following such policy you help carve a little space for humanity in this unforgiving, Borg mathematic reality of the coin ; and I suspect it would be good for you and for me and for all of us. Insulate children from the harm they do not themselves know or recognize, and in so doing <a href="https://bitcointalk.org/index.php?topic=106391.0">be a responsible part</a> of the world. Don't be one of the idiots fawning over Bitcoinica because it tickles your nonsensical expectations of "you can do anything"-ism when a 17 yo kid <a href="https://bitcointalk.org/index.php?topic=119745.msg1303342#msg1303342">throws himself in the active volcano</a> "for fun". Instead, think that by staying away from nonsense you become less likely to be slain by nonsense in the future.</p>
+<p>Also, the difficulty of doing even this little bit, as clearly useful as it may be, and as necessary and welcome, may help you understand why Point #2 above reads as it reads.  [<a href="#identifier_6_52959" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2014/bitcoin-was-written-by-the-retarded-part-ii/">Bitcoin was written by the retarded, part II</a></div>
+                <div class="alignright"><a href="http://trilema.com/2014/are-you-a-sf-writer-heres-a-free-idea-for-you/">Are you a SF writer ? Here's a free idea for you</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2014/a-compendium-of-basic-points-about-bitcoin-for-the-benefit-of-various-confused-noobs/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2014/a-compendium-of-basic-points-about-bitcoin-for-the-benefit-of-various-confused-noobs/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>16 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-116086" class="commentbody"><div class="commenthead"><img alt='Gabriel Laddel`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Gabriel Laddel</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-116086" title="">Sunday, 27 December 2015</a>
+							</div>
+						<p>See also, <a href="http://trilema.com/2015/theres-a-one-bitcoin-reward-for-the-death-of-pieter-wuille-details-below/">http://trilema.com/2015/theres-a-one-bitcoin-reward-for-the-death-of-pieter-wuille-details-below/</a></p>
+						</li>
+
+										<li id="comment-117175" class="commentbody"><div class="commenthead"><img alt='Gabriel Laddel`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Gabriel Laddel</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117175" title="">Monday, 2 May 2016</a>
+							</div>
+						<p>For n00bs. #bitcoin-assets was "the forum". The forum is now found on freenode, the channel is #trilema.</p>
+						</li>
+
+										<li id="comment-117176" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117176" title="">Monday, 2 May 2016</a>
+							</div>
+						<p>Werd.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-107643">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://contravex.com/2014/09/12/architecture-in-riga/' class='url'>Architecture in Riga | Contravex: A blog by Pete Dushenski</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-107643" title="">Friday, 12 September 2014</a>
+					</div>
+					<p>[...] the fro has definitely gained enough mass that I can experiment with it. [&#8617;]Formerly known as Hansabank. [&#8617;]To say nothing of the building itself, which, really, I find quite visually [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-127190">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2018/12/10/my-talk-of-bitcoin-at-reading-uni/' class='url'>My Talk of Bitcoin at Reading Uni &laquo; Ossasepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-127190" title="">Tuesday, 11 December 2018</a>
+					</div>
+					<p>[...] technologiezzz") that are usually touted about as "innovative!!" by all those "involved" through mere talking and repeated mentioning of all the buzz words in whatever happens to be the current [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140096">
+					<div class='trackhead'>
+						<div class="commentcount">6</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-forum-and-its-implementation?b=you%20turn%20blu&amp;e=%20not#select' class='url'>The forum and its implementation. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140096" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] you turn blue in the face, it's not liable to be useful to these people. Why not [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140729">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/bitcoin-in-argentina-exactly-nothing-to-do-with-the-derps?b=Well%20I%20read%20&amp;e=diot#select' class='url'>Bitcoin in Argentina : exactly nothing to do with the derps on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140729" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Well I read something about it sometime, and I think even discussed it with some people, who were also uninvolved. [&#8617;]There's no "otherwise", not really. The only difference between some clueless idiot [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140794">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/teenage-boys-the-premier-source-of-comedy-gold?b=Oh%2C%20you%20had%20&amp;e=%20she#select' class='url'>Teenage boys, the premier source of comedy gold on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140794" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Oh, you had no idea that's how the world works ? How silly of you! Some nobody calls herself "the bitcoin wife", that means she's actually part of Bitcoin now, and relevant for Bitcoin. Because of what she [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140859">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-boy-blog-network?b=If%20you%20wish%20&amp;e=%20own#select' class='url'>The Boy Blog Network on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140859" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] If you wish to matter, you give yourself over to people like Lord Camrose. If you do not do that, you will not matter. That's it. [&#8617;]   Category: Gandesc, deci gandesc     Comments feed : RSS 2.0. Leave your own [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140928">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/lets-address-some-of-the-more-common-pseudo-arguments-raised-by-the-very-stupid-people-that-like-the-gavin-scamcoin-proposal?b=the%20actual%20c&amp;e=T%20OF#select' class='url'>Let's address some of the more common pseudo-arguments raised by the very stupid people that like the Gavin scamcoin proposal on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140928" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the actual community of people that create things and own things. Related to this, let us reiterate those ancient points about Bitcoin : TALKING ABOUT BITCOIN, EVEN IF IN A GROUP, DOES NOT MAKE YOU PART OF [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141026">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/futurology-or-the-very-scary-story-of-how-doomed-you-are?b=short%20%3A%20if%20y&amp;e=%20not#select' class='url'>Futurology, or the very scary story of how doomed you are. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141026" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] short : if you're not one of us, you have much more pressing matters to attend to than the block size. Like, for instance, how not [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141763">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/theres-a-one-bitcoin-reward-for-the-death-of-pieter-wuille-details-below?b=passes%20the%20b&amp;e=ween#select' class='url'>There's a one Bitcoin reward for the death of Pieter Wuille. Details below. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141763" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] passes the bits back and forth. Bitcoin is something that happens, on the social level, between holders ; and on the technical level between [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141831">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/thats-right-time-to-move-on-please-do-bitcoin-is-really-not-for-you?b=was%20never%20fo&amp;e=%20for#select' class='url'>That's right, time to move on. Please do. Bitcoin is really not for you. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141831" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] was never for you. Bitcoin was never for the poor ; Bitcoin was never for the voluble if worthless "social media" tramp ; Bitcoin was never for the soi-dissant "activist" aka scammer. Bitcoin was not for [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144679">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/que-he-hecho-yo-para-merecer-esto?b=the%20things%20t&amp;e=%3B%5D%20%20#select' class='url'>Que he hecho YO para merecer esto ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144679" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] the things that crowd the walmarts with their unwelcome presence and purport to communicate their unwelcome "opinions" are not "people like you and me". They're things, exactly like this. [&#8617;]   [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145365">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/so-what-is-the-man-saying?b=a%20couple%20doz&amp;e=what#select' class='url'>So what is the man saying ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145365" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] a couple dozen strings by rote was beyond sufficient for quite a while -- that is to say, until it wasn't anymore. [&#8617;]Yes, they're exactly the same thing. I'm not coincidental nor is coincidence what [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-148090">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/03/27/a-review-of-the-bitcoin-category-on-trilemacom/?b=the%20correct%20&amp;e=....#select' class='url'>A Review of the Bitcoin Category on trilema.com &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148090" title="">Friday, 27 March 2020</a>
+					</div>
+					<p>[...] the correct way to interact with the forum (bitcoin-assets at the time) and with Bitcoin more broadly, i.... [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="52959" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834216-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-52959")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-52959");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-52959");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

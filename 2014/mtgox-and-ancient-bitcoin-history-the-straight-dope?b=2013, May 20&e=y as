@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>MtGox and ancient Bitcoin history - the straight dope. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Heretiquarium.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-52765"><div class="post" id="post-52765">                    <h1><a href="http://trilema.com/2014/mtgox-and-ancient-bitcoin-history-the-straight-dope/" rel="bookmark" title="Permanent Link to MtGox and ancient Bitcoin history - the straight dope.">MtGox and ancient Bitcoin history - the straight dope.</a></h1>                        <div class="date">                                     Friday, 14 February, Year 6 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><strong>First, as to bias :</strong> back in 2011, when I was new and actually could have used support, I asked Karpeles to link<sup><a href="#footnote_0_52765" id="identifier_0_52765" class="footnote-link footnote-identifier-link" title="This was at a time when I was absolutely the only financial mind, and for the matter absolutely the only non-computer-geek involved in Bitcoin. Moreover, asking someone to link your blog in 1993 is quite different from asking them to link your blog in 2013.">i</a></sup> MPOE<sup><a href="#footnote_1_52765" id="identifier_1_52765" class="footnote-link footnote-identifier-link" title="At that time it was still Mircea Popescu's Options Emporium.">ii</a></sup> from MtGox' webpage<sup><a href="#footnote_2_52765" id="identifier_2_52765" class="footnote-link footnote-identifier-link" title="At that time it was pretty much the only Bitcoin exchange.">iii</a></sup>. He wouldn't and we've never been friends since, which is pregnant of the following moral : when you say no to people you don't know, you don't know who you're saying no to. </p>
+<p>MtGox had been self-trading since day one, which is understandable seeing how that's how and why it was even made : the owner wanted a place to trade his Bitcoin. That owner incidentally is in no way related to Karpeles - MtGox was transferred by a US citizen to pretty much anyone who'd take it, out of legal concerns<sup><a href="#footnote_3_52765" id="identifier_3_52765" class="footnote-link footnote-identifier-link" title="That's right. When I say 
+There’s already a clear trend of US born, US citizen founders leaving their country to satisfy the dictates of their investors (or, in more palatable terms, to allign their status with the likely future status of Bitcoin regulation).
+I know what I'm talking about. ">iv</a></sup>. So it ended up with Karpeles and the current gang. </p>
+<p><strong>As a result MtGox was poorly run by incompetent, dishonest schmucks with delusions of self importance from day one. </strong>Let's go into details : </p>
+<p><strong>As to incompetence :</strong></p>
+<ul>
+<li>MtGox was using for self-trades an unlimited special account. Because why not, right ?</li>
+<p>
+<li>When a disagreement broke out with the old owner (over Karpeles refusing to pay up the modest sums he owed as per their agreement) it turned out that old owner still had working passwords - half a year after the transfer was completed! So he proceeded to log into the unlimited selftrading account and pushed MtGox Bitcoin price to 0.01, the lowest it'd go<sup><a href="#footnote_4_52765" id="identifier_4_52765" class="footnote-link footnote-identifier-link" title="Because that's totally how you'd code something like this. If you're retarded.">v</a></sup>.
+<li>
+<br />Need I mention lag<sup><a href="#footnote_5_52765" id="identifier_5_52765" class="footnote-link footnote-identifier-link" title="Dec 2013, Nov 2013, Oct 2013, May 2013 etc etc.">vi</a></sup> ? Or <a href="http://trilema.com/2013/its-been-an-epic-few-days-what-happened/">appallingly poor PR</a> ?<sup><a href="#footnote_6_52765" id="identifier_6_52765" class="footnote-link footnote-identifier-link" title="If you're running any sort of Bitcoin business or would like to, read this. Twice.">vii</a></sup></li>
+<p></p>
+<li>In spite of trading with infinite funds on their own play-pretend exchange, MtGox never managed to turn a profit from it. Let that sink in for a minute, will you.</li>
+</ul>
+<p><strong>As to dishonesty :</strong></p>
+<ul>
+<li>Pretty much everything MtGox ever said publicly was a lie. Everything. Each and every one thing. They lied about the nature of the original "hack", they lied about their financial situation, they lied about the causes of the lag, everything.</li>
+<p></p>
+<li>Pretty much everything MtGox ever said privately was also a lie, and this includes signed paperwork delivered to various authorities. Such as : they announced they're complying with US regulations June 2013, they had their accounts blocked by <a href="http://www.scribd.com/doc/161492071/Bitcoin-Mt-Gox-Warrant-Executed">August 2013</a>. Turns out the various signed affidavits and whatnot weren't actually accurate.</li>
+<p></p>
+<li>They are lying even today, in the 13th hour :<br />
+<blockquote><p>Our initial investigations indicate that a vendor exploited a recently discovered vulnerability in the Bitcoin protocol known as “transaction malleability” to repeatedly withdraw coins from our system until it was completely empty.</p></blockquote>
+<p>It is false that this is either recent, discovered or a vulnerability. The fact that transactions can be altered without the signature of the originator so that they have the same effect but under some examinations appear different has been amply documented since at the latest 2011. Everyone knew this, most people took care of it. Some (incompetent) people didn't. It's in no sense a "vulnerability" of anything but of the application which relies on unstandard, undocumented presumptions.<sup><a href="#footnote_7_52765" id="identifier_7_52765" class="footnote-link footnote-identifier-link" title="Nowhere in the Bitcoin spec can one find a guarantee against malleability as understood here, and therefore one is not at liberty to write applications that rely on such a property.">viii</a></sup></p>
+<p>It is further false that this was "exploited" by a third party. This is merely the expedient if quite transparent manner in which MtGox justifies to the clueless general public its emptying of its own wallets, for the benefit of those select investors who have Karpeles' balls in a vice, and to the detriment of other creditors - such as for instance the unfortunate schmucks who had their resources stolen by <a href="http://trilema.com/2012/amir-taaki-has-done-and-continues-to-do-huge-disservice-to-anyone-serious-involved-in-bitcoin/">Amir Taaki</a>, Patrick Strateman<sup><a href="#footnote_8_52765" id="identifier_8_52765" class="footnote-link footnote-identifier-link" title="This is the genius coder boy who once sent the entire Bitcoinica userbase an email including the entire list of everyone's emails. Because he's hacking Python on a live system and so it goes. Speaking of which, do you know that until recently which is to say yesterday MtGox used the same SOP ?">ix</a></sup> and James McCarthy<sup><a href="#footnote_9_52765" id="identifier_9_52765" class="footnote-link footnote-identifier-link" title="Much better known for his shareholders-on-welfare Bitcoin `stock exchange`, aka GLBSE.">x</a></sup>, assembled together as "Bitcoin Consultancy", a group of fantasy-experts in fantasy-topics that were brought in to sink Bitcoinica<sup><a href="#footnote_10_52765" id="identifier_10_52765" class="footnote-link footnote-identifier-link" title="A few points need mention here :
+
+Strateman works for MtGox now. Seeing how he's fucked anyway, makes little difference if he's fucked for two things or twenty, which should be a great lesson for anyone not understanding why we don't do business with known scammers, and why there is no such thing as `forgiving` : the legal responsibility of the already fucked is not quite the same as yours, unless you're also a scammer yourself.
+
+Bitcoinica was used in a very similar manner, funneling the investor's money into MtGox in order to prop its fractional trade for a little longer. The crater left - what was it, about 40k BTC ? is being sought by some executor to this very day, and with any luck the same executor will handle MtGox, too. Just follow the `vendor`, it's where the scamgang moved.
+
+As documents leaked after the fact reveal, Bitcoinica was also trading on its own, unlimited account, and it also failed to ever make a profit out of it (grep `equity`). And since we're on the funny : the `investors` behind Coinlab are... wait for it... Tihan Seale and Peter Vessenes. You probably remember Tihan as Zhou Thong's mysterious hacker/businessman and artefact collector friend, who magically decided to return stolen goods when told about the powers of the interwebs. Remember that story ?
+">xi</a></sup>.
+ </li>
+</ul>
+<p><strong>As to delusions of self-importance :</strong></p>
+<ul>
+<li>MtGox' first move after receiving some investment was to acquire a defunct Polish exchange<sup><a href="#footnote_11_52765" id="identifier_11_52765" class="footnote-link footnote-identifier-link" title="The one where the CEO-programmer dood was storing Bitcoin wallets in unbacked cloud AWS, which then got rebooted.">xii</a></sup>, in an attempt to pretend like they're a sort of MP of Bitcoin finance, the backstoppers of everything. It cost a lot of money, it failed to deliver the intended result. Might have something to do with the competence required to actually be MP, or who knows, maybe it's just bad luck.</li>
+<p></p>
+<li>The so-called Bitcoin Foundation doohickey was an unholy alliance of scams : MtGox, BFL, <a href="http://trilema.com/2013/ycombinator-continues-to-suck-jointly-and-severally/">Coinlab/base/desk</a> etc<sup><a href="#footnote_12_52765" id="identifier_12_52765" class="footnote-link footnote-identifier-link" title="They also stole Bitcoin Magazine from the original owners, which'd probably deserve more of a mention than this footnote if the rag was actually worth anything in anyone's estimation.">xiii</a></sup>, all under the attentive care of one Peter Vessenes, who just so happens to be both the executive and the treasurer of the thing, and who has been soliciting donations (much in the manner the bitcoin forum has been - which is to say in exchange for "titles") without having released any sort of financial report in the past couple of years. And again much like the forum, all it's ever done was to vouch for scams<sup><a href="#footnote_13_52765" id="identifier_13_52765" class="footnote-link footnote-identifier-link" title="Hey, remember the BFL displaying empty boxes with fans attached at CES 2013 ?">xiv</a></sup> and ruin reputations<sup><a href="#footnote_14_52765" id="identifier_14_52765" class="footnote-link footnote-identifier-link" title="Hey, remember back when Gavin Andresen was more than a footnote in the story of early Bitcoin ?">xv</a></sup>.
+</ul>
+<p><strong>To sum it all up :</strong> You're not watching anything interesting, new or surprising. The demise of MtGox was privately announced at <a href="http://trilema.com/2013/the-stuff-all-good-conspiracy-theories-start-with/">my secret conference</a> early April 2013, and then <a href="http://trilema.com/2013/grave-concerns-re-mtgox/">publicly</a> a week or so later. The only novel thing in this world is the history you didn't know. </p>
+<p>This particular troop of scammers is going to continue doing the same thing again and again and again. You are either going to continue to fall for it or learn not to fall for it. All the other groups of scammers are also going to continue doing the same things they do, <a href="http://trilema.com/forum-logs-for-13-feb-2014#1083058">again and again and again</a>. The names may change, the color scheme may change. The thing won't change, because if they had the brains to change and make sense and follow reality and deliver value they wouldn't be scammers, they'd be in business. They'd be listed on MPEx even.</p>
+<p>This is pretty much the whole story. </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_52765" class="footnote">This was at a time when I was absolutely the only financial mind, and for the matter absolutely the only non-computer-geek involved in Bitcoin. Moreover, asking someone to link your blog in 1993 is quite different from asking them to link your blog in 2013. [<a href="#identifier_0_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_52765" class="footnote">At that time it was still Mircea Popescu's Options Emporium. [<a href="#identifier_1_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_52765" class="footnote">At that time it was pretty much the only Bitcoin exchange. [<a href="#identifier_2_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_52765" class="footnote">That's right. When <a href="http://trilema.com/2013/the-future-of-bitcoin-regulation/">I say</a> </p>
+<blockquote><p>There’s already a clear trend of US born, US citizen founders leaving their country to satisfy the dictates of their investors (or, in more palatable terms, to allign their status with the likely future status of Bitcoin regulation).</p></blockquote>
+<p>I know what I'm talking about.  [<a href="#identifier_3_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_52765" class="footnote">Because that's totally how you'd code something like this. If you're retarded. [<a href="#identifier_4_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_52765" class="footnote"><a href="http://trilema.com/forum-logs-for-14-feb-2013#493072">Dec 2013</a>, <a href="http://trilema.com/forum-logs-for-14-feb-2013#493072">Nov 2013</a>, <a href="http://trilema.com/forum-logs-for-24-oct-2013#942420">Oct 2013</a>, <a href=http://trilema.com/2019/forum-logs-for-15-may-2013#671083>May 2013</a> etc etc. [<a href="#identifier_5_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_52765" class="footnote">If you're running any sort of Bitcoin business or would like to, <a href="http://trilema.com/2012/strategic-superiority-a-saga/">read this</a>. Twice. [<a href="#identifier_6_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_52765" class="footnote">Nowhere in the Bitcoin spec can one find a guarantee against malleability as</span> understood here, and therefore one is not at liberty to write applications that rely on such a property. [<a href="#identifier_7_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_52765" class="footnote">This is the genius coder boy who once sent the entire Bitcoinica userbase an email including the entire list of everyone's emails. Because he's hacking Python on a live system and so it goes. Speaking of which, do you know that until recently which is to say yesterday MtGox used the same SOP ? [<a href="#identifier_8_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_52765" class="footnote">Much better known for his <a href="http://trilema.com/2012/the-stockexchange-shareholders-on-welfare/">shareholders-on-welfare</a> Bitcoin "stock exchange", aka <a href="http://trilema.com/wp-content/uploads/2013/11/glbse.png">GLBSE</a>. [<a href="#identifier_9_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_52765" class="footnote">A few points need mention here :
+<ul>
+Strateman works for MtGox now. Seeing how he's fucked anyway, makes little difference if he's fucked for two things or twenty, which should be a great lesson for anyone not understanding why we don't do business with known scammers, and why there is no such thing as "forgiving" : the legal responsibility of the already fucked is not quite the same as yours, unless you're also a scammer yourself.</ul>
+<p></p>
+<ul>Bitcoinica was used in a very similar manner, funneling the investor's money into MtGox in order to prop its fractional trade for a little longer. The crater left - what was it, about 40k BTC ? is being sought by some executor to this very day, and with any luck the same executor will handle MtGox, too. Just follow the "vendor", it's where the scamgang moved.</ul>
+<p></p>
+<ul>As documents leaked after the fact reveal, Bitcoinica was <em>also</em> trading on its own, unlimited account, and it <em>also</em> failed to ever make a <a href="http://pastebin.com/Ya6iN8RT">profit out of it</a> (grep "equity"). And since we're on the funny : the "investors" behind Coinlab are... wait for it... Tihan Seale and Peter Vessenes. You probably remember Tihan as Zhou Thong's mysterious hacker/businessman and artefact collector friend, who magically decided to return stolen goods when told about the powers of the interwebs. Remember <a href="http://trilema.com/2012/the-bitcoin-drama-timeline/">that story</a> ?</ul>
+<p> [<a href="#identifier_10_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_52765" class="footnote">The one where the CEO-programmer dood was storing Bitcoin wallets in unbacked cloud AWS, which then got rebooted. [<a href="#identifier_11_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_52765" class="footnote">They also stole Bitcoin Magazine from the original owners, which'd probably deserve more of a mention than this footnote if the rag was actually worth anything in anyone's estimation. [<a href="#identifier_12_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_52765" class="footnote">Hey, remember the BFL displaying empty boxes with fans attached at CES 2013 ? [<a href="#identifier_13_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_52765" class="footnote">Hey, remember back when <a href="http://trilema.com/2013/and-gavin-moves-on-to-the-dark-side-the-bitcoin-project-is-officially-hijacked/">Gavin Andresen</a> was more than a footnote in the story of early Bitcoin ? [<a href="#identifier_14_52765" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2014/strategic-thinking-as-an-exercise/">Strategic thinking as an exercise</a></div>
+                <div class="alignright"><a href="http://trilema.com/2014/on-july-29-1914/">On July 29, 1914</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2014/mtgox-and-ancient-bitcoin-history-the-straight-dope/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2014/mtgox-and-ancient-bitcoin-history-the-straight-dope/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>8 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-98075" class="commentbody"><div class="commenthead"><img alt='oyvinds`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">oyvinds</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98075" title="">Friday, 14 February 2014</a>
+							</div>
+						<p>Any actual evidence that they have this magic "unlimited selftrading account"? I'm sure a lot of people would like to see it if it does indeed exist..</p>
+						</li>
+
+										<li id="comment-98077" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98077" title="">Friday, 14 February 2014</a>
+							</div>
+						<p>I'm sure a lot of people would like free icecream, too. And <a href=http://btcbase.org/log/?date=09-02-2014#493291 >free coffee</a>, even to the degree of queing for an hour to get it. And whatever else. So what of it ?</p>
+						</li>
+
+										<li id="comment-98083" class="commentbody"><div class="commenthead"><img alt='oyvinds`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">oyvinds</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98083" title="">Friday, 14 February 2014</a>
+							</div>
+						<p>What of it? People who don't know MtGox won't buy this story as long as you provide zero evidence to back it up, that's what of it.</p>
+						</li>
+
+										<li id="comment-98086" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98086" title="">Friday, 14 February 2014</a>
+							</div>
+						<p>I think you may be a little confused as to how this whole thing works. <a href=http://trilema.com/2013/in-which-noobs-learn-lessons-and-pay-for-the-privilege/ >See here</a>.</p>
+						</li>
+
+										<li id="comment-98245" class="commentbody"><div class="commenthead"><img alt='Icicle`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Icicle</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98245" title="">Friday, 28 February 2014</a>
+							</div>
+						<p>So who was it who stuck Bitcoinica clients money on Mt Gox, I don't recall, but I'm thinking they've just given Strateman one hell of an excuse for not handing back the funds. Isn't that handy?</p>
+<p>Strateman does sit in the irc support channels of his competitors, listening out for vulnerabilities, it is said. My first thought when hearing the Mt Gox funds were gone was "oh, he's nicked it back, has he? Now he can pay me the bitcoins he stole from my account on Intersango" - and my dog could get the urgent heart operation Strateman has delayed since October.</p>
+						</li>
+
+										<li id="comment-98246" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98246" title="">Friday, 28 February 2014</a>
+							</div>
+						<p>That seems a rather unlikely theory.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-98277">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink"><a href='http://www.loper-os.org/?p=1446' class='url'>Loper OS &raquo; Modern Chumpatronic Engineering.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-98277" title="">Tuesday, 4 March 2014</a>
+					</div>
+					<p>[...] refused to do so, on account of the MtGox scam having been thoroughly beaten to death elsewhere &#8211; long before th... &#8211; The unwashed masses, eager to be fleeced, have no plans to listen now, just as they did not [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-98498">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://bitcoinpete.com/2014/on-making-entropy/' class='url'>On Making High-Entropy Paper Wallets | When Bitcoin Met Pete</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-98498" title="">Friday, 14 March 2014</a>
+					</div>
+					<p>[...] Bitcoin as a currency, Mt. Gox, Bitcoin Foundation, and as the King of Siam would say: &#8220;etsetera, etsetera, etsetera&#8221;. [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="52765" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835258-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-52765")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-52765");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-52765");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

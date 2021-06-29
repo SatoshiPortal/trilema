@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Forum logs for 25 Apr 2018 on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Mediocrity is not a lack of intelligence.<br />Mediocrity is intelligence entirely dedicated to self-preservation.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-92558"><div class="post" id="post-92558">                    <h1><a href="http://trilema.com/2020/forum-logs-for-25-apr-2018/" rel="bookmark" title="Permanent Link to Forum logs for 25 Apr 2018">Forum logs for 25 Apr 2018</a></h1>                        <div class="date">                                     Monday, 16 March, Year 12 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/" title="Posts by "></a>                                                        </div>
+
+                        <div class="entry">
+<table style="font-size:1em;width:"580px;">
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> sure, you're doing good work. looking forward to your submissions when ready. </td>
+<td><font color="gray">[<a id="2430029" href="#2430029">00:00</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> <a href="http://p.bvulpes.com/pastes/aiEVS/?raw=true" target=\'_blank\'>http://p.bvulpes.com/pastes/aiEVS/?raw=true</a> &lt;&lt; sneak peek of walletsnip. (warning, likely intermingled with other patches, not for any use, etc) </td>
+<td><font color="gray">[<a id="2430030" href="#2430030">00:01</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> mircea_popescu: he had one megapatch that i remember being somewhat controversial, it's the one where he reworked the logging facility, but the other two look reasonably small (rm unused functions and add sendrawtransaction rpc). i remember there being some issues with asciilifeform_malleus_mikehearnificarum and asciilifeform-programmable-versionstring that required at least two regrinds, which was around the time he was working on his. </td>
+<td><font color="gray">[<a id="2430031" href="#2430031">00:01</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> but in the general i suppose polarbeard's adventure is kinda illustrative of YET ANOTHER failure mode of personal heroics. besides the "lalala i can't hear" style there's apparently also the "oh, who has time for small steps, i'ma make huge contributions as a virtual unknown". </td>
+<td><font color="gray">[<a id="2430032" href="#2430032">00:01</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> &lt;+trinque&gt; mod6: I've got a sendrawtxn patch sitting over here &lt;&lt; actually, i should mention that i /did/ create a trb sendrawtransaction (just this one rpc call) vpatch late last year, but never sent -- really wanted the rest of the gang 'create', 'sign', etc. </td>
+<td><font color="gray">[<a id="2430033" href="#2430033">00:02</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> phf, a yeah, there was some of that too, it's coming back to me now. </td>
+<td><font color="gray">[<a id="2430034" href="#2430034">00:02</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> mod6: yeah makes sense. not much use by itself without. </td>
+<td><font color="gray">[<a id="2430035" href="#2430035">00:03</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> yup. </td>
+<td><font color="gray">[<a id="2430036" href="#2430036">00:03</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> yeah, it was a combination of factors. his logging facility patch received a lot of criticism, though i now regret voicing mine. it's a bit of a bike shed problem, everyone has their own idea of how to do it "right", but it's not done to this day. </td>
+<td><font color="gray">[<a id="2430037" href="#2430037">00:04</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> myeah. </td>
+<td><font color="gray">[<a id="2430038" href="#2430038">00:04</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> phf: this is a solid point. I think everyone wants their own way of logging/logging statements. </td>
+<td><font color="gray">[<a id="2430039" href="#2430039">00:04</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> goes right back to the problem of the unknown. i CAN shoot down bikeshedding if i know the person. i can't if they're unknown, because then it's legitimate part of dogs sniffing butts getting to know each other. </td>
+<td><font color="gray">[<a id="2430040" href="#2430040">00:05</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> One vpatch that is looking pretty nice is ben_vulpes's logging sub-string chop chop. </td>
+<td><font color="gray">[<a id="2430041" href="#2430041">00:05</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> mircea_popescu: yeah. </td>
+<td><font color="gray">[<a id="2430042" href="#2430042">00:06</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> <a href="http://p.bvulpes.com/pastes/NweRz/?raw=true" target=\'_blank\'>http://p.bvulpes.com/pastes/NweRz/?raw=true</a> &lt;&lt; polarbeard_better_log_messages.vpatch reposted from shithub, for posteriority </td>
+<td><font color="gray">[<a id="2430043" href="#2430043">00:07</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> or you know <a href="http://btcbase.org/patches/polarbeard_better_log_messages" target=\'_blank\'>http://btcbase.org/patches/polarbeard_better_log_messages</a> </td>
+<td><font color="gray">[<a id="2430044" href="#2430044">00:08</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> oh whoops </td>
+<td><font color="gray">[<a id="2430045" href="#2430045">00:08</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> also <a href="http://btcbase.org/patches/polarbeard_rm_unused_functions" target=\'_blank\'>http://btcbase.org/patches/polarbeard_rm_unused_functions</a> <a href="http://btcbase.org/patches/polarbeard_add_sendrawtransaction_rpc" target=\'_blank\'>http://btcbase.org/patches/polarbeard_add_sendrawtransaction_rpc</a> </td>
+<td><font color="gray">[<a id="2430046" href="#2430046">00:08</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> I forgot you had the wandering patches too. </td>
+<td><font color="gray">[<a id="2430047" href="#2430047">00:09</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> thx for posting the links gentlemen. </td>
+<td><font color="gray">[<a id="2430048" href="#2430048">00:09</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> aha, it's either in experimental or in deprecated </td>
+<td><font color="gray">[<a id="2430049" href="#2430049">00:09</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> long day, little sleep. spent the morning directing movers. </td>
+<td><font color="gray">[<a id="2430050" href="#2430050">00:10</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> !!key polarbeard </td>
+<td><font color="gray">[<a id="2430051" href="#2430051">00:11</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://wot.deedbot.org/3db7d131fe4fff3ca6bbac3011cc9042929d3682.asc" target=\'_blank\'>http://wot.deedbot.org/3db7d131fe4fff3ca6bbac3011cc9042929d3682.asc</a> </font></td>
+<td><font color="gray">[<a id="2430052" href="#2430052">00:11</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> also 2016-01-17 </td>
+<td><font color="gray">[<a id="2430053" href="#2430053">00:11</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> to digress, one of the guys called the porch a "pollo" and I swear he was fucking with me. </td>
+<td><font color="gray">[<a id="2430054" href="#2430054">00:11</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> after that, he says his computer didn't work (hey, you're a computer guy, right?) and showed me a picture of a dell laptop docking station, so who knows. maybe he goes out and drinks beer on his chicken </td>
+<td><font color="gray">[<a id="2430055" href="#2430055">00:14</a>]</font></td>
+</tr>
+<tr>
+<td><b>douchebag:</b></td>
+<td class="breakup"> !drink-beer-on-chicken </td>
+<td><font color="gray">[<a id="2430056" href="#2430056">00:15</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> pivapollo </td>
+<td><font color="gray">[<a id="2430057" href="#2430057">00:15</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> what's that mean? </td>
+<td><font color="gray">[<a id="2430058" href="#2430058">00:18</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/072ECA8C1F9304988F62531F1A8EE157D49BD61F04CB7733DC3837402628FA96" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/072ECA8C1F9304988F62531F1A8EE157D49BD61F04CB7733DC3837402628FA96</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1248...7653 divides RSA Moduli belonging to '77.37.13.28 (ssh-rsa key from 77.37.13.28 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown DE HE) </font></td>
+<td><font color="gray">[<a id="2430059" href="#2430059">00:18</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/D681AE14C7C11C938C785738A794228A1507D33261DE7421D16571566DCC42AF" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/D681AE14C7C11C938C785738A794228A1507D33261DE7421D16571566DCC42AF</a> &lt;&lt; Recent Phuctorings. - Phuctored: 2104...9369 divides RSA Moduli belonging to '80.232.217.40 (ssh-rsa key from 80.232.217.40 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown LV) </font></td>
+<td><font color="gray">[<a id="2430060" href="#2430060">00:18</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/8BC5E3C9850D306301F23F8696D897F052AA8DAC59C95AAE9BF58FB5734B0C50" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/8BC5E3C9850D306301F23F8696D897F052AA8DAC59C95AAE9BF58FB5734B0C50</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1476...3239 divides RSA Moduli belonging to '87.250.142.222 (ssh-rsa key from 87.250.142.222 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (routed.by.netground.nl. NL) </font></td>
+<td><font color="gray">[<a id="2430061" href="#2430061">00:18</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> pivo and pollo mexican russian fusion food odessa, tx </td>
+<td><font color="gray">[<a id="2430062" href="#2430062">00:19</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> ahaha, <a href="https://dictionary.reverso.net/spanish-english/pavipollo" target=\'_blank\'>https://dictionary.reverso.net/spanish-english/pavipollo</a> </td>
+<td><font color="gray">[<a id="2430063" href="#2430063">00:20</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> I got got </td>
+<td><font color="gray">[<a id="2430064" href="#2430064">00:21</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> lmao </td>
+<td><font color="gray">[<a id="2430065" href="#2430065">00:23</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> "Odessa is a city in western Texas. Downtown, Jack Ben Rabbit is an 8-foot-tall statue of a jackrabbit. " </td>
+<td><font color="gray">[<a id="2430066" href="#2430066">00:26</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> if anything screams "deserted midwest" more than these "tall statue" shenanigans... </td>
+<td><font color="gray">[<a id="2430067" href="#2430067">00:26</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> someone somewhere has like... a very large pitchfork or something. "town attraction" "why, because you folk spend too long in the sun ?" </td>
+<td><font color="gray">[<a id="2430068" href="#2430068">00:27</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> well it's the world's LARGEST jackrabbit, so ya gotta see it! </td>
+<td><font color="gray">[<a id="2430069" href="#2430069">00:29</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> kinda the same mental process that impels doods to save their largest booger. </td>
+<td><font color="gray">[<a id="2430070" href="#2430070">00:32</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> "As in many municipalities, some of the largest employers are in the education, government, and healthcare industries." </td>
+<td><font color="gray">[<a id="2430071" href="#2430071">00:33</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> right. </td>
+<td><font color="gray">[<a id="2430072" href="#2430072">00:33</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> totallynotaponzi.jpg </td>
+<td><font color="gray">[<a id="2430073" href="#2430073">00:33</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> I went through midland/odessa once, didn't stop. Kept foot on gas. </td>
+<td><font color="gray">[<a id="2430074" href="#2430074">00:34</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> "This is the birthplace of First Lady Laura Bush!" ... zoooooom </td>
+<td><font color="gray">[<a id="2430075" href="#2430075">00:35</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> That day I think I set a PR for furthest driven in one single day: OKC-&gt;Dallas-&gt;El Paso-&gt;Tucson </td>
+<td><font color="gray">[<a id="2430076" href="#2430076">00:37</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> lots of oil out there only real reason to go </td>
+<td><font color="gray">[<a id="2430077" href="#2430077">00:37</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> yeah, i remember smelling it in the air. </td>
+<td><font color="gray">[<a id="2430078" href="#2430078">00:38</a>]</font></td>
+</tr>
+<tr>
+<td><b>diana_coman:</b></td>
+<td class="breakup"> <a href="http://trilema.com/forum-logs-for-24-apr-2018#2429830" target=\'_blank\'>http://trilema.com/forum-logs-for-24-apr-2018#2429830</a> &lt;- for the light+clean gentoo factor I'd buy one but I can't say I see atm a case for buying a lot of them </td>
+<td><font color="gray">[<a id="2430079" href="#2430079">02:27</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2018-04-24 23:41 asciilifeform: mircea_popescu, diana_coman , et al, other folx who travel -- i'd like to get a picture of whether there is 'market' in l1/l2 for a pre-engentooated ( laugh at the laddel-ism, but it promises to be a somewhat painful process involving crocodile and eeprom writer ) 'c101pa' rockchip lappy . </font></td>
+<td><font color="gray">[<a id="2430080" href="#2430080">02:27</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> is that a pun ? </td>
+<td><font color="gray">[<a id="2430081" href="#2430081">02:29</a>]</font></td>
+</tr>
+<tr>
+<td><b>spyked:</b></td>
+<td class="breakup"> <a href="http://btcbase.org/log/2018-04-25#1805483" target=\'_blank\'>http://btcbase.org/log/2018-04-25#1805483</a> &lt;-- oh, youmeanlike <a href="https://imgur.com/a/6d5Atjc" target=\'_blank\'>https://imgur.com/a/6d5Atjc</a> ? </td>
+<td><font color="gray">[<a id="2430082" href="#2430082">04:27</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2018-04-25 04:27 mircea_popescu: someone somewhere has like... a very large pitchfork or something. "town attraction" "why, because you folk spend too long in the sun ?" </font></td>
+<td><font color="gray">[<a id="2430083" href="#2430083">04:27</a>]</font></td>
+</tr>
+<tr>
+<td><b>diana_coman:</b></td>
+<td class="breakup"> lol, unintended! </td>
+<td><font color="gray">[<a id="2430084" href="#2430084">04:29</a>]</font></td>
+</tr>
+<tr>
+<td><b>spyked:</b></td>
+<td class="breakup"> the biggest win point is imho the chair they placed there: "please sir, to admire this fine fork" </td>
+<td><font color="gray">[<a id="2430085" href="#2430085">04:33</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> Mornin' TMSR~ </td>
+<td><font color="gray">[<a id="2430086" href="#2430086">09:05</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> !Q later tell spyked <a href="http://www.loper-os.org/?p=2295&amp;cpage=1#comment-19403" target=\'_blank\'>http://www.loper-os.org/?p=2295&amp;cpage=1#comment-19403</a> </td>
+<td><font color="gray">[<a id="2430087" href="#2430087">10:21</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">lobbesbot:</font></td>
+<td class="breakup"><font color="gray"> asciilifeform: The operation succeeded. </font></td>
+<td><font color="gray">[<a id="2430088" href="#2430088">10:21</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> <a href="http://btcbase.org/log/2018-04-25#1805475" target=\'_blank\'>http://btcbase.org/log/2018-04-25#1805475</a> &lt;&lt; lol somehow nobody but me noticed the bug. i fixed it this morning, all that remains is to clean the crapola from the db, will do this after backup </td>
+<td><font color="gray">[<a id="2430089" href="#2430089">11:26</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2018-04-25 04:18 deedbot: <a href="http://phuctor.nosuchlabs.com/gpgkey/D681AE14C7C11C938C785738A794228A1507D33261DE7421D16571566DCC42AF" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/D681AE14C7C11C938C785738A794228A1507D33261DE7421D16571566DCC42AF</a> &lt;&lt; Recent Phuctorings. - Phuctored: 2104...9369 divides RSA Moduli belonging to '80.232.217.40 (ssh-rsa key from 80.232.217.40 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown LV) </font></td>
+<td><font color="gray">[<a id="2430090" href="#2430090">11:26</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> <a href="http://btcbase.org/log/2018-04-25#1805494" target=\'_blank\'>http://btcbase.org/log/2018-04-25#1805494</a> &lt;&lt; i can't picture who ( other than mircea_popescu in his described possible use case ) would need more than 1 ( or perhaps 2, 1 as a spare ) </td>
+<td><font color="gray">[<a id="2430091" href="#2430091">11:27</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2018-04-25 06:27 diana_coman: <a href="http://trilema.com/forum-logs-for-24-apr-2018#2429830" target=\'_blank\'>http://trilema.com/forum-logs-for-24-apr-2018#2429830</a> &lt;- for the light+clean gentoo factor I'd buy one but I can't say I see atm a case for buying a lot of them </font></td>
+<td><font color="gray">[<a id="2430092" href="#2430092">11:27</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> original q was 'is this worth doing at all' </td>
+<td><font color="gray">[<a id="2430093" href="#2430093">11:27</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> ( possibly also it is better to have folx purchase the raw material locally, and flash the rom themselves ? ) </td>
+<td><font color="gray">[<a id="2430094" href="#2430094">11:28</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> <a href="http://btcbase.org/log/2018-04-25#1805426" target=\'_blank\'>http://btcbase.org/log/2018-04-25#1805426</a> &lt;&lt; not quite how i remember it. d00d was demonstrably inadherent to the concept of vpatch hygiene , persisted with creation of shithub-style megaturds </td>
+<td><font color="gray">[<a id="2430095" href="#2430095">11:30</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2018-04-25 03:53 phf: trinque: there wasn't anything wrong with polarbeard's patches in general, he just happened to be doing his work when there was a lot of regrinds going on in the tree and after third time he was asked to regrind he decided he had enough and quit </font></td>
+<td><font color="gray">[<a id="2430096" href="#2430096">11:30</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> he didn't seem to grasp the notion that the patches are meant to be read and understood. </td>
+<td><font color="gray">[<a id="2430097" href="#2430097">11:31</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> and gotta narrowly focus on subject, rather than 'hey look i turned 17 knobs at once' </td>
+<td><font color="gray">[<a id="2430098" href="#2430098">11:31</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> <a href="http://btcbase.org/log/2018-04-25#1805447" target=\'_blank\'>http://btcbase.org/log/2018-04-25#1805447</a> &lt;&lt; exactly that. iirc he said nothing at all re own biography, on top of it all. </td>
+<td><font color="gray">[<a id="2430099" href="#2430099">11:32</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2018-04-25 04:01 mircea_popescu: but in the general i suppose polarbeard's adventure is kinda illustrative of YET ANOTHER failure mode of personal heroics. besides the "lalala i can't hear" style there's apparently also the "oh, who has time for small steps, i'ma make huge contributions as a virtual unknown". </font></td>
+<td><font color="gray">[<a id="2430100" href="#2430100">11:32</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> !#born polarbeard </td>
+<td><font color="gray">[<a id="2430101" href="#2430101">11:33</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> 2016-01-22 &lt;polarbeard&gt; hi </font></td>
+<td><font color="gray">[<a id="2430102" href="#2430102">11:33</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://btcbase.org/log/2016-01-22#1381744" target=\'_blank\'>http://btcbase.org/log/2016-01-22#1381744</a> </font></td>
+<td><font color="gray">[<a id="2430103" href="#2430103">11:33</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> <a href="http://btcbase.org/log/2018-04-25#1805414" target=\'_blank\'>http://btcbase.org/log/2018-04-25#1805414</a> &lt;&lt; mezzano seems -- since i last looked -- to be almost enuff to make an actual workstation os out of , if anybody bothered to get hold of a e.g. apu1 with sage snake and tailor it properly to the iron </td>
+<td><font color="gray">[<a id="2430104" href="#2430104">11:41</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2018-04-25 03:25 phf: heh, main changes in recent versions of slime: additions of mezzano interaction (lisp "operating system"), but the lulzy part additions of large variety of deprecation errors and warnings. </font></td>
+<td><font color="gray">[<a id="2430105" href="#2430105">11:41</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> i could be wrong about this, did not dig in deeply </td>
+<td><font color="gray">[<a id="2430106" href="#2430106">11:41</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> ( there doesn't appear to be a self-eating compiler in'ere... ) </td>
+<td><font color="gray">[<a id="2430107" href="#2430107">11:41</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> ( lives -- yes -- on shithub <a href="https://github.com/froggey/Mezzano/tree/master/drivers" target=\'_blank\'>https://github.com/froggey/Mezzano/tree/master/drivers</a> &lt;&lt; all he's got in the way of iron ) </td>
+<td><font color="gray">[<a id="2430108" href="#2430108">11:42</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> spoiler: rtl8168 nic, possibly the vmware version thereof and intel's sound card. </td>
+<td><font color="gray">[<a id="2430109" href="#2430109">11:43</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> ( last thread iirc re subj : <a href="http://btcbase.org/log/2016-09-17#1544064" target=\'_blank\'>http://btcbase.org/log/2016-09-17#1544064</a> &lt;&lt; see also. ) </td>
+<td><font color="gray">[<a id="2430110" href="#2430110">11:43</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2016-09-17 16:40 asciilifeform: and the hardware ~is~ shit. boot up one of these (if you can actually get it to boot.) and say hello to 1 fps graphics, disks without dma (you don't know what these feel like until trying personally), nic that works when the moon is full strictly, etc. </font></td>
+<td><font color="gray">[<a id="2430111" href="#2430111">11:43</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/FBE9CAAEB56006891661FBC0C2AEC1BCC7580E89A6EE8AA23C0ED6DA820D46C2" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/FBE9CAAEB56006891661FBC0C2AEC1BCC7580E89A6EE8AA23C0ED6DA820D46C2</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1509...8807 divides RSA Moduli belonging to '160.80.105.2 (ssh-rsa key from 160.80.105.2 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown IT RM 62) </font></td>
+<td><font color="gray">[<a id="2430112" href="#2430112">13:01</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/282A739B467BDDEDDAE8B492C5867C45724562DAE71039CB18971F5CB821090D" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/282A739B467BDDEDDAE8B492C5867C45724562DAE71039CB18971F5CB821090D</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1509...8807 divides RSA Moduli belonging to '130.184.6.111 (ssh-rsa key from 130.184.6.111 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown US AR) </font></td>
+<td><font color="gray">[<a id="2430113" href="#2430113">13:01</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://www.thedrinkingrecord.com/2018/04/25/racism-in-pigeons/" target=\'_blank\'>http://www.thedrinkingrecord.com/2018/04/25/racism-in-pigeons/</a> &lt;&lt; Bingo Blog - Racism In Pigeons </font></td>
+<td><font color="gray">[<a id="2430114" href="#2430114">13:08</a>]</font></td>
+</tr>
+<tr>
+<td><b>BingoBoingo:</b></td>
+<td class="breakup"> !!Up trinax </td>
+<td><font color="gray">[<a id="2430115" href="#2430115">13:22</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> trinax voiced for 30 minutes. </font></td>
+<td><font color="gray">[<a id="2430116" href="#2430116">13:22</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://www.thedrinkingrecord.com/2018/04/25/remedial-skills-camera-walk-rtfm-edition/" target=\'_blank\'>http://www.thedrinkingrecord.com/2018/04/25/remedial-skills-camera-walk-rtfm-edition/</a> &lt;&lt; Bingo Blog - Remedial Skills: Camera Walk RTFM Edition </font></td>
+<td><font color="gray">[<a id="2430117" href="#2430117">14:02</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> asciilifeform, sure it's worth doing at all. you need &gt;1 per agent, what. </td>
+<td><font color="gray">[<a id="2430118" href="#2430118">14:04</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> mircea_popescu: i'ma put it in the queue then. ( machine per se, came in last night ) </td>
+<td><font color="gray">[<a id="2430119" href="#2430119">14:05</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> physically impressive thing, almost small enuff to conceal under clothing </td>
+<td><font color="gray">[<a id="2430120" href="#2430120">14:07</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> lol ro embassy. </td>
+<td><font color="gray">[<a id="2430121" href="#2430121">14:07</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> ( about 1cm thick ) </td>
+<td><font color="gray">[<a id="2430122" href="#2430122">14:07</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> ahahaha this guy. "lawn colored bird" "rock colored bird". </td>
+<td><font color="gray">[<a id="2430123" href="#2430123">14:09</a>]</font></td>
+</tr>
+<tr>
+<td><b>BingoBoingo:</b></td>
+<td class="breakup"> mircea_popescu: Seriously, most hoppable fence of them all so far. Except well, Panama but they don't have a fence at all. Front door opens into the street. </td>
+<td><font color="gray">[<a id="2430124" href="#2430124">14:09</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> asciilifeform: i would be pleasantly surprised if the machine can have a blobless video/wifi </td>
+<td><font color="gray">[<a id="2430125" href="#2430125">14:09</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> yes well, not everyone's an asshole. i don't recall the last time someone came up with the idea of assaulting ro embassies. </td>
+<td><font color="gray">[<a id="2430126" href="#2430126">14:09</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> phf: whole spark of asciilifeform's interest in the '101' was that it has marvell wifi chip (on usb) and apparently nonaccelerated 2d worx with standard kernel </td>
+<td><font color="gray">[<a id="2430127" href="#2430127">14:11</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> unlike the chromenintendo i experimented on in 2013 </td>
+<td><font color="gray">[<a id="2430128" href="#2430128">14:11</a>]</font></td>
+</tr>
+<tr>
+<td><b>&ast; BingoBoingo</b></td>
+<td class="breakup"> still finding new embassies. </td>
+<td><font color="gray">[<a id="2430129" href="#2430129">14:11</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> phf: machine seems to be something quite like the pizarro rockchip board but with screen,kbd,battery </td>
+<td><font color="gray">[<a id="2430130" href="#2430130">14:12</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> Nice pics BingoBoingo, funny comments too </td>
+<td><font color="gray">[<a id="2430131" href="#2430131">14:14</a>]</font></td>
+</tr>
+<tr>
+<td><b>BingoBoingo:</b></td>
+<td class="breakup"> mod6: ty </td>
+<td><font color="gray">[<a id="2430132" href="#2430132">14:14</a>]</font></td>
+</tr>
+<tr>
+<td><b>BingoBoingo:</b></td>
+<td class="breakup"> Still need a lot more practice </td>
+<td><font color="gray">[<a id="2430133" href="#2430133">14:14</a>]</font></td>
+</tr>
+<tr>
+<td><b>phf:</b></td>
+<td class="breakup"> asciilifeform: aha, i figured as much, idle curiosity about where the hardware boundaries lie. we'll find out soon enough! </td>
+<td><font color="gray">[<a id="2430134" href="#2430134">14:17</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://trilema.com/2018/joes-enthusiasm/" target=\'_blank\'>http://trilema.com/2018/joes-enthusiasm/</a> &lt;&lt; Trilema - Joe's enthusiasm </font></td>
+<td><font color="gray">[<a id="2430135" href="#2430135">14:32</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://qntra.net/2018/04/german-jews-warned-to-wear-alternate-headgear-to-avoid-violence/" target=\'_blank\'>http://qntra.net/2018/04/german-jews-warned-to-wear-alternate-headgear-to-avoid-violence/</a> &lt;&lt; Qntra - German Jews Warned To Wear Alternate Headgear To Avoid Violence </font></td>
+<td><font color="gray">[<a id="2430136" href="#2430136">15:35</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> aaahahahaa </td>
+<td><font color="gray">[<a id="2430137" href="#2430137">15:37</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> who could have predicted!!1 </td>
+<td><font color="gray">[<a id="2430138" href="#2430138">15:37</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> such a good thing five successive generations of nulands did in germany. </td>
+<td><font color="gray">[<a id="2430139" href="#2430139">15:38</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> it's always a good idea to listen to "the experts". </td>
+<td><font color="gray">[<a id="2430140" href="#2430140">15:38</a>]</font></td>
+</tr>
+<tr>
+<td><b>BingoBoingo:</b></td>
+<td class="breakup"> 4srs </td>
+<td><font color="gray">[<a id="2430141" href="#2430141">15:39</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> in other random, <a href="https://www.youtube.com/watch?v=arJlvynifMc" target=\'_blank\'>https://www.youtube.com/watch?v=arJlvynifMc</a> </td>
+<td><font color="gray">[<a id="2430142" href="#2430142">15:59</a>]</font></td>
+</tr>
+<tr>
+<td><b>spyked:</b></td>
+<td class="breakup"> <a href="http://btcbase.org/log/2018-04-25#1805502" target=\'_blank\'>http://btcbase.org/log/2018-04-25#1805502</a> &lt;-- o hey, tyvm! </td>
+<td><font color="gray">[<a id="2430143" href="#2430143">16:28</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">a111:</font></td>
+<td class="breakup"><font color="gray"> Logged on 2018-04-25 14:21 asciilifeform: !Q later tell spyked <a href="http://www.loper-os.org/?p=2295&amp;cpage=1#comment-19403" target=\'_blank\'>http://www.loper-os.org/?p=2295&amp;cpage=1#comment-19403</a> </font></td>
+<td><font color="gray">[<a id="2430144" href="#2430144">16:28</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">lobbesbot:</font></td>
+<td class="breakup"><font color="gray"> spyked: Sent 6 hours and 7 minutes ago: &lt;asciilifeform&gt; <a href="http://www.loper-os.org/?p=2295&amp;cpage=1#comment-19403" target=\'_blank\'>http://www.loper-os.org/?p=2295&amp;cpage=1#comment-19403</a> </font></td>
+<td><font color="gray">[<a id="2430145" href="#2430145">16:28</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> spyked: <a href="http://www.loper-os.org/?p=2295&amp;cpage=1#comment-19407" target=\'_blank\'>http://www.loper-os.org/?p=2295&amp;cpage=1#comment-19407</a> </td>
+<td><font color="gray">[<a id="2430146" href="#2430146">16:39</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> but in other good news, trilema discovered the fastest reader alive : <a href="http://trilema.com/contact-pgp/#comment-125468" target=\'_blank\'>http://trilema.com/contact-pgp/#comment-125468</a> </td>
+<td><font color="gray">[<a id="2430147" href="#2430147">16:43</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/072ECA8C1F9304988F62531F1A8EE157D49BD61F04CB7733DC3837402628FA96" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/072ECA8C1F9304988F62531F1A8EE157D49BD61F04CB7733DC3837402628FA96</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1008...7769 divides RSA Moduli belonging to '77.37.13.28 (ssh-rsa key from 77.37.13.28 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown DE HE) </font></td>
+<td><font color="gray">[<a id="2430148" href="#2430148">17:30</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> hey phf can i get a count of words / day in my loglines ? </td>
+<td><font color="gray">[<a id="2430149" href="#2430149">17:41</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/8BC5E3C9850D306301F23F8696D897F052AA8DAC59C95AAE9BF58FB5734B0C50" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/8BC5E3C9850D306301F23F8696D897F052AA8DAC59C95AAE9BF58FB5734B0C50</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1349...8697 divides RSA Moduli belonging to '87.250.142.222 (ssh-rsa key from 87.250.142.222 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (routed.by.netground.nl. NL) </font></td>
+<td><font color="gray">[<a id="2430150" href="#2430150">17:48</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/D681AE14C7C11C938C785738A794228A1507D33261DE7421D16571566DCC42AF" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/D681AE14C7C11C938C785738A794228A1507D33261DE7421D16571566DCC42AF</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1434...9433 divides RSA Moduli belonging to '80.232.217.40 (ssh-rsa key from 80.232.217.40 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown LV) </font></td>
+<td><font color="gray">[<a id="2430151" href="#2430151">17:57</a>]</font></td>
+</tr>
+<tr>
+<td><b>mod6:</b></td>
+<td class="breakup"> !!deed <a href="http://p.bvulpes.com/pastes/4JgmI/?raw=true" target=\'_blank\'>http://p.bvulpes.com/pastes/4JgmI/?raw=true</a> </td>
+<td><font color="gray">[<a id="2430152" href="#2430152">18:09</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> accepted: 1 </font></td>
+<td><font color="gray">[<a id="2430153" href="#2430153">18:13</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> ugh, shame on me. that was running in a tmux </td>
+<td><font color="gray">[<a id="2430154" href="#2430154">18:15</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> massive uptime has its upsides and down </td>
+<td><font color="gray">[<a id="2430155" href="#2430155">18:15</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/0FC58288ECBC1BDAD86A1D99D09C2B85517E02A72390F6CFB378AF87AAB6840F" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/0FC58288ECBC1BDAD86A1D99D09C2B85517E02A72390F6CFB378AF87AAB6840F</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1469...5969 divides RSA Moduli belonging to '134.169.9.51 (ssh-rsa key from 134.169.9.51 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown DE NI) </font></td>
+<td><font color="gray">[<a id="2430156" href="#2430156">18:16</a>]</font></td>
+</tr>
+<tr>
+<td><b>danielpbarron:</b></td>
+<td class="breakup"> !!up beeteecee </td>
+<td><font color="gray">[<a id="2430157" href="#2430157">18:33</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> beeteecee voiced for 30 minutes. </font></td>
+<td><font color="gray">[<a id="2430158" href="#2430158">18:33</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://phuctor.nosuchlabs.com/gpgkey/5D01732429D2018C5281E02A054FF943984DC18BC2575AB67B16151BDE5C3FCA" target=\'_blank\'>http://phuctor.nosuchlabs.com/gpgkey/5D01732429D2018C5281E02A054FF943984DC18BC2575AB67B16151BDE5C3FCA</a> &lt;&lt; Recent Phuctorings. - Phuctored: 1434...3997 divides RSA Moduli belonging to '208.2.67.117 (ssh-rsa key from 208.2.67.117 (13-14 June 2016 extraction) for Phuctor import. Ask asciilifeform or framedragger on Freenode, or email fd at mkj dot lt) &lt;ssh...lt&gt; ' (Unknown US TX) </font></td>
+<td><font color="gray">[<a id="2430159" href="#2430159">18:34</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://deedbot.org/bundle-519925.txt" target=\'_blank\'>http://deedbot.org/bundle-519925.txt</a> </font></td>
+<td><font color="gray">[<a id="2430160" href="#2430160">19:15</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> whoa </td>
+<td><font color="gray">[<a id="2430161" href="#2430161">19:26</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://trilema.com/2018/what-have-i-been-doing/" target=\'_blank\'>http://trilema.com/2018/what-have-i-been-doing/</a> &lt;&lt; Trilema - What have I been doing ? </font></td>
+<td><font color="gray">[<a id="2430162" href="#2430162">19:46</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> <a href="http://www.loper-os.org/?p=2326" target=\'_blank\'>http://www.loper-os.org/?p=2326</a> &lt;&lt; Loper OS - Open Problem: Delousing the Asus C101PA. </font></td>
+<td><font color="gray">[<a id="2430163" href="#2430163">20:05</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> !!pay danielpbarron 0.0077 </td>
+<td><font color="gray">[<a id="2430164" href="#2430164">20:22</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> Get your OTP: <a href="http://p.bvulpes.com/pastes/A0AM0/?raw=true" target=\'_blank\'>http://p.bvulpes.com/pastes/A0AM0/?raw=true</a> </font></td>
+<td><font color="gray">[<a id="2430165" href="#2430165">20:22</a>]</font></td>
+</tr>
+<tr>
+<td><b>asciilifeform:</b></td>
+<td class="breakup"> meanwhile, in technical progresses, <a href="https://archive.li/kA5TT" target=\'_blank\'>https://archive.li/kA5TT</a> &gt;&gt; spoof GPS, GSM, with... 5bux of usb to vga adapter </td>
+<td><font color="gray">[<a id="2430166" href="#2430166">21:13</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> heh </td>
+<td><font color="gray">[<a id="2430167" href="#2430167">21:27</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> is that the last of em ? </td>
+<td><font color="gray">[<a id="2430168" href="#2430168">22:58</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> !!up shurdeek </td>
+<td><font color="gray">[<a id="2430169" href="#2430169">22:58</a>]</font></td>
+</tr>
+<tr>
+<td><font color="gray">deedbot:</font></td>
+<td class="breakup"><font color="gray"> shurdeek voiced for 30 minutes. </font></td>
+<td><font color="gray">[<a id="2430170" href="#2430170">22:58</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> got a rsa key shurdeek ? </td>
+<td><font color="gray">[<a id="2430171" href="#2430171">22:58</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> <a href="http://logs.bvulpes.com/trilema?d=2018-4-25#343759" target=\'_blank\'>http://logs.bvulpes.com/trilema?d=2018-4-25#343759</a> &lt;&lt; just one tiny step up from excel </td>
+<td><font color="gray">[<a id="2430172" href="#2430172">23:20</a>]</font></td>
+</tr>
+<tr>
+<td><b>mimisbrunnr:</b></td>
+<td class="breakup"> Logged on 2018-04-25 01:18 mircea_popescu: a db is a good tool for pre-given solutions for some kinds of problems. it is not a tool for implementing arbitrary expressivity. </td>
+<td><font color="gray">[<a id="2430173" href="#2430173">23:20</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> ben_vulpes: you should hear my oil buddy talk about excel sometime </td>
+<td><font color="gray">[<a id="2430174" href="#2430174">23:22</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> that said the rigorish typing of postgres has been a boon in this one circumstance where the tower of complexititus threatens to overwhelm me at every step </td>
+<td><font color="gray">[<a id="2430175" href="#2430175">23:22</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> dunno if it'll make you laugh or cry, but either's good drinking </td>
+<td><font color="gray">[<a id="2430176" href="#2430176">23:22</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> trinque: you know i tell folks i squirt grease on the largest $problem-domain spreadsheet they could possibly imagine when they ask what i do i can laugh and cry about it allll day </td>
+<td><font color="gray">[<a id="2430177" href="#2430177">23:24</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> btw mircea_popescu #templeos-irc is a wall of noise, terry is out to lunch </td>
+<td><font color="gray">[<a id="2430178" href="#2430178">23:25</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> ben_vulpes, i dun agree excel is clown car. the db stuff... not really. </td>
+<td><font color="gray">[<a id="2430179" href="#2430179">23:26</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> sure, john deere with anal impaler in operator seat </td>
+<td><font color="gray">[<a id="2430180" href="#2430180">23:27</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> when will it fire will it fire today let's find out </td>
+<td><font color="gray">[<a id="2430181" href="#2430181">23:27</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> i exaggerate, db constraints and stored procedures and transactionality and permissions are all very nice things. </td>
+<td><font color="gray">[<a id="2430182" href="#2430182">23:28</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> unlike vbasic and moreover, the very fucking NOTION of "here is a list of cells, grapghically displayed" </td>
+<td><font color="gray">[<a id="2430183" href="#2430183">23:28</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> worst possible assumptions made for this gui-centric non-db system. </td>
+<td><font color="gray">[<a id="2430184" href="#2430184">23:29</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> that it's popular with the sort of meat puppets populating the pantsuit vatfarms is unsurprising -- it's pretty much engineered to cater to their batshit insane worldview. </td>
+<td><font color="gray">[<a id="2430185" href="#2430185">23:29</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> there's a very deep link between "putin doesn't understand how the world works notwithstanding which he stole our election" and "cell (5,7) on your screen". </td>
+<td><font color="gray">[<a id="2430186" href="#2430186">23:30</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> links to the ml advocates, their jupyter notebooks, and the troubles they have "getting from research to production" too i'd hazard </td>
+<td><font color="gray">[<a id="2430187" href="#2430187">23:31</a>]</font></td>
+</tr>
+<tr>
+<td><b>mircea_popescu:</b></td>
+<td class="breakup"> certainly links to "aaaand... it's gone", <a href="http://trilema.com/2013/why-mpex-is-better-than-fiat-institutions-part-349085-we-dont-use-excel/#selection-171.0-173.563" target=\'_blank\'>http://trilema.com/2013/why-mpex-is-better-than-fiat-institutions-part-349085-we-dont-use-excel/#selection-171.0-173.563</a> etc </td>
+<td><font color="gray">[<a id="2430188" href="#2430188">23:32</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> "can never demonstrate the absence of bugs" notwithstanding, i don't know why folks don't slow down and test that their deliverables do what they claim before making claims </td>
+<td><font color="gray">[<a id="2430189" href="#2430189">23:36</a>]</font></td>
+</tr>
+<tr>
+<td><b>&ast; trinque</b></td>
+<td class="breakup"> sees untested deliverables on two legs every day </td>
+<td><font color="gray">[<a id="2430190" href="#2430190">23:37</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> breathing! passes self test </td>
+<td><font color="gray">[<a id="2430191" href="#2430191">23:38</a>]</font></td>
+</tr>
+<tr>
+<td><b>ben_vulpes:</b></td>
+<td class="breakup"> hey, one of my deliverables failed the external tests once </td>
+<td><font color="gray">[<a id="2430192" href="#2430192">23:38</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> re: db, I'm reserving a lul now for when asciilifeform discovers that postgresql does, in fact, tell you what an operation will cost before you run it. </td>
+<td><font color="gray">[<a id="2430193" href="#2430193">23:41</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> mircea_popescu had it, industrial machinery, organizes gigantic sets, does a few things to make sure the wad isn't lost. </td>
+<td><font color="gray">[<a id="2430194" href="#2430194">23:44</a>]</font></td>
+</tr>
+<tr>
+<td><b>trinque:</b></td>
+<td class="breakup"> goodnight, many heads of the tit hydra </td>
+<td><font color="gray">[<a id="2430195" href="#2430195">23:47</a>]</font></td>
+</tr>
+</table>
+
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2020/forum-logs-for-24-apr-2018/">Forum logs for 24 Apr 2018</a></div>
+                <div class="alignright"><a href="http://trilema.com/2020/forum-logs-for-26-apr-2018/">Forum logs for 26 Apr 2018</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2020/forum-logs-for-25-apr-2018/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2020/forum-logs-for-25-apr-2018/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+
+
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="92558" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832072-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-92558")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-92558");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-92558");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

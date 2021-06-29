@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>More about Caesar cyphers on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The fates are cruel an' the chances are slim<br />so grab a good sieve and dig in.<br />~<a href=http://trilema.com/2020/nannare/#comment-147503>my elder slavegirl</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-52126"><div class="post" id="post-52126">                    <h1><a href="http://trilema.com/2014/more-about-caesar-cyphers/" rel="bookmark" title="Permanent Link to More about Caesar cyphers">More about Caesar cyphers</a></h1>                        <div class="date">                                     Friday, 10 January, Year 6 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<ul> <strong>mircea_popescu</strong> http://www.telegraph.co.uk/news/worldnews/europe/italy/10562132/Italian-police-decipher-Mafia-code-in-initiation-script.html<sup><a href="#footnote_0_52126" id="identifier_0_52126" class="footnote-link footnote-identifier-link" title="The actual source they use, but fail to link, is La Republica. It is difficult to comprehend the sort of braindamage that'd make an English troop of cocksuckers not link an Italian troop of similar cocksuckers. What's the idea, are they preserving Google juice so their English readers don't move to Italian ? 
+The explanation obviously being that `journalists` are about as dumb as burger flippers, and consequently they need simple rules they don't understand. Such as `don't link to any thing!!1`, because that's what the Internet is all about. Tell me again why do we allow cocksuckers on the net ? Not like it's theirs.">i</a></sup><br />
+<strong>ozbot</strong> Italian police decipher 'Mafia code' in initiation script - Telegraph</p>
+<p><strong>mircea_popescu</strong> Cutting edge tech : mafia uses <a href="http://trilema.com/2013/the-danger-of-homebrew-crypto/">letter transposition</a>. A bright octopus could probably be trained to break these. Nevertheless,</p>
+<blockquote><p>It was deciphered by two police officers with an interest in codes and word puzzles.<br />
+<strong>mircea_popescu</strong> The breakthrough came when they decoded the symbol that represented the letter C, which enabled them to slowly begin to understand the rest of the strange alphabet.</p></blockquote>
+<p>The state the world is in ;/ Soon enough we'll be seeing teh media<sup><a href="#footnote_1_52126" id="identifier_1_52126" class="footnote-link footnote-identifier-link" title="You know, these people.">ii</a></sup> report on single moms that have discovered peroxide in a bottle in their medicine cabinet (who knows how it got there!) O, wait...</ul>
+<p>Apparently the Italian police doesn't read Trilema.<sup><a href="#footnote_2_52126" id="identifier_2_52126" class="footnote-link footnote-identifier-link" title="Which sort-of reminds me of the Cairo cab driver who saw a map for the first time in his life within my own two hands. You know, he's Egyptian, they invented fucking mapmaking supposedly. Just like the Latins invented literacy as a social phenomenon, supposedly. It ain't showing much, is it, once the original ethnic groups got replaced by whatever these new people are.">iii</a></sup> Learn a language, yo!</p>
+<p>That much for the theoretical part of this article, let's now move on to the practical. There's a sample image in the article, this :</p>
+<p><a href="http://trilema.com/2014/more-about-caesar-cyphers/"><img class="alignright size-full" title="mafia-caesar-cypher" src="http://trilema.com/wp-content/uploads/2014/01/code_2786379b.jpg" alt="mafia-caesar-cypher" width="580" height="280" /></a></p>
+<p>So how about cracking it for ourselves, with our own two hands ? It's almost as if we'd be learning a language, after all. How'd we go about it ? </p>
+<p>Reasonably, the first thing we do is we replace the "mysterious symbols, some of them resembling Cyrillic, Greek and ancient Egyptian" with plain old latin letters, using a new one each time we encounter a new symbol. As such :</p>
+<blockquote><p>a bcde feg bcijg jke lemmng a bjebajg<br />
+gc oajjeppc gq qcmaqe erckdc icmgeja mcde<br />
+oajjeppa labc e rckdala bc g bcijkg jke<br />
+lemmng a bjebajg ie qckc oajjeppa la bc mcb<br />
+rckkg majece e madgmge fg rckpa gc<br />
+oajjeppc e rckdc mcb rekkg majebe e<br />
+madgmge fg rckpa ie qckc oajjeppa la bc</p></blockquote>
+<p>We've still got stuvwxyz unused, and moreover they're really doing us a lot of favours. Consider the oajjeppa/oajjeppc flection, or lemmng invariance plus all the fixed single and two letters, bc, a, e, ie, la, gc etc. Not to mention the fragments repeated verbatim, madgmge fg rckpa etc. Even if if this weren't a simple letter cypher but used instead syllables (like the actual hieroglyphic notation) we'd suss out the latin substrate of the language within this first paragraph.</p>
+<p>Now let's count our letter frequency.</p>
+<ul> <code>mircea@inigo-montoya:~$ awk<sup><a href="#footnote_3_52126" id="identifier_3_52126" class="footnote-link footnote-identifier-link" title="Aren't you impressed with the grandeur that is Linux yet ? Tell me, how'd you do this in your Excel ? Takes a coupla dumbasses with `an interest` in these things a while, doesn't it ? Then again... the hardest part is finding the c...ulo, after which all goes more or less smoothly, dunnit.">iv</a></sup> -vFS="" '{for(i=1;i&lt;=NF;i++)w[$i]++}END{for(i in w) print w[i],i,";"}' ndrngheta-code.txt | sort -nr</p>
+<p>46   ; 29 e ; 28 c ; 26 a ; 21 j ; 21 g ; 14 m ; 14 k ; 13 b ; 12 p ; 7 r ; 6 l ; 6 d ; 5 q ; 5 o ; 5 i ; 3 f ; 2 n ;</p>
+<p></code></ul>
+<p>Let's do the same on Boccaccio's Decameron (1st part, 1st day, 1st story - <em>Ser Cepperello con una falsa confessione</em>). He's a Tuscan but in the end what the hell's the difference (asked him knowingly).</p>
+<ul> <code>mircea@inigo-montoya:~$ awk -vFS="" '{for(i=1;i&lt;=NF;i++)w[tolower($i)]++}END{for(i in w) print w[i],i,";"}' ser-cepperello.txt | sort -nr</p>
+<p>4674   ; 2844 e ; 2217 i ; 2134 a ; 2131 o ; 1374 n ; 1264 s ; 1258 t ; 1240 r ; 1213 l ; 1041 c ; 819 d ; 672 u ; 647 m ; 609 p ; 451 v ; 413 , ; 394 g ; 293 h ; 274 f ; 165 q ; 153 b ; 122 ’ ; 96 . ; 93 z ; 79 ì ; 69 - ; 68 ; ; 67 ò ; 52 à ; 44 : ; 33 é ; 30 è ; 25 ù ; 19 ? ; 7 ! ; 2 ) ; 2 ( ;</p>
+<p></code></ul>
+<p>This already gives us a generally good idea what's what, but there's one valuable pattern to consider first : the double consonant beauty. Specifically, our text contains double m, j, p and k, but also a very valuable word with two doubles, oajjeppc. At this juncture it'd seem reasonable that we should construct a list of all Italian words that match this otherwise very stringent pattern. How many do you think they are ? Like a few, a dozen tops, right ? Maybe a hundred, if you happen to know that Italian doubles any consonant it gets its hands on. Well... let me spare you the guessing : 633 exactly.<sup><a href="#footnote_4_52126" id="identifier_4_52126" class="footnote-link footnote-identifier-link" title="mircea@inigo-montoya$ grep -E '^[[:alpha:]]{8}$' italia-1a.txt | egrep '^?.?.(.)\1.?(.)\2.?$' &gt; res.txt
+babbucce ; baccelli ; baccello ; ballammo ; ballasse ; ballassi ; balletti ; balletto ; ballotta ; ballotte ; barrocci ; bassetta ; bassette ; bassezza ; bassezze ; bassotta ; bassotte ; bassotti ; bassotto ; battelli ; battello ; battemmo ; battesse ; battessi ; battezza ; battezzi ; battezzo ; bazzotta ; bazzotte ; bazzotti ; bazzotto ; beccacce ; beccucci ; belletta ; bellette ; belletti ; belletto ; bellezza ; bellezze ; bellocce ; bellocci ; berranno ; berretta ; berrette ; berretti ; berretto ; bizzarra ; bizzarre ; bizzarri ; bizzarro ; bizzeffe ; boccacce ; boccetta ; boccette ; bolletta ; bollette ; borracce ; bottacce ; bottacci ; bozzelli ; bozzello ; bozzetti ; bozzetto ; buffetti ; buffetto ; bulletta ; bullette ; bussammo ; bussasse ; bussassi ; bussetti ; bussetto ; buttammo ; buttasse ; buttassi ; buzzurra ; buzzurre ; buzzurri ; buzzurro ; cammelli ; cammello ; cannella ; cannelle ; cannelli ; cannello ; cannetta ; cannette ; cannicci ; cannotti ; cannotto ; cannucce ; cappella ; cappelle ; cappelli ; cappello ; cappotta ; cappotte ; cappotti ; cappotto ; cappucce ; cappucci ; carreggi ; carrelli ; carrello ; carretta ; carrette ; carretti ; carretto ; carrocci ; carrozza ; carrozze ; carruggi ; cassetta ; cassette ; cassetti ; cassetto ; cazzotti ; cazzotto ; cessammo ; cessasse ; cessassi ; coccette ; collassi ; collasso ; colletta ; collette ; colletti ; colletto ; commessa ; commesse ; commessi ; commesso ; commossa ; commosse ; commossi ; commosso ; connessa ; connesse ; connessi ; connesso ; connette ; coppella ; coppelle ; coppetta ; coppette ; corregge ; correggo ; corremmo ; corresse ; corressi ; corretta ; corrette ; corretti ; corretto ; corrotta ; corrotte ; corrotti ; corrotto ; corrucci ; corruppi ; cozzammo ; cozzasse ; cozzassi ; cuccetta ; cuccette ; cullammo ; cullasse ; cullassi ; dabbasso ; dannammo ; dannasse ; dannassi ; dannegga ; danneggi ; danneggo ; dettammo ; dettasse ; dettassi ; disserra ; disserri ; donnacce ; dorranno ; dorrebbe ; faccetta ; faccette ; fallacci ; fallimmo ; fattacci ; fattezza ; fattezze ; ferracci ; ferretti ; ferretto ; fettucce ; ficcammo ; fissaggi ; fissammo ; fissasse ; fissassi ; fittezza ; fittezze ; folletti ; folletto ; fossetta ; fossette ; fuggimmo ; galleggi ; galletta ; gallette ; galletti ; galletto ; gallocce ; galluzzo ; garretti ; garretto ; garrotta ; garrotte ; gattelli ; gattello ; gattucci ; gazzarra ; gazzarre ; gazzella ; gazzelle ; gazzetta ; gazzette ; gessasse ; gessetti ; gessetto ; gettammo ; gettasse ; gettassi ; gillette ; ginnetto ; gittasse ; gonnella ; gonnelle ; gottazza ; gottazze ; gozzetto ; lassezza ; lassezze ; leccammo ; leccasse ; leccassi ; leggemmo ; leggesse ; leggessi ; lessammo ; lessasse ; lessassi ; lettucci ; loggetta ; loggette ; lottammo ; lottasse ; lottassi ; lottizza ; lottizzi ; lottizzo ; lussasse ; lxxxviii ; malloppi ; malloppo ; mammella ; mammelle ; mannella ; mannelle ; mannelli ; mannello ; massaggi ; masselli ; massello ; massicce ; massicci ; mazzetta ; mazzette ; mazzetti ; mazzetto ; mazzotta ; mazzotte ; melletta ; messaggi ; mettemmo ; mettesse ; mettessi ; mezzetta ; mezzette ; mezzucci ; millenne ; millenni ; missaggi ; moffetta ; moffette ; mollammo ; mollasse ; mollassi ; molleggi ; molletta ; mollette ; mollezza ; mollezze ; mollicce ; mollicci ; morranno ; morrebbe ; morremmo ; motteggi ; mottetti ; mottetto ; mozzammo ; mozzasse ; mozzassi ; mozzetta ; mozzette ; muggimmo ; muggisse ; muggissi ; mussasse ; narrammo ; narrasse ; narrassi ; nettezza ; nettezze ; nonnulla ; paccammo ; paggetti ; paggetto ; palleggi ; panneggi ; pannella ; pannelli ; pannello ; pappammo ; pappasse ; pappassi ; parranno ; parrebbe ; parrucca ; passaggi ; passammo ; passasse ; passassi ; passeggi ; passetta ; passetti ; passetto ; patteggi ; peccasse ; peccassi ; pellacce ; pelletta ; pellicce ; pennella ; pennelli ; pennello ; pezzetta ; pezzette ; pezzetti ; pezzetto ; pezzulli ; pezzullo ; piccozza ; piccozze ; pillotta ; pillotti ; pillotto ; pissarro ; pizzetta ; pizzette ; pizzetti ; pizzetto ; poggetti ; poggetto ; poppetta ; poppette ; porracci ; porranno ; porrebbe ; porremmo ; possegga ; posseggo ; possessi ; possesso ; pozzetta ; pozzette ; pozzetti ; pozzetto ; puzzasse ; puzzassi ; rabbuffa ; rabbuffe ; rabbuffi ; rabbuffo ; raccatta ; raccatti ; raccatto ; raccozzo ; raddobbi ; raddobbo ; raddoppi ; raddurre ; raffitti ; rallacci ; rappello ; rappezza ; rappezzi ; rappezzo ; rassetta ; rassetti ; rassetto ; rattezza ; rattizza ; rattizzi ; rattizzo ; rattoppa ; rattoppi ; rattoppo ; reggemmo ; reggesse ; reggessi ; reggetta ; reggette ; rizzammo ; rizzasse ; rizzassi ; rollasse ; rossetta ; rossette ; rossetti ; rossetto ; rossezza ; rossicce ; rossicci ; rozzezza ; rozzezze ; rullaggi ; rullammo ; rullasse ; rullassi ; rulletti ; rulletto ; russammo ; russasse ; russassi ; ruttammo ; ruttasse ; ruttassi ; saccocce ; saggezza ; saggezze ; sassella ; sasselli ; sassello ; seccammo ; seccasse ; seccassi ; seggetta ; seggette ; sellammo ; sellasse ; sellassi ; seppelli ; serrammo ; serrasse ; serrassi ; serretta ; serrette ; sessenne ; sessenni ; settenne ; settenni ; siffatta ; siffatte ; siffatti ; siffatto ; sillessi ; soccorra ; soccorre ; soccorri ; soccorro ; soffitta ; soffitte ; soffitti ; soffitto ; soggetta ; soggette ; soggetti ; soggetto ; sollazza ; sollazzi ; sollazzo ; sommacco ; sommammo ; sommasse ; sommassi ; sommessa ; sommesse ; sommessi ; sommesso ; sommetta ; sommette ; sommossa ; sommosse ; sommosso ; soppanna ; soppanni ; soppanno ; sorregga ; sorregge ; sorreggi ; sorreggo ; sorresse ; sorressi ; sorretta ; sorrette ; sorretti ; sorretto ; sotterra ; sotterri ; sotterro ; sottesso ; sovvenne ; sovvenni ; successa ; successe ; successi ; successo ; suddetta ; suddette ; suddetti ; suddetto ; suffetti ; suffetto ; suffissi ; suffisso ; suggella ; suggelli ; suggello ; supporra ; supporre ; supporro ; sussurra ; sussurri ; sussurro ; taffetta ; tappammo ; tappasse ; tappassi ; tappetti ; tappetto ; tappezza ; tappezzi ; tappezzo ; tassammo ; tassasse ; tassassi ; tassella ; tasselli ; tassello ; tazzetta ; tazzette ; terranno ; terrazza ; terrazze ; terrazzi ; terrazzo ; terrebbe ; terremmo ; terricci ; tessemmo ; tessesse ; tessessi ; tettucci ; toccammo ; toccasse ; toccassi ; tolletta ; tollette ; tolletti ; tolletto ; tonneggi ; tonnetti ; tonnetto ; torrazzi ; torrazzo ; torreggi ; torretta ; torrette ; tossimmo ; tossisse ; tossissi ; tuffammo ; tuffasse ; tuffassi ; tuffetti ; tuffetto ; valletta ; vallette ; valletti ; valletto ; varranno ; vassalla ; vassalle ; vassalli ; vassallo ; verranno ; verrebbe ; verremmo ; verrenno ; vessammo ; vessasse ; vessassi ; vessilli ; vessillo ; vezzeggi ; villaggi ; villeggi ; villetta ; villette ; villotta ; villotte ; vorranno ; vorrebbe ; vorremmo ; zappammo ; zappassi ; zappetta ; zappette ; zolletta ; zollette ; zuccotti ; zuccotto.">v</a></sup></p>
+<p>No wonder the poor guys took forever to do it, huh.</p>
+<p>Next step of course is to look at 633 versions of the text, with six letters replaced according to the pattern in each case and see if anything looks like Italian at all. While at it, also exclude the few broken alternatives like tolletta, and moreover impose a rule that the 2nd letter must work as a final, whatever it is, which limits the total results to 102. Here they are :</p>
+<hr />
+<p style="padding-left: 50px;">
+A bcdO fOg bciLg LkO lOmmng A bLObALg<br />gc BALLOTTc gq qcmAqO Orckdc icmgOLA mcdO<br /> BALLOTTA lAbc O rckdAlA bc g bciLkg LkO<br />lOmmng A bLObALg iO qckc BALLOTTA lA bc mcb<br />rckkg mALOcO O mAdgmgO fg rckTA gc<br />BALLOTTc O rckdc mcb rOkkg mALObO O<br />mAdgmgO fg rckTA iO qckc BALLOTTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciSg SkE lEmmng A bSEbASg<br />gc BASSETTc gq qcmAqE Erckdc icmgESA mcdE<br /> BASSETTA lAbc E rckdAlA bc g bciSkg SkE<br />lEmmng A bSEbASg iE qckc BASSETTA lA bc mcb<br />rckkg mASEcE E mAdgmgE fg rckTA gc<br />BASSETTc E rckdc mcb rEkkg mASEbE E<br />mAdgmgE fg rckTA iE qckc BASSETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciSg SkE lEmmng A bSEbASg<br />gc BASSEZZc gq qcmAqE Erckdc icmgESA mcdE<br /> BASSEZZA lAbc E rckdAlA bc g bciSkg SkE<br />lEmmng A bSEbASg iE qckc BASSEZZA lA bc mcb<br />rckkg mASEcE E mAdgmgE fg rckZA gc<br />BASSEZZc E rckdc mcb rEkkg mASEbE E<br />mAdgmgE fg rckZA iE qckc BASSEZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdO fOg bciSg SkO lOmmng A bSObASg<br />gc BASSOTTc gq qcmAqO Orckdc icmgOSA mcdO<br /> BASSOTTA lAbc O rckdAlA bc g bciSkg SkO<br />lOmmng A bSObASg iO qckc BASSOTTA lA bc mcb<br />rckkg mASOcO O mAdgmgO fg rckTA gc<br />BASSOTTc O rckdc mcb rOkkg mASObO O<br />mAdgmgO fg rckTA iO qckc BASSOTTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciTg TkE lEmmng A bTEbATg<br />gc BATTEZZc gq qcmAqE Erckdc icmgETA mcdE<br /> BATTEZZA lAbc E rckdAlA bc g bciTkg TkE<br />lEmmng A bTEbATg iE qckc BATTEZZA lA bc mcb<br />rckkg mATEcE E mAdgmgE fg rckZA gc<br />BATTEZZc E rckdc mcb rEkkg mATEbE E<br />mAdgmgE fg rckZA iE qckc BATTEZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdO fOg bciZg ZkO lOmmng A bZObAZg<br />gc BAZZOTTc gq qcmAqO Orckdc icmgOZA mcdO<br /> BAZZOTTA lAbc O rckdAlA bc g bciZkg ZkO<br />lOmmng A bZObAZg iO qckc BAZZOTTA lA bc mcb<br />rckkg mAZOcO O mAdgmgO fg rckTA gc<br />BAZZOTTc O rckdc mcb rOkkg mAZObO O<br />mAdgmgO fg rckTA iO qckc BAZZOTTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciCg CkA lAmmng E bCAbECg<br />gc BECCACCc gq qcmEqA Arckdc icmgACE mcdA<br /> BECCACCE lEbc A rckdElE bc g bciCkg CkA<br />lAmmng E bCAbECg iA qckc BECCACCE lE bc mcb<br />rckkg mECAcA A mEdgmgA fg rckCE gc<br />BECCACCc A rckdc mcb rAkkg mECAbA A<br />mEdgmgA fg rckCE iA qckc BECCACCE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdO fOg bciLg LkO lOmmng E bLObELg<br />gc BELLOCCc gq qcmEqO Orckdc icmgOLE mcdO<br /> BELLOCCE lEbc O rckdElE bc g bciLkg LkO<br />lOmmng E bLObELg iO qckc BELLOCCE lE bc mcb<br />rckkg mELOcO O mEdgmgO fg rckCE gc<br />BELLOCCc O rckdc mcb rOkkg mELObO O<br />mEdgmgO fg rckCE iO qckc BELLOCCE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdA fAg bciZg ZkA lAmmng I bZAbIZg<br />gc BIZZARRc gq qcmIqA Arckdc icmgAZI mcdA<br /> BIZZARRI lIbc A rckdIlI bc g bciZkg ZkA<br />lAmmng I bZAbIZg iA qckc BIZZARRI lI bc mcb<br />rckkg mIZAcA A mIdgmgA fg rckRI gc<br />BIZZARRc A rckdc mcb rAkkg mIZAbA A<br />mIdgmgA fg rckRI iA qckc BIZZARRI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciZg ZkE lEmmng O bZEbOZg<br />gc BOZZELLc gq qcmOqE Erckdc icmgEZO mcdE<br /> BOZZELLO lObc E rckdOlO bc g bciZkg ZkE<br />lEmmng O bZEbOZg iE qckc BOZZELLO lO bc mcb<br />rckkg mOZEcE E mOdgmgE fg rckLO gc<br />BOZZELLc E rckdc mcb rEkkg mOZEbE E<br />mOdgmgE fg rckLO iE qckc BOZZELLO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciZg ZkE lEmmng O bZEbOZg<br />gc BOZZETTc gq qcmOqE Erckdc icmgEZO mcdE<br /> BOZZETTO lObc E rckdOlO bc g bciZkg ZkE<br />lEmmng O bZEbOZg iE qckc BOZZETTO lO bc mcb<br />rckkg mOZEcE E mOdgmgE fg rckTO gc<br />BOZZETTc E rckdc mcb rEkkg mOZEbE E<br />mOdgmgE fg rckTO iE qckc BOZZETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciNg NkE lEmmng A bNEbANg<br />gc CANNELLc gq qcmAqE Erckdc icmgENA mcdE<br /> CANNELLA lAbc E rckdAlA bc g bciNkg NkE<br />lEmmng A bNEbANg iE qckc CANNELLA lA bc mcb<br />rckkg mANEcE E mAdgmgE fg rckLA gc<br />CANNELLc E rckdc mcb rEkkg mANEbE E<br />mAdgmgE fg rckLA iE qckc CANNELLA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciNg NkE lEmmng A bNEbANg<br />gc CANNETTc gq qcmAqE Erckdc icmgENA mcdE<br /> CANNETTA lAbc E rckdAlA bc g bciNkg NkE<br />lEmmng A bNEbANg iE qckc CANNETTA lA bc mcb<br />rckkg mANEcE E mAdgmgE fg rckTA gc<br />CANNETTc E rckdc mcb rEkkg mANEbE E<br />mAdgmgE fg rckTA iE qckc CANNETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciPg PkE lEmmng A bPEbAPg<br />gc CAPPELLc gq qcmAqE Erckdc icmgEPA mcdE<br /> CAPPELLA lAbc E rckdAlA bc g bciPkg PkE<br />lEmmng A bPEbAPg iE qckc CAPPELLA lA bc mcb<br />rckkg mAPEcE E mAdgmgE fg rckLA gc<br />CAPPELLc E rckdc mcb rEkkg mAPEbE E<br />mAdgmgE fg rckLA iE qckc CAPPELLA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdO fOg bciPg PkO lOmmng A bPObAPg<br />gc CAPPOTTc gq qcmAqO Orckdc icmgOPA mcdO<br /> CAPPOTTA lAbc O rckdAlA bc g bciPkg PkO<br />lOmmng A bPObAPg iO qckc CAPPOTTA lA bc mcb<br />rckkg mAPOcO O mAdgmgO fg rckTA gc<br />CAPPOTTc O rckdc mcb rOkkg mAPObO O<br />mAdgmgO fg rckTA iO qckc CAPPOTTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciRg RkE lEmmng A bREbARg<br />gc CARRETTc gq qcmAqE Erckdc icmgERA mcdE<br /> CARRETTA lAbc E rckdAlA bc g bciRkg RkE<br />lEmmng A bREbARg iE qckc CARRETTA lA bc mcb<br />rckkg mAREcE E mAdgmgE fg rckTA gc<br />CARRETTc E rckdc mcb rEkkg mAREbE E<br />mAdgmgE fg rckTA iE qckc CARRETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdO fOg bciRg RkO lOmmng A bRObARg<br />gc CARROZZc gq qcmAqO Orckdc icmgORA mcdO<br /> CARROZZA lAbc O rckdAlA bc g bciRkg RkO<br />lOmmng A bRObARg iO qckc CARROZZA lA bc mcb<br />rckkg mAROcO O mAdgmgO fg rckZA gc<br />CARROZZc O rckdc mcb rOkkg mARObO O<br />mAdgmgO fg rckZA iO qckc CARROZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciSg SkE lEmmng A bSEbASg<br />gc CASSETTc gq qcmAqE Erckdc icmgESA mcdE<br /> CASSETTA lAbc E rckdAlA bc g bciSkg SkE<br />lEmmng A bSEbASg iE qckc CASSETTA lA bc mcb<br />rckkg mASEcE E mAdgmgE fg rckTA gc<br />CASSETTc E rckdc mcb rEkkg mASEbE E<br />mAdgmgE fg rckTA iE qckc CASSETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciSg SkA lAmmng E bSAbESg<br />gc CESSASSc gq qcmEqA Arckdc icmgASE mcdA<br /> CESSASSE lEbc A rckdElE bc g bciSkg SkA<br />lAmmng E bSAbESg iA qckc CESSASSE lE bc mcb<br />rckkg mESAcA A mEdgmgA fg rckSE gc<br />CESSASSc A rckdc mcb rAkkg mESAbA A<br />mEdgmgA fg rckSE iA qckc CESSASSE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciLg LkA lAmmng O bLAbOLg<br />gc COLLASSc gq qcmOqA Arckdc icmgALO mcdA<br /> COLLASSO lObc A rckdOlO bc g bciLkg LkA<br />lAmmng O bLAbOLg iA qckc COLLASSO lO bc mcb<br />rckkg mOLAcA A mOdgmgA fg rckSO gc<br />COLLASSc A rckdc mcb rAkkg mOLAbA A<br />mOdgmgA fg rckSO iA qckc COLLASSO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciLg LkE lEmmng O bLEbOLg<br />gc COLLETTc gq qcmOqE Erckdc icmgELO mcdE<br /> COLLETTO lObc E rckdOlO bc g bciLkg LkE<br />lEmmng O bLEbOLg iE qckc COLLETTO lO bc mcb<br />rckkg mOLEcE E mOdgmgE fg rckTO gc<br />COLLETTc E rckdc mcb rEkkg mOLEbE E<br />mOdgmgE fg rckTO iE qckc COLLETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciMg MkE lEmmng O bMEbOMg<br />gc COMMESSc gq qcmOqE Erckdc icmgEMO mcdE<br /> COMMESSO lObc E rckdOlO bc g bciMkg MkE<br />lEmmng O bMEbOMg iE qckc COMMESSO lO bc mcb<br />rckkg mOMEcE E mOdgmgE fg rckSO gc<br />COMMESSc E rckdc mcb rEkkg mOMEbE E<br />mOdgmgE fg rckSO iE qckc COMMESSO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciNg NkE lEmmng O bNEbONg<br />gc CONNESSc gq qcmOqE Erckdc icmgENO mcdE<br /> CONNESSO lObc E rckdOlO bc g bciNkg NkE<br />lEmmng O bNEbONg iE qckc CONNESSO lO bc mcb<br />rckkg mONEcE E mOdgmgE fg rckSO gc<br />CONNESSc E rckdc mcb rEkkg mONEbE E<br />mOdgmgE fg rckSO iE qckc CONNESSO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciRg RkE lEmmng O bREbORg<br />gc CORREGGc gq qcmOqE Erckdc icmgERO mcdE<br /> CORREGGO lObc E rckdOlO bc g bciRkg RkE<br />lEmmng O bREbORg iE qckc CORREGGO lO bc mcb<br />rckkg mOREcE E mOdgmgE fg rckGO gc<br />CORREGGc E rckdc mcb rEkkg mOREbE E<br />mOdgmgE fg rckGO iE qckc CORREGGO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciRg RkE lEmmng O bREbORg<br />gc CORREMMc gq qcmOqE Erckdc icmgERO mcdE<br /> CORREMMO lObc E rckdOlO bc g bciRkg RkE<br />lEmmng O bREbORg iE qckc CORREMMO lO bc mcb<br />rckkg mOREcE E mOdgmgE fg rckMO gc<br />CORREMMc E rckdc mcb rEkkg mOREbE E<br />mOdgmgE fg rckMO iE qckc CORREMMO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciRg RkE lEmmng O bREbORg<br />gc CORRETTc gq qcmOqE Erckdc icmgERO mcdE<br /> CORRETTO lObc E rckdOlO bc g bciRkg RkE<br />lEmmng O bREbORg iE qckc CORRETTO lO bc mcb<br />rckkg mOREcE E mOdgmgE fg rckTO gc<br />CORRETTc E rckdc mcb rEkkg mOREbE E<br />mOdgmgE fg rckTO iE qckc CORRETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciZg ZkA lAmmng O bZAbOZg<br />gc COZZAMMc gq qcmOqA Arckdc icmgAZO mcdA<br /> COZZAMMO lObc A rckdOlO bc g bciZkg ZkA<br />lAmmng O bZAbOZg iA qckc COZZAMMO lO bc mcb<br />rckkg mOZAcA A mOdgmgA fg rckMO gc<br />COZZAMMc A rckdc mcb rAkkg mOZAbA A<br />mOdgmgA fg rckMO iA qckc COZZAMMO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciNg NkE lEmmng A bNEbANg<br />gc DANNEGGc gq qcmAqE Erckdc icmgENA mcdE<br /> DANNEGGA lAbc E rckdAlA bc g bciNkg NkE<br />lEmmng A bNEbANg iE qckc DANNEGGA lA bc mcb<br />rckkg mANEcE E mAdgmgE fg rckGA gc<br />DANNEGGc E rckdc mcb rEkkg mANEbE E<br />mAdgmgE fg rckGA iE qckc DANNEGGA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciTg TkA lAmmng E bTAbETg<br />gc DETTASSc gq qcmEqA Arckdc icmgATE mcdA<br /> DETTASSE lEbc A rckdElE bc g bciTkg TkA<br />lAmmng E bTAbETg iA qckc DETTASSE lE bc mcb<br />rckkg mETAcA A mEdgmgA fg rckSE gc<br />DETTASSc A rckdc mcb rAkkg mETAbA A<br />mEdgmgA fg rckSE iA qckc DETTASSE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdE fEg bciSg SkE lEmmng I bSEbISg<br />gc DISSERRc gq qcmIqE Erckdc icmgESI mcdE<br /> DISSERRI lIbc E rckdIlI bc g bciSkg SkE<br />lEmmng I bSEbISg iE qckc DISSERRI lI bc mcb<br />rckkg mISEcE E mIdgmgE fg rckRI gc<br />DISSERRc E rckdc mcb rEkkg mISEbE E<br />mIdgmgE fg rckRI iE qckc DISSERRI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciRg RkA lAmmng O bRAbORg<br />gc DORRANNc gq qcmOqA Arckdc icmgARO mcdA<br /> DORRANNO lObc A rckdOlO bc g bciRkg RkA<br />lAmmng O bRAbORg iA qckc DORRANNO lO bc mcb<br />rckkg mORAcA A mOdgmgA fg rckNO gc<br />DORRANNc A rckdc mcb rAkkg mORAbA A<br />mOdgmgA fg rckNO iA qckc DORRANNO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciCg CkE lEmmng A bCEbACg<br />gc FACCETTc gq qcmAqE Erckdc icmgECA mcdE<br /> FACCETTA lAbc E rckdAlA bc g bciCkg CkE<br />lEmmng A bCEbACg iE qckc FACCETTA lA bc mcb<br />rckkg mACEcE E mAdgmgE fg rckTA gc<br />FACCETTc E rckdc mcb rEkkg mACEbE E<br />mAdgmgE fg rckTA iE qckc FACCETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciTg TkE lEmmng A bTEbATg<br />gc FATTEZZc gq qcmAqE Erckdc icmgETA mcdE<br /> FATTEZZA lAbc E rckdAlA bc g bciTkg TkE<br />lEmmng A bTEbATg iE qckc FATTEZZA lA bc mcb<br />rckkg mATEcE E mAdgmgE fg rckZA gc<br />FATTEZZc E rckdc mcb rEkkg mATEbE E<br />mAdgmgE fg rckZA iE qckc FATTEZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdU fUg bciTg TkU lUmmng E bTUbETg<br />gc FETTUCCc gq qcmEqU Urckdc icmgUTE mcdU<br /> FETTUCCE lEbc U rckdElE bc g bciTkg TkU<br />lUmmng E bTUbETg iU qckc FETTUCCE lE bc mcb<br />rckkg mETUcU U mEdgmgU fg rckCE gc<br />FETTUCCc U rckdc mcb rUkkg mETUbU U<br />mEdgmgU fg rckCE iU qckc FETTUCCE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdA fAg bciSg SkA lAmmng I bSAbISg<br />gc FISSAGGc gq qcmIqA Arckdc icmgASI mcdA<br /> FISSAGGI lIbc A rckdIlI bc g bciSkg SkA<br />lAmmng I bSAbISg iA qckc FISSAGGI lI bc mcb<br />rckkg mISAcA A mIdgmgA fg rckGI gc<br />FISSAGGc A rckdc mcb rAkkg mISAbA A<br />mIdgmgA fg rckGI iA qckc FISSAGGI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdA fAg bciSg SkA lAmmng I bSAbISg<br />gc FISSASSc gq qcmIqA Arckdc icmgASI mcdA<br /> FISSASSI lIbc A rckdIlI bc g bciSkg SkA<br />lAmmng I bSAbISg iA qckc FISSASSI lI bc mcb<br />rckkg mISAcA A mIdgmgA fg rckSI gc<br />FISSASSc A rckdc mcb rAkkg mISAbA A<br />mIdgmgA fg rckSI iA qckc FISSASSI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciLg LkE lEmmng O bLEbOLg<br />gc FOLLETTc gq qcmOqE Erckdc icmgELO mcdE<br /> FOLLETTO lObc E rckdOlO bc g bciLkg LkE<br />lEmmng O bLEbOLg iE qckc FOLLETTO lO bc mcb<br />rckkg mOLEcE E mOdgmgE fg rckTO gc<br />FOLLETTc E rckdc mcb rEkkg mOLEbE E<br />mOdgmgE fg rckTO iE qckc FOLLETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciLg LkE lEmmng A bLEbALg<br />gc GALLETTc gq qcmAqE Erckdc icmgELA mcdE<br /> GALLETTA lAbc E rckdAlA bc g bciLkg LkE<br />lEmmng A bLEbALg iE qckc GALLETTA lA bc mcb<br />rckkg mALEcE E mAdgmgE fg rckTA gc<br />GALLETTc E rckdc mcb rEkkg mALEbE E<br />mAdgmgE fg rckTA iE qckc GALLETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdO fOg bciRg RkO lOmmng A bRObARg<br />gc GARROTTc gq qcmAqO Orckdc icmgORA mcdO<br /> GARROTTA lAbc O rckdAlA bc g bciRkg RkO<br />lOmmng A bRObARg iO qckc GARROTTA lA bc mcb<br />rckkg mAROcO O mAdgmgO fg rckTA gc<br />GARROTTc O rckdc mcb rOkkg mARObO O<br />mAdgmgO fg rckTA iO qckc GARROTTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciZg ZkE lEmmng A bZEbAZg<br />gc GAZZELLc gq qcmAqE Erckdc icmgEZA mcdE<br /> GAZZELLA lAbc E rckdAlA bc g bciZkg ZkE<br />lEmmng A bZEbAZg iE qckc GAZZELLA lA bc mcb<br />rckkg mAZEcE E mAdgmgE fg rckLA gc<br />GAZZELLc E rckdc mcb rEkkg mAZEbE E<br />mAdgmgE fg rckLA iE qckc GAZZELLA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciZg ZkE lEmmng A bZEbAZg<br />gc GAZZETTc gq qcmAqE Erckdc icmgEZA mcdE<br /> GAZZETTA lAbc E rckdAlA bc g bciZkg ZkE<br />lEmmng A bZEbAZg iE qckc GAZZETTA lA bc mcb<br />rckkg mAZEcE E mAdgmgE fg rckTA gc<br />GAZZETTc E rckdc mcb rEkkg mAZEbE E<br />mAdgmgE fg rckTA iE qckc GAZZETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciSg SkA lAmmng E bSAbESg<br />gc GESSASSc gq qcmEqA Arckdc icmgASE mcdA<br /> GESSASSE lEbc A rckdElE bc g bciSkg SkA<br />lAmmng E bSAbESg iA qckc GESSASSE lE bc mcb<br />rckkg mESAcA A mEdgmgA fg rckSE gc<br />GESSASSc A rckdc mcb rAkkg mESAbA A<br />mEdgmgA fg rckSE iA qckc GESSASSE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciTg TkA lAmmng E bTAbETg<br />gc GETTASSc gq qcmEqA Arckdc icmgATE mcdA<br /> GETTASSE lEbc A rckdElE bc g bciTkg TkA<br />lAmmng E bTAbETg iA qckc GETTASSE lE bc mcb<br />rckkg mETAcA A mEdgmgA fg rckSE gc<br />GETTASSc A rckdc mcb rAkkg mETAbA A<br />mEdgmgA fg rckSE iA qckc GETTASSE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciZg ZkE lEmmng O bZEbOZg<br />gc GOZZETTc gq qcmOqE Erckdc icmgEZO mcdE<br /> GOZZETTO lObc E rckdOlO bc g bciZkg ZkE<br />lEmmng O bZEbOZg iE qckc GOZZETTO lO bc mcb<br />rckkg mOZEcE E mOdgmgE fg rckTO gc<br />GOZZETTc E rckdc mcb rEkkg mOZEbE E<br />mOdgmgE fg rckTO iE qckc GOZZETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciSg SkE lEmmng A bSEbASg<br />gc LASSEZZc gq qcmAqE Erckdc icmgESA mcdE<br /> LASSEZZA lAbc E rckdAlA bc g bciSkg SkE<br />lEmmng A bSEbASg iE qckc LASSEZZA lA bc mcb<br />rckkg mASEcE E mAdgmgE fg rckZA gc<br />LASSEZZc E rckdc mcb rEkkg mASEbE E<br />mAdgmgE fg rckZA iE qckc LASSEZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciCg CkA lAmmng E bCAbECg<br />gc LECCASSc gq qcmEqA Arckdc icmgACE mcdA<br /> LECCASSE lEbc A rckdElE bc g bciCkg CkA<br />lAmmng E bCAbECg iA qckc LECCASSE lE bc mcb<br />rckkg mECAcA A mEdgmgA fg rckSE gc<br />LECCASSc A rckdc mcb rAkkg mECAbA A<br />mEdgmgA fg rckSE iA qckc LECCASSE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciSg SkA lAmmng E bSAbESg<br />gc LESSASSc gq qcmEqA Arckdc icmgASE mcdA<br /> LESSASSE lEbc A rckdElE bc g bciSkg SkA<br />lAmmng E bSAbESg iA qckc LESSASSE lE bc mcb<br />rckkg mESAcA A mEdgmgA fg rckSE gc<br />LESSASSc A rckdc mcb rAkkg mESAbA A<br />mEdgmgA fg rckSE iA qckc LESSASSE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciTg TkA lAmmng O bTAbOTg<br />gc LOTTAMMc gq qcmOqA Arckdc icmgATO mcdA<br /> LOTTAMMO lObc A rckdOlO bc g bciTkg TkA<br />lAmmng O bTAbOTg iA qckc LOTTAMMO lO bc mcb<br />rckkg mOTAcA A mOdgmgA fg rckMO gc<br />LOTTAMMc A rckdc mcb rAkkg mOTAbA A<br />mOdgmgA fg rckMO iA qckc LOTTAMMO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdI fIg bciTg TkI lImmng O bTIbOTg<br />gc LOTTIZZc gq qcmOqI Irckdc icmgITO mcdI<br /> LOTTIZZO lObc I rckdOlO bc g bciTkg TkI<br />lImmng O bTIbOTg iI qckc LOTTIZZO lO bc mcb<br />rckkg mOTIcI I mOdgmgI fg rckZO gc<br />LOTTIZZc I rckdc mcb rIkkg mOTIbI I<br />mOdgmgI fg rckZO iI qckc LOTTIZZO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciNg NkE lEmmng A bNEbANg<br />gc MANNELLc gq qcmAqE Erckdc icmgENA mcdE<br /> MANNELLA lAbc E rckdAlA bc g bciNkg NkE<br />lEmmng A bNEbANg iE qckc MANNELLA lA bc mcb<br />rckkg mANEcE E mAdgmgE fg rckLA gc<br />MANNELLc E rckdc mcb rEkkg mANEbE E<br />mAdgmgE fg rckLA iE qckc MANNELLA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciZg ZkE lEmmng A bZEbAZg<br />gc MAZZETTc gq qcmAqE Erckdc icmgEZA mcdE<br /> MAZZETTA lAbc E rckdAlA bc g bciZkg ZkE<br />lEmmng A bZEbAZg iE qckc MAZZETTA lA bc mcb<br />rckkg mAZEcE E mAdgmgE fg rckTA gc<br />MAZZETTc E rckdc mcb rEkkg mAZEbE E<br />mAdgmgE fg rckTA iE qckc MAZZETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdO fOg bciZg ZkO lOmmng A bZObAZg<br />gc MAZZOTTc gq qcmAqO Orckdc icmgOZA mcdO<br /> MAZZOTTA lAbc O rckdAlA bc g bciZkg ZkO<br />lOmmng A bZObAZg iO qckc MAZZOTTA lA bc mcb<br />rckkg mAZOcO O mAdgmgO fg rckTA gc<br />MAZZOTTc O rckdc mcb rOkkg mAZObO O<br />mAdgmgO fg rckTA iO qckc MAZZOTTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdE fEg bciLg LkE lEmmng I bLEbILg<br />gc MILLENNc gq qcmIqE Erckdc icmgELI mcdE<br /> MILLENNI lIbc E rckdIlI bc g bciLkg LkE<br />lEmmng I bLEbILg iE qckc MILLENNI lI bc mcb<br />rckkg mILEcE E mIdgmgE fg rckNI gc<br />MILLENNc E rckdc mcb rEkkg mILEbE E<br />mIdgmgE fg rckNI iE qckc MILLENNI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdA fAg bciSg SkA lAmmng I bSAbISg<br />gc MISSAGGc gq qcmIqA Arckdc icmgASI mcdA<br /> MISSAGGI lIbc A rckdIlI bc g bciSkg SkA<br />lAmmng I bSAbISg iA qckc MISSAGGI lI bc mcb<br />rckkg mISAcA A mIdgmgA fg rckGI gc<br />MISSAGGc A rckdc mcb rAkkg mISAbA A<br />mIdgmgA fg rckGI iA qckc MISSAGGI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciRg RkA lAmmng O bRAbORg<br />gc MORRANNc gq qcmOqA Arckdc icmgARO mcdA<br /> MORRANNO lObc A rckdOlO bc g bciRkg RkA<br />lAmmng O bRAbORg iA qckc MORRANNO lO bc mcb<br />rckkg mORAcA A mOdgmgA fg rckNO gc<br />MORRANNc A rckdc mcb rAkkg mORAbA A<br />mOdgmgA fg rckNO iA qckc MORRANNO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciTg TkE lEmmng O bTEbOTg<br />gc MOTTETTc gq qcmOqE Erckdc icmgETO mcdE<br /> MOTTETTO lObc E rckdOlO bc g bciTkg TkE<br />lEmmng O bTEbOTg iE qckc MOTTETTO lO bc mcb<br />rckkg mOTEcE E mOdgmgE fg rckTO gc<br />MOTTETTc E rckdc mcb rEkkg mOTEbE E<br />mOdgmgE fg rckTO iE qckc MOTTETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciNg NkE lEmmng A bNEbANg<br />gc PANNELLc gq qcmAqE Erckdc icmgENA mcdE<br /> PANNELLA lAbc E rckdAlA bc g bciNkg NkE<br />lEmmng A bNEbANg iE qckc PANNELLA lA bc mcb<br />rckkg mANEcE E mAdgmgE fg rckLA gc<br />PANNELLc E rckdc mcb rEkkg mANEbE E<br />mAdgmgE fg rckLA iE qckc PANNELLA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdU fUg bciRg RkU lUmmng A bRUbARg<br />gc PARRUCCc gq qcmAqU Urckdc icmgURA mcdU<br /> PARRUCCA lAbc U rckdAlA bc g bciRkg RkU<br />lUmmng A bRUbARg iU qckc PARRUCCA lA bc mcb<br />rckkg mARUcU U mAdgmgU fg rckCA gc<br />PARRUCCc U rckdc mcb rUkkg mARUbU U<br />mAdgmgU fg rckCA iU qckc PARRUCCA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciSg SkE lEmmng A bSEbASg<br />gc PASSETTc gq qcmAqE Erckdc icmgESA mcdE<br /> PASSETTA lAbc E rckdAlA bc g bciSkg SkE<br />lEmmng A bSEbASg iE qckc PASSETTA lA bc mcb<br />rckkg mASEcE E mAdgmgE fg rckTA gc<br />PASSETTc E rckdc mcb rEkkg mASEbE E<br />mAdgmgE fg rckTA iE qckc PASSETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciCg CkA lAmmng E bCAbECg<br />gc PECCASSc gq qcmEqA Arckdc icmgACE mcdA<br /> PECCASSE lEbc A rckdElE bc g bciCkg CkA<br />lAmmng E bCAbECg iA qckc PECCASSE lE bc mcb<br />rckkg mECAcA A mEdgmgA fg rckSE gc<br />PECCASSc A rckdc mcb rAkkg mECAbA A<br />mEdgmgA fg rckSE iA qckc PECCASSE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciLg LkA lAmmng E bLAbELg<br />gc PELLACCc gq qcmEqA Arckdc icmgALE mcdA<br /> PELLACCE lEbc A rckdElE bc g bciLkg LkA<br />lAmmng E bLAbELg iA qckc PELLACCE lE bc mcb<br />rckkg mELAcA A mEdgmgA fg rckCE gc<br />PELLACCc A rckdc mcb rAkkg mELAbA A<br />mEdgmgA fg rckCE iA qckc PELLACCE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdI fIg bciLg LkI lImmng E bLIbELg<br />gc PELLICCc gq qcmEqI Irckdc icmgILE mcdI<br /> PELLICCE lEbc I rckdElE bc g bciLkg LkI<br />lImmng E bLIbELg iI qckc PELLICCE lE bc mcb<br />rckkg mELIcI I mEdgmgI fg rckCE gc<br />PELLICCc I rckdc mcb rIkkg mELIbI I<br />mEdgmgI fg rckCE iI qckc PELLICCE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdO fOg bciLg LkO lOmmng I bLObILg<br />gc PILLOTTc gq qcmIqO Orckdc icmgOLI mcdO<br /> PILLOTTI lIbc O rckdIlI bc g bciLkg LkO<br />lOmmng I bLObILg iO qckc PILLOTTI lI bc mcb<br />rckkg mILOcO O mIdgmgO fg rckTI gc<br />PILLOTTc O rckdc mcb rOkkg mILObO O<br />mIdgmgO fg rckTI iO qckc PILLOTTI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdE fEg bciZg ZkE lEmmng I bZEbIZg<br />gc PIZZETTc gq qcmIqE Erckdc icmgEZI mcdE<br /> PIZZETTI lIbc E rckdIlI bc g bciZkg ZkE<br />lEmmng I bZEbIZg iE qckc PIZZETTI lI bc mcb<br />rckkg mIZEcE E mIdgmgE fg rckTI gc<br />PIZZETTc E rckdc mcb rEkkg mIZEbE E<br />mIdgmgE fg rckTI iE qckc PIZZETTI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciGg GkE lEmmng O bGEbOGg<br />gc POGGETTc gq qcmOqE Erckdc icmgEGO mcdE<br /> POGGETTO lObc E rckdOlO bc g bciGkg GkE<br />lEmmng O bGEbOGg iE qckc POGGETTO lO bc mcb<br />rckkg mOGEcE E mOdgmgE fg rckTO gc<br />POGGETTc E rckdc mcb rEkkg mOGEbE E<br />mOdgmgE fg rckTO iE qckc POGGETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciRg RkA lAmmng O bRAbORg<br />gc PORRANNc gq qcmOqA Arckdc icmgARO mcdA<br /> PORRANNO lObc A rckdOlO bc g bciRkg RkA<br />lAmmng O bRAbORg iA qckc PORRANNO lO bc mcb<br />rckkg mORAcA A mOdgmgA fg rckNO gc<br />PORRANNc A rckdc mcb rAkkg mORAbA A<br />mOdgmgA fg rckNO iA qckc PORRANNO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciRg RkE lEmmng O bREbORg<br />gc PORREMMc gq qcmOqE Erckdc icmgERO mcdE<br /> PORREMMO lObc E rckdOlO bc g bciRkg RkE<br />lEmmng O bREbORg iE qckc PORREMMO lO bc mcb<br />rckkg mOREcE E mOdgmgE fg rckMO gc<br />PORREMMc E rckdc mcb rEkkg mOREbE E<br />mOdgmgE fg rckMO iE qckc PORREMMO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciSg SkE lEmmng O bSEbOSg<br />gc POSSEGGc gq qcmOqE Erckdc icmgESO mcdE<br /> POSSEGGO lObc E rckdOlO bc g bciSkg SkE<br />lEmmng O bSEbOSg iE qckc POSSEGGO lO bc mcb<br />rckkg mOSEcE E mOdgmgE fg rckGO gc<br />POSSEGGc E rckdc mcb rEkkg mOSEbE E<br />mOdgmgE fg rckGO iE qckc POSSEGGO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciSg SkE lEmmng O bSEbOSg<br />gc POSSESSc gq qcmOqE Erckdc icmgESO mcdE<br /> POSSESSO lObc E rckdOlO bc g bciSkg SkE<br />lEmmng O bSEbOSg iE qckc POSSESSO lO bc mcb<br />rckkg mOSEcE E mOdgmgE fg rckSO gc<br />POSSESSc E rckdc mcb rEkkg mOSEbE E<br />mOdgmgE fg rckSO iE qckc POSSESSO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciZg ZkE lEmmng O bZEbOZg<br />gc POZZETTc gq qcmOqE Erckdc icmgEZO mcdE<br /> POZZETTO lObc E rckdOlO bc g bciZkg ZkE<br />lEmmng O bZEbOZg iE qckc POZZETTO lO bc mcb<br />rckkg mOZEcE E mOdgmgE fg rckTO gc<br />POZZETTc E rckdc mcb rEkkg mOZEbE E<br />mOdgmgE fg rckTO iE qckc POZZETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdU fUg bciBg BkU lUmmng A bBUbABg<br />gc RABBUFFc gq qcmAqU Urckdc icmgUBA mcdU<br /> RABBUFFA lAbc U rckdAlA bc g bciBkg BkU<br />lUmmng A bBUbABg iU qckc RABBUFFA lA bc mcb<br />rckkg mABUcU U mAdgmgU fg rckFA gc<br />RABBUFFc U rckdc mcb rUkkg mABUbU U<br />mAdgmgU fg rckFA iU qckc RABBUFFA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciPg PkE lEmmng A bPEbAPg<br />gc RAPPEZZc gq qcmAqE Erckdc icmgEPA mcdE<br /> RAPPEZZA lAbc E rckdAlA bc g bciPkg PkE<br />lEmmng A bPEbAPg iE qckc RAPPEZZA lA bc mcb<br />rckkg mAPEcE E mAdgmgE fg rckZA gc<br />RAPPEZZc E rckdc mcb rEkkg mAPEbE E<br />mAdgmgE fg rckZA iE qckc RAPPEZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciSg SkE lEmmng A bSEbASg<br />gc RASSETTc gq qcmAqE Erckdc icmgESA mcdE<br /> RASSETTA lAbc E rckdAlA bc g bciSkg SkE<br />lEmmng A bSEbASg iE qckc RASSETTA lA bc mcb<br />rckkg mASEcE E mAdgmgE fg rckTA gc<br />RASSETTc E rckdc mcb rEkkg mASEbE E<br />mAdgmgE fg rckTA iE qckc RASSETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciTg TkE lEmmng A bTEbATg<br />gc RATTEZZc gq qcmAqE Erckdc icmgETA mcdE<br /> RATTEZZA lAbc E rckdAlA bc g bciTkg TkE<br />lEmmng A bTEbATg iE qckc RATTEZZA lA bc mcb<br />rckkg mATEcE E mAdgmgE fg rckZA gc<br />RATTEZZc E rckdc mcb rEkkg mATEbE E<br />mAdgmgE fg rckZA iE qckc RATTEZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdI fIg bciTg TkI lImmng A bTIbATg<br />gc RATTIZZc gq qcmAqI Irckdc icmgITA mcdI<br /> RATTIZZA lAbc I rckdAlA bc g bciTkg TkI<br />lImmng A bTIbATg iI qckc RATTIZZA lA bc mcb<br />rckkg mATIcI I mAdgmgI fg rckZA gc<br />RATTIZZc I rckdc mcb rIkkg mATIbI I<br />mAdgmgI fg rckZA iI qckc RATTIZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdO fOg bciTg TkO lOmmng A bTObATg<br />gc RATTOPPc gq qcmAqO Orckdc icmgOTA mcdO<br /> RATTOPPA lAbc O rckdAlA bc g bciTkg TkO<br />lOmmng A bTObATg iO qckc RATTOPPA lA bc mcb<br />rckkg mATOcO O mAdgmgO fg rckPA gc<br />RATTOPPc O rckdc mcb rOkkg mATObO O<br />mAdgmgO fg rckPA iO qckc RATTOPPA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdA fAg bciZg ZkA lAmmng I bZAbIZg<br />gc RIZZASSc gq qcmIqA Arckdc icmgAZI mcdA<br /> RIZZASSI lIbc A rckdIlI bc g bciZkg ZkA<br />lAmmng I bZAbIZg iA qckc RIZZASSI lI bc mcb<br />rckkg mIZAcA A mIdgmgA fg rckSI gc<br />RIZZASSc A rckdc mcb rAkkg mIZAbA A<br />mIdgmgA fg rckSI iA qckc RIZZASSI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciSg SkE lEmmng O bSEbOSg<br />gc ROSSETTc gq qcmOqE Erckdc icmgESO mcdE<br /> ROSSETTO lObc E rckdOlO bc g bciSkg SkE<br />lEmmng O bSEbOSg iE qckc ROSSETTO lO bc mcb<br />rckkg mOSEcE E mOdgmgE fg rckTO gc<br />ROSSETTc E rckdc mcb rEkkg mOSEbE E<br />mOdgmgE fg rckTO iE qckc ROSSETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciGg GkE lEmmng A bGEbAGg<br />gc SAGGEZZc gq qcmAqE Erckdc icmgEGA mcdE<br /> SAGGEZZA lAbc E rckdAlA bc g bciGkg GkE<br />lEmmng A bGEbAGg iE qckc SAGGEZZA lA bc mcb<br />rckkg mAGEcE E mAdgmgE fg rckZA gc<br />SAGGEZZc E rckdc mcb rEkkg mAGEbE E<br />mAdgmgE fg rckZA iE qckc SAGGEZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdA fAg bciFg FkA lAmmng I bFAbIFg<br />gc SIFFATTc gq qcmIqA Arckdc icmgAFI mcdA<br /> SIFFATTI lIbc A rckdIlI bc g bciFkg FkA<br />lAmmng I bFAbIFg iA qckc SIFFATTI lI bc mcb<br />rckkg mIFAcA A mIdgmgA fg rckTI gc<br />SIFFATTc A rckdc mcb rAkkg mIFAbA A<br />mIdgmgA fg rckTI iA qckc SIFFATTI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdI fIg bciFg FkI lImmng O bFIbOFg<br />gc SOFFITTc gq qcmOqI Irckdc icmgIFO mcdI<br /> SOFFITTO lObc I rckdOlO bc g bciFkg FkI<br />lImmng O bFIbOFg iI qckc SOFFITTO lO bc mcb<br />rckkg mOFIcI I mOdgmgI fg rckTO gc<br />SOFFITTc I rckdc mcb rIkkg mOFIbI I<br />mOdgmgI fg rckTO iI qckc SOFFITTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciGg GkE lEmmng O bGEbOGg<br />gc SOGGETTc gq qcmOqE Erckdc icmgEGO mcdE<br /> SOGGETTO lObc E rckdOlO bc g bciGkg GkE<br />lEmmng O bGEbOGg iE qckc SOGGETTO lO bc mcb<br />rckkg mOGEcE E mOdgmgE fg rckTO gc<br />SOGGETTc E rckdc mcb rEkkg mOGEbE E<br />mOdgmgE fg rckTO iE qckc SOGGETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciLg LkA lAmmng O bLAbOLg<br />gc SOLLAZZc gq qcmOqA Arckdc icmgALO mcdA<br /> SOLLAZZO lObc A rckdOlO bc g bciLkg LkA<br />lAmmng O bLAbOLg iA qckc SOLLAZZO lO bc mcb<br />rckkg mOLAcA A mOdgmgA fg rckZO gc<br />SOLLAZZc A rckdc mcb rAkkg mOLAbA A<br />mOdgmgA fg rckZO iA qckc SOLLAZZO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciMg MkA lAmmng O bMAbOMg<br />gc SOMMACCc gq qcmOqA Arckdc icmgAMO mcdA<br /> SOMMACCO lObc A rckdOlO bc g bciMkg MkA<br />lAmmng O bMAbOMg iA qckc SOMMACCO lO bc mcb<br />rckkg mOMAcA A mOdgmgA fg rckCO gc<br />SOMMACCc A rckdc mcb rAkkg mOMAbA A<br />mOdgmgA fg rckCO iA qckc SOMMACCO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciMg MkA lAmmng O bMAbOMg<br />gc SOMMAMMc gq qcmOqA Arckdc icmgAMO mcdA<br /> SOMMAMMO lObc A rckdOlO bc g bciMkg MkA<br />lAmmng O bMAbOMg iA qckc SOMMAMMO lO bc mcb<br />rckkg mOMAcA A mOdgmgA fg rckMO gc<br />SOMMAMMc A rckdc mcb rAkkg mOMAbA A<br />mOdgmgA fg rckMO iA qckc SOMMAMMO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciPg PkA lAmmng O bPAbOPg<br />gc SOPPANNc gq qcmOqA Arckdc icmgAPO mcdA<br /> SOPPANNO lObc A rckdOlO bc g bciPkg PkA<br />lAmmng O bPAbOPg iA qckc SOPPANNO lO bc mcb<br />rckkg mOPAcA A mOdgmgA fg rckNO gc<br />SOPPANNc A rckdc mcb rAkkg mOPAbA A<br />mOdgmgA fg rckNO iA qckc SOPPANNO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciRg RkE lEmmng O bREbORg<br />gc SORREGGc gq qcmOqE Erckdc icmgERO mcdE<br /> SORREGGO lObc E rckdOlO bc g bciRkg RkE<br />lEmmng O bREbORg iE qckc SORREGGO lO bc mcb<br />rckkg mOREcE E mOdgmgE fg rckGO gc<br />SORREGGc E rckdc mcb rEkkg mOREbE E<br />mOdgmgE fg rckGO iE qckc SORREGGO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciRg RkE lEmmng O bREbORg<br />gc SORRETTc gq qcmOqE Erckdc icmgERO mcdE<br /> SORRETTO lObc E rckdOlO bc g bciRkg RkE<br />lEmmng O bREbORg iE qckc SORRETTO lO bc mcb<br />rckkg mOREcE E mOdgmgE fg rckTO gc<br />SORRETTc E rckdc mcb rEkkg mOREbE E<br />mOdgmgE fg rckTO iE qckc SORRETTO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciTg TkE lEmmng O bTEbOTg<br />gc SOTTERRc gq qcmOqE Erckdc icmgETO mcdE<br /> SOTTERRO lObc E rckdOlO bc g bciTkg TkE<br />lEmmng O bTEbOTg iE qckc SOTTERRO lO bc mcb<br />rckkg mOTEcE E mOdgmgE fg rckRO gc<br />SOTTERRc E rckdc mcb rEkkg mOTEbE E<br />mOdgmgE fg rckRO iE qckc SOTTERRO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciPg PkE lEmmng A bPEbAPg<br />gc TAPPEZZc gq qcmAqE Erckdc icmgEPA mcdE<br /> TAPPEZZA lAbc E rckdAlA bc g bciPkg PkE<br />lEmmng A bPEbAPg iE qckc TAPPEZZA lA bc mcb<br />rckkg mAPEcE E mAdgmgE fg rckZA gc<br />TAPPEZZc E rckdc mcb rEkkg mAPEbE E<br />mAdgmgE fg rckZA iE qckc TAPPEZZA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciSg SkE lEmmng A bSEbASg<br />gc TASSELLc gq qcmAqE Erckdc icmgESA mcdE<br /> TASSELLA lAbc E rckdAlA bc g bciSkg SkE<br />lEmmng A bSEbASg iE qckc TASSELLA lA bc mcb<br />rckkg mASEcE E mAdgmgE fg rckLA gc<br />TASSELLc E rckdc mcb rEkkg mASEbE E<br />mAdgmgE fg rckLA iE qckc TASSELLA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciRg RkA lAmmng E bRAbERg<br />gc TERRAZZc gq qcmEqA Arckdc icmgARE mcdA<br /> TERRAZZE lEbc A rckdElE bc g bciRkg RkA<br />lAmmng E bRAbERg iA qckc TERRAZZE lE bc mcb<br />rckkg mERAcA A mEdgmgA fg rckZE gc<br />TERRAZZc A rckdc mcb rAkkg mERAbA A<br />mEdgmgA fg rckZE iA qckc TERRAZZE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciCg CkA lAmmng O bCAbOCg<br />gc TOCCAMMc gq qcmOqA Arckdc icmgACO mcdA<br /> TOCCAMMO lObc A rckdOlO bc g bciCkg CkA<br />lAmmng O bCAbOCg iA qckc TOCCAMMO lO bc mcb<br />rckkg mOCAcA A mOdgmgA fg rckMO gc<br />TOCCAMMc A rckdc mcb rAkkg mOCAbA A<br />mOdgmgA fg rckMO iA qckc TOCCAMMO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciRg RkA lAmmng O bRAbORg<br />gc TORRAZZc gq qcmOqA Arckdc icmgARO mcdA<br /> TORRAZZO lObc A rckdOlO bc g bciRkg RkA<br />lAmmng O bRAbORg iA qckc TORRAZZO lO bc mcb<br />rckkg mORAcA A mOdgmgA fg rckZO gc<br />TORRAZZc A rckdc mcb rAkkg mORAbA A<br />mOdgmgA fg rckZO iA qckc TORRAZZO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdI fIg bciSg SkI lImmng O bSIbOSg<br />gc TOSSIMMc gq qcmOqI Irckdc icmgISO mcdI<br /> TOSSIMMO lObc I rckdOlO bc g bciSkg SkI<br />lImmng O bSIbOSg iI qckc TOSSIMMO lO bc mcb<br />rckkg mOSIcI I mOdgmgI fg rckMO gc<br />TOSSIMMc I rckdc mcb rIkkg mOSIbI I<br />mOdgmgI fg rckMO iI qckc TOSSIMMO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciLg LkE lEmmng A bLEbALg<br />gc VALLETTc gq qcmAqE Erckdc icmgELA mcdE<br /> VALLETTA lAbc E rckdAlA bc g bciLkg LkE<br />lEmmng A bLEbALg iE qckc VALLETTA lA bc mcb<br />rckkg mALEcE E mAdgmgE fg rckTA gc<br />VALLETTc E rckdc mcb rEkkg mALEbE E<br />mAdgmgE fg rckTA iE qckc VALLETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+E bcdA fAg bciSg SkA lAmmng E bSAbESg<br />gc VESSASSc gq qcmEqA Arckdc icmgASE mcdA<br /> VESSASSE lEbc A rckdElE bc g bciSkg SkA<br />lAmmng E bSAbESg iA qckc VESSASSE lE bc mcb<br />rckkg mESAcA A mEdgmgA fg rckSE gc<br />VESSASSc A rckdc mcb rAkkg mESAbA A<br />mEdgmgA fg rckSE iA qckc VESSASSE lE bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdA fAg bciLg LkA lAmmng I bLAbILg<br />gc VILLAGGc gq qcmIqA Arckdc icmgALI mcdA<br /> VILLAGGI lIbc A rckdIlI bc g bciLkg LkA<br />lAmmng I bLAbILg iA qckc VILLAGGI lI bc mcb<br />rckkg mILAcA A mIdgmgA fg rckGI gc<br />VILLAGGc A rckdc mcb rAkkg mILAbA A<br />mIdgmgA fg rckGI iA qckc VILLAGGI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+I bcdE fEg bciLg LkE lEmmng I bLEbILg<br />gc VILLEGGc gq qcmIqE Erckdc icmgELI mcdE<br /> VILLEGGI lIbc E rckdIlI bc g bciLkg LkE<br />lEmmng I bLEbILg iE qckc VILLEGGI lI bc mcb<br />rckkg mILEcE E mIdgmgE fg rckGI gc<br />VILLEGGc E rckdc mcb rEkkg mILEbE E<br />mIdgmgE fg rckGI iE qckc VILLEGGI lI bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdA fAg bciRg RkA lAmmng O bRAbORg<br />gc VORRANNc gq qcmOqA Arckdc icmgARO mcdA<br /> VORRANNO lObc A rckdOlO bc g bciRkg RkA<br />lAmmng O bRAbORg iA qckc VORRANNO lO bc mcb<br />rckkg mORAcA A mOdgmgA fg rckNO gc<br />VORRANNc A rckdc mcb rAkkg mORAbA A<br />mOdgmgA fg rckNO iA qckc VORRANNO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+O bcdE fEg bciRg RkE lEmmng O bREbORg<br />gc VORREMMc gq qcmOqE Erckdc icmgERO mcdE<br /> VORREMMO lObc E rckdOlO bc g bciRkg RkE<br />lEmmng O bREbORg iE qckc VORREMMO lO bc mcb<br />rckkg mOREcE E mOdgmgE fg rckMO gc<br />VORREMMc E rckdc mcb rEkkg mOREbE E<br />mOdgmgE fg rckMO iE qckc VORREMMO lO bc<br />
+<hr />
+<p style="padding-left: 50px;">
+A bcdE fEg bciPg PkE lEmmng A bPEbAPg<br />gc ZAPPETTc gq qcmAqE Erckdc icmgEPA mcdE<br /> ZAPPETTA lAbc E rckdAlA bc g bciPkg PkE<br />lEmmng A bPEbAPg iE qckc ZAPPETTA lA bc mcb<br />rckkg mAPEcE E mAdgmgE fg rckTA gc<br />ZAPPETTc E rckdc mcb rEkkg mAPEbE E<br />mAdgmgE fg rckTA iE qckc ZAPPETTA lA bc<br />
+<hr />
+<p style="padding-left: 50px;">
+<p>So now what ?</p>
+<p>Well, we still haven't touched the otherwise very convenient "lemmng a bjebajg" repeated structure. So perhaps it's time to hit the wordlist again, filtering it after about 102 combinations of ?LO?AL?, ?SE?AS? and so on. Remarkably, there are 210 words that work<sup><a href="#footnote_5_52126" id="identifier_5_52126" class="footnote-link footnote-identifier-link" title="Here we go : 
+clorali ; florale ; globale ; globali ; iterata ; iterate ; iterati ; iterato ; onerano ; snevano ; onerano ; snevano ; cremare ; crepare ; drenare ; fregare ; frenare ; fresare ; grecare ; gregari ; precari ; predare ; pregare ; prepara ; prepari ; preparo ; tremare ; cromare ; frodare ; probare ; provare ; tronare ; tropari ; trovare ; elepoli ; anemone ; anemoni ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; onerano ; snevano ; starete ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; iterata ; iterate ; iterati ; iterato ; elepoli ; cromare ; frodare ; probare ; provare ; tronare ; tropari ; trovare ; starete ; onerano ; snevano ; flebile ; flebili ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; onerano ; snevano ; frugare ; grufare ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; iterata ; iterate ; iterati ; iterato ; stilata ; stilate ; stilati ; stilato ; stimata ; stimate ; stimati ; stimato ; stipata ; stipate ; stipati ; stipato ; stirata ; stirate ; stirati ; stirato ; stivata ; stivate ; stivati ; stivato ; stomato ; stonata ; stonate ; stonati ; stonato ; ematoma ; ematomi ; ematoma ; ematomi ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; bramera ; bramero ; cratere ; crateri ; franera ; franero ; gravera ; gravero ; tradere ; tramera ; tramero ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; psicosi ; psilosi ; flebile ; flebili ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori.">vi</a></sup> unless we actually impose the rule that the first and 4th letter are the same (b), in which case we are left with exactly four : <em>gregari, prepara, prepari and preparo</em>. That's all that Italian has matching the <strong>actually</strong> stringent pattern, which you'd never have guessed is all that stringent in the first place.  So much for the alleged ability of the naked eye to pick patterns better than the machine, huh ? </p>
+<p>Anyway, this narrows down the possibilities something fierce, leaving us with just a few alternative texts. To wit : </p>
+<hr />
+<p style="padding-left: 50px;">A GcdE fEI GciRI RkE lEmmnI A GREGARI<br />
+Ic CARRETTc Iq qcmAqE Erckdc icmIERA mcdE<br />
+CARRETTA lAGc E rckdAlA Gc I GciRkI RkE<br />
+lEmmnI A GREGARI iE qckc CARRETTA lA Gc mcG<br />
+rckkI mAREcE E mAdImIE fI rckTA Ic<br />
+CARRETTc E rckdc mcG rEkkI mAREGE E<br />
+mAdImIE fI rckTA iE qckc CARRETTA lA Gc</p>
+<hr />
+<p style="padding-left: 50px;">A PcdE fEA PciRA RkE lEmmnA A PREPARA<br />
+Ac CARRETTc Aq qcmAqE Erckdc icmAERA mcdE<br />
+CARRETTA lAPc E rckdAlA Pc A PciRkA RkE<br />
+lEmmnA A PREPARA iE qckc CARRETTA lA Pc mcP<br />
+rckkA mAREcE E mAdAmAE fA rckTA Ac<br />
+CARRETTc E rckdc mcP rEkkA mAREPE E<br />
+mAdAmAE fA rckTA iE qckc CARRETTA lA Pc</p>
+<hr />
+<p style="padding-left: 50px;">A PcdE fEI PciRI RkE lEmmnI A PREPARI<br />
+Ic CARRETTc Iq qcmAqE Erckdc icmIERA mcdE<br />
+CARRETTA lAPc E rckdAlA Pc I PciRkI RkE<br />
+lEmmnI A PREPARI iE qckc CARRETTA lA Pc mcP<br />
+rckkI mAREcE E mAdImIE fI rckTA Ic<br />
+CARRETTc E rckdc mcP rEkkI mAREPE E<br />
+mAdImIE fI rckTA iE qckc CARRETTA lA Pc</p>
+<hr />
+<p style="padding-left: 50px;">A PcdE fEO PciRO RkE lEmmnO A PREPARO<br />
+Oc CARRETTc Oq qcmAqE Erckdc icmOERA mcdE<br />
+CARRETTA lAPc E rckdAlA Pc O PciRkO RkE<br />
+lEmmnO A PREPARO iE qckc CARRETTA lA Pc mcP<br />
+rckkO mAREcE E mAdOmOE fO rckTA Oc<br />
+CARRETTc E rckdc mcP rEkkO mAREPE E<br />
+mAdOmOE fO rckTA iE qckc CARRETTA lA Pc</p>
+<hr />
+<p>That's right,  they were talking about... um... carts. Weird, huh.</p>
+<p>And now, if I can direct your attention to the RkE bit, it just so happens there aren't too many three letter Italian words starting with R and ending in E : ree, rie, roe and rue. As in all possible versions we've already used up o and e, and u isn't likely to be double, we're left with k = I. Moreover, there just aren't that many words that'd satisfy the GciRI/PciRA/PciRI/PciRO slot, to wit : </p>
+<blockquote><p>gabri, guari ;<br />
+paura, petra, piera, pigra, plora, potra ;<br />
+padri, patri, petri, pluri ;<br />
+petro, piero, pigro, ptero.
+</p></blockquote>
+<p>The first version is disqualified, as it has no A available anymore (aliteration!). The 2nd qualifies through pigra and plora. The 3rd qualifies through pluri. The 4th through pigro. Which means we're left with these four slightly more advanced versions : </p>
+<hr />
+<p style="padding-left: 50px;">A PIdE fEA PIGRA RkE lEmmnA A PREPARA<br />
+AI CARRETTI Aq qImAqE ErIkdI GImAERA mIdE<br />
+CARRETTA lAPI E rIkdAlA PI A PIGRkA RkE<br />
+lEmmnA A PREPARA GE qIkI CARRETTA lA PI mIP<br />
+rIkkA mAREIE E mAdAmAE fA rIkTA AI<br />
+CARRETTI E rIkdI mIP rEkkA mAREPE E<br />
+mAdAmAE fA rIkTA GE qIkI CARRETTA lA PI</p>
+<hr />
+<p style="padding-left: 50px;">A PLdE fEA PLORA RkE lEmmnA A PREPARA<br />
+AL CARRETTL Aq qLmAqE ErLkdL OLmAERA mLdE<br />
+CARRETTA lAPL E rLkdAlA PL A PLORkA RkE<br />
+lEmmnA A PREPARA OE qLkL CARRETTA lA PL mLP<br />
+rLkkA mARELE E mAdAmAE fA rLkTA AL<br />
+CARRETTL E rLkdL mLP rEkkA mAREPE E<br />
+mAdAmAE fA rLkTA OE qLkL CARRETTA lA PL</p>
+<hr />
+<p style="padding-left: 50px;">A PLdE fEI PLURI RkE lEmmnI A PREPARI<br />
+IL CARRETTL Iq qLmAqE ErLkdL ULmIERA mLdE<br />
+CARRETTA lAPL E rLkdAlA PL I PLURkI RkE<br />
+lEmmnI A PREPARI UE qLkL CARRETTA lA PL mLP<br />
+rLkkI mARELE E mAdImIE fI rLkTA IL<br />
+CARRETTL E rLkdL mLP rEkkI mAREPE E<br />
+mAdImIE fI rLkTA UE qLkL CARRETTA lA PL</p>
+<hr />
+<p style="padding-left: 50px;">A PIdE fEO PIGRO RkE lEmmnO A PREPARO<br />
+OI CARRETTI Oq qImAqE ErIkdI GImOERA mIdE<br />
+CARRETTA lAPI E rIkdAlA PI O PIGRkO RkE<br />
+lEmmnO A PREPARO GE qIkI CARRETTA lA PI mIP<br />
+rIkkO mAREIE E mAdOmOE fO rIkTA OI<br />
+CARRETTI E rIkdI mIP rEkkO mAREPE E<br />
+mAdOmOE fO rIkTA GE qIkI CARRETTA lA PI</p>
+<p>Obviously there's no such thing as CARRETTL or PL, thus the 2nd and 3rd are dead, leaving us with </p>
+<hr />
+<p style="padding-left: 50px;">A PIdE fEA PIGRA RkE lEmmnA A PREPARA<br />
+AI CARRETTI Aq qImAqE ErIkdI GImAERA mIdE<br />
+CARRETTA lAPI E rIkdAlA PI A PIGRkA RkE<br />
+lEmmnA A PREPARA GE qIkI CARRETTA lA PI mIP<br />
+rIkkA mAREIE E mAdAmAE fA rIkTA AI<br />
+CARRETTI E rIkdI mIP rEkkA mAREPE E<br />
+mAdAmAE fA rIkTA GE qIkI CARRETTA lA PI</p>
+<hr />
+<p style="padding-left: 50px;">A PIdE fEO PIGRO RkE lEmmnO A PREPARO<br />
+OI CARRETTI Oq qImAqE ErIkdI GImOERA mIdE<br />
+CARRETTA lAPI E rIkdAlA PI O PIGRkO RkE<br />
+lEmmnO A PREPARO GE qIkI CARRETTA lA PI mIP<br />
+rIkkO mAREIE E mAdOmOE fO rIkTA OI<br />
+CARRETTI E rIkdI mIP rEkkO mAREPE E<br />
+mAdOmOE fO rIkTA GE qIkI CARRETTA lA PI</p>
+<p>So let's look at GIm[A/O]ERA next. There's exactly three Italian words that fit here : giacera, giovera and giurera. A is no longer available, nor is O, and moreover neither C, V or R are in {A, O}.</p>
+<p>This means we've failed to decode the text, as there are no more valid candidates. Yet we've not arbitrarily excluded any, which means that either the text is undecypherable (for instance through the journalist having simply photographed some random bit of nonsense rather than the actual message), one of our presumptions is invalid (which'd be strange seeing how we've followed the presumptions suggested by the author), or else there's a spelling issue at work (supposedly they speak some sort of dialect which our original dictionary missed).   </p>
+<p>Any ideas ? </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_52126" class="footnote">The actual source they use, but fail to link, is <a href="http://www.repubblica.it/cronaca/2014/01/09/news/ndrangheta_giuramento_criptato-75456087/">La Republica</a>. It is difficult to comprehend the sort of braindamage that'd make an English troop of cocksuckers not link an Italian troop of similar cocksuckers. What's the idea, are they preserving Google juice so their English readers don't move to Italian ? </p>
+<p>The explanation obviously being that "journalists" are about as dumb as burger flippers, and consequently they need simple rules they don't understand. Such as "<a href="http://trilema.com/2014/smg-december-2013-statement/#comment-97449">don't link to any thing!!1</a>", because that's what the Internet is all about. Tell me again why do we allow cocksuckers on the net ? Not like it's theirs. [<a href="#identifier_0_52126" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_52126" class="footnote">You know, <a href="http://trilema.com/2011/prostitextuarea">these people</a>. [<a href="#identifier_1_52126" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_52126" class="footnote">Which sort-of reminds me of the Cairo cab driver who saw a map for the first time in his life within my own two hands. You know, he's Egyptian, they invented fucking mapmaking supposedly. Just like the Latins invented literacy as a social phenomenon, supposedly. It ain't showing much, is it, once the original ethnic groups got replaced by whatever these new people are. [<a href="#identifier_2_52126" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_52126" class="footnote">Aren't you impressed with the grandeur that is <a href="http://trilema.com/2011/de-fapt-de-ce-nu-folositi-voi-linux/">Linux</a> yet ? Tell me, how'd you do this in your <a href="http://trilema.com/2012/law-enforcement-never-fails-to-unintentionally-entertain/">Excel</a> ? Takes a coupla dumbasses with "an interest" in these things a while, doesn't it ? Then again... the hardest part is finding the c...ulo, after which all goes more or less smoothly, dunnit. [<a href="#identifier_3_52126" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_52126" class="footnote">mircea@inigo-montoya$ grep -E '^[[:alpha:]]{8}$' <a href="http://www.yorku.ca/lbianchi/italian.html">italia-1a.txt</a> | egrep '^?.?.(.)\1.?(.)\2.?$' &gt; res.txt</p>
+<p>babbucce ; baccelli ; baccello ; ballammo ; ballasse ; ballassi ; balletti ; balletto ; ballotta ; ballotte ; barrocci ; bassetta ; bassette ; bassezza ; bassezze ; bassotta ; bassotte ; bassotti ; bassotto ; battelli ; battello ; battemmo ; battesse ; battessi ; battezza ; battezzi ; battezzo ; bazzotta ; bazzotte ; bazzotti ; bazzotto ; beccacce ; beccucci ; belletta ; bellette ; belletti ; belletto ; bellezza ; bellezze ; bellocce ; bellocci ; berranno ; berretta ; berrette ; berretti ; berretto ; bizzarra ; bizzarre ; bizzarri ; bizzarro ; bizzeffe ; boccacce ; boccetta ; boccette ; bolletta ; bollette ; borracce ; bottacce ; bottacci ; bozzelli ; bozzello ; bozzetti ; bozzetto ; buffetti ; buffetto ; bulletta ; bullette ; bussammo ; bussasse ; bussassi ; bussetti ; bussetto ; buttammo ; buttasse ; buttassi ; buzzurra ; buzzurre ; buzzurri ; buzzurro ; cammelli ; cammello ; cannella ; cannelle ; cannelli ; cannello ; cannetta ; cannette ; cannicci ; cannotti ; cannotto ; cannucce ; cappella ; cappelle ; cappelli ; cappello ; cappotta ; cappotte ; cappotti ; cappotto ; cappucce ; cappucci ; carreggi ; carrelli ; carrello ; carretta ; carrette ; carretti ; carretto ; carrocci ; carrozza ; carrozze ; carruggi ; cassetta ; cassette ; cassetti ; cassetto ; cazzotti ; cazzotto ; cessammo ; cessasse ; cessassi ; coccette ; collassi ; collasso ; colletta ; collette ; colletti ; colletto ; commessa ; commesse ; commessi ; commesso ; commossa ; commosse ; commossi ; commosso ; connessa ; connesse ; connessi ; connesso ; connette ; coppella ; coppelle ; coppetta ; coppette ; corregge ; correggo ; corremmo ; corresse ; corressi ; corretta ; corrette ; corretti ; corretto ; corrotta ; corrotte ; corrotti ; corrotto ; corrucci ; corruppi ; cozzammo ; cozzasse ; cozzassi ; cuccetta ; cuccette ; cullammo ; cullasse ; cullassi ; dabbasso ; dannammo ; dannasse ; dannassi ; dannegga ; danneggi ; danneggo ; dettammo ; dettasse ; dettassi ; disserra ; disserri ; donnacce ; dorranno ; dorrebbe ; faccetta ; faccette ; fallacci ; fallimmo ; fattacci ; fattezza ; fattezze ; ferracci ; ferretti ; ferretto ; fettucce ; ficcammo ; fissaggi ; fissammo ; fissasse ; fissassi ; fittezza ; fittezze ; folletti ; folletto ; fossetta ; fossette ; fuggimmo ; galleggi ; galletta ; gallette ; galletti ; galletto ; gallocce ; galluzzo ; garretti ; garretto ; garrotta ; garrotte ; gattelli ; gattello ; gattucci ; gazzarra ; gazzarre ; gazzella ; gazzelle ; gazzetta ; gazzette ; gessasse ; gessetti ; gessetto ; gettammo ; gettasse ; gettassi ; gillette ; ginnetto ; gittasse ; gonnella ; gonnelle ; gottazza ; gottazze ; gozzetto ; lassezza ; lassezze ; leccammo ; leccasse ; leccassi ; leggemmo ; leggesse ; leggessi ; lessammo ; lessasse ; lessassi ; lettucci ; loggetta ; loggette ; lottammo ; lottasse ; lottassi ; lottizza ; lottizzi ; lottizzo ; lussasse ; lxxxviii ; malloppi ; malloppo ; mammella ; mammelle ; mannella ; mannelle ; mannelli ; mannello ; massaggi ; masselli ; massello ; massicce ; massicci ; mazzetta ; mazzette ; mazzetti ; mazzetto ; mazzotta ; mazzotte ; melletta ; messaggi ; mettemmo ; mettesse ; mettessi ; mezzetta ; mezzette ; mezzucci ; millenne ; millenni ; missaggi ; moffetta ; moffette ; mollammo ; mollasse ; mollassi ; molleggi ; molletta ; mollette ; mollezza ; mollezze ; mollicce ; mollicci ; morranno ; morrebbe ; morremmo ; motteggi ; mottetti ; mottetto ; mozzammo ; mozzasse ; mozzassi ; mozzetta ; mozzette ; muggimmo ; muggisse ; muggissi ; mussasse ; narrammo ; narrasse ; narrassi ; nettezza ; nettezze ; nonnulla ; paccammo ; paggetti ; paggetto ; palleggi ; panneggi ; pannella ; pannelli ; pannello ; pappammo ; pappasse ; pappassi ; parranno ; parrebbe ; parrucca ; passaggi ; passammo ; passasse ; passassi ; passeggi ; passetta ; passetti ; passetto ; patteggi ; peccasse ; peccassi ; pellacce ; pelletta ; pellicce ; pennella ; pennelli ; pennello ; pezzetta ; pezzette ; pezzetti ; pezzetto ; pezzulli ; pezzullo ; piccozza ; piccozze ; pillotta ; pillotti ; pillotto ; pissarro ; pizzetta ; pizzette ; pizzetti ; pizzetto ; poggetti ; poggetto ; poppetta ; poppette ; porracci ; porranno ; porrebbe ; porremmo ; possegga ; posseggo ; possessi ; possesso ; pozzetta ; pozzette ; pozzetti ; pozzetto ; puzzasse ; puzzassi ; rabbuffa ; rabbuffe ; rabbuffi ; rabbuffo ; raccatta ; raccatti ; raccatto ; raccozzo ; raddobbi ; raddobbo ; raddoppi ; raddurre ; raffitti ; rallacci ; rappello ; rappezza ; rappezzi ; rappezzo ; rassetta ; rassetti ; rassetto ; rattezza ; rattizza ; rattizzi ; rattizzo ; rattoppa ; rattoppi ; rattoppo ; reggemmo ; reggesse ; reggessi ; reggetta ; reggette ; rizzammo ; rizzasse ; rizzassi ; rollasse ; rossetta ; rossette ; rossetti ; rossetto ; rossezza ; rossicce ; rossicci ; rozzezza ; rozzezze ; rullaggi ; rullammo ; rullasse ; rullassi ; rulletti ; rulletto ; russammo ; russasse ; russassi ; ruttammo ; ruttasse ; ruttassi ; saccocce ; saggezza ; saggezze ; sassella ; sasselli ; sassello ; seccammo ; seccasse ; seccassi ; seggetta ; seggette ; sellammo ; sellasse ; sellassi ; seppelli ; serrammo ; serrasse ; serrassi ; serretta ; serrette ; sessenne ; sessenni ; settenne ; settenni ; siffatta ; siffatte ; siffatti ; siffatto ; sillessi ; soccorra ; soccorre ; soccorri ; soccorro ; soffitta ; soffitte ; soffitti ; soffitto ; soggetta ; soggette ; soggetti ; soggetto ; sollazza ; sollazzi ; sollazzo ; sommacco ; sommammo ; sommasse ; sommassi ; sommessa ; sommesse ; sommessi ; sommesso ; sommetta ; sommette ; sommossa ; sommosse ; sommosso ; soppanna ; soppanni ; soppanno ; sorregga ; sorregge ; sorreggi ; sorreggo ; sorresse ; sorressi ; sorretta ; sorrette ; sorretti ; sorretto ; sotterra ; sotterri ; sotterro ; sottesso ; sovvenne ; sovvenni ; successa ; successe ; successi ; successo ; suddetta ; suddette ; suddetti ; suddetto ; suffetti ; suffetto ; suffissi ; suffisso ; suggella ; suggelli ; suggello ; supporra ; supporre ; supporro ; sussurra ; sussurri ; sussurro ; taffetta ; tappammo ; tappasse ; tappassi ; tappetti ; tappetto ; tappezza ; tappezzi ; tappezzo ; tassammo ; tassasse ; tassassi ; tassella ; tasselli ; tassello ; tazzetta ; tazzette ; terranno ; terrazza ; terrazze ; terrazzi ; terrazzo ; terrebbe ; terremmo ; terricci ; tessemmo ; tessesse ; tessessi ; tettucci ; toccammo ; toccasse ; toccassi ; tolletta ; tollette ; tolletti ; tolletto ; tonneggi ; tonnetti ; tonnetto ; torrazzi ; torrazzo ; torreggi ; torretta ; torrette ; tossimmo ; tossisse ; tossissi ; tuffammo ; tuffasse ; tuffassi ; tuffetti ; tuffetto ; valletta ; vallette ; valletti ; valletto ; varranno ; vassalla ; vassalle ; vassalli ; vassallo ; verranno ; verrebbe ; verremmo ; verrenno ; vessammo ; vessasse ; vessassi ; vessilli ; vessillo ; vezzeggi ; villaggi ; villeggi ; villetta ; villette ; villotta ; villotte ; vorranno ; vorrebbe ; vorremmo ; zappammo ; zappassi ; zappetta ; zappette ; zolletta ; zollette ; zuccotti ; zuccotto. [<a href="#identifier_4_52126" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_52126" class="footnote">Here we go : </p>
+<p>clorali ; florale ; globale ; globali ; iterata ; iterate ; iterati ; iterato ; onerano ; snevano ; onerano ; snevano ; cremare ; crepare ; drenare ; fregare ; frenare ; fresare ; grecare ; gregari ; precari ; predare ; pregare ; prepara ; prepari ; preparo ; tremare ; cromare ; frodare ; probare ; provare ; tronare ; tropari ; trovare ; elepoli ; anemone ; anemoni ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; onerano ; snevano ; starete ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; iterata ; iterate ; iterati ; iterato ; elepoli ; cromare ; frodare ; probare ; provare ; tronare ; tropari ; trovare ; starete ; onerano ; snevano ; flebile ; flebili ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; onerano ; snevano ; frugare ; grufare ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; iterata ; iterate ; iterati ; iterato ; stilata ; stilate ; stilati ; stilato ; stimata ; stimate ; stimati ; stimato ; stipata ; stipate ; stipati ; stipato ; stirata ; stirate ; stirati ; stirato ; stivata ; stivate ; stivati ; stivato ; stomato ; stonata ; stonate ; stonati ; stonato ; ematoma ; ematomi ; ematoma ; ematomi ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori ; bramera ; bramero ; cratere ; crateri ; franera ; franero ; gravera ; gravero ; tradere ; tramera ; tramero ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; psicosi ; psilosi ; flebile ; flebili ; aratore ; aratori ; fragore ; fragori ; oratore ; oratori ; trafora ; trafori ; traforo ; cremore ; cremori ; premori ; pretora ; pretore ; pretori ; tremore ; tremori. [<a href="#identifier_5_52126" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2014/the-basics-of-banking-a-discussion/">The basics of banking. A discussion.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2014/a-day-in-the-life-and-times/">A day in the life and times</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2014/more-about-caesar-cyphers/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2014/more-about-caesar-cyphers/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>15 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-97464" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Anon</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97464" title="">Friday, 10 January 2014</a>
+							</div>
+						<p>Maybe the policeman just made some shit up like they do...</p>
+						</li>
+
+										<li id="comment-97465" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97465" title="">Friday, 10 January 2014</a>
+							</div>
+						<p>Sure, but wouldn't it stand to reason that if he did that he'd rather make a fake original and transliterate it correctly and reproducibly than create a broken and irreproducible pretend-transliteration of an inexistent original ?</p>
+						</li>
+
+										<li id="comment-97466" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">anon</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97466" title="">Friday, 10 January 2014</a>
+							</div>
+						<p>What happened to words like baccelli in your footnote? It should work as oajjeppc yet it somehow disappeared. Maybe in going from 633 to 102 you left some out.</p>
+						</li>
+
+										<li id="comment-97467" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97467" title="">Friday, 10 January 2014</a>
+							</div>
+						<p>You also have oajjeppa and apparently there's no such thing as baccella. I dunno, maybe.</p>
+						</li>
+
+										<li id="comment-97468" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">anon</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97468" title="">Friday, 10 January 2014</a>
+							</div>
+						<p>Aha. What about stuff like commosso then?</p>
+						</li>
+
+										<li id="comment-97469" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97469" title="">Friday, 10 January 2014</a>
+							</div>
+						<p>The 2nd o conflicts with the 1st, you need a distinct letter there.</p>
+						</li>
+
+										<li id="comment-97473" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97473" title="">Saturday, 11 January 2014</a>
+							</div>
+						<p>I'll admit that I was a lazy ass who searched through the comments in the original article after messing around a bit with Cryptool and getting nothing interesting. I managed to reproduce the substitution given in one of the comments (actually the comment gives only the cleartext, but anyway), but I won't post it here unless you want me to spoil it for you.</p>
+<p>Long story short, one of the initial 633 words is valid, but I'm not sure what went wrong when filtering down to 102, because none of the results match the solution.</p>
+<p>What I could get is that simple frequency/substitution analysis doesn't work here, as the text is way too short (plus it doesn't even use the entire alphabet).</p>
+						</li>
+
+										<li id="comment-97482" class="commentbody"><div class="commenthead"><img alt='pletzalcoatl`s avatar' src='http://thewhet.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink"><a href='http://thewhet.net' class='url'>pletzalcoatl</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97482" title="">Saturday, 11 January 2014</a>
+							</div>
+						<p>There might be proper nouns in there --people's names, for instance, what then?</p>
+						</li>
+
+										<li id="comment-97484" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97484" title="">Saturday, 11 January 2014</a>
+							</div>
+						<p>@<b>spyked</b> Ahaha the old side channel attack. Cool.</p>
+<p>Please spoil, I'm well done with it myself.</p>
+<p>@<b>pletzalcoatl</b> I guess that's always a possibility.</p>
+						</li>
+
+										<li id="comment-97487" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97487" title="">Saturday, 11 January 2014</a>
+							</div>
+						<p>It seems I can't post a link to the comment (or anything containing the comment number), the antispam seems to think I'm a bot if I do that. It's either that or some problems with the way firefox does POSTs. Anyway, it's disappointing that the commenter on the Telegraph didn't even include some information regarding his approach, which makes it even more of a spoiler.</p>
+						</li>
+
+										<li id="comment-97488" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97488" title="">Saturday, 11 January 2014</a>
+							</div>
+						<p>That's weird, it really shouldn't have anything to do with it. You can post links just fine, but count to five before you hit submit.</p>
+						</li>
+
+										<li id="comment-97489" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97489" title="">Saturday, 11 January 2014</a>
+							</div>
+						<p>Ok, here goes: <a href="http://www.telegraph.co.uk/news/worldnews/europe/italy/10562132/Italian-police-decipher-Mafia-code-in-initiation-script.html#comment-1194824962" >spoiler</a>.</p>
+						</li>
+
+										<li id="comment-97491" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97491" title="">Saturday, 11 January 2014</a>
+							</div>
+						<p>Ai de pula mea, deci : </p>
+<blockquote><p>A nome dei nosti tre vecchi ant...<br />
+io battezzo il locale e formo soc...<br />
+battezzavano e formavano i no...<br />
+vecchi antenati se loro battezz...<br />
+ferri catene e camici di for...<br />
+battezzo e formo con ferri<br />
+camicie di forza se loro bat...</p></blockquote>
+<p>Battezza was there, but then was thrown out on step two, when "lemmng a bjebajg" couldn't work as "vecchi antentati". Fuckwits misspelled... consistently.</p>
+<p>Anyway, thanks a lot!</p>
+						</li>
+
+										<li id="comment-97508" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-97508" title="">Sunday, 12 January 2014</a>
+							</div>
+						<p>If you actually replace our transcription with the right letters you come out to </p>
+<blockquote><p>A NOME DEI NOSTI TRE VECCHI A NTENATI<br />
+IO BATTEZZO IL LOCALE EFORMO SOCIETA COME<br />
+BATTEZZA VANO E FORMAVA NO I NOSTRI TRE<br />
+VECCHI A NTENATI SE LORO BATTEZZA VA NO CON<br />
+FORRI CATEOE E CAMICIE DI FORZA IO<br />
+BATTEZZO E FORMO CON FERRI CATENE E<br />
+CAMICIE DI FORZA SE LORO BATTEZZA VA NO</p></blockquote>
+<p>With the spacing errors in the original removed and two typos I made removed, we'd have had : </p>
+<blockquote><p>a bcde feg bcijg jke lemmng abjebajg<br />
+gc oajjeppc gq qcmaqe e rckdc icmgeja mcde<br />
+oajjeppalabc e rckdalabc g bcijkg jke<br />
+lemmng abjebajg ie qckc oajjeppalabc mcb<br />
+r<strong>e</strong>kkg maje<strong>b</strong>e e madgmge fg rckpa gc<br />
+oajjeppc e rckdc mcb rekkg majebe e<br />
+madgmge fg rckpa ie qckc oajjeppalabc</p></blockquote>
+<p>The key to which being that abjebajg actually'd have worked in step two yielding antenati (ancestors). Live and learn, if you do this you gotta keep trying alternatives rather than stop on error.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-146036">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-3-media-narratives-about-the-middle-east-you-should-defend-against-adnotated?b=anything%20to%20&amp;e=r%20of#select' class='url'>thelastpsychiatrist.com - 3 Media Narratives About The Middle East You Should Defend Against. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146036" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] anything to her, ever. [&#8617;]I thought it was $1/day. How things have changed... [&#8617;]Or use a map -- which observation directly leads us to the substantial difference between yours truly, shaper of [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="52126" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832590-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-52126")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-52126");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-52126");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

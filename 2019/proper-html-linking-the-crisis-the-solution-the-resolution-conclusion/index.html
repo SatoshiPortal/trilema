@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Proper html linking : the crisis, the solution, the resolution &#038; conclusion on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Lucruri fine pentru oameni subtiri.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-85471"><div class="post" id="post-85471">                    <h1><a href="http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/" rel="bookmark" title="Permanent Link to Proper html linking : the crisis, the solution, the resolution &#038; conclusion">Proper html linking : the crisis, the solution, the resolution &#038; conclusion</a></h1>                        <div class="date">                                     Saturday, 20 July, Year 11 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><b>I. The crisis.</b></p>
+<blockquote><p><a href=http://trilema.com/forum-logs-for-19-jul-2019#2543967>mp_en_viaje</a>: in other horrible news : it's confirmed, the selection thing is ~~~BROWSER SPECIFIC~~~</p></blockquote>
+<p>It is the sort of bug that's always hardest to notice, because "it works for me" ; and it doesn't work for you coincidentally, now and again -- it is <em>engineered</em>, and <b>with malice aforethought</b> to work for you, and you only. The thing is fucking designed so as to <a href=http://trilema.com/forum-logs-for-15-aug-2016#2148346>deliver the interests of Inca</a> under the color of delivering your own interests, it <a href=http://trilema.com/republican-thesaurus/?b=manalone&#038;e=y#select>separates you</a><sup><a href="#footnote_0_85471" id="identifier_0_85471" class="footnote-link footnote-identifier-link" title="Check that cool as fuck shit out, by the way! 
+SWAG!">i</a></sup> even as it <em>seems</em> to feed you.</p>
+<p>So here I spent untold months in aspie heaven, imagining I'm actually using bidirectional links, while everyone else saw the same thing... some of the time. Can you believe that crap ?!</p>
+<p><b>II. The solution.</b></p>
+<blockquote><p>
+<a href=http://btcbase.org/log/2019-07-19#1923787>asciilifeform</a>: when i was sawing the thing apart , thought 'why not make selector search for start/end chars until finds unique, then sel displayer ditto' but did not get to trying this</p></blockquote>
+<p>This is good for many reasons, that all reduce to "kicking USG tendrils out of republican process". That nobody needs javascript to see a selection anymore is a thing of beauty ; that nobody needs javascript to produce a selection anymore is the other thing of beauty. Those were the last two uses known for javascript (the archive selector has proper html fallback, so it's merely a convenience, and one I intend to throw out, at that). This means... well, it means I will be able to run the shitty gfx browsers in no-js mode! Holy hell finally! I can not <em>begin</em> to tell you how much it pained me to <em>need</em> javascript, as the only way to have proper<sup><a href="#footnote_1_85471" id="identifier_1_85471" class="footnote-link footnote-identifier-link" title="
+mp_en_viaje: the point is this : if someone says something, and then links you, odds are he's saying something like `this guy also confirms`.
+mp_en_viaje: trackbacks offer you some measure of control over this `being drafted to vouch for others' idiocy` process ; because you can go check ; and if need be say `motherfucker, that's not what i'm saying at fucking all`
+mp_en_viaje: trackbacks also offer another important function : if we believe that human intelligence principally manifests in the creation of tools ; and if we believe human expression is not orthogonal to intelligence, then we thereby also believe our expression is in part tool.
+mp_en_viaje: the one most fascinating property of tools is their being the one bridge available between reals and ideals : theyr'e real objects with an ideal component! therefore, we theoretically predict the sluttery immanent to reality permits perversion, and phenomenology confirms : tools can in fact be used for purposes other than they were intended to!
+mp_en_viaje: don't you wanna see what crazy batshit unexpected but perhaps kinda cool use some other maniac put your own tools to ?
+
+The importance of proper bidirectional links, as opposed to the braindamaged unidirectional links implemented in the swamp of morons can not be overstsated.">ii</a></sup> links. </p>
+<p><b>III. The resolution.</b> MP's own PHP grenadiers regiment implemented the solution "overnight"<sup><a href="#footnote_2_85471" id="identifier_2_85471" class="footnote-link footnote-identifier-link" title="I'm in Minsk, nights come at a strange time here.">iii</a></sup>, and so now we have resolution!</p>
+<p>To apply this to your own blog, you will first need to edit your root level .htaccess<sup><a href="#footnote_3_85471" id="identifier_3_85471" class="footnote-link footnote-identifier-link" title="Generally this is found in domain/www or domain public_html or such.">iv</a></sup> :</p>
+<blockquote><p>- RewriteRule (.*) /index.php [L]<br />
++ RewriteRule (.*) /index.php [QSA,L]
+</p></blockquote>
+<p>QSA stands for Query String Append, see the <a href=http://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriterule>mod_rewrite manual</a> for all sorta intricately detailed views of that strange ad-hoc scripting language.</p>
+<p>Then the following goes into your <em>theme's</em> functions.php. This is <b>not</b> the blog-wide functions.php as found in wp-includes, but the theme's own function.php as found in /wp-content/themes/&lt;name>/ ; don't ask me about the brilliant naming conventions involved, I had no hand.</p>
+<blockquote><pre>// This does the server-side selection
+
+add_filter('the_content', 'server_side_selection');
+
+function server_side_selection($content){
+//bookend code goes here
+  $b_code = '&lt;span style="background-color:#d3d3d3" id="select">';
+  $b_code .= $_GET["b"];
+  $e_code = $_GET["e"].'&lt;/span>';
+
+//change page ; last to first to preserve indexes.
+  $b_pos = strpos($content,$_GET["b"]);
+  $e_pos = strpos($content,$_GET["e"], $b_pos);
+  if ($e_pos>0)
+    $content = substr_replace($content, $e_code, $e_pos, strlen($_GET["e"]));
+  if ($b_pos>0)
+    $content = substr_replace($content, $b_code, $b_pos, strlen($_GET["b"]));
+  return $content;
+}
+</pre>
+</blockquote>
+<p>There are some user-tunable knobs in there, let's go through the list :</p>
+<ol>
+<li>You can adjust the magic words b &#038; e, as well as the magic word "select" so as to have your page respond to differently formatted url calls. I would advise against fucking with this, so as to achieve ecosystem standardization -- there's conceivably some residual benefit for the user being able to predict which knobs work on a blog he's never seen before.</li>
+<p>
+<li>background-color:#<b>d3d3d3</b> will happily take any color you wish to use and apply it as background for the selected text ; obviously further hackery is available there at no detriment, you can have whatever style in the style tag you wish.</li>
+<p>
+<li>The usage of "span" could be replaced, such as for instance with div. The disadvantage of span is that, being an inline element, it will not cross paragraphs (or &lt;li> borders for that matter). The disadvantage of div is that being a block level element, it will break lines around its starting and ending point. This latter behaviour seems to me a worse trade-off than the short range span, but ymmv. </li>
+<p>
+<li>MP-WP calling convention permits you to add an if(is_single()) conditional to modulate the behaviour to only articles, and such shenanigans. I do not see the utility here, but the hooks are available. You can similarily add conditionals before the first line, to have the whole process only apply in certain conditions (eg, only allow some users to view/produce selections, though I can't imagine why you'd want this).</li>
+</ol>
+<p>I am of course very much interested in hearing battlefield reports.</p>
+<p><b>IV. The conclusion</b> is that <b>it never pays to play along</b>. Phf tried to play along with a pantsuit coven and got his asshole torn apart for his trouble. <b>By a tree</b>. That shit <em>hurts</em>. </p>
+<p>I thought I was special and bright and smart and etcetera ; I thought I can use the empire's tools to deliver marginal benefit. I was wrong. </p>
+<p>Consider that since introducing that selection thing back on <a href=http://trilema.com/2015/that-spiffy-selection-thing/>May 9th, 2015</a>, a number of reader man-hours were saved by having it there ; and a number of my own man-hours were employed to produce the compatible links -- opening pages, selecting snippets, pasting modified urls...</p>
+<p>Today I find myself in the unenviable position of... having to replace them all. Take a look at this : </p>
+<blockquote><p>| sum(ROUND((LENGTH(post_content)-LENGTH(REPLACE (post_content, "#selection-", "")))/11)) |<br />
++-----------------------------------------------------------------------------------------------+<br />
+|                                                                                         27090 |
+</p></blockquote>
+<p>Twenty-seven <b>thousand</b> links. Even if you could do one link a second, which you can't do, it's still one day's hard work. Was it worth it ? Was it worth trading my work and time for <a href="http://trilema.com/2016/asscience/#footnote_3_65913">the devil's leaves</a> ? Was it worth it, to pile my diligence at the foot of the golden calf, only to find myself, four years down the road, <em>personally invested</em> in <a href=http://trilema.com/2014/pushing-the-soft-tender-flesh-of-a-friend-against-the-sharp-rotating-blades-of-the-immutable-machine/?b=Ah,%20but&#038;e=That%20one%20time#select>the continuance of the abomination</a> ? "Either maintain javascript", it whispers, "or else lose these children of yours", it gnashes. Was it motherfucking worth it ?</p>
+<p>Don't stick your dick in evil. There's insufficient erections to go around as it is, no need to waste any of them. Aite ?</p>
+<p>PS. It might also be a good idea to edit xmlrpc.php, so as to take advantage of this newfangled tech :</p>
+<blockquote><pre>-                $comment_author_url = $pagelinkedfrom;
+
++                $select_tail = "?b=".substr(strip_tags($excerpt,0,12))."&#038;e=#select";
++                $comment_author_url = $pagelinkedfrom.$select_tail;</pre>
+</blockquote>
+<p>If this breaks your trackbacks<sup><a href="#footnote_4_85471" id="identifier_4_85471" class="footnote-link footnote-identifier-link" title="Verified by getting
+Is there no link back to us ?
+ in response to a call like
+curl -A `Mozilla/5.0` -r 0-4096 --connect-timeout 30 --max-time 10 `http://trilema.com/xmlrpc.php` --header `Content-Type: text/xml` --data `&lt;?xmlversion=`1.0`?>&lt;methodCall>&lt;methodName>pingback.ping&lt;/methodName>&lt;params>&lt;param>&lt;value>&lt;string>http://trilema.com/2019/odd-comments-and-strange-doings-in-unix/&lt;/string>&lt;/value>&lt;/param>&lt;param>&lt;value>&lt;string>http://trilema.com/2016/a-complete-theory-of-politics/?b=The%20alpha&#038;e=The%20female#select&lt;/string>&lt;/value>&lt;/param>&lt;/params>&lt;/methodCall>`
+">v</a></sup> you should probably change the (remarkably kludgy) selector, to something more like </p>
+<blockquote><p>                if( parse_url($pagelinkedto, PHP_URL_HOST) != "trilema.com" )</p></blockquote>
+<p>This doesn't work perfectly, because intervening mark-up can well fuck it up ; but at least it gives the user something to work with in any case. I know I for one much prefer in-depth trackbacks to title-only trackbacks.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_85471" class="footnote">Check that cool as fuck shit out, by the way! </p>
+<p>SWAG! [<a href="#identifier_0_85471" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_85471" class="footnote"></p>
+<blockquote><p><a href=http://btcbase.org/log/2019-07-14#1922410>mp_en_viaje</a>: the point is this : if someone says something, and then links you, odds are he's saying something like "this guy also confirms".<br />
+mp_en_viaje: trackbacks offer you some measure of control over this "being drafted to vouch for others' idiocy" process ; because you can go check ; and if need be say "motherfucker, that's not what i'm saying at fucking all"<br />
+mp_en_viaje: trackbacks also offer another important function : if we believe that human intelligence principally manifests in the creation of tools ; and if we believe human expression is not orthogonal to intelligence, then we thereby also believe our expression is in part tool.<br />
+mp_en_viaje: the one most fascinating property of tools is their being the one bridge available between reals and ideals : theyr'e real objects with an ideal component! therefore, we theoretically predict the sluttery immanent to reality permits perversion, and phenomenology confirms : tools can in fact be used for purposes other than they were intended to!<br />
+mp_en_viaje: don't you wanna see what crazy batshit unexpected but perhaps kinda cool use some other maniac put your own tools to ?
+</p></blockquote>
+<p>The importance of proper bidirectional links, as opposed to the braindamaged unidirectional links implemented in the swamp of morons can not be overstsated. [<a href="#identifier_1_85471" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_85471" class="footnote">I'm in Minsk, nights come at a strange time here. [<a href="#identifier_2_85471" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_85471" class="footnote">Generally this is found in domain/www or domain public_html or such. [<a href="#identifier_3_85471" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_85471" class="footnote">Verified by getting<br />
+<blockquote>Is there no link back to us ?</p></blockquote>
+<p> in response to a call like<br />
+<blockquote>curl -A "Mozilla/5.0" -r 0-4096 --connect-timeout 30 --max-time 10 "http://trilema.com/xmlrpc.php" --header "Content-Type: text/xml" --data "&lt;?xmlversion="1.0"?>&lt;methodCall>&lt;methodName>pingback.ping&lt;/methodName>&lt;params>&lt;param>&lt;value>&lt;string>http://trilema.com/2019/odd-comments-and-strange-doings-in-unix/&lt;/string>&lt;/value>&lt;/param>&lt;param>&lt;value>&lt;string>http://trilema.com/2016/a-complete-theory-of-politics/?b=The%20alpha&#038;e=The%20female#select&lt;/string>&lt;/value>&lt;/param>&lt;/params>&lt;/methodCall>"</p></blockquote>
+<p> [<a href="#identifier_4_85471" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2019/thelastpsychiatristcom-according-to-time-the-worlds-most-influential-person-is-adnotated/">thelastpsychiatrist.com - According to Time, The World's Most Influential Person Is.... Adnotated.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2019/thelastpsychiatristcom-a-diagnosis-of-schizophrenia-adnotated/">thelastpsychiatrist.com - A Diagnosis Of Schizophrenia. Adnotated.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>40 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-130026" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130026" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>Where is the anchor?<br />
+These don't seem to scroll to position when loaded.</p>
+						</li>
+
+										<li id="comment-130027" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130027" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>This method unfortunately does not mix well with links. For exampe in <a href="http://trilema.com/2019/thelastpsychiatristcom-advancing-paternal-age-and-bipolar-disorder-adnotated/#comment-130025">http://trilema.com/2019/thelastpsychiatristcom-advancing-paternal-age-and-bipolar-disorder-adnotated/#comment-130025</a> the link is <a href="http://trilema.com/2019/christos-ballas-tlp-thelastpsychiatristcom-archive/?b=Advan&amp;e=#select">http://trilema.com/2019/christos-ballas-tlp-thelastpsychiatristcom-archive/?b=Advan&amp;e=#select</a> and on click it scrolls you to place but the title link is ruined. If you look at the source, </p>
+<blockquote><p>li&gt;&lt;a href="http://trilema.com/2019/thelastpsychiatristcom-advancing-paternal-age-and-bipolar-disorder-adnotated/"&gt;&lt;span style="background-color:#d3d3d3"&gt;&lt;a name=select&gt;&lt;/a&gt;Advancing Paternal Age And Bipolar Disorder&lt;/a</p></blockquote>
+<p>The anchor name tag closer closes the link anchor, because anchors can not be nested. You could maybe alter the code so it piggybacks on an open a tag if present, but that will still not permit scrolling to anything but the opening of that a tag (span will still work midway though).</p>
+						</li>
+
+										<li id="comment-130028" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130028" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>Anchors nesting are not the only problem part with anchors, look at <a href="http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/?b=one&amp;e=off#select">http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/?b=one&amp;e=off#select</a></p>
+<blockquote><p>it &lt;a href=http://trilema.com/republican-thesaurus/?b=manal&lt;span style="background-color:#d3d3d3"&gt;&lt;a name=select&gt;&lt;/a&gt;one&#38;e=y#select&gt;separates you&lt;/a&gt;&lt;sup&gt;&lt;a href="#footnote_0_85471" id="identifier_0_85471"</p></blockquote>
+<p>It found the "one" in trilema.com/republican-thesaurus/?b=manal<b>one</b>&amp;e=y#select and tagged that, breaking it.</p>
+						</li>
+
+										<li id="comment-130029" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130029" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>Not a single one of the new-type links seems to work ? (Is the thing switched off just now for debug?)</p>
+						</li>
+
+										<li id="comment-130031" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130031" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>@<b>Stanislav Datskovskiy</b> This is pretty fucking bizarre... do the page sources show the &lt;a anchor ?</p>
+<p>O holy shit, it WAS restricted to my local network. So everyone was "nfi what he's on about" because looking from here. Sorry about that.</p>
+<p>@<b>Anon #1</b> This is true, but in the end anchors are supposed to be points, not fields. It's mildly annoying a selection can never include a link, but I see no way around it currently so I guess will have to live with it.</p>
+<p>@<b>Anon #2</b> This strikes me rather like operator error. Could just add a character to the delimiters and not have the problem at all.</p>
+						</li>
+
+										<li id="comment-130035" class="commentbody"><div class="commenthead"><img alt='billymg`s avatar' src='http://billymg.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink"><a href='http://billymg.com' class='url'>billymg</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130035" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>@<strong>Anon #1</strong> Browsers will alternatively scroll to any element with an id matching what is specified after the # in the url. Instead of including an empty &lt;a name="selection"&gt;&lt;/a&gt; tag you could add a unique id to the &lt;span&gt;. This gets around the issue with selections within links.</p>
+						</li>
+
+										<li id="comment-130036" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130036" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>As per the standard, span's not supposed to have a name.</p>
+						</li>
+
+										<li id="comment-130037" class="commentbody"><div class="commenthead"><img alt='billymg`s avatar' src='http://billymg.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink"><a href='http://billymg.com' class='url'>billymg</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130037" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>It can have an id though. &lt;span id="selection"&gt;&lt;/span&gt; will work the same way as &lt;a name="selection"&gt;</p>
+						</li>
+
+										<li id="comment-130038" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130038" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>This is an interesting point, Ima check it out.</p>
+						</li>
+
+										<li id="comment-130042" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130042" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>Indeed the span id approach proposed by billymg seems to work ok (as in, worked on all the browsers I tried). I've updated the article accordingly, tyvm billy!</p>
+						</li>
+
+										<li id="comment-130046" class="commentbody"><div class="commenthead"><img alt='billymg`s avatar' src='http://billymg.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink"><a href='http://billymg.com' class='url'>billymg</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130046" title="">Saturday, 20 July 2019</a>
+							</div>
+						<p>np, glad it worked!</p>
+						</li>
+
+										<li id="comment-130051" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130051" title="">Sunday, 21 July 2019</a>
+							</div>
+						<p>Fucking beautiful, <a href=http://trilema.com/2019/christos-ballas-tlp-thelastpsychiatristcom-archive/?b=After&#038;e=#select >this</a> works now, Trilema trackbacks just gained a great win!</p>
+						</li>
+
+										<li id="comment-130053" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-130053" title="">Sunday, 21 July 2019</a>
+							</div>
+						<p>Incidentally, this new selection mechanism is bringing into my life a very keen new awareness of the importance of tags for text! </p>
+<p>Consider <a href="http://trilema.com/2017/is-it-still-rape-if-i-write-science-on-my-penis-first/?b=the%20entire&#038;e=up.#select">http://trilema.com/2017/is-it-still-rape-if-i-write-science-on-my-penis-first/?b=the%20entire&#038;e=up.#select</a> : it's not practical to select just the bolded part ; but as it happens, it's very useful to select the following part. So this means that for once (and unawaredly) I actually put the border for bolding in just the right spot.</p>
+<p>Did it ever occur to you before there's right and wrong places to bold/italicize ? I mean specifically, not vaguely &#038; generally, "I know it when I see it"-ly. Verbalizably, here but not there for this reason not that reason. Hm ?</p>
+						</li>
+
+										<li id="comment-132056" class="commentbody"><div class="commenthead"><img alt='whaack`s avatar' src='http://ztkfg.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink"><a href='http://ztkfg.com' class='url'>whaack</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132056" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>The </p>
+<p>$select_tail = ...</p>
+<p>line gets cut off in my browser. Also the the parens need to be rearranged </p>
+<p>substr(strip_tags($excerpt,0,12)) --&gt; substr(strip_tags($excerpt),0,12)</p>
+<p>In my xmlrpc I made a few changes to try to increase my chance to get b&amp;e values that select the excerpt. I first replace all " "s with "+"s in $excerpt, and I set the e value to the last 4 characters in the $excerpt</p>
+<p>$naked_excerpt = str_replace(" ", "+", strip_tags($excerpt));</p>
+<p>$select_tail = "?b=".substr($naked_excerpt, 0,<br />
+4)."&amp;e=".substr($naked_excerpt, -4)."#select";</p>
+<p>$comment_author_url = $pagelinkedfrom.$select_tail;</p>
+						</li>
+
+										<li id="comment-132060" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132060" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>Basically urlencode for the whitespace between words. I dunno this does anything, for instance <a href="http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/?b=So%20here&#038;e=spent#select">http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/?b=So%20here&#038;e=spent#select</a> works just as well as <a href="http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/?b=So+here&#038;e=spent#select">http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/?b=So+here&#038;e=spent#select</a> as proven by </p>
+<blockquote><p>$ curl "http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/?b=So here&#038;e=spent#select" | grep "span style"<br />
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br />
+                                 Dload  Upload   Total   Spent    Left  Speed<br />
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0&lt;p>&lt;span style="background-color:#d3d3d3" id="select">So here I spent untold months in aspie heaven, [...]</p></blockquote>
+						</li>
+
+										<li id="comment-132061" class="commentbody"><div class="commenthead"><img alt='whaack`s avatar' src='http://ztkfg.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink"><a href='http://ztkfg.com' class='url'>whaack</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132061" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>In the browser's I've tried your generated links are not url encoding the whitespaces with + or %20, they are just omitting them. For example the pingback for diana_coman's "How my blog moved.." puts b=andt instead of b=and%20t in the url, and thus nothing is selected when I follow the link.</p>
+						</li>
+
+										<li id="comment-132062" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132062" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>Which browser is it ?</p>
+						</li>
+
+										<li id="comment-132065" class="commentbody"><div class="commenthead"><img alt='whaack`s avatar' src='http://ztkfg.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink"><a href='http://ztkfg.com' class='url'>whaack</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132065" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>Chrome  66.0.3359.181<br />
+Firefox 70.0.1<br />
+Safari Version 7.0.6</p>
+						</li>
+
+										<li id="comment-132066" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132066" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>Fwiw: a quick check shows Firefox 52.8 handles spaces &amp; + just fine, doesn't require %20</p>
+						</li>
+
+										<li id="comment-132067" class="commentbody"><div class="commenthead"><img alt='whaack`s avatar' src='http://ztkfg.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink"><a href='http://ztkfg.com' class='url'>whaack</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132067" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>I do not think it is a browser issue. The browsers will turn spaces into %20's </p>
+<p>The links on trilema being displayed for the comments made via pingback already have their spaces stripped. </p>
+<p>curl <a href="http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/#comment-132065">http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/#comment-132065</a> | grep "andt"</p>
+<p>^^ the b value should be some variation of "and t" for "...and the..." instead of "andt"</p>
+						</li>
+
+										<li id="comment-132069" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132069" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>@<b>whaack</b> I don't understand what you're saying here.</p>
+<p>Yes some browsers urlencode ; but curl does not. </p>
+<p>What's the "andt" stuff ?</p>
+						</li>
+
+										<li id="comment-132070" class="commentbody"><div class="commenthead"><img alt='whaack`s avatar' src='http://ztkfg.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink"><a href='http://ztkfg.com' class='url'>whaack</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132070" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>@Mircea Popescu</p>
+<p>Diana_Coman sent <a href="http://trilema.com/2019/proper-html-linking-the-crisis-the-solution-the-resolution-conclusion/#comment-131889" >a pingback</a> to _this_ post from her post titled How My Blog Moved North (to the USA)</p>
+<p>The excerpt that the pingback provided begins with</p>
+<p>"and the wasteful padding of single-post..."</p>
+<p>The code on trilema's server uses that excerpt to generate the b value for the pingback linkback. That code, for an unknown reason, is stripping the space between "and" and "the" and providing the b value</p>
+<p>b=andt</p>
+<p>the full link that it generates is:</p>
+<p><a href="http://ossasepia.com/2019/10/20/how-my-blog-moved-north-to-the-usa/?b=andt&amp;e=#select">http://ossasepia.com/2019/10/20/how-my-blog-moved-north-to-the-usa/?b=andt&amp;e=#select</a></p>
+						</li>
+
+										<li id="comment-132072" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132072" title="">Saturday, 2 November 2019</a>
+							</div>
+						<p>Come to think about it, 4 leading character might also be too narrow.</p>
+<p>Also, I checked, and indeed the code does remove whitespace somehow. Nfi how or why atm, will have this looked into some.</p>
+						</li>
+
+										<li id="comment-132238" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132238" title="">Tuesday, 12 November 2019</a>
+							</div>
+						<p>I'll roll this into a proper vpatch shortly, but for now a simple fix is to add the following line under the original fix to mlrpc.php:</p>
+<p>$comment_author_url = str_replace(' ', '%20', $comment_author_url);</p>
+<p>What was happening was that the data in '$comment_author_url' was being sent through the 'clean_url()' function in 'wp-includes/formatting.php', which stripped the spaces. This fix allows those spaces to get through unmolested.</p>
+						</li>
+
+										<li id="comment-132242" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132242" title="">Tuesday, 12 November 2019</a>
+							</div>
+						<p>So what you actually mean is rather</p>
+<p><code>/xmlrpc.php<br />
+-                $comment_author_url = $pagelinkedfrom.$select_tail;<br />
++                $comment_author_url = $pagelinkedfrom.rawurlencode($select_tail);</code></p>
+<p>Nice find, in any case!</p>
+						</li>
+
+										<li id="comment-132249" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">26</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132249" title="">Wednesday, 13 November 2019</a>
+							</div>
+						<p>Keks &#038; <a href="http://thewhet.net/2019/11/central-european-retrospective-frague/%3Fb%3DWhere">http://thewhet.net/2019/11/central-european-retrospective-frague/%3Fb%3DWhere</a>'s%20Frag%26e%3DWher%23select</p>
+<p>Let's try this once more : </p>
+<p>- $select_tail = "?b=".substr(strip_tags($excerpt),0,12)."&#038;e=".substr(strip_tags($excerpt),0,4)."#select";<br />
++ $select_tail = "?b=".substr(rawurlencode(strip_tags($excerpt)),0,12)."&#038;e=".substr(rawurlencode(strip_tags($excerpt)),0,-4)."#select";</p>
+<p>Two bugs in one!</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-131187">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://peterl.xyz/2019/08/update-to-selection-code/?b=have&amp;e=#select' class='url'>Update to Selection Code &laquo; Blog of Peter Lambert</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131187" title="">Wednesday, 28 August 2019</a>
+					</div>
+					<p>[...] have added the selection logic change from Trilema to this website. If you see any strange, please let me [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131889">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/10/20/how-my-blog-moved-north-to-the-usa/?b=andt&amp;e=#select' class='url'>How My Blog Moved North (to the USA) &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131889" title="">Sunday, 20 October 2019</a>
+					</div>
+					<p>[...] and the wasteful padding of single-post pages, as well as a few further touches to .php to put in the server-side selection mechanism and tweak odd bits and pieces so it doesn't look *that* terrible. Hopefully there will be some [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131896">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://thetarpit.org/2019/the-tar-pit-mp-wp-theme?b=there&amp;e=#select' class='url'>The Tar Pit MP-WP theme &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131896" title="">Monday, 21 October 2019</a>
+					</div>
+					<p>[...] there are other small things that you might wish to do, for example getting the proper selection mechanism in place4. Similarly, you can add Trilema-style random taglines to your header.php by first adding [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131984">
+					<div class='trackhead'>
+						<div class="commentcount">30</div>
+						<span class="authorlink"><a href='http://younghands.club/2019/10/28/wh-plan-for-week-3-oct-28st-nov-4th/?b=mybr&amp;e=#select' class='url'>WH Plan For Week 3 (Oct 28st - Nov 4th) &laquo; Young Hands Club</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131984" title="">Monday, 28 October 2019</a>
+					</div>
+					<p>[...] my broken understanding of proper html linking and then fix the consequences on my blog I have stemming from that broken [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132049">
+					<div class='trackhead'>
+						<div class="commentcount">31</div>
+						<span class="authorlink"><a href='http://ztkfg.com/2019/11/proper-html-linking-a-battlefield-report/?b=There&amp;e=#select' class='url'>Proper HTML Linking, A Battlefield Report &laquo; whaack</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132049" title="">Friday, 1 November 2019</a>
+					</div>
+					<p>[...] There are two quirks I've noticed with the select displayer. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132093">
+					<div class='trackhead'>
+						<div class="commentcount">32</div>
+						<span class="authorlink"><a href='http://younghands.club/2019/11/03/wh-review-of-week-3-oct-28th-nov-4th/?b=oriftheya&amp;e=ori#select' class='url'>WH Review of Week 3 (Oct 28th - Nov 4th) &laquo; Young Hands Club</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132093" title="">Monday, 4 November 2019</a>
+					</div>
+					<p>[...] or if they are downstream from a larger problem. The third gain was I discovered a small issue with "pingback linkbacks." The fourth gain was I perhaps uncovered a serious problem with my thinking process that caused me [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132094">
+					<div class='trackhead'>
+						<div class="commentcount">33</div>
+						<span class="authorlink"><a href='http://ztkfg.com/2019/11/verifying-my-understanding/?b=havespentt&amp;e=have#select' class='url'>Verifying My Understanding &laquo; whaack</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132094" title="">Monday, 4 November 2019</a>
+					</div>
+					<p>[...] have spent the past few days pondering why I tried to create links conforming to  the new the html selection method before investigating their proper format. The first reason I came up with was I had thought it best [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132198">
+					<div class='trackhead'>
+						<div class="commentcount">34</div>
+						<span class="authorlink"><a href='http://www.krankendenken.com/2019/11/workplan-remainder-of-november-2019/?b=existsabug&amp;e=exis#select' class='url'>Workplan: Remainder of November 2019 &laquo; Krankendenken</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132198" title="">Saturday, 9 November 2019</a>
+					</div>
+					<p>[...] exists a bug in the pingback mechanism in mp-wp which strips spaces out of the selection portion of the source url. What this means is that if this article were to ping a target url,1 that target server would [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132669">
+					<div class='trackhead'>
+						<div class="commentcount">35</div>
+						<span class="authorlink"><a href='http://dorion-mode.com/2019/12/contribution-guidelines-for-tmsr-os/?b=is%20recomen&amp;e=is%20recomended%20for%20now.%20%5B%26%238617%3B%5DAt%20minimum%20the%20blog%20software%20should%20support%20com' class='url'>Contribution Guidelines for TMSR OS &laquo; Dorion Mode</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132669" title="">Monday, 16 December 2019</a>
+					</div>
+					<p>[...] is recomended for now. [&#8617;]At minimum the blog software should support comments, pingbacks, server side select a la MP-WP., and no SSL or javascript or captchas of anykind if. Really, you should probably just install [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146618">
+					<div class='trackhead'>
+						<div class="commentcount">36</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/what-is-a-blog-complete-spec-inside?b=b%2Fstrong%2C%20bl&amp;e=rst%2C#select' class='url'>What is a blog ? Complete spec inside! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146618" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] b/strong, blockquote, ol, ul, li, table, img, code, pre tags + footnotes. ...span field as per url selection. ...article footer, including category/tag. ...responses, boxed individually, comments first, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147698">
+					<div class='trackhead'>
+						<div class="commentcount">37</div>
+						<span class="authorlink"><a href='http://billymg.com/2020/03/mp-wp-roadmap-proposal/?b=server-side%20&amp;e=ield#select' class='url'>MP-WP Roadmap Proposal &laquo; billymg</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147698" title="">Saturday, 7 March 2020</a>
+					</div>
+					<p>[...] server-side selection code to base themes (if investigation to include this higher up the stack doesn't yield [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147989">
+					<div class='trackhead'>
+						<div class="commentcount">38</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-problem-of-standards/?b=Isn%27t%20it%20gre&amp;e=n%20Of#select' class='url'>The problem of standards on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147989" title="">Tuesday, 24 March 2020</a>
+					</div>
+					<p>[...] Isn't it great how the proper selection mechanism also works as in-place adnotation ? Something like "from the article titled An Examination Of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-150548">
+					<div class='trackhead'>
+						<div class="commentcount">39</div>
+						<span class="authorlink"><a href='http://billymg.com/2020/05/updated-vpatch-add-embeddable-codeblocks-and-the-server-side-select-mechanism/?b=This%20is%20the%20&amp;e=P-WP#select' class='url'>Updated vpatch: Add embeddable codeblocks and the server-side select mechanism &laquo; billymg</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-150548" title="">Thursday, 14 May 2020</a>
+					</div>
+					<p>[...] This is the third iteration after the first two discussions. This patch also now contains the server-side select mechanism, including the updates to xmlrpc.php. The functionality is included in what is now the MP-WP [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-150784">
+					<div class='trackhead'>
+						<div class="commentcount">40</div>
+						<span class="authorlink"><a href='http://billymg.com/2020/05/updated-vpatch-add-embeddable-codeblocks-and-the-server-side-select-mechanism/?b=first%20two%20di&amp;e=work#select' class='url'>Updated vpatch: Add embeddable codeblocks and the server-side select mechanism &laquo; billymg</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-150784" title="">Monday, 18 May 2020</a>
+					</div>
+					<p>[...] first two discussions. This patch also now contains the server-side select mechanism, including the updates to xmlrpc.php. The functionality is included in what is now the MP-WP Content Processing plugin1 so it will work [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="85471" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833383-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-85471")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-85471");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-85471");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

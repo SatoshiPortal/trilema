@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>People! Bitcoin is not worth 100+ dollars per. STOP BUYING! on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Moving targets for a fast crowd.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-47130"><div class="post" id="post-47130">                    <h1><a href="http://trilema.com/2013/people-bitcoin-is-not-worth-100-dollars-per-stop-buying/" rel="bookmark" title="Permanent Link to People! Bitcoin is not worth 100+ dollars per. STOP BUYING!">People! Bitcoin is not worth 100+ dollars per. STOP BUYING!</a></h1>                        <div class="date">                                     Wednesday, 03 April, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>That fuckwit Satoshi bravely turned his tail and fled years ago and now there's nobody to tell the world to STOP ALREADY!</p>
+<p>Let us recall one of the guy's last dozen messages : </p>
+<p><a href="http://trilema.com/wp-content/uploads/2013/04/don-t-bring-it-on.png"><img src="http://trilema.com/wp-content/uploads/2013/04/don-t-bring-it-on.png" alt="don-t-bring-it-on" title="don-t-bring-it-on" width="560" height="247" class="aligncenter size-full wp-image-47133" /></a></p>
+<p>Every weakness present then is present today, not less so but <strong>more so.</strong> 	</p>
+<ul>
+<li>The codebase <a href="http://trilema.com/2013/bitcoind-not-quite-ready-for-prime-time/">is broken beyond any hope</a>, leaving aside that it's an undocumented, off the cuff, nonsensical piece of crap<sup><a href="#footnote_0_47130" id="identifier_0_47130" class="footnote-link footnote-identifier-link" title="Here's a funny excerpt off the dev log, ftr :
+18:24 	jurov	maybe i'll get banned, but i'll leave this here: http://trilema.com/2013/bitcoind-not-quite-ready-for-prime-time/
+18:24 	jurov	in spririt of our yest discussion
+18:25 	TD	lol
+18:26 	TD	that's the guy who thinks using a single address for everything is good for privacy?
+18:26 	jurov	yes, let's smear him instead of talking about actual problem
+18:27 	jurov	this time he is using the addresses properly. and bitcoind jsut isn't up to the task.
+18:27 	gmaxwell	jurov: saying someone is confused ... when they are confused.. is not a smear.
+18:27 	TD	his problem, if you want to call it that, is he's using APIs designed for developers who know what they're doing - and he does, sorta, because he knows it won't let him create a 1mb transaction
+18:27 	TD	and he knows why
+18:27 	TD	but he still feels like he should be able to create a 1mb tx even though it will never confirm
+18:27 	jurov	if you read till the end, the transactions end up being only 6kb total
+18:28 	TD	anyway, yes, at the core of his post is a point - eventually bitcoin APIs will need to start working with sets of transactions instead of single transactions
+18:28 	TD	i suspect there would have been an explanation in the log
+18:28 	TD	propagating the messages from the logging to the rpc error would certainly be a good improvement
+18:29 	TD	as would better coin selection, the ability to batch transactions to avoid making huge ones, etc
+18:29 	TD	but that guy doesn't write patches, he just bitches. so ???.
+18:29 	gmaxwell	jurov: what he's describing there doesn't follow.
+18:30 	petertodd	re: createrawtransaction and sendrawtransaction, is there any technical reason why the error messages couldn't be made different for each type of error? I've found that annoying myself.
+18:30 	gmaxwell	jurov: he solved his problem by splitting up the transaction. Then he claims that the single transaction would be 6k. This is not the case.
+18:30 	TD	petertodd: nope. just that satoshi wrote the code to write all errors to stderr
+18:31 	TD	petertodd: so i guess someone would need to go through and change it all so errors are accumulated in some request-scoped buffer and then returned
+18:31 	gmaxwell	jurov: are you the author of that page?
+18:31 	gmaxwell	oh, it's MP.
+18:32 	TD	i don't know all the reasons tx creation can fail like that.
+18:32 	petertodd	TD: Well, for say, sendrawtransaction, there should only be one error right? (IE, it'll quit on the first problem)
+18:32 	TD	but i presume size is the primary one
+18:32 	TD	he was using sendmany
+18:32 	gmaxwell	TD: yes, that would be the resulting txn was >100kb.
+18:33 	sipa	petertodd: o'
+18:33 	petertodd	sipa: ?
+18:34 	sipa	petertodd: i'm not sure about your nTimeLock'ed transactions - on one hand it sounds nice way to prevent wrong mining incentives, but it may cause transactions to be unacceptable to the mempool if there is a weird at-retarget-boundary reorg that decreases height but increases bnChaiNWork
+18:34 	TD	right, it does seem like that's the only way it can fail if SelectCoins succeeds
+18:35 	gmaxwell	TD: I've see behavior like that when someone has a wallet with _lots_ of dust inputs in it, and they make a txn large enough that it dips too far into the dust. Litecoin carries a patch to make coin selection ignore very tiny inputs, which has its own problem.
+18:35 	petertodd	sipa: Oh, that's possible? Hmm... I could do a `GetNetworkChainHeight` function for the odd-cases like that; I nearly was going to do a simple nBestHeight thing that delayed a bit to account for propagation.
+18:35 	TD	i guess the question is, is MP right that a better algorithm would have allowed the tx to fit under the limit?
+18:36 	TD	he doesn't offer any ideas for such an algorithm, but maybe a real constraint solver could do it
+18:36 	petertodd	sipa: I didn't bother when it looked like propagation delays weren't a problem.
+18:36 	petertodd	sipa: It has to be a change with no bad effects after all.
+18:37 	gmaxwell	TD: I've never see a case where our solver was pessimal like that, actually??? ignoring priority??? it seems to do a pretty good job.
+18:40 	gmaxwell	if we'd like some amusement, I could go ask him for an (encrypted) copy of his wallet to try to reproduce. Amusement because apparently when I made that taint-rich thread he was going around telling people that I was trying to rob people.
+18:49 	TD	jurov: that article did have one benefit, it reminded me to implement the max tx size check in bitcoinj
+18:50 	gmaxwell	well, it's making me add some dust tests to the wallet tests too. I hadn't looked at the selection quality since the last changes.
+18:51 	gmaxwell	derp tests are currently broken in git master.
+18:52 	sipa	:o
+18:54 	jgarzik	lots of variables to balance... this is evolving into a Transaction Optimizer
+18:55 	jgarzik	an optimal (to the network) sendmany situation might spread its work across multiple transactions
+19:00 	gmaxwell	::sigh:: douglas broken the solver in some corner cases.
+19:00 	gmaxwell	the sorted first pass makes its greedy.
+19:00 	gmaxwell	and when the wallet has lots of dust inputs it prefers to use them.
+19:01 	sipa	it probably makes sense to not consider inputs that at an order of magnitude smaller than the wanted output, at first
+I've quoted extensively because it displays in concentrated form a majority of the mental issues these people are struggling with. 
+First off, the assumption that they know better than me. This is such a dangerous thing it can't really be put into words, but let us indulge : if any one of the petrified aspie cocksuckers ever gets his manly bits in sufficient order to come talk to me rather than about me and actually presents his rationale for why he mistakenly believes unique addy is bad for privacy I'll reciprocate by explaining why unique addy is great for privacy in the actual usecase. And by this he'll learn something, and be less stupid. 
+Second off, they aren't interested in fixing problems. They are interested in finding fault with other people (petrified aspie cocksuckers that they are) and in daydreaming. This is why those companies that put their engineers in stocks and whip them hourly achieve results in the marketplace whereas those companies that don't slowly fade away into a meaningless, unidentifiable mess of nothing at all. The Google versus Amazon comparison works wonders here : Google is still depending on the Adsense revenue stream, something they've released over a decade ago. Meanwhile Amazon built two businesses, and both crazy profitable, and they'll build a third and a fifteenth while Google will still be dicking around re-making Wave. 
+Fucking HerpDerp, Inc what can I tell you. I hope Bezos figures it out, buys fiddy billion ASICs from whoever is making his electronics and takes over the show.">i</a></sup>.</li>
+<p></p>
+<li> The self-styled "developers" are by and large a bunch of retarded children, looking for "<a href="http://trilema.com/2013/of-mice-and-men-revisited/">sexy projects</a>" and who knows, maybe if they geek out more they might become spergrockstars and some fattie somewhere is throwing her bra at them. </li>
+<p></p>
+<li>The network is in dire straits. Three years ago we had as many as 80`000 full nodes doing the integrity checking and propagating transactions. Two years ago that was cut in half. A year ago we were pushing 10`000. Last month they were a little over 1`000 and now there's barely even that. Think about it for a second, decentralised currency run on 500 nodes ? <strong>Paypal has a lot more than that for the love of Christ, what is this!</strong></li>
+<p>	
+<li>Speaking of "decentralisation" : collusion between the self-styled devteam<sup><a href="#footnote_1_47130" id="identifier_1_47130" class="footnote-link footnote-identifier-link" title="No, it is not `the Bitcoin devteam`, stop calling them that. It's a bunch of dorks that keep adding hairs to a huge hairball by virtue of mindless inertia.">ii</a></sup> and the largest pool operator<sup><a href="#footnote_2_47130" id="identifier_2_47130" class="footnote-link footnote-identifier-link" title="Not a miner, mind you. A pool operator. Because what you were told about how miners strengthen the network and so on and so forth is pure bull - the dozen or so pool ops decide what's what, miners couldn't care less just like voters couldn't care less. And yes, just like in the case of real world `representatives` nobody could explain how in carnation they ended up with the job. Something like `they've been there forever` or maybe `they schmooze well`.">iii</a></sup> yielded a conspiracy to destroy the at-that-time longest chain. <em>Which conspiracy succeeded</em>. What decentralisation, baby ?<sup><a href="#footnote_3_47130" id="identifier_3_47130" class="footnote-link footnote-identifier-link" title="And yes, the catastrophe was hailed in terms of what a great success it was, purest Soviet style available anywhere.">iv</a></sup></li>
+</ul>
+<p><strong>To make the conclusion short and sweet :</strong> you have been fed a bunch of bull by the media (as usual) and are now parting with your hard earned fiat cash in exchange for something you don't understand, haven't evaluated and <strong>is not worth that much</strong>. As usual.</p>
+<p>Please stop. You're not doing us, you're not doing yourself and you're not doing anyone any favours. </p>
+<p><strong>In the interest of full disclosure :</strong> I've personally lost about 15`000 BTC last month alone <a href="http://trilema.com/2013/mpoe-march-2013-statement/">from covering CALL options</a>, which would superficially seem like I have vested interest in saying all this. </p>
+<p>There's two main reasons why that is false. </p>
+<p>On one hand, the 68k BTC selling for ~25 each at the beginning of the month come to a lot less than 53k BTC selling for 100+ each at the end of the month. So no, price appreciation does not hurt my holdings, even if you discount the fact that I own a lot - a lot!<sup><a href="#footnote_4_47130" id="identifier_4_47130" class="footnote-link footnote-identifier-link" title="Just of what's publicly known, my stake in S.MPOE goes for about 550`000 BTC at current market.">v</a></sup> more than that.</p>
+<p>On the other hand, I have a long and glorious history of speaking the truth come Hell or high water, and no matter who might get hurt. You may be unfamiliar with this long and glorious history, but that doesn't make it go away, it just gives you more stuff to discover in the future.</p>
+<p>PS. </p>
+<blockquote><p><strong>ThickAsThieves</strong> is it possible for something to be oversold and overpriced?<br />
+<strong>mircea_popescu</strong> ThickAsThieves yes.</p>
+<p><strong>ThickAsThieves</strong> whats that mean? for it to be both<br />
+<strong>mircea_popescu</strong> ThickAsThieves mania.</p>
+<p><strong>ThickAsThieves</strong> hah thats exactly the only word i could come up with earlier</p></blockquote>
+<p>Seriously. Stop.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_47130" class="footnote">Here's a funny excerpt off the <a href="http://bitcoinstats.com/irc/bitcoin-dev/logs/2013/03/01#l6094545">dev log</a>, ftr :<br />
+<blockquote><p>18:24 	jurov	maybe i'll get banned, but i'll leave this here: http://trilema.com/2013/bitcoind-not-quite-ready-for-prime-time/<br />
+18:24 	jurov	in spririt of our yest discussion<br />
+18:25 	TD	lol<br />
+18:26 	TD	that's the guy who thinks using a single address for everything is good for privacy?<br />
+18:26 	jurov	yes, let's smear him instead of talking about actual problem<br />
+18:27 	jurov	this time he is using the addresses properly. and bitcoind jsut isn't up to the task.<br />
+18:27 	gmaxwell	jurov: saying someone is confused ... when they are confused.. is not a smear.<br />
+18:27 	TD	his problem, if you want to call it that, is he's using APIs designed for developers who know what they're doing - and he does, sorta, because he knows it won't let him create a 1mb transaction<br />
+18:27 	TD	and he knows why<br />
+18:27 	TD	but he still feels like he should be able to create a 1mb tx even though it will never confirm<br />
+18:27 	jurov	if you read till the end, the transactions end up being only 6kb total<br />
+18:28 	TD	anyway, yes, at the core of his post is a point - eventually bitcoin APIs will need to start working with sets of transactions instead of single transactions<br />
+18:28 	TD	i suspect there would have been an explanation in the log<br />
+18:28 	TD	propagating the messages from the logging to the rpc error would certainly be a good improvement<br />
+18:29 	TD	as would better coin selection, the ability to batch transactions to avoid making huge ones, etc<br />
+18:29 	TD	but that guy doesn't write patches, he just bitches. so ???.<br />
+18:29 	gmaxwell	jurov: what he's describing there doesn't follow.<br />
+18:30 	petertodd	re: createrawtransaction and sendrawtransaction, is there any technical reason why the error messages couldn't be made different for each type of error? I've found that annoying myself.<br />
+18:30 	gmaxwell	jurov: he solved his problem by splitting up the transaction. Then he claims that the single transaction would be 6k. This is not the case.<br />
+18:30 	TD	petertodd: nope. just that satoshi wrote the code to write all errors to stderr<br />
+18:31 	TD	petertodd: so i guess someone would need to go through and change it all so errors are accumulated in some request-scoped buffer and then returned<br />
+18:31 	gmaxwell	jurov: are you the author of that page?<br />
+18:31 	gmaxwell	oh, it's MP.<br />
+18:32 	TD	i don't know all the reasons tx creation can fail like that.<br />
+18:32 	petertodd	TD: Well, for say, sendrawtransaction, there should only be one error right? (IE, it'll quit on the first problem)<br />
+18:32 	TD	but i presume size is the primary one<br />
+18:32 	TD	he was using sendmany<br />
+18:32 	gmaxwell	TD: yes, that would be the resulting txn was >100kb.<br />
+18:33 	sipa	petertodd: o'<br />
+18:33 	petertodd	sipa: ?<br />
+18:34 	sipa	petertodd: i'm not sure about your nTimeLock'ed transactions - on one hand it sounds nice way to prevent wrong mining incentives, but it may cause transactions to be unacceptable to the mempool if there is a weird at-retarget-boundary reorg that decreases height but increases bnChaiNWork<br />
+18:34 	TD	right, it does seem like that's the only way it can fail if SelectCoins succeeds<br />
+18:35 	gmaxwell	TD: I've see behavior like that when someone has a wallet with _lots_ of dust inputs in it, and they make a txn large enough that it dips too far into the dust. Litecoin carries a patch to make coin selection ignore very tiny inputs, which has its own problem.<br />
+18:35 	petertodd	sipa: Oh, that's possible? Hmm... I could do a "GetNetworkChainHeight" function for the odd-cases like that; I nearly was going to do a simple nBestHeight thing that delayed a bit to account for propagation.<br />
+18:35 	TD	i guess the question is, is MP right that a better algorithm would have allowed the tx to fit under the limit?<br />
+18:36 	TD	he doesn't offer any ideas for such an algorithm, but maybe a real constraint solver could do it<br />
+18:36 	petertodd	sipa: I didn't bother when it looked like propagation delays weren't a problem.<br />
+18:36 	petertodd	sipa: It has to be a change with no bad effects after all.<br />
+18:37 	gmaxwell	TD: I've never see a case where our solver was pessimal like that, actually??? ignoring priority??? it seems to do a pretty good job.<br />
+18:40 	gmaxwell	if we'd like some amusement, I could go ask him for an (encrypted) copy of his wallet to try to reproduce. Amusement because apparently when I made that taint-rich thread he was going around telling people that I was trying to rob people.<br />
+18:49 	TD	jurov: that article did have one benefit, it reminded me to implement the max tx size check in bitcoinj<br />
+18:50 	gmaxwell	well, it's making me add some dust tests to the wallet tests too. I hadn't looked at the selection quality since the last changes.<br />
+18:51 	gmaxwell	derp tests are currently broken in git master.<br />
+18:52 	sipa	:o<br />
+18:54 	jgarzik	lots of variables to balance... this is evolving into a Transaction Optimizer<br />
+18:55 	jgarzik	an optimal (to the network) sendmany situation might spread its work across multiple transactions<br />
+19:00 	gmaxwell	::sigh:: douglas broken the solver in some corner cases.<br />
+19:00 	gmaxwell	the sorted first pass makes its greedy.<br />
+19:00 	gmaxwell	and when the wallet has lots of dust inputs it prefers to use them.<br />
+19:01 	sipa	it probably makes sense to not consider inputs that at an order of magnitude smaller than the wanted output, at first</p></blockquote>
+<p>I've quoted extensively because it displays in concentrated form a majority of the mental issues these people are struggling with. </p>
+<p>First off, the assumption that they know better than me. This is such a dangerous thing it can't really be put into words, but let us indulge : if any one of the petrified aspie cocksuckers ever gets his manly bits in sufficient order to come talk to me rather than about me and actually presents his rationale for why he <em>mistakenly</em> believes unique addy is bad for privacy I'll reciprocate by explaining why unique addy is great for privacy <em>in the actual usecase</em>. And by this he'll learn something, and be less stupid. </p>
+<p>Second off, they aren't interested in fixing problems. They are interested in finding fault with other people (petrified aspie cocksuckers that they are) and in daydreaming. This is why those companies that put their engineers in stocks and whip them hourly achieve results in the marketplace whereas those companies that don't slowly fade away into a meaningless, unidentifiable mess of nothing at all. The Google versus Amazon comparison works wonders here : Google is still depending on the Adsense revenue stream, something they've released over a decade ago. Meanwhile Amazon built two businesses, and both crazy profitable, and they'll build a third and a fifteenth while Google will still be dicking around re-making Wave. </p>
+<p>Fucking HerpDerp, Inc what can I tell you. I hope Bezos figures it out, buys fiddy billion ASICs from whoever is making his electronics and takes over the show. [<a href="#identifier_0_47130" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_47130" class="footnote">No, it is not "the Bitcoin devteam", stop calling them that. It's a bunch of dorks that keep adding hairs to a huge hairball by virtue of mindless inertia. [<a href="#identifier_1_47130" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_47130" class="footnote">Not a miner, mind you. A pool operator. Because what you were told about how miners strengthen the network and so on and so forth is pure bull - the dozen or so pool ops decide what's what, miners couldn't care less just like voters couldn't care less. And yes, just like in the case of real world "representatives" nobody could explain how in carnation they ended up with the job. Something like "they've been there forever" or maybe "they schmooze well". [<a href="#identifier_2_47130" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_47130" class="footnote">And yes, the catastrophe was hailed in terms of what a great success it was, purest Soviet style available anywhere. [<a href="#identifier_3_47130" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_47130" class="footnote">Just of what's publicly known, my stake in S.MPOE goes for about 550`000 BTC at current market. [<a href="#identifier_4_47130" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/path-of-exile-story-continued/">Path of Exile, story continued.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/its-been-an-epic-few-days-what-happened/">It's been an epic few days: What happened?</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/people-bitcoin-is-not-worth-100-dollars-per-stop-buying/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/people-bitcoin-is-not-worth-100-dollars-per-stop-buying/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>21 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-92553" class="commentbody"><div class="commenthead"><img alt='FUCKYOU`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">FUCKYOU</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92553" title="">Wednesday, 3 April 2013</a>
+							</div>
+						<p>LOOKS LIKE YOU HAVE YOUR WISH ASSHOLE!</p>
+						</li>
+
+										<li id="comment-92554" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92554" title="">Wednesday, 3 April 2013</a>
+							</div>
+						<p>I'm not an asshole, I'm just alternatively invaginated.</p>
+						</li>
+
+										<li id="comment-92557" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92557" title="">Wednesday, 3 April 2013</a>
+							</div>
+						<p>Eroule, salveaza bitcoin.</p>
+						</li>
+
+										<li id="comment-92558" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92558" title="">Wednesday, 3 April 2013</a>
+							</div>
+						<p>Prea tirziu ca-i salvat gata.</p>
+						</li>
+
+										<li id="comment-92561" class="commentbody"><div class="commenthead"><img alt='Radu`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Radu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92561" title="">Thursday, 4 April 2013</a>
+							</div>
+						<p>So no, price appreciation does not hurt my holdings, even if you discount the fact that I own a lot - a lot!v more than that..... Dau o bere per bitcoin, minim 10k btc :D merge afacerea?</p>
+						</li>
+
+										<li id="comment-92563" class="commentbody"><div class="commenthead"><img alt='scatha`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">scatha</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92563" title="">Thursday, 4 April 2013</a>
+							</div>
+						<p>You are correct. 132$ (now as i speak) is way too much. Of course this bubble will burst like the last one in 2011, but a slow rise that reflects the growth of the real market would have been better.</p>
+						</li>
+
+										<li id="comment-92564" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92564" title="">Thursday, 4 April 2013</a>
+							</div>
+						<p>The crucial point is to not have a 500 - > 5 drop. Something like ~100 may be sustainable on the longer term. I am currently of the persuasion that the imminent danger was mostly averted.</p>
+						</li>
+
+										<li id="comment-92594" class="commentbody"><div class="commenthead"><img alt='subSTRATA`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">subSTRATA</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92594" title="">Friday, 5 April 2013</a>
+							</div>
+						<p>"Paid content." Hmm, I think it was for free at the time I bookmarked it. Anyhow, what would you do to make more people run full nodes? To pay them (even a little) would surely work, but would it be doable at all? Like:</p>
+<p>1. Once user starts full node, he submits his BTC address and IP to some database.<br />
+2. At random intervals, node conected to database checks for the existence of full node on IP user submitted.<br />
+3. If full node is online, send some bitcoins to user BTC address.</p>
+<p>Worst idea ever?</p>
+						</li>
+
+										<li id="comment-92595" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92595" title="">Friday, 5 April 2013</a>
+							</div>
+						<p>The paywall is related to how much you read, it's not per article.</p>
+<p>I have no idea how the node problem would be best solved. I think satoshi's mind was along the lines of, everything useful must be paid for, but he never went into details.</p>
+						</li>
+
+										<li id="comment-92611" class="commentbody"><div class="commenthead"><img alt='Cristi`s avatar' src='http://www.name-statistics.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink"><a href='http://www.name-statistics.org' class='url'>Cristi</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92611" title="">Saturday, 6 April 2013</a>
+							</div>
+						<p>Bulele au tendinta de a-si atinge peak-ul mult mai tarziu decat considera lumea (se vorbea de o bula a imobiliarelor de prin 2003), deci eu cred ca s-ar putea sa aveti o surpriza cu pretul unui Bitcoin. :)</p>
+						</li>
+
+										<li id="comment-92614" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92614" title="">Saturday, 6 April 2013</a>
+							</div>
+						<p>This is like telling Pasteur that disease is, by and large, a permanent epiphenomenon of the human condition. Sure. So ?</p>
+						</li>
+
+										<li id="comment-92686" class="commentbody"><div class="commenthead"><img alt='subSTRATA`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">subSTRATA</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92686" title="">Wednesday, 10 April 2013</a>
+							</div>
+						<p><a href="http://www.naturalnews.com/039850_bitcoin_bubble_crash_globalists.html">http://www.naturalnews.com/039850_bitcoin_bubble_crash_globalists.html</a></p>
+						</li>
+
+										<li id="comment-92688" class="commentbody"><div class="commenthead"><img alt='scatha`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">scatha</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92688" title="">Wednesday, 10 April 2013</a>
+							</div>
+						<p>Now a few days later - it's getting worse. I wish it would have been averted...</p>
+<p>This article describes very well what i have been thinking lately</p>
+<p><a href="http://www.theglobalconspiracy.org/post/47617974083/how-the-looming-bitcoin-crash-will-be-exploited-by-globa#_=_">http://www.theglobalconspiracy.org/post/47617974083/how-the-looming-bitcoin-crash-will-be-exploited-by-globa#_=_</a></p>
+<p>There must be some owners of extremely large stocks of bitcoins.. If they dump now, the bubble would be folded.</p>
+						</li>
+
+										<li id="comment-92695" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92695" title="">Wednesday, 10 April 2013</a>
+							</div>
+						<p>@<b>subSTRATA</b> That article is overconcerned with things nobody really cares about. The US govt saying drugs are bad mkay has created a huge market in drugs. The US govt saying ownership is bad mkay has created a huge market in overseas assets. The US govt doesn't work and doesn't matter.</p>
+<p>@<b>scatha</b> Why am I reading the same article twice ?</p>
+						</li>
+
+										<li id="comment-92696" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92696" title="">Thursday, 11 April 2013</a>
+							</div>
+						<p><a href="http://polimedia.us/dtng/c/src/136563380142.jpg">http://polimedia.us/dtng/c/src/136563380142.jpg</a></p>
+						</li>
+
+										<li id="comment-92726" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92726" title="">Saturday, 13 April 2013</a>
+							</div>
+						<p>Mircica sugi: <a href="http://www.capital.ro/detalii-articole/stiri/180626.html">http://www.capital.ro/detalii-articole/stiri/180626.html</a></p>
+						</li>
+
+										<li id="comment-106321" class="commentbody"><div class="commenthead"><img alt='BingoBoingo`s avatar' src='http://www.thedrinkingrecord.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink"><a href='http://www.thedrinkingrecord.com' class='url'>BingoBoingo</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-106321" title="">Saturday, 23 August 2014</a>
+							</div>
+						<p>Mania's not the worst...</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-139198">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-bitcoiners-press-manual?b=work%20and%20fin&amp;e=ical#select' class='url'>The Bitcoiner's Press Manual on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139198" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] work and finds a flaw. This is also how "Bitcoin is a Ponzi" pieces are born. If the BCB fucks up next time and we do blow up... well. It'll be great to be able to go back to some unrelated, nonsensical [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140514">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/this-is-how-much-i-rule-today?b=My%20article%2C%20&amp;e=ain.#select' class='url'>This is how much I rule (today) on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140514" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] My article, detailing how the USG wasted another hundred million dollars it previously stole from average, hard working US citizens and nobody cares, published on October 5th, 17:02 GMT. That's right, comes to exactly the bottom of the bottom. Which means I did it again. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141201">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/curriculum-vitae?b=a%20Serenissim&amp;e=~10k#select' class='url'>Curriculum Vitae on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141201" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] a Serenissima commission. This is still the reference point on the subject today. April 3rd, 2013 : Saved Bitcoin. Actually. June 2013 : Felt like designing a game so started a game publisher. IPO collected ~10k [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146065">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/bitcoin-recapitulation?b=bank%20and%20onl&amp;e=k%20in#select' class='url'>Bitcoin Recapitulation on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146065" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] bank and only financial, political and ideological authority -- besides killing an early rally back in 2013xv -- was killing "bitcoin as medium of exchange" nonsense back in [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="47130" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832088-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-47130")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-47130");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-47130");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

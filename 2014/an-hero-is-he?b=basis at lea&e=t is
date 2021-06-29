@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>An hero is he... on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Din bube, mucegaiuri si noroi<br />Mi-am facut bici, si m-am cicat pe voi.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-54031"><div class="post" id="post-54031">                    <h1><a href="http://trilema.com/2014/an-hero-is-he/" rel="bookmark" title="Permanent Link to An hero is he...">An hero is he...</a></h1>                        <div class="date">                                     Monday, 21 April, Year 6 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Nassim Taleb is an actually thinking man, and as such he's enjoying the usual problems reserved for these. Let's hear it <a href="http://www.fooledbyrandomness.com/notebook.htm">from his own mouth</a> : </p>
+<blockquote><p>But, it turned out, things are worse than that. In my debate on twitter with Robin Hanson, one of the proponents of prediction markets, he argued (defending the necessary boundedness of a binary bet) that "Within a finite time, real financial assets will only have a finite number of possible outcomes." He was justifying the boundedness of bets with the fact that prices appear finite. This set me off as a worrying violation of statistics and probability since all processes, no matter what their "support" is (on which further down), will deliver finite outcomes (have you ever observed an "infinite" realization?). But finite at which values? Forget statistics, this it is a blatant violation of elementary trading, something that uneducated traders and stockbrokers understand.</p>
+<p>Every rookie in trading knows that, in your projections about the future, you cannot "cap an outcome", i.e. find an upper bound to it, beyond which no realization is possible, unless there is an organic cap, like a contractual ceiling. No matter how high your "cap", it can be topped by another one (albeit with a declining probability under unimodal distributions). So educated and uneducated traders use "infinite" as proxy for "cannot find a bound for the payoff". We call this open-ended. When there are reasons to cap, we cap, and it is no longer open-ended. The converse is "floor an outcome", a stock price is deemed to be "floored" at 0, which is reasonable though not fully rigorous, as we have seen weird things with negative interest rates. Likewise for academic finance and economics: infinity means "no known upper bound for the outcome".</p>
+<p>Now more worrisome is the flaw in statistical reasoning on the part of Hanson and, what is worse, all these little social scientists who didn't get it from observing the discussion. Let me repeat: finiteness of realizations does not imply finitness of support. The support of a probability distribution, say (0, Infinity), is the space of "possible" realizations that the variable can take. But all realizations ex post have to be "finite", take on a number you can use, like 101.36 or 176.32, etc. Otherwise we would have no probability distributions; very few continuous distributions are compact in their support, such as the uniform and the beta distribution. The Gaussian is deemed close to compact, but we still have infinities on both sides. So listening to Hanson, all supports need to be pre-defined in compact intervals. But the flaw in reasoning is that he went backwards from realizations to support, rather than the opposite.</p>
+<p>For a minute I thought about giving Hanson the benefit of the doubt, until I remembered his papers on prediction markets which I found not even wrong to cite them in my own commentary. It is necessary to engage someone who is wrong, but impossible to engage someone who is not even wrong. Staying in the debate meant having to explain to Mr Hanson what finite and infinite mean in probability, along with why realizations are never infinite, stuff that is required to understand before writing about these matters.This is similar to having to discuss a Fourier Transform and needing to explain something as elementary as what a complex number means, and facing the idiotic "show me a complex number in real life".</p></blockquote>
+<p>I could have not said it better, and I must confess these paragraphs are a balm for sore eyes. For you see, I have similar qualifications : for thirty months or so I ran pretty much the only options book in Bitcoin.<sup><a href="#footnote_0_54031" id="identifier_0_54031" class="footnote-link footnote-identifier-link" title="Specifically : 
+Call options traded in this interval, 20 + 80 + 485 + 2240 + 15 + 6065 + 1993 + 5905 + 3056 + 3266 + 5455 + 19412 + 28156 + 74414 + 40093 + 84990 + 13964 + 26367 + 330192 + 26367 + 23223 + 271 + 2059 + 7 + 9 + 1407 + 54 + 1072.7 + 102.0 + 155.4 = 700`895.1 BTC ; 
+Put options traded in this interval,  20 + 20 + 529 + 3290 + 113 + 136 + 1594 + 18520 + 2920 + 7483 + 8153 + 56236 + 17338 + 40349 + 51290 + 105827 + 38730 + 12918 + 152280 + 12918 + 14614 + 7 + 3137 + 2945 + 6 + 25 + 4852 + 82.2 + 1.4 + 2465.4 = 558`799.0 BTC
+Grand total 1`259`694.1 of notional BTC exposure traded, which easily constitutes 99.x% of all BTC-USD options, all BTC-fiat options and altogether all BTC financial derivatives traded in the history of this here thing so far.">i</a></sup> Since 2011 I've been promoting the use of actual contracts in Bitcoin. Since the first day of 2013 I've been managing BitBet, and on it goes.</p>
+<p>On top of which similar qualifications, I have very similar experiences : various nobodies expressing their dearly held notions as to how they know everything much better on a daily <span style="background-color:#d3d3d3" id="select">basis at least, in spite of quite manifestly not being able to actually read a single paragraph ; <a href="http://trilema.com/2013/wikipedia-the-special-olympics-for-the-mentally-retarded/">retardopedia</a> deleting their Mircea Popescu article<sup><a href="#footnote_1_54031" id="identifier_1_54031" class="footnote-link footnote-identifier-link" title="For the record, I'd rather my name not be used by that particular website roughly in the same way you'd rather not have some song you wrote used by some institution in North Korea. I understand that both the Internet's best encyclopedia and the world's best country survive mostly through copying - inaccurately, sadly and braindamagedly - things other countries and other people do. Nevertheless, could they just copy Timberlake or whatever pop-crap and let things that actually matter alone ? ">ii</a></sup>, because being mentioned in every single press outlet is</span> clearly an indicium of non-notability, while they to this day maintain a "DAC" article, because not citing any sources (such as you know... the three year old MPEx contracts) clearly signifies notability ; arguing with <a href="http://trilema.com/2013/least-likely-to-succeed-character-the-upseller/">the clueless</a> as to why exactly parimutuel is the Right Thing whereas "prediction markets" are a sort of resurected Windows 3.1 and so on and so forth <em>ad infinitum &#038;qs</em>.</p>
+<p>Personally, I blame <a href="http://trilema.com/forum-logs-for-21-apr-2014#1219353">the primary school system</a>. Originally, it was the case that children aged five to ten using new words which they had heard but failed to look up in the dictionary or else check with an adult <a href="http://trilema.com/2013/the-disadvantage-of-teaching-people-the-alphabet-and-nothing-more-is-that-you-have-to-somehow-put-up-with-a-bunch-of-retards-that-can-now-express-themselves-in-writing/#footnote_5_50095">were simply beaten</a>. Just like that, either clear the word or not use it.</p>
+<p>As actual eggs have been replaced with battery eggs and actual milk with soy whey or whatever the hell they use these days, educating children so as they grew up into humans was also replaced with educating children so as they grow up into consumers, which is a sort of chimp. Consequently, all in the spirt of cost reduction (which means spending less to get "the same") but under the pretense of "empowering" (which means, lower the standard of work so even fucktards can go around pretending they're lawyers or teachers or whatnot, even if they'd have been laughed out of town back in the day of their parents) education has also changed. Children are no longer <em>required</em> to look up words today (or anything else), nor have they for a good two or three decades. Instead, they are <em>encouraged</em> to... guess. That's right, to "guess" as to what the word may mean... based on... "its context".</p>
+<p>In other words, a child with no actual experience, and no valuable mental processes at the ready is asked to construct his own personal world out of the shit between his ears. This is obviously not education, but more akin a very perverse intellectual masturbation. The results of this very very broken process are of course the ungovernable, uneducable, useless masses of people we run into all over the web today, they for whom the only hope is more "government spending", for as long as that lasts. With a very high if wholly baseless opinion of themselves<sup><a href="#footnote_2_54031" id="identifier_2_54031" class="footnote-link footnote-identifier-link" title="Because how is the impudent cocklet supposed to guess that the word `in context` means he's a fuckwit ?! Such can never happen, it'd be much akin to Narcis looking in the mirror and coming to the conclusion he's fucking ugly.">iii</a></sup>, completely incapable to exploit - or even meaningfully interact with - their environment, completely unable to even understand each other to any degree.</p>
+<p>The way Google search works may seem a ready metaphor to explain the problem : inasmuch as only results similar to those on which the user clicked in the past are even presented as a choice, the search engine insulates the subject into a wholly artificial bubble of agreement, which renders him first unwilling and soon incapable of dealing with the actual reality. This does not go far enough however.</p>
+<p>Imagine a FPGA array, which has heretofore been populated through a genetic approach, resulting though selection in remarkably lengthy and complex islands of connectivity. This is the human brain, universally, up until the 1970s roughly speaking. Now imagine the same FPGA array simply wired randomly. Sort-of like this picture : </p>
+<p><a href="http://trilema.com/wp-content/uploads/2014/04/noise.jpg"><img src="http://trilema.com/wp-content/uploads/2014/04/noise.jpg" alt="noise" title="noise" width="560" height="560" class="alignright size-full wp-image-54041" /></a></p>
+<p>One doesn't need to be an expert to notice that if wired randomly, the average size of elements suddenly becomes very small. This metaphor describes the problem well : the college student of today is mentally incapable of understanding material fit for highschoolers two generations ago, and will have to expend degrees of magnitude more effort to comprehend topics fit for the junior high stundents of 1970. It's really hard to make Tetris work with five logic gates, and if that's the largest assemblage currently sloshing around in your head it's probably already in use somewhere else (for instance, clicking, or clucking, or whatever it is you do).</p>
+<p>This new method in effect reduces the working of the human brain to simple symbol matching<sup><a href="#footnote_3_54031" id="identifier_3_54031" class="footnote-link footnote-identifier-link" title="This is particularly pernicious because it renders a particular test inoperable. Generally, they who wish to teach something will need to start the teaching somewhere, and in order to find the most adequate spot (late enough so the recipient is not bored by rote repetition but early enough so the recipient can mentally follow the jump) they will ask the recipient of their teaching whether he recognizes particular symbols. Normally lack of recognition is an honest signal indicating that the recipient can't make the jump and so the point is too late, whereas recognition is also a honest signal indicating that the recipient can make the jump and so the point is too early. The simple pattern matchers however will recognize much past their ability to jump, and so render teaching an exercise in unpleasantness if not outright impossibility, but in any case frustrating both teacher and student.">iv</a></sup> and little more. Such reduction works splendidly well to produce consumers, the best consumers imaginable, because as the actual control mechanisms atrophy, simple recognition-based drivers of behaviour take over. Each time someone bought an item they didn't actually need, without as much as stopping to consider if they needed it, let alone if they could pay for it (or how they'd pay for it), simply because they <em>recognised</em> it, taken over and carried away by that giddy enthusiasm of the monkey brain, the method of mental castration discussed here has delivered its fruits.</p>
+<p>Those fruits are perhaps sweet for the sellers of crap, arguably, at least on the short term. They are also bitter for everyone else, including the government declaring those sellers too big to fail, and the pensioneers pooling their pension funds (unwittingly, of course) into the equity of the seller, and the yet unborn children which will have to parent themselves, somehow.</p>
+<p>The brain is, of course, plastic, and much like the victim of a severe infarction can, with a lot of hard work, regain a great measure of his earlier dexterity and locomotive power, similarly the braindamaged-through-pseudoeducation young adult of today could regain a great measure of his mental function should he be willing to struggle uphill for years, preferably under the whip. Generally speaking, he's not, and so here we are : bereft of even the most basic reading comprehension yet <a href="http://trilema.com/2014/in-which-we-teach-basic-reading-comprehension-to-a-certain-mr-preston-byrne/">pretending to the bar</a>.</p>
+<p>The tragedy is that it'd take a lot less work, and a lot fewer lashes and welts per inch, to have achieved the same effect aged 5 than it takes aged 25. </p>
+<p>PS. This article is in large part based on a talk I gave at <a href="http://trilema.com/2014/ca-tot-s-a-tras-tot-s-a-fumat-tot-s-a-baut-tot-cum-e-peste-tot-la-fel-ca-peste-tot/">the recent conference</a>, so if you weren't there... this is the sort of thing you've been missing. </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_54031" class="footnote">Specifically : </p>
+<p><strong>Call options traded in this interval</strong>, 20 + 80 + 485 + 2240 + 15 + 6065 + 1993 + 5905 + 3056 + 3266 + 5455 + 19412 + 28156 + 74414 + 40093 + 84990 + 13964 + 26367 + 330192 + 26367 + 23223 + 271 + 2059 + 7 + 9 + 1407 + 54 + 1072.7 + 102.0 + 155.4 = 700`895.1 BTC ; </p>
+<p><strong>Put options traded in this interval</strong>,  20 + 20 + 529 + 3290 + 113 + 136 + 1594 + 18520 + 2920 + 7483 + 8153 + 56236 + 17338 + 40349 + 51290 + 105827 + 38730 + 12918 + 152280 + 12918 + 14614 + 7 + 3137 + 2945 + 6 + 25 + 4852 + 82.2 + 1.4 + 2465.4 = 558`799.0 BTC</p>
+<p>Grand total 1`259`694.1 of notional BTC exposure traded, which easily constitutes 99.x% of all BTC-USD options, all BTC-fiat options and altogether all BTC financial derivatives traded in the history of this here thing so far. [<a href="#identifier_0_54031" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_54031" class="footnote">For the record, I'd rather my name not be used by that particular website roughly in the same way you'd rather not have some song you wrote used by some institution in North Korea. I understand that both the Internet's best encyclopedia and the world's best country survive mostly through copying - inaccurately, sadly and braindamagedly - things other countries and other people do. Nevertheless, could they just copy Timberlake or whatever pop-crap and let things that actually matter alone ?  [<a href="#identifier_1_54031" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_54031" class="footnote">Because how is the impudent cocklet supposed to guess that the word "in context" means he's a fuckwit ?! Such can never happen, it'd be much akin to Narcis looking in the mirror and coming to the conclusion he's fucking ugly. [<a href="#identifier_2_54031" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_54031" class="footnote">This is particularly pernicious because it renders a particular test inoperable. Generally, they who wish to teach something will need to start the teaching somewhere, and in order to find the most adequate spot (late enough so the recipient is not bored by rote repetition but early enough so the recipient can mentally follow the jump) they will ask the recipient of their teaching whether he recognizes particular symbols. Normally lack of recognition is an honest signal indicating that the recipient can't make the jump and so the point is too late, whereas recognition is also a honest signal indicating that the recipient can make the jump and so the point is too early. The simple pattern matchers however will recognize much past their ability to jump, and so render teaching an exercise in unpleasantness if not outright impossibility, but in any case frustrating both teacher and student. [<a href="#identifier_3_54031" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2014/ca-tot-s-a-tras-tot-s-a-fumat-tot-s-a-baut-tot-cum-e-peste-tot-la-fel-ca-peste-tot/">Ca tot... s-a tras tot s-a fumat tot s-a baut tot cum e peste tot ? La fel ca peste tot.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2014/peri-metaphyseos-in-english-this-time/">Peri metaphyseos, in English this time.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2014/an-hero-is-he/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2014/an-hero-is-he/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>24 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-99190" class="commentbody"><div class="commenthead"><img alt='Dana`s avatar' src='http://www.vox-studio.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://www.vox-studio.ro' class='url'>Dana</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99190" title="">Monday, 21 April 2014</a>
+							</div>
+						<p>He said very well. and yeah ive been missing.</p>
+						</li>
+
+										<li id="comment-99191" class="commentbody"><div class="commenthead"><img alt='BldSwtTrs`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">BldSwtTrs</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99191" title="">Monday, 21 April 2014</a>
+							</div>
+						<p>I still don't understand why prediction markets are bad.</p>
+<p>OK we cannot use them to hedge against real world event because in real world exposures are not bounded, but why cannot use them to speculate on the occurence of one event? </p>
+<p>We call them prediction market, not hedging market.</p>
+						</li>
+
+										<li id="comment-99192" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99192" title="">Monday, 21 April 2014</a>
+							</div>
+						<p>They're not "bad". They're just toys. That you have fun with toys is no problem, I do too. The problem starts when someone tries to pretend like some toy he particularly likes is a) an idol which reveals truths to him or b) a measuring instrument which reveals truths to him.</p>
+						</li>
+
+										<li id="comment-99193" class="commentbody"><div class="commenthead"><img alt='BldSwtTrs`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">BldSwtTrs</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99193" title="">Monday, 21 April 2014</a>
+							</div>
+						<p>But if :<br />
+- prediction markets are bad for hedging<br />
+- prediction markets are good for speculating</p>
+<p>Can't we say the that resulting price of prediction market is a better predictive tool than any other price?<br />
+Since in prediction markets the price will be only set by speculators who actively try to estimate the odds of the event, whereas hedgers care more about managing their own risk than guessing the odd of the events.</p>
+						</li>
+
+										<li id="comment-99194" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99194" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>No. What you call "speculating" is playing, not an adult activity. In the same manner toy kalashnikovs replicas are bad for plowing, and good for playing soldier, but this does not make them rifles. A large contingent of children playing soldier with a whole toy store's supply of toy rifles is still not going to contribute anything useful to the theory of warfare.</p>
+						</li>
+
+										<li id="comment-99195" class="commentbody"><div class="commenthead"><img alt='BldSwtTrs`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">BldSwtTrs</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99195" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>Takes poker. It's a game which is also an adult activity due to the<br />
+ money involved. Adults have hone the strategy so much that in the most popular variante, No Limit Hold'em, the game (yet very complex) is close to be "solved" (Game Theory Optimal play are everywhere when the stake are high).</p>
+<p>Anyway, I don't understand the logical argument against the prective potential of prediction market (neither why parimutual should be better). Taleb only convincingly explain why they are bad for hedging, which is a topic that is orthogonal to their predictive potential.</p>
+						</li>
+
+										<li id="comment-99196" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99196" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>Poker is not an adult activity "due to the money involved". There's money involved in korean pop music, too, doesn't do much for it in this sense.</p>
+<p>I'll gladly listen to the demonstration of how predictive potential and hedging are orthogonal matters.</p>
+						</li>
+
+										<li id="comment-99197" class="commentbody"><div class="commenthead"><img alt='BldSwtTrs`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">BldSwtTrs</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99197" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>When you hedge against a future event you have to integrate into the decision your exposure to the consequences of that event.<br />
+Whereas when your purpose is to make a profit, you only estimate the odds of the event and compare it to the current price. The consequences of the events are irrelevant to the decision making process.<br />
+Hedging and speculating are two different process which don't have the same inputs.</p>
+<p>Prediction market lay on Hayekian economics (prices gathered the dispersed information), a priori that's solid economics. But I'll gladly listen you explain why in the case of prediction markets, the resulting price will not gathered a valuable information.</p>
+						</li>
+
+										<li id="comment-99198" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99198" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>You familiar at all with the nonsense fondly remembered as the Bitcoin gem ?</p>
+						</li>
+
+										<li id="comment-99199" class="commentbody"><div class="commenthead"><img alt='BldSwtTrs`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">BldSwtTrs</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99199" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>No, I wasn't in the crypto-community in those remote times.</p>
+						</li>
+
+										<li id="comment-99200" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99200" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>Right. So what were the idiots "investing" and "speculating" in the Bitcoin gem predict, exactly ? And more recently, the idiots "investing" and "speculating" in Neobee "stock", or in any other pretend-stock on some toy-exchange, what exactly did they predict ? What did the idiots buying pirate "Debt" and "mtgox bitcoins" predict, exactly ?</p>
+						</li>
+
+										<li id="comment-99201" class="commentbody"><div class="commenthead"><img alt='thestringpuller`s avatar' src='http://cookiechief.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink"><a href='http://cookiechief.com' class='url'>thestringpuller</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99201" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>I'm curious to see how the betting line correlates to the "odds" of the event for a sample of bets.</p>
+						</li>
+
+										<li id="comment-99202" class="commentbody"><div class="commenthead"><img alt='BldSwtTrs`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">BldSwtTrs</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99202" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>I read a bit on Bitcoi an gem and it's look like a sort of playful Ponzi.<br />
+But I think I understand your concern. You think the dumb crowd is not reliable for predicting whatsoever.</p>
+<p>But the answer lay on deep level economics. I cannot really explain it quickly, you should read the seminal paper of Hayek on knowledge and society: <a href="http://object.cato.org/sites/cato.org/files/articles/hayek-use-knowledge-society.pdf">http://object.cato.org/sites/cato.org/files/articles/hayek-use-knowledge-society.pdf</a></p>
+<p>For example consider the fact that when the shuttle Challenger exploded, the stock of the responsible company lose 20% the very day, while the officialy survey end up find the responsability of the company only 3 months later. </p>
+<p>While people are dumbs, each people have local information which is very precious because obtaining information is costly. And the crux of the matter is that information can be effortlessly and freely gathered by a pricing mechnism (and thanks to greed, people with the more reliable and rare information will participate more activily in the pricing mechnism), price thus transforming local and private information in global and public information.</p>
+						</li>
+
+										<li id="comment-99204" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99204" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>@<b>BldSwtTrs</b> That point is perhaps better illustrated on this very blog : <a href="http://trilema.com/2014/on-july-29-1914/">http://trilema.com/2014/on-july-29-1914/</a></p>
+<p>Nevertheless, all the examples of successful prediction actually depend on hedging being involved. You're still very far from having even significantly sustained your earlier orthogonality proposition. </p>
+<p>In general, when you come to make a proposition which then you fail to support, it is not your place to make reading recommendations to the other party.</p>
+<p>@<b>thestringpuller</b> How would one calculate the odds tho ?</p>
+						</li>
+
+										<li id="comment-99206" class="commentbody"><div class="commenthead"><img alt='BldSwtTrs`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">BldSwtTrs</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99206" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>I can't read the post because of paywall.</p>
+<p>The fact that hedging was involved doesn't prove it necessary. One can even argue that hedgers spoil the purity of the price since hedgers don't try to predict the price but are only here to manage their risk. </p>
+<p>It's pretty obvious to me that hedgers and speculators doesn't need each others (if anything hedgers need speculators for liquidity, but speculators don't need hedgers because speculators generally outnumbers hedgers so they can provide enough liquidity between themselves). So I don't see a need to explain to "prove" that point unless you make a decisive argument on why the presence of hedgers on a market is necessary to have speculators involved on that market too.</p>
+						</li>
+
+										<li id="comment-99207" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99207" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>One can make all sorts of wild claims. Making wild claims does not amount to arguing anything, and on this note I'd say this conversation is pretty much over.</p>
+						</li>
+
+										<li id="comment-99208" class="commentbody"><div class="commenthead"><img alt='BldSwtTrs`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">BldSwtTrs</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99208" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>The wild claim is arguing against prediction market without understanding the theory behind it.<br />
+I am fine with ending the conversation since I was coming to see if you have any argument beside a quote of Taleb that don't prove your point, and I have my answer.</p>
+<p>Have a nice day.</p>
+						</li>
+
+										<li id="comment-99209" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99209" title="">Tuesday, 22 April 2014</a>
+							</div>
+						<p>The "theory" behind it is not unlike the "theory" behind homeopathy, phrenology, technical analysis or any other of a vast array of nonsense that appeals to they who can write words but don't understand what words mean.</p>
+<p>You're not even wrong, as the expression goes. To achieve the ability of being wrong you'd have to first comprehend basic stuff, such as why arguing <em>against</em> something is not making any sort of claim whatsoever.</p>
+						</li>
+
+										<li id="comment-115298" class="commentbody"><div class="commenthead"><img alt='Gabriel`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">Gabriel</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-115298" title="">Friday, 11 September 2015</a>
+							</div>
+						<p>I am forever grateful for this article - it made me realize that i too had that very bad habit of not looking up words as soon as i read/heard them. </p>
+<p>Since then, i have acquired the (very healthy) habit of looking up every single word i read and inquiring about every word that i don't fully understand. </p>
+<p>It had (and still has) a great positive impact upon me, along with the many other great articles of this great blog. Thank you</p>
+						</li>
+
+										<li id="comment-115306" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-115306" title="">Friday, 11 September 2015</a>
+							</div>
+						<p>Cheers.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-99205">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://bitcoinpete.com/2014/consumerism-the-great-equalizer-the-legacy-of-the-french-revolution/' class='url'>Consumerism: The Great Equalizer &#8211; The Legacy of the French Revolution | When Bitcoin Met Pete</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-99205" title="">Tuesday, 22 April 2014</a>
+					</div>
+					<p>[...] must have been reading my mind, or I his, because An hero is he… hits on this exact point. To wit: Personally, I blame the primary school system. Originally, it [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140320">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/no-you-dont-have-something-to-say-on-the-topic?b=predictable%20&amp;e=%5DYet#select' class='url'>No, you don't have something to say on the topic. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140320" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] predictable failures of entropy. Ie, what decontextualized peons call "logic". [&#8617;]Oh how many countless ways there are to measure wrong. Or to not understand what you've measured. [&#8617;]Yet [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140485">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/a-putea-putere?b=to%20%22El%20spune&amp;e=hich#select' class='url'>A putea, putere on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140485" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] to "El spune des pot". So there you have it, when people do that damaging, vile and offensive "try and figure what things mean in context" they're not thinking of a puny creole. They're thinking of a fully featured, European (which [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145243">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/i-think-it-might-be-the-case-im-becoming-pretentious?b=Well%20then...&amp;e=ing.#select' class='url'>I think it might be the case I'm becoming pretentious. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145243" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Well then... I guess you don't. &mdash;&mdash;&mdash;"We should bring back betwixt. Such a better word than between. Lot of good words starting with be, like benighted. I've been using words on a Dr. Seuss level!" ~anonwhore, cca 2019. [&#8617;]It's true, by the way -- they do. And it gives bystanders quite the pause whenever I have them do it in public, on the street. It's a different flavour of pause than for instance when I make them carry heavy loads while I walk about hands in pockets, whistling : that usually enrages a small subsection of older women, whereas this is more of a medical-concerned "oh poor guy, he's got bones growing in stomach" or somesuch. People are more than willing to "explain" their environment to themselves, hence all the guessing. [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="54031" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834254-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-54031")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-54031");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-54031");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

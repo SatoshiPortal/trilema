@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Get back to me... on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">If "waifu" is "wife"<br />should "kung-fu" be "knife" ?
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-91021"><div class="post" id="post-91021">                    <h1><a href="http://trilema.com/2020/get-back-to-me/" rel="bookmark" title="Permanent Link to Get back to me...">Get back to me...</a></h1>                        <div class="date">                                     Thursday, 23 January, Year 12 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>This article was originally going to be a comment, like <a href=http://ossasepia.com/2020/01/21/de-facto-data-somethings-in-euloras-client/#comment-7433>the other</a> ; but then as I wrote it down I became entangled by degrees, and soon discovered I can't eschew<sup><a href="#footnote_0_91021" id="identifier_0_91021" class="footnote-link footnote-identifier-link" title="Yes, I always try to.">i</a></sup> the use of footnotes, so<sup><a href="#footnote_1_91021" id="identifier_1_91021" class="footnote-link footnote-identifier-link" title="It strikes me that this is the perfect differentiation criteria between comment and article, at least for my needs, for the time being.">ii</a></sup>... </p>
+<blockquote><p>Well, for starters I actually thought we were trying to assess - given the focus on pragmatic and the question itself, which inquires as to why not use it, not as to why isn't it good quality - a very practical fitness for purpose that includes therefore both quality and usability as it stands.</p></blockquote>
+<p>In a word... no.</p>
+<p>Let's revisit the film of events to resync here. So, the client for playing Eulora, an item that started its life for practical purposes as an alpha <a href=http://trilema.com/2013/its-called-eulora/>back in 2013</a>, received a couple minor upgrades in the following three years, yielding <a href=http://trilema.com/2016/eulora-012>version 1.2</a> in 2016. Since then, until lo now 2020, it's received one or two even smaller, letter-denominated touch-ups, so its called 1.2b. </p>
+<p>The history of client versions is however a terrible proxy for the history of an online game -- changes to the client merely signify inconvenience to the player (who, in this schematic, is actually prototyped by me, and god knows nobody wants to inconvenience me<sup><a href="#footnote_2_91021" id="identifier_2_91021" class="footnote-link footnote-identifier-link" title="See, this right here is clear an' self-evident footnote material, that at the time this was being written to be a comment had been hammered flat, to fit within simple (rather than a double) paranthesis. On re-read this is evident, but I also can't be arsed to inflate it back into shape, so leave it then stand as is : nobody in his right fucking mind expects to inconvenience me and live.">iii</a></sup>), whereas actual game improvements should occur as changes to the server, which aren't reported to the userbase. In fact, the design as such calls specifically for an end to client versions altogether, as a thing the player needs to be aware of, hence all the moves on how to handle data.</p>
+<p>In fact, during all these years, a lot of various work went into the server, as reported (though not everything was in fact reported) through the common means of the <a href=http://trilema.com/category/smg/>S.MG</a> monthlies and then quarterlies. This started exploratorily, as you caught up speed with cpp-gramming (if that can be called programming, we'll discuss some other time) and familiarity with the codebase ; and continued conservatorily, because it was my policy to discourage what at the time I recognized but did not understand as <a href=http://logs.ossasepia.com/log/trilema/2019-10-30#1948705>alfisms</a>.</p>
+<p>Starting circa 2017/2018<sup><a href="#footnote_3_91021" id="identifier_3_91021" class="footnote-link footnote-identifier-link" title="Was something like that, Q4 / Q1 sorta thing.">iv</a></sup> I relaxed<sup><a href="#footnote_4_91021" id="identifier_4_91021" class="footnote-link footnote-identifier-link" title="The atmosphere was a lot different back in those days, if you recall there was even talk of touching that other set of granny pistols.">v</a></sup>, and we decided to <em>actually attempt</em> what had for a long while at that point been mostly a dream, a thing in the future, a coming of ye Jerusalem as it were : giving it a major revision, making an Eulora 2.0. </p>
+<p>This is something that was always going to eventually happen, as a matter of necessity ; the question had always been one of when, not one of if. So we gathered all the things, thought it through, and came up with a plan : since we'll be changing the client might as well have a new <a href=http://trilema.com/2018/euloras-communication-protocol-restated>comm protocol</a>, since we know it'll be new might as well make it good, meaning include proper crypto, meaning things in turn. A large, sprawling tree, but it seemed, at least at the time, that whether we're ready or not, it'll be worth trying in any case.</p>
+<p>Of course then S.NSA <a href=http://ossasepia.com/2018/02/06/its-only-words-and-assumptions-and-priorities-and-ouch/>critically failed</a> almost immediately, obviously (now, in retrospect) as the <em>necessary</em> as well as only possible product of <a href=http://trilema.com/2019/being-an-engineer-the-mental-disorder/>moron</a> involvement. But, since it had made self-important and falsely<sup><a href="#footnote_5_91021" id="identifier_5_91021" class="footnote-link footnote-identifier-link" title="Mind ye, that live with a cat who owns the place and pompously call it `pet` while you're the quarry in the arrangement -- mind ye I say that speaking words to `better describe` (in the misguided sense of `better` I suspect you might be well familiar with) never yet fixed things, nor ever will it. The words just come back home to bite, that's all, the magic of `let's call it` never yet delivered anything.">vi</a></sup> reassuring noises at that point <em>for years</em> (only to immediately sink weeks within anyone trying to step on the hallucinatory bedrock), I (mistakenly) opted to <a href=http://logs.ossasepia.com/log/trilema/2020-01-23#1957098>attempt remedial</a>, rather than apply the more appropriate means of dealing with ghouls, vampires, zombies &#038; assorted such varmints of the dark.<sup><a href="#footnote_6_91021" id="identifier_6_91021" class="footnote-link footnote-identifier-link" title="It is perhaps worth `nothing`, in the sense of insistently underscoring and underlining until the virtual paper's run through by the virtual ball point of the virtual pen, that had I taken out the wooden stakes, pitch, tar and fire then, `everybody` 'd have agreed being wrong in the same ways for the same reasons, just, much more strongly so, and likely strongly enough to not be able to see the stupid for being too close to the eyes.">vii</a></sup> Predictably (no, not in retrospect, it was just as prospectively predictable) it didn't take -- but that's a discussion that long exhausted its piddly mommentum elsewhere (and will nevertheless be brought again and again and again because... well.<a href=http://trilema.com/2013/the-story-of-pointless-and-witless/>.</a>.). </p>
+<p>We continued, but things did eventually <a href=http://logs.ossasepia.com/log/trilema/2019-12-30#1956382>come to an impasse</a> :</p>
+<blockquote><p><b>mircea_popescu</b> diana_coman, let's restate this, so currently work on nailing down the comms protocol is stalled on a definitive universal data model, which is stalled on graphical use in the client, that about it ?<br />
+<b>diana_coman</b> mircea_popescu: yes.</p></blockquote>
+<p>That was the closing note of 2019 ; there was some probing of possible approaches, specifically</p>
+<blockquote><p><b>mircea_popescu</b> diana_coman, the way this coming to a head is working out in my head is as follows : you have practically speaking the option to either a) go trawl the entire internet, drag out ~everything~ that's conceivably useful (submit expenses report for stuff that's behind reasonable paywalls i guess) and then we systematize the pile ; or else write a possible-lifeform-generation machine and see what you want it to save.</p></blockquote>
+<p>When things weren't resolving <a href=http://trilema.com/2020/eulora-changes-or-hey-diana_coman/>two weeks later</a>, I decided to cut the kitty : forget Eulora 2.0 for now. </p>
+<p>It's a momentuous thing, obviously. If you set sail for a voyage to some place that's expected to take a year, or maybe more, then however desirable the destination might've been at the onset, the pains and labours of self-movement are daily, unrequitting ; the ideal's distant, sparkling faintly, there still, but... it takes an exquisite sort of soul to manage to maintain that balance. The one thing you don't want to be saying to such people, especially not a year or two in, is anything like, "you know... our maps were wrong, it wasn't one but eighty years away all along" or "you know, our velocimeters were way off, we didn't go most of the way, but most of a percent of the way" or any such thing. Yet... well, what can you do ? <em>Not</em> tell 'em ? There's a footnote above dealing with that. </p>
+<p>It makes sense, though. You go while the going's good, and once it turns sour you either go somehow else, or else you go somewhere else. As things stand I don't happen to think it's either sane or feasible to expect much resolution to be had here, in the strong, abstract sense it was discussed.<sup><a href="#footnote_7_91021" id="identifier_7_91021" class="footnote-link footnote-identifier-link" title="God knows she had to spend months to do something that `had already been done`, by two to three generations of utterly spurious, entirely useless males of the sort they have now, fucktarded drones good for nothing -- I tell you truly just thinking about history makes my skin crawl.
+Moreover, the atmopshere within the republic greatly changed : in losing a great many things we never had we also made some important discoveries -- chiefly, how utterly worthless a shipful of `engineers` is for any purpose besides idle blather. Such discoveries are chilling, but then again cold reinforces, it's... an engineering trade-off, let's call it.
+So... whatever, what seemed perhaps within reach in 2017 became self-evidently intangible by 2019, we'll go about things differently. No skin off my back this once, like it wasn't all the previous onces, I don't specifically care whether the goose honks or sings Grand Opera. It cares, as well it should, seeing how well honking goes with schmaltz (and no, nobody's born with a right to life, nor anything even remotely similar -- though yes, I understand why losers like to fantasize about such things), but otherwise it dun make so much difference.">viii</a></sup></p>
+<p>It was perhaps hasty, but the problem with modern conceptions of hastiness is that they're much akin modern conceptions of "value of human life" : in that they're unbounded they're also perfectly useless. Meanwhile the one thing you can't do is sit your ass down in the middle of the road and check out while you "consider" what there's to do. </p>
+<p>None of this is novel, nor does she have much need for me to point it out to her, this whole thousand-word discussion happened <em>implicitly</em>, upon the minute support of a dozen or two lines in the logs ; but since we're now on the blog might as well make things explicit, and in the process save ourselves the need to carry all the elaborate procedural generators along for the ride. Trading time for space and both for mechanical complexity, what else is life ? </p>
+<p>And now, for our labours, we're finally at a point where we can address the perceived disconnect! Aren't you happy ? Aren't you proud ? Congrats, you've made it far enough. </p>
+<p>What I said <a href=>was</a>, </p>
+<blockquote><p><b>mircea_popescu</b> Pretty great <a href=http://ossasepia.com/2020/01/16/crystalspace-creating-factories-and-meshes-setting-the-client-down/>list of accomplishments</a>, really.<br />
+<b>mircea_popescu</b> diana_coman, reading all this all over again, it makes regret quite palpable.</p></blockquote>
+<p>It means exactly what it says : that I sat down and read a portion of the story of the voyage, and it rather screamed out to me : "Are you <em>sure</em>, MP ? You're always wrong, and so you'll be again, but are you at least <b>sure</b>, before we turn about ?"</p>
+<p>So I went and looked : am I sure ? Is it indeed time to call it a day, shelve the work of the past year or two, and get back to wearing our dirty laundry from before ? Is it a factual, inescapable truth that indeed washing machines don't exist and can't be used and so on, we're ants, tiny little helpless ants inexplicably captive in human bodies for some reason, and doing laundry's just not within our horizon of capability ?<sup><a href="#footnote_8_91021" id="identifier_8_91021" class="footnote-link footnote-identifier-link" title="Have you ever wondered about this, by the way ? Why don't the maggots in the grave lift the corpse up back again, why don't they go to and fro with it as it used to before -- it's all there, right ? All the parts that made the dead miner, riveter, truck driver or whatnot are all there, and miners, riveters, truck drivers are what built everything around the graveyard. So why don't the grave maggots move the corpse around, why don't they fix it, repair whatever the fuck was wrong with it and carry on, why aren't there grave maggot-built subways and space programs ?
+Doesn't it strike you as something that should work ?">ix</a></sup></p>
+<p>The look dredged up <a href=http://logs.ossasepia.com/log/eulora/2020-01-16#1001390>something</a> : we didn't actually explain why we can't just take <em>the data model such as it is</em> and use it in the Eulora 2.0 such as we wanted it. Not saying that we can or we can't, but we never <em>even discussed it</em>. Why not ? </p>
+<p>It wasn't a big deal at first ; it however became a big deal through the process such ever happens : it struck me as somewhat odd that not only the thing I seem to perceive wasn't perceived (which can happen as per the definitions of perception) but that once pointed out it apparently wasn't perceived still! There's something amiss here, what is it ? How come ?</p>
+<p>No, I very well don't mean anything like </p>
+<blockquote><p>Well, for starters I actually thought we were trying to assess - given the focus on pragmatic and the question itself, which inquires as to why not use it, not as to why isn't it good quality - a very practical fitness for purpose that includes therefore both quality and usability as it stands.</p></blockquote>
+<p>The focus on pragmatic is a node further down, it can't constitute the context for this node further up. Here we sit examining whether we did correctly decide to move down to that node, did we actually exhaust the possible avenues of approach, do we in fact have to return.</p>
+<p>So, in the simplest of terms : why <em>can't</em> Eulora 2.0 use all the files Eulora 1.2 currently uses ? The protocol as specced for Eulora 2.0 allows for file transfer, why can't I reference an icon, say, the client doesn't have, <em>but which it dutifully downloads</em>, and when <em>it's started again</em> now... has ? Yes, I'm aware this is exactly how Windows works -- now guess <em>why</em> it is that Windows works that way, how come it came to be, whence and wherefore ? </p>
+<p>Unlike the retards, however, we do indeed have the option to get out of it. In time, and with work, of course, but...</p>
+<blockquote><p>I do see now at least the sort of practical approach you have in mind, basically more of a sidestepping/working around the limitations of the client rather than solving them (unless absolutely having to).</p></blockquote>
+<p>Not even that restrained, but going as far as to simply deem the extant client what it is : the fucking enemy ; and to use it, <em>roughly</em> and with no concern for its own soul. Treat it like paste to be extruded, since it's decided not to be a mechanism, that can be respected. That's, ultimately, the choice of life, isn't it ? Since it has no god, by having no proper tree structure, it therefore is a paste. </p>
+<blockquote><p>Otherwise, specifically to "what's the tension" - it rears up in more concrete detail down the line but perhaps you either don't call it tension or don't assign it to this root: all the formats/models, such as they are, focus on organizing something fixed (a set of whatever, from a set of bones if we talk of cal3d's format for meshes for instance to assets as such if we talk of CS's format for "library", hence all the raster formats and references by filename and enumerations of whatnots) while our focus is on modeling (in its proper sense of extracting the underlying model, not the mess CG made of this poor word; hence vectorial for instance).</p></blockquote>
+<p>I expect this is very true ; but I also want you to take a day or two, and look at it again, and see. Is it indeed true it can't be fucked ?</p>
+<blockquote><p> Sure, we don't "care" about the original focus in the abstract but its concrete results can't be ignored and do clash with what we want. We can sidestep it perhaps as above at the user end but sidestepping it similarly at the format level seems to me to be pretty much along the lines of don't use their format, make your own and then write some converter for the client basically (what I even mention anyway for where there's no direct fit, since I don't see anything else really).</p></blockquote>
+<p>I expect this is very much so -- but I do not deem the work of writing such convertors wasted, because, in fact, they're the alpha versions of what we'll be even <em>doing</em> in the first place. You don't get to have good sex by keeping yourself pure for X future time ; you get to have good sex by having lots and lots AND LOTS of terrible, bad, dubious, kinda ok sex at first. It progresses from there, the only way to have great relationships is to fuck lots and lots and lots of women, the only way to cook good food is to cook lots and lots and lots of food and so following ad nauseam (which I expect is not far off, with all them lots). </p>
+<blockquote><p>There is also otherwise a GIMP plugin for dds still in C, possibly smaller but still an unknown/unexplored.</p></blockquote>
+<p>I actually explored it back in... ugh, 2015 ? It worked fine, but couldn't be arsed then to write a scheme automater for it.</p>
+<blockquote><p>They are made...</p></blockquote>
+<p>I am most satisfied by this answer.</p>
+<blockquote><p>the original PS seems to have had a whole "weather manager" mushroom on the side of which possibly only some tendrils (still a mess) remain.</p></blockquote>
+<p>Ah yes, you know I have a vague recollection as to how this was involved in the stability issues the game had.</p>
+<p>Anyways... get back to me!</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_91021" class="footnote">Yes, I always try to. [<a href="#identifier_0_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_91021" class="footnote">It strikes me that this is the perfect differentiation criteria between comment and article, at least for my needs, for the time being. [<a href="#identifier_1_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_91021" class="footnote">See, this right here is clear an' self-evident footnote material, that at the time this was being written to be a comment had been hammered flat, to fit within simple (rather than a double) paranthesis. On re-read this is evident, but I also can't be arsed to inflate it back into shape, so leave it then stand as is : nobody in his right fucking mind expects to inconvenience me and live. [<a href="#identifier_2_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_91021" class="footnote">Was something like that, Q4 / Q1 sorta thing. [<a href="#identifier_3_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_91021" class="footnote">The atmosphere was a lot different back in those days, if you recall there was even talk of touching that <a href=http://logs.ossasepia.com/log/trilema/2018-11-27#1875280>other</a> set of <a href=http://ossasepia.com/2018/03/30/my-first-2-years-as-cto-for-minigame/?b=the%20feat&#038;e=my%20hope#select>granny</a> pistols. [<a href="#identifier_4_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_91021" class="footnote">Mind ye, that live with <a href=http://trilema.com/2018/an-examination-of-conflict/>a cat who owns the place</a> and pompously call it "pet" while you're <a href=http://trilema.com/2018/messy/>the quarry</a> in the arrangement -- mind ye I say that speaking words to "better describe" (in the misguided sense of "better" I suspect you might be well familiar with) never yet fixed things, nor ever will it. The words just <a href=http://logs.ossasepia.com/log/trilema/2019-10-10#1944441>come back home to bite</a>, that's all, the magic of "<a href=http://trilema.com/2014/how-the-other-half-lives-or-michael-o-church-is-a-scummy-fuckwit/>let's call it</a>" never yet delivered anything. [<a href="#identifier_5_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_91021" class="footnote">It is perhaps worth "nothing", in the sense of insistently underscoring and underlining until the virtual paper's run through by the virtual <span style="background-color:#d3d3d3" id="select">ball point of the virtual pen, that had I taken out the wooden stakes, pitch, tar and fire <em>then</em>, <a href=http://trilema.com/2013/soft-consensus-aka-fecal-matter/>"everybody" 'd have agreed</a> being wrong in the same ways for the same reasons, just, much more strongly</span> so, and likely strongly enough to not be able to see the stupid <a href=http://trilema.com/2015/recursive-dunning-kruger/>for being too close</a> to the eyes. [<a href="#identifier_6_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_91021" class="footnote">God knows she had to spend months to do something that "had already been done", by two to three generations of utterly spurious, entirely useless males of the sort they have now, fucktarded drones good for nothing -- I tell you truly just thinking about history makes my skin crawl.</p>
+<p>Moreover, the atmopshere within the republic greatly changed : in losing <a href=http://trilema.com/2019/i-suppose-we-could-call-this-a-state-of-the-sadness-or-other-things/>a great many things we never had</a> we also made some important discoveries -- chiefly, how utterly worthless a shipful of "<a href=http://trilema.com/2019/the-alleged-crisis-of-the-supposed-engineering-or-mistaken-identities-pantomiming-a-comedy-of-manners/>engineers</a>" is for any purpose besides idle blather. Such discoveries are chilling, but then again cold reinforces, it's... an engineering trade-off, let's call it.</p>
+<p>So... whatever, what seemed perhaps within reach in 2017 became self-evidently intangible by 2019, we'll go about things differently. No skin off my back this once, like it wasn't all the previous onces, I don't specifically care whether the goose honks or sings Grand Opera. It cares, as well it should, seeing how well honking goes with schmaltz (and no, nobody's born with a right to life, nor anything even remotely similar -- though yes, I understand why losers like to fantasize about such things), but otherwise it dun make so much difference. [<a href="#identifier_7_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_91021" class="footnote">Have you ever wondered about this, by the way ? Why don't the maggots in the grave lift the corpse up back again, why don't they go to and fro with it as it used to before -- it's all there, right ? All the parts that made the dead miner, riveter, truck driver or whatnot are all there, and miners, riveters, truck drivers are what built everything around the graveyard. So why don't the grave maggots move the corpse around, why don't they <em>fix it</em>, repair whatever the fuck was wrong with it and carry on, why aren't there grave maggot-built subways and space programs ?</p>
+<p>Doesn't it strike you as something that <em>should</em> work ? [<a href="#identifier_8_91021" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2020/im-developing-pictureitis/">I'm developing pictureitis.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2020/the-woman-who-wasnt-insulted-the-lord-who-accidentally-unearthed-the-political-stone-the-scary-that-was-always-there-and-no-santa-moroze-whatsoever/">The woman who wasn't insulted, the lord who accidentally unearthed the political stone, the scary that was always there and no Santa-Moroze whatsoever.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2020/get-back-to-me/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2020/get-back-to-me/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>5 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-147317" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147317" title="">Friday, 24 January 2020</a>
+							</div>
+						<blockquote><p>
+The focus on pragmatic is a node further down, it can't constitute the context for this node further up. Here we sit examining whether we did correctly decide to move down to that node, did we actually exhaust the possible avenues of approach, do we in fact have to return.
+</p></blockquote>
+<p>I needed this stated in clear as such in order to re-re-orient, that's all. In hindsight, since I had a niggling thought on this (and at the correct time too!), I should have brought it up and clarified it earlier I suppose but on one hand I still see value in what came out of it as it did and on the other hand I'm not even sure I didn't need to finish first this setting down once started, precisely because holding it neither up nor down is worse than anything and precisely in order to be able afterwards to look again at it, from and towards whatever required direction.</p>
+<p>So I'll take the few days - and other props - needed to look at it as stated here and I'll get back to you with what comes out of it, indeed.</p>
+						</li>
+
+										<li id="comment-147319" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147319" title="">Friday, 24 January 2020</a>
+							</div>
+						<p>Not like anything was lost here or anything.</p>
+<p>Looking forward.</p>
+						</li>
+
+										<li id="comment-147625" class="commentbody"><div class="commenthead"><img alt='Big C`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Big C</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147625" title="">Thursday, 27 February 2020</a>
+							</div>
+						<p>We’re are the ladies?</p>
+						</li>
+
+										<li id="comment-147628" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147628" title="">Friday, 28 February 2020</a>
+							</div>
+						<p>Listen <a href=http://trilema.com/2019/the-article-that-started-out-as-a-comment-or-paptcrhur-robinson-dorion-salutem/#comment-132357 >you dork</a>, your own brain context is available (at best!) to you alone (and even then, on short stretches at a time, by the looks of it). </p>
+<p>Stop, drop, roll, think things through and interact with others <em>meaningfully</em> rather than continue relying on the patience of strangers, to be constructed by them along the lines of "oh look, how cute, a sorta-talking donkey, I wonder what it's imaginining itself to be braying..."</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-154259">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/desperation-in-desolation-or-the-woes-of-the-contemporary-entrepreneur-or-what-came-of-my-first-attempt-at-running-the-second-generation-eulora-client-ornery-in-any-case/?b=a%2' class='url'>Desperation in desolation ; Or, the woes of the contemporary entrepreneur ; Or, what came of my first attempt at running the second generation Eulora client. Ornery, in any case. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154259" title="">Saturday, 12 September 2020</a>
+					</div>
+					<p>[...] a solution to the fundamental problem we had encountered earlier (and is perhaps best summarized on January 23) to justify taking a closer look. At that juncture, three months ago, the Eulora server v2.0 had [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="91021" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835147-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-91021")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-91021");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-91021");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>De unde vine valoarea inovatiei ? on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Mediocrity is not a lack of intelligence.<br />Mediocrity is intelligence entirely dedicated to self-preservation.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-35582"><div class="post" id="post-35582">                    <h1><a href="http://trilema.com/2012/de-unde-vine-valoarea-inovatiei/" rel="bookmark" title="Permanent Link to De unde vine valoarea inovatiei ?">De unde vine valoarea inovatiei ?</a></h1>                        <div class="date">                                     Saturday, 24 March, Year 4 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Discutam in #bitcoin-otc pe tema evolutiei probabile a bitcoinilor. </p>
+<p>La ora actuala situatia e cam asa : folosim ceva <a href="http://blockchain.info/stats">intre zece si douazeci megawatti</a> pentru <a href="http://trilema.com/2011/bitcoin-ce-este-un-miner-si-alte-consideratii/">minat</a>, care se desfasoara in general pe placi video. Relativ recent au aparut citeva firme care ofera FPGA<sup><a href="#footnote_0_35582" id="identifier_0_35582" class="footnote-link footnote-identifier-link" title="Field Programmable Grid Array, un fel de ASIC - Application-Specific Integrated Circuit, despre care am discutat de exemplu cu ocazia cipului dedicat pentru MySql. Ala ar fi fost un ASIC. Faptul ca nimeni nu l-a facut desi uite cit de folosit este MySql in timp ce pentru bitcoin deja se fac primii pasi la doi ani de la lansare (MySql a fost lansat in 1995, acum 17 ani deci) ar trebui sa va indice importanta relativa a celor doua activitati.">i</a></sup> la niste preturi competitive.<sup><a href="#footnote_1_35582" id="identifier_1_35582" class="footnote-link footnote-identifier-link" title="Ca sa va faceti o idee, o firma care ofera o cutie de FPGA la 600 de dolari si livreaza la doua - trei luni de la momentul platii a primit sute de comenzi inainte sa livreze o singura bucata, pe vremea cind oamenii inca mai suspectau ca poate-i o pacaleala. Intre timp a livrat citeva zeci si probabil vor mai produce mii.">ii</a></sup> </p>
+<p>Parerea mea este ca la nivelul asta imens la care discutam<sup><a href="#footnote_2_35582" id="identifier_2_35582" class="footnote-link footnote-identifier-link" title="Ca sa va faceti o idee, Romania consuma cam 6GW, minerii de bitcoini cam 15MW, rezulta de-aici ca orasul Zalau consuma mai putina electricitate decit Bitcoin, de exemplu. Zilnic se mineaza ~150 de blocuri, care-s 7`500 de bitcoini, care la ora actuala sunt cotati la ~5 dolari bucata, deci iata : o piata anuala de ~13.5 milioane de dolari, mai mult adica decit piata de online.ro (CAEN 6312 + 6391, sa zicem.). Cu un ordin de marime mai mult.">iii</a></sup> mai devreme sau mai tirziu cineva isi va pune problema "cum investim zece milioane de dolari in bitcoin ?" si va trage concluzia ca decit sa-i introduca-n piata pur si simplu, cumparind, e mai eficient sa pregateasca un tiraj de ASIC-uri facut cumsecade, nu cacaturi de FPGA asamblate manual<sup><a href="#footnote_3_35582" id="identifier_3_35582" class="footnote-link footnote-identifier-link" title="Sunt niste economii de scala fantastice care se pot realiza prin automatizari industriale, doua, trei, cincizeci de ordine de marime fata de ce se poate obtine `manufacturier`.">iv</a></sup>. </p>
+<p>Cu o suta de mii sau un milion de unitati produse la (sa zicem cu mila) o zecime din costul unitatilor actuale si cu consumul la jumatate respectivul va domina mineritul cel putin un an, obtinind astfel insemnate cantitati de bitcoin fara sa isi saboteze singur eforturile (ca daca pur si simplu cumpara pe piata pretul creste si pe urma cumpara o laie). Sigur, pretul tot va creste ca rezultat al scaderii ofertei (ca el mineaza o buna parte din bitcoinii unei zile da' nu-i vinde, cumparatorii raminind sa-si imparta deci restul) da' probabil nu proportional, plus ca el e asigurat, de produs tot va produce indiferent cum evolueaza pretul.</p>
+<p>Chestia asta nu-i ceva idee geniala care mi-a venit mie, apropo, e banalitatea cea mai simpla a executiei corecte. Daca pare o idee extraordinara e probabil din lipsa de experienta in ce priveste managementul, ca ea altfel n-are merite. </p>
+<p>Ei, si venind la subiect : opinia asta a mea a atras niste observatii pe zisul canal, ca adica - si aici citez </p>
+<blockquote><p>(re: injecting capital)  If you buy $10M worth of BTC, then you're possibly giving money to people who are interested in BTC.  Some fraction of those people might use that money to offer BTC-related products &#038; services, so it could help expand the market and actually make all those BTC that you'd hold actually worth something.  If you massively increase the hashing power of the network, all you do is increase your proportion of the overall mining profits, but you're not really adding any value.  The network needs *some* hashing power, but increasing it doesn't really do anything useful, and consolidating the hashing power actually undermines the network.</p></blockquote>
+<p>Adica, zice cetateanul, daca iei alea zece milioane si-i arunci in piata probabil ca dai niste bani unor oameni interesati de bitcoin, care i-ar putea folosi pentru a dezvolta piata de produse si servicii bazate pe bitcoin, ceea ce-ar ajuta la valorizarea bitcoinilor in general. Daca iei alea zece milioane si pur si simplu maresti puterea sistemului tot ce realizezi este o crestere a proportiei tale in puterea totala, ceea ce chipurile "nu are nici o valoare" pentru sistem. Adica, e nevoie de "niste" putere de calcul, dar cresterea ei nu-i utila si consolidarea ei prezinta probleme de securitate.</p>
+<p>Din capul locului la ultima chestie are dreptate, ala cu zece milioane care ajunge sa faca poate mai mult decit jumatate din blocuri pune o problema destul de serioasa pentru securitate, dat fiind ca daca-i rau intentionat poate ataca sistemul in loc sa coopereze cu el (chiar daca e indiscutabil mult mai productiv sa coopereze - oamenii nu-s neaparat agenti rationali<sup><a href="#footnote_4_35582" id="identifier_4_35582" class="footnote-link footnote-identifier-link" title="De-aia n-aveti bani, apropo, in caz ca va intrebati. Banii tind sa ajunga sub controlul agentilor rationali tocmai pentru ca banii sunt putere si puterea irationala nu-i altceva decit un sinonim pentru `catastrofa`.">v</a></sup>)</p>
+<p>Pe de cealalta parte, in rest n-are dreptate : principalul beneficiu pe care bitcoin l-a adus pina acum societatii, nu ca promisiune ci ca fapt, este tocmai capacitatea de minare. E trivial pentru un miner sa transforme operatia unitatilor lui de pe minat bitcoini pe spart parole, si faptul ca niste cetateni privati au la dispozitie (prin GPUMax, de exemplu) o retea de spart parole mai puternica decit oricine in lume (da, decit oricine, NSA nu are 10+ TH/s la dispozitie) e deja un <em>statement</em> al puterii si independentei omului nou, cit si al dezinteresului lui pentru stat si irelevantei statului pentru el. In cel mai propriu sens : nu avem nevoie de institutii cum nici nu inseamna ele nimic pentru noi, astazi. In tot cazul nu mai mult decit <a href="http://trilema.com/2012/tara-ca-un-hotel-sau-o-schimbare-de-perspectiva/">menajera de hotel</a> pentru calatorul mediu.</p>
+<p>Ei, dupa toata introducerea asta de-o mie de cuvinte e poate momentul sa venim si la subiect, adica la titlu. Deci : in pofida acestui context pur si simplu naucitor<sup><a href="#footnote_5_35582" id="identifier_5_35582" class="footnote-link footnote-identifier-link" title="I-as zice breathtaking da' noi neavind, n-avem.">vi</a></sup>, cam ce credeti voi ca fac tipii aia care "ar trebui ajutati" dupa zisa preopinentului, "antreprenorii" astia, early-adopterii astia cu bitcoinii lor cu tot ? </p>
+<p>Hai sa va spun : nimic. Cacaturi inutile de site-uri disfunctionale gen "joaca alba-neagra pe bitcoin". Bre Tilica Ambreiaj, daca io vreau sa joc alba-neagra crezi ca n-am undie, tre' numaidecit sa-mi cumpar bitcoini ca sa bag un <em>thimblerig</em><sup><a href="#footnote_6_35582" id="identifier_6_35582" class="footnote-link footnote-identifier-link" title="Apropo de chestie, alba-neagra nu este nici intr-un caz o inventie a tiganetilor de pe la noi, cum nu-s nici sarmalele locale. Jocul exista probabil de pe vremea grecilor, in engleza a dat titlul categoriei de escrocherii din care face parte, `shell game`. Pentru ca se juca cu scoici. E binecunoscut, cu alte cuvinte, si faptu' ca nu se joaca prin centrul Vienei marturiseste ca austriecii nu-s la fel de cercopiteci ca `turistii romani`, nu ca or fi astia din urma mai creativi si mai dastepti. Parerea mea.">vii</a></sup> mic ? </p>
+<p>Cele mai reusite site-uri care exista sunt implementari (in general <em>proaste</em>) ale unor chestii de bun simt. Cum is de exemplu casele de schimb de pe valute fiat pe bitcoini si inapoi. Sigur, sunt vitale, da' nu puteti acuma spune ca-s cine stie ce inovatie, o avut unu' ideea nemainchipuita de-a face o casa de schimb valutar si suntem toti dati pe spate de rabufnetul socului cultural ca pur si simplu nu ne-am fi gindit, e o inovatie-n starea cea mai pura. Cum este de exemplu piata de obligatiuni (da, aia facuta de mine), care da, e vitala, da' e si de-o banalitate imunda. Hop-top, ce sa va spun, o inventat Popescu optiunile. </p>
+<p>Cu alte cuvinte, antreprenorul de bitcoin are toate simptomele <a href="http://trilema.com/2010/sunteti-besini/">antreprenorului de online.ro</a> (deja umbla sa-si faca si</span> conferinte, alea) : nu face nimic util, nu gindeste nimic nou, umbla si se lauda cu chestii pe care nu le patrunde. Unu la suta munca, zero la suta valoare, nouazeci si noua la suta <em>"<a href="http://www.youtube.com/watch?v=gSjLiQxEZlM" rel="nofollow">getting your name out there</a>"</em>. </p>
+<p>In incheiere, o intrebare : de ce pula mea <a href="http://cosmin.maricari.eu/cum-creezi-bogatie/">e asa de greu sa inovati</a>, ba ? </p>
+<p>Nu e nevoie sa dati un raspuns, e o inovatie retorica.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_35582" class="footnote">Field Programmable Grid Array, un fel de ASIC - Application-Specific Integrated Circuit, despre care am discutat de exemplu cu ocazia <a href="http://trilema.com/2010/curiozitate-calculatoristica/">cipului dedicat pentru MySql</a>. Ala ar fi fost un ASIC. Faptul ca nimeni nu l-a facut desi uite cit de folosit este MySql in timp ce pentru bitcoin deja se fac primii pasi la doi ani de la lansare (MySql a fost lansat in 1995, acum 17 ani deci) ar trebui sa va indice importanta relativa a celor doua activitati. [<a href="#identifier_0_35582" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_35582" class="footnote">Ca sa va faceti o idee, o firma care ofera o cutie de FPGA la 600 de dolari si livreaza la doua - trei luni de la momentul platii a primit <strong>sute</strong> de comenzi inainte sa livreze o singura bucata, pe vremea cind oamenii inca mai suspectau ca poate-i o pacaleala. Intre timp a livrat citeva zeci si probabil vor mai produce mii. [<a href="#identifier_1_35582" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_35582" class="footnote">Ca sa va faceti o idee, Romania consuma cam 6GW, minerii de bitcoini cam 15MW, rezulta de-aici ca orasul Zalau consuma mai putina electricitate decit Bitcoin, de exemplu. Zilnic se mineaza ~150 de blocuri, care-s 7`500 de bitcoini, care la ora actuala sunt cotati la ~5 dolari bucata, deci iata : o piata anuala de ~13.5 milioane de dolari, mai mult adica decit piata de online.ro (CAEN <a href="http://trilema.com/2011/cifre-de-afaceri-din-internet-in-romania-anului-2010/">6312 + 6391</a>, sa zicem.). Cu un ordin de marime mai mult. [<a href="#identifier_2_35582" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_35582" class="footnote">Sunt niste economii de scala fantastice care se pot realiza prin automatizari industriale, doua, trei, cincizeci de ordine de marime fata de ce se poate obtine "manufacturier". [<a href="#identifier_3_35582" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_35582" class="footnote">De-aia n-aveti bani, apropo, in caz ca va intrebati. Banii tind sa ajunga sub controlul agentilor rationali tocmai pentru ca banii sunt putere si puterea irationala nu-i altceva decit un sinonim pentru "catastrofa". [<a href="#identifier_4_35582" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_35582" class="footnote">I-as zice <em>breathtaking</em> da' noi neavind, n-avem. [<a href="#identifier_5_35582" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_35582" class="footnote">Apropo de chestie, alba-neagra nu este nici intr-un caz o inventie a tiganetilor de pe la noi, cum nu-s nici sarmalele locale. Jocul exista probabil de pe vremea grecilor, in engleza a dat titlul categoriei de escrocherii din care face parte, "<em>shell game</em>". Pentru ca se juca cu scoici. E binecunoscut, cu <span style="background-color:#d3d3d3" id="select">alte cuvinte, si faptu' ca nu se joaca prin centrul Vienei marturiseste ca austriecii nu-s la fel de cercopiteci ca "turistii romani", nu ca or fi astia din urma mai creativi si mai dastepti. Parerea mea. [<a href="#identifier_6_35582" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2012/knock-on-any-door/">Knock on Any Door</a></div>
+                <div class="alignright"><a href="http://trilema.com/2012/ce-tigani-si-americanii-astia/">Ce tigani si americanii astia...</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2012/de-unde-vine-valoarea-inovatiei/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2012/de-unde-vine-valoarea-inovatiei/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>44 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-80709" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80709" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Dats rasis!</p>
+<p>Da' bine ma jewcoin, cum de nu minezi tu sau nu ti-ai facut un pool? Ca era mai simplu sa munceasca altii bitcoin si tu profiti din impozite.</p>
+						</li>
+
+										<li id="comment-80711" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80711" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Nu-i profitabil sa faci pool-uri, luke-jr (Eligius) n-o cistigat inca din pool cit o cistigat minind c-un singur BTL de cind l-o primit (dupa propria declaratie). </p>
+<p>Nu minez ca mi-i lene, sta pula sa dadaceasca n-spe sisteme, ce-s io, sysadmin ?</p>
+						</li>
+
+										<li id="comment-80714" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/bricks/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro/bricks' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80714" title="">Saturday, 24 March 2012</a>
+							</div>
+						<blockquote><p>[...] si va trage concluzia ca decit sa-i introduca-n piata pur si simplu, cumparind, e mai eficient sa pregateasca un tiraj de ASIC-uri facut cumsecade, nu cacaturi de FPGA asamblate manual.</p></blockquote>
+<p>Moamă câta heităru (se întoarce 2). FPGA-urile-s super tari atunci când sunt folosite pentru scopurile lor inițiale, care-s dezvoltarea, prototiparea și testarea (mai exact tot înafară de producție). Adică după ce ai testat că-ți merge bine pe FPGA sintetizezi frumos codul Verilog/VHDL în ASIC și scoți pe bandă rulantă.</p>
+<p>De fapt nici nu cred că-i o idee bună să folosești FPGA-ul la calcule care consumă putere, că în general ele nu-s extraordinar de fiabile și după cum ai zis costă și mai mult.</p>
+<p>Cât despre MySQL, eu am mai zis: n-o să strice nimeni flexibilitatea software-ului cu pricina băgându-l direct în hardware. Adică să zicem că MySQL e doar o jucărie, da' atunci de ce nu îi iau Oracle pe foștii angajați Sun să-i pună să facă hardware dedicat pentru bazele lor de date? Bănuiala mea e că nu se rentează, pur și simplu merge și așa și mai bine investesc în altceva; în patente de exemplu, și în procese în instanță.</p>
+						</li>
+
+										<li id="comment-80717" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80717" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Da mai frate, eu sunt de acord, sunt foarte bune pentru cercetare. Da' odata ce ai terminat cercetarea ce faci ? Productie de massa pe FPGA ? </p>
+<p>Faptul este ca la ora actuala disperarea de-a produce hashing e asa de mare ca se foloseste in practica un mix de GPU si FPGA, dintre care FPGA-urile sunt <em>cele mai eficiente</em>!!! Iti dai seama ca situatia asta nu-i tehnologic stabila. Si nu vorbim de-o situatia minuscula, e vorba de o cadere de tensiune imensa.</p>
+<p>Mentionez ca legatura la mysql am facut-o numa' pentru context, nu neaparat ca sa insist ca vai, se va face asic mysql. Adevaru-i ca tipul de operatii necesare pentru minat sunt MULT mai simple decit ce-ar face un server de mysql, cu sa zicem trei ordine de marime mai putin complexe.</p>
+						</li>
+
+										<li id="comment-80718" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80718" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Da bine ma, ala care se lauda ca-i curentul ieftin in romania.</p>
+						</li>
+
+										<li id="comment-80720" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80720" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Pai este curentul ieftin in Romania. Noi platim ~3 centi, americanii cam 10-20, europenii 20+.</p>
+						</li>
+
+										<li id="comment-80722" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80722" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Pai si atunci de ce nu minezi ca tocmai ala era avantajul?! Tu-i trolezi pe aia pe otc sau cum ii zice la canal degeaba.</p>
+						</li>
+
+										<li id="comment-80723" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80723" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Reciteste comentariul #2.</p>
+<p><a href=http://en.wikipedia.org/wiki/Over-the-counter_(finance) >OTC</a> e canal de finante nu de minat, este #bitcoin-mining pentru aia.</p>
+						</li>
+
+										<li id="comment-80725" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80725" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Ai zis ca nu-i profitabil pool, ci minat direct. Deci tot n-ai raspuns de ce nu minezi.</p>
+						</li>
+
+										<li id="comment-80726" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80726" title="">Saturday, 24 March 2012</a>
+							</div>
+						<h1>Nu minez ca mi-i lene, sta pula sa dadaceasca n-spe sisteme, ce-s io, sysadmin ?</h1>
+						</li>
+
+										<li id="comment-80734" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80734" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Hai sa fim seriosi, problema e ca n-ai tu bani de xspe sisteme.</p>
+						</li>
+
+										<li id="comment-80735" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80735" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p><a href=http://blockchain.info/address/1JPvucRfu3ZzEvfBUQTJwsxMrZjeTqD6zR >20-30 de mii de dolari</a> au alta parere.</p>
+						</li>
+
+										<li id="comment-80738" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80738" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Nu inteleg ce-i cu link.</p>
+						</li>
+
+										<li id="comment-80740" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80740" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Pai bun, da' zi-mi ceva nou.</p>
+						</li>
+
+										<li id="comment-80741" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80741" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Lolz deci stai, aia-i adresa ta? 5000 bitcoin pe taxe transfer si market vrajeli?</p>
+<p>Pfoai de mine Mircea Popescu acest bogat nemaintalnit.</p>
+						</li>
+
+										<li id="comment-80742" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80742" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Mda. Da' ce taxe transfer ?</p>
+						</li>
+
+										<li id="comment-80745" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80745" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Ma rog, adaos comercial sau cum vrei sa-i zic, ca doar nu schimbi la un curs fix ci ca amanetul sau banca gen, cu o parte castig?</p>
+						</li>
+
+										<li id="comment-80746" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80746" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Despre ce vorbesti ca nu reusesc sa ma prind ?</p>
+						</li>
+
+										<li id="comment-80762" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80762" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Pai vrea unu' 50 bitcoini de la tine si pe mtgox e 1 dolar bitcoinul gen, deci ar trebui sa coste 50 dolari. Tu dai la 60 gen, nu?!</p>
+						</li>
+
+										<li id="comment-80764" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80764" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Mnop.</p>
+						</li>
+
+										<li id="comment-80766" class="commentbody"><div class="commenthead"><img alt='F`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink">F<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80766" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Cica e un prof universitar de la Poli in Bucale care a facut nush ce cip super ieftin (design propriu) care e numai bun de produs in masa si folosit la minat... am auzit io din surse sigure, de la cineva care cred ca i-a si propus intre timp un bitcon business (sper cel putin s-o fi facut, ma citesti Radule?)</p>
+						</li>
+
+										<li id="comment-80768" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80768" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>El e Mystery Miner ? :D</p>
+						</li>
+
+										<li id="comment-80780" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/bricks/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro/bricks' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-80780" title="">Saturday, 24 March 2012</a>
+							</div>
+						<p>Da' și eu sunt foarte curios despre cine e vorba.</p>
+						</li>
+
+										<li id="comment-81845" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81845" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Noa deci :</p>
+<blockquote><p>[ANN] A public company will build a huge Bitcoin Mining Operation (ASIC).<br />
+April 04, 2012, 09:49:29 AM	 #1 </p>
+<p>I am forming a new company that will engage into large scale Bitcoin mining. We have concluded a deal with subcontractors to produce for us a significant amount of ASIC based mining hardware (up to 2-3 orders of magnitude more power efficient and dense comparing to GPU based Bitcoin Miners). Our target is to build multi Thps (X 000 000 Mhps) bitcoin mining operation and therefore we will have significant bargaining power and will be able to get preferential treatment and pricing from our suppliers. To ensure optimal security we will most likely be housing the mining hardware in one of the most secure datacentres in Europe and eventually even certify all our operations to ISO 27001 standard.</p></blockquote>
+<p><a href="https://bitcointalk.org/index.php?topic=75298.0">https://bitcointalk.org/index.php?topic=75298.0</a></p>
+<p>Doua saptamini. Trilema influencin' :D</p>
+						</li>
+
+										<li id="comment-81853" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81853" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Influencere care esti influencer.</p>
+						</li>
+
+										<li id="comment-81856" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">26</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81856" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Si ca tot suntem la momentul precizari, apropo de nota ii de la articol : "o firma" aia e Butterfly Labs, iote aici distractie : <a href="https://bitcointalk.org/index.php?topic=67887.0">https://bitcointalk.org/index.php?topic=67887.0</a></p>
+<table>
+<tr>
+<th>Date Ordered</th>
+<th>Confirmed</th>
+<th>Quantity</th>
+<th>Shipped</th>
+<th>User
+</th>
+</tr>
+<tr>
+<td>11/4/2011</td>
+<td></td>
+<td>1</td>
+<td>3/5/2012</td>
+<td>rjk
+</td>
+</tr>
+<tr>
+<td>11/16/2011</td>
+<td></td>
+<td>10</td>
+<td>3/5/2012</td>
+<td>jddebug
+</td>
+</tr>
+<tr>
+<td>12/16/2011</td>
+<td></td>
+<td>1</td>
+<td>3/9/2012</td>
+<td>k.a.t
+</td>
+</tr>
+<tr>
+<td>12/26/2011</td>
+<td>12/26/2011</td>
+<td></td>
+<td>3/16/2012</td>
+<td>xDGDZEx
+</td>
+</tr>
+<tr>
+<td>1/4/2012</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>sysrun
+</td>
+</tr>
+<tr>
+<td>1/6/2012</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>p_shep
+</td>
+</tr>
+<tr>
+<td>1/10/2012</td>
+<td></td>
+<td></td>
+<td></td>
+<td>enquirer
+</td>
+</tr>
+<tr>
+<td>1/13/2012</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>btc-engineer
+</td>
+</tr>
+<tr>
+<td>1/14/2012</td>
+<td>1/15/2012</td>
+<td>4</td>
+<td></td>
+<td>fefox
+</td>
+</tr>
+<tr>
+<td>1/30/2012</td>
+<td>1/31/2012</td>
+<td>4</td>
+<td></td>
+<td>fefox
+</td>
+</tr>
+<tr>
+<td>2/1/2012</td>
+<td>2/2/2012</td>
+<td>1</td>
+<td></td>
+<td>JDBound
+</td>
+</tr>
+<tr>
+<td>2/14/2012</td>
+<td>2/18/2012</td>
+<td></td>
+<td></td>
+<td>nbtcminer
+</td>
+</tr>
+<tr>
+<td>2/14/2012</td>
+<td>2/18/2012</td>
+<td>3</td>
+<td></td>
+<td>tarrant_01
+</td>
+</tr>
+<tr>
+<td>2/14/2012</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>heavyb
+</td>
+</tr>
+<tr>
+<td>2/17/2012</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>p_shep
+</td>
+</tr>
+<tr>
+<td>2/20/2012</td>
+<td>2/20/2012</td>
+<td>3</td>
+<td></td>
+<td>phraust
+</td>
+</tr>
+<tr>
+<td>2/22/2012</td>
+<td>3/5/2012</td>
+<td></td>
+<td></td>
+<td>abbeytim
+</td>
+</tr>
+<tr>
+<td>2/22/2012</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>ognasty
+</td>
+</tr>
+<tr>
+<td>2/23/2012</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>coblee
+</td>
+</tr>
+<tr>
+<td>2/23/2012</td>
+<td></td>
+<td>3</td>
+<td></td>
+<td>sysrun
+</td>
+</tr>
+<tr>
+<td>2/24/2012</td>
+<td></td>
+<td>10</td>
+<td></td>
+<td>sgtspike
+</td>
+</tr>
+<tr>
+<td>2/24/2012</td>
+<td>3/7/2012</td>
+<td>1</td>
+<td></td>
+<td>silverbox
+</td>
+</tr>
+<tr>
+<td>2/24/2012</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>theotherguy
+</td>
+</tr>
+<tr>
+<td>2/29/2012</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>wogaut
+</td>
+</tr>
+<tr>
+<td>2/29/2012</td>
+<td>3/8/2012</td>
+<td>1</td>
+<td></td>
+<td>askit2
+</td>
+</tr>
+<tr>
+<td>3/2/2012</td>
+<td>3/12/2012</td>
+<td>7</td>
+<td></td>
+<td>phraust
+</td>
+</tr>
+<tr>
+<td>3/2/2012</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>kjilmo
+</td>
+</tr>
+<tr>
+<td>3/2/2012</td>
+<td>3/12/2012</td>
+<td>1</td>
+<td></td>
+<td>tamerz
+</td>
+</tr>
+<tr>
+<td>3/7/2012</td>
+<td>3/16/2012</td>
+<td>1</td>
+<td></td>
+<td>kibblesnbits
+</td>
+</tr>
+<tr>
+<td>3/7/2012</td>
+<td></td>
+<td>4</td>
+<td></td>
+<td>nedbert9
+</td>
+</tr>
+<tr>
+<td>3/7/2012</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>paul troon
+</td>
+</tr>
+<tr>
+<td>3/8/2012</td>
+<td></td>
+<td>50</td>
+<td></td>
+<td>blackprapor
+</td>
+</tr>
+<tr>
+<td>3/8/2012</td>
+<td>3/10/2012</td>
+<td>1</td>
+<td></td>
+<td>fuuka
+</td>
+</tr>
+<tr>
+<td>3/9/2012</td>
+<td>3/21/2012</td>
+<td>2</td>
+<td></td>
+<td>dave3
+</td>
+</tr>
+<tr>
+<td>3/9/2012</td>
+<td></td>
+<td>3</td>
+<td></td>
+<td>cablepair
+</td>
+</tr>
+<tr>
+<td>3/9/2012</td>
+<td>3/16/2012</td>
+<td>4</td>
+<td></td>
+<td>kibblesnbits
+</td>
+</tr>
+<tr>
+<td>3/10/2012</td>
+<td></td>
+<td>4</td>
+<td></td>
+<td>jddebug
+</td>
+</tr>
+<tr>
+<td>3/12/2012</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>heavyb
+</td>
+</tr>
+<tr>
+<td>3/13/2012</td>
+<td>3/19/2012</td>
+<td>1</td>
+<td></td>
+<td>despoiler
+</td>
+</tr>
+<tr>
+<td>3/13/2012</td>
+<td></td>
+<td>10</td>
+<td></td>
+<td>scared
+</td>
+</tr>
+<tr>
+<td>3/14/2012</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>turbor
+</td>
+</tr>
+<tr>
+<td>3/14/2012</td>
+<td>3/16/2012</td>
+<td>2</td>
+<td></td>
+<td>dropt
+</td>
+</tr>
+<tr>
+<td>3/15/2012</td>
+<td>3/17/2012</td>
+<td>1</td>
+<td></td>
+<td>nothing
+</td>
+</tr>
+<tr>
+<td>3/16/2012</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>unacceptable
+</td>
+</tr>
+<tr>
+<td>3/16/2012</td>
+<td>3/16/2012</td>
+<td></td>
+<td></td>
+<td>p_shep
+</td>
+</tr>
+<tr>
+<td>3/17/2012</td>
+<td>3/22/2012</td>
+<td>1</td>
+<td></td>
+<td>abeaulieu
+</td>
+</tr>
+<tr>
+<td>3/22/2012</td>
+<td>3/23/2012</td>
+<td>1</td>
+<td></td>
+<td>guruvan
+</td>
+</tr>
+<tr>
+<td>3/26/2012</td>
+<td></td>
+<td>10</td>
+<td></td>
+<td>camolist
+</td>
+</tr>
+<tr>
+<td>3/27/2012</td>
+<td></td>
+<td>10</td>
+<td></td>
+<td>mrb
+</td>
+</tr>
+<tr>
+<td>3/30/2012</td>
+<td></td>
+<td></td>
+<td></td>
+<td>jwu42
+</td>
+</tr>
+<tr>
+<td>4/3/2012</td>
+<td>4/3/2012</td>
+<td>1</td>
+<td></td>
+<td>colinrgodsey</td>
+</tr>
+</table>
+<p>178 * 650 = 115k dolari incasati deja.</p>
+						</li>
+
+										<li id="comment-81857" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">27</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81857" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Apropo Popescule: bitcoin e socialist. Practic da, toti putem avea bani si sa devenim bogati, nu se necesita munca fizica, doar un pc astea.</p>
+<p>Cum stam cu ideologia liberalista? :D</p>
+						</li>
+
+										<li id="comment-81858" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">28</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81858" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Deci cum ?</p>
+						</li>
+
+										<li id="comment-81859" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">29</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81859" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>BITCOIN E SOCILIST, TOATA LUMEA ARE ACCES LA EL, TOTI POT MINA, TOTI POT FACE BANI GRATIS</p>
+						</li>
+
+										<li id="comment-81860" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">30</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81860" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Minus ca "toata lumea are acces" = liberal si nu socialist. Daca era socialist nu avea nimeni acces. Minus ca "gratis" n-are treaba cu realitatea, e contributia creierilor tai cei infierbintati.</p>
+						</li>
+
+										<li id="comment-81864" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">31</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81864" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Are toata lumea acces, descarci un miner oricand, creezi un portofel oricand, te bagi la orice fel de mina bitcoin gratis; iar pe tor, care iar e gratis, ai pe .onion toate jegurile, silk road si alte vise de doi lei.</p>
+<blockquote><p>MÚNCĂ, munci, s.f. 1. Activitate conștientă (specifică omului) îndreptată spre un anumit scop, în procesul căreia omul efectuează, reglementează și controlează prin acțiunea sa schimbul de materii dintre el și natură pentru satisfacerea trebuințelor sale. ♦ (La pl.) Lucru la câmp, lucrul câmpului; lucrări agricole. 2. (Concr.) Folos material, bun agonisit prin lucru; agoniseală, câștig, profit. 3. Efort de a realiza ceva; strădanie; ocupație, îndeletnicire. 4. (Înv. și pop.; la pl.) Torturi, cazne. ♦ Durere, suferință (fizică sau morală); chin. ♦ Spec. (Sens curent; la pl.) Durerile nașterii. – Din sl. monka. </p></blockquote>
+<p>Deci din bitcoin nu reprezinta vreo munca, deci nu-i munca. Nu-i muncit, e gratis.</p>
+<p>Cum bitcoin inseamna bani pentru toti, oricand, oriunde virtual si cam proportional cu</p>
+<blockquote><p>According to utilitarians, such as Jeremy Bentham (1748–1832) and John Stuart Mill (1806–1873), society should aim to maximize the total utility of individuals, aiming for "the greatest happiness for the greatest number of people".</p></blockquote>
+<p>Deci este socialist. Ca toti avem bani. Suntem anonimi, sa nu ne asupre bancile si statul, hai sa bani contra cpu + curent.</p>
+						</li>
+
+										<li id="comment-81869" class="commentbody"><div class="commenthead"><img alt='Alex`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">32</div>
+								<span class="authorlink">Alex<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81869" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Nu vinzi putere de procesare?</p>
+						</li>
+
+										<li id="comment-81885" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">33</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81885" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>@<b>Freud</b> Mei, uite : </p>
+<blockquote><p>Are toata lumea acces <font color=green>✔</font>, descarci un miner oricand <font color=green>✔</font>, creezi un portofel oricand <font color=green>✔</font>, te bagi la orice fel de mina bitcoin gratis <font color=red>x</font>; iar pe tor, care iar e gratis <font color=green>✔</font>, ai pe .onion toate jegurile <font color=green>✔</font>, silk road si alte vise de doi lei <font color=green>✔</font>.</p></blockquote>
+<p>Noa, problema aici e ca minatul costa bani, si ca investitie originala, ca tre' procesoare anumite, si ca inteligenta, ca tre' puse alea la rind si intretinute, nu-i la fel de simplu ca a cumpara piese de desktop si-a asambla un desktop (care simplitate-i aparent un pod prea indepartat pentru un foarte solid 90% dintre respiracii din lumea civilizata) si ca operatie, ca maninca curent electric. </p>
+<p>Deci teoria ta nu functioneaza de la punctu' asta incolo, restu' de deductii-s false.</p>
+<p>@<b>Alex</b> Da un mail.</p>
+						</li>
+
+										<li id="comment-81889" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">34</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81889" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Pe bani lu mami si tati curentul e gratis si procesoare si alea.</p>
+<p>Da' merge minat cu orice, problema e puterea. Nu-i mare branza sa faci un pc. Se tot vinde mitul asta ca numa' geekeii aia nasparlii se fut ei in piese si noi astia desteptii il luam gata facut cu windows, lol.</p>
+						</li>
+
+										<li id="comment-81891" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">35</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81891" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Ma, tu iara vorbesti timpenii.</p>
+<p>Meri si mineaza, fa niste bitcoini de-aia gratis si pe urma hai cu ei ca io ti-i cumpar. Faci cite o mie-doua de bitcoini de-aia gratis pe zi, iei de la mine minim zece mii de lei in fiecare zi, cine mai e ca tine ? Iti alegi ce pizda vrei in fiecare seara prin prafuiala aia de Bukresh, cine crezi ca se mai uita ca esti gras si nustiucum ?</p>
+<p>Baga.</p>
+						</li>
+
+										<li id="comment-81893" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">36</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81893" title="">Tuesday, 10 April 2012</a>
+							</div>
+						<p>Rasistule.</p>
+						</li>
+
+										<li id="comment-81907" class="commentbody"><div class="commenthead"><img alt='Alex`s avatar' src='http://daimon.me/blog/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">37</div>
+								<span class="authorlink"><a href='http://daimon.me/blog/' class='url'>Alex</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81907" title="">Wednesday, 11 April 2012</a>
+							</div>
+						<p>Intrebarea mea era pt. Freud, in re: 32.</p>
+						</li>
+
+										<li id="comment-81909" class="commentbody"><div class="commenthead"><img alt='Freud`s avatar' src='http://vexare.tk/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">38</div>
+								<span class="authorlink"><a href='http://vexare.tk' class='url'>Freud</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-trol.png" class="insigna" alt="insigna de trol" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-81909" title="">Wednesday, 11 April 2012</a>
+							</div>
+						<p>Detaliaza.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-80727">
+					<div class='trackhead'>
+						<div class="commentcount">39</div>
+						<span class="authorlink"><a href='http://polimedia.us/fain/story/43181' class='url'>polimedia.us/fain</a></span>&nbsp;(via Trackback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-80727" title="">Saturday, 24 March 2012</a>
+					</div>
+					<p><strong>De unde vine valoarea inovatiei - pe Trilema - Un blog de Mircea Popescu-...</strong></p>
+<p>Pentru eventualii antreprenori....</p>
+				</li>
+
+				<li class="trackbody" id="comment-137681">
+					<div class='trackhead'>
+						<div class="commentcount">40</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/cum-vad-eu-viitorul-internetului-in-baza-trecutului-de-pina-acum?b=parolele.%20De&amp;e=eta%2C#select' class='url'>Cum vad eu viitorul Internetului in baza trecutului de pina acum on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-137681" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] parolele. Deci iti dai seama, niste oi haladite&#38;cordite conform #3 dinsus se apuca ele de pseudo-inovatie 2.0 unde niste alte oi vin si-si baga parolele, numaru' de la pantof si poze cu muierea despuieta, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-137860">
+					<div class='trackhead'>
+						<div class="commentcount">41</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/o-chestie-care-m-a-fascinat-in-dimineata-asta?b=uite%20ca%20nici&amp;e=este#select' class='url'>O chestie care m-a fascinat in dimineata asta on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-137860" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] uite ca nici pentru asta nu exista cuvint in limba romana, chit ca alta ocupatie decit barbutu', three card Monte si alte retardeli de-astea nu prea pare sa intereseze cetateanul mediu. Trist. Deci, bet este [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-137934">
+					<div class='trackhead'>
+						<div class="commentcount">42</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/comparatii-facile-sau-despre-o-naivitate-amuzanta?b=Chestia%20aia%20&amp;e=%20da.#select' class='url'>Comparatii facile, sau despre o naivitate amuzanta on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-137934" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Chestia aia are github-uri cu scripturi in python si compilatii pentru Mac, Linux &#38; Windows din prima saptamina, dragilor. Chestia asta are mai multe echipe care lucreaza sa-i faca brokeri, chestia asta are etf-uri si marketmaking si brokerage si tot soiu' de servicii care nici macar nu au echivalent in limba romana, de destepti si priceputi ce is romanii. Toate astea facute de oameni care nu-s prosti, chit ca romanii prosti au impresia ca ba da. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-138259">
+					<div class='trackhead'>
+						<div class="commentcount">43</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/hai-sa-vi-l-disec-p-un-pustan-de-prin-zona-ca-tocmai-m-am-prins?b=Daca%20sunteti&amp;e=gra.#select' class='url'>Hai sa vi-l disec p-un pustan de prin zona ca tocmai m-am prins on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-138259" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Daca sunteti un pulete modul in care va invat ca aceasta cutie contine chibrite este ca va intreb, noa bai pulete, ce ai nevoie ca sa te lamuresti ca-n cutie sunt chibrite ? La care puletele in general nu stie raspunde ca "deschide-o sa vedem". Sau chiar daca in prima faza stie raspunde atita lucru nu se stie tine, iar eu incet-incet si din aproape in aproape il duc de nas. Aia inseamna persuasiv in discutia asta, ce fac bazii si gizii televiziunii face orice tiganus cu sloboz uscat dupa urechi la standu' lui de alba-neagra. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-138897">
+					<div class='trackhead'>
+						<div class="commentcount">44</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/deci-piata-financiara-bine?b=si%20ps%2C%20ca%20im&amp;e=olul#select' class='url'>Deci piata financiara, bine ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-138897" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] si ps, ca imi uitasem : sunt si putin profet. &mdash;&mdash;&mdash;Adica procesoare speciale. Genu' de scula de care se discuta in articolul [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="35582" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834468-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-35582")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-35582");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-35582");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

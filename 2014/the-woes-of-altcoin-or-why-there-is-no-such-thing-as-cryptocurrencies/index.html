@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The woes of Altcoin, or why there is no such thing as "cryptocurrencies" on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Moving targets for a fast crowd.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-56073"><div class="post" id="post-56073">                    <h1><a href="http://trilema.com/2014/the-woes-of-altcoin-or-why-there-is-no-such-thing-as-cryptocurrencies/" rel="bookmark" title="Permanent Link to The woes of Altcoin, or why there is no such thing as &quot;cryptocurrencies&quot;">The woes of Altcoin, or why there is no such thing as "cryptocurrencies"</a></h1>                        <div class="date">                                     Saturday, 16 August, Year 6 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Altcoin is a straight-up competitor for Bitcoin. I won't bore you with the historical details and piles of insider jokes attendant, let it suffice to say that it's a direct awkisation of the Bitcoin codebase (0.6.something iirc) and nothing else.</p>
+<p>Altcoin also has a problem recently, like so : </p>
+<blockquote><p><strong>mircea_popescu</strong> %d<br />
+<strong>atcbot</strong> [ATC Diff] Current Diff: 1878190.93 Est. Next Diff: 129090.06 in 1979 blocks (#46368) Est. % Change: -93.13</p></blockquote>
+<p>Let's understand what's going on gazing upon this graph : </p>
+<p><a href="http://trilema.com/wp-content/uploads/2014/08/atc-mining.png"><img src="http://trilema.com/wp-content/uploads/2014/08/atc-mining.png" alt="atc-mining" title="atc-mining" width="570" height="420" class="aligncenter size-full wp-image-56074" /></a></p>
+<p>Nice, huh ? Now let's try and make sense of it. On the X axis, blocks. On the Y axis, difficulty. The first, purple section represents a normal mining interval : for two weeks miners mined. The second, red interval represents an attack. Someone controlling 100x as much hashpower as the previous group of miners sets to mining. For a vanishingly small interval of about three hours, that someone will receive 99% of the block rewards, corresponding to a total of about 2k blocks. Then difficulty recalibrates, going up 100x. Which takes us to the gray questionmarked third zone. What happens there ? </p>
+<p>Suppose the market value of the coin in question is just about at the level implied by the purple zone. The attacker loses nothing by dumping 100x as much hashpower on this chain for a few hours : the coins he gets are minted at the previous difficulty. Whether he had mined slowly or quickly, he gets the same reward, which is why purple and red surfaces occupy the same area : to get x blocks at y difficulty you need z total hashes, no matter in what hash/second debit. After the attacker leaves, however, the good folk of the purple persuasion find themselves into quite the quandry : either support the coin by mining for 2k blocks at 100x the hashpower supported by the fundamentals, or else quit altogether. As before, it doesn't matter at what speed this occurs : they can continue at their purple rate for 140 weeks, or just a little under 3 years, to get to that magical difficulty recalibration block and see difficulty drop 99%. Or else they could maintain the attackers' rate for two weeks just as well, because again, not debit is in question but total hash. Which total hash has a cost, which is fixed.<sup><a href="#footnote_0_56073" id="identifier_0_56073" class="footnote-link footnote-identifier-link" title="If you're curious, currently something in the 2 to 3 satoshi per MH per day range, which means the dollar cost of one hash currently stands at about 0.00000002 × 600 ÷1000000 ÷ 24 ÷ 3600 = 1.38 to 2.08 × 10-16 dollars.
+For comparison : gold costs ~1.3k dollars per ounce. Meanwhile gold also weighs 196.96655 kgs per kmol. Seeing how a troy ounce is 0.031103 kgs, and there's a total of 6.02214129 × 1026 gold atoms in each kmol (as is the case for all substances), it then comes to pass that each ounce contains  ~9.5 × 10 22 gold atoms, making each gold atom worth about 1.36 × 10-20 dollars. So roughly speaking, each hash is worth something like 10k atoms of gold, a subatomic fortune.">i</a></sup></p>
+<p>There is no practical defense from this attack<sup><a href="#footnote_1_56073" id="identifier_1_56073" class="footnote-link footnote-identifier-link" title="Bitcoin itself has a 400% baked in maximum increase each period, but what practical difference does it make ? Force the attacker to keep hashing for an extra 8 or so hours ? Big whoop, what's eight hours buy you ?
+Suppose you recalibrate difficulty each block instead. Big whoop, so attacker drives your difficulty up 100x and now you only have to mine six days for negative returns instead of two years. So what ? You're still underwater, and once you recover he can still do it again.
+This is also the reason each and every altcoin messes with the Proof of Work algorithm, but what's that supposed to do ? Inasmuch as your coin can be mined, your attacker can by definition mine it too, and there you go.">ii</a></sup> : it will always be possible for an attacker with vastly<sup><a href="#footnote_2_56073" id="identifier_2_56073" class="footnote-link footnote-identifier-link" title="That vastly is one of the main reasons Bitcoin needs, needs so much hash. Until the day Bitcoin mining uses up 50%+1 of all electricity generated on planet Earth, this theoretical avenue remains open, if very theoretical.
+Verily it is the consumer of worlds, this thing.">iii</a></sup> superior hashing power to swoop in, drive difficulty into the heavens, and leave. At worst, the coins he's thus mined become worthless - but they are no more worthless than all the other coins everyone else holds. At best, he gets to do it again in two years or whatever. He suffers no real cost for this attack<sup><a href="#footnote_3_56073" id="identifier_3_56073" class="footnote-link footnote-identifier-link" title="Theoretically speaking if mining cost is actually above market value then he spends that sliver, which may well explain why Bitcoin has historically seen this situation a majority of the time - the invisible hand at work. Nevertheless, that sliver's not significant.">iv</a></sup> and there exists no practical deterrent. Bitcoin itself had in the past been vulnerable to something very similar, but fortunately that window <a href="http://trilema.com/2013/things-that-matter-these-days-things-that-dont-matter-these-days/">is now closed</a>.</p>
+<p>I explained a while ago the financial mechanisms that automagically heal hardforks<sup><a href="#footnote_4_56073" id="identifier_4_56073" class="footnote-link footnote-identifier-link" title="Suppose tomorrow Bitcoin splits into two independent chains, BTC-A and BTC-B. This necessarily means that any current holder of Bitcoin has his holdings doubled : if he owned 1k Bitcoin before, he now owns 1k BTC-A and separately 1k BTC-B. These will also each have a market price, different from one another. It is not possible that both those market prices exactly match the holder's estimation of value, which means that one coin will be in his eyes overpriced while the other underpriced. This means he will sell one and buy the other. These effects quickly aggregate, and within days, probably within hours one of the coins is discounted to the point mining it is no longer an affordable proposition, which makes mining cease and that's it, problem solved.">v</a></sup>, but the same effect discussed above equally well applies in the case of Bitcoin competing with itself : should it shard, the main shard will mutilate the smaller ones, starting with the biggest one. Because that's how systems work in nature.</p>
+<p>So for the benefit of all the derps derping about "cryptocurrencies" : there is no such thing. There's Bitcoin and that's it, because there can only be one. All the rest of the crap exists only inasmuch as a) it stays theoretical or b) it stays small enough nobody cares. Where a) and b) are only distinct in the derp point of view, otherwise they're the same thing. But good luck with all the <a href="http://trilema.com/2014/why-dogecoin-is-a-scam-why-the-people-pushing-it-are-assholes-why-business-insider-is-a-contemptible-piece-of-shit-why-anyone-who-ever-worked-for-it-will-be-dancing-in-the-street-for-nickels-and-wh/">community[-of-retards] driven</a>, super-duper-innovative, ultra-mega-creative, asic-resistant, future-of-revolution-and-everything altcoins. </p>
+<p>Meanwhile back at Reality Ranch, there can only be one.<sup><a href="#footnote_5_56073" id="identifier_5_56073" class="footnote-link footnote-identifier-link" title="Which is, incidentally, why all the effort lately. You're not the only ones to have realised this, the super-duper-ultra-mega lemmings in the government basement finally modeled this innovative revolutionary observation a few weeks ago.">vi</a></sup></p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_56073" class="footnote">If you're curious, currently something in the 2 to 3 satoshi per MH per day range, which means the dollar cost of one hash currently stands at about 0.00000002 × 600 ÷1000000 ÷ 24 ÷ 3600 = 1.38 to 2.08 × 10<sup>-16</sup> dollars.</p>
+<p>For comparison : gold costs ~1.3k dollars per ounce. Meanwhile gold also weighs 196.96655 kgs per kmol. Seeing how a troy ounce is 0.031103 kgs, and there's a total of 6.02214129 × 10<sup>26</sup> gold atoms in each kmol (as is the case for all substances), it then comes to pass that each ounce contains  ~9.5 × 10 <sup>22</sup> gold atoms, making each gold atom worth about 1.36 × 10<sup>-20</sup> dollars. So roughly speaking, each hash is worth something like 10k atoms of gold, a subatomic fortune. [<a href="#identifier_0_56073" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_56073" class="footnote">Bitcoin itself has a 400% baked in maximum increase each period, but what practical difference does it make ? Force the attacker to keep hashing for an extra 8 or so hours ? Big whoop, what's eight hours buy you ?</p>
+<p>Suppose you recalibrate difficulty each block instead. Big whoop, so attacker drives your difficulty up 100x and now you only have to mine six days for negative returns instead of two years. So what ? You're still underwater, and once you recover he can still do it again.</p>
+<p>This is also the reason each and every altcoin messes with the Proof of Work algorithm, but what's that supposed to do ? Inasmuch as your coin can be mined, your attacker can by definition mine it too, and there you go. [<a href="#identifier_1_56073" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_56073" class="footnote">That vastly is one of the main reasons Bitcoin needs, <strong>needs</strong> so much hash. Until the day Bitcoin mining uses up 50%+1 of all electricity generated on planet Earth, this theoretical avenue remains open, if very theoretical.</p>
+<p>Verily it is the consumer of worlds, this thing. [<a href="#identifier_2_56073" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_56073" class="footnote">Theoretically speaking if mining cost is actually above market value then he spends that sliver, which may well explain why Bitcoin has historically seen this situation a majority of the time - the invisible hand at work. Nevertheless, that sliver's not significant. [<a href="#identifier_3_56073" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_56073" class="footnote">Suppose tomorrow Bitcoin splits into two independent chains, BTC-A and BTC-B. This necessarily means that any current holder of Bitcoin has his holdings doubled : if he owned 1k Bitcoin before, he now owns 1k BTC-A and separately 1k BTC-B. These will also each have a market price, different from one another. It is not possible that both those market prices exactly match the holder's estimation of value, which means that one coin will be in his eyes overpriced while the other underpriced. This means he will sell one and buy the other. These effects quickly aggregate, and within days, probably within hours one of the coins is discounted to the point mining it is no longer an affordable proposition, which makes mining cease and that's it, problem solved. [<a href="#identifier_4_56073" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_56073" class="footnote">Which is, incidentally, why all the <a href="http://trilema.com/2014/the-great-post-of-rebuttals/">effort</a> lately. You're not the only ones to have realised this, the super-duper-ultra-mega lemmings in the government basement finally modeled this innovative revolutionary observation a few weeks ago. [<a href="#identifier_5_56073" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2014/the-great-post-of-rebuttals/">The great post of rebuttals</a></div>
+                <div class="alignright"><a href="http://trilema.com/2014/pushing-the-soft-tender-flesh-of-a-friend-against-the-sharp-rotating-blades-of-the-immutable-machine/">Pushing the soft tender flesh of a friend against the sharp rotating blades of the immutable machine.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2014/the-woes-of-altcoin-or-why-there-is-no-such-thing-as-cryptocurrencies/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2014/the-woes-of-altcoin-or-why-there-is-no-such-thing-as-cryptocurrencies/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>31 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-105428" class="commentbody"><div class="commenthead"><img alt='Diff Geek`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Diff Geek</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-105428" title="">Saturday, 16 August 2014</a>
+							</div>
+						<p>OK, let's isnert some facts here, as they are sorely needed.  Everything stated below is verifiable to even a mean intelligence.</p>
+<p>&gt;&gt; Someone controlling 100x as much hashpower as the previous group of miners sets to mining. For a vanishingly small interval of about three hours, that someone will receive 99% of the block rewards, corresponding to a total of about 2k blocks.</p>
+<p>Not at all.  If you understood bitcoin and its clones, as one would hope, you'd know difficulty goes up at most 4x and down at most 0.25x.  Here difficulty didn't even go up 4x, making your hashrate attack premise over 25 times wrong from the outset.</p>
+<p>What happened is, someone mined at about 3.9x prior hashrate, for a little under 4 days (14 day cycle as you know), while they could dump their ATC for BTC scraps.  This has happened a lot with ATC over the last few months.</p>
+<p>Said someone leaves once difficulty adusts (here 3.9 times), as they can't sell their future ATC for shit to cover costs.  But nor can the other 25% "standard background" hashrate any more, as they're only earning at 25% the rate, so they give up too.  End result: only suckers standing and ATC hashrate stalls at under 1% of what it was before our 4x multiplier friend comes in.</p>
+<p>Further note: ATC difficulty will fall at most 75%, per protocol, not the predicted 93% of the broken bitcoin-asset bot.  So an awful amount of ongoing subsidy required here just to survive.  Rinse, repeat.</p>
+<p>This is how all shitcoins ultimately go to the grave.</p>
+						</li>
+
+										<li id="comment-105451" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-105451" title="">Saturday, 16 August 2014</a>
+							</div>
+						<blockquote><p>Not at all. If you understood bitcoin and its clones, as one would hope, you’d know difficulty goes up at most 4x and down at most 0.25x</p></blockquote>
+<p>This point is actually addressed in the text. Now what ?</p>
+<p>I was expecting more facts. I was promised facts, plural. Where are the facts ?</p>
+						</li>
+
+										<li id="comment-117673" class="commentbody"><div class="commenthead"><img alt='AnonyMint`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">AnonyMint</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117673" title="">Tuesday, 21 June 2016</a>
+							</div>
+						<p>There is a solution to the dilemma:</p>
+<p><a href="https://bitcointalk.org/index.php?topic=1518508.msg15306725#msg15306725">https://bitcointalk.org/index.php?topic=1518508.msg15306725#msg15306725</a></p>
+						</li>
+
+										<li id="comment-117679" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117679" title="">Tuesday, 21 June 2016</a>
+							</div>
+						<p>It's not altogether clear what you're trying to say. I'm not aware anyone's taking Monero seriously, including its owner/lead/whatever. </p>
+<p>Why don't you get a blog, spend some time to structure your ideas properly and so on ?</p>
+						</li>
+
+										<li id="comment-117683" class="commentbody"><div class="commenthead"><img alt='AnonyMint`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">AnonyMint</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117683" title="">Tuesday, 21 June 2016</a>
+							</div>
+						<p>&gt; Why don't you get a blog, spend some time to structure your ideas properly and so on ?</p>
+<p>It's better I produce code. Working. Verbiage after code, right.</p>
+						</li>
+
+										<li id="comment-155625" class="commentbody"><div class="commenthead"><img alt='Behold a Pale Horse`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Behold a Pale Horse</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155625" title="">Monday, 2 November 2020</a>
+							</div>
+						<p>The obvious defense for difficulty attacks is to not adjust the difficulty. Instead restrict the number of minted tokens per NTP time period to the protocol schedule and aggregate all block solutions within the interval. This does not induce Vitalik’s weak subjectivity and retains the “longest” (i.e. highest difficulty) chain objectivity. This requires several changes to Nakamoto proof-of-work which I won’t detail here.</p>
+<p>Diff Geek’s point about the spiraling down effects of a cratered price is thwarted by preventing an acceleration in the quantity of newly minted tokens along with no adverse effects due to changes in the systemic hashrate. Given the cost-of-production model for market price one might contemplate that difficulty spiking attacks may bump the price to a higher level wherein cascaded network effects may sustain the higher price level. In short a design that is absorbs attacks as a positive contribution, lol.</p>
+<p>Thus I conclude that the presumption of this blog — that no altcoins can survive and that the diabolical “Great Reset” scamdemic, complicit Bitcoin is the only one — will be incorrect.</p>
+<p><a href="http://trilema.com/2020/things-i-have-been-doing/#comment-153913">http://trilema.com/2020/things-i-have-been-doing/#comment-153913</a></p>
+<p>“That was your only chance”</p>
+<p>Smaller things grow faster and the entropy of the universe trends to maximum. Never has the world had only one from of money and it never will unless we are to perish as a collective species due to lack of antifragility. :p</p>
+<p>P.S. I’m a programmer with ~4 decades of experience. Been programming since I was 13 years old. I’m capable of implementing this.</p>
+						</li>
+
+										<li id="comment-155626" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155626" title="">Monday, 2 November 2020</a>
+							</div>
+						<p>Why the hell would you introduce ntp as a dependency ?!</p>
+						</li>
+
+										<li id="comment-155629" class="commentbody"><div class="commenthead"><img alt='Behold a Pale Horse`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Behold a Pale Horse</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155629" title="">Monday, 2 November 2020</a>
+							</div>
+						<p>Gresham’s law contains to your point about selling the weaker horse to buy the stronger. Is everyone without significant exception to acquiesce to CBDCs as the silver to Bitcoin’s gold and accept Marxist devolution thusly self-immolation? Men (as distinct from other blobs of flesh with male genitalia but dysfunctional testosterone) prefer to die for liberty than live as a slave. And not everyone can employ the Bitcoin gold to transact. Some level of market demand will exist for a non-diabolical, <b><i>circulating</i></b> altcoin. If you’re correct as to what Bitcoin is disrupting then the fiat, centralized nature of CBDCs will be disrupted:</p>
+<p><a href="http://trilema.com/2015/ok-so-what-is-bitcoin-disrupting/">http://trilema.com/2015/ok-so-what-is-bitcoin-disrupting/</a></p>
+						</li>
+
+										<li id="comment-155630" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155630" title="">Monday, 2 November 2020</a>
+							</div>
+						<p>Look, you can't have a meaningful coin with ntp in it.</p>
+						</li>
+
+										<li id="comment-155631" class="commentbody"><div class="commenthead"><img alt='Behold a Pale Horse`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Behold a Pale Horse</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155631" title="">Monday, 2 November 2020</a>
+							</div>
+						<blockquote><p>Why the hell would you introduce ntp as a dependency ?!</p></blockquote>
+<p>NTP intervals as the Schelling point for the block period replaces the block announcement in Nakamoto proof-of-work’s Nash equilibrium. Nakamoto difficulty also requires coarse timestamp coordination. In both the time coordination is erasable, non-reified because it’s irrelevant to the objectivity of the longest difficulty chain. If the time coordination is insufficient the consensus diverges.</p>
+						</li>
+
+										<li id="comment-155808" class="commentbody"><div class="commenthead"><img alt='Behold a Pale Horse`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Behold a Pale Horse</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155808" title="">Saturday, 7 November 2020</a>
+							</div>
+						<blockquote><p>
+Look, you can't have a meaningful coin with ntp in it.
+</p></blockquote>
+<p>Further analysis concludes that weak subjectivity is required for the protocol I posited. That may not be a complete failure though. At least there not nothing-at-stake as in proof-of-stake.</p>
+<p>A WoT is weak subjectivity.</p>
+						</li>
+
+										<li id="comment-155810" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155810" title="">Saturday, 7 November 2020</a>
+							</div>
+						<p>Stop reading <a href="http://trilema.com/2015/if-you-go-on-a-bitcoin-fork-irrespective-which-scammer-proposes-it-you-will-lose-your-bitcoins/?b=Vitalik%20Bute&#038;e=tuff#select">known</a> <a href="http://trilema.com/2015/ars-gratia-artis-sau-cum-era-or-the-function-and-the-functioning-of-art-part-deux/?b=Vitalik&#038;e=Buterin#select">imbeciles</a>, it rots away whatever brains you started with.</p>
+						</li>
+
+										<li id="comment-155833" class="commentbody"><div class="commenthead"><img alt='Behold a Pale Horse`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Behold a Pale Horse</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155833" title="">Sunday, 8 November 2020</a>
+							</div>
+						<blockquote><p>
+Stop reading <a href='https://youtu.be/Oxk4g2y28Os?t=27'>known imbeciles</a>, it rots away whatever brains you started with.</p>
+<blockquote>
+<p><a href="http://archive.is/https://eth.wiki/en/concepts/proof-of-stake-faqs#comment-post-id-1">http://archive.is/https://eth.wiki/en/concepts/proof-of-stake-faqs#comment-post-id-1</a><br />
+(scroll to the bottom)</p></blockquote>
+</blockquote>
+						</li>
+
+										<li id="comment-155836" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155836" title="">Sunday, 8 November 2020</a>
+							</div>
+						<p>I really don't give a shit what three nobody neckbeards wetfarted on each other. Stop spamming inane links to shit, I won't have to shitcan you.</p>
+						</li>
+
+										<li id="comment-157624" class="commentbody"><div class="commenthead"><img alt='Behold a Pale Horse`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Behold a Pale Horse</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-157624" title="">Sunday, 20 December 2020</a>
+							</div>
+						<blockquote>
+<blockquote><p>
+A WoT is weak subjectivity.
+</p></blockquote>
+<p>I really don't give a shit what three nobody neckbeards wetfarted on each other. Stop spamming inane links to shit, I won't have to shitcan you.
+</p></blockquote>
+<p>You seem to misconstrue my point? My prior comments were somewhat incoherent. The essence of the problem with proof-of-stake is that there’s nothing-at-stake (no cost to attack it and thus no objective reality) — it’s essentially the delusion of democrazy. That was the point of linking you to my comments at the bottom of the Eth wiki wherein I reiterated the problems with proof-of-stake.</p>
+<p>The problem with Nakamoto proof-of-work is that it’s also democrazy because it subjects the major minority to the will of the simple majority aka the 50+% attack. The attack will be profitable via the extortion of censoring transactions. It appears to have been designed for this outcome because eventually the mining reward-based Nash equilibrium is lost as the protocol reward shrinks relative to the transaction fees reward aka incentives compatibility for consensus is lost and an oligarchy must take control to enforce consensus. Bitcoin eventually becomes a permissioned, fiat system and there will be only one sovereign who controls it. It’s Biblical.</p>
+<p>The design I vaguely contemplated and posited may be the only alternative. I essentially posit to combine proof-of-work to eliminate nothing-at-stake with the objectivity of being there in real-time (a facet of proof-of-stake without the nothing-at-stake) to eliminate the weakness of Bitcoin — i.e. 50+% attacks are eliminated. The tradeoff is that my design has no prima facie objectivity for those who weren’t there in real-time, so they’ll need to trust someone that was and thus the analogy to a WoT and my reference to Vitalik's weak subjectivity but that shouldn’t be conflated with nothing-at-stake. Yet there’s still prima facie objectivity as the amount of proof-of-work that has been burned and thus the value of that blockchain — thus ultimately the non-fraudulent chain should eventually become the longest difficulty chain possessing the prima facie objectivity of Bitcoin after all, without Bitcoin’s major flaw. And after further thought I do believe the design I’m contemplating converges on consensus. The key distinction is that the reward for consensus the cost of loss of value of all one’s investment in the tokens instead of the mining reward. All those who are sufficiently vested will not form a consensus around the longest difficulty chain which is a fraud (as they observed it in real-time) because if fraud can succeed then their investment is ultimately worthless. Thus my design allows for fraud chains to fork off in their 50+% uneconomic, democrazy delusion whilst the vested economic majority are unaffected.</p>
+<p>Perhaps this is my <a href='http://trilema.com/2012/why-its-not-actually-in-your-best-interest-to-allow-a-hired-third-party-to-speak-for-you-in-criminal-proceedings/#comment-157612'>comeback ticket</a>.</p>
+						</li>
+
+										<li id="comment-157647" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-157647" title="">Monday, 21 December 2020</a>
+							</div>
+						<p>I can't believe solidcoin's lulz are still being passed about.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-106349">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink">Cheat on Bitcoin with HYPER? It&#8217;ll be Your Loss | Peace and Markets</span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-106349" title="">Saturday, 23 August 2014</a>
+					</div>
+					<p>[...] The woes of Altcoin, or why there is no such thing as &#8220;cryptocurrencies&#8221; [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-106854">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink">There is just one Bitcoin, but Altcoins fester onward |</span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-106854" title="">Friday, 29 August 2014</a>
+					</div>
+					<p>[...] Popescu has a nice look at why there can only be one bitcoin, from a mining perspective, over at trilema.com . This got me thinking about the topic, so I decided to write up some thought I had on the subject [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-127776">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://bingology.net/2019/02/11/just-about-everything-i-grew-up-understanding-to-be-normal-is-a-recent-invention/' class='url'>Just About Everything I Grew Up Understanding To Be Normal Is A Recent Invention &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-127776" title="">Monday, 11 February 2019</a>
+					</div>
+					<p>[...] present insanity where altcoins pretending to be national currencies avoid crashing to zero through exercise of religious faith is [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140389">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/mpif-fmpif-august-2014-statement?b=BTC.%20%5B%26%238617&amp;e=ont.#select' class='url'>MPIF (F.MPIF) August 2014 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140389" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] BTC. [&#8617;]We've cut a deal to support ATC with some rented hashpower. Reading references : 1, 2, 3. While the commitment is spread out over the weeks, I'm just going to book it here upfront. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141023">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/catre-ministerul-afacerilor-interne-in-atentia-d-lor-gheorghe-nicolae-petre-toba-bondar-marin-si-d-nei-laura-codru%c8%9ba-kovesi-dvs-stiati-ca-angajatii-dvs-se-ocupa-cu-frauda-' class='url'>Catre Ministerul Afacerilor Interne. In atentia d-lor Gheorghe Nicolae, Petre Toba, Bondar Marin si d-nei Laura Codruța Kövesi : Dvs stiati ca angajatii dvs se ocupa cu frauda pe Internet ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141023" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] to say, this is plain and banal fraud, loosely dressed up in cryptocurrency technobabble. Needless to say that your employers mixing up with con artists and other criminal [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142202">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/republican-thesaurus-with-vocabulary-and-dictionary?b=%282014%29.%20Shor&amp;e=only#select' class='url'>Republican Thesaurus with Vocabulary and Dictionary! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142202" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] (2014). Short for The Real Bitcoin, the only [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142373">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/fred-wilson-is-an-idiot-and-other-things?b=He%20tries%20to%20&amp;e=ne.v#select' class='url'>Fred Wilson is an idiot, and other things on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142373" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] He tries to bury it under a vast pile of vomit, nonsensical constructions like "public blockchains" and "the blockchain sector" and whatnot, anything, anything whatsoever that may somehow dull the sharp eges of the plain, factual reality that there can only be one.v [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142397">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/how-to-correctly-value-forked-chains?b=like%20the%20pre&amp;e=pest#select' class='url'>How to correctly value forked chains ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142397" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] like the present wasn't predicted years ago by the powers that are and always will be. [&#8617;]Ie, not-Bitcoin. [&#8617;]There is no "best", but even in places where no such thing as best may exist, cheapest [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142590">
+					<div class='trackhead'>
+						<div class="commentcount">25</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/a-complete-theory-of-politics?b=by%20attractor&amp;e=ches#select' class='url'>A complete theory of politics on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142590" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] by attractors it displays denied middle (much like the lesser and easier to study example of currency), so principal means something very narrow - all cases when this factor even vaguely approaches [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142688">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/ideological-history-of-the-republic?b=2014%5D%20There%20&amp;e=g%20as#select' class='url'>Ideological History of the Republic on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142688" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] 2014] There can be only one Bitcoin ; there's no such thing as [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142731">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/i-dont-think-you-understand-how-credit-cards-work?b=when%20it%20come&amp;e=eans#select' class='url'>I don't think you understand how credit cards "work". on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142731" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] when it comes to money, there can only be one. &mdash;&mdash;&mdash;What'd an altcoin be without its whitepaper! [&#8617;]16 numeric digits means [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144265">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/the-republic-without-mp?b=item%20as%20the%20&amp;e=ally#select' class='url'>The Republic without MP on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144265" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] item as the only item (much like MIT's coin went away leaving behind the Republic's Bitcoin as the only coin), there will be a huge influx of interest on the part of the pantsuit in "joining" -- specifically [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145894">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/continuing-with-the-reflective-history-of-the-republican-forum-still-on-logday-659-year-6-dtr?b=-%202125%20Ticke&amp;e=cker#select' class='url'>Continuing with the reflective history of the republican forum -- still on logday 659 (year 6 d.Tr.) on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145894" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] - 2125 Ticker 2126 - 2128 Discussion 2129 - 2129 Paste 2130 - 2130 Bot 2131 - 2147 Discussion ("Altcoin" the altcoin was pretty much born here.) 2148 - 2148 Ticker 2149 - 2157 Drama 2158 - 2158 Ticker [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147393">
+					<div class='trackhead'>
+						<div class="commentcount">30</div>
+						<span class="authorlink"><a href='http://thewhet.net/2020/02/the-basilikon-doron-or-royal-gift-a-constitutional/?b=how%2C%20but%20bey&amp;e=ymen#select' class='url'>The Basilikon Doron, or "Royal Gift", a Constitutional &laquo; The Whet</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147393" title="">Saturday, 1 February 2020</a>
+					</div>
+					<p>[...] how, but beyond the amusement of this shallow snippet I don't really have much interest. [&#8617;]Heh. [&#8617;]Check out Reformation-era anger management strategies here! [&#8617;]Catholic clergymen [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-164015">
+					<div class='trackhead'>
+						<div class="commentcount">31</div>
+						<span class="authorlink"><a href='http://dorion-mode.com/2021/05/simple-steps-part-3-smiling-dialing-and-closing/?b=of%20the%20Coina&amp;e=ads.#select' class='url'>Simple Steps Part 3: Smiling, Dialing and Closing &laquo; Dorion Mode</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-164015" title="">Saturday, 22 May 2021</a>
+					</div>
+					<p>[...] of the Coinapult crew ; Ver owned a piece of Coinapult too. In less than a year, Erik went from, "there can only be one", to shapeshifting alts, but I suppose for his sake he's extracting the BTC outta those spreads. [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="56073" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833746-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-56073")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-56073");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-56073");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

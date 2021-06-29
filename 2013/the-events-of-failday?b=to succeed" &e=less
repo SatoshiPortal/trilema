@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The Events of Failday on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Aici este pragul cel de sus,<br />unde v-o zis tati ca'ti da cu capul.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-46713"><div class="post" id="post-46713">                    <h1><a href="http://trilema.com/2013/the-events-of-failday/" rel="bookmark" title="Permanent Link to The Events of Failday">The Events of Failday</a></h1>                        <div class="date">                                     Tuesday, 05 March, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>As you might have noticed, bitinstant.com was down the entire weekend. It's still down for me as it is (probably DNS issues), but pigeons was kind enough to send their explanatory blogpost as a pastebin. I wish to take the time and comment this, because it's important enough.</p>
+<blockquote><p>The attacker contacted our domain registrar at Site5 posing as me and using a very similar email address as mine, they did so by proxying through a network owned by a haulage company in the UK whom I suspect are innocent victims the same as ourselves. Armed with knowledge of my place of birth and mother's maiden name alone (both facts easy to locate on the public record) they convinced Site5 staff to add their email address to the account and make it the primary login (this prevented us from deleting it from the account). We immediately realized what was going on, and logged in to change the information back.</p></blockquote>
+<p><strong>They immediately also failed to report this event.</strong></p>
+<p>This is important, and Bitcoin bussinesses (or, more adequately in the case at hand, outfits aspiring to be businesses one day) need to learn to start reporting properly. That means, the good with the bad. </p>
+<p>The person you pretend-businesses need to learn from is, again, me. When BitBet fucks up, you learn about it from right here : <a href="http://trilema.com/2013/the-anatomy-of-a-disaster/">The anatomy of a disaster</a>. When BitBet's infrastructure fucks up, you learn about it also from right here : <a href="http://trilema.com/2013/bitcoind-not-quite-ready-for-prime-time/">Bitcoind : not quite ready for prime time</a>. </p>
+<p>This is the correct way to handle communications, as a Bitcoin business, this is the standard, etch it in your brains : you report. The good and the bad. To recap : </p>
+<ul>
+<li><strong>the wrong way</strong> to do business communication is like CoinFail does it : brash claims with no basis in fact that end up <a href="http://trilema.com/2013/ycombinator-continues-to-suck-jointly-and-severally/">attracting the negative attention</a> of much smarter, larger and more powerful entities than you'll ever be.<sup><a href="#footnote_0_46713" id="identifier_0_46713" class="footnote-link footnote-identifier-link" title="You may think that there's value in being brash and putting up an empty show, mostly because idiots like Graham promote this side-channel in lieu of actual competence, as if `wanting to succeed` is a substitute for being able to actually succeed. This is a dead end.">i</a></sup></li>
+<p></p>
+<li><strong>the right way</strong> to do business communication is like MPEx does it : things as they are, no matter who or what gets trampled in the process.<sup><a href="#footnote_1_46713" id="identifier_1_46713" class="footnote-link footnote-identifier-link" title="From Strategic superiority, a saga :
+This happens to be exactly what PR is not. PR is not about clogging the channels with meaningless formulaic stupidity and actively attempting to prevent anything from moving either direction. PR is the effort of clearly communicating the position of the company to the market and the position of the market to the company. Clearly communicating means that sometimes the customer will be delivered a large steaming plate of “You’re stupid”. Clearly communicating means that sometimes the company will have to come out with a “We’ve been stupid” dounce hat and eat some crow.
+">ii</a></sup></li>
+</ul>
+<p>Moving right along : </p>
+<blockquote><p>After changing this info and locking the attacker out, overnight he was able to revert my changes and point our website somewhere else. Site5 is denying any damages, but we suspect this was partly their fault.</p>
+<p>After gaining access, they redirected DNS by pointing the nameservers to hetzner.de in germany, they used hetzner's nameservers to redirect traffic to a hosting provider in ukraine. By doing this, he locked out both my login and Gareths's login and they used this to hijack our emails and reset the login for one exchange (VirWox), enabling them to gain access and steal $12,480 USD worth of BTC.</p></blockquote>
+<p>This is another important point : the website-and-account system does not work. The fact that everyone uses it just shows everyone is <strong>not intellectually equipped to handle Bitcoin as a business.</strong> The actual standard is, again, MPEx. To <a href="http://trilema.com/2013/mpex-tech-stuff/">quote </a>:</p>
+<blockquote><p>The reason DDOS doesn’t work on MPEx is also simple : you don’t have to send your order to any particular website, as long as MPEx eventually hears of it. Take the classical way phishing works : you intend to use paypal.com. Unbeknownst to you, evil phisher is feeding your browser pages from paupa1.com. You type in your password. paupa1.com sends it along to paypal.com, discovers it’s valid, feeds you back the page and now evil phisher has your password, and your account, and all your jools. </p>
+<p>On the other hand, imagine you intend to talk to MPEx. Unbeknownst to you, you’re not talking to MPEx, but to ButtPlox. You naively paste your hard-earned PGP code into ButtPlox. Well… ButtPlox doesn’t have MPEx’ private key, and consequently has no idea what your order says. If ButtPlox passes this black box mystery along to MPEx, it will receive a reply, which is of course encrypted with your private key, which ButtPlox also doesn’t have. If it passes it along to you then you decode it and that’s that, transaction successful. If it doesn’t pass it along to you then you know it’s ButtPlox and just move on.</p></blockquote>
+<p>This is the <strong>only correct way</strong>. If your Bitcoin service uses sessions you are deluding yourself : what you're running there is a Bitcoin disservice. Abandon the pretense, submit to your intellectual leaders and do what you're told already, this can't continue. "Login" works for myspace, it works for tripod, it works for all the other sites nobody cares about. There's no Login for Bitcoin.</p>
+<p><div id="attachment_46715" class="wp-caption alignleft" style="width: 570px"><a href="http://trilema.com/wp-content/uploads/2013/03/mpex-hybris.png"><img src="http://trilema.com/wp-content/uploads/2013/03/mpex-hybris.png" alt="There is a reason for that." title="mpex-hybris" width="560" height="40" class="size-full wp-image-46715" /></a><p class="wp-caption-text">There is a reason for that.</p></div></p>
+<p>Moving even further along :</p>
+<blockquote><p>Information about the attacker:<br />
+Based on their general MO, the attacker is not highly technically skilled but is sneaky enough to cover their tracks.</p></blockquote>
+<p>This is superfluous nonsense. The last people I'd be interested in asking for a profile of a successful attacker is the ninnies that got raped. I really, really, really don't need to hear about how "he was holding a <strong>really big gun</strong>".</p>
+<blockquote><p>So, we wanted to provide this update in order to continue our practice of transparency, but also as a lesson to the community - you must be ever-vigilant in making security your top priority.</p></blockquote>
+<p>The problem here, Bitinstant, is that you <strong>are not</strong> making security your top priority. You are making talking your top priority. </p>
+<p>To make security your top priority you have to </p>
+<ol>
+<li>Start reporting <em>properly</em>, as explained above. The good and the bad. You've had a foreign email added to your DNS ? <strong>That</strong> goes on your blog, right then and there. Let people know. Forget about how "it won't look good", you are making security a top priority, not talking. Not looking good. Security. </li>
+<p></p>
+<li>Think about how someone hijacking MPEx's DNS would have exactly zero success whatsoever. Are you still making security your top priority ? Then why aren't you ?</li>
+</ol>
+<p>There is indeed a lesson "the community" needs to learn in all of this. You are part of that community, and apparently about as ill equipped to detach the respective lesson as the average forum bloke. No, "based on past fruitless attempts" is <em>not thinking</em>, seeing how you're apparently unwittingly positing that past failure is equal to present success (and if that's what your business plan looks like I'd be worried). Just so, "more of the crap that failed in the past is going to be our way of making security our top priority" isn't thinking either.</p>
+<p>Stop with the pretense. Pretense is a dime a dozen in Bitcoin world. Start making security your top priority rather than talking about it, with a leaky, dilated asshole. </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_46713" class="footnote">You may think that there's value in being brash and putting up an empty show, mostly because idiots like Graham promote this side-channel in lieu of actual competence, as if "wanting to succeed" is a substitute for being able to actually succeed. This is a dead end. [<a href="#identifier_0_46713" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_46713" class="footnote">From <a href="http://trilema.com/2012/strategic-superiority-a-saga/">Strategic superiority, a saga</a> :<br />
+<blockquote>This happens to be exactly what PR is not. PR is not about clogging the channels with meaningless</span> formulaic stupidity and actively attempting to prevent anything from moving either direction. PR is the effort of clearly communicating the position of the company to the market and the position of the market to the company. Clearly communicating means that sometimes the customer will be delivered a large steaming plate of “You’re stupid”. Clearly communicating means that sometimes the company will have to come out with a “We’ve been stupid” dounce hat and eat some crow.</p></blockquote>
+<p> [<a href="#identifier_1_46713" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/that-gay-ass-site-bitbet/">That gay ass site, BitBet</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/the-delusion-of-infrastructure/">The delusion of infrastructure</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/the-events-of-failday/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/the-events-of-failday/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>2 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-139402">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/mpex-breach-post-mortem?b=the%20possibil&amp;e=osed#select' class='url'>MPEx breach - post mortem on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139402" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the possibility of technical breach shall be and should be the least of your concerns. Mind that BitInstant lost a few hundred BTC in a social engineering attack last year, mind that Lavabit ended up closed [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-148085">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/03/27/a-review-of-the-bitcoin-category-on-trilemacom/?b=the%20correct%20&amp;e=les.#select' class='url'>A Review of the Bitcoin Category on trilema.com &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148085" title="">Friday, 27 March 2020</a>
+					</div>
+					<p>[...] the correct and incorrect ways to do business and business communications in Bitcoin, illustrated with examples and counterexamples. [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="46713" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835255-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-46713")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-46713");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-46713");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

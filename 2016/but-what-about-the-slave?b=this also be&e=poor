@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>But what about the slave ? on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Repressing the female point of view<br />every day since 2008.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-65990"><div class="post" id="post-65990">                    <h1><a href="http://trilema.com/2016/but-what-about-the-slave/" rel="bookmark" title="Permanent Link to But what about the slave ?">But what about the slave ?</a></h1>                        <div class="date">                                     Thursday, 21 April, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><strong>alikim</strong> You can make auction house based on a dedicated player's account (run by a trustworthy authority) and ingame whisper channel. First you whisper it with your action offer then you trade it for items, same with bids, you whisper it for a bid then trade for money. This bot will keep items and money in its storage and all the info in an externalfile.<br />
+<strong>danielpbarron</strong> Can it link up with an irc bot?</p>
+<p><strong>alikim</strong> Theoretically yes, since the game client can connect to the internet and communicate to w/e. I've no idea how these bots work. For me it stands to reason that you communicate with the auction house from inside the game though, because the auction house doesn't have to trust your word when you are bidding or offering, you actually need to transfer goods<br />
+<strong>danielpbarron</strong> All the auctions we do are honor system anyway. You could prolly make money just running an auction house come to think of it, and if you're gonna have you character standing around for that, you'd also want a general store bot that just buys and sells automatically like the way Electron does.</p>
+<p><strong>alikim</strong> The irc system you have atm doesn't need auction house, I'm talking about ingame AH that can record all trades, run statistics including markup on items, all the usual stuff. That AH doesn't need irc bots. I'd say these two options should not be mixed.<br />
+<strong>danielpbarron</strong> Well I could put the stuff with the bot in-game and then a bot in this channel periodically mentions what auctions are running, reminding people to bid. Plus I can check irc from anywhere; Eulora not so easy.</p>
+<p><strong>alikim</strong> it will buy and sell automatically, but only pre-whispered bids and offers and after each trade put items into its storage<br />
+<strong>danielpbarron</strong> well you could have it automatically put coppers in the trade window based on what people put in there, just gotta offer a slightly better deal than electron, keeping in mind that Electron isn't gonna be there forever. i think most things in Eulora are supposed to be player run eventually. not sure how skill training will go, maybe noobs will have to train with veterans or something. that'd be something, have my character sitting in a building in town buying/selling stuff and collecting coppers to train noobs. that'd be pretty sweet</p>
+<p><strong>alikim</strong> a bot in this channel could whisper ingame AH for a list of aucioned items and post results here, as well as you can do it ingame<br />
+<strong>mircea_popescu</strong> Yeah makes sense auction's settled inside the game. What you say re mixing also makes sense, except for one point - it is Minigame((MPEx:<a href="http://mpex.co/?mpsic=S.MG">S.MG</a>))'s strategic decision to replace in-game chat with irc chat (and gossipd eventually). Which is why he's thinking the way he is, and which is why they'll get mixed anyway. He definitely has a point about checking irc from everywhere - which is definitely desired. Eulora clients will look exactly that pluriform.</p>
+<p><strong>alikim</strong> Well, as I said you have a client connected to the internet, so it can connect to anything, but your honor system will have to go too eventually I guess, so you won't be able to offer and bid w/o actual goods and money.<br />
+<strong>danielpbarron</strong> not necessarily<br />
+<strong>mircea_popescu</strong> Nah, it'll go the other way around, WoT can be implemented. Recall how you can't get an account without a gpg sig ? This'll open the road to the first ever automated trust system - auction bot will evaluate user based on history. Half of why you need irc in game is so you can do $trust X. Not sure if you're at all familiar with this huge chunk of metagame ? It's also rather uncommon / not seen in "the normal game".<sup><a href="#footnote_0_65990" id="identifier_0_65990" class="footnote-link footnote-identifier-link" title="Guy obviously knows a lot about games, but very little about tmsr.">i</a></sup></p>
+<p><strong>alikim</strong> No, all this encryption stuff, gpg, irc etc is rather an inconvenience you have to go thru to get to the game. I'm pretty sure all this only averts normal game players from trying the game, people expect to just automatically get an account download and play. But on the other hand you are not interested in normal people so... ;)<br />
+<strong>mircea_popescu</strong> Well, it seems to you an inconvenience, but this due to unfamiliarity. It's actually the cornerstone of the game being this good. Think about it - idiots playing is the worst problem of every game out there.</p>
+<p><strong>alikim</strong> Not in a game based on real money, idiots will normally pay.<br />
+<strong>mircea_popescu</strong> You think <span style="background-color:#d3d3d3" id="select">this also because unfamiliarity. We have a lot of experience with bitcoin, and the common man, and <a href=http://trilema.com/2012/strategic-superiority-a-saga/>know better</a>. Idiots have no expendable income and there's a very strict stupid <=> poor</span> bijection.</p>
+<p><strong>alikim</strong> There are lots of smart people who are poor btw, even genius people.<br />
+<strong>mircea_popescu</strong> Genius can be stupid, that's no problem whatsoever. When you discuss stupid you discuss "what's the dumbest thing this person does", when you discuss smart you discuss "what's smartest thing this person does". These aren't opposite, much like when discussing lowest point of a map vs highest point of a map. Plenty of maps have mountains, but this doesn't mean much - they may also have valleys.</p>
+<p><strong>alikim</strong> Well you might be born in fascist Germany and sent to a camp, which among other thing makes you poor, "what the dumbest thing you did" is an open question.<br />
+<strong>mircea_popescu</strong> How come you're on the internet is also an open question in that setting.</p>
+<p><strong>alikim</strong> I can easily come up with a different setting when you have access to the internet, the valleys you are talking about can be circumtances.<br />
+<strong>mircea_popescu</strong> Never. Nature is nature is nature, if you end up in the shit it's because you fucked up.</p>
+<p><strong>alikim</strong> Like born black in USA a few decades ago? Or wait, lucky you, there was no internet there so doesn't count.<br />
+<strong>mircea_popescu</strong> The setting of my experiment does not map to luck, being as deliberate as it gets. Moreover "you fucked up" also doesn't map to "you could have done something better". Ogre getting destroyed by archers IS OGRE FUCKING UP, even if the whole game is set up with the premise of archers being good vs ogres. "Oh what's the ogre supposed to do" is not a cogent consideration.</p>
+<p><strong>alikim</strong> What is ogre is ugly? He fucked up?<br />
+<strong>mircea_popescu</strong> If he spends his time going to college town bars trying to pick up, yeah. ("Oh but he has to, because he's a college aged ogre" "Nobody has to anything" etc.)</p>
+<p><strong>alikim</strong> What if you are born a slave and you are poor because of that? Automatically makes you dumb?<br />
+<strong>mircea_popescu</strong> You were born a slave ; but you did the poor part yourself. Heck, there's plenty of slaves that ended up very rich throughout history, from Rome to Haiti.</p>
+<p><strong>alikim</strong> You probably like new thought movement<br />
+<strong>mircea_popescu</strong> Which is that ? Anyway, this entire debate hinges on confusion between should, which is an ought, and could, which is an is. There's absolutely no space in ethics/morals for is-en. Just because you should doesn't mean you could, nor makes it any difference, and vice-versa. Entirely unrelated considerations.</p>
+<p><strong>alikim</strong> <A href=http://trilema.com/2013/wikipedia-the-special-olympics-for-the-mentally-retarded/>https://en.wikipedia.org/wiki/New_Thought</a>.<br />
+<strong>lobbesbot`</strong> Title: New Thought - Wikipedia, the free encyclopedia (at en.wikipedia.org)<br />
+<strong>mircea_popescu</strong> I dunno, not particularly preoccupied with various us neoprotestantisms / whatevers.</p>
+<p><strong>alikim</strong> You sound exactly like positive thinking + law of attraction.<br />
+<strong>mircea_popescu</strong> Ahaha mno.</p>
+<p><strong>alikim</strong> You sound like one nevertheless, "if you are born a slave and you are poor that's because you fucked up, because you can do anything you desire in any situation and you can end up rich".<br />
+<strong>mircea_popescu</strong> Well it's fine that I may sound like one, to you, but the notion amuses me, what.</p>
+<p><strong>alikim</strong> Your logic is exactly the same.<br />
+<strong>mircea_popescu</strong> I just said above that no, there's no "because you can do anything you desire in any situation and you can end up rich", so it can't be all that EXACTLY the same.</p>
+<p><strong>hanbot</strong> Ahaha this is a riot, mircea_popescu believes people can do anything!!1<br />
+<strong>mircea_popescu</strong> Gave me a chucke also! :D</p>
+<p><strong>alikim</strong> So a poor slave is poor because ...?<br />
+<strong>mircea_popescu</strong> He sucks ?</p>
+<p><strong>alikim</strong> Well that's exaclty what I wrote before<br />
+<strong>mircea_popescu</strong> notreally.</p>
+<p><strong>alikim</strong> You believe any slave can be rich<br />
+<strong>mircea_popescu</strong> I do not.</p>
+<p><strong>alikim</strong> If he wants to be.<br />
+<strong>mircea_popescu</strong> I believe that any slave that fails to be rich deserves being poor. In short, your proposed "he is a slave" is not a CATEGORICAL ban to achievement. You need it to be a categorical ban for your argument. </p>
+<p><strong>hanbot</strong> alikim he said some slaves ended up rich, very different things.<br />
+<strong>alikim</strong> I believe that any slave that fails to be rich deserves being poor << that includes the belief that any slave can be rich if he wants<br />
+<strong>hanbot</strong> What is this "wants"?<br />
+<strong>mircea_popescu</strong> It includes no such thing, no. You think it does because you expect "all people are equal", which is not something I regard.</p>
+<p><strong>alikim</strong> The premise is a slave can not be rich by the fact he's a slave, when you say "slave that fails to be rich" it includes the possibility for any slave to get rich.<br />
+<strong>mircea_popescu</strong> No, it includes the possibility for SOME to be rich. Specifically - the not dumb ones. There is no solution "for all the people", nor should there be one. Most people have no business here.</p>
+<p><strong>alikim</strong> Which defies the premise that slaves can not be rich yes. Any of them.<br />
+<strong>mircea_popescu</strong> I dun see it.</p>
+<p><strong>alikim</strong> That's another problem ;)<br />
+<strong>mircea_popescu</strong> Hehehe I suppose. Anyway, make it a formal syllogism ?</p>
+<p><strong>alikim</strong> If you were to write a program where slave and rich are mutually exclusive, for all and any slaves, then you couldn't make a conclusion that a slave "fails to be rich". Because failure is somthing you do, and being a slave is an environment setting you can not change and can not be responsible for. But!!! I have other things to do so let's leave it where it is ;)<br />
+<strong>mircea_popescu</strong> It's not clear that failure is something you do. From what I've seen failure is generally something you don't do. It is also commonly the lot of stupid poor people to think "they are poor through no fault of their own" on this basis - they failed at nothing specifically. The problem is they failed at the unknown unknowns, which conveniently leave no mark.</p>
+<p><strong>alikim</strong> Like not be born a slave?<br />
+<strong>mircea_popescu</strong> More like not falling on their knees for the right master at the right time.<br />
+* alikim (1b20321a@gateway/web/freenode/ip.27.x.x.x) has left #eulora</p>
+<p><strong>mircea_popescu</strong> Well, hopefully he didn't get butthurt, I enjoyed the conversation.</p>
+<p>[...]</p>
+<p><strong>alikim</strong> The problem with your thinking (and you may not see it as such) is that you can not accept a system that has a genaral absolute rule w/o exceptions. I'm telling you no slave can be rich and you change the premise by adding a backdoor and saying, well if you kneel at the rigt place at the right time you can. So if you can not find that back door and stay poor it's you who fucked it up and that's your fault, so you are too "dumb" to get rich. And you are absolutly right. But the premise is, slaves do not get rich, no exeptions. You do not believe that there is a situation where all people of certain class/kind are prohibited from achieveing something (from birth), you believe there is always a back door for some, "the smart" ones. Which is essentially very like new thought premise: no matter where you are now and what the situation is, you can get anywhere you want from there if you know how (to find a backdoor).</p>
+<p><strong>mircea_popescu</strong> The canonical term for what you describe is the no true scotsman fallacy, but obviously I don't agree it's in play. More generally, yes I reject the premise of embodied absolutes. This has no more to do with "new thought" than with plain catolicism. Moreover, the notion of imanent transcedence is ridiculous on its face, and readily taken apart.</p>
+<p><strong>alikim</strong> Ok I'm just curious about what you thinking is based on.</p>
+<p><strong>mircea_popescu</strong> What do you mean ? Anyway, we'll continue this later, I'm off to bed.<br />
+<strong>alikim</strong> Things like that "I reject the premise of embodied absolutes".</p>
+<p><strong>mircea_popescu</strong> Well, this is a fairly obvious point, but I don't really know enough about your background to pick a good or even decent statement for it. Suppose you came up with a way to make a perpetuum mobile ; or with a notation that'll allow you to write ALL numbers in a finite space, or such wonders. I'd laugh at you, for the same reason I laugh at you when you think there can be such a thing as an absolute caste system, or for that matter an absolute conspiracy, or what have you.</p>
+<p><strong>alikim</strong> I mean I saw this rejection behind you rlogic and you confirmed it, so it explains what you are saying to me.<br />
+<strong>mircea_popescu</strong> Aha. Anyway, even the absolute caste system does nothing much to support your argument. Yes it's possible that on some island somewhere there live some inexplicable retards who believe they are coconuts, and nothing that may occur can change their notions. Notwithstanding that their perpetuation is improbable - so what ? You're not one of them, nor am I, nor do we have any reason to care about this improbable, remote and certainly irrelevant construct.</p>
+<p><strong>alikim</strong> Well, we were talking about slaves, the point was to accept the premise that if you are born slave you can not be rich by the fact of your birth. Absolute rule.<br />
+<strong>alikim</strong> &#038;item homunculus<br />
+<strong>euporium</strong> I know nothing of homunculus.<br />
+<strong>danielpbarron</strong> alikim, you're the one who came up with this "absolute rule".<br />
+<strong>mircea_popescu</strong> The twist here being, of course, that I actually keep slaves. But obviously, of a different kind.</p>
+<p><strong>alikim</strong> Yes, the whole argument happened because I came up with that rule to explain how being poor might not be your fault and mircea doesn't not believe in absolute rules.<br />
+<strong>mircea_popescu</strong> In any case : there doesn't exist a society in recorded history that kept slaves and their offspring didn't end up rulers at some point or another. One of the better illustrations is perhaps the Ottoman empire, the rulers of which never entertained intimatelly anything BUT slaves. Well... until Roxana, at any rate. More generally speaking, all men are born slaves, no matter what they'd like to pretend. If there isn't a way to get out of it, then civilisation simply ends, as there isn't a way to populate the next tier.</p>
+<p><strong>alikim</strong> Again it's all been put into a system in new thought, namely everything that happens to you in your life is your doing, choices you made or rather didn't made anyway you put it, as I said before that validates your logic and makes you right, there is nothing to argue about here for me.<br />
+<strong>mircea_popescu</strong> Not your doing ; your responsibility. Rather different concepts. "Your doing" is this mildly offensive mystic thing, a la power of seduction or what's it called.</p>
+<p><strong>alikim</strong> Well, you can not be responsible for things you can not do anything about<br />
+<strong>danielpbarron</strong> Sure you can.<br />
+<strong>alikim</strong> Like what?<br />
+<strong>mircea_popescu</strong> Like anything you're responsible for lol.</p>
+<p><strong>danielpbarron</strong> For example, you are held responsible for not believing in God even though it is the same God who caused you to not believe<br />
+<strong>mircea_popescu</strong> The notion that "can" is a bar to responsibility is entirely unsuportable. "Oh I shouldn't be responsible for shitting in the street, I couldn't keep myself" hurr.</p>
+<p><strong>alikim</strong> No it's not what I meant.<br />
+<strong>mircea_popescu</strong> Anyway : every living thing is responsible to feed and breathe. Failure to do so is rewarded by death. Whether it can or it can't is entirely immaterial. The notion of responsibility you apparently employ is a degenerate substitute, of a conventional rather than ontological nature. It comes from taxation, as the common sense observation that the wise ruler doesn't load the camels or the people above what they may carry. The camels so loaded refuse to raise, and the people so loaded whine about how "they shouldn't be responsible about things they can't do anything about" (whatevers, ruler also has the ability to provide them the simple choice of lift the load or be cut down where you stand). 'Tis a camel's notion of responsibility.</p>
+<p><strong>alikim</strong> Can you be responsible for the fact that your eye are blue?<br />
+<strong>mircea_popescu</strong> If it ever comes to it, you will be, yes.</p>
+<p><strong>alikim</strong> I see<br />
+<strong>mircea_popescu</strong> Who's to provide you immunity ? If I tomorrow announce all with non-blue eyes get a widget, who's going to give you a widget ? Obviously, socialism proposes "sharing", mostly as an attempt to subvert the obvious power of anyone giving widgets. It works for as long as it does. "We're going to make a law against such discrimination!!! it's unfair!" "And who's going to enforce it ?" "We are!!1" "You might discover you have better things to do."</p>
+<p><strong>alikim</strong> I understand how your logic works, I do not share it, but I understand it<br />
+<strong>mircea_popescu</strong> Aite! Care to share how your logic works, so I can not share it myself ?</p>
+<p><strong>alikim</strong> Haha<br />
+<strong>mircea_popescu</strong> Lol</p>
+<p><strong>alikim</strong> I believe in the mix of things you can change and be held responsible for and things that are cast upon you by the environment that you can not change and can not be responsible for. So "all poor people are too dumb to get rich" doesn't stand for me.<br />
+<strong>mircea_popescu</strong> And how do you draw the line ? As feels convenient that day ?</p>
+<p><strong>alikim</strong> If I don't see how someone could change something I consider it unchangable, so yeah, the line is drawn at my level of intellect.<br />
+<strong>mircea_popescu</strong> And doesn't it worry you, to be one in possession of such ego, as to think yourself the grand arbiter of everything ? Especially on the shaky basis of being captive this side of the combinatorial explosion cone.<sup><a href="#footnote_1_65990" id="identifier_1_65990" class="footnote-link footnote-identifier-link" title="Yes, this is another name for the causes-and-purposes problem. Consider the matter well.">ii</a></sup> Da fuck do you know who did what to whom causing which etc.</p>
+<p><strong>alikim</strong> How else you personally ever judge things?<br />
+<strong>mircea_popescu</strong> Well, I don't judge things. I always blame the victim and that's good enough for me. It is, you see, impersonal. Once you make it personal you take a pretty serious bite.</p>
+<p><strong>alikim</strong> To blame the victim you need to judge it first and find guilty.<br />
+<strong>mircea_popescu</strong> Nope. You need just observe it's the victim, and apply the simple rule "victim's always at fault".</p>
+<p><strong>alikim</strong> And to be the victim. "Victim" is already judgement.<br />
+<strong>mircea_popescu</strong> Used here for shorthand. Object, if you prefer, in the agent-object relation. (Incidentally this neatly ties into the feminine-masculine debate. It'd be a world made by mediocre women that'd attempt to move things around - blame the agent instead. Guess why, and the first guess doesn't cunt and the second guess is "because they're objects themselves, and know it" by default and so you win. By default.)</p>
+<p><strong>alikim</strong> Well, you need to decide which object to blame<br />
+<strong>mircea_popescu</strong> Every verb takes an agent and an object. For each verb, you blame the object. [who] did [to whom].</p>
+<p><strong>alikim</strong> You don't know who did to whom and what, from your level of understanding you make this personal assumption that someone did something to someone else. Keyword being "personal".<br />
+<strong>mircea_popescu</strong> Well, if the whom complains, then I have basis. And otherwise if all's silent I am unlikely to care.</p>
+<p><strong>alikim</strong> Nothing you personally do is impersonal<br />
+<strong>mircea_popescu</strong> That happens to neatly translate to EXACTLY my view of responsibility :) Ie, there is no such thing as "being poor", an impersonal. Poverty is a very personal deed by the poor in question. Takes as much maintenance as anything else.</p>
+<p><strong>alikim</strong> Well, we started with me explaining my point of view and ended up with you explaining yours again.<br />
+<strong>mircea_popescu</strong> Did we. Hm.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_65990" class="footnote">Guy obviously knows a lot about games, but very little about tmsr. [<a href="#identifier_0_65990" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_65990" class="footnote">Yes, this is another name for the <a href=http://trilema.com/2015/causes-and-purposes/>causes-and-purposes</a> problem. Consider the matter well. [<a href="#identifier_1_65990" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/closing-xeur/">Closing X.EUR</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/wild-things/">Wild Things</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/but-what-about-the-slave/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/but-what-about-the-slave/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>One Response</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-142049">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/wild-things?b=damaged%20skan&amp;e=%20you#select' class='url'>Wild Things on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142049" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] damaged skang while the other the idealistic, virginal retard. Notably enough, this apprently correlates with money in the American mind, showing the subject of Arthur Blair's whine about Samuel Clemens (or if you [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="65990" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835269-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-65990")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-65990");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-65990");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

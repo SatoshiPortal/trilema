@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The State of the (f)Art on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Heretiquarium.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-101435"><div class="post" id="post-101435">                    <h1><a href="http://trilema.com/2021/the-state-of-the-fart/" rel="bookmark" title="Permanent Link to The State of the (f)Art">The State of the (f)Art</a></h1>                        <div class="date">                                     Thursday, 03 June, Year 13 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>As <a href="http://trilema.com/2021/the-euloravtoolsdiff-discussion/">previously hinted</a>, we here at Minigame Suprlabs are undergoing a complete rewrite of... well, everything, really.</p>
+<p>The trouble started with glaring inadequacy in [the shockingly, vanishingly little that's] leftover [of erstwhile] <a href="http://trilema.com/2015/no-such-labs-releases-v-for-victory/">republican infrastructure</a> : a very angry engineer <a href="http://ossasepia.com/2021/05/25/implementing-v-for-production-use/">reported</a> that she's now stuck going through and reviewing previously-thought-good matter.<sup><a href="#footnote_0_101435" id="identifier_0_101435" class="footnote-link footnote-identifier-link" title="
+May 24 13:15:54 diana_coman	imi cam vine sa arunc tot vtools si v.sh si tot, ca practic la asa ceva nu vad ce sens are, bine ca am facut ditai vtree cu ele ca sa am acum unde vana erori si altminteri sa stau apoi ce, sa fac verificare de mana la fiecare fisier la fiecare press?
+">i</a></sup> </p>
+<p>I needn't explain (I hope!) that this is the only impermissible delivery of any ideal system<sup><a href="#footnote_1_101435" id="identifier_1_101435" class="footnote-link footnote-identifier-link" title="I am not kidding -- any ideal system. That's how religions end.">ii</a></sup> ; the concrete instantiation of catastrophe presented itself as this situation whereby if a latter vpatch brings any one file in the codebase to a state from which an earlier vpatch removed it<sup><a href="#footnote_2_101435" id="identifier_2_101435" class="footnote-link footnote-identifier-link" title="Technically, reproducing a hash previously seen.">iii</a></sup>, thus creating in practice a situation vaguely similar to conceptual cyclicity, the version of V implementation we were using (v.sh) dies <em>late</em>.<sup><a href="#footnote_3_101435" id="identifier_3_101435" class="footnote-link footnote-identifier-link" title="The issue was only discovered with patch 42 -- coincidentally it's 42, what can I tell you -- but the actual problem in fact occurred much earlier. 
+You see, at patch 16 a file --- call it f1 -- was transformed into f2. Then, at patch 21, f2 was transformed back into f1. This'd be a `cycle` in principle, very strictly regarding the matter. Finally, at patch 42 f1 was again transformed, this time into f3, at which very late point pressing became impossible (because `conflicting leaves selected`, meaning V thinks it can't decide which f1 is being transformed). Needless to say v.sh mentions 16 and 42 but omits 21, and doesn't deign to indicate which hashes are involved, and in general... what, that'd be error reporting, god help us.
+Such perfectly naturally arising situation leaves the user quite stranded. Irrecoverably so if any manner of rights, codebase partitioning, or practically speaking any management tools whatsoever at all are deployed ; but even if one entirely owns the codebase in maximal extension for both time and space it's still a royal pain in the butt to chase down dubiously referenced problems through lengthy, heavy trees. In our particular case intervening file movements and other realia greatly compounded the already substantial difficulty involved -- entirely spurious, entirely `self`-created difficulty.
+It is mindboggling that this problem had to sit undisturbed for five years, that it got to lurk patiently in the shadows for Minigame to step on it (but then again, given the historical quality of NSA deliveries, it should perhaps come as no surprise) ; but then again, given the entirely spurious nature of the `republic` I naively attempted to spur out of a bunch of spurious worms... nobody did anything, and would have happily continued to `do` so, preferably forever. How's anyone to find any problem, when that `anyone` is to come out of a set that consists of no-one doing nothing ? Hm ?
+Even more infuriating, the flow assemblage flows ; it's merely the pressing portion that fails to press, being more strict (but not sufficiently strict to live up to its -- as it turns out, practically impossible -- ideals of strictness). This I deeem symptomatic of the very sort of minds that sprout this sort of junk : very `high minded` `standards`, of such unreachably impossible heights as to come by very far beyond anything that can in practice be supported, predictably constructed out of the sad simplicity of five seconds' considerations on an 8 bit processor with maybe three registers ; then, unprincipled exceptions, unreviewed (in preference of adjusting the standards to sanity) ; and then complete paralysis randomly downstream, for no approachable cause. That's how these subsistence cocksuckers think they're just as good as people who have money, that's how they actually have the unmitigable audacity to discuss `privilege` as an ethical negative, that's how they end up driving `electric` cars and doing all the rest of the inane shit they're doing -- in the brief interludes between `lockdowns`, bien sur.    
+More practically speaking, if this machinery won't be able to press once a file is returned to its previous state, if there's two categories of files, type one which can be touched and type two which must remain untouched for all time, then why the fuck doesn't it say something, somewhere, preferably at any point prior to coincidental contradiction of its incorrectly if implicitly held, untenable presuppositions ? And what am I to say to the worker who says to me `you know, I checked if it presses at every juncture` ?
+Cursory review of `alternative implementations` as `available` (perhaps better described as some kind or other of nostalgia file ; an assorted jumble of unmaintained half-implementations quite directly similar to an old actress' collection of pre-war fashionable hats, presumably free of moths to the degree you don't go checking, sad abandonalia whose only raison d'etre was some people seeking group acceptance as cheap as could be had at some point in the ever more distant past) yielded exactly what one'd expect on the strenght of the foregoing --  v.py dies early (if unhelpfully, failing to even name the file in question) but depends on a python repackaging of gnupg which isn't, for some reason nobody can be arsed to chase, availabe on the system in question ; v.pl takes longer to not come to any definite return than anyone had in practice patience for, and... well, that'd be it.
+Good riddance -- and yes I very much meant subsistence cocksucker as in the offspring of subsistence farmers meanwhile gone to `town`.">iv</a></sup> </p>
+<p>So... yeah, we're temporarily delayed in working for Eulora (in the sense of, sinking time into the delays imposed by other spurious portions of code badly written by morons so as to either not do or not correctly do other things peripheral to Eulora itself) because we're stuck rewriting V. I don't intend to release the result ; but it involves an ada-rewrite of the ancient commontools diff as well as a review of how hashes and signatures work. </p>
+<p><b>Specifically as to the proper formulation of a V tree</b> : each file is identified by a complex construction. First, a keccak hash of a convenient length is calculated upon the file. Then that result is OAEP-padded, and decrypted<sup><a href="#footnote_4_101435" id="identifier_4_101435" class="footnote-link footnote-identifier-link" title="Aka `signed`.">v</a></sup> by the RSA key of the original author. That item is stored as the file's "hash" (in lieu of what stood for a hash before). Interested users can verify that indeed the given file is the file that the author had intended (as long as they have his public key) ; and "collisions" of any kind or sort are no longer possible</span>. The arrangement also introduces a dichotomy between signatures, distinguishing the first (ie, auctorial) signature of every patch, which also establishes the hashes ; and the ulterior, which merely control its running on whatever machines recognize them.</p>
+<p><b>Specifically as to the rewrite of diff</b>... oh, where do I begin. Here, let's begin with <a href="http://ossasepia.com/2021/06/04/oh-gnat-why-do-you-overflow-your-stack/?b=st_size&#038;e=case#select">gnat</a> : </p>
+<blockquote><p>/* st_size may be 32 bits, or 64 bits which is converted to long. We don't return a useful value for files larger than 2 gigabytes in either case. */</p></blockquote>
+<p>How's that grab ya ? How about the whole implementation of Myers' lcs being found in an .h file ? Oh but don't believe me, don't take my word for it -- go, shallow out them bugs, fly-eyes! I'm not even going to tell you it's diffseq.h. How about the context.c / util.c analyze-output back and forth ? How about...</p>
+<p>It's truly not worth anybody's time ; Eulora's own V's diff will <em>bypass gnat</em> for I/O to talk directly with the system calls gnat <em>ineptly wraps</em> ; will read files and cut them up by LF ; will calculate the keccak hash of every line <em>as padded with now()</em><sup><a href="#footnote_5_101435" id="identifier_5_101435" class="footnote-link footnote-identifier-link" title="So that collisions are reduced from killers to mere irreproducible events.">vi</a></sup> and of length equal to the longest line seen ; will do the whole rest of what diff now does but correctly -- because we're people over here, not whatever the fuck it is you are. Fly-eyes.</p>
+<p>Oh, in lieu of PS : </p>
+<blockquote><p>
+<b>diana_coman</b> ma rog, fixat probabil ca nu vad de ce sa zic de fiecare data ca "-uNr" ci e mereu aia si gata<br />
+<b>diana_coman</b> ori vrei si acolo variatiile pastrate ca-cate linii de context si din astea ori ce/cum?<br />
+<b>mircea_popescu</b> tu....</p>
+<p><b>diana_coman</b> intreb, lol<br />
+<b>diana_coman</b> nu tin minte veci sa fi avut nevoie ca mai multe /mai patrate<br />
+<b>diana_coman</b> ma rog, nu e vreo nenorocire de pastrat in sensul ca e o constanta si aia e<br />
+<b>diana_coman</b> da' are ea ceva implicatii la rezultat pt ca practic *dupa aia* se aleg "hunks" alea<br />
+<b>mircea_popescu</b> gen concret, @@ -0,0 +1,4 @@ de asta vb ?</p>
+<p><b>diana_coman</b> nu<br />
+<b>diana_coman</b> ma rog, ala e din implicatii cum ziceam<br />
+<b>mircea_popescu</b> asa</p>
+<p><b>diana_coman</b> in patch ai inainte si dupa liniile insert/deleted (deci alea cu + -) si niste linii de nu-s schimbate<br />
+<b>diana_coman</b> pt context, exact cum zice<br />
+<b>mircea_popescu</b> da.</p>
+<p><b>diana_coman</b> ei, alea default sunt 3 imi pare<br />
+<b>diana_coman</b> ceea ce mi s-a parut mereu perfect ok<br />
+<b>mircea_popescu</b> ah, la AIA te referi. ca daca sa fie 3<br />
+<b>mircea_popescu</b> sa fie 3, ce plm.</p>
+<p><b>diana_coman</b> da<br />
+<b>mircea_popescu</b> io credeam ca vrei sa scoti conceptul sau nush ce ca nu pricepeam</p>
+<p><b>diana_coman</b> teoretic poti "optiune" cate sa fie<br />
+<b>diana_coman</b> nu, contexul e util, totusi<br />
+<b>mircea_popescu</b> <font color=red><b>noa lasa. 3 e numar magic ca atitea pizde fut io intr-o seara si gata, e in diff.</b></font></p>
+<p><b>diana_coman</b> aia e, ca na, e o constanta, nu ma doare mana sa il pun s-o citeasca din fisier daca e<br />
+<b>mircea_popescu</b> nu nu, lasa sa nu mai tot citeasca atita.</p>
+<p><b>diana_coman</b> insa faza e ca schimbarile sunt apoi grupate dupa asta si na, are efecte ce nu-mi par musai de dorit<br />
+<b>mircea_popescu</b> gen ?</p>
+<p><b>diana_coman</b> gen daca vrei mai mult context, atunci iti va grupa intr-un "hunk" mai multe pt ca ...n-are de unde sa-ti dea context<br />
+<b>mircea_popescu</b> si ?</p>
+<p><b>diana_coman</b> find_hunk al lui aia face: se uita ca-care-i ultima schimbare dupa care are macar atatea linii de context<br />
+<b>mircea_popescu</b> a, dar stai. a) noi nu vrem mai mult context ; b) doua linii la fel nu sparg un hunk ce plm.</p>
+<p><b>diana_coman</b> mie ca utilizator de patchuir imi pare idioata faza ca nu vreau sa se schimbe3<br />
+<b>diana_coman</b> de aia am zis: 3 si fix imi pare foarte ok<br />
+<b>mircea_popescu</b> <b>nici nu mi se pare posibil. 3 vesnic, si cine nu foloseste 3 e un copil lachios de-ala cu net free de la gayromeo si nici nu ii citim patchurile</b><br />
+<b>mircea_popescu</b> ce plm, optiuni acuma ?! sa se duca.</p>
+<p><b>diana_coman</b> ce ziceam dinsus posibil neclar e ca de aia nu vreau sa fie variabila ci prefer sa fie constanta<br />
+<b>diana_coman</b> asa, lol<br />
+<b>mircea_popescu</b> pai nu doar ca sa fie constanta ci ca sa fie 3.<br />
+<b>diana_coman</b> da<br />
+<b>mircea_popescu</b> e numar magic, ca si cum ar vrea acuma sa fie alt <a href="http://trilema.com/2014/the-miracles-that-matter/">e</a>.<br />
+<b>diana_coman</b> bun atunci; restul ca si format imi pare ok, nu vad deocamdata probleme</p></blockquote>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_101435" class="footnote"><br />
+<blockquote>May 24 13:15:54 <b>diana_coman</b>	imi cam vine sa arunc tot vtools si v.sh si tot, ca practic la asa ceva nu vad ce sens are, bine ca am facut ditai vtree cu ele ca sa am acum unde vana erori si altminteri sa stau apoi ce, sa fac verificare de mana la fiecare fisier la fiecare press?</p></blockquote>
+<p> [<a href="#identifier_0_101435" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_101435" class="footnote">I am <b><u>not</u></b> kidding -- <em>any</em> ideal system. That's how <a href="http://trilema.com/2009/problema-sistemelor-sociale-ideale/">religions</a> end. [<a href="#identifier_1_101435" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_101435" class="footnote">Technically, reproducing a hash previously seen. [<a href="#identifier_2_101435" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_101435" class="footnote">The issue was only discovered with patch 42 -- coincidentally it's 42, what can I tell you -- but the actual problem in fact occurred much earlier. </p>
+<p>You see, at patch 16 a file --- call it f1 -- was transformed into f2. Then, at patch 21, f2 was transformed back into f1. This'd be a "cycle" in principle, very strictly regarding the matter. Finally, at patch 42 f1 was again transformed, this time into f3, <em>at which very late point</em> pressing became impossible (because "conflicting leaves selected", meaning V thinks it can't decide which f1 is being transformed). Needless to say v.sh mentions 16 and 42 but omits 21, and doesn't deign to indicate which hashes are involved, and in general... what, that'd be error reporting, god help us.</p>
+<p>Such perfectly naturally arising situation leaves the user quite stranded. Irrecoverably so if any manner of rights, codebase partitioning, or practically speaking any management tools whatsoever at all are deployed ; but even if one entirely owns the codebase in maximal extension for both time and space it's still a royal pain in the butt to chase down dubiously referenced problems through lengthy, heavy trees. In our particular case intervening file movements and other <em>realia</em> greatly compounded the already substantial difficulty involved -- entirely spurious, entirely "self"-created difficulty.</p>
+<p>It is mindboggling that this problem had to sit undisturbed for five years, that it got to lurk patiently in the shadows for Minigame to step on it (but then again, given the <a href="http://trilema.com/2020/forum-logs-for-01-oct-2017/#2344490">historical quality of NSA deliveries</a>, it should perhaps come as no surprise) ; but then again, given the entirely spurious nature of the "republic" I naively attempted to spur out of a bunch of spurious worms... nobody did anything, and would have <a href="http://trilema.com/2019/a-nickels-worth-of-clues/">happily</a> continued to "<a href="http://trilema.com/2020/forum-logs-for-14-dec-2017/#2376848">do</a>" so, preferably forever. How's anyone to find any problem, when that "anyone" is to come out of a set that consists of no-one doing nothing ? Hm ?</p>
+<p>Even more infuriating, the flow assemblage flows ; it's merely the pressing portion that fails to press, being more strict (but not sufficiently strict to live up to its -- as it turns out, practically impossible -- ideals of strictness). This I deeem symptomatic of the very <em>sort of minds</em> that sprout this sort of junk : very "high minded" "standards", of such unreachably impossible heights as to come by very far beyond anything that can in practice be supported, predictably constructed out of the sad simplicity of five seconds' considerations on <a href="http://trilema.com/2015/peripateticists-kinda-except-girls-not-boys-bare-cunt-instead-of-toga-and-walking-around-the-house-not-the-garden-but-otherwise-exactly-the-same/?b=Fundamentally&#038;e=furry#select">an 8 bit processor with maybe three registers</a> ; then, unprincipled exceptions, unreviewed (in preference of adjusting the standards to sanity) ; and then complete paralysis randomly downstream, for no approachable cause. That's how these subsistence cocksuckers think they're just as good as people who have money, that's how they actually have the unmitigable audacity to discuss "privilege" as an ethical negative, that's how they end up driving "electric" cars and doing all the rest of the inane shit they're doing -- in the brief interludes between "lockdowns", <em>bien sur</em>.    </p>
+<p>More practically speaking, if this machinery won't be able to press once a file is returned to its previous state, if there's two categories of files, type one which can be touched and type two which must remain untouched for all time, then why the fuck doesn't it say something, somewhere, preferably at any point prior to coincidental contradiction of its incorrectly if implicitly held, untenable presuppositions ? And what am I to say to the worker who says to me "you know, I checked if it presses at every juncture" ?</p>
+<p>Cursory review of "alternative implementations" as "available" (perhaps better described as some kind or other of <a href="http://trilema.com/2021/simple-steps-adnotated/#footnote_3_101112">nostalgia file</a> ; an assorted jumble of unmaintained half-implementations quite directly similar to an old actress' collection of pre-war fashionable hats, presumably free of moths to the degree you don't go checking, sad abandonalia whose only raison d'etre <em>was</em> some people seeking group acceptance as cheap as could be had at some point in the ever more distant past) yielded exactly what one'd expect on the strenght of the foregoing --  v.py dies early (if <a href="http://trilema.com/2019/how-what-not-to-do/">unhelpfully</a>, failing to even name the file in question) but depends on a python repackaging of gnupg which isn't, for some reason nobody can be arsed to chase, availabe on the system in question ; v.pl takes longer to not come to any definite return than anyone had in practice patience for, and... well, that'd be it.</p>
+<p>Good riddance -- and <span style="background-color:#d3d3d3" id="select">yes I very much meant subsistence cocksucker as in <a href="http://trilema.com/2012/bai-deci-va-rog-sa-mi-spuneti-ca-nu/?b=Aia-i&#038;e=destul#select">the offspring of subsistence farmers</a> meanwhile <a href="http://trilema.com/2020/dumb-bitches-giving-prostitution-a-bad-name/">gone to "town"</a>. [<a href="#identifier_3_101435" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_101435" class="footnote">Aka "signed". [<a href="#identifier_4_101435" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_101435" class="footnote">So that collisions are reduced from killers to mere irreproducible events. [<a href="#identifier_5_101435" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2021/the-curdle/">The curdle</a></div>
+                <div class="alignright"><a href="http://trilema.com/2021/ongoing-keks/">Ongoing keks</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2021/the-state-of-the-fart/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2021/the-state-of-the-fart/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>2 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-164683">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2021/06/09/the-map-of-diffs-output-code-or-why-nobody-wants-to-read-that-ever-again/?b=as%20needed%20un&amp;e=them#select' class='url'>The Map of Diff's Output Code (or Why Nobody Wants to Read That Ever Again) &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-164683" title="">Wednesday, 9 June 2021</a>
+					</div>
+					<p>[...] as needed until all is clear indeed and without remainder. Since I did exactly this, given that it had to be done, here's the extracted map of calls (page numbers are based on my printing of the code so take them [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-165099">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2021/06/18/a-sneak-peek-at-smg-patch-in-action/?b=there%20is%20sti&amp;e=ess%2C#select' class='url'>A Sneak Peek at SMG-Patch in Action &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-165099" title="">Friday, 18 June 2021</a>
+					</div>
+					<p>[...] there is still work to do4 on the remaining bits and parts required for a full SMG-V, I won't attempt just yet a full list of all the cleanups, changes and additions. Nevertheless, [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="101435" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832450-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-101435")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-101435");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-101435");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

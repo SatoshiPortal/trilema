@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>My three days of AI on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">024776FFD3CBD21C872ECCD26AD078C5<br />BA0586E2E57CF68515E3C4828A673A6E
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-71072"><div class="post" id="post-71072">                    <h1><a href="http://trilema.com/2017/my-three-days-of-ai/" rel="bookmark" title="Permanent Link to My three days of AI">My three days of AI</a></h1>                        <div class="date">                                     Friday, 13 January, Year 9 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>I suspect this might be an interesting story, so let's tell it!</p>
+<p>Everything started one fine Saturday early afternoon, with</p>
+<blockquote><p><strong>mircea_popescu</strong> and entirely unrelatedly : anyone willing to stand up an irc bot for me (as a service for hire deal) and expose some kind of programmable interface that can read messages to it, process and push out a reply ? bonus points if i don't have to learn crazy-shitstick<sup><a href="#footnote_0_71072" id="identifier_0_71072" class="footnote-link footnote-identifier-link" title="The reference here is, of course, 
+WHY YOU WANT RAIL FOR KALASHNIKOV? IS NOT GOOD ENOUGH AS PROCURED FROM IZHEVSK MECHANICAL WORKS? YOU THINK NEEDS IMPROVEMENT? THEN MAYBE YOU FIND JOB WITH ARMY OF RUSSIA! YOU HAVE DRINKS WITH MIKHAIL KALASHNIKOV, TRADE STORY OF MANY WEAPONS DESIGNED AND DETAILS OF SCHOOL FOR ENGINEERING!
+OR MAYBE YOU NOT DO THIS, PROBABLY IS BECAUSE YOU NEVER DESIGN WEAPON IN WHOLE LIFE. YOU LOOK AT FINE RUSSIAN RIFLE, THINK IT NEED CRAZY SHIT STICK ON ALL SIDES OF WEAPON. YOU HAVE DISEASE OF AMERICAN CAPITALIST, CHANGE THING THAT IS FINE FOR NO REASON EXCEPT TO LOOK DIFFERENT FROM COMRADE. YOU PUT CHEAP FLASHLIGHT OF CHINESE SLAVE FACTORY ON ONE SIDE, YOU PUT BAD SCOPE OF AMERICAN MIDDLE WEST ON OTHER SIDE, YOU PUT FRONT PISTOL GRIP ON BOTTOM SO YOU ARE LIKE AMERICAN MOVIE GUY JOHN RAMBO. MAYBE YOU PUT SEX DILDO ON TOP TO FUCK YOURSELF IN ASSHOLE FOR MAKING SHAMEFUL TRAVESTY OF RIFLE OF MIKHAIL KALASHNIKOV, NO?
+RIFLE IS FINE. YOU FUCK IT, IT ONLY GET HEAVY AND YOU STILL NO HIT LARGEST SIDE OF BARN. GO TO FIRING RANGE, PRACTICE WITH MANY MAGAZINE OF CARTRIDGE. THEN YOU NOT NEED DUMB SHIT PUT ON SIDE OF RIFLE.
+As they say, we've decided to try diplomacy.
+">i</a></sup>-"$modernlanguage".<br />
+<strong>mircea_popescu</strong> kind-of has a hankering to dick around with "ai", but no time to fuck with linux eigenstates.</p></blockquote>
+<p>That happened the previous Saturday. Today is Friday, so the entire story took less than a week<sup><a href="#footnote_1_71072" id="identifier_1_71072" class="footnote-link footnote-identifier-link" title="We did other things, all of us. My three days of AI are doubled by his two days of bot writing and by the previous weeks of trinque's botmaking and so on and so forth. As they say (to Paulinum), 
+Inde illa maximi medicorum exclamatio est: uitam breuem esse, longam artem. Inde Aristotelis cum rerum natura exigentis minime conueniens sapienti uiro lis: aetatis illam animalibus tantum indulsisse, ut quina aut dena secula educerent: homini in tam multa ac magna genito tanto citeriorem terminum stare. Non exiguum temporis habemus, sed multum perdidimus. Satis longa uita et in maximarum rerum consummationem: large data est, si tota bene conlocaretur. Sed ubi per luxum ac neglegentiam diffluit, ubi nullae bonae rei inpenditur, ultima demum necessitate cogente, quam ire non intelleximus, transisse sentimus. Ita est, non accipimus breuem uitam, sed facimus, nec inopes eius, sed prodigi sumus. Sicut amplae et regiae opes ubi ad malum dominum peruenerunt, momento dissipantur, at quamuis modicae, si bono custodi traditae sunt, usu crescunt: ita aetas nostra bene disponenti multum patet.
+">ii</a></sup> to unfold. And what a week it was indeed!</p>
+<p>A couple of days after the above, the Right Honorable <a href="http://cascadianhacker.com/">Lord Vulpes</a> proposed the bot run Lisp. To everyone's excitement I made no protest, and so the great hope was born. In His Lordship's the Master of the Rolls's own words, </p>
+<blockquote><p><strong><a href=" http://trinque.org/">trinque</a></strong> will not be surprised if mircea_popescu ends up writing the ~actual AI apocalypse, now infected with the parentheses</p></blockquote>
+<p>The festivities went something as follows<sup><a href="#footnote_2_71072" id="identifier_2_71072" class="footnote-link footnote-identifier-link" title="I've removed a lot of spurious REPLing via the chat interface. If you are particularly curious the whole story is available in the #chainstate log. The final code is 
+(defpackage :mpbot
+  (:use :cl :logbot :drakma) )
+(in-package :mpbot)
+
+(defun subsets (list)
+  (if (null list) '(nil)
+    (let ((e (car list) )
+          (ss (subsets (cdr list) ) ) )
+      (append ss (loop for s in ss collect (cons e s) ) ) ) ) )
+
+(defun tree-thingy (items)
+  (if items
+    (let ((node (cdr (subsets items) ) ) )
+      (loop for sub in node
+        collect (cons sub
+          (tree-thingy (remove-if
+       (lambda (a) (member a sub) ) items) ) ) ) )
+    nil) )
+
+(defun tree-thingy-string (s)
+  (let word-list (remove-duplicates
+   (split-sequence:split-sequence #\space s :remove-empty-subseqs t)
+   :test #'string-equal) )
+   if (> length worldlist 4) (tree-thingy word-list) nil)
+
+(defun brain (target speaker message)
+ (format nil `You don't trick me, sly ~A with your ~A lures!` speaker
+  (paste (tree-thingy-string (remove-if-not (lambda (a)
+   (find a `abcdefghijklmnopqrstuvwxyz `) ) message) )
+  )
+ )
+)
+
+and mostly consists of the work of His Lordship the Lord Chancellor ; my own changes are unimportant, more in the vein of scratchmarks left by a young kitten on the graciously provided scratching post. 
+I also added some stuff that actually happened in #trilema, for completeness.">iii</a></sup></p>
+<blockquote><p><b>mircea_popescu</b> quite a cool little place you got yourself here huh.<br />
+<b>ben_vulpes</b> #trilema-corrugated-steel-walls</p>
+<p><b>mircea_popescu</b> hey, if i were starting #trilema i'd want it to look just like this. a few people, a coupla bots, a potted plant...<br />
+<b>ben_vulpes</b> skulls on the walls, orchids that look like the spawn of cthulu, dead trees...<br />
+<b>ben_vulpes</b> oh and this lovely iridescent purple green vine</p>
+<p><b>mircea_popescu</b> lol. you should write fantasy for eulora sometime.<br />
+<b>ben_vulpes</b> i'm just describing my office. oh the skull is painted black, fwiw. EVERYTHING MATCHES<sup><a href="#footnote_3_71072" id="identifier_3_71072" class="footnote-link footnote-identifier-link" title="No he's not gay. Some people have taste, what. And plenty of men drink wine. Seriously.">iv</a></sup></p>
+<p><b>mircea_popescu</b> i thought it just came from a black man.<br />
+<b>ben_vulpes</b> humans don't have horns like that i don't think</p>
+<p><b>ben_vulpes</b> eat http://p.bvulpes.com/pastes/p31HC/?raw=true mighty_niggles<br />
+<b>mighty_niggles</b> ben_vulpes: http://p.bvulpes.com/pastes/aTUow/?raw=true</p>
+<p><b>ben_vulpes</b> mircea_popescu: ^^<br />
+<b>mircea_popescu</b> nice!</p>
+<p><b>mircea_popescu</b> your wife's a whore mighty_niggles<br />
+<b>mighty_niggles</b> herp diddly!</p>
+<p><b>mircea_popescu</b> your wife mighty_niggles 's a whore.<br />
+<b>mighty_niggles</b> herp diddly!</p>
+<p><b>mircea_popescu</b> oook this is nice!<br />
+<b>ben_vulpes</b> i halfway want to roll it into mimisbrunnr but...</p>
+<p><b>mircea_popescu</b> neh, ima join it to trilema eventually<br />
+<b>ben_vulpes</b> lmk, i can get it in there whenever</p>
+<p><b>mircea_popescu</b> yeh ima fuck a little with lisp now.<br />
+<b>phf</b> ben_vulpes: why the defpackage/in-package prelude?<br />
+<b>ben_vulpes</b> i wanted to ensure that `brain' got into the declaimed function definition in the mpbot package</p>
+<p><b>mircea_popescu</b> ben_vulpes are you available to do "natural language to lisp" translation for me or should i just stfu and read a book ?<br />
+<b>ben_vulpes</b> sure bub</p>
+<p><b>mircea_popescu</b> so if i want to have it say "you too<br />
+<b>ben_vulpes</b> (format nil "you too ~A" target)</p>
+<p><b>mircea_popescu</b> aha!<br />
+<b>ben_vulpes</b> nil says "return the string instead of writing it to lisp image stdout"</p>
+<p><b>phf</b> well, what i mean is that bot's brain will always live in the same package<br />
+<b>ben_vulpes</b> file gets written to disk and them (load ...)ed</p>
+<p><b>phf</b> o_o<br />
+<b>ben_vulpes</b> i know, i feel gross. what'd be better?</p>
+<p><b>phf</b> read-from-string to get the sexp. you wrap that in a handler to catch syntax etc. issues, then eval.<br />
+<b>ben_vulpes</b> aaah</p>
+<p><b>mircea_popescu</b> is rather grateful to phf<br />
+<b>mircea_popescu</b> kickass scheme we got here, 3 layer deep.<br />
+<b>ben_vulpes</b> managing linux eigenstates wasn't even that bad with v in the loop<br />
+<b>phf</b> you can wrap r-f-s and eval in the necessary combination of *readtable* and *package* binds<br />
+<b>ben_vulpes</b> ah, that's how you'd do it.</p>
+<p><b>mircea_popescu</b> ben_vulpes so i can't just replace quoted string with (format nil "you too ~A" target) ; why not ?<br />
+<b>ben_vulpes</b> change that (declare (ignore target speaker message)) to (declare (ignore target)) if you're going to start branching on speaker and message<br />
+<b>mircea_popescu</b> ah!</p>
+<p><b>mircea_popescu</b> ben_vulpes said you suck mighty_niggles<br />
+<b>mighty_niggles</b> You don't trick me, sly mircea_popescu</p>
+<p><b>mircea_popescu</b> OMFG INTELLIGENCE ARTIFICIALLY<br />
+<b>ben_vulpes</b> lol have fun</p>
+<p><b>mircea_popescu</b> can you tell ?<br />
+<b>ben_vulpes</b> i don't think anyone could mistake it</p>
+<p><b>mircea_popescu</b> ben_vulpes how do i tell it to take message and create a tree so that call(word) = message without the word ?<br />
+<b>ben_vulpes</b> you want to strip a word from a message?<sup><a href="#footnote_4_71072" id="identifier_4_71072" class="footnote-link footnote-identifier-link" title="Yeah, good fucking luck, that is ~totally~ what I'm going to want it to do, something simple and sane like that. Because this is happy land and I really am a kitteh.">v</a></sup></p>
+<p><b>mircea_popescu</b> no, i want sentence "one two three" to become (one  ( (two, three), two (three)) so that sentence(one) = "two, three" and sentence(one(two)) = "three"<br />
+<b>ben_vulpes</b> hm</p>
+<p><b>mircea_popescu</b> and similarily for two etc.<br />
+<b>ben_vulpes</b> thinking</p>
+<p><b>mircea_popescu</b> i thought lisp was instantaneous. isn't that what repl means ? too quick to reply ?<br />
+<b>ben_vulpes</b> get outta heah</p>
+<p><b>ben_vulpes</b> phf: is there a tree-construction approach to this that doesn't boil down to ruby style dicts with string keys?<br />
+<b>phf</b> assocs?<br />
+<b>phf</b> i restarted the client, and i don't have the log on speed dial so i've no idea what the question was<br />
+<b>mircea_popescu</b> ok so the cannonical statement of this problem would be : how do you transform foreach i in A tree[i]</p>
+<p><b>ben_vulpes</b> i struggle to comprehend, but it may simply take time. have notepad out nao<br />
+<b>mircea_popescu</b> (obviously this is extremely repetitive, so ideally the struct is not evil wrt memory usage)<br />
+<b>phf</b> ...</p>
+<p><b>phf</b> so we have three items "one" "two" "three"<br />
+<b>mircea_popescu</b> initially we have a string of these. yeah. hai Framedragger<br />
+<b>ben_vulpes</b> hola Framedragger</p>
+<p><b>phf</b> and then you're doing a permutation?<br />
+<b>mircea_popescu</b> phf then for each individual item, i take all the remainder, and make them nodes ; and all the combinations of the remainder, also make individual nodes. and then for each of these node, the remainder idem</p>
+<p><b>ben_vulpes</b> i think i start to see the algo<br />
+<b>mircea_popescu</b> it should be easy if you know what you're doing!!1<br />
+<b>mircea_popescu</b> all recursion!11<br />
+<b>mircea_popescu</b> has nfi</p>
+<p><b>ben_vulpes</b> spoken like a true phb<br />
+<b>mircea_popescu</b> polyhydroxybutane ?</p>
+<p><b>ben_vulpes</b> pointy haired boss!<br />
+<b>mircea_popescu</b> darn</p>
+<p><b>phf</b> oh i get it<br />
+<b>ben_vulpes</b> mhm. cs 201 here i come</p>
+<p><b>phf</b> everyone's hiding out the storm here<sup><a href="#footnote_5_71072" id="identifier_5_71072" class="footnote-link footnote-identifier-link" title="At the time His Lordship the Lord Admiral had just introduced a whole new line of cannons resulting in slightly stormy seas.">vi</a></sup><br />
+<b>ben_vulpes</b> mircea_popescu: and duplicates?<br />
+<b>mircea_popescu</b> knock out dups. "one two three four one" = "one two three four" in this grammar</p>
+<p><b>ben_vulpes</b> how can three be a leaf of third order off of (one two) if (one two) is a leaf of first order? i (one two) also a leaf of second order off of three?<br />
+<b>mircea_popescu</b> let me carefully check the example. one-two intends to signify 1st order leaf is "one", 2nd order is "two". contrairwise, (one, two) intends to signify the leaf is actually "one two" as such</p>
+<p><b>ben_vulpes</b> ah<br />
+<b>mircea_popescu</b> i prolly should have said one->two<br />
+<b>ben_vulpes</b> dun think mine's right yet</p>
+<p><b>mircea_popescu</b> phf that actually seems exactly right unless i woefully misunderstand the parens. so there's 7 leaves first rank ; of these 1 has 0 subleaves ; 3 have 1 subleaf and 3 have 3 subleaves.  that right  ?<br />
+<b>phf</b> yes<sup><a href="#footnote_6_71072" id="identifier_6_71072" class="footnote-link footnote-identifier-link" title="Consider that it took him the holy 20 minutes to solve this problem and you're well on your way of understanding why the guy's such a famous lisper.">vii</a></sup></p>
+<p><b>mircea_popescu</b> yep, winner. how did you do it ? :D<br />
+<b>phf</b> recursion!</p>
+<p><b>mircea_popescu</b> lol<br />
+<b>ben_vulpes</b> "two is 3rd order off one->three"? or is two actually 3rd order off of one->two</p>
+<p><b>mircea_popescu</b> 1st order : one ; 2nd order : two ; 3rd order : three. it's probably a three liner, too. damnit.<br />
+<b>phf</b> http://p.bvulpes.com/pastes/VqDC2/?raw=true<br />
+<b>phf</b> that's a naive version though</p>
+<p><b>mircea_popescu</b> so defun subsets introduces a function ?<br />
+<b>phf</b> yeap</p>
+<p><b>mircea_popescu</b> (split-sequence:split-sequence #\space s :remove-empty-subseqs t)<br />
+<b>ben_vulpes</b> remove-duplicates</p>
+<p><b>mircea_popescu</b> ben_vulpes aha.<br />
+<b>ben_vulpes</b> (not for chars)</p>
+<p><b>phf</b> well, no, first it splits it on whitespace, then it removes duplicates<br />
+<b>mircea_popescu</b> but i want it first to nuke non-alpha, then split it, then remove.<br />
+<b>ben_vulpes</b> i'm out for a bit</p>
+<p><b>mircea_popescu</b> laters ben_vulpes<br />
+<b>ben_vulpes</b> neat puzzle. will refrain from answer guide for now.</p>
+<p><b>mircea_popescu</b> i'd gladly read alt implementation for my own culture. this adventure has increased the total lisp code i ever read by a hefty %<br />
+<b>mircea_popescu</b> phf and what's remove-if (lambda (a) (member a sub)) items))) do ?<br />
+<b>phf</b> so you have a list, items. plain remove as a first argument takes what you want to remove (remove a (a b a c)) -> (b c)</p>
+<p><b>mircea_popescu</b> aha<br />
+<b>phf</b> but in this case we want to remove things conditionally. for each item in the list "items" we want to remove an item if it's a member of "sub" list.</p>
+<p><b>mircea_popescu</b> we do.<br />
+<b>phf</b> so (lambda (...) ...) introduces an anonymous function</p>
+<p><b>mircea_popescu</b> which returns true if a is in sub ?<br />
+<b>phf</b> yeap. (lambda (a) (member a sub)) is (member a sub) waiting for execution. (member element list) in turn return "true" if element's in the list. </p>
+<p><b>mircea_popescu</b> or wait. lambda (a) (a) returns a if a = a ?<br />
+<b>phf</b> yes. (lambda (a) a) is an identity function (there's also a standard equivalent called "identity")</p>
+<p><b>mircea_popescu</b> so to verbalize this, remove-if (lambda (a) (member a sub)) items))) means, remove from items element x defined as whatever lambda thinks x and "member x sub" means ?<br />
+<b>mircea_popescu</b> lol check it out, even the verbalisation demands parens<br />
+<b>mircea_popescu</b> so to verbalize this, remove-if (lambda (a) (member a sub)) items))) means, remove from items element x defined as whatever lambda thinks (x "member x sub") means ?<br />
+<b>phf</b> hmm, pretty close</p>
+<p><b>mircea_popescu</b> what did i miss ?<br />
+<b>phf</b> lambda decides what "(x) (member x sub)" means during compilation. it returns a thing (a higher order function). that higher order function is what's making the decisions. remove looks at each item and compares it with first argument. remove-if looks at each item and for each item asks its first argument to make decision</p>
+<p><b>mircea_popescu</b> aha. ok, i might have a clue as to how this works, maybe. now, if i wanted to associate a number with each node, would it go into this struct or should i make a separate struct ?<br />
+<b>phf</b> i mean subsets is pretty straightforward, and maps to a concept. (subsets '(1 2 3)) -> (NIL (3) (2) (2 3) (1) (1 3) (1 2) (1 2 3)). so the bulk of specific complexity sits in "tree-thingy".</p>
+<p><b>mircea_popescu</b> right. hm i thought tree-tingy was a function.<br />
+<b>phf</b> right, it is. i mean bulk of problem's complexity is in the code of tree-thingy.</p>
+<p><b>mircea_popescu</b> ah yes.<br />
+<b>phf</b> but yeah, so re "separate structure" it's usually just a question of optimization. you could add numbering to tree-thingy and if you're generating a gigantic tree that might be a better option.</p>
+<p><b>mircea_popescu</b> it looks like it would be pretty large yes. but more from a laziness pov, i'd prefer to use the easiest reference model :)<br />
+<b>phf</b> right, from didactic perspective (and also how i would've approach this problem by default) is to have a separate tree walker that takes the result of tree-thingy and produces a new tree, which has all the nodes numbered. it's probably another 5-7 line function.</p>
+<p><b>mircea_popescu</b> i don't want them numbered, i want a number added so i can give the nodes weight. i guess it's what you meant.<br />
+<b>phf</b> oh oh. e're on the same page here.</p>
+<p><b>mircea_popescu</b> so as to go from  ( ("one" "two" "three"))) to  ( ("one" "two" "three") (0.556))) or such. is that even correct notation ?<br />
+<b>phf</b> so it's a little bit tricky because lisp list processing at the bedrock operates on "cons cells" rather than lists, and in code i'm mixing and matching them. sometimes a structure of many cons cells is a valid list, but sometimes not</p>
+<p><b>mircea_popescu</b> hm. and for that matter, how do i use references ? suppose i want to find the content of the leaf off one->three. how do i say tree(one(three)) ?<br />
+<b>phf</b> (cons "a" (cons "b" (cons "c" nil))) -> ("a" "b" "c"). likewise (cons "a" (list "b" "c")) -> ("a" "b" "c").</p>
+<p><b>mircea_popescu</b> so (cons "a" (cons "b")) would return ("c") ?<br />
+<b>phf</b> no no cons is for building things.</p>
+<p><b>mircea_popescu</b> ah yes. but i want to get the specific leaf from the tree now. or i'm sorry, am i interrupting ?<br />
+<b>phf</b> i'm trying to decide if the whole cons/list thing is worth fully driving home at the moment :)</p>
+<p><b>mircea_popescu</b> alrighty, go ahead :)<br />
+<b>phf</b> cons is a building block, basically, that is often used to produce valid lists. but in order to navigate the result you have to visualize what the cons structure looks like</p>
+<p><b>mircea_popescu</b> right<br />
+<b>phf</b> there are functions for navigating a cons structure. so in order to actually reference stuff you basically need to grok what the result of "tree-thingy" looks like, and then produce an appropriate combination of referencing calls</p>
+<p><b>mircea_popescu</b> so if i had the tree from above and i wanted to get one->two->three.content and one->two.weight, i'd be writing my own function rather than using some sort of referencing scheme ?<br />
+<b>phf</b> pretty much</p>
+<p><b>mircea_popescu</b> tsk. so how do i say "return a list of all nudes hanging from a node called "two three"" ?<br />
+<b>mircea_popescu</b> uh... nodes. obviously.<br />
+<b>phf</b> :D</p>
+<p><b>mircea_popescu</b> but ideally as a list, or w/e, an iterable array, or what's it called. something i can go a[iterator] over<br />
+<b>phf</b> (defun string-set-equal (a b) (and (subsetp a b :test 'string-equal) (subsetp b a :test 'string-equal)))<br />
+<b>phf</b> (defun get-node (node tree) (assoc node tree :test 'string-set-equal))</p>
+<p><b>mircea_popescu</b> so as to the first : define a function called "string-set-equal" to take two parameters and to return uh... to return the intersection of checking if a b or b a are string-equal to test ?<br />
+<b>phf</b> heh, so the more code the more complexity :) you can kind of stick to the basic set of concepts, but at some point it just becomes impractical</p>
+<p><b>mircea_popescu</b> my interest is mostly in terms of getting this notion on paper.<br />
+<b>phf</b> string-set-equal takes two lists-of-strings and checks if they are the same, ignoring the order</p>
+<p><b>mircea_popescu</b> ok. so defun isn't followed by the name of the item defined necessarily ?<br />
+<b>phf</b> it is. what was an explanation of what my defined function does</p>
+<p><b>mircea_popescu</b> oh i thought you meant above "is" as in, language primitive. like "for". i guess my very imperative reading style isn'rt adequate for lisp huh. carry on!<br />
+<b>phf</b> well, lisp has very few language primitives. there's something like 10, and of the ones that is in the code only if and let are primitives.</p>
+<p><b>mircea_popescu</b> aha. and lambda ?<br />
+<b>phf</b> right :) it's a primitive in LISP (and scheme) and for all practical purposes it is in common lisp to, but technically in common lisp specifically it's not a special operator</p>
+<p><b>mircea_popescu</b> ah. k.<br />
+<b>phf</b> but yeah, so (subsetp a b) checks if a is a subset of b, e.g. (1 2 3) (1 2 3 4) -> t</p>
+<p><b>mircea_popescu</b> ah it returns true rather than the subset. ok.<br />
+<b>phf</b> if a is a subset of b and b is a subset of a, then both are equal. :test 'string-equal is a clarification that equality should be tested in a more precise way. specifically i'm trying to see if strings inside that list are equal ignoring the case differences. (string-equal "ABC" "abc") -> t</p>
+<p><b>mircea_popescu</b> ah darn, this also doesn't belong here. so ideally i want to transform the message string prior to all this processing : all lowercase, nothing but alphabetic chars and space. then we can make strong assumptions here that you don't need that, making the code simpler.<br />
+<b>phf</b> ah, there's actually a way</p>
+<p><b>mircea_popescu</b> a string isn't a list of characters i don't expect ?<br />
+<b>phf</b> yeah.. it's an ~array~ of characters</p>
+<p><b>mircea_popescu</b> uh<br />
+<b>phf</b> the distinction is there because von neumann</p>
+<p><b>mircea_popescu</b> wait lisp has arrays ?  so epic, how do i say for i 1 to size of message if message[i] not in [a..z ] delete it ? (to my mind, if it wasn't obvious, an array is a list with item counter)<br />
+<b>phf</b> that actually goes back to a thread long time ago<sup><a href="#footnote_7_71072" id="identifier_7_71072" class="footnote-link footnote-identifier-link" title="This unresolved reference is pending resolution. Meanwhile it was resolved.">viii</a></sup></p>
+<p><b>mircea_popescu</b> aha<br />
+<b>phf</b> on von neumann machines array/list is an artifact of memory management.</p>
+<p><b>mircea_popescu</b> yeah. hence why i say counter, the assumption being there's nothing between 2 and 3. anyway, so if message = "hurr" can i say message[2] and does it yield u or r ?<br />
+<b>phf</b> array is preallocated memory region, that you can reference into at constant time, but can't resize. a list is a growable structure, that can't reference into at constant time, but can "resize". lisp does the same count from 0 thing, so #\r. it'll be something like (elt "hurr" 2) -> #\r</p>
+<p><b>mircea_popescu</b> whjat's #\r ? don't tell me # is alphanum and \r is space<br />
+<b>phf</b> that's how lisp prints and reads individual characters in code</p>
+<p><b>mircea_popescu</b> is this bulky as fuck ? what's the cannonical way to constrain the message space through deletion ?<br />
+<b>phf</b> it's the same number of characters total as C, 'r'. but anyway, to finally get back to the point :D i've no idea about canonical, but if i were to do it, i will convert string to list, filter it using list filtering procedures and then convert it back</p>
+<p><b>mircea_popescu</b> why would you convert it to list ?! why not iterate through array, and if element fits our bill push it into a list ? (and in passing let it be said i am profoundly worried about a language space that doesn't have a cannonical way to take a message M made out of elements in A and transform it into M' made out of elements in A')<br />
+<b>phf</b> that actually works too, it's not necessarily cheaper though</p>
+<p><b>mircea_popescu</b> how could it be cheaper to transform toi list too ? does compiler optimize the shit out of what we tell it anyway ?<br />
+<b>phf</b> i didn't say it's cheaper, i said that it's not necessarily too expensive :}</p>
+<p><b>mircea_popescu</b> you said it's not necessarily cheaper, that means the other could be cheaper!<br />
+<b>phf</b> that's fair</p>
+<p><b>mircea_popescu</b> minor point. so how do i iterate through array a, and if item is in set push it into list b ?<br />
+<b>phf</b> actually, i'm being all over the place. so if specifically we want to remove characters out of a string, it'll be something like (remove-if-not (lambda (a) (find a "abcdef")) "abc, xyz, def") which will return "abce"</p>
+<p><b>mircea_popescu</b> and i enumerate the alphabet there ?<br />
+<b>phf</b> yeap</p>
+<p><b>mircea_popescu</b> do you have ANY IDEA how fucking juvenile this is ?<br />
+<b>phf</b> explain</p>
+<p><b>mircea_popescu</b> ima list the alphabet ? bejaysus.</p>
+<p><b>mircea_popescu</b> hurr mighty_niggles ?<br />
+<b>mighty_niggles</b> You don't trick me, sly mircea_popescu</p>
+<p><b>mircea_popescu</b> well that didn't work.<br />
+<b>ben_vulpes</b> read the error message. too many arguments to format. ~A is an "ascii" directive in format strings</p>
+<p><b>mircea_popescu</b> o hai thar.<br />
+<b>ben_vulpes</b> i'm still not here, cracked the laptop in the car for other reasons.</p>
+<p><b>mircea_popescu</b> i thought it meant something a la awk, "1st var"<br />
+<b>ben_vulpes</b> no.</p>
+<p><b>mircea_popescu</b> a ok<br />
+<b>ben_vulpes</b> you can do "~{~A ~}" which will print elements of a list. okay bye for real<br />
+<b>phf</b> haha, let's add more complexity :)</p>
+<p><b>mircea_popescu</b> durr mighty_niggles ...,55<br />
+<b>mighty_niggles</b> You don't trick me, sly</p>
+<p><b>mircea_popescu</b> totally.<br />
+<b>phf</b> hehe, ok, so what are you trying to do?</p>
+<p><b>mircea_popescu</b> i am trying to have it return "You don't trick me, sly mircea_popescu with your durr lures!""<br />
+<b>phf</b> (format nil "You don't trick me, sly ~A with your ~A lures!" (remove-if-not (lambda (a) (find a ""abcdefghijklmnopqrstuvwxyz")) message))</p>
+<p><b>mircea_popescu</b> wowza hm<br />
+<b>phf</b> format doesn't do any concatenation</p>
+<p><b>mircea_popescu</b> aha!<br />
+<b>mircea_popescu</b> shit it broke<br />
+<b>mircea_popescu</b> ben_vulpes MAH TOY!<br />
+<b>phf</b> mircea_popescu: need to close that parenthesis</p>
+<p><b>mircea_popescu</b> oh<br />
+<b>phf</b> like line with (format ...)  is missing a closing parenthesis</p>
+<p><b>mircea_popescu</b> lies<br />
+<b>mircea_popescu</b> dude it's 5 for 5<br />
+<b>mircea_popescu</b> am i blind ?<br />
+<b>phf</b> (defun brain (target speaker message) (format nil "You don't trick me, sly ~A with your ~A lures!" (remove-if-not (lambda (a) (find a "abcdefghijklmnopqrstuvwxyz")) message)))<br />
+<b>phf</b> ffs<br />
+<b>phf</b> (defun brain (target speaker message) (format nil "You don't trick me, sly ~A with your ~A lures!" target (remove-if-not (lambda (a) (find a "abcdefghijklmnopqrstuvwxyz")) message)))<br />
+<b>phf</b> or wait speaker?<br />
+<b>phf</b> (defun brain (target speaker message) (format nil "You don't trick me, sly ~A with your ~A lures!" speaker (remove-if-not (lambda (a) (find a "abcdefghijklmnopqrstuvwxyz")) message)))</p>
+<p><b>mircea_popescu</b> sly speakler wioth your message lures<br />
+<b>mircea_popescu</b> hurr,durr&#038;purr mighty_niggles !!2<br />
+<b>phf</b> mighty_niggles: poop<br />
+<b>mighty_niggles</b> You don't trick me, sly phf with your  poop lures!<br />
+<b>mighty_niggles</b> You don't trick me, sly mircea_popescu with your  mightyniggles  lures!</p>
+<p><b>mircea_popescu</b> aaahahaha<br />
+<b>phf</b> i think it needs an option to submit something over a message</p>
+<p><b>mircea_popescu</b> dude... that poop lures thing qualifies as ai. srsly now.<br />
+<b>phf</b> i kind of want to wire a lisp repl to a bot now</p>
+<p><b>mircea_popescu</b> o wait, YOU said poop to him. fuck, i totally missed your line, thought he's talking to mine<br />
+<b>phf</b> :D</p>
+<p><b>mircea_popescu</b> phf by all means, use this one! ima go eat, have funs. kinda why i had it designed like this anyway<br />
+<b>phf</b> mighty_niggles: http://phuctor.nosuchlabs.com/gpgkey/9D9985B30D9AAB76E7745F5A8E4199ADE47CC67D29671B15398C9B83BF0F023E<br />
+<b>mighty_niggles</b> You don't trick me, sly phf with your  httpphuctornosuchlabscomgpgkey  ecent huctorings  huctored  divides  oduli belonging to  sshrsa key from   une  extraction for huctor import sk asciilifeform or framedragger on reenode or email fd at mkj dot lt sshlt  nknown  lures!</p>
+<p><b>phf</b> oh does it take it up from anyone in wot? :o<br />
+<b>mircea_popescu</b> anyone at all, what.</p>
+<p><b>phf</b> mighty_niggles: http://p.bvulpes.com/pastes/aCKdt/?raw=true<br />
+<b>mighty_niggles</b> You don't trick me, sly phf with your  httppbvulpescompastesadtrawtrue lures!</p>
+<p><b>mircea_popescu</b> ima change that once i move it to trilema, but until then... and besides, you can have it cloned im sure.<br />
+<b>mighty_niggles</b> phf: that knob's not for you.</p>
+<p><b>mircea_popescu</b> ew. i'll convey.<br />
+<b>phf</b> oh it's your own thing, i was trying to see if it works</p>
+<p><b>mircea_popescu</b> apparently not. truth be told it wasn't specified either way. anyway, i'll be back in a half hour or so.<br />
+<b>phf</b> wait, one sec.</p>
+<p><b>mircea_popescu</b> aite<br />
+<b>phf</b> (+ 2 2)<br />
+<b>phf</b> mighty_niggles: (+ 2 2)<br />
+<b>mighty_niggles</b> #&lt;SB-INT:SIMPLE-READER-ERROR "illegal terminating character after a colon: ~S" {100500D9A3}><br />
+<b>phf</b> :/</p>
+<p><b>mircea_popescu</b> YOU ARE NOT GOOD AT THIS<br />
+<b>mircea_popescu</b> tell him mighty_niggles<br />
+<b>phf</b> nope<br />
+<b>phf</b> mighty_niggles (+ 2 2)<br />
+<b>mighty_niggles</b> 4</p>
+<p><b>mircea_popescu</b> uh<br />
+<b>phf</b> mighty_niggles (concatenate 'string "i'm in your machines" "running your codes")<br />
+<b>mighty_niggles</b> "i'm in your machinesrunning your codes"</p>
+<p><b>mircea_popescu</b> mighty_niggles ($ 2 5)<br />
+<b>phf</b> wait, i can patch it up<br />
+<b>phf</b> mighty_niggles *package*<br />
+<b>mighty_niggles</b> #&lt;PACKAGE "COMMON-LISP-USER"></p>
+<p><b>mircea_popescu</b> lmao haxxt!<br />
+<b>phf</b> mighty_niggles (expt 2 1024)<br />
+<b>mighty_niggles</b> 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216</p>
+<p><b>mircea_popescu</b> mighty_niggles (expt 2 1/1024)<br />
+<b>phf</b> wait, i got a fix in a second</p>
+<p><b>mircea_popescu</b> dun fret phf, girls waiting for me.<br />
+<b>phf</b> haha, that's a better way to spend time<br />
+<b>phf</b> laters</p>
+<p><b>mircea_popescu</b> no srsly, do whatever, im in no rush</p>
+<p><b>phf</b> mighty_niggles (let  ( (*package* (find-package :mpbot))) (read-from-string "(defun brain (target speaker message) (cond  ( (member speaker '(\"phf\" \"mircea_popescu\") :test #'string-equal) (handler-case (prin1-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e))))))"))<br />
+<b>mighty_niggles</b> (DEFUN MPBOT::BRAIN (MPBOT::TARGET MPBOT::SPEAKER MPBOT::MESSAGE)</p>
+<p><b>mircea_popescu</b> this sorcery<br />
+<b>phf</b> that's not what ... hmm<br />
+<b>phf</b> mircea_popescu: try saying things to it</p>
+<p><b>mircea_popescu</b> hi mighty_niggles<br />
+<b>mircea_popescu</b> mighty_niggles (let  ( (*package* (find-package :mpbot))) (read-from-string "(defun brain (target speaker message) (cond  ( (member speaker '(\"phf\" \"mircea_popescu\") :test #'string-equal) (handler-case (prin1-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e))))))")) and also, urmom,<br />
+<b>phf</b> hmm</p>
+<p><b>mircea_popescu</b>  mighty_niggles (expt 1024 2)<br />
+<b>phf</b> mircea_popescu 2<br />
+<b>phf</b> err<br />
+<b>phf</b> mighty_niggles 2<br />
+<b>mighty_niggles</b> 2</p>
+<p><b>mircea_popescu</b> well now it won't talk to me!<br />
+<b>mircea_popescu</b> you hijinxt my bot ? THAT I PAID FOR ?<br />
+<b>mircea_popescu</b> phf 2<br />
+<b>phf</b> 2</p>
+<p><b>mircea_popescu</b> ahahaha<br />
+<b>mircea_popescu</b> phf 2 mighty_niggles 3 hurr durr!<br />
+<b>phf</b> mighty_niggles (find-package :mpbot)<br />
+<b>mighty_niggles</b> #&lt;PACKAGE "MPBOT"></p>
+<p><b>mircea_popescu</b> mighty_niggles 2<br />
+<b>phf</b> mighty_niggles (read-from-string "(+ 2 2)")<br />
+<b>mighty_niggles</b> (+ 2 2)<br />
+<b>phf</b> i'm tyring to figure out how to patch it from repl</p>
+<p><b>mircea_popescu</b> mah lunch stoled. phf i am aware, just poking fun from the side<br />
+<b>mircea_popescu</b> hurr33durr mighty_niggles<br />
+<b>mighty_niggles</b> #&lt;UNBOUND-VARIABLE HTY_NIGGLES {10043D6313}><br />
+<b>phf</b> should now listen</p>
+<p><b>mircea_popescu</b> 2 mighty_niggles<br />
+<b>mighty_niggles</b> #&lt;UNBOUND-VARIABLE ES {10055FE5E3}><br />
+<b>phf</b> the parser is dodgy</p>
+<p><b>mircea_popescu</b> hm.<br />
+<b>phf</b> it basically has to start with mighty_niggles<br />
+<b>mighty_niggles</b> #&lt;UNBOUND-VARIABLE AS {1003BBBF23}></p>
+<p><b>mircea_popescu</b> mighty_niggles 2<br />
+<b>mighty_niggles</b> 2</p>
+<p><b>mircea_popescu</b> mighty_niggles hurrdurr<br />
+<b>mighty_niggles</b> #&lt;UNBOUND-VARIABLE HURRDURR {1007B26313}></p>
+<p><b>mircea_popescu</b> mighty_niggles hurrd44urr<br />
+<b>mighty_niggles</b> #&lt;UNBOUND-VARIABLE HURRD44URR {1008C56313}><br />
+<b>phf</b> mighty_niggles (setq hurrdurr 123)<br />
+<b>mighty_niggles</b> 123</p>
+<p><b>mircea_popescu</b> mighty_niggles "hurrd44urr"<br />
+<b>phf</b> mighty_niggles hurrdurr<br />
+<b>mighty_niggles</b> 123<br />
+<b>mighty_niggles</b> "hurrd44urr"<br />
+<b>phf</b> man i hope it's not running inside ben_vulpes's production machine..</p>
+<p><b>mircea_popescu</b> lol. i dunno if you were here / saw log, but originally he had it with name at start then i asked for namwe anywhere which he spot-fixed. but maybe a little brokenly.<br />
+<b>phf</b> aah. it should probably just give raw message, but it removes a chunk from the beginning.</p>
+<p><b>mircea_popescu</b> aha. anyway, we reconvene after ben_vulpes has had a chance to fix it ?<br />
+<b>phf</b> kk</p>
+<p><b>mircea_popescu</b> and tyvm phf<br />
+<b>phf</b> you're welcome<br />
+<b>phf</b> mighty_niggles (drakma:http-request "https://www.google.com")<br />
+<b>mighty_niggles</b> "&lt;!doctype html>&lt;html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"nl\">&lt;head>&lt;meta content=\"text/html; charset=UTF-8\" http-equiv=\"Content-Type\">&lt;meta content=\"/images/branding/googleg/1x/googleg_standard_color_128dp.png\" itemprop=\"image\">&lt;title>Google&lt;/title>&lt;script>(function(){window.google={kEI:'_Kt1WJOFO4PJsQHpkImIDg',kEXPI:'18168,1351903,1352174,1352218,1352297,3700274,3700347,4029815,4032678,4038012,4043492,4045841,<br />
+<b>phf</b> mighty_niggles (sb-debug:list-backtrace)<br />
+<b>mighty_niggles</b>  ( (SB-INT:SIMPLE-EVAL-IN-LEXENV (LIST-BACKTRACE) #&lt;NULL-LEXENV>)</p>
+<p><b>phf</b> ...</p>
+<p><b>phf</b> slowly walks away<br />
+<b>ben_vulpes</b> occasional restarts they said. little bit of hand holding they said.<br />
+<b>phf</b> oh hey ben. we had a bit of an accident here<br />
+<b>ben_vulpes</b> accident? i don't see much that looks accidental<br />
+<b>phf</b> ._.<br />
+<b>ben_vulpes</b> good grief you two are abusive</p>
+<p><b>ben_vulpes</b> http://logs.bvulpes.com/chainstate#348<br />
+<b>ben_vulpes</b> http://logs.bvulpes.com/chainstate#423<br />
+<b>ben_vulpes</b> parser is hella dodgy. was far less dodgy before i had to eat highlights anywhere</p>
+<p><b>mircea_popescu</b> ben_vulpes your highlight dun work correctly (i think it does next line ?) and meh!!!<br />
+<b>mircea_popescu</b> i dunno about you, but I certainly had a lot of fun. moreover, i must point out the bot was defective!</p>
+<p><b>ben_vulpes</b> it's evaling code from mircea_popescu, i don't know that there's an fective to be be'd. over the wire. with phf helping. to clarify on 'meh'?</p>
+<p><b>mircea_popescu</b> don't worry about that part. the only point of concern is where it was eating x characters from the start. obv you're not expected to secure a lisp environment in the absolute sense.<br />
+<b>ben_vulpes</b> oh and would you look at that fuckin freenode failed to deliver the reg mail to my mailhole. and they require emails for registration.</p>
+<p><b>mircea_popescu</b> but i do want it to return line minus its name every time its name is contained in a chatline. oh and also, i'd like it to be named something a lot sluttier. candi_lustt ?<br />
+<b>ben_vulpes</b> sure.</p>
+<p><b>mircea_popescu</b> yay<br />
+<b>ben_vulpes</b> you want it in #t?</p>
+<p><b>mircea_popescu</b> alright. it can also wait until i actually get v1 of what i want on it. which isn't quite there yet.<br />
+<b>ben_vulpes</b> aight, i'll hold off then</p>
+<p><b>mircea_popescu</b> makes for a tight "practical lisp learnin'" chatlog anyway. besides, we learned phf can't be trusted with secure code!<br />
+<b>ben_vulpes</b> bbl<br />
+<b>phf</b> https://www.youtube.com/watch?v=BZBLt_rcehE</p>
+<p><b>mircea_popescu</b> im not clicking that.<br />
+<b>ben_vulpes</b> OMFG THE NICKSERV HELL<br />
+<b>mircea_popescu</b> ;/</p>
+<p><b>candi_lustt</b> has joined #chainstate<br />
+<b>phf</b> candi_lustt 2<br />
+<b>phf</b> :(</p>
+<p><b>mircea_popescu</b> candi_lustt 2<br />
+<b>phf</b> strange, it picked up ~something~</p>
+<p><b>mircea_popescu</b> candi_lustt how many 2's am i fingering up<br />
+<b>phf</b> test candi_lustt<br />
+<b>ben_vulpes</b> standby. it's not going to say anything until it gets voice. y'all are clogging the outbox and it has no rate limiter<br />
+<b>candi_lustt</b> 2<br />
+<b>candi_lustt</b> #&lt;UNBOUND-VARIABLE HOW {100388CE73}><br />
+<b>candi_lustt</b> #&lt;UNBOUND-VARIABLE LUSTT {10073C6283}><br />
+<b>phf</b> right on<br />
+<b>phf</b> candi_lustt (format t "this is test~%")<br />
+<b>candi_lustt</b> NIL</p>
+<p><b>mircea_popescu</b> claps from the side<br />
+<b>ben_vulpes</b> i'm going to go eat dinner, yr on your own for crashes for a few hours<br />
+<b>phf</b> candi_lustt '(1 2 3)<br />
+<b>candi_lustt</b> (1 2 3)<br />
+<b>BingoBoingo</b> Oh my what a bot<br />
+<b>phf</b> i'm confused what's up with the newlines in lists?<sup><a href="#footnote_8_71072" id="identifier_8_71072" class="footnote-link footnote-identifier-link" title="Took me two days to be confused by the same thing, briefly attempted to fix, gave up.">ix</a></sup></p>
+<p><b>mircea_popescu</b> BingoBoingo it's not a bot it's a booty<br />
+<b>phf</b> candi_lustt (format nil "this is~% test~%")<br />
+<b>BingoBoingo</b> Oh a butt!<br />
+<b>candi_lustt</b> "this is<br />
+<b>ben_vulpes</b> phf: queue questions i'll be back<br />
+<b>phf</b> kk<br />
+<b>BingoBoingo</b> candi_lustt: Who is your daddy and what does he do?<br />
+<b>phf</b> candi_lustt (loop for i from 1 to 20 collect i)<br />
+<b>candi_lustt</b> (1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)<br />
+<b>phf</b> candi_lustt (loop for i from 1 to 20 collect :this-is-test-hello-world)<br />
+<b>candi_lustt</b> (:THIS-IS-TEST-HELLO-WORLD :THIS-IS-TEST-HELLO-WORLD :THIS-IS-TEST-HELLO-WORLD</p>
+<p><b>mircea_popescu</b> BingoBoingo it's my ai bot, but currently half her head is in ben_vulpes 's soup bowl and phf insists on doing things with her arms<br />
+<b>BingoBoingo</b> I figured as much, just wondering how much unnatural language it's grasped<br />
+<b>BingoBoingo</b> *she's grasped</p>
+<p><b>mircea_popescu</b> 0, it doesn't even have the skull screwed on yet.<br />
+<b>phf</b> ooh</p>
+<p><b>mircea_popescu</b> it's currently screwed off.<br />
+<b>BingoBoingo</b> candi_lustt (Who is your daddy and what does he do?)<br />
+<b>phf</b> BingoBoingo: it's hard coded to myself and mircea_popescu<br />
+<b>BingoBoingo</b> Ah ic<br />
+<b>BingoBoingo</b> phf (candilustt (who is your daddy and what does he do))<br />
+<b>phf</b> candi_lustt (progn (eval (read-from-string (drakma:http-request "http://faculty.hampshire.edu/lspector/courses/eliza-simple.lisp"))) (values))<br />
+<b>candi_lustt</b> NIL<br />
+<b>phf</b> candi_lustt (use-eliza-rules '(|my| |name| |is| |phf|)<br />
+<b>candi_lustt</b> #&lt;END-OF-FILE {1008505A53}><br />
+<b>phf</b> candi_lustt (use-eliza-rules '(|my| |name| |is| |phf|))<br />
+<b>candi_lustt</b> #&lt;UNDEFINED-FUNCTION USE-ELIZA-RULES {10057CDB93}><br />
+<b>phf</b> hmm<br />
+<b>phf</b> candi_lustt #'eliza<br />
+<b>candi_lustt</b> #&lt;UNDEFINED-FUNCTION ELIZA {1007F659D3}><br />
+<b>phf</b> odd</p>
+<p><b>mircea_popescu</b> so ben_vulpes im afraid i might've been less than helpful. what i want it to do is : 1) candi_lustt eat<br />
+<b>candi_lustt</b> mircea_popescu: fetch failed. details: http://p.bvulpes.com/pastes/qyBng/?raw=true</p>
+<p><b>mircea_popescu</b> no need for it to "parse everywhere" in the sense of interpreting eat url candi_lustt or such nonsense.<br />
+<b>candi_lustt</b> mircea_popescu: fetch failed. details: http://p.bvulpes.com/pastes/AyU86/?raw=true<br />
+<b>phf</b> candi_lustt #'mpbot::brain<br />
+<b>candi_lustt</b> #&lt;FUNCTION MPBOT::BRAIN></p>
+<p><b>mircea_popescu</b> once that's there we can continue with the cleaning up of the line and the constructs from before.<br />
+<b>BingoBoingo</b> So when is candi_lustt eating the Indian_candi chat lines?<br />
+<b>candi_lustt</b> BingoBoingo: that knob's not for you.<br />
+<b>phf</b> candi_lustt (defun mpbot::brain (target speaker message) (cond  ( (member speaker '("phf" "mircea_popescu") :test #'string-equal) (handler-case (prin1-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e))))))<br />
+<b>candi_lustt</b> MPBOT::BRAIN<br />
+<b>phf</b> candi_lustt still operational?<br />
+<b>candi_lustt</b> #&lt;UNBOUND-VARIABLE STILL {10083A6323}><br />
+<b>BingoBoingo</b> lol<br />
+<b>phf</b> candi_lustt (defun trim (s length) (if (> (length s) length) (subseq s 0 length) s))<br />
+<b>candi_lustt</b> TRIM<br />
+<b>phf</b> candi_lustt (trim "abcdef" 3)<br />
+<b>candi_lustt</b> "abc"<br />
+<b>phf</b> candi_lustt (trim "abcdef" 300)<br />
+<b>candi_lustt</b> "abcdef"<br />
+<b>phf</b> candi_lustt (defconstant +max-irc-length+ 510)<br />
+<b>candi_lustt</b> +MAX-IRC-LENGTH+<br />
+<b>mimisbrunnr</b> block 447602: 1`361 txns, 998`154 bytes<br />
+<b>phf</b> candi_lustt (defun mpbot::brain (target speaker message) (cond  ( (member speaker '("phf" "mircea_popescu") :test #'string-equal) (trim (handler-case (prin1-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e))) +max-irc-length+))))<br />
+<b>candi_lustt</b> MPBOT::BRAIN<br />
+<b>phf</b> i'm still not quite sure why it floods out though</p>
+<p><b>mircea_popescu</b> gotta wait 1 s between lines<br />
+<b>phf</b> but brain should only ever return one line</p>
+<p><b>mircea_popescu</b> possibly returned multiple lines with that trace thing<br />
+<b>phf</b> candi_lustt (drakma:http-request "http://faculty.hampshire.edu/lspector/courses/eliza-simple.lisp")<br />
+<b>candi_lustt</b> ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br />
+<b>phf</b> candi_lustt (setq eliza-source (drakma:http-request "http://faculty.hampshire.edu/lspector/courses/eliza-simple.lisp"))<br />
+<b>candi_lustt</b> ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br />
+<b>phf</b> candi_lustt (first (read-from-string eliza-source))<br />
+<b>candi_lustt</b> DEFCONSTANT<br />
+<b>phf</b> candi_lustt (first (concatenate 'string "(progn " (read-from-string eliza-source) ")")<br />
+<b>candi_lustt</b> #&lt;END-OF-FILE {100506DCF3}><br />
+<b>phf</b> candi_lustt (first (concatenate 'string "(progn " (read-from-string eliza-source) ")"))<br />
+<b>candi_lustt</b> #&lt;TYPE-ERROR expected-type: "CHARACTER"datum: DEFCONSTANT><br />
+<b>phf</b> candi_lustt (first (read-from-string (concatenate 'string "(progn " eliza-source ")")))<br />
+<b>candi_lustt</b> PROGN<br />
+<b>phf</b> candi_lustt (eval (read-from-string (concatenate 'string "(progn " eliza-source ")")))<br />
+<b>candi_lustt</b> NIL<br />
+<b>phf</b> candi_lustt (use-eliza-rules '(|my| |name| |is| |phf|))<br />
+<b>candi_lustt</b> (DO YOU FEEL STRONGLY ABOUT DISCUSSING SUCH THINGS?)<br />
+<b>phf</b> candi_lustt (use-eliza-rules '(my name is phf))<br />
+<b>candi_lustt</b> (I AM NOT INTERESTED IN NAMES)<br />
+<b>phf</b> :}</p>
+<p><b>mircea_popescu</b> heh.<br />
+<b>phf</b> candi_lustt (use-eliza-rules '(i feel like this is working))<br />
+<b>candi_lustt</b> (DO YOU OFTEN FEEL (LIKE THIS IS WORKING) ?)</p>
+<p><b>mircea_popescu</b> candi_lustt (use-eliza-rules '(candi_lustt (use-eliza-rules '(i feel like this is working))))<br />
+<b>candi_lustt</b> (PLEASE CONTINUE)<br />
+<b>phf</b> candi_lustt *eliza-rules*<br />
+<b>candi_lustt</b>  ( ( ( ?*X HELLO ?*Y) (HOW DO YOU DO. PLEASE STATE YOUR PROBLEM.))<br />
+<b>phf</b> candi_lustt (mapcar 'car *eliza-rules*)<br />
+<b>candi_lustt</b>  ( (?*X HELLO ?*Y) (?*X COMPUTER ?*Y) (?*X NAME ?*Y) (?*X SORRY ?*Y)<br />
+<b>phf</b> candi_lustt (defun mpbot::brain (target speaker message) (cond  ( (member speaker '("phf" "mircea_popescu") :test #'string-equal) (trim (let  ( (*print-pretty* nil)) (handler-case (prin1-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e))))) +max-irc-length+)))<br />
+<b>candi_lustt</b> MPBOT::BRAIN<br />
+<b>phf</b> candi_lustt (mapcar 'car *eliza-rules*)<br />
+<b>candi_lustt</b> phf: error, see: http://p.bvulpes.com/pastes/CwYXa/?raw=true<br />
+<b>phf</b> oh hmm<br />
+<b>phf</b> candi_lustt (defun mpbot::brain (target speaker message) (cond  ( (member speaker '("phf" "mircea_popescu") :test #'string-equal) (trim (let  ( (*print-pretty* nil)) (handler-case (prin1-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e)))) +max-irc-length+))))<br />
+<b>candi_lustt</b> phf: error, see: http://p.bvulpes.com/pastes/BhtYa/?raw=true<br />
+<b>phf</b> mircea_popescu: http://p.bvulpes.com/pastes/3ruB3/?raw=true can you please do the honors of reseting the brain</p>
+<p><b>mircea_popescu</b> seat http://p.bvulpes.com/pastes/3ruB3/?raw=true candi_lustt<br />
+<b>candi_lustt</b> mircea_popescu: http://p.bvulpes.com/pastes/DTuGV/?raw=true<br />
+<b>phf</b> candi_lustt (mapcar 'car *eliza-rules*)<br />
+<b>candi_lustt</b>  ( (?*X HELLO ?*Y) (?*X COMPUTER ?*Y) (?*X NAME ?*Y) (?*X SORRY ?*Y) (?*X I REMEMBER ?*Y) (?*X DO YOU REMEMBER ?*Y) (?*X IF ?*Y) (?*X I DREAMT ?*Y) (?*X DREAM ABOUT ?*Y) (?*X DREAM ?*Y) (?*X MY MOTHER ?*Y) (?*X MY FATHER ?*Y) (?*X I WANT ?*Y) (?*X I AM GLAD ?*Y) (?*X I AM SAD ?*Y) (?*X ARE LIKE ?*Y) (?*X IS LIKE ?*Y) (?*X ALIKE ?*Y) (?*X SAME ?*Y) (?*X I WAS ?*Y) (?*X WAS I ?*Y) (?*X I AM ?*Y) (?*X AM I ?*Y) (?*X AM ?*Y) (?*X ARE YOU ?*Y) (?*X YOU AR<br />
+<b>mimisbrunnr</b> block 447603: 2`651 txns, 998`185 bytes<br />
+<b>phf</b> candi_lustt (defun elizas (s) (with-input-from-string (*standard-input* s) (with-output-to-string (*standard-output*) (print-with-spaces (flatten (use-eliza-rules (read-line-no-punct)))))))<br />
+<b>candi_lustt</b> ELIZAS<br />
+<b>phf</b> candi_lustt (elizas "hello, bot")<br />
+<b>candi_lustt</b> "HOW DO YOU DO. PLEASE STATE YOUR PROBLEM. "<br />
+<b>phf</b> candi_lustt (use-package :alexandria)<br />
+<b>candi_lustt</b> #&lt;NAME-CONFLICT {1004D5DE23}><br />
+<b>ben_vulpes</b> fuck, buddy.<br />
+<b>phf</b> candi_lustt (defun mpbot::brain (target speaker message) (cond  ( (alexandria:starts-with #\: message) (elizas (subseq message 1)))  ( (member speaker '("phf" "mircea_popescu") :test #'string-equal) (trim (let  ( (*print-pretty* nil)) (handler-case (prin1-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e)))) 510))))<br />
+<b>candi_lustt</b> MPBOT::BRAIN<br />
+<b>phf</b> candi_lustt: hello, how are you<br />
+<b>candi_lustt</b> HOW DO YOU DO. PLEASE STATE YOUR PROBLEM.<br />
+<b>phf</b> candi_lustt (+ 2 2)<br />
+<b>candi_lustt</b> 4<br />
+<b>phf</b> candi_lustt: why are you always such a cunt<br />
+<b>candi_lustt</b> WOULD YOU PREFER IF I WEREN QUOTE T ALWAYS SUCH A CUNT<br />
+<b>phf</b> hmm<br />
+<b>phf</b> candi_lustt: why don't you go fuck yourself<br />
+<b>candi_lustt</b> phf: error, see: http://p.bvulpes.com/pastes/1bJqj/?raw=true<br />
+<b>phf</b> this eliza code is not very good :/<br />
+<b>ben_vulpes</b> phf: because i am a sick sick man you have access to quicklisp<br />
+<b>phf</b> oh i figured as much<br />
+<b>ben_vulpes</b> cuz no expedient way around it<br />
+<b>phf</b> candi_lustt #'ql:quickload<br />
+<b>candi_lustt</b> #&lt;STANDARD-GENERIC-FUNCTION QUICKLISP-CLIENT:QUICKLOAD (2)><br />
+<b>phf</b> candi_lustt (find-package :hunchentoot)<br />
+<b>candi_lustt</b> NIL<br />
+<b>ben_vulpes</b> hahaha<br />
+<b>ben_vulpes</b> uhuh<br />
+<b>phf</b> tune in tomorrow, when phf live codes btcbase clone over an irc chat line<br />
+<b>ben_vulpes</b> you know i was considering putting it in an amazon lambda with all of quicklisp compiled in<br />
+<b>ben_vulpes</b> phf: lzozlozlz<br />
+<b>ben_vulpes</b> but i think all of this state crufting up is excellent<br />
+<b>phf</b> candi_lustt: i want a cookie<br />
+<b>candi_lustt</b> WHAT WOULD IT MEAN IF YOU GOT A COOKIE</p>
+<p><b>mircea_popescu</b> well tomorro i think shall wipe all this crud. no idea why eliza got imported anyway ?<br />
+<b>ben_vulpes</b> because we can! therefore we must!</p>
+<p><b>mircea_popescu</b> heh<br />
+<b>ben_vulpes</b> i'll get the trimming and such in place tomorrow</p>
+<p><b>mircea_popescu</b> works.<br />
+<b>phf</b> none of this resides anywhere, except in the bots memory. as soon as ben_vulpes restarts it, it's going to be clean slate</p>
+<p><b>mircea_popescu</b> yeh.<br />
+<b>ben_vulpes</b> phf: no i can restart the bot and preserve all of this. gotta leave the lisp image running though</p>
+<p><b>mircea_popescu</b> speaking of which ben_vulpes : as my tree will grow, which it will, it'd be a pity if it got lost. is there some way to backup state ?<br />
+<b>ben_vulpes</b> yeah, we can get there</p>
+<p><b>mircea_popescu</b> cool.<br />
+<b>ben_vulpes</b> serialize vars to disk is not hard, perhaps phf will share some secrets of btcbase<br />
+<b>mimisbrunnr</b> block 447604: 2`540 txns, 998`039 bytes<br />
+<b>phf</b> candi_lustt (defun mpbot::brain (target speaker message) (cond  ( (alexandria:starts-with #\: message) (elizas (subseq message 1)))  ( (member speaker '("phf" "mircea_popescu") :test #'string-equal) (trim (let  ( (*print-pretty* nil)) (handler-case (eval (read-from-string message)) (error (e) (prin1-to-string e)))) 510))))<br />
+<b>candi_lustt</b> MPBOT::BRAIN<br />
+<b>phf</b> candi_lustt (+ 2 2)<br />
+<b>candi_lustt</b> phf: error, see: http://p.bvulpes.com/pastes/ZHHUI/?raw=true<br />
+<b>phf</b> candi_lustt (defun mpbot::brain (target speaker message) (cond  ( (alexandria:starts-with #\: message) (elizas (subseq message 1)))  ( (member speaker '("phf" "mircea_popescu") :test #'string-equal) (trim (let  ( (*print-pretty* nil)) (handler-case (princ-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e)))) 510))))<br />
+<b>candi_lustt</b> phf: error, see: http://p.bvulpes.com/pastes/HtPVF/?raw=true<br />
+<b>phf</b> candi_lustt (+ 2 2)<br />
+<b>candi_lustt</b> 4<br />
+<b>phf</b> candi_lustt (format nil "a~%b")<br />
+<b>candi_lustt</b> a<br />
+<b>phf</b> candi_lustt (defun mpbot::brain (target speaker message) (cond  ( (alexandria:starts-with #\: message) (elizas (subseq message 1)))  ( (member speaker '("phf" "mircea_popescu") :test #'string-equal) (trim (let  ( (*print-pretty* nil)) (handler-case (prin1-to-string (eval (read-from-string message))) (error (e) (prin1-to-string e)))) 510))))<br />
+<b>candi_lustt</b> BRAIN<br />
+<b>ben_vulpes</b> i have made a cascadian phf trap<br />
+<b>phf</b> dat repl</p>
+<p><b>mircea_popescu</b> lol<br />
+<b>phf</b> candi_lustt ircbot::*bot*<br />
+<b>candi_lustt</b> #&lt;UNBOUND-VARIABLE *BOT* {1007A562E3}><br />
+<b>phf</b> candi_lustt (find-package :ircbot)<br />
+<b>candi_lustt</b> #&lt;PACKAGE "IRCBOT"></p>
+<p><b>mimisbrunnr</b> block 447605: 2`338 txns, 998`207 bytes<br />
+<b>phf</b> candi_lustt (Loop for a being each present-symbol in :ircbot collect a)<br />
+<b>candi_lustt</b> (IRCBOT::IRCBOT-NICKSERV-AUTH IRCBOT::*PING-FREQ* IRCBOT::*BOT* IRCBOT::IRCBOT-NICKSERV-GHOST IRCBOT::BOT IRCBOT::IRCBOT-PASSWORD IRCBOT::MESSAGE-TEXT IRCBOT::CONN IRCBOT::THREADED-P IRCBOT::LAG IRCBOT::IRCBOT-RANDOMIZE-NICK IRCBOT::FOR IRCBOT::RUN-THREAD IRCBOT::IRCBOT-HANDLE-NICKSERV IRCBOT::PORT IRCBOT::WITH IRCBOT::QUIT-MSG IRCBOT::IN IRCBOT::IRCBOT-RUN-THREAD IRCBOT::CONNECTION-SECURITY IRCBOT::IRCBOT-PING-THREAD IRCBOT::IRCBOT-START-PING-THRE</p>
+<p><b>mircea_popescu</b> really, it's not clear to me there's any other purpose for computers.<br />
+<b>mimisbrunnr</b> block 447606: 758 txns, 886`570 bytes<br />
+<b>phf</b> candi_lustt mpbot::*connection*<br />
+<b>candi_lustt</b> #&lt;UNBOUND-VARIABLE *CONNECTION* {1007A06323}><br />
+<b>phf</b> candi_lustt mpbot::*bot*<br />
+<b>candi_lustt</b> #&lt;LOGBOT:LOGBOT {1009218413}><br />
+<b>phf</b> candi_lustt (ircbot:ircbot-send-message mpbot::*bot* "#chainstate" "hello, world")<br />
+<b>candi_lustt</b> hello, world<br />
+<b>candi_lustt</b> "PRIVMSG #chainstate :hello, world<br />
+<b>phf</b> candi_lustt (defun say (s) (ircbot:ircbot-send-message mpbot::*bot* "#chainstate" s) (values))<br />
+<b>candi_lustt</b> SAY<br />
+<b>phf</b> candi_lustt (progn (say "this") (sleep 1) (say "is") (sleep 1) (say "test"))<br />
+<b>candi_lustt</b> this<br />
+<b>candi_lustt</b> is<br />
+<b>candi_lustt</b> test<br />
+<b>candi_lustt</b> NIL<br />
+<b>mimisbrunnr</b> block 447607: 2`157 txns, 998`094 bytes<br />
+<b>phf</b> candi_lustt (loop for y from -1 to 1 by 1/15 do (progn (say (coerce (loop for x from -2 to 1 by .04 collect (let* ( (c 126) (z (complex x y)) (a z)) (loop while (&lt; (abs (setq z (+ (* z z) a))) 2) while (> (decf c) 32)) (code-char c))) 'string)) (sleep 1)))<br />
+<b>candi_lustt</b> ~~~~~~~~~~~~~}}}}}}}}}}}}}}}}}}}}||||||||{{{zyvrwum{|||||}}}}}}~~~~~~~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~~~~~}}}}}}}}}}}}}}}}}}}}|||||||||{{{zyxvptwyz{{|||||}}}}}}~~~~~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~~~}}}}}}}}}}}}}}}}}}}}|||||||||{{{{zwLtb huwx{{{{||||}}}}}}}~~~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~~}}}}}}}}}}}}}}}}}}}|||||||||{{zzzyxvn    Knwyz{{{{||||}}}}}}~~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~}}}}}}}}}}}}}}}}}}||||||||{{zzzzyyywuk     qwxyzzzz{{|||}}}}}}~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~}}}}}}}}}}}}}}}}}}|||||||{{{zxjnpwwtjsqpi   lqrujnxyyxrz{|}}}}}}}}~~~~~<br />
+<b>candi_lustt</b> ~~~~}}}}}}}}}}}}}}}}}|||||{{{{{zzzxt>  qf             pttfqeqz{|}}}}}}}}~~~~<br />
+<b>candi_lustt</b> ~~~~}}}}}}}}}}}}}}}|||{{{{{{{{zzzxwup                      sxz{||}}}}}}}~~~~<br />
+<b>candi_lustt</b> ~~~}}}}}}}}}}}}|||{z{{{{{{{zzzzywkmo                      rwyz{{||}}}}}}}~~~<br />
+<b>candi_lustt</b> ~~}}}}}}}}}||||{{zwvyyyyyyyyyyyxvsP                        swvz{||}}}}}}}}~~<br />
+<b>candi_lustt</b> ~~}}}}|||||||{{{zzwrtsww^uwwxxwvr                            iz{|||}}}}}}}~~<br />
+<b>candi_lustt</b> ~}}}|||||||{{{{{zyxws  mj Ubhuutl                           sxz{|||}}}}}}}}~<br />
+<b>candi_lustt</b> ~}||||||||{{{{{zyytun         qq                            avz{|||}}}}}}}}~<br />
+<b>candi_lustt</b> ~|||||||{{zzzyxsvvum           j                            Sz{{|||}}}}}}}}~<br />
+<b>candi_lustt</b> ~{{{{{yyzzzyyxwtbUP                                        qyz{{||||}}}}}}}~<br />
+<b>candi_lustt</b> ~                                                        pvxyz{{||||}}}}}}}}<br />
+<b>candi_lustt</b> ~{{{{{yyzzzyyxwtbUP                                        qyz{{||||}}}}}}}~<br />
+<b>candi_lustt</b> ~|||||||{{zzzyxsvvum           j                            Sz{{|||}}}}}}}}~<br />
+<b>candi_lustt</b> ~}||||||||{{{{{zyytun         qq                            avz{|||}}}}}}}}~<br />
+<b>candi_lustt</b> ~}}}|||||||{{{{{zyxws  mj Ubhuutl                           sxz{|||}}}}}}}}~<br />
+<b>candi_lustt</b> ~~}}}}|||||||{{{zzwrtsww^uwwxxwvr                            iz{|||}}}}}}}~~<br />
+<b>candi_lustt</b> ~~}}}}}}}}}||||{{zwvyyyyyyyyyyyxvsP                        swvz{||}}}}}}}}~~<br />
+<b>candi_lustt</b> ~~~}}}}}}}}}}}}|||{z{{{{{{{zzzzywkmo                      rwyz{{||}}}}}}}~~~<br />
+<b>candi_lustt</b> ~~~~}}}}}}}}}}}}}}}|||{{{{{{{{zzzxwup                      sxz{||}}}}}}}~~~~<br />
+<b>candi_lustt</b> ~~~~}}}}}}}}}}}}}}}}}|||||{{{{{zzzxt>  qf             pttfqeqz{|}}}}}}}}~~~~<br />
+<b>candi_lustt</b> ~~~~~}}}}}}}}}}}}}}}}}}|||||||{{{zxjnpwwtjsqpi   lqrujnxyyxrz{|}}}}}}}}~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~}}}}}}}}}}}}}}}}}}||||||||{{zzzzyyywuk     qwxyzzzz{{|||}}}}}}~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~~}}}}}}}}}}}}}}}}}}}|||||||||{{zzzyxvn    Knwyz{{{{||||}}}}}}~~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~~~}}}}}}}}}}}}}}}}}}}}|||||||||{{{{zwLtb huwx{{{{||||}}}}}}}~~~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~~~~~}}}}}}}}}}}}}}}}}}}}|||||||||{{{zyxvptwyz{{|||||}}}}}}~~~~~~~~~~~<br />
+<b>candi_lustt</b> ~~~~~~~~~~~~~}}}}}}}}}}}}}}}}}}}}||||||||{{{zyvrwum{|||||}}}}}}~~~~~~~~~~~~~<br />
+<b>candi_lustt</b> NIL<br />
+<b>davout</b> amazing<br />
+<b>phf</b> :)<br />
+<b>phf</b> well, that's enough of that<br />
+<b>mimisbrunnr</b> block 447608: 3`234 txns, 999`233 bytes</p>
+<p><b>ben_vulpes</b> holy shit phf. that my loggotron does not render that properly is a fucking crime<br />
+<b>davout</b> at first i thought 'wow, lisp vagina!!1'. but then 'oh meh, fractal"<br />
+<b>ben_vulpes</b> i was baffled at first, logs do not render that well. mircea_popescu: will you accept a colon and a space after the nick since that's how most irc clients autocomplete? eh nm dun matter</p>
+<p><b>Framedragger</b> rehi! WHAT MAGICKE IS THIS "(z (complex x y))" wait a second... this is mandelbrot right??<br />
+<b>Framedragger</b> my client doesn't display this nicely. cool stuff! :)<br />
+<b>Framedragger</b> (ah, actually, i can see the vagina, so probably displays fine)<br />
+<b>Framedragger</b> oh this is gonna be so much fun!<br />
+<b>Framedragger</b> this is just my caffeinated morning hypestate, but by god if a CLI eulora client wouldn't be awesome, and it could expose an interface over irc, too, andand, you know, games over irc with lisp, i mean really why is this not a thing, software world i am disappoint! (hm granted, maybe there are some shitty text adventure irc bots.)</p>
+<p><b>mircea_popescu</b> omfg he made an asshole.<br />
+<b>mircea_popescu</b> Framedragger yes, my plans are generally excellent ; people take a while to catch on an' get crackin' though.<br />
+<b>mircea_popescu</b> ben_vulpes i will accept.<br />
+<b>mircea_popescu</b> Framedragger> my client doesn't display this nicely</p>
+<p><b>jurov</b> (~jurov@ec2-52-28-28-204.eu-central-1.compute.amazonaws.com) has joined #chainstate<br />
+<b>mircea_popescu</b> waves<br />
+<b>mircea_popescu</b> welcome to ben_vulpes 's castle. the princess is asleep however.</p>
+<p><b>Framedragger</b> ah shit you're right, just viewed log in terminal with monospace, different thing altogether...<br />
+<b>mircea_popescu</b> Framedragger it is extremely useful for a reason which you may readily grasp if you look at array vs list discussion. your eyes learn to insta-address. it's huge. fixed space is for all meaningful text ; the variable spaced font is strictly for one-read-through pulp fiction and such matter.</p>
+<p><b>asciilifeform</b> (~asciilife@unaffiliated/asciilifeform) has joined #chainstate<br />
+<b>Framedragger</b> guess i'd've realised this if i had to deal with more parentheses in my life heh.<br />
+<b>mircea_popescu</b> heh.<br />
+<b>asciilifeform</b> this is pretty neat.</p>
+<p><b>asciilifeform</b> caught up on l0gz<br />
+<b>mircea_popescu</b> :p<br />
+<b>trinque</b> omaigad<br />
+<b>trinque</b> replbot<br />
+<b>trinque</b> ben_vulpes: neat!</p>
+<p><b>mircea_popescu</b> THE MERIT IS ALL MINE</p>
+<p><b>mircea_popescu</b> but why! i just want to plaaaaay</p>
+<p><b>mimisbrunnr</b> block 447682: 2`261 txns, 999`786 bytes<br />
+<b>thortron</b> Hey ben_vulpes. I also run a trb node.  Nice to be able to make sure I'm synced by checking in here instead of unnamed scam wallet sites.<br />
+<b>ben_vulpes</b> lol you're welcome. there's also http://mimisbrunnr.cascadianhacker.com<br />
+<b>asciilifeform</b> thortron: it won't tell you if you're synced, nobody can, but sometimes it will tell you if you're not.<br />
+<b>thortron</b> asciilifeform: understood<br />
+<b>asciilifeform</b> (this is not mere sophistry, imho it is important point to grasp)</p>
+<p><b>ben_vulpes</b> candi_lustt: obediently-repeat-exactly "lol i suck cocks"<br />
+<b>candi_lustt</b> lol i suck cocks</p>
+<p><b>ben_vulpes</b> candi_lustt lf<br />
+<b>candi_lustt</b> ben_vulpes: i have seen you speak in #chainstate 200 times.<br />
+<b>ben_vulpes</b> mircea_popescu: ^^ done<br />
+<b>davout</b> nice<br />
+<b>jurov</b> candi_lustt: hi</p>
+<p><b>mircea_popescu</b> ben_vulpes nice! now where were we here<br />
+<b>mircea_popescu</b> hi candi_lustt how about that jurov<br />
+<b>candi_lustt</b> You don't trick me, sly mircea_popescu with your stt how about that jurov lures!</p>
+<p><b>mircea_popescu</b> mwahaha<br />
+<b>jurov</b> rofl</p>
+<p><b>mircea_popescu</b> ben_vulpes ^ ?<br />
+<b>ben_vulpes</b> hm<br />
+<b>ben_vulpes</b> hi candi_lustt: how about that jurov<br />
+<b>candi_lustt</b> You don't trick me, sly ben_vulpes with your hi candilustt how about that jurov lures!<br />
+<b>ben_vulpes</b> where'd the underscore go, tho<br />
+<b>ben_vulpes</b> oh<br />
+<b>jurov</b> candi_lustt has only one function?<br />
+<b>ben_vulpes</b> pruning of all non alphanumerics<br />
+<b>candi_lustt</b> You don't trick me, sly jurov with your candilustt has only one function lures!<br />
+<b>mimisbrunnr</b> block 447694: 2`347 txns, 999`242 bytes<br />
+<b>ben_vulpes</b> jurov: mircea_popescu can make it have as many fns as he wants<br />
+<b>jurov</b> yes but when you override brain, all previous code is forgotten?<br />
+<b>ben_vulpes</b> well, previous definition of brain is redefined.<br />
+<b>ben_vulpes</b> mircea_popescu: could define all sorts of functions and call them from teh brain<br />
+<b>ben_vulpes</b> jurov: this isn't exactly the api that i'd program against.<br />
+<b>jurov</b> eh, don't be soi serious. it does not need api, perhaps something dirty like split the text into words, (if (functionp (symbol-name word)) (funcall ...))</p>
+<p><b>mircea_popescu</b> jurov for now. it's supposed to end up my ai bot<br />
+<b>ben_vulpes</b> jurov: phf wired an eval in yesterday, did you see that?<br />
+<b>jurov</b> onoes, one more lawgz to read :)<br />
+<b>ben_vulpes</b> dont be soi lazy!</p>
+<p><b>mircea_popescu</b> lol<br />
+<b>mircea_popescu</b> what that still works omfg<br />
+<b>ben_vulpes</b> ja<br />
+<b>mircea_popescu</b> candi_lustt you don't trick me with your candi_lustt lures!<br />
+<b>candi_lustt</b> You don't trick me, sly mircea_popescu with your candilustt you dont trick me with your candilustt lures lures!</p>
+<p><b>mircea_popescu</b> ben_vulpes splendeed.<br />
+<b>jurov</b> i kindly recommend to mircea_popescu http://www.norvig.com/paip.html, but have only badly scanned pdf here...<br />
+<b>ben_vulpes</b> mircea_popescu: i already tripped on that one</p>
+<p><b>mircea_popescu</b> jurov they already did in #trilema ; all discreetely like and in general so i don't take umbrage.</p>
+<p><b>mircea_popescu</b> The definition has two args, but the proclamation has three.<br />
+<b>ben_vulpes</b> on my side</p>
+<p><b>mircea_popescu</b> ah ok.<br />
+<b>ben_vulpes</b> needed to tell the compiler something would be there. (declaim (ftype (function (string string string)) brain))</p>
+<p><b>mircea_popescu</b> candi_lustt put this in three<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/1mfVW/?raw=true<br />
+<b>ben_vulpes</b> STRING STRING STRING</p>
+<p><b>mircea_popescu</b> sorry ?<br />
+<b>ben_vulpes</b> nm disregard. give her a brain that takes three args<br />
+<b>phf</b> hmm<br />
+<b>candi_lustt</b> phf: http://p.bvulpes.com/pastes/rNNpT/?raw=true<br />
+<b>mircea_popescu</b> you don't get anymore priviledges mandelbutt boy!<br />
+<b>phf</b> (+ 2 2)<br />
+<b>candi_lustt</b> 4</p>
+<p><b>mircea_popescu</b> eh wtf<br />
+<b>phf</b> werks</p>
+<p><b>mircea_popescu</b> ben_vulpes HE STOLE MAH LUNCH AGAIN!!1<br />
+<b>phf</b> mircea_popescu: your lunch has been untouched. i added a completely separate hook</p>
+<p><b>mircea_popescu</b> but i dun want you to. focus!<br />
+<b>phf</b> (list 'ok)<br />
+<b>candi_lustt</b> (ok)<br />
+<b>mircea_popescu</b> sigh!<br />
+<b>mircea_popescu</b> candi_lustt hurr durr tree ?<br />
+<b>candi_lustt</b> You don't trick me, sly mircea_popescu with your  ( ( ( tree)</p>
+<p><b>ben_vulpes</b> phf: can you give it a trigger char and add me to the evalors?</p>
+<p><b>mircea_popescu</b> fuck.<br />
+<b>ben_vulpes</b> coool. k</p>
+<p><b>mircea_popescu</b> i have no idea what i'm doing.<br />
+<b>phf</b> ben_vulpes: trigger char is parenthesis as first character. i figured it's pretty safe when on #chainstate<br />
+<b>ben_vulpes</b> phf: aok neat</p>
+<p><b>mircea_popescu</b> my slutbot is a slutty bot.<br />
+<b>phf</b> you have to do silly things like<br />
+<b>phf</b> (progn *users*)<br />
+<b>phf</b> (progn *users*)<br />
+<b>phf</b> hmm<br />
+<b>phf</b> oh you guys are trying to make it feed out a multiline thing..</p>
+<p><b>mircea_popescu</b> i'm confused.<br />
+<b>ben_vulpes</b> easy with the pronouns there phf</p>
+<p><b>mircea_popescu</b> phf i'm a noob. this means i have a very poor notion of the thing's state, and very tenuous mapping from it to sense. when you go and do things i don't even vaguely understand, you cut my chances to figure out anything useful before i get bored by a factor of about 100<br />
+<b>ben_vulpes</b> mircea_popescu: the tree is many lines, when you return tree-thingy it prints over multiple lines. call a function called paste with the string you want.</p>
+<p><b>mircea_popescu</b> ben_vulpes yeah. how can i have it respond any multi-line in a paste ? ah! ty.<br />
+<b>ben_vulpes</b> something a la (paste (format nil "~A" tree-thing))</p>
+<p><b>mircea_popescu</b> ben_vulpes eat http://p.bvulpes.com/pastes/EKNCO/?raw=true<br />
+<b>mircea_popescu</b> uh i mean.<br />
+<b>ben_vulpes</b> shan't</p>
+<p><b>mircea_popescu</b> !!up candi_lustt<br />
+<b>ben_vulpes</b> oh wait<br />
+<b>phf</b> yeah, voice missing</p>
+<p><b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/xPxrj/?raw=true</p>
+<p><b>mircea_popescu</b> ah ran out of parens has it<br />
+<b>phf</b> mircea_popescu: yeah, i grokked that last night, kind of gotten carried away</p>
+<p><b>mircea_popescu</b> candi_lustt did you like phf touching you inside ?<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/NFCPJ/?raw=true</p>
+<p><b>mircea_popescu</b>    "you"))) fell through ETYPECASE expression.<br />
+<b>phf</b> hah</p>
+<p><b>mircea_popescu</b> da fuck lol this ftr is NOT RIGHT. lettuce verify these false statements from last night then!<br />
+<b>mircea_popescu</b> candi_lustt one two three<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/5YDlX/?raw=true<br />
+<b>ben_vulpes</b> yeah it's an error in the format string i gave you</p>
+<p><b>mircea_popescu</b> ah doesn't parse out its name<br />
+<b>phf</b> i think paste is not working right. you're passing it a list, and it wants a string</p>
+<p><b>mircea_popescu</b> yeh. btw, does tree-thingy-string recreate the tree as a new struct on each pass ?<br />
+<b>phf</b> that's a nifty tree though</p>
+<p><b>mircea_popescu</b> phf can you guess what my intended use is ?<br />
+<b>phf</b> it constructs a entirely new structure for after each invocation. god bless garbage collector.</p>
+<p><b>mircea_popescu</b> ok. how can i make it join into the same one ?<br />
+<b>ben_vulpes</b> naively, setf the result of tree-thingy into *tree-cache* and then merge with custom logic? or perhaps i do not understand</p>
+<p><b>mircea_popescu</b> ben_vulpes i just want every call to add to the same tree not replace it. >> not ><br />
+<b>phf</b> so if you have "one two three" "one two three" "one two four", first one creates struct, second doesn't change anything, third one adds enough to have "four" in appropriate places?</p>
+<p><b>mircea_popescu</b> yes, a topnode four, 3 2nd node fours, etc<br />
+<b>mircea_popescu</b> candi_lustt one two three<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/vGC9Q/?raw=true<br />
+<b>mircea_popescu</b> ah that's not how you remove things</p>
+<p><b>mircea_popescu</b> goes reads log again<br />
+<b>mircea_popescu</b> motherfucker.<br />
+<b>mircea_popescu</b> why the fuck doesn't (remove "candilustt" &lt;>) remove it from &lt;> !<br />
+<b>phf</b> mircea_popescu: correct direction, but exactly what's happening there</p>
+<p><b>mircea_popescu</b> huh ? phf it shockingly removed dick<br />
+<b>phf</b> removes removes items from a sequence, not subsequences. so remove can remove a character from a sequence of characters. but you're missing a function in your paste tree-thingy-string</p>
+<p><b>mircea_popescu</b> i am ? how do i remove abc from abcde ? not (remove "abc" "abcde") ?<br />
+<b>phf</b> you have tree-thingy, but no tree-thingy-string. everything's still working because tree-thingy-string is sitting in memory</p>
+<p><b>mircea_popescu</b> uh oh (paste (tree-thingy-string<br />
+<b>phf</b> right, the call is there, but not the definition (defun tree-thingy-string</p>
+<p><b>mircea_popescu</b> the definition is below ?<br />
+<b>phf</b> tree-thingy is bellow, not tree-thingy->>string&lt;&lt;</p>
+<p><b>mircea_popescu</b> ow fuck malfunction. kk good point. so why does    (remove "candilustt" (remove-if-not (lambda (a) (find a "abcdefghijklmnopqrstuvwxyz ")) message)) fail to take out her name from the line ?<br />
+<b>phf</b> because remove compares ~each individual character~ to ~string~, which is always false, so there's nothing to remove.</p>
+<p><b>mircea_popescu</b> oh i see. is there something to compare chunks ? and is remove a primitive then ? or did we define it ?<br />
+<b>phf</b> yeah, remove is part of the spec</p>
+<p><b>mircea_popescu</b> a ok. now, i'd expect quoting string creates proper squence and remove then deletes it. but that's just me. i suppose i shou;ld add a nill there<br />
+<b>BingoBoingo</b> Hello candi_lustt, who is your daddy and what does he do?</p>
+<p><b>mircea_popescu</b> BingoBoingo the way it's set up now it uses a ton of processing for anything over 3-4 words long.<br />
+<b>phf</b> so for some unknown reason there's nothing like remove subsequence in the standard, there's a different place to slice in though, and it's inside the missing tree-thingy-string</p>
+<p><b>mircea_popescu</b> phf no! this is nonsense, why the fuck would i slice it there. i want to send the proc a properly formed message</p>
+<p><b>phf</b> nods<br />
+<b>mircea_popescu</b> also, the fact that it takes over a minute to create the tree off BingoBoingo 's sentence is very worrysome. why is it this incredibly slow ?!<br />
+<b>ben_vulpes</b> ah heap exhaustion of some sort?<br />
+<b>ben_vulpes</b> Heap exhausted during garbage collection: 0 bytes available, 16 requested.</p>
+<p><b>mircea_popescu</b> my time budget for a 30 word sentence is about 2 seconds ; and this isn't all the processing it has to do.<br />
+<b>phf</b> :D</p>
+<p><b>mircea_popescu</b> ben_vulpes is this an arbitrary limit you set low or as far as it goes ?<br />
+<b>BingoBoingo</b> Well, better than more verbose presumably organic noisebutts<br />
+<b>ben_vulpes</b> mircea_popescu: it is a limit from whence i know not. checking</p>
+<p><b>mircea_popescu</b> kk. phf how do i check how many words are in a string ? anyway, anyone figured out what my endgame looks like here ?<sup><a href="#footnote_9_71072" id="identifier_9_71072" class="footnote-link footnote-identifier-link" title="This goes for you too, dear leader. I mean reader. Can you figure out what I aim to do, preferably before you read it at the end of the article ?">x</a></sup><br />
+<b>phf</b> there's possibly bug in the code. ~another reason~ might be the fact that it's trying to ~pretty~ print a deeply nested tree.<br />
+<b>ben_vulpes</b> mircea_popescu: (length (cl-ppcre:split " " string))</p>
+<p><b>mircea_popescu</b> ty!<br />
+<b>ben_vulpes</b> (i think)<br />
+<b>phf</b> hmmm<br />
+<b>ben_vulpes</b> phf: you want to know anything out of this ldb i just got dropped into?</p>
+<p><b>mircea_popescu</b> now do i do tree-thingy-string only if wordcount<br />
+<b>phf</b> hehe. well, message comes in, you want to call cl-ppcre:split on it, which gives you a list. you then check the length of list (&lt; (length ...) 32)<br />
+<b>ben_vulpes</b> (+ 1 1)<br />
+<b>ben_vulpes</b> candi_lustt: hey<br />
+<b>ben_vulpes</b> oh, no brain.<br />
+<b>phf</b> ben_vulpes: not going to work, because my hook goes into connection, and connection gets killed every reconnect.<br />
+<b>ben_vulpes</b> phf: aok<br />
+<b>phf</b> (something i didn't realize until that first reconnect)<br />
+<b>ben_vulpes</b> gotcha.<br />
+<b>phf</b> hmm, i wonder if actually having it might help with didactic purposes</p>
+<p><b>mircea_popescu</b> lessee<br />
+<b>ben_vulpes</b> phf: pls to<br />
+<b>asciilifeform</b> did you folx post this entire thing somewhere readable ? i've been tuned in but not 100% following<br />
+<b>ben_vulpes</b> asciilifeform: which "entire thing"? logs are in topic<br />
+<b>asciilifeform</b> the bot</p>
+<p><b>phf</b> asciilifeform: nah the bot is black box as far as everyone except ben_vulpes is concerned<br />
+<b>asciilifeform</b> aite.</p>
+<p><b>mircea_popescu</b> (&lt; (length (cl-ppcre:split message)) 32) ?<br />
+<b>ben_vulpes</b> it is very ugly, but i can share<br />
+<b>phf</b> it's got trinque's ircbot/logbot in it</p>
+<p><b>mircea_popescu</b> wait wait<br />
+<b>phf</b> mircea_popescu: yeap</p>
+<p><b>mircea_popescu</b> (&lt; (length (cl-ppcre:split " " message)) 32) ?<br />
+<b>ben_vulpes</b> that's it, mircea_popescu</p>
+<p><b>mircea_popescu</b> ok, and how do i say if ?<br />
+<b>phf</b> (if ... ...)<br />
+<b>ben_vulpes</b> (if test rtue-form false-form)</p>
+<p><b>mircea_popescu</b> and can i leave false nil ?<br />
+<b>ben_vulpes</b> aye<br />
+<b>ben_vulpes</b> candi_lustt heat http://p.bvulpes.com/pastes/4dXo0/?raw=true<br />
+<b>phf</b> we broke it..<br />
+<b>ben_vulpes</b> nono, shitty manual state mgmt</p>
+<p><b>mircea_popescu</b> eh. is this from me or from you two ?<br />
+<b>ben_vulpes</b> from you, responses are cooked to the speaker</p>
+<p><b>mircea_popescu</b>   end of file on #&lt;SB-INT:FORM-TRACKING-STREAM for "file /tmp/G791" {1004AE3B13}> ? srsly ? i did this ?! dat G7!<br />
+<b>ben_vulpes</b> like a g6 likealikeag6</p>
+<p><b>mircea_popescu</b> ftr, i hereby dub a "stranding error message" that error message which forms a disjunct set with the wordset of the operator's action.<br />
+<b>ben_vulpes</b> asciilifeform, phf: black box kludge</p>
+<p><b>mircea_popescu</b> i have nfi what to do next.<br />
+<b>ben_vulpes</b> mircea_popescu: check your parens balancing, it hit the end of file before getting a fully closed form i believe<br />
+<b>asciilifeform</b> ben_vulpes: aaaah! this is an eliza (vs markov chain bot)<br />
+<b>ben_vulpes</b> it is a whatever mircea_popescu makes it, ideally</p>
+<p><b>mircea_popescu</b> oh<br />
+<b>ben_vulpes</b> do consider using an editor that can handle this grunt work for you</p>
+<p><b>mircea_popescu</b> ye<br />
+<b>asciilifeform</b> i can only imagine the agony of doing this in 'pico' or what was it.</p>
+<p><b>mircea_popescu</b> i will, just as soon as i'm happy i understand it.<br />
+<b>ben_vulpes</b> it is painful to watch people balance parens by hand, and once you learn to use a parens-balancer balancing *any* pairwise set of expressions becomes utter hell</p>
+<p><b>mircea_popescu</b> dude let me suffer what is with all this avoidance of pain.<br />
+<b>ben_vulpes</b> pain, wasted time... </p>
+<p><b>mircea_popescu</b> pain is not wasted time.<br />
+<b>ben_vulpes</b> i just don't want you getting bored, balancing by hand!</p>
+<p><b>mircea_popescu</b> ben_vulpes if THAT's how i got bored i'd be an idiot wouldn't i ? anyway, i'm two short not just 1.<br />
+<b>asciilifeform</b> this ain't the good sort of pain. leads to avoidance of things that oughtn't be learned-avoided. (e.g. nesting)</p>
+<p><b>ben_vulpes</b> mircea_popescu: i think you're too tall, but i'm actually the short one<br />
+<b>trinque</b> one should still go through and actually have the problem before applying the tool</p>
+<p><b>mircea_popescu</b> after a certain age you learn what you wanna learn. but anyway. trinque is wise.</p>
+<p><b>mircea_popescu</b> gorgeous.<br />
+<b>ben_vulpes</b> trinque: you edit lisp code with some vi mode still?<br />
+<b>trinque</b> I use paredit, but I only picked it up when hand balancing started to bother me. and yes evil-mode<br />
+<b>ben_vulpes</b> not casting aspersions let it be noted.</p>
+<p><b>mircea_popescu</b> candi_lustt one two three four<br />
+<b>candi_lustt</b> You don't trick me, sly mircea_popescu with your NIL lures!<br />
+<b>mircea_popescu</b> candi_lustt one two three<br />
+<b>candi_lustt</b> You don't trick me, sly mircea_popescu with your NIL lures!<br />
+<b>mircea_popescu</b> candi_lustt one two<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/xlQ70/?raw=true<br />
+<b>mircea_popescu</b> da fuck<br />
+<b>phf</b> mircea_popescu: your paste has too many arguments</p>
+<p><b>mircea_popescu</b> motherfucker.<br />
+<b>mircea_popescu</b> so i can't call paste("hurr"). why not ?<br />
+<b>ben_vulpes</b> mircea_popescu: try it without the parens<br />
+<b>phf</b> (paste "hurr")</p>
+<p><b>mircea_popescu</b> woprked fine before. why did it. uh<br />
+<b>ben_vulpes</b> because tree-thingy-string returns a string<br />
+<b>phf</b>  like the calling convention is (function arg arg arg)<br />
+<b>ben_vulpes</b> ("thing") tries to call "thing" as a function. (+ 1 2 3)</p>
+<p><b>mircea_popescu</b> paste isn't a function ?<br />
+<b>ben_vulpes</b> paste is a function. "hurr" is not.</p>
+<p><b>ben_vulpes</b> of one argument. (paste "hurr")<br />
+<b>mircea_popescu</b> nil is the fucking terminator for the if not the fucking parameter for paste omfg</p>
+<p><b>ben_vulpes</b> what's it doing in the paste call then?. also you can omit the nil as else-form entirely<br />
+<b>mircea_popescu</b> you told me to take off the parens!</p>
+<p><b>ben_vulpes</b> yes, off "hurr".<br />
+<b>mircea_popescu</b> yes, i can omit it. i'll make my life easier just as soon as I HAVE ONE.</p>
+<p><b>ben_vulpes</b> lol. just move the nil outside of paste<br />
+<b>mimisbrunnr</b> block 447702: 2`763 txns, 998`190 bytes</p>
+<p><b>mircea_popescu</b> candi_lustt hurr durr<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/4E0pg/?raw=true<br />
+<b>mircea_popescu</b> this also didn't work correctly as far as tree-ing goes, but let's see if i can get her name nuked now.<br />
+<b>phf</b> if you're using ppcre already (regular expressions) then might as well go for (ppcre:regex-replace-all "candi_lustt" "foobar candi_lustt test" "")<br />
+<b>candi_lustt</b> "foobar  test"<br />
+<b>candi_lustt</b> You don't trick me, sly phf with your NIL lures!</p>
+<p><b>mircea_popescu</b> if i replace the string "message" with the string "(remove ("candi_lustt" nil) message)" will this result in the name being nuked from lines ?<br />
+<b>candi_lustt</b> You don't trick me, sly mircea_popescu with your NIL lures!<br />
+<b>mimisbrunnr</b> block 447703: 2`260 txns, 998`224 bytes<br />
+<b>ben_vulpes</b> imma step out shortly for a bit to roll the child around in the snow<br />
+<b>phf</b> well, yes, you want to replace message with a different form, that will remove a substring from the message. (remove ... message) wouldn't work though, as per above discussion. but that (ppcre ...) line will. you just want to replace the sample "foobar ..." with message</p>
+<p><b>mircea_popescu</b> how does one turn the quoted string "123" into a proper list ?<br />
+<b>phf</b> you can for example do<br />
+<b>phf</b> (coerce "abc" 'list)<br />
+<b>candi_lustt</b> (#\a #\b #\c)</p>
+<p><b>mircea_popescu</b> is everything in lisp "for example" rather than "to obtain metal piece you use cnc mill so and so" ?<br />
+<b>mircea_popescu</b> (remove (coerce "candilust" list) (coerce "candilust hurr durr furr" list))<br />
+<b>ben_vulpes</b> "some asse^H^H^H^Hthinking required"<br />
+<b>phf</b> the lines along which you are cutting this metal piece are a very fine. because i've never thought of teaching it, i don't know what is a reasonable subset of functions to use</p>
+<p><b>mircea_popescu</b> ah<br />
+<b>phf</b> you can for example do<br />
+<b>phf</b> (map 'list 'identity "abc")<br />
+<b>candi_lustt</b> (#\a #\b #\c)<br />
+<b>phf</b> or<br />
+<b>phf</b> (loop for c across "abc" collect c)<br />
+<b>candi_lustt</b> (#\a #\b #\c)</p>
+<p><b>mircea_popescu</b> jesus christ loops over strings to make charlists to remove from other strings. my skin is crawling.<br />
+<b>phf</b> well, none of these approaches are going to solve your problem though.</p>
+<p><b>mircea_popescu</b> the problem of "take 'abc' out of 'abcd ef' so as to get 'd ef'" ?<br />
+<b>phf</b> ye</p>
+<p><b>mircea_popescu</b> am i unreasonable thinking this makes lisp less of a language than even perl, php, etc ?<br />
+<b>phf</b> yes</p>
+<p><b>mircea_popescu</b> can you explain it ? and if you're wondering i have no intention of keeping that ppcre in there, either. i put it in because curious if it works, that's all.<br />
+<b>phf</b> well, ok, i think it would've been handy to have a "remove a subsequence from a sequence" operation in the standard. that operation doesn't actually exist in perl or php. what perl and php gives you, since they are unix languages, are a lot of ops that let you manipulate strings in a haphazard manner. "remove a substring from a string" is one of them. lisper solution is if you're going to muck with strings that way, then just use a regexp</p>
+<p><b>mircea_popescu</b> because a string is a subtype of array (ie with single-byte elements) and if you're going to fuck with deletion in arrays might as well do it honestly, and lisp has delegated "fuck with array and spit out list" to "regexp" ?<br />
+<b>asciilifeform</b> mircea_popescu: you need this<sup><a href="#footnote_10_71072" id="identifier_10_71072" class="footnote-link footnote-identifier-link" title="
+(defun replace-all (string part replacement &#038;key (ignore-case nil) )
+  (if (string= part ``)
+      string
+      (with-output-to-string (out)
+        (loop with part-length = (length part)
+              for old-pos = 0 then (+ pos part-length)
+              for pos = (search part string
+                                :start2 old-pos
+                                :test (if ignore-case #'char-equal #'char=) )
+              do (write-string string out
+                               :start old-pos
+                               :end (or pos (length string) ) )
+              when pos do (write-string replacement out)
+              while pos) ) ) )
+">xi</a></sup> or similar. and no, it isn't built in.</p>
+<p><b>mircea_popescu</b> yeh, reason i'm bitching is that it'd increase my code 60%<br />
+<b>asciilifeform</b> nobody 'delegated', the ppcre thing was written eons after standard was closed.</p>
+<p><b>mircea_popescu</b> I mean mentally. his solution seems to be "just use regexp" which im trying to evaluate. what makes him think this way and why.<br />
+<b>asciilifeform</b> whether this is same as complaining that your house didn't come with a cement mixer, or if it had not come with washer, is matter of taste. but often you will find that you are doing Wrong Thing, algorithmically, if you are continuously reaching for these absent pieces.</p>
+<p><b>mircea_popescu</b> i'm keenly aware of that possibility yeah. which is why i'm so verbose about this.<br />
+<b>asciilifeform</b> so, in mircea_popescu's case, there ~is~ a 'subst' in the standard, which substitutes in subtrees.<br />
+<b>phf</b> mircea_popescu: well, no ~my solution~ is different</p>
+<p><b>mircea_popescu</b> oh did i get confused ? what was your solution ?<br />
+<b>phf</b> the reason why i for example said, move it into tree-thingy-string is because you're constructing a lot of concepts here, that you keep implicit. like you keep talking about "words", whereas your input is just a string of characters. a correct solution is to have a thing that knows how to convert string to words (even if very naively) and then after manipulate the result in terms of word (i want to remove word "candy_lust" from the list of words)</p>
+<p><b>mircea_popescu</b> why the fuck does the "only character" limitation exist, even! i can't grasp this.<br />
+<b>asciilifeform</b> exist in what ?</p>
+<p><b>mircea_popescu</b> in remove. and am i misguided to worry about the insanity of processing data i know i don't want processed ? such as all those subleaves i won't want or use ?<br />
+<b>asciilifeform</b> it doesn't.</p>
+<p><b>mircea_popescu</b> then what the fuck's the problem ? if i can remove "a" i should be able to remove "ab".<br />
+<b>phf</b> asciilifeform: he means "only single element"</p>
+<p><b>mircea_popescu</b> these aren't substantially different. i am being sold a house with a special door only allowing men to pass! WTF!<br />
+<b>asciilifeform</b> mircea_popescu: no! "ab" is not a single object !</p>
+<p><b>mircea_popescu</b> how the fuck not.<br />
+<b>asciilifeform</b> it is algorithmically wholly different game, to remove a ~subsequence~. it isn't an O(N) operation any more.</p>
+<p><b>mircea_popescu</b> so in this sense lisp is even more narrowly married to the hardware than c ? "but mp, it makes no difference a one letter and a two letter word are the same thing, we didn't implement it that way".<br />
+<b>asciilifeform</b> they aren't the same thing on any known iron in any known universe</p>
+<p><b>mircea_popescu</b> two byte items are for 16 bit machines what one byte items were on 8 bit machines : machine words. but this aside, seriously, i need to care as a high level language user what the register size was at some point because someone thought it a good idea to bake "char" length into their algos ? really now, of the byte-array "abc", "ab" is an element just as "a" is an element. you will have to cut up this array, and presumably will prefer to spit out a list. this is nice. whether you cut by the character or by the 58 characters should be irrelevant to you, and user-specified.<br />
+<b>asciilifeform</b> the language is bitness-agnostic. but 'string' is defined as 'vector of characters' and a 'vector' is a thing that can be operated on one element at a time. now there was once a d00d named danny hillis, and he built 'connection machine', which operated on 65536 things at a time, and he ~did~ have to augment commonlisp to make this semantically convenient in it. fwiw. but even there, 'nix the substrings' is NOT a thing that you get 'for free' without thinking about it. because it is algorithmically nontrivial.</p>
+<p><b>mircea_popescu</b> how do i define my lines to be proper lists rather than this, and were i to so define them, could i sanely process them ? fuck this "string vector" bs, i have nfi why it exists even<br />
+<b>asciilifeform</b> mircea_popescu: it exists because -- as phf iirc explained earlier in thread -- ~list~ is not a random access item on vonneumann machine, it is O(N). whereas array access is O(1).</p>
+<p><b>mircea_popescu</b> i want the string "abc" to be interpreted by the machine as the list "a"->"b"->"c"->nil whereby the deletion of "b" requires changing ONE pointer ; and the deletion of "bc" requires changing... ONE pointer. and to do this i gotta collect both strings ? i'm starting to understand the wisdom of phf 's "do it in tree thingy". if you use "words" then first define words, then nuke the bad word.<br />
+<b>asciilifeform</b> aha!</p>
+<p><b>mircea_popescu</b> myeah.<br />
+<b>mircea_popescu</b> candi_lustt candi lust<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/fQgOl/?raw=true</p>
+<p><b>mircea_popescu</b> (remove-duplicates (split-sequence:split-sequence #\space s :remove-empty-subseqs t) :test #'string-equal))<br />
+<b>asciilifeform</b> i thought you were trying to get rid of ppcre. (split-sequence is not in cl)</p>
+<p><b>mircea_popescu</b> o that neither ? i don't know it unless it says specifically, like cl-ppcre:split. so how do i turn a vector-string into a list of "words" ?<br />
+<b>asciilifeform</b> no built-in canned operator for this</p>
+<p><b>mircea_popescu</b> dude srsly... i can't possibly be the first guy who wanted to split up a string this way.<br />
+<b>ben_vulpes</b> i wrote my own the one time i was reluctant to pull in ppcre. lisp world was not written around strings, as phf pointed out in his critiques of my v.</p>
+<p><b>mircea_popescu</b> hm. well, this started very enjoyably but it's getting bogged down in the utter impracticability of lisp. the 2nd day i'm not perceptibly closer to implementing what i want, and now i face the unpleasant choice of a) rewrite php in lisp ; b) import a php rewrite to lisp someone else made or c) abandon the notion that anything useful may come of this.<br />
+<b>asciilifeform</b> this kitchen doesn't have a cement mixer built in.</p>
+<p><b>mircea_popescu</b> i have nfi what it was written around, but evidently there's a plain and simple usecase here that it's shit for.<br />
+<b>asciilifeform</b> you put one in. it's what, 3 lines.</p>
+<p><b>mircea_popescu</b> yours was 12.<br />
+<b>asciilifeform</b> 14.</p>
+<p><b>mircea_popescu</b> but the problem is, NEXT time ima wanna do something, it'll be another 14 lines.<br />
+<b>asciilifeform</b> this is universal, not even PL/I has EVERY possible widget built in. and if you had such a language, it'd be a javaesque nightmare.</p>
+<p><b>mircea_popescu</b> "take what candi_lustt heard, wipe out all punctuation, split into a list of words and remove her name" is not... "every possible widget"<br />
+<b>candi_lustt</b> You don't trick me, sly mircea_popescu with your NIL lures!<br />
+<b>asciilifeform</b> lol</p>
+<p><b>mircea_popescu</b> and the saddest part is that i struggle with conceptually coming up with a model that usefully de-stringifies a string for lisp's needs that's also not a whole ai by itself. the whole fucking point of natural language, on meditation, appears to very much be "it not being lisp". in any case the impedance mismatch of primitives is well shocking.<br />
+<b>asciilifeform</b> ppcre more or less turns the thing into perl, for use by incorrigible perlists. if you really must, can use that.</p>
+<p><b>mircea_popescu</b> or i could just use perl. this is the problem here.<br />
+<b>asciilifeform</b> you don't get the error handling, or 1,001 other things, including the company of sane folx, if you do. but sure, plenty of folx -- use perl. and drink rotgut, and eat mcd. etc</p>
+<p><b>mircea_popescu</b> i must say i'm not impressed with the very tiny slice of error handling i saw so far. about same preponderence of stranding error messages as fortran.<br />
+<b>asciilifeform</b> again it isn't a socialist 'get it for free' item. you gotta ~use~ the mechanisms to implement it.</p>
+<p><b>mircea_popescu</b> error message must in all case reference a symbol operator manipulated. this is not escapable.<br />
+<b>asciilifeform</b> again, this expectation of a 'dwim ai' giving meaningful eggogs For Phreee</p>
+<p><b>mircea_popescu</b> &lt;SB-INT:FORM-TRACKING-STREAM "file /tmp/G791" or {1004AE3B13} aren't symbols i manipulated. and i don't care the machine THINKS SO. i don't think so, and that controls. also import here the c-makes-you-lie<sup><a href="#footnote_11_71072" id="identifier_11_71072" class="footnote-link footnote-identifier-link" title="Most memorably, Naggum's.">xii</a></sup> threadsa.<br />
+<b>asciilifeform</b> mircea_popescu: where'd these come from ? srsly i'm mighty curious nao</p>
+<p><b>mircea_popescu</b> i opened 16 closed 14 parens. you can prolly see the exact state owing to the ~extremely well designed~ process i came up with ; they're in the logs.<br />
+<b>asciilifeform</b> you do understand that this makes your ast ambiguous, right ? doing the Right Thing in such a case is ai-complete.</p>
+<p><b>mircea_popescu</b> asciilifeform saying "your ast was ambiguous" is way better than this. see, it very c-esque-ly tries to be very specific and objective about a fundamentally unspecifiable situation. really, it was 1004AE3B13 ? o noes!<br />
+<b>ben_vulpes</b> mircea_popescu: those are artifacts of the system you commissioned.</p>
+<p><b>mircea_popescu</b> ben_vulpes ah are they ?<br />
+<b>ben_vulpes</b> that it behaves insanely is because i made it do insane things. yes.</p>
+<p><b>mircea_popescu</b> ah ah<br />
+<b>asciilifeform</b> in other news, woodchipper dun care if it's chippin' wood or flesh, bone.</p>
+<p><b>mircea_popescu</b> if no one screams no one knows.<br />
+<b>ben_vulpes</b> you are fighting unnecessary layers of abstraction. </p>
+<p><b>mircea_popescu</b> but moving on : how do i process strings in lisp in a way that doesn't reduce to "you really should have just used bash" and which ALSO doesn't require me to first teach a machine french.<br />
+<b>ben_vulpes</b> "why did it barf and not tell me there were no parens?" "no sane person would write and test code that way"</p>
+<p><b>mircea_popescu</b> Dja see the thing above about inspecting historical state ?<br />
+<b>ben_vulpes</b> as in "read teh logs"?</p>
+<p><b>mircea_popescu</b> yeh.<br />
+<b>ben_vulpes</b> yes, it's called a repl. most of us use one on our computers.</p>
+<p><b>mircea_popescu</b> but most^H^H^H^ all of you can't see each other's.<br />
+<b>ben_vulpes</b> has history, scrollback, state, close coupling to code under development.<sup><a href="#footnote_12_71072" id="identifier_12_71072" class="footnote-link footnote-identifier-link" title="I do believe there's no better way to teach programming, especially to someone very new who'll need a lot of help, than setting up an irc bot repl. For serious.">xiii</a></sup></p>
+<p><b>mircea_popescu</b> riight.<br />
+<b>asciilifeform</b> ~everybody has heavily custom workflow. asciilifeform for instance has a button on keyboard that evaluates the form the editor cursor is in. and another that evaluates any highlighted forms. a 'form' in this case is any (..........) that isn't inside of some other (.......) in file.</p>
+<p><b>mircea_popescu</b> yes, and i'm sure it works for you, but you don't have a good answer to "what was that then" that you can show me. i could show you. this is something, even if it's not the something you want to have.<br />
+<b>ben_vulpes</b> what is this "what was that then"?<br />
+<b>asciilifeform</b> the answer to 'what was that' is the 'that', which i have just as readily here (a list of forms that got evaluated)</p>
+<p><b>mircea_popescu</b> ben_vulpes i don't have all this set up for search, but he asked me above "where did these symbols come from". the whole process that produced them is right there ready to be examined. by him, even if it was my process. he/you want to tell me about how your process is ready for you to examine. that's nice, but also a fundamentally different thing.<br />
+<b>asciilifeform</b> if you treat your proggy as a set of lines that get eval'd sequentially, from scratch every time, as if you were writing bash script -- this is fine, and you get serialization for phreee, but at the cost of losing the repl. ideally you write in such a way that you don't violate the semantics by repling (and so pasting your code results in something another fella can replicate, if you are collaborating)<sup><a href="#footnote_13_71072" id="identifier_13_71072" class="footnote-link footnote-identifier-link" title="This probably works acceptably well if the two are collaborating, but I'm damned sure nobody learned to code this way, because they can't, because it's insane.">xiv</a></sup><br />
+<b>jurov</b> removing substring without ppcre: (subseq "abc def" (+ (length " abc") (search "abc" "abc def") ))<br />
+<b>asciilifeform</b> jurov: this doesn't do what you expect, i suspect for one thing, it doesn't remove multiple instances<br />
+<b>jurov</b> i tried it. with little massage it can remove from middle, too<br />
+<b>asciilifeform</b> for another, it won't handle the case where 'abc' is not found</p>
+<p><b>mircea_popescu</b> hm! so subseq takes string and returns substring between two indices ?<br />
+<b>asciilifeform</b> and when you add in these missing pieces, it will look exactly like the snippet i gave to mircea_popescu earlier.<br />
+<b>jurov</b> nope, where do you see loop?<br />
+<b>asciilifeform</b> jurov: if no loop, it will replace ONE ocurrence</p>
+<p><b>mircea_popescu</b> asciilifeform the sadness right now is that you just dropped the bomb of all time pointing out "turn string vector into list of string vectors by character delimiter" is ppcre also. which maxed my dosimeter.<br />
+<b>phf</b> mircea_popescu: it's not actually ppcre, but it's not in the standard either</p>
+<p><b>mircea_popescu</b> what's "not in the standard" mean here ?<br />
+<b>asciilifeform</b> mircea_popescu: it means 1) not in http://www.lispworks.com/documentation/lw50/CLHS/Front/X_AllSym.htm and 2) not guaranteed to be available on a brand-new cltron<br />
+<b>phf</b> well, point 2 is kind of irrelevant</p>
+<p><b>mircea_popescu</b> should i care about either of these ?<br />
+<b>asciilifeform</b> whole point of a standard...<br />
+<b>phf</b> it's third party code, written on top of the bedrock<br />
+<b>asciilifeform</b> because if you don't give a fuck about standard, and 'i'll stick with sbcl for life!!!' you suddenly have ~all of the missing parts<br />
+<b>phf</b> ok this is actually misinformation given the subject</p>
+<p><b>mircea_popescu</b> standard is one thing, but at some point someone is going to write a fucking library . i can't reject everyone's libraries because they're someone's libraries.<br />
+<b>asciilifeform</b> phf: how's that -- pretty sure sbcl has complex string-munging in it<br />
+<b>phf</b> split-sequence doesn't come with any lisp environment, it's third party code, that's written in lisp. i.e. a library<br />
+<b>asciilifeform</b> mircea_popescu: there is ppcre.<br />
+<b>trinque</b> this can certainly be done with the loop macro, if we're talking about tokenizing a string by say space, or w/e.<br />
+<b>phf</b> for the record ppcre is ~written in lisp~, also a library</p>
+<p><b>mircea_popescu</b> so can we come up with a "the tmsr correct way of take string, produce list of words" ?<br />
+<b>phf</b> yes</p>
+<p><b>mircea_popescu</b> how does it go ?<br />
+<b>asciilifeform</b> ( (possibly) interestingly, cltl2 has some discussion of items that were considered for inclusion in the standard, but did not make it, and why )<br />
+<b>ben_vulpes</b> here<sup><a href="#footnote_14_71072" id="identifier_14_71072" class="footnote-link footnote-identifier-link" title="
+(defun mp-split (s &#038;optional words)
+  (let ((next-delimiter (search ` ` s) ) )
+   (if next-delimiter
+     (progn
+       (mp-split (subseq s (+ 1 next-delimiter) )
+        (cons (subseq s 0 next-delimiter) words) ) )
+     (reverse words) ) ) )
+">xv</a></sup>'s one splitter. </p>
+<p><b>mircea_popescu</b> why does it reverse words and what's that ?<br />
+<b>asciilifeform</b> because consing is 'lifo'<br />
+<b>ben_vulpes</b> (cons 1 nil)</p>
+<p><b>mircea_popescu</b> ah. word order is irrelevant here, so. how would i have this item count the elements it produced ?<br />
+<b>ben_vulpes</b> (length (mp-split "stuff and things"))</p>
+<p><b>mircea_popescu</b> that's the element count, not some byte nonsense ?<br />
+<b>ben_vulpes</b> aye</p>
+<p><b>mircea_popescu</b> nice!<br />
+<b>ben_vulpes</b> or at the end (values words (length words)), which will return 2 values, the list of words and the number of them.</p>
+<p><b>mircea_popescu</b> and how do i have it take out specified element ? oh nicer!<br />
+<b>ben_vulpes</b> remove would work in all likelihood</p>
+<p><b>mircea_popescu</b> thisis the part of lisp i like the most!<br />
+<b>ben_vulpes</b> you could even make it take an arbitrary delimiter if you'd like, or a set on which to split.<br />
+<b>phf</b>  (remove "word" (mp-split "foo and word and foo") :test 'equal)<br />
+<b>ben_vulpes</b> or use cl-ppcre, which is what i do. oh and dump the progn, that's 100% unnecessary artifact.</p>
+<p><b>mircea_popescu</b> does this then return the list and its length ?<br />
+<b>ben_vulpes</b> i don't know man why aren't you evaling this code yourself?! let me paste that into my repl for you. no, by inspection that only returns the length of the list of words</p>
+<p><b>mircea_popescu</b> honestly, because i don't expect i'll be able to navigate the error bonanza.<br />
+<b>ben_vulpes</b> any sane lispolator drops you into a debugger.</p>
+<p><b>mircea_popescu</b> i was trying to avoid masturbation. with this entire exercise. otherwise yes i can just install something somewhere and go away dicking with it forevermore. i think it's been done actually. so my logic is : i added a further item in the definition, and a further calculation at the end.<br />
+<b>ben_vulpes</b> ah i see what you're trying to do<br />
+<b>trinque</b> lisp has a notion of multiple return values from a function. done by doing (values 1 2 3)</p>
+<p><b>mircea_popescu</b> defun mp-split (s &#038;optional words length)<br />
+<b>ben_vulpes</b> correct. </p>
+<p><b>mircea_popescu</b> holy shit there;s a "define" which DOES?NT define the thing ?<br />
+<b>ben_vulpes</b> (s &#038;optional words length) is the list of arguments to the function</p>
+<p><b>mircea_popescu</b> oh. so the idea is, it'll return whatever it damned well please ?<br />
+<b>ben_vulpes</b> to tell the compiler types etceteras you use (the ...) but this verges on masturbation. and yes, unless constrained to return only ints, strings, clos objects whatever, it does return whatever it damn well pleases. 'dynamic language'. user may constrain this.</p>
+<p><b>mircea_popescu</b> and to make it return three values i... change  (values words (length words)) to (values words (length words) "the letter 4") ? and so values is a keyword which does what return does ?<br />
+<b>ben_vulpes</b> aye. now to bind that you'll need multiple-value-bind</p>
+<p><b>mircea_popescu</b> to.. bind ?<sup><a href="#footnote_15_71072" id="identifier_15_71072" class="footnote-link footnote-identifier-link" title="The darkness is growing.">xvi</a></sup><br />
+<b>ben_vulpes</b> to use the return values of that function elsewhere, you'll need to bind them explicitly at the call site of mp-split, otherwise you'll only get the first. standby.<br />
+<b>asciilifeform</b> if you were writing this to 'pour into cement', you generally would not want it to do the potentially expensive O(N) finding of the list length every single time forever</p>
+<p><b>mircea_popescu</b> it's only called once per chatline and i want the length once per chatline, so i think is right as is.<br />
+<b>asciilifeform</b> consider that most of the things you end up doing with a list do not require you to know its length in advance.</p>
+<p><b>mircea_popescu</b> but here they do - i want to not process lines longer than x words<br />
+<b>asciilifeform</b> then yes</p>
+<p><b>mircea_popescu</b> ben_vulpes ima try to put this in bot one sec.</p>
+<p><b>asciilifeform</b> often the answer is this.</p>
+<p><b>mircea_popescu</b> candi_lustt * asciilifeform is still in the mental key of thread re 'why the fuck is this essential $item not in standard !111'<br />
+<b>mimisbrunnr</b> block 447718: 2`574 txns, 999`951 bytes<br />
+<b>mircea_popescu</b> wtf not defined ? it's right there ?<br />
+<b>mircea_popescu</b> ough<br />
+<b>mircea_popescu</b> wtf bbq chain of these i don't understand<br />
+<b>ben_vulpes</b> reverse the order or forward declare the function. i pasted you a declaim once upon a time when you asked where "brain" was defined. compiler will not assume that a function exists, how would it know its lambda list?</p>
+<p><b>mircea_popescu</b> ben_vulpes am i mistaken in thinking your http://p.bvulpes.com/pastes/hkID2/?raw=true was erroneous in that either the inner call needs a 2 or else the 2 is spurious in defun ?<br />
+<b>jurov</b> it's only a style-warning<br />
+<b>asciilifeform</b> just like in most languages, a symbol gotta exist before you can use it</p>
+<p><b>mircea_popescu</b> holy shit in order ? really ? that's like the #1 thing i hated about c. it's fucking there!<br />
+<b>asciilifeform</b> it dun have time travel either, you gotta WRITE the proggy before you can run it! suxxxxxx</p>
+<p><b>ben_vulpes</b> mircea_popescu: mine is 'erroneus' in that i wanted to eval your version next to mine.<br />
+<b>trinque</b> ben_vulpes: you didn't change the recusive call's name<br />
+<b>ben_vulpes</b> oh yes then completely erroneous.</p>
+<p><b>mircea_popescu</b> candi_lustt<br />
+<b>mircea_popescu</b> ahh i added no visualiser.<br />
+<b>mircea_popescu</b> candi_lustt<br />
+<b>mircea_popescu</b> i have nfi why it's silent.<br />
+<b>ben_vulpes</b> sumfin broke. specific error is Value #&lt;PURI:URI http://p.bvulpes.com/> can not be converted to an SQL literal.</p>
+<p><b>mircea_popescu</b> to a... there's sql in this ?<br />
+<b>ben_vulpes</b> there is a wealth of information that this channel is eliding. yup, that's the channel over which the irc connection passes data to the parser</p>
+<p><b>mircea_popescu</b> ah k<br />
+<b>ben_vulpes</b> candi_lustt<br />
+<b>ben_vulpes</b> ah mircea_popescu you are calling format t. t writes to process stdout.</p>
+<p><b>mircea_popescu</b> it's your code!<br />
+<b>ben_vulpes</b> you want format nil, that returns the cooked string. i wrote it in my process, you must read it and make it work for yours. it is only there to do something with the values</p>
+<p><b>mircea_popescu</b> aok. so t is actually a language primitive in that context ?<br />
+<b>ben_vulpes</b> aye. all objects descend from t, it would be True in say python</p>
+<p><b>mircea_popescu</b> aha. and nil is f ?<br />
+<b>ben_vulpes</b> nil is false</p>
+<p><b>mircea_popescu</b> but is nil === f or just = ?<br />
+<b>ben_vulpes</b> stahp<br />
+<b>trinque</b> there isn't an f</p>
+<p><b>ben_vulpes</b> standby</p>
+<p><b>mircea_popescu</b> poor phf i think he's overwhelmed by all the layered crazy.<br />
+<b>ben_vulpes</b> i'm there as well</p>
+<p><b>mircea_popescu</b> well supposedly it's fun. at any rate i'm missing out on a tango party for this, so.<br />
+<b>ben_vulpes</b> that fetch failure is an indication i should do what phf said to do and eval directly from string</p>
+<p><b>mircea_popescu</b> ah there, her diet's over. ok so<br />
+<b>mircea_popescu</b> &lt;mircea_popescu> ah there, her diet's over. candi_lustt<br />
+<b>ben_vulpes</b> ah i think i see. who knew so much complexity could be crammed into so few lines of code</p>
+<p><b>mircea_popescu</b> it's the way of the korgar, son of man<br />
+<b>ben_vulpes</b> let me find the last brain that worked. yes okay paste returns an object that does not serialize nicely. COOL</p>
+<p><b>mircea_popescu</b> it's your code!<br />
+<b>ben_vulpes</b> mhm<br />
+<b>jurov</b> no such candi_lustt<br />
+<b>mircea_popescu</b> lol<br />
+<b>mircea_popescu</b> &lt;mimisbrunnr> block 447720: 2`400 txns, 998`205 candi_lustts<br />
+<b>candi_lustt</b> http://p.bvulpes.com/pastes/vMZXh/?raw=true<br />
+<b>mircea_popescu</b> candi_lustt<br />
+<b>candi_lustt</b> http://p.bvulpes.com/pastes/dyp7L/?raw=true</p>
+<p><b>mircea_popescu</b> at this juncture i want it to reduce all chains of whitespace to one whitespace. afaik lisp does this itself, for code ?<br />
+<b>jurov</b> yes, there's "read" function that does it<sup><a href="#footnote_16_71072" id="identifier_16_71072" class="footnote-link footnote-identifier-link" title="They're trolling me softly. With their words.">xvii</a></sup></p>
+<p><b>mircea_popescu</b> lettuce see here.<br />
+<b>mircea_popescu</b> &lt;mircea_popescu> candi_lustt<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/y6pNe/?raw=true<br />
+<b>jurov</b> and also, read-from-string . both need to be called repeatedly to yield next token</p>
+<p><b>mircea_popescu</b> yeh. There is no applicable method for the generic function  #&lt;STANDARD-GENERIC-FUNCTION SB-GRAY:STREAM-READ-CHAR (3)> when called with arguments [that you used]<br />
+<b>phf</b> well, there were 5 different people saying things at cross concern, it disrupted the cohesion of narrative (that was already tricky to keep coherent, because i was coming up with things as i go).</p>
+<p><b>mircea_popescu</b> getting half a dozen people to lisp-cvas is possibly the tallest dance there is huh.<sup><a href="#footnote_17_71072" id="identifier_17_71072" class="footnote-link footnote-identifier-link" title="Yes, a novel discourse format creates a novel flavour of civilisation.">xviii</a></sup><br />
+<b>phf</b> i think it's more of a "two doctors is the death of the patient" kind of issue. like read/read-from-string. yes they can be wrestled into reading words ignoring whitespace, but you can't just slice it into code above. that's an entirely different strategy for solving this problem.</p>
+<p><b>mircea_popescu</b> hm. it is beyond me why this is a problem needing strategies, but perhaps in time. is there a way to instruct your alphabetizer to permit only one space ?<br />
+<b>phf</b> there's not even an easy way to say what read-from-string ~does~ without going into a lot of heavy arcana</p>
+<p><b>mircea_popescu</b> alright.<br />
+<b>phf</b> your turn string to words operation used to eliminate duplicate whitespace already. actually one sec (mpbot::mp-split "foo    bar   qux" " ")<br />
+<b>ben_vulpes</b> i have since rebooted the whole thing<br />
+<b>phf</b> (mpbot::mp-split "foo    bar   qux" " ")<br />
+<b>candi_lustt</b> error: #&lt;simple-error "~@&lt;There is no applicable method for the generic function ~2I~_~S~<br />
+<b>phf</b> (+ 2 2)<br />
+<b>candi_lustt</b> 4<br />
+<b>mircea_popescu</b> the generic function ~2I~_~S~ ? srsly ?<br />
+<b>phf</b> (mpbot::mp-split "foo    bar   qux")<br />
+<b>candi_lustt</b> error: #&lt;simple-error "~@&lt;There is no applicable method for the generic function ~2I~_~S~<br />
+<b>mimisbrunnr</b> block 447722: 2`482 txns, 998`194 bytes<br />
+<b>ben_vulpes</b> this is where i say "you know if weitz wrote a lib that does this..." cl-ppcre:split returns empty sequences for the delimiter-only subsequences<br />
+<b>phf</b> yeah, there's a library that's called split-sequence that we were using before everyone decided to come say things :}</p>
+<p><b>mircea_popescu</b> yeah i suspect we'll be going back to using it. seeing how lisp is great except the greater it gets the less it can be used.<br />
+<b>phf</b> but yeah<br />
+<b>ben_vulpes</b> phf: sry, i grew weary of the "omfg not in standard" thread</p>
+<p><b>phf</b> (split-sequence:split-sequence #\space "foo   bar   qux")<br />
+<b>candi_lustt</b> ("foo" "" "" "bar" "" "" "qux")</p>
+<p><b>mircea_popescu</b> how do i not permit empty sequences ?<br />
+<b>phf</b> (split-sequence:split-sequence #\space "foo   bar   qux" :remove-empty-subseqs t)<br />
+<b>candi_lustt</b> ("foo" "bar" "qux")<br />
+<b>phf</b> that's already in the code, but it doesn't need to be, can also do it ourselves</p>
+<p><b>mircea_popescu</b> aha!<br />
+<b>phf</b> (remove "" (split-sequence:split-sequence #\space "foo   bar   qux") :test 'equal)<br />
+<b>candi_lustt</b> ("foo" "bar" "qux")</p>
+<p><b>mircea_popescu</b> why is :test 'equal, whats : and ' and wtf.<br />
+<b>phf</b> functions take mandatory arguments, optional arguments and keyword arguments</p>
+<p><b>mircea_popescu</b> in this case, function is remove ?<br />
+<b>phf</b> yes. it takes a bunch of parameters that lets you narrow down what and how you're removing<br />
+<b>phf</b> (remove "" (split-sequence:split-sequence #\space "foo   bar   qux") :test 'equal :start 2)<br />
+<b>candi_lustt</b> ("foo" "" "bar" "qux")</p>
+<p><b>mircea_popescu</b> helpfully not documented on the clhs poage<br />
+<b>phf</b> no it is</p>
+<p><b>mircea_popescu</b> sadly im looking at it<br />
+<b>ben_vulpes</b> what "this" is not documented?<br />
+<b>phf</b> it's pretty simple, everything that we're talking about in this part of the conversation is documented on clhs, so it's a pretty safe bet to say "yes"</p>
+<p><b>mircea_popescu</b> anyway. i'm sure the probvlem is my inability to read.<br />
+<b>phf</b> remove documentation page will document what kind of arguments, optional arguments and keyword arguments it takes</p>
+<p><b>mircea_popescu</b> the "arguments and values" section, owing to it evidently aiming to be correct, manages to be meaningless to me.<br />
+<b>phf</b> aah</p>
+<p><b>mircea_popescu</b> anyway. let's see if we can re-achieve the peak of glory of late yesterday after a full day's work today. to think all i wanted to do is add a fucking counter so it only takes lines<br />
+<b>phf</b> that should've gone into the tree-thingy-string :p</p>
+<p><b>mircea_popescu</b> phf aha. by calling length and if-ing it there ?<br />
+<b>phf</b> yeap, you already have those words all nicely split up and prepared. can limit the length ~of words~ can also ~remove words~ that you want to filter out<br />
+<b>asciilifeform</b> ideally you would give eat-words a param of max-words, after which it aborts, rather than eat and then count if above limit</p>
+<p><b>mircea_popescu</b> i'm not going to talk to you anymore because saint phf says you'e leading me into the temptation of things.<br />
+<b>phf</b> (equal "hello" "hello")<br />
+<b>candi_lustt</b> t<br />
+<b>phf</b> (eq "hello" "hello")<br />
+<b>candi_lustt</b> nil<br />
+<b>phf</b> (eq; "hello" "hello")<br />
+<b>candi_lustt</b> error: #&lt;end-of-file {1004F33FB3}><br />
+<b>phf</b> (eql "hello" "hello")<br />
+<b>candi_lustt</b> nil<br />
+<b>mimisbrunnr</b> block 447724: 1`685 txns, 998`125 bytes<br />
+<b>phf</b> anyway lisp has a bunch of equality operations that range in the depth of inspection. it's usually prudent to know the difference and use them appropriately (because will have significant impact in speed) impact at scale only</p>
+<p><b>mircea_popescu</b> so basically you got = == === just like everyone else. nice.<br />
+<b>mircea_popescu</b> candi_lustt apples and oranges<br />
+<b>candi_lustt</b> mircea_popescu: error, see: http://p.bvulpes.com/pastes/sIHsd/?raw=true<br />
+<b>phf</b> you need to wrap your (tree-thingy-string ...) in something that produces a string result. but for good measure really ben_vulpes should make paste take any kind of possible type</p>
+<p><b>mircea_popescu</b> (remove-duplicates (split-sequence:split-sequence #\space s :remove-empty-subseqs t) :test #'string-equal))<br />
+<b>phf</b> (let  ( (abc (+ 2 2))) abc)<br />
+<b>candi_lustt</b> 4</p>
+<p><b>mircea_popescu</b> i wanna call tree-thingy on it, but only if its length is under x, so i dont wanna say it twice<br />
+<b>phf</b> (let  ( (abc (list 1 2 3))) (length abc))<br />
+<b>candi_lustt</b> 3</p>
+<p><b>mircea_popescu</b> so let (name (value)) ?<br />
+<b>phf</b> it's what ben_vulpes was referring to as "binding".</p>
+<p><b>mircea_popescu</b> ah.<br />
+<b>phf</b> (let  ( (name value) ...) ...)<br />
+<b>candi_lustt</b> error: #&lt;sb-int:simple-reader-error "too many dots" {10055B2B23}></p>
+<p><b>mircea_popescu</b> ok<br />
+<b>asciilifeform</b> let creates a universe that is the same as surrounding universe except that such-and-such symbol(s) are bound to particular values. it also has an implicit progn in it,.</p>
+<p><b>mircea_popescu</b> well that's nice.<br />
+<b>mimisbrunnr</b> block 447725: 1`926 txns, 998`200 bytes</p>
+<p><b>mircea_popescu</b> anyway, i'd like to continue but i'm entirely mentally exhausted. so perhaps another day.<br />
+<b>phf</b> hehe, i knew when to zone out :} there's a dozen of layers of complexity in common lisp. there are parts that date back to mccarthy's LISP days, and those are traditionally used for teaching purposes, because for all practical purposes they are reducible to cons cells and recursion. yesterday today made me convinced that there's wisdom in hanging further knowledge off of those rather than going for "best practices".</p>
+<p><b>mircea_popescu</b> so thinking about it - on one level it's a fact that what i want to use are two distinct types - "lines", which consist of alphabetic characters + spaces and "words", which consist of alphabetic characters only ; and on the next level that i was not aware of this, specifically, but vaguely, before running into the lisp obnoxiousball, so therefore it can both be said that it is useful in that it organizes thought and hoped  that it can be chiseled into less obnoxious more ball with a little more practice than two days' worth.</p>
+<p><b>davout</b> o god. this ia thing is alive. after reading #chainstate my conclusion is that mircea_popescu would enjoy ruby very much!<br />
+<b>trinque</b> o lawd<br />
+<b>mircea_popescu</b> lol and whyssat davout ?</p>
+<p><b>davout</b> string manipulation just seemed very painful<br />
+<b>mircea_popescu</b> well, a large part of the problem is that strings aren't something. ie, the veterans' objections couldn't be dismissed.</p>
+<p><b>davout</b> yeah, of course<br />
+<b>mircea_popescu</b> on which basis i enjoy ruby a lot less.</p>
+<p><b>davout</b> the point is simply that it bundles a good bit of convenience, which may or may not be a good thing depending on the particular point of view. either way, the repl looks pretty nifty</p>
+<p><b>mircea_popescu</b> the objection is that it bundles incorrect convenience, which is NEVER a good thing. link here to http://btcbase.org/log/2017-01-09#1599790 ; anyway, i quite enjoyed flailing for definitions once i realised what the problem was (you can tell i move to arrays at some point in a desperate bid etc)<br />
+<b>a111</b> Logged on 2017-01-09 15:10 mircea_popescu: this is how a mother acts, and why kids have not much business with her past the age of about 10 or so, depending how retarded they are.<br />
+<b>davout</b> what distinguishes correct from incorrect convenience ?</p>
+<p><b>mircea_popescu</b> something (convenience, anything else) is correct if it scales, which is to say is derived from the prime mover. anything else - incorrect. sinful is also a proper attribute of incorrectness, because it is literally a headless spawn of the very devil.<br />
+<b>davout</b> not sure i really get what you mean by "it scales". if you bundle lots of shit, it quickly becomes unmanageable because all abstractions and conveniences have a cost.</p>
+<p><b>mircea_popescu</b> not so. i can go from everything i do in an infinite string of correct whys to prime logic. broken shit can't do that. possibly your idea of "scales" is tainted by the idiots, "to scale means to be used by a larger cattle headcount". that has nothing to do. to scale means to go up the abstraction tree. an apple is a correct apple if it scales, ie, if the concept of apple follows from it.<br />
+<b>davout</b> what's "prime mover" in this context?</p>
+<p><b>mircea_popescu</b> literally the aristotelian imperative. the first thing to have moved.<br />
+<b>davout</b> it's still not very clear to me how the ability to manipulate string a bit more easily is equivalent to heresy. would the same functionality, included in cl's standard be deemed heretic?<br />
+<b>asciilifeform</b> davout: notice that it ~wasn't~ included! 'if your grandmother had balls...'<br />
+<b>davout</b> i do</p>
+<p><b>mircea_popescu</b> "it's not clear to me how the ability to manipulate something you can'd define is equivalent to http://btcbase.org/log/2016-12-16#1583902 "<br />
+<b>a111</b> Logged on 2016-12-16 06:24 trinque: in other python 2 was already shit... all([]) -> True   yet   any([]) -> False</p>
+<p><b>mircea_popescu</b> all you need is a false implication somewhere, davout ; ANYWHERE. once you have it then everything becomes provable.<br />
+<b>davout</b> strings defined as byte vectors is pretty unambiguous</p>
+<p><b>mircea_popescu</b> yes but now define ruby's notion of substr. see the whole point of "string" as a concept (and from it, as a type) is based on a fundamental ambiguity. now it's this, now it's that.<br />
+<b>asciilifeform</b> davout: cl chars ain't bytes. nor null-termed, nor contiguous in memory</p>
+<p><b>mircea_popescu</b> that's an anti-helpful objection.<br />
+<b>davout</b> i'm afraid i don't see that particular ambiguity</p>
+<p><b>mircea_popescu</b> i know. i hadn't seen it until yesterday either.<br />
+<b>asciilifeform</b> it is in fact useful to remember that the 'convenience' of cstring is == to the 'convenience' of shitting on the floor where you stand.</p>
+<p><b>mircea_popescu</b> this is something you can remember only if you already groked it.<br />
+<b>asciilifeform</b> tru</p>
+<p><b>davout</b> mircea_popescu: #chainstate ref plox?<br />
+<b>Framedragger</b> inb4 cross-channel reference and search system!!<br />
+<b>mircea_popescu</b> there's two points. one, where i saw it at the periphery and feared it may be a thing, which made me pretty pissy : http://logs.bvulpes.com/chainstate?d=2017-1-11#1340 and then http://logs.bvulpes.com/chainstate?d=2017-1-11#1374 as the issue was structuring in my head. then of course the closing comments early today morning, http://logs.bvulpes.com/chainstate?d=2017-1-12#323 as the thing couldn't actually be dismissed. if you look through the log it's pretty evident alf understands exactly what the problem is, in spite of his deeply boneheaded, inept self-expression. which sadly makes it evident only retrospectively. then again how to speak truth to clueless is a quite open problem in the first place. but that's why he speaks of socialism and getting for free and etc. </p>
+<p><b>davout</b> the reason some of the string primitives aren't included, e.g. "substring" is that they're O(n)? In other words, that the convenience comes at the cost of incentivizing operator idiocy?<br />
+<b>mircea_popescu</b> vice-versa : they have to cost that, because they're stuck papering over the fact that the operator has no idea what he wants.<br />
+<b>asciilifeform</b> well, for starters, much worse than O(n), but mircea_popescu nails it.</p>
+<p><b>mircea_popescu</b> the computer doesn't in the slightest mind running in a for loop from now until the heat-end of history. however, it would humbly request you actually write its death sentence deliberately rather than by uncomprehended accidenty. which is altogether not an unreasonable bar for all slavery.<br />
+<b>asciilifeform</b> this is main reason why haskell and other 'lazy eval' systems are malignant -- they create 'secret talmud' of workable ops, that are not visually distinct from intractable ones.</p>
+<p><b>mircea_popescu</b> mistreating the slaves is the ruin of the house.<br />
+<b>davout</b> right.</p>
+<p><b>mircea_popescu</b> don't tell me all this nonsense now makes sense to you ?<br />
+<b>davout</b> i see your point mucho better</p>
+<p><b>mircea_popescu</b> well then.<br />
+<b>davout</b> not sure what asciilifeform means in his last comment<br />
+<b>asciilifeform</b> which, ?<br />
+<b>davout</b> mircea_popescu: i see the point in general, but i'm not sure i'd take it as far as considering some additional string primitives as being evil<br />
+<b>davout</b> http://btcbase.org/log/2017-01-12#1601874<br />
+<b>a111</b> Logged on 2017-01-12 14:09 asciilifeform: they create 'secret talmud' of workable ops, that are not visually distinct from intractable ones</p>
+<p><b>mircea_popescu</b> well, entirely depends on your definition of evil, but the point remains they're not helping you, they're just smothering you. aka "you can get some version of what you possibly wanted done very easy at the cost of understanding what you actually wanted or what the hell's the differece.". cue ballas with his "there's a difference between what you need and what you want, and the media will relentlessly give you strings".<br />
+<b>asciilifeform</b> in some programming systems, it is very easy to inadvertently ask the machine to solve an np-hard problem. and for 0 good reason, other than that making such a language stroked academitard cocks. in other languages, e.g., python, ruby, there is a lesser sin, you end up stuffing multitude of O(n) ops in places where you oughta have O(1), O(n^2) ops where with some thought you could've had O(n), etc. and the braindamage adds up<br />
+<b>davout</b> ic</p>
+<p><b>mircea_popescu</b> it's very symbolically imperial, also. the language of "rights" and "rule of law" makes it trival to start a "war on drugs" or "women against rape". then the state ends and everyone is at a loss why the fuck it did.<br />
+<b>davout</b> yea, i guess the question is where you stop. at which point do you decide that you're going to buy these apples instead of growing them, because ultimately you want an apple pie</p>
+<p><b>mircea_popescu</b> no, not really, because i buy ~apples~. your question would be "at which point you stop buying canned frozen fruit tm for your apple pie". anyone may give his own answer, but in my case it's long, long ago. and yes i plant my own lovage, in buenos aires, because the plant doesn't exist and "soup condiment mix" doesn't satisfy.<br />
+<b>asciilifeform</b> davout: http://www.xach.com/naggum/articles/3144404199547949@naggum.no.html</p>
+<p><b>asciilifeform</b> '...suppose you drive down the highway and you suddenly want to go some nice place you saw just before you pass a forest.  you veer off the road, plunge into the wilderness and promptly decide that you need four-wheel drive, a huge cutting device in front of your car, much better shock absorbers, a bigger engine that could actually run on swamp water instead of getting all drowned, and then need an amphibious vehicle to get across the'll that right away after you made up your mind to veer off the road, and This Is Surely Somebody's Fault...'</p>
+<p><b>mircea_popescu</b> fwiw i wasn't terribly impressed with that particular statement.<br />
+<b>asciilifeform</b> (piece was not about strings, but another 'need' vs 'want', but otherwise very similar idea)</p>
+<p><b>mircea_popescu</b> actually, let me restate it in a form i better like! i now have to start writing an article IN THE MIDDLE OF WRITING AN ARTICLE. damn you all!<br />
+<b>asciilifeform</b> lel<br />
+<b>Framedragger</b> "so you have two tits right"<br />
+<b>deedbot</b> http://trilema.com/2017/the-general-brendan-eich-jwz/</p>
+<p><b>mircea_popescu</b> candi_lustt<br />
+<b>candi_lustt</b> You don't trick me, sly mircea_popescu with your  ( ( ( candilustt))) lures!</p>
+<p><b>mircea_popescu</b> ok well this is pretty epic then. let's break it.<br />
+<b>mircea_popescu</b> &lt;mircea_popescu> ok well this is pretty epic then. let's 5435345   break it.hurr ho!33eq<br />
+<b>mircea_popescu</b> &lt;mircea_popescu> ok well this is pretty epic then. let's 5435345   break it.hurr ho!33eq lol i was waiting for you candi_lustt<br />
+<b>mircea_popescu</b> aaaan we're out of time. serious question phf ben_vulpes who else knows lisp : can the above be made to return in</p>
+<p><b>candi_lustt</b> has quit (Ping timeout: 240 seconds)<sup><a href="#footnote_18_71072" id="identifier_18_71072" class="footnote-link footnote-identifier-link" title="The let's break it line is timestamped 10:32:59 ; the timeout is timestamped 10:37:40. That's a 41 second differential during which the thing churned.">xix</a></sup><br />
+<b>davout</b> mircea_popescu: painful morning eh<br />
+<b>mircea_popescu</b> i kinda had fun actually.</p>
+<p><b>davout</b> pain can be fun i guess!<br />
+<b>mircea_popescu</b> lol i guess so</p>
+<p><b>davout</b> the more pain you get, the more pleasurable the AHA moment is in my experience<br />
+<b>mircea_popescu</b> the only sad part here is that lisp dun actually seem to be usable for computation.</p>
+<p><b>davout</b> same as a plane i guess, gotta spend some time sucking before actually being able to go on your own<br />
+<b>mircea_popescu</b> the plane actually flies.</p>
+<p><b>davout</b> well, not if you don't know how to beat it into submission!<br />
+<b>mircea_popescu</b> i am more or less satisfied with the beating. the problem is that when i finally took off it seems to be going at ~0.001m/s which is not a speed.</p>
+<p><b>mimisbrunnr</b> block 447988: 2`443 txns, 998`170 bytes, 30m, 31s<br />
+<b>davout</b> ah i see, you did get to the "exceedingly lengthy lures" part :D i reluctantly come to the conclusion that i'll *have* to get into lisp at some point in the near future if only to resolve the cognitive dissonance between "this language looks horrible to me" and "these people that i think are very smart seem to have a very good opinion of it"</p>
+<p><b>mircea_popescu</b> i think it's a fine aide for thinking, in the sense that trying to write your problem in lisp will make you understand your problem well / it is impossible to write it in lisp until you understood it well. seems however after you do understand it you are then stuck going back to c and being all bitter about it. which would certainly explain alf's humours. nevertheless, phf DID somehow manage to process respectable quantities of text. if btcbase log hadn't existed i wouldn't even have considered lisp in the first place. so i wonder what exactly is going on here. i guess we find out when they wake up.<br />
+<b>davout</b> i suspect it's of the same nature as "if violence doesn't solve your problem, you're not using enough of it". anyway, i'm off, laterz!</p>
+<p><b>mircea_popescu</b> a hundred element list turned into a full tree produces about 25k nodes. that's not a notable item in terms of modern computings. actually the formula is simply n! isn't it. tsk. so the problem rather is, by my count there were 20 words there, which means<br />
+<b>mircea_popescu</b> !~calc 20!<br />
+<b>jhvh1</b>  mircea_popescu: 20! = 2432902008176640000</p>
+<p><b>mircea_popescu</b> that's a bit much. it can prune these, because it's making a tree not a list of permutations, but even so, i can see what teh problem is.</p></blockquote>
+<p>Quite the read, huh ?</p>
+<p>Anyway, the thing I was aiming to do is : </p>
+<ul>
+<li>Every time the bot is highlighted, it tokenizes the chatline as above. All of these go into the same tree as briefly discussed.</li>
+<p>
+<li>Each node in the tree has, other than the word payload, a numeric value associated.</li>
+<p>
+<li>Every time the bot hears a line, it selects all full passes through the tree that include at least one word from the line, and indexes them by the product of the node values.</li>
+<p>
+<li> Whenever the resulting product is above a certain value, it outputs that line.</li>
+<p>
+<li>Whenever two tree passes have the same value, it asks something like "what is [shared trunk] ?"</li>
+<p>
+<li>There should also be some skulduggery involved with increasing the values associated to nodes on the basis of the trunk being heard and on the basis of specific "cookie" feedings by humans.</li>
+</ul>
+<p>I won't be completing this, because meanwhile I figured out that this design requires significant computing resources which I am not willing to commit. I do still believe it is a reasonable approach to artificial intelligence, as well as the correct model for "language learning" as it takes place in infants<sup><a href="#footnote_19_71072" id="identifier_19_71072" class="footnote-link footnote-identifier-link" title="Incidentally a fine approach to estimate the volume of work done by the human -- as opposed to dragonfly -- brain : if Trilema's ~20 million words were as they are set out in a million sentences, then you'd be looking at about a million iterations of that 2 1018 nodes processing into one humongo tree. There aren't yet man made computers capable of handling this immense load, much like there aren't yet man made engines capable of powering a dragonfly's day out of the two calories its diet provides.
+And no, it makes no difference for the purposes of this discussion that it's Trilema as opposed to someone yakking on TV. All infantile brains learn any language, irrespective of their parents' culture, genetics etcetera, on the strict basis of spending years doing the above tree parsing, over however many million sentences you can churn at them. How a hundred billion neurons manage to process and store millions of exanodes is anyone's guess, and far far far outside the scope of this humble article.">xx</a></sup>. I do still believe lisp is a very reasonable work environment, and I will be releasing the repl bot for public WoT amusement.</p>
+<p>I am certainly very much indebted to the esteemed lords who graciously helped me through my three AI days. Thank you!</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_71072" class="footnote">The reference here is, of course, </p>
+<blockquote><p>WHY YOU WANT RAIL FOR KALASHNIKOV? IS NOT GOOD ENOUGH AS PROCURED FROM IZHEVSK MECHANICAL WORKS? YOU THINK NEEDS IMPROVEMENT? THEN MAYBE YOU FIND JOB WITH ARMY OF RUSSIA! YOU HAVE DRINKS WITH MIKHAIL KALASHNIKOV, TRADE STORY OF MANY WEAPONS DESIGNED AND DETAILS OF SCHOOL FOR ENGINEERING!</p>
+<p>OR MAYBE YOU NOT DO THIS, PROBABLY IS BECAUSE YOU NEVER DESIGN WEAPON IN WHOLE LIFE. YOU LOOK AT FINE RUSSIAN RIFLE, THINK IT NEED CRAZY SHIT STICK ON ALL SIDES OF WEAPON. YOU HAVE DISEASE OF AMERICAN CAPITALIST, CHANGE THING THAT IS FINE FOR NO REASON EXCEPT TO LOOK DIFFERENT FROM COMRADE. YOU PUT CHEAP FLASHLIGHT OF CHINESE SLAVE FACTORY ON ONE SIDE, YOU PUT BAD SCOPE OF AMERICAN MIDDLE WEST ON OTHER SIDE, YOU PUT FRONT PISTOL GRIP ON BOTTOM SO YOU ARE LIKE AMERICAN MOVIE GUY JOHN RAMBO. MAYBE YOU PUT SEX DILDO ON TOP TO FUCK YOURSELF IN ASSHOLE FOR MAKING SHAMEFUL TRAVESTY OF RIFLE OF MIKHAIL KALASHNIKOV, NO?</p>
+<p>RIFLE IS FINE. YOU FUCK IT, IT ONLY GET HEAVY AND YOU STILL NO HIT LARGEST SIDE OF BARN. GO TO FIRING RANGE, PRACTICE WITH MANY MAGAZINE OF CARTRIDGE. THEN YOU NOT NEED DUMB SHIT PUT ON SIDE OF RIFLE.</p></blockquote>
+<p>As they say, <a href="http://oglaf.com/obituator/">we've decided to try diplomacy</a>.<br />
+ [<a href="#identifier_0_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_71072" class="footnote">We did other things, all of us. My three days of AI are doubled by his two days of bot writing and by the previous weeks of trinque's botmaking and so on and so forth. As they say (to Paulinum), </p>
+<blockquote><p>Inde illa maximi medicorum exclamatio est: uitam breuem esse, longam artem. Inde Aristotelis cum rerum natura exigentis minime conueniens sapienti uiro lis: aetatis illam animalibus tantum indulsisse, ut quina aut dena secula educerent: homini in tam multa ac magna genito tanto citeriorem terminum stare. Non exiguum temporis habemus, sed multum perdidimus. Satis longa uita et in maximarum rerum consummationem: large data est, si tota bene conlocaretur. Sed ubi per luxum ac neglegentiam diffluit, ubi nullae bonae rei inpenditur, ultima demum necessitate cogente, quam ire non intelleximus, transisse sentimus. Ita est, non accipimus breuem uitam, sed facimus, nec inopes eius, sed prodigi sumus. Sicut amplae et regiae opes ubi ad malum dominum peruenerunt, momento dissipantur, at quamuis modicae, si bono custodi traditae sunt, usu crescunt: ita aetas nostra bene disponenti multum patet.</p></blockquote>
+<p> [<a href="#identifier_1_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_71072" class="footnote">I've removed a lot of spurious REPLing via the chat interface. If you are particularly curious the whole story is available in the #<a href="http://logs.bvulpes.com/chainstate">chainstate</a> log. The final code is </p>
+<blockquote><pre>(defpackage :mpbot
+  (:use :cl :logbot :drakma) )
+(in-package :mpbot)
+
+(defun subsets (list)
+  (if (null list) '(nil)
+    (let ((e (car list) )
+          (ss (subsets (cdr list) ) ) )
+      (append ss (loop for s in ss collect (cons e s) ) ) ) ) )
+
+(defun tree-thingy (items)
+  (if items
+    (let ((node (cdr (subsets items) ) ) )
+      (loop for sub in node
+        collect (cons sub
+          (tree-thingy (remove-if
+       (lambda (a) (member a sub) ) items) ) ) ) )
+    nil) )
+
+(defun tree-thingy-string (s)
+  (let word-list (remove-duplicates
+   (split-sequence:split-sequence #\space s :remove-empty-subseqs t)
+   :test #'string-equal) )
+   if (> length worldlist 4) (tree-thingy word-list) nil)
+
+(defun brain (target speaker message)
+ (format nil "You don't trick me, sly ~A with your ~A lures!" speaker
+  (paste (tree-thingy-string (remove-if-not (lambda (a)
+   (find a "abcdefghijklmnopqrstuvwxyz ") ) message) )
+  )
+ )
+)</pre>
+</blockquote>
+<p>and mostly consists of the work of His Lordship <a href="http://glyf.org">the Lord Chancellor</a> ; my own changes are unimportant, more in the vein of scratchmarks left by a young kitten on the graciously provided scratching post. </p>
+<p>I also added some stuff that actually happened in #trilema, for completeness. [<a href="#identifier_2_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_71072" class="footnote">No he's not gay. Some people have taste, what. And plenty of men drink wine. Seriously. [<a href="#identifier_3_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_71072" class="footnote">Yeah, good fucking luck, that is ~totally~ what I'm going to want it to do, something simple and sane like that. Because this is happy land and I really am a kitteh. [<a href="#identifier_4_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_71072" class="footnote">At the time His Lordship the <a href=http://www.loper-os.org/>Lord Admiral</a> had just introduced <a href=http://trilema.com/forum-logs-for-10-jan-2017#2226389>a whole new line of cannons</a> resulting in slightly stormy seas. [<a href="#identifier_5_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_71072" class="footnote">Consider that it took him the holy 20 minutes to solve this problem and you're well on your way of understanding why the guy's such a famous lisper. [<a href="#identifier_6_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_71072" class="footnote">This unresolved reference <a href=http://trilema.com/forum-logs-for-13-jan-2017#2228105>is pending resolution</a>. Meanwhile <a href=http://btcbase.org/log/2016-04-02#1444246 ?>it was resolved</a>. [<a href="#identifier_7_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_71072" class="footnote">Took me two days to be confused by the same thing, briefly attempted to fix, gave up. [<a href="#identifier_8_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_71072" class="footnote">This goes for you too, dear leader. I mean reader. Can you figure out what I aim to do, preferably before you read it at the end of the article ? [<a href="#identifier_9_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_71072" class="footnote">
+<pre>(defun replace-all (string part replacement &#038;key (ignore-case nil) )
+  (if (string= part "")
+      string
+      (with-output-to-string (out)
+        (loop with part-length = (length part)
+              for old-pos = 0 then (+ pos part-length)
+              for pos = (search part string
+                                :start2 old-pos
+                                :test (if ignore-case #'char-equal #'char=) )
+              do (write-string string out
+                               :start old-pos
+                               :end (or pos (length string) ) )
+              when pos do (write-string replacement out)
+              while pos) ) ) )</pre>
+<p> [<a href="#identifier_10_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_71072" class="footnote">Most memorably, Naggum's. [<a href="#identifier_11_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_71072" class="footnote">I do believe there's no better way to teach programming, especially to someone very new who'll need a lot of help, than setting up an irc bot repl. For serious. [<a href="#identifier_12_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_71072" class="footnote">This probably works acceptably well if the two are collaborating, but I'm damned sure nobody learned to code this way, because they can't, because it's insane. [<a href="#identifier_13_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_71072" class="footnote">
+<pre>(defun mp-split (s &#038;optional words)
+  (let ((next-delimiter (search " " s) ) )
+   (if next-delimiter
+     (progn
+       (mp-split (subseq s (+ 1 next-delimiter) )
+        (cons (subseq s 0 next-delimiter) words) ) )
+     (reverse words) ) ) )</pre>
+<p> [<a href="#identifier_14_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_71072" class="footnote">The darkness is growing. [<a href="#identifier_15_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_71072" class="footnote">They're trolling me softly. With their words. [<a href="#identifier_16_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_71072" class="footnote">Yes, a novel discourse format creates a novel flavour of civilisation. [<a href="#identifier_17_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_71072" class="footnote">The let's break it line is timestamped 10:32:59 ; the timeout is timestamped 10:37:40. That's a 41 second differential during which the thing churned. [<a href="#identifier_18_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_19_71072" class="footnote">Incidentally a fine approach to estimate the volume of work done by the human -- as opposed to <a href="http://trilema.com/2014/the-complexity-of-life-a-triad/">dragonfly</a> -- brain : if Trilema's ~20 million words were as they are set out in a million sentences, then you'd be looking at about a million iterations of that 2 10<sup>18</sup> nodes processing into one humongo tree. There aren't yet man made computers capable of handling this immense load, much like there aren't yet man made engines capable of powering a dragonfly's day out of the two calories its diet provides.</p>
+<p>And no, it makes no difference for the purposes of this discussion that it's Trilema as opposed to someone yakking on TV. All infantile brains learn any language, irrespective of their parents' culture, genetics etcetera, on the strict basis of spending years doing the above tree parsing, over however many million sentences you can churn at them. How a hundred billion neurons manage to process and store millions of exanodes is anyone's guess, and far far <strong>far</strong> outside the scope of this humble article. [<a href="#identifier_19_71072" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2017/why-politicians-dont-ever-do-anything-for-the-people-a-model/">Why politicians don't ever do anything for the people, a model</a></div>
+                <div class="alignright"><a href="http://trilema.com/2017/stomp-a-sjw-face-today/">Stomp a SJW face today.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2017/my-three-days-of-ai/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2017/my-three-days-of-ai/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>4 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-145829">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/how-the-good-folk-at-kj%c3%b8lberggata-29b-0653-oslo-norway-dba-variously-as-central-city-apartments-kampenhotellno-reise-byra-bala-suman-balasundaram-etcetera-attempt-to-scam-' class='url'>How the good folk at Kjølberggata 29B, 0653 Oslo, Norway (dba variously as "Central City Apartments", "kampenhotell.no", "REISE BYRÅ BALA SUMAN BALASUNDARAM" etcetera) attempt to scam me went ; what dealing with Oslo police is like as a bonus on the sid</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145829" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] security benefits of the anointed item (as well as the slightly dog-eared corners) aside, it got heavy, resting precariously on the original hinges intended for the original item. That atrocity behind [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146861">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/the-problem-of-complexity?b=constituting&amp;e=t%20it#select' class='url'>The problem of complexity. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146861" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] constituting the gap between realia and idealia are indeed so very large no serious approach is even remotely possible. When trying to smush an eight that meanwhile metastasized into thousands of digits such that it [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147388">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://thewhet.net/2020/02/the-basilikon-doron-or-royal-gift-a-constitutional/?b=to%20have%20good&amp;e=cots#select' class='url'>The Basilikon Doron, or "Royal Gift", a Constitutional &laquo; The Whet</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147388" title="">Saturday, 1 February 2020</a>
+					</div>
+					<p>[...] to have good arms and armor about himself at court, and to take special care to avoid and forbid "toilsome" weapons and "traiterous defensiue" armor, like "plate-sleeues and such-like unseen" pieces. The old Scots [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-155902">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-problem-with-bostroms-trilemma/?b=the%20computer&amp;e=blem#select' class='url'>The problem with Bostrom's trilemma on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-155902" title="">Wednesday, 11 November 2020</a>
+					</div>
+					<p>[...] the computers, there's not enough lifespan in the universe to debug the involved software, there's nothing, forget about it, buncha Haskellite brainrotted zombies! &mdash;&mdash;&mdash;A lesser problem [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="71072" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832185-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-71072")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-71072");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-71072");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

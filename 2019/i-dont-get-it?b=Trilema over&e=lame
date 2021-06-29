@@ -1,0 +1,2608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>I don't get it... on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">If "waifu" is "wife"<br />should "kung-fu" be "knife" ?
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-81898"><div class="post" id="post-81898">                    <h1><a href="http://trilema.com/2019/i-dont-get-it/" rel="bookmark" title="Permanent Link to I don&#039;t get it...">I don't get it...</a></h1>                        <div class="date">                                     Tuesday, 01 January, Year 11 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>As it turns out, lots (and lots <em>and lots</em>) of people read <span style="background-color:#d3d3d3" id="select">Trilema over the new year<sup><a href="#footnote_0_81898" id="identifier_0_81898" class="footnote-link footnote-identifier-link" title="And no, it's not even to find out if they're gay, or other Romanian-interest topics. I understand you'd have expected so. Me too. Nevertheless...">i</a></sup>. Nothing wrong with this, I guess ; and considering what the average "<a href="http://trilema.com/2018/traditional-family-vs-the-harem-a-comparative-study/">traditional family</a>" is like and what that self-same eyesore works like I can't even blame</span> them. </p>
+<p>But then again, just <em>how much</em> Trilema can one read ? I rarely manage the dozen articles in one sitting ; but then again I wrote it, and to me it's neither surprising nor threatening. To plenty of people it is just that<sup><a href="#footnote_1_81898" id="identifier_1_81898" class="footnote-link footnote-identifier-link" title="It doesn't have to be hostile to be threatening, you realise this. Obviously plenty of people have the stinking shit in their brainbox violently contradicted by the pristine perfection that is my blog ; yet plenty more have the yearning glimmer of hope and sanity they carry through a world of shit sweetly supported by that self-same pristine perfection. For both of these Trilema is vitriolically threatening : just as its continued existence implies the irreality of the idiocy of the former, just so its possible disappearance implies the irreality of the sanity of the latter. `You can't win`, so to speak : great things will be threatening by their greatness, not by their direction. ">ii</a></sup>, and they engage consequently in binges that can last many days, to the exclusion of sleep at first, to the neglect of personal hygiene I imagine...<sup><a href="#footnote_2_81898" id="identifier_2_81898" class="footnote-link footnote-identifier-link" title="Obviously the Internet is full of shit ; yet also not so very difficult to classify. 
+Yes, anyone can write a script to load web pages ; yet you can trivially tell whether an IP is allocated to home consumers or datacenter usage, and then there's the universal side channel of timing. You can tell lots and lots about the other end if you bother to examine delays, to build histograms, to compare instants to means and medians and averages and in general, actuarial science is an actual science, unlike `social science`, `economy` or psycho`logy`. 
+You can even compare the native reading speed of populations in say North America, Australia and the UK, and thus obtain, through the relatively cheap venue of keeping a well read blog, much better information as to the relative quality of educational systems the world over than any `CIA` can possibly ever provide (not to mention up to date maps of the current state of outer space bogonic irradiation underway).
+Because such is the glory and the luxury of existing in the future, and in the abstract, and in the Republic : you get all sorts of magical powers the lesser beings can, after a fashion, almost imagine.">iii</a></sup></p>
+<p>Leaving people aside, there's of course the bots. Those never sleep, and so it's not much wonder they'd be there, pounding away, come hell or high water, morning, noon or night, Yarmulke, Foller de Pascoa or Trinity (I hope I got the names right). Take for instance the case of 37.187.150.139, that was <a href=http://trilema.com/forum-logs-for-28-dec-2018#2507182>mentioned before</a>. It lives over at the OVS pigsties, those vast people-of-walmart online equivalents, so there's entirely no suspicion it might be anything but one of the new <a href="http://trilema.com/2016/give-computers-the-vote-theyre-cheaper-than-women-even/">cheap voters</a>. </p>
+<p>Now let's see what it's been doing, the first twelve hours of the first day of this happy new year!</p>
+<blockquote><p>cat 'trilema.com-Jan-2019' | grep -c "37.187.150.139"<br />
+21217
+</p></blockquote>
+<p>That's really <em>a lot</em> more than you or me could ever hope to get through, isn't it. </p>
+<blockquote><p>cat 'trilema.com-Jan-2019' | grep "37.187.150.139" | grep -c "bg_iul2011.jpg"<br />
+1</p></blockquote>
+<p>It <em>did</em> load today's header, and exactly once. Isn't that impressive, just like a browser that caches, right ? Now let's check out the referrers.</p>
+<blockquote><p>cat 'trilema.com-Jan-2019' | grep "37.187.150.139" | cut -d' ' -f11 | cut -d'/' -f3 | sort | uniq -c | sort -n<br />
+      1 1.bp.blogspot.com<br />
+      1 addons.mozilla.org<br />
+      1 ajax.googleapis.com<br />
+      1 americanacolyte.tekcities.com<br />
+      1 a.optmnstr.com<br />
+      1 api.w.org<br />
+      1 apple.stackexchange.com<br />
+      1 archileno.blogspot.com<br />
+      1 arduino.stackexchange.com<br />
+      1 auth.telegraph.co.uk<br />
+      1 bitcoin.stackexchange.com<br />
+      1 blog.nature.org<br />
+      1 blogs.wsj.com<br />
+      1 bloom.bg<br />
+      1 blowercartoons.newsprints.co.uk<br />
+      1 blueprints.launchpad.net<br />
+      1 books.telegraph.co.uk<br />
+      1 cayobuay.wordpress.com<br />
+      1 cdn.polyfill.io<br />
+      1 chemistry.stackexchange.com<br />
+      1 chinthaasakalam.blogspot.com<br />
+      1 christianity.stackexchange.com<br />
+      1 cloud.google.com<br />
+      1 cloudinit.readthedocs.io<br />
+      1 cooking.stackexchange.com<br />
+      1 cs.stackexchange.com<br />
+      1 cstheory.stackexchange.com<br />
+      1 d2xuupin39grhy.cloudfront.net<br />
+      1 d3c3cq33003psk.cloudfront.net<br />
+      1 datascience.stackexchange.com<br />
+      1 data.stackexchange.com<br />
+      1 dba.stackexchange.com<br />
+      1 deadspin.com<br />
+      1 developers.google.com<br />
+      1 discourse.ubuntubudgie.org<br />
+      1 donate.wikimedia.org<br />
+      1 drupal.stackexchange.com<br />
+      1 dsp.stackexchange.com<br />
+      1 electronics.stackexchange.com<br />
+      1 english.stackexchange.com<br />
+      1 ethereum.stackexchange.com<br />
+      1 getpocket.com<br />
+      1 ghettohikes.tumblr.com<br />
+      1 gis.stackexchange.com<br />
+      1 help.vimeo.com<br />
+      1 hostessatheart.com<br />
+      1 ibb.co<br />
+      1 itunes.apple.com<br />
+      1 ja-jp.facebook.com<br />
+      1 japanese.stackexchange.com<br />
+      1 jesuschristsiliconvalley.tumblr.com<br />
+      1 jobs.telegraph.co.uk<br />
+      1 juggalocoin.org<br />
+      1 kosovasoftwarefreedom.org<br />
+      1 law.stackexchange.com<br />
+      1 lh3.googleusercontent.com<br />
+      1 lists.ubuntu.com<br />
+      1 manac.biz<br />
+      1 maps.google.com<br />
+      1 mathematica.stackexchange.com<br />
+      1 math.stackexchange.com<br />
+      1 mechanics.stackexchange.com<br />
+      1 money.stackexchange.com<br />
+      1 optasportsdata.telegraph.co.uk<br />
+      1 ott.vimeo.com<br />
+      1 packetstormsecurity.com<br />
+      1 pbs.twimg.com<br />
+      1 photobucket.com<br />
+      1 photo.stackexchange.com<br />
+      1 physics.stackexchange.com<br />
+      1 play.google.com<br />
+      1 pt-pt.facebook.com<br />
+      1 pt.stackoverflow.com<br />
+      1 puna.upf.edu<br />
+      1 puzzling.stackexchange.com<br />
+      1 releases.ubuntu.com<br />
+      1 salesforce.stackexchange.com<br />
+      1 sb.scorecardresearch.com<br />
+      1 schemas.xmlsoap.org<br />
+      1 secure.i.telegraph.co.uk<br />
+      1 security.stackexchange.com<br />
+      1 sflogo.sourceforge.net<br />
+      1 skeptics.stackexchange.com<br />
+      1 sourceforge.net<br />
+      1 static.telegraph.co.uk<br />
+      1 stocks.about.com<br />
+      1 superuser.com<br />
+      1 telegraph.newsprints.co.uk<br />
+      1 telegraphuk.disqus.com<br />
+      1 tex.stackexchange.com<br />
+      1 tickets.telegraph.co.uk<br />
+      1 tr-tr.facebook.com<br />
+      1 ubuntuforum.s3.amazonaws.com<br />
+      1 uk.pinterest.com<br />
+      1 unix.stackexchange.com<br />
+      1 ux.stackexchange.com<br />
+      1 video.arstechnica.com<br />
+      1 webapps.stackexchange.com<br />
+      1 webchat.freenode.net<br />
+      1 webmasters.stackexchange.com<br />
+      1 wp-rocket.me<br />
+      1 www.ad.nl<br />
+      1 www.af.mil<br />
+      1 www.apple.com<br />
+      1 www.bizapedia.com<br />
+      1 www.blubrry.com<br />
+      1 www.books.telegraph.co.uk<br />
+      1 www.civilbeat.org<br />
+      1 www.cranework.com<br />
+      1 www.discourse.org<br />
+      1 www.elcomsoft.com<br />
+      1 www.fourmilab.ch<br />
+      1 www.greenpete.co.uk<br />
+      1 www.guambusinessmagazine.com<br />
+      1 www.htsindia.com<br />
+      1 www.incidentalcomics.com<br />
+      1 www.linkedin.com<br />
+      1 www.mail-archive.com<br />
+      1 www.myzimtube.com<br />
+      1 www.nature.com<br />
+      1 www.nvidia.com<br />
+      1 www.osdisc.com<br />
+      1 www.outbrain.com<br />
+      1 www.reuters.com<br />
+      1 www.rsa.com<br />
+      1 www.securitybeacon.com<br />
+      1 www.securityledger.com<br />
+      1 www.spaceweatherradio.com<br />
+      1 www.tensorflow.org<br />
+      1 www.tozny.com<br />
+      1 www.ubuntuforums.org<br />
+      1 www.urbandictionary.com<br />
+      1 www.wewill.city<br />
+      1 www.wpzoom.com<br />
+      1 youtube-eng.googleblog.com<br />
+      1 yui.yahooapis.com<br />
+      2 30yearsofmatt.newsprints.co.uk<br />
+      2 android.stackexchange.com<br />
+      2 api.stackexchange.com<br />
+      2 ar-ar.facebook.com<br />
+      2 archive.is<br />
+      2 archive.ubuntu.com<br />
+      2 area51.stackexchange.com<br />
+      2 arstechnica.us1.list-manage.com<br />
+      2 askubuntu.com<br />
+      2 besteirasdainternet.wordpress.com<br />
+      2 bicycles.stackexchange.com<br />
+      2 biology.stackexchange.com<br />
+      2 bitcoinpete.com<br />
+      2 bit.ly<br />
+      2 blender.stackexchange.com<br />
+      2 blog.qnology.com<br />
+      2 bloomberg.com<br />
+      2 books.google.fr<br />
+      2 b-otc.com<br />
+      2 budgieremix.files.wordpress.com<br />
+      2 bugs.launchpad.net<br />
+      2 bugzilla.mozilla.org<br />
+      2 cdn.api.ooyala.com<br />
+      2 cdn-image.travelandleisure.com<br />
+      2 certification.ubuntu.com<br />
+      2 chat.stackoverflow.com<br />
+      2 chemistry.about.com<br />
+      2 cipslim.wordpress.com<br />
+      2 codegolf.stackexchange.com<br />
+      2 code.launchpad.net<br />
+      2 codereview.stackexchange.com<br />
+      2 condenast.com<br />
+      2 contacts.google.com<br />
+      2 crypto.stackexchange.com<br />
+      2 dev.launchpad.net<br />
+      2 dianacoman.com<br />
+      2 disqus.com<br />
+      2 diy.stackexchange.com<br />
+      2 docs.google.com<br />
+      2 docs.maas.io<br />
+      2 ell.stackexchange.com<br />
+      2 emacs.stackexchange.com<br />
+      2 en.wikiquote.org<br />
+      2 fantasyfootball.telegraph.co.uk<br />
+      2 feedback-form.truste.com<br />
+      2 gamedev.stackexchange.com<br />
+      2 gaming.stackexchange.com<br />
+      2 gardenshop.telegraph.co.uk<br />
+      2 graphicdesign.stackexchange.com<br />
+      2 hbr.org<br />
+      2 hi-in.facebook.com<br />
+      2 images.mix.com<br />
+      2 instagram.com<br />
+      2 it-it.facebook.com<br />
+      2 iwantmyname.com<br />
+      2 jamboard.google.com<br />
+      2 jigsaw.w3.org<br />
+      2 judaism.stackexchange.com<br />
+      2 kopywritingkourse.com<br />
+      2 lcorg.blogspot.com<br />
+      2 l.facebook.com<br />
+      2 link.mix.com<br />
+      2 lubuntu.me<br />
+      2 magento.stackexchange.com<br />
+      2 mathoverflow.net<br />
+      2 mbjguam.com<br />
+      2 meta.stackexchange.com<br />
+      2 mix.com<br />
+      2 movies.stackexchange.com<br />
+      2 music.youtube.com<br />
+      2 networkengineering.stackexchange.com<br />
+      2 pages.email3.telegraph.co.uk<br />
+      2 platform-api.sharethis.com<br />
+      2 polyfill.io<br />
+      2 radiichina.com<br />
+      2 rarehistoricalphotos.com<br />
+      2 rpg.stackexchange.com<br />
+      2 ru.stackoverflow.com<br />
+      2 scifi.stackexchange.com<br />
+      2 securityofthings.com<br />
+      2 serverfault.com<br />
+      2 sharepoint.stackexchange.com<br />
+      2 shop.telegraph.co.uk<br />
+      2 softwareengineering.stackexchange.com<br />
+      2 softwarerecs.stackexchange.com<br />
+      2 solus-project.com<br />
+      2 stackauth.com<br />
+      2 stats.stackexchange.com<br />
+      2 support.mix.com<br />
+      2 thecartoonsite.newsprints.co.uk<br />
+      2 theexceptioncatcher.com<br />
+      2 thegeeksreadinglist.com<br />
+      2 thewhet.net<br />
+      2 translations.launchpad.net<br />
+      2 travel.stackexchange.com<br />
+      2 ubuntugnome.org<br />
+      2 ubuntustudio.org<br />
+      2 validator.w3.org<br />
+      2 vimeo-spotlight.myunidays.com<br />
+      2 worldbuilding.stackexchange.com<br />
+      2 www.27bslash6.com<br />
+      2 www.aboutads.info<br />
+      2 www.bloomberg.com<br />
+      2 www.brighttalk.com<br />
+      2 www.canonical.com<br />
+      2 www.digicert.com<br />
+      2 www.digitalcolorlabs.co.uk<br />
+      2 www.edziu.me<br />
+      2 www.faa.gov<br />
+      2 www.forbes.com<br />
+      2 www.head-fi.org<br />
+      2 www.idstronghold.com<br />
+      2 www.latimes.com<br />
+      2 www.podfeet.com<br />
+      2 www.readerprints.co.uk<br />
+      2 www.schneier.com<br />
+      2 www.standard.co.uk<br />
+      2 www.stitcher.com<br />
+      2 www.talamua.com<br />
+      2 www.ted.com<br />
+      2 www.theatlantic.com<br />
+      2 www.ubuntuidaho.org<br />
+      2 www.ubuntukylin.com<br />
+      2 www.vanityfair.com<br />
+      2 www.vimeopartnernetwork.com<br />
+      2 www.wwe.com<br />
+      2 xkcd.com<br />
+      2 youtu.be<br />
+      2 zh-cn.facebook.com<br />
+      3 bigbangtrans.wordpress.com<br />
+      3 blogs.discovermagazine.com<br />
+      3 cdn.theatlantic.com<br />
+      3 community.ubuntu.com<br />
+      3 dating.telegraph.co.uk<br />
+      3 discourse-cdn-sjc1.com<br />
+      3 es-la.facebook.com<br />
+      3 my.telegraph.co.uk<br />
+      3 puzzles.telegraph.co.uk<br />
+      3 s6.tinypic.com<br />
+      3 schema.org<br />
+      3 soundcloud.com<br />
+      3 stackexchange.com<br />
+      3 wehadnoidea.tumblr.com<br />
+      3 www.bbc.com<br />
+      3 www.bbc.co.uk<br />
+      3 www.etsy.com<br />
+      3 www.npr.org<br />
+      3 www.privacyshield.gov<br />
+      4 goo.gl<br />
+      4 help.launchpad.net<br />
+      4 player.vimeo.com<br />
+      4 s.b-a.link<br />
+      4 secure.gravatar.com<br />
+      4 secure.telegraph.co.uk<br />
+      4 securityledger.wpengine.com<br />
+      4 securitynirvana.blogspot.com<br />
+      4 www.androidpolice.com<br />
+      4 www.condenast.com<br />
+      4 www.dare.org<br />
+      4 www.mvariety.com<br />
+      4 www.torontosun.com<br />
+      4 youtube.com<br />
+      5 cdn.arstechnica.net<br />
+      5 cdn.securityledger.com<br />
+      5 perldoc.perl.org<br />
+      5 player.ooyala.com<br />
+      5 ro.wikisource.org<br />
+      5 s.imgur.com<br />
+      5 tutorials.ubuntu.com<br />
+      5 www.eastwestcenter.org<br />
+      6 cdn.sstatic.net<br />
+      6 hashcat.net<br />
+      6 i.vimeocdn.com<br />
+      6 media.npr.org<br />
+      6 premium.telegraph.co.uk<br />
+      6 www.paypal.me<br />
+      6 www.twitter.com<br />
+      7 assets.ubuntu.com<br />
+      7 forum.12oclockhigh.net<br />
+      7 t.co<br />
+      7 www.googletagmanager.com<br />
+      7 www.pacaf.af.mil<br />
+      7 www.w3.org<br />
+      8 cdimage.ubuntu.com<br />
+      8 linuxcommand.org<br />
+      8 logs.bvulpes.com<br />
+      8 yt3.ggpht.com<br />
+      9 log.bitcoin-assets.com<br />
+     10 blog.ubuntu.com<br />
+     10 github.com<br />
+     11 f.vimeocdn.com<br />
+     11 i.imgur.com<br />
+     12 support.google.com<br />
+     12 theidco.com<br />
+     13 cf.eip.telegraph.co.uk<br />
+     14 btcbase.org<br />
+     14 wiki.ubuntu.com<br />
+     14 www.omgubuntu.co.uk<br />
+     15 blogs.telegraph.co.uk<br />
+     15 launchpad.net<br />
+     15 s5.tinypic.com<br />
+     16 aozoeky4dglp5sh0-zippykid.netdna-ssl.com<br />
+     16 wot.deedbot.org<br />
+     17 ubuntubudgie.org<br />
+     18 www.reddit.com<br />
+     20 static.xx.fbcdn.net<br />
+     23 answers.launchpad.net<br />
+     26 www.facebook.com<br />
+     27 plus.google.com<br />
+     28 en.wikipedia.org<br />
+     36 imgur.com<br />
+     38 help.ubuntu.com<br />
+     38 www.ubuntu.com<br />
+     39 www.stumbleupon.com<br />
+     41 arstechnica.com<br />
+     41 twitter.com<br />
+     44 vimeo.com<br />
+     54 spark.telegraph.co.uk<br />
+     56 www.pireport.org<br />
+     57 accounts.google.com<br />
+     68 securityledger.com<br />
+     73 stackoverflow.com<br />
+    144 i.ytimg.com<br />
+    155 tinypic.com<br />
+    188 www.youtube.com<br />
+    262 community.imgur.com<br />
+    289 www.underarmour.com<br />
+    742 www.telegraph.co.uk<br />
+   2956 ubuntuforums.org<br />
+  14867 trilema.com</p></blockquote>
+<p>Isn't that <em>impressive</em> ? Bothering to load the largest image on a site once per session is elegant, I agree. But making sure each and every single GET has a referrer set, and then picking out of a list at least hundreds of items long<sup><a href="#footnote_3_81898" id="identifier_3_81898" class="footnote-link footnote-identifier-link" title="Last month's list is even thicker : 
+cat 'trilema.com-Dec-2018' | grep `37.187.150.139` | cut -d' ' -f11 | cut -d'/' -f3 | sort | uniq -c | sort -n
+      1 1.bp.blogspot.com
+      1 access.redhat.com
+      1 accounts.theatlantic.com
+      1 acrossdifficultcountry.blogspot.com
+      1 ad.adriver.ru
+      1 addons.mozilla.org
+      1 adevarul.ro
+      1 af.reuters.com
+      1 agrigorev.ru
+      1 analepsis.files.wordpress.com
+      1 arcanesentiment.blogspot.com
+      1 axisofeval.blogspot.com
+      1 b.elegram.ru
+      1 bimbo.club
+      1 bits.blogs.nytimes.com
+      1 blackhattactics.net
+      1 blog.qnology.com
+      1 blogs.wsj.com
+      1 bolshoi.by
+      1 borianm.livejournal.com
+      1 cascadianhacker.com
+      1 cdnc.ucr.edu
+      1 cdnjs.cloudflare.com
+      1 census.gov
+      1 chemistry.about.com
+      1 chromefetus.blogspot.com
+      1 claudecozycloud.typeform.com
+      1 code.google.com
+      1 community.imgur.com
+      1 contravex.com
+      1 crm-analytics.imweb.ru
+      1 cr.yp.to
+      1 cvsweb.openbsd.org
+      1 cyberleninka.ru
+      1 dealbook.nytimes.com
+      1 deutsche-wirtschafts-nachrichten.de
+      1 developers.rambler.ru
+      1 digg.com
+      1 education.github.com
+      1 elibrary.ru
+      1 enacademic.com
+      1 en.m.wikipedia.org
+      1 es.wikipedia.org
+      1 facebook.com
+      1 fima-psuchopadt.livejournal.com
+      1 flashgamesite.com
+      1 flipboard.com
+      1 fonts.googleapis.com
+      1 freedom-to-tinker.com
+      1 funcall.blogspot.com
+      1 ghettohikes.tumblr.com
+      1 globaldossier.uspto.gov
+      1 golang.org
+      1 gorskie.ru
+      1 help.github.com
+      1 hosted.ap.org
+      1 hr.wikipedia.org
+      1 i.li.ru
+      1 img-fotki.yandex.ru
+      1 inmueble.mercadolibre.com.py
+      1 io9.com
+      1 ip.fri-gate.org
+      1 irdial.com
+      1 jiriki.kapsi.fi
+      1 jobs.aviationtoday.com
+      1 kupcov-ag.narod.ru
+      1 lambda-the-ultimate.org
+      1 lichteblau.blogspot.com
+      1 linux.slashdot.org
+      1 load.qrator.net
+      1 magboss.pl
+      1 magzdb.org
+      1 mignews.com
+      1 mirageswar.com
+      1 mk.wikipedia.org
+      1 motls.blogspot.com
+      1 m.theweek.com
+      1 myaccount.google.com
+      1 myfhology.info
+      1 nanog.kaskadian.com
+      1 news.duke.edu
+      1 noperapon.livejournal.com
+      1 nouveau.lurkmore.net
+      1 nplus1.ru
+      1 obzor.westsib.ru
+      1 packetstormsecurity.com
+      1 patentimages.storage.googleapis.com
+      1 p-cos.blogspot.com
+      1 philip.greenspun.com
+      1 platform.twitter.com
+      1 plouffe.fr
+      1 premium-publishing.ru
+      1 prince-consort.livejournal.com
+      1 professionalrakeback.com
+      1 pt.wikipedia.org
+      1 pypi.org
+      1 radio.mediametrics.ru
+      1 richardkulisz.blogspot.com
+      1 rnd.cnews.ru
+      1 romanoff.1nsk.ru
+      1 ru.m.wikipedia.org
+      1 s0.videopress.com
+      1 scripts.dailymail.co.uk
+      1 search.bbc.co.uk
+      1 share.flipboard.com
+      1 shiko-1st.livejournal.com
+      1 shop.imedia.ru
+      1 shrani.si
+      1 sk.ru
+      1 sks-keyservers.net
+      1 sk.wikipedia.org
+      1 sooo.2x2forum.ru
+      1 soundcloud.com
+      1 sourceforge.net
+      1 stocks.about.com
+      1 store.steampowered.com
+      1 studioht.burpees.fr
+      1 support.google.com
+      1 szhaman.com
+      1 thesophisticatedinvestor.com.au
+      1 thetarpit.org
+      1 t.me
+      1 to1ne.gitlab.io
+      1 tourssud.burpees.fr
+      1 travisgoodspeed.blogspot.com
+      1 tvrain.ru
+      1 uk.wikipedia.org
+      1 upload.wikimedia.org
+      1 ushinskij-konstantin-pisatel.larec-skazok.ru
+      1 versu.com
+      1 waronline.org
+      1 widgets.sprinkletxt.com
+      1 winrar.com
+      1 wp.theintercept.com
+      1 www.addthis.com
+      1 www.amf-france.org
+      1 www.aviationtoday.com
+      1 www.bitstamp.net
+      1 www.bizapedia.com
+      1 www.cfda.gov
+      1 www.chrishowie.com
+      1 www-cs-faculty.stanford.edu
+      1 www.cyc.com
+      1 www.dreamsongs.com
+      1 www.eulorum.org
+      1 www.feasta.org
+      1 www.freebsdmall.com
+      1 www.g-loaded.eu
+      1 www.google.com
+      1 www.google.fr
+      1 www.googletagmanager.com
+      1 www.heritage.nf.ca
+      1 www.idstronghold.com
+      1 www.independent.co.uk
+      1 www.interfax.by
+      1 www.interfax.ru
+      1 www.irz.ru
+      1 www.itnews.com.au
+      1 www.kommersant.ru
+      1 www.laverdad.es
+      1 www.leonacraig.com
+      1 www.mediawiki.org
+      1 www.mobile-review.com
+      1 www.msnbc.com
+      1 www.museumofhoaxes.com
+      1 www.news.com.au
+      1 www.niknews.mk.ua
+      1 www.niquette.com
+      1 www.nosuchlabs.com
+      1 www.pinterest.com
+      1 www.radioscanner.ru
+      1 www.rambler.ru
+      1 www.reuters.com
+      1 www.rust-lang.org
+      1 www.slate.com
+      1 www.songworm.com
+      1 www.souz.co.il
+      1 www.sqlite.org
+      1 www.telegraph.co.uk
+      1 www.templeos.org
+      1 www.thewire.com
+      1 www.tinaja.com
+      1 www.trademarkia.com
+      1 www.utro.ru
+      1 www.uzi.com
+      1 www.warbirdalley.com
+      1 www.wikimediafoundation.org
+      1 www.worldcat.org
+      1 xahlee.org
+      1 yandex.ru
+      1 yt3.ggpht.com
+      2 1010.co.uk
+      2 actupnorth.com
+      2 ad7zj.net
+      2 ajax.googleapis.com
+      2 america.aljazeera.com
+      2 api.mindbox.ru
+      2 apis.google.com
+      2 api.vo-media.ru
+      2 ar.wikipedia.org
+      2 baseball.fantasysports.yahoo.com
+      2 bash.im
+      2 bitcoinpete.com
+      2 biz.cnews.ru
+      2 b-ok.org
+      2 booktracker.org
+      2 bugs.gentoo.org
+      2 bugzilla.mozilla.org
+      2 bvt-trace.net
+      2 ca.wikipedia.org
+      2 cdn.onesignal.com
+      2 chat.li.ru
+      2 client.qrator.net
+      2 cluborlov.blogspot.com
+      2 colonel_sokker.livejournal.com
+      2 connect.ok.ru
+      2 cozy.io
+      2 cs8.pikabu.ru
+      2 de.wikipedia.org
+      2 dianacoman.com
+      2 doc-00-bk-apps-viewer.googleusercontent.com
+      2 donate.wikimedia.org
+      2 drive.google.com
+      2 fa.wikipedia.org
+      2 fexpr.blogspot.com
+      2 fi.wikipedia.org
+      2 freesoft.ru
+      2 gawker.com
+      2 git.gnupg.org
+      2 glonass-gps.blogspot.com
+      2 grimnir74.livejournal.com
+      2 habrahabr.ru
+      2 he.wikipedia.org
+      2 hi-tech.mail.ru
+      2 institutrobotov.ru
+      2 ir-ingr.livejournal.com
+      2 iwantmyname.com
+      2 ja.wikipedia.org
+      2 juggalocoin.org
+      2 kazak1971.livejournal.com
+      2 kopywritingkourse.com
+      2 ko.wikipedia.org
+      2 lib.rus.ec
+      2 lifenews.ru
+      2 likemore-go.imgsmail.ru
+      2 linux.org.ru
+      2 listado.mercadolibre.com.uy
+      2 lj.rossia.org
+      2 logs.minigame.biz
+      2 lurkmore.co
+      2 lurkmore.so
+      2 marat2012.livejournal.com
+      2 melpa.org
+      2 mobile.flibusta.is
+      2 mobile-review.com
+      2 moronlab.blogspot.com
+      2 mwomercs.com
+      2 nakamotoinstitute.org
+      2 net-livejournal.livejournal.com
+      2 nosuchlabs.com
+      2 oglaf.com
+      2 ok.ru
+      2 openid.net
+      2 orwell.ru
+      2 pages.cs.wisc.edu
+      2 photomatt.net
+      2 phuctor.nosuchlabs.com
+      2 planet.wordpress.org
+      2 plasmastik.livejournal.com
+      2 play.google.com
+      2 pl.wikipedia.org
+      2 prod-cdn.wetransfer.net
+      2 prog21.dadgum.com
+      2 ravkooktorah.org
+      2 regnum.ru
+      2 relap.io
+      2 ro.wikipedia.org
+      2 s06.flagcounter.com
+      2 shushpanzer_ru.livejournal.com
+      2 support.fri-gate.org
+      2 sv.wikipedia.org
+      2 telecom.cnews.ru
+      2 tiomkin.livejournal.com
+      2 top100.rambler.ru
+      2 top.mail.ru
+      2 twobithistory.org
+      2 unenumerated.blogspot.com
+      2 validator.w3.org
+      2 w.b-a.link
+      2 wiki.bitcoin-otc.com
+      2 wiki.liveinternet.ru
+      2 wiki.teamfortress.com
+      2 writersblock.livejournal.com
+      2 www.03.ru
+      2 www.adacore.com
+      2 www.apple.com
+      2 www.artsy.net
+      2 www.bay12forums.com
+      2 www.bbc.co.uk
+      2 www.bloomberg.com
+      2 www.books.ru
+      2 www.coindesk.com
+      2 www.contravex.com
+      2 www.darkgrot.ru
+      2 www.darwinawards.com
+      2 www.daveswarbirds.com
+      2 wwwen.zte.com.cn
+      2 www.faa.gov
+      2 www.farmtek.com
+      2 www.forbes.com
+      2 www.fourmilab.ch
+      2 www.gamewoods.ru
+      2 www.imi-israel.com
+      2 www.linux.org.ru
+      2 www.li.ru
+      2 www.liveleak.com
+      2 www.math.columbia.edu
+      2 www.math.rutgers.edu
+      2 www.militaryparitet.com
+      2 www.modernlib.ru
+      2 www.mosis.com
+      2 www.mvd.ru
+      2 www.old-games.ru
+      2 www.openbsd.org
+      2 www.phpbb.com
+      2 www.playhawken.com
+      2 www.sbir.gov
+      2 www.softwareforscreenprinters.com
+      2 www.spaceweatherradio.com
+      2 www.speedyshare.com
+      2 www.staedtler.com
+      2 www.subrayado.com.uy
+      2 www.svobodanews.ru
+      2 www.technohelp.ru
+      2 www.thedrinkingrecord.com
+      2 www.thesitewizard.com
+      2 www.torontosun.com
+      2 www.vanityfair.com
+      2 www.yandex.ru
+      2 x4.fjcdn.com
+      2 xc3.services.livejournal.com
+      2 zen.yandex.ru
+      3 anime-rus.ru
+      3 bigbangtrans.wordpress.com
+      3 bitcoin.org
+      3 blockchain.info
+      3 blogs.discovermagazine.com
+      3 cryptopals.com
+      3 darwinawards.com
+      3 forum.topwar.ru
+      3 fr.wikipedia.org
+      3 gmpg.org
+      3 gunter-spb.livejournal.com
+      3 id.wikipedia.org
+      3 i.ibb.co
+      3 lh3.googleusercontent.com
+      3 logs.bvulpes.com
+      3 l-stat.livejournal.net
+      3 mihaistanescu.wordpress.com
+      3 on.msnbc.com
+      3 redthreaddesign.ru
+      3 search.bitcoin-assets.com
+      3 ship.bsu.by
+      3 smart-lab.ru
+      3 unqualified-reservations.blogspot.com
+      3 wikimediafoundation.org
+      3 www.americanthinker.com
+      3 www.bbc.com
+      3 www.dare.org
+      3 www.deepstorm.ru
+      3 www.dianacoman.com
+      3 www.etsy.com
+      3 www.huffingtonpost.com
+      3 www.jeg.ro
+      3 www.mail-archive.com
+      3 www.newsru.com
+      3 www.nytimes.com
+      3 www.odnoklassniki.ru
+      3 www.openwall.com
+      3 www.wikidata.org
+      3 www.with-emacs.com
+      3 xkcd.com
+      3 yastatic.net
+      3 zh.wikipedia.org
+      4 assets.rbl.ms
+      4 bit.ly
+      4 community.livejournal.com
+      4 cs.wikipedia.org
+      4 dadatroll.wordpress.com
+      4 danielpbarron.com
+      4 doctor.ru
+      4 fr.anco.is
+      4 gunter_spb.livejournal.com
+      4 iland.tv
+      4 instagram.com
+      4 jesuschristsiliconvalley.tumblr.com
+      4 libgen.io
+      4 nl.wikipedia.org
+      4 pizarroisp.net
+      4 purl.org
+      4 rarehistoricalphotos.com
+      4 schema.org
+      4 thescientificshrimper.wordpress.com
+      4 wordpress.org
+      4 www.blogger.com
+      4 www.digitaltrends.com
+      4 www.elobservador.com.uy
+      4 www.gnu.org
+      4 www.postgresql.org
+      4 www.webcitation.org
+      4 yaplakal.com
+      5 4.bp.blogspot.com
+      5 88isp.net
+      5 books.google.ru
+      5 chrome.google.com
+      5 commons.wikimedia.org
+      5 deadspin.com
+      5 lurkmo.re
+      5 ossasepia.com
+      5 pbs.twimg.com
+      5 therealbitcoin.org
+      5 toursnord.burpees.fr
+      5 wot.deedbot.org
+      5 www.instagram.com
+      5 www.theatlantic.com
+      5 www.trustedsec.com
+      5 www.xach.com
+      6 forums.xkcd.com
+      6 foundation.wikimedia.org
+      6 g.liveinternet.ru
+      6 imgprx.livejournal.net
+      6 log.mkj.lt
+      6 radar.qrator.net
+      6 thewhet.net
+      6 web.archive.org
+      6 www.livejournal.com
+      7 imgur.com
+      8 bitcoin-otc.com
+      8 i.imgur.com
+      8 it.wikipedia.org
+      8 lenta.ru
+      8 mc.yandex.ru
+      8 solutionsforscreenprinters.com
+      8 www.dailymail.co.uk
+      8 www.windytan.com
+      8 www.yapfiles.ru
+      9 inmueble.mercadolibre.com.uy
+      9 vk.com
+      9 www.urbandictionary.com
+     10 t.co
+     10 www.reddit.com
+     10 youtube.com
+     12 accounts.google.com
+     13 d3nevzfk7ii3be.cloudfront.net
+     13 putnik1.livejournal.com
+     14 plus.google.com
+     15 l-userpic.livejournal.com
+     15 upnorthmedia.nl
+     16 b-otc.com
+     16 mediametrics.ru
+     16 www.facebook.com
+     17 fri-gate.org
+     19 s.b-a.link
+     20 qntra.net
+     22 bash.bitcoin-assets.com
+     24 github.com
+     25 archive.is
+     26 autokadabra.ru
+     26 log.bitcoin-assets.com
+     27 p.bvulpes.com
+     28 i.ytimg.com
+     31 qrator.net
+     43 topwar.ru
+     46 www.popmech.ru
+     56 irreal.org
+     58 twitter.com
+     60 www.youtube.com
+     68 www.loper-os.org
+     69 upnorthmemorabilia.com
+     83 youtu.be
+    115 www.liveinternet.ru
+    161 flibusta.is
+    167 www.yaplakal.com
+    176 en.wikipedia.org
+    186 btcbase.org
+    411 strangernn.livejournal.com
+    580 ru.wikipedia.org
+   1194 lurkmore.to
+  19228 trilema.com
+
+Consider how the two diff : 490 vs 366 elements, and otherwise 
+comm -13 spam1.txt spam2.txt
+1010.co.uk
+4.bp.blogspot.com
+88isp.net
+access.redhat.com
+accounts.theatlantic.com
+acrossdifficultcountry.blogspot.com
+actupnorth.com
+ad7zj.net
+ad.adriver.ru
+adevarul.ro
+af.reuters.com
+agrigorev.ru
+america.aljazeera.com
+analepsis.files.wordpress.com
+anime-rus.ru
+api.mindbox.ru
+apis.google.com
+api.vo-media.ru
+arcanesentiment.blogspot.com
+ar.wikipedia.org
+assets.rbl.ms
+autokadabra.ru
+axisofeval.blogspot.com
+baseball.fantasysports.yahoo.com
+bash.bitcoin-assets.com
+bash.im
+b.elegram.ru
+bimbo.club
+bitcoin.org
+bitcoin-otc.com
+bits.blogs.nytimes.com
+biz.cnews.ru
+blackhattactics.net
+blockchain.info
+b-ok.org
+bolshoi.by
+books.google.ru
+booktracker.org
+borianm.livejournal.com
+bugs.gentoo.org
+bvt-trace.net
+cascadianhacker.com
+ca.wikipedia.org
+cdnc.ucr.edu
+cdnjs.cloudflare.com
+cdn.onesignal.com
+census.gov
+chat.li.ru
+chromefetus.blogspot.com
+chrome.google.com
+claudecozycloud.typeform.com
+client.qrator.net
+cluborlov.blogspot.com
+code.google.com
+colonel_sokker.livejournal.com
+commons.wikimedia.org
+community.livejournal.com
+connect.ok.ru
+contravex.com
+cozy.io
+crm-analytics.imweb.ru
+cr.yp.to
+cryptopals.com
+cs8.pikabu.ru
+cs.wikipedia.org
+cvsweb.openbsd.org
+cyberleninka.ru
+d3nevzfk7ii3be.cloudfront.net
+dadatroll.wordpress.com
+danielpbarron.com
+darwinawards.com
+dealbook.nytimes.com
+deutsche-wirtschafts-nachrichten.de
+developers.rambler.ru
+de.wikipedia.org
+digg.com
+doc-00-bk-apps-viewer.googleusercontent.com
+doctor.ru
+drive.google.com
+education.github.com
+elibrary.ru
+enacademic.com
+en.m.wikipedia.org
+es.wikipedia.org
+facebook.com
+fa.wikipedia.org
+fexpr.blogspot.com
+fima-psuchopadt.livejournal.com
+fi.wikipedia.org
+flashgamesite.com
+flibusta.is
+flipboard.com
+fonts.googleapis.com
+forums.xkcd.com
+forum.topwar.ru
+foundation.wikimedia.org
+fr.anco.is
+freedom-to-tinker.com
+freesoft.ru
+fri-gate.org
+fr.wikipedia.org
+funcall.blogspot.com
+gawker.com
+git.gnupg.org
+g.liveinternet.ru
+globaldossier.uspto.gov
+glonass-gps.blogspot.com
+gmpg.org
+golang.org
+gorskie.ru
+grimnir74.livejournal.com
+gunter_spb.livejournal.com
+gunter-spb.livejournal.com
+habrahabr.ru
+help.github.com
+he.wikipedia.org
+hi-tech.mail.ru
+hosted.ap.org
+hr.wikipedia.org
+id.wikipedia.org
+i.ibb.co
+iland.tv
+i.li.ru
+img-fotki.yandex.ru
+imgprx.livejournal.net
+inmueble.mercadolibre.com.py
+inmueble.mercadolibre.com.uy
+institutrobotov.ru
+io9.com
+ip.fri-gate.org
+irdial.com
+ir-ingr.livejournal.com
+irreal.org
+it.wikipedia.org
+ja.wikipedia.org
+jiriki.kapsi.fi
+jobs.aviationtoday.com
+kazak1971.livejournal.com
+ko.wikipedia.org
+kupcov-ag.narod.ru
+lambda-the-ultimate.org
+lenta.ru
+libgen.io
+lib.rus.ec
+lichteblau.blogspot.com
+lifenews.ru
+likemore-go.imgsmail.ru
+linux.org.ru
+linux.slashdot.org
+listado.mercadolibre.com.uy
+lj.rossia.org
+load.qrator.net
+log.mkj.lt
+logs.minigame.biz
+l-stat.livejournal.net
+lurkmo.re
+lurkmore.co
+lurkmore.so
+lurkmore.to
+l-userpic.livejournal.com
+magboss.pl
+magzdb.org
+marat2012.livejournal.com
+mc.yandex.ru
+mediametrics.ru
+melpa.org
+mignews.com
+mihaistanescu.wordpress.com
+mirageswar.com
+mk.wikipedia.org
+mobile.flibusta.is
+mobile-review.com
+moronlab.blogspot.com
+motls.blogspot.com
+m.theweek.com
+mwomercs.com
+myaccount.google.com
+myfhology.info
+nakamotoinstitute.org
+nanog.kaskadian.com
+net-livejournal.livejournal.com
+news.duke.edu
+nl.wikipedia.org
+noperapon.livejournal.com
+nosuchlabs.com
+nouveau.lurkmore.net
+nplus1.ru
+obzor.westsib.ru
+oglaf.com
+ok.ru
+on.msnbc.com
+openid.net
+orwell.ru
+ossasepia.com
+pages.cs.wisc.edu
+patentimages.storage.googleapis.com
+p.bvulpes.com
+p-cos.blogspot.com
+philip.greenspun.com
+photomatt.net
+phuctor.nosuchlabs.com
+pizarroisp.net
+planet.wordpress.org
+plasmastik.livejournal.com
+platform.twitter.com
+plouffe.fr
+pl.wikipedia.org
+premium-publishing.ru
+prince-consort.livejournal.com
+prod-cdn.wetransfer.net
+professionalrakeback.com
+prog21.dadgum.com
+pt.wikipedia.org
+purl.org
+putnik1.livejournal.com
+pypi.org
+qntra.net
+qrator.net
+radar.qrator.net
+radio.mediametrics.ru
+ravkooktorah.org
+redthreaddesign.ru
+regnum.ru
+relap.io
+richardkulisz.blogspot.com
+rnd.cnews.ru
+romanoff.1nsk.ru
+ro.wikipedia.org
+ru.m.wikipedia.org
+ru.wikipedia.org
+s06.flagcounter.com
+s0.videopress.com
+scripts.dailymail.co.uk
+search.bbc.co.uk
+search.bitcoin-assets.com
+share.flipboard.com
+shiko-1st.livejournal.com
+ship.bsu.by
+shop.imedia.ru
+shrani.si
+shushpanzer_ru.livejournal.com
+sk.ru
+sks-keyservers.net
+sk.wikipedia.org
+smart-lab.ru
+solutionsforscreenprinters.com
+sooo.2x2forum.ru
+store.steampowered.com
+strangernn.livejournal.com
+studioht.burpees.fr
+support.fri-gate.org
+sv.wikipedia.org
+szhaman.com
+telecom.cnews.ru
+therealbitcoin.org
+thescientificshrimper.wordpress.com
+thesophisticatedinvestor.com.au
+thetarpit.org
+tiomkin.livejournal.com
+t.me
+to1ne.gitlab.io
+top100.rambler.ru
+top.mail.ru
+topwar.ru
+toursnord.burpees.fr
+tourssud.burpees.fr
+travisgoodspeed.blogspot.com
+tvrain.ru
+twobithistory.org
+uk.wikipedia.org
+unenumerated.blogspot.com
+unqualified-reservations.blogspot.com
+upload.wikimedia.org
+upnorthmedia.nl
+upnorthmemorabilia.com
+ushinskij-konstantin-pisatel.larec-skazok.ru
+versu.com
+vk.com
+waronline.org
+w.b-a.link
+web.archive.org
+widgets.sprinkletxt.com
+wiki.bitcoin-otc.com
+wiki.liveinternet.ru
+wikimediafoundation.org
+wiki.teamfortress.com
+winrar.com
+wordpress.org
+wp.theintercept.com
+writersblock.livejournal.com
+www.03.ru
+www.adacore.com
+www.addthis.com
+www.americanthinker.com
+www.amf-france.org
+www.artsy.net
+www.aviationtoday.com
+www.bay12forums.com
+www.bitstamp.net
+www.blogger.com
+www.books.ru
+www.cfda.gov
+www.chrishowie.com
+www.coindesk.com
+www.contravex.com
+www-cs-faculty.stanford.edu
+www.cyc.com
+www.dailymail.co.uk
+www.darkgrot.ru
+www.darwinawards.com
+www.daveswarbirds.com
+www.deepstorm.ru
+www.dianacoman.com
+www.digitaltrends.com
+www.dreamsongs.com
+www.elobservador.com.uy
+wwwen.zte.com.cn
+www.eulorum.org
+www.farmtek.com
+www.feasta.org
+www.freebsdmall.com
+www.gamewoods.ru
+www.g-loaded.eu
+www.gnu.org
+www.google.com
+www.google.fr
+www.heritage.nf.ca
+www.huffingtonpost.com
+www.imi-israel.com
+www.independent.co.uk
+www.instagram.com
+www.interfax.by
+www.interfax.ru
+www.irz.ru
+www.itnews.com.au
+www.jeg.ro
+www.kommersant.ru
+www.laverdad.es
+www.leonacraig.com
+www.linux.org.ru
+www.li.ru
+www.liveinternet.ru
+www.livejournal.com
+www.liveleak.com
+www.loper-os.org
+www.math.columbia.edu
+www.math.rutgers.edu
+www.mediawiki.org
+www.militaryparitet.com
+www.mobile-review.com
+www.modernlib.ru
+www.mosis.com
+www.msnbc.com
+www.museumofhoaxes.com
+www.mvd.ru
+www.news.com.au
+www.newsru.com
+www.niknews.mk.ua
+www.niquette.com
+www.nosuchlabs.com
+www.nytimes.com
+www.odnoklassniki.ru
+www.old-games.ru
+www.openbsd.org
+www.openwall.com
+www.phpbb.com
+www.pinterest.com
+www.playhawken.com
+www.popmech.ru
+www.postgresql.org
+www.radioscanner.ru
+www.rambler.ru
+www.rust-lang.org
+www.sbir.gov
+www.slate.com
+www.softwareforscreenprinters.com
+www.songworm.com
+www.souz.co.il
+www.speedyshare.com
+www.sqlite.org
+www.staedtler.com
+www.subrayado.com.uy
+www.svobodanews.ru
+www.technohelp.ru
+www.templeos.org
+www.thedrinkingrecord.com
+www.thesitewizard.com
+www.thewire.com
+www.tinaja.com
+www.trademarkia.com
+www.trustedsec.com
+www.utro.ru
+www.uzi.com
+www.warbirdalley.com
+www.webcitation.org
+www.wikidata.org
+www.wikimediafoundation.org
+www.windytan.com
+www.with-emacs.com
+www.worldcat.org
+www.xach.com
+www.yandex.ru
+www.yapfiles.ru
+www.yaplakal.com
+x4.fjcdn.com
+xahlee.org
+xc3.services.livejournal.com
+yandex.ru
+yaplakal.com
+yastatic.net
+zen.yandex.ru
+zh.wikipedia.org
+A 77 element overlap would tend to suggest a list of strings to choose from at least in the thousands.">iv</a></sup> <em>by a power law</em> ? They're not even randomly distributed, they <em>cluster</em>. You'd almost think Trilema is being discussed on ubuntuforums or by the telegraph or some shit<sup><a href="#footnote_4_81898" id="identifier_4_81898" class="footnote-link footnote-identifier-link" title="Which of course it's not, slug knows no scarier salt. What next, hallucinated optionality poseurs admitting their existence to date was not just lame, but necessarily lame ?! And then what ? Making amends ?! Laissez.">v</a></sup>. </p>
+<p>Which also suggests the only possible explanation to this entire production : mayhap for some reason one of them "<a href="http://trilema.com/2015/facebook-sends-traffic11eleven/">traffic</a> generating" <a href="http://trilema.com/2012/coinurl-a-bitcoin-advertising-service/#selection-125.0-125.29">bots</a> ended up thinking Trilema is a paying customer ? There's absolutely no reason on this side for such notions being entertained ; but then again who knows, some data entry monkey fucked up an excel spreadsheet somewhere. <a href="http://trilema.com/2013/why-mpex-is-better-than-fiat-institutions-part-349085-we-dont-use-excel/">It's been known to happen</a>. </p>
+<p>Because outside of that, I confess I don't fucking get it. It's not simply an overengineered archiver because an archiver wouldn't need to </p>
+<blockquote><p>      3 zsilnic<br />
+      4 bitcoin<br />
+      4 feed<br />
+      5 continut-platit-no-more<br />
+      6 a-lunatic-with-a-bloodied-axe-could-be-ringing-at-your-door<br />
+      6 dragii-mei-avem-o-problema<br />
+      6 me-they-say<br />
+      6 oda-superbiei<br />
+      6 prepare-to-be-insanely-incredibly-very-very-jealous-with-envy<br />
+      6 revelatia-de-miercuri-dimineata<br />
+      7 how-does-one-list-on-mpex<br />
+      7 minigame-smg-november-2018-statement<br />
+      7 no-such-labs-snsa-november-2018-statement<br />
+      7 romanian-dicelist<br />
+      7 the-community-of-division-or-puteria-y-verduleria<br />
+      7 themes<br />
+      7 the-stupidity-ratchet<br />
+      8 adnotated-words-of-wisdom-on-the-topic-of-online-fraud
+</p></blockquote>
+<p>For one thing, trilema.com/themes isn't even linked anywhere ; for the other thing there's no reason to save six copies of a category untouched since April (and before that, 2017), or four copies of the feed. Or eight copies of an article from 2012. That's just not how archivers work, is it now.</p>
+<p>I suppose the original theory ("<a href="http://trilema.com/2014/mircea-popescu-is-an-asshole/">MIRCEA POPESCU IS AN ASSHOLE!</a>") might also carry water, who ever heard of a blog that can serve multiple requests per second without even noticing ? Certainly not a ridiculous hand puppet calling itself <a href="http://btcbase.org/log/2016-09-25#1548495">Brian Krebs</a>, rite ?</p>
+<p>Aaanyways. I suppose in the end I will simply wish you a traditional "who cares", and a happy new year!</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_81898" class="footnote">And no, it's not even t<a href="http://trilema.com/2012/semne-clare-ca-esti-gay-despre-care-nici-macar-nu-ti-dai-seama/">o find out if they're gay</a>, or other <a href="http://trilema.com/2010/viata-suge-cum-ne-omoram/">Romanian-interest topics</a>. I understand you'd have expected so. Me too. Nevertheless... [<a href="#identifier_0_81898" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_81898" class="footnote">It doesn't have to be hostile to be threatening, you realise this. Obviously plenty of people have the stinking shit in their brainbox violently contradicted by the pristine perfection that is my blog ; yet plenty more have the yearning glimmer of hope and sanity they carry through a world of shit sweetly supported by that self-same pristine perfection. For <em>both of these</em> Trilema is vitriolically threatening : just as its continued existence implies the irreality of the idiocy of the former, just so its <em>possible disappearance</em> implies the irreality of the sanity of the latter. "You can't win", so to speak : great things will be threatening by their greatness, not by their direction.  [<a href="#identifier_1_81898" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_81898" class="footnote">Obviously the Internet is full of shit ; yet also not so very difficult to classify. </p>
+<p>Yes, anyone can write a script to load web pages ; yet you can trivially tell whether an IP is allocated to home consumers or datacenter usage, and then there's <a href="http://trilema.com/forum-logs-for-17-may-2018#2439570">the universal side channel of timing</a>. You can tell lots and lots about the other end if you bother to examine delays, to build histograms, to compare instants to means and medians and averages and in general, actuarial science is an actual science, unlike "social science", "economy" or psycho"logy". </p>
+<p>You can even compare the native reading speed of populations in say North America, Australia and the UK, and thus obtain, through the relatively cheap venue of keeping a well read blog, much better information as to the relative quality of educational systems the world over than any "CIA" can possibly ever provide (not to mention up to date maps of the current state of outer space bogonic irradiation underway).</p>
+<p>Because such is the glory and the luxury of existing in the future, and in the abstract, and in the Republic : you get all sorts of magical powers the lesser beings can, after a fashion, almost imagine. [<a href="#identifier_2_81898" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_81898" class="footnote">Last month's list is even thicker : </p>
+<blockquote><p>cat 'trilema.com-Dec-2018' | grep "37.187.150.139" | cut -d' ' -f11 | cut -d'/' -f3 | sort | uniq -c | sort -n<br />
+      1 1.bp.blogspot.com<br />
+      1 access.redhat.com<br />
+      1 accounts.theatlantic.com<br />
+      1 acrossdifficultcountry.blogspot.com<br />
+      1 ad.adriver.ru<br />
+      1 addons.mozilla.org<br />
+      1 adevarul.ro<br />
+      1 af.reuters.com<br />
+      1 agrigorev.ru<br />
+      1 analepsis.files.wordpress.com<br />
+      1 arcanesentiment.blogspot.com<br />
+      1 axisofeval.blogspot.com<br />
+      1 b.elegram.ru<br />
+      1 bimbo.club<br />
+      1 bits.blogs.nytimes.com<br />
+      1 blackhattactics.net<br />
+      1 blog.qnology.com<br />
+      1 blogs.wsj.com<br />
+      1 bolshoi.by<br />
+      1 borianm.livejournal.com<br />
+      1 cascadianhacker.com<br />
+      1 cdnc.ucr.edu<br />
+      1 cdnjs.cloudflare.com<br />
+      1 census.gov<br />
+      1 chemistry.about.com<br />
+      1 chromefetus.blogspot.com<br />
+      1 claudecozycloud.typeform.com<br />
+      1 code.google.com<br />
+      1 community.imgur.com<br />
+      1 contravex.com<br />
+      1 crm-analytics.imweb.ru<br />
+      1 cr.yp.to<br />
+      1 cvsweb.openbsd.org<br />
+      1 cyberleninka.ru<br />
+      1 dealbook.nytimes.com<br />
+      1 deutsche-wirtschafts-nachrichten.de<br />
+      1 developers.rambler.ru<br />
+      1 digg.com<br />
+      1 education.github.com<br />
+      1 elibrary.ru<br />
+      1 enacademic.com<br />
+      1 en.m.wikipedia.org<br />
+      1 es.wikipedia.org<br />
+      1 facebook.com<br />
+      1 fima-psuchopadt.livejournal.com<br />
+      1 flashgamesite.com<br />
+      1 flipboard.com<br />
+      1 fonts.googleapis.com<br />
+      1 freedom-to-tinker.com<br />
+      1 funcall.blogspot.com<br />
+      1 ghettohikes.tumblr.com<br />
+      1 globaldossier.uspto.gov<br />
+      1 golang.org<br />
+      1 gorskie.ru<br />
+      1 help.github.com<br />
+      1 hosted.ap.org<br />
+      1 hr.wikipedia.org<br />
+      1 i.li.ru<br />
+      1 img-fotki.yandex.ru<br />
+      1 inmueble.mercadolibre.com.py<br />
+      1 io9.com<br />
+      1 ip.fri-gate.org<br />
+      1 irdial.com<br />
+      1 jiriki.kapsi.fi<br />
+      1 jobs.aviationtoday.com<br />
+      1 kupcov-ag.narod.ru<br />
+      1 lambda-the-ultimate.org<br />
+      1 lichteblau.blogspot.com<br />
+      1 linux.slashdot.org<br />
+      1 load.qrator.net<br />
+      1 magboss.pl<br />
+      1 magzdb.org<br />
+      1 mignews.com<br />
+      1 mirageswar.com<br />
+      1 mk.wikipedia.org<br />
+      1 motls.blogspot.com<br />
+      1 m.theweek.com<br />
+      1 myaccount.google.com<br />
+      1 myfhology.info<br />
+      1 nanog.kaskadian.com<br />
+      1 news.duke.edu<br />
+      1 noperapon.livejournal.com<br />
+      1 nouveau.lurkmore.net<br />
+      1 nplus1.ru<br />
+      1 obzor.westsib.ru<br />
+      1 packetstormsecurity.com<br />
+      1 patentimages.storage.googleapis.com<br />
+      1 p-cos.blogspot.com<br />
+      1 philip.greenspun.com<br />
+      1 platform.twitter.com<br />
+      1 plouffe.fr<br />
+      1 premium-publishing.ru<br />
+      1 prince-consort.livejournal.com<br />
+      1 professionalrakeback.com<br />
+      1 pt.wikipedia.org<br />
+      1 pypi.org<br />
+      1 radio.mediametrics.ru<br />
+      1 richardkulisz.blogspot.com<br />
+      1 rnd.cnews.ru<br />
+      1 romanoff.1nsk.ru<br />
+      1 ru.m.wikipedia.org<br />
+      1 s0.videopress.com<br />
+      1 scripts.dailymail.co.uk<br />
+      1 search.bbc.co.uk<br />
+      1 share.flipboard.com<br />
+      1 shiko-1st.livejournal.com<br />
+      1 shop.imedia.ru<br />
+      1 shrani.si<br />
+      1 sk.ru<br />
+      1 sks-keyservers.net<br />
+      1 sk.wikipedia.org<br />
+      1 sooo.2x2forum.ru<br />
+      1 soundcloud.com<br />
+      1 sourceforge.net<br />
+      1 stocks.about.com<br />
+      1 store.steampowered.com<br />
+      1 studioht.burpees.fr<br />
+      1 support.google.com<br />
+      1 szhaman.com<br />
+      1 thesophisticatedinvestor.com.au<br />
+      1 thetarpit.org<br />
+      1 t.me<br />
+      1 to1ne.gitlab.io<br />
+      1 tourssud.burpees.fr<br />
+      1 travisgoodspeed.blogspot.com<br />
+      1 tvrain.ru<br />
+      1 uk.wikipedia.org<br />
+      1 upload.wikimedia.org<br />
+      1 ushinskij-konstantin-pisatel.larec-skazok.ru<br />
+      1 versu.com<br />
+      1 waronline.org<br />
+      1 widgets.sprinkletxt.com<br />
+      1 winrar.com<br />
+      1 wp.theintercept.com<br />
+      1 www.addthis.com<br />
+      1 www.amf-france.org<br />
+      1 www.aviationtoday.com<br />
+      1 www.bitstamp.net<br />
+      1 www.bizapedia.com<br />
+      1 www.cfda.gov<br />
+      1 www.chrishowie.com<br />
+      1 www-cs-faculty.stanford.edu<br />
+      1 www.cyc.com<br />
+      1 www.dreamsongs.com<br />
+      1 www.eulorum.org<br />
+      1 www.feasta.org<br />
+      1 www.freebsdmall.com<br />
+      1 www.g-loaded.eu<br />
+      1 www.google.com<br />
+      1 www.google.fr<br />
+      1 www.googletagmanager.com<br />
+      1 www.heritage.nf.ca<br />
+      1 www.idstronghold.com<br />
+      1 www.independent.co.uk<br />
+      1 www.interfax.by<br />
+      1 www.interfax.ru<br />
+      1 www.irz.ru<br />
+      1 www.itnews.com.au<br />
+      1 www.kommersant.ru<br />
+      1 www.laverdad.es<br />
+      1 www.leonacraig.com<br />
+      1 www.mediawiki.org<br />
+      1 www.mobile-review.com<br />
+      1 www.msnbc.com<br />
+      1 www.museumofhoaxes.com<br />
+      1 www.news.com.au<br />
+      1 www.niknews.mk.ua<br />
+      1 www.niquette.com<br />
+      1 www.nosuchlabs.com<br />
+      1 www.pinterest.com<br />
+      1 www.radioscanner.ru<br />
+      1 www.rambler.ru<br />
+      1 www.reuters.com<br />
+      1 www.rust-lang.org<br />
+      1 www.slate.com<br />
+      1 www.songworm.com<br />
+      1 www.souz.co.il<br />
+      1 www.sqlite.org<br />
+      1 www.telegraph.co.uk<br />
+      1 www.templeos.org<br />
+      1 www.thewire.com<br />
+      1 www.tinaja.com<br />
+      1 www.trademarkia.com<br />
+      1 www.utro.ru<br />
+      1 www.uzi.com<br />
+      1 www.warbirdalley.com<br />
+      1 www.wikimediafoundation.org<br />
+      1 www.worldcat.org<br />
+      1 xahlee.org<br />
+      1 yandex.ru<br />
+      1 yt3.ggpht.com<br />
+      2 1010.co.uk<br />
+      2 actupnorth.com<br />
+      2 ad7zj.net<br />
+      2 ajax.googleapis.com<br />
+      2 america.aljazeera.com<br />
+      2 api.mindbox.ru<br />
+      2 apis.google.com<br />
+      2 api.vo-media.ru<br />
+      2 ar.wikipedia.org<br />
+      2 baseball.fantasysports.yahoo.com<br />
+      2 bash.im<br />
+      2 bitcoinpete.com<br />
+      2 biz.cnews.ru<br />
+      2 b-ok.org<br />
+      2 booktracker.org<br />
+      2 bugs.gentoo.org<br />
+      2 bugzilla.mozilla.org<br />
+      2 bvt-trace.net<br />
+      2 ca.wikipedia.org<br />
+      2 cdn.onesignal.com<br />
+      2 chat.li.ru<br />
+      2 client.qrator.net<br />
+      2 cluborlov.blogspot.com<br />
+      2 colonel_sokker.livejournal.com<br />
+      2 connect.ok.ru<br />
+      2 cozy.io<br />
+      2 cs8.pikabu.ru<br />
+      2 de.wikipedia.org<br />
+      2 dianacoman.com<br />
+      2 doc-00-bk-apps-viewer.googleusercontent.com<br />
+      2 donate.wikimedia.org<br />
+      2 drive.google.com<br />
+      2 fa.wikipedia.org<br />
+      2 fexpr.blogspot.com<br />
+      2 fi.wikipedia.org<br />
+      2 freesoft.ru<br />
+      2 gawker.com<br />
+      2 git.gnupg.org<br />
+      2 glonass-gps.blogspot.com<br />
+      2 grimnir74.livejournal.com<br />
+      2 habrahabr.ru<br />
+      2 he.wikipedia.org<br />
+      2 hi-tech.mail.ru<br />
+      2 institutrobotov.ru<br />
+      2 ir-ingr.livejournal.com<br />
+      2 iwantmyname.com<br />
+      2 ja.wikipedia.org<br />
+      2 juggalocoin.org<br />
+      2 kazak1971.livejournal.com<br />
+      2 kopywritingkourse.com<br />
+      2 ko.wikipedia.org<br />
+      2 lib.rus.ec<br />
+      2 lifenews.ru<br />
+      2 likemore-go.imgsmail.ru<br />
+      2 linux.org.ru<br />
+      2 listado.mercadolibre.com.uy<br />
+      2 lj.rossia.org<br />
+      2 logs.minigame.biz<br />
+      2 lurkmore.co<br />
+      2 lurkmore.so<br />
+      2 marat2012.livejournal.com<br />
+      2 melpa.org<br />
+      2 mobile.flibusta.is<br />
+      2 mobile-review.com<br />
+      2 moronlab.blogspot.com<br />
+      2 mwomercs.com<br />
+      2 nakamotoinstitute.org<br />
+      2 net-livejournal.livejournal.com<br />
+      2 nosuchlabs.com<br />
+      2 oglaf.com<br />
+      2 ok.ru<br />
+      2 openid.net<br />
+      2 orwell.ru<br />
+      2 pages.cs.wisc.edu<br />
+      2 photomatt.net<br />
+      2 phuctor.nosuchlabs.com<br />
+      2 planet.wordpress.org<br />
+      2 plasmastik.livejournal.com<br />
+      2 play.google.com<br />
+      2 pl.wikipedia.org<br />
+      2 prod-cdn.wetransfer.net<br />
+      2 prog21.dadgum.com<br />
+      2 ravkooktorah.org<br />
+      2 regnum.ru<br />
+      2 relap.io<br />
+      2 ro.wikipedia.org<br />
+      2 s06.flagcounter.com<br />
+      2 shushpanzer_ru.livejournal.com<br />
+      2 support.fri-gate.org<br />
+      2 sv.wikipedia.org<br />
+      2 telecom.cnews.ru<br />
+      2 tiomkin.livejournal.com<br />
+      2 top100.rambler.ru<br />
+      2 top.mail.ru<br />
+      2 twobithistory.org<br />
+      2 unenumerated.blogspot.com<br />
+      2 validator.w3.org<br />
+      2 w.b-a.link<br />
+      2 wiki.bitcoin-otc.com<br />
+      2 wiki.liveinternet.ru<br />
+      2 wiki.teamfortress.com<br />
+      2 writersblock.livejournal.com<br />
+      2 www.03.ru<br />
+      2 www.adacore.com<br />
+      2 www.apple.com<br />
+      2 www.artsy.net<br />
+      2 www.bay12forums.com<br />
+      2 www.bbc.co.uk<br />
+      2 www.bloomberg.com<br />
+      2 www.books.ru<br />
+      2 www.coindesk.com<br />
+      2 www.contravex.com<br />
+      2 www.darkgrot.ru<br />
+      2 www.darwinawards.com<br />
+      2 www.daveswarbirds.com<br />
+      2 wwwen.zte.com.cn<br />
+      2 www.faa.gov<br />
+      2 www.farmtek.com<br />
+      2 www.forbes.com<br />
+      2 www.fourmilab.ch<br />
+      2 www.gamewoods.ru<br />
+      2 www.imi-israel.com<br />
+      2 www.linux.org.ru<br />
+      2 www.li.ru<br />
+      2 www.liveleak.com<br />
+      2 www.math.columbia.edu<br />
+      2 www.math.rutgers.edu<br />
+      2 www.militaryparitet.com<br />
+      2 www.modernlib.ru<br />
+      2 www.mosis.com<br />
+      2 www.mvd.ru<br />
+      2 www.old-games.ru<br />
+      2 www.openbsd.org<br />
+      2 www.phpbb.com<br />
+      2 www.playhawken.com<br />
+      2 www.sbir.gov<br />
+      2 www.softwareforscreenprinters.com<br />
+      2 www.spaceweatherradio.com<br />
+      2 www.speedyshare.com<br />
+      2 www.staedtler.com<br />
+      2 www.subrayado.com.uy<br />
+      2 www.svobodanews.ru<br />
+      2 www.technohelp.ru<br />
+      2 www.thedrinkingrecord.com<br />
+      2 www.thesitewizard.com<br />
+      2 www.torontosun.com<br />
+      2 www.vanityfair.com<br />
+      2 www.yandex.ru<br />
+      2 x4.fjcdn.com<br />
+      2 xc3.services.livejournal.com<br />
+      2 zen.yandex.ru<br />
+      3 anime-rus.ru<br />
+      3 bigbangtrans.wordpress.com<br />
+      3 bitcoin.org<br />
+      3 blockchain.info<br />
+      3 blogs.discovermagazine.com<br />
+      3 cryptopals.com<br />
+      3 darwinawards.com<br />
+      3 forum.topwar.ru<br />
+      3 fr.wikipedia.org<br />
+      3 gmpg.org<br />
+      3 gunter-spb.livejournal.com<br />
+      3 id.wikipedia.org<br />
+      3 i.ibb.co<br />
+      3 lh3.googleusercontent.com<br />
+      3 logs.bvulpes.com<br />
+      3 l-stat.livejournal.net<br />
+      3 mihaistanescu.wordpress.com<br />
+      3 on.msnbc.com<br />
+      3 redthreaddesign.ru<br />
+      3 search.bitcoin-assets.com<br />
+      3 ship.bsu.by<br />
+      3 smart-lab.ru<br />
+      3 unqualified-reservations.blogspot.com<br />
+      3 wikimediafoundation.org<br />
+      3 www.americanthinker.com<br />
+      3 www.bbc.com<br />
+      3 www.dare.org<br />
+      3 www.deepstorm.ru<br />
+      3 www.dianacoman.com<br />
+      3 www.etsy.com<br />
+      3 www.huffingtonpost.com<br />
+      3 www.jeg.ro<br />
+      3 www.mail-archive.com<br />
+      3 www.newsru.com<br />
+      3 www.nytimes.com<br />
+      3 www.odnoklassniki.ru<br />
+      3 www.openwall.com<br />
+      3 www.wikidata.org<br />
+      3 www.with-emacs.com<br />
+      3 xkcd.com<br />
+      3 yastatic.net<br />
+      3 zh.wikipedia.org<br />
+      4 assets.rbl.ms<br />
+      4 bit.ly<br />
+      4 community.livejournal.com<br />
+      4 cs.wikipedia.org<br />
+      4 dadatroll.wordpress.com<br />
+      4 danielpbarron.com<br />
+      4 doctor.ru<br />
+      4 fr.anco.is<br />
+      4 gunter_spb.livejournal.com<br />
+      4 iland.tv<br />
+      4 instagram.com<br />
+      4 jesuschristsiliconvalley.tumblr.com<br />
+      4 libgen.io<br />
+      4 nl.wikipedia.org<br />
+      4 pizarroisp.net<br />
+      4 purl.org<br />
+      4 rarehistoricalphotos.com<br />
+      4 schema.org<br />
+      4 thescientificshrimper.wordpress.com<br />
+      4 wordpress.org<br />
+      4 www.blogger.com<br />
+      4 www.digitaltrends.com<br />
+      4 www.elobservador.com.uy<br />
+      4 www.gnu.org<br />
+      4 www.postgresql.org<br />
+      4 www.webcitation.org<br />
+      4 yaplakal.com<br />
+      5 4.bp.blogspot.com<br />
+      5 88isp.net<br />
+      5 books.google.ru<br />
+      5 chrome.google.com<br />
+      5 commons.wikimedia.org<br />
+      5 deadspin.com<br />
+      5 lurkmo.re<br />
+      5 ossasepia.com<br />
+      5 pbs.twimg.com<br />
+      5 therealbitcoin.org<br />
+      5 toursnord.burpees.fr<br />
+      5 wot.deedbot.org<br />
+      5 www.instagram.com<br />
+      5 www.theatlantic.com<br />
+      5 www.trustedsec.com<br />
+      5 www.xach.com<br />
+      6 forums.xkcd.com<br />
+      6 foundation.wikimedia.org<br />
+      6 g.liveinternet.ru<br />
+      6 imgprx.livejournal.net<br />
+      6 log.mkj.lt<br />
+      6 radar.qrator.net<br />
+      6 thewhet.net<br />
+      6 web.archive.org<br />
+      6 www.livejournal.com<br />
+      7 imgur.com<br />
+      8 bitcoin-otc.com<br />
+      8 i.imgur.com<br />
+      8 it.wikipedia.org<br />
+      8 lenta.ru<br />
+      8 mc.yandex.ru<br />
+      8 solutionsforscreenprinters.com<br />
+      8 www.dailymail.co.uk<br />
+      8 www.windytan.com<br />
+      8 www.yapfiles.ru<br />
+      9 inmueble.mercadolibre.com.uy<br />
+      9 vk.com<br />
+      9 www.urbandictionary.com<br />
+     10 t.co<br />
+     10 www.reddit.com<br />
+     10 youtube.com<br />
+     12 accounts.google.com<br />
+     13 d3nevzfk7ii3be.cloudfront.net<br />
+     13 putnik1.livejournal.com<br />
+     14 plus.google.com<br />
+     15 l-userpic.livejournal.com<br />
+     15 upnorthmedia.nl<br />
+     16 b-otc.com<br />
+     16 mediametrics.ru<br />
+     16 www.facebook.com<br />
+     17 fri-gate.org<br />
+     19 s.b-a.link<br />
+     20 qntra.net<br />
+     22 bash.bitcoin-assets.com<br />
+     24 github.com<br />
+     25 archive.is<br />
+     26 autokadabra.ru<br />
+     26 log.bitcoin-assets.com<br />
+     27 p.bvulpes.com<br />
+     28 i.ytimg.com<br />
+     31 qrator.net<br />
+     43 topwar.ru<br />
+     46 www.popmech.ru<br />
+     56 irreal.org<br />
+     58 twitter.com<br />
+     60 www.youtube.com<br />
+     68 www.loper-os.org<br />
+     69 upnorthmemorabilia.com<br />
+     83 youtu.be<br />
+    115 www.liveinternet.ru<br />
+    161 flibusta.is<br />
+    167 www.yaplakal.com<br />
+    176 en.wikipedia.org<br />
+    186 btcbase.org<br />
+    411 strangernn.livejournal.com<br />
+    580 ru.wikipedia.org<br />
+   1194 lurkmore.to<br />
+  19228 trilema.com
+</p></blockquote>
+<p>Consider how the two diff : 490 vs 366 elements, and otherwise </p>
+<blockquote><p>comm -13 spam1.txt spam2.txt<br />
+1010.co.uk<br />
+4.bp.blogspot.com<br />
+88isp.net<br />
+access.redhat.com<br />
+accounts.theatlantic.com<br />
+acrossdifficultcountry.blogspot.com<br />
+actupnorth.com<br />
+ad7zj.net<br />
+ad.adriver.ru<br />
+adevarul.ro<br />
+af.reuters.com<br />
+agrigorev.ru<br />
+america.aljazeera.com<br />
+analepsis.files.wordpress.com<br />
+anime-rus.ru<br />
+api.mindbox.ru<br />
+apis.google.com<br />
+api.vo-media.ru<br />
+arcanesentiment.blogspot.com<br />
+ar.wikipedia.org<br />
+assets.rbl.ms<br />
+autokadabra.ru<br />
+axisofeval.blogspot.com<br />
+baseball.fantasysports.yahoo.com<br />
+bash.bitcoin-assets.com<br />
+bash.im<br />
+b.elegram.ru<br />
+bimbo.club<br />
+bitcoin.org<br />
+bitcoin-otc.com<br />
+bits.blogs.nytimes.com<br />
+biz.cnews.ru<br />
+blackhattactics.net<br />
+blockchain.info<br />
+b-ok.org<br />
+bolshoi.by<br />
+books.google.ru<br />
+booktracker.org<br />
+borianm.livejournal.com<br />
+bugs.gentoo.org<br />
+bvt-trace.net<br />
+cascadianhacker.com<br />
+ca.wikipedia.org<br />
+cdnc.ucr.edu<br />
+cdnjs.cloudflare.com<br />
+cdn.onesignal.com<br />
+census.gov<br />
+chat.li.ru<br />
+chromefetus.blogspot.com<br />
+chrome.google.com<br />
+claudecozycloud.typeform.com<br />
+client.qrator.net<br />
+cluborlov.blogspot.com<br />
+code.google.com<br />
+colonel_sokker.livejournal.com<br />
+commons.wikimedia.org<br />
+community.livejournal.com<br />
+connect.ok.ru<br />
+contravex.com<br />
+cozy.io<br />
+crm-analytics.imweb.ru<br />
+cr.yp.to<br />
+cryptopals.com<br />
+cs8.pikabu.ru<br />
+cs.wikipedia.org<br />
+cvsweb.openbsd.org<br />
+cyberleninka.ru<br />
+d3nevzfk7ii3be.cloudfront.net<br />
+dadatroll.wordpress.com<br />
+danielpbarron.com<br />
+darwinawards.com<br />
+dealbook.nytimes.com<br />
+deutsche-wirtschafts-nachrichten.de<br />
+developers.rambler.ru<br />
+de.wikipedia.org<br />
+digg.com<br />
+doc-00-bk-apps-viewer.googleusercontent.com<br />
+doctor.ru<br />
+drive.google.com<br />
+education.github.com<br />
+elibrary.ru<br />
+enacademic.com<br />
+en.m.wikipedia.org<br />
+es.wikipedia.org<br />
+facebook.com<br />
+fa.wikipedia.org<br />
+fexpr.blogspot.com<br />
+fima-psuchopadt.livejournal.com<br />
+fi.wikipedia.org<br />
+flashgamesite.com<br />
+flibusta.is<br />
+flipboard.com<br />
+fonts.googleapis.com<br />
+forums.xkcd.com<br />
+forum.topwar.ru<br />
+foundation.wikimedia.org<br />
+fr.anco.is<br />
+freedom-to-tinker.com<br />
+freesoft.ru<br />
+fri-gate.org<br />
+fr.wikipedia.org<br />
+funcall.blogspot.com<br />
+gawker.com<br />
+git.gnupg.org<br />
+g.liveinternet.ru<br />
+globaldossier.uspto.gov<br />
+glonass-gps.blogspot.com<br />
+gmpg.org<br />
+golang.org<br />
+gorskie.ru<br />
+grimnir74.livejournal.com<br />
+gunter_spb.livejournal.com<br />
+gunter-spb.livejournal.com<br />
+habrahabr.ru<br />
+help.github.com<br />
+he.wikipedia.org<br />
+hi-tech.mail.ru<br />
+hosted.ap.org<br />
+hr.wikipedia.org<br />
+id.wikipedia.org<br />
+i.ibb.co<br />
+iland.tv<br />
+i.li.ru<br />
+img-fotki.yandex.ru<br />
+imgprx.livejournal.net<br />
+inmueble.mercadolibre.com.py<br />
+inmueble.mercadolibre.com.uy<br />
+institutrobotov.ru<br />
+io9.com<br />
+ip.fri-gate.org<br />
+irdial.com<br />
+ir-ingr.livejournal.com<br />
+irreal.org<br />
+it.wikipedia.org<br />
+ja.wikipedia.org<br />
+jiriki.kapsi.fi<br />
+jobs.aviationtoday.com<br />
+kazak1971.livejournal.com<br />
+ko.wikipedia.org<br />
+kupcov-ag.narod.ru<br />
+lambda-the-ultimate.org<br />
+lenta.ru<br />
+libgen.io<br />
+lib.rus.ec<br />
+lichteblau.blogspot.com<br />
+lifenews.ru<br />
+likemore-go.imgsmail.ru<br />
+linux.org.ru<br />
+linux.slashdot.org<br />
+listado.mercadolibre.com.uy<br />
+lj.rossia.org<br />
+load.qrator.net<br />
+log.mkj.lt<br />
+logs.minigame.biz<br />
+l-stat.livejournal.net<br />
+lurkmo.re<br />
+lurkmore.co<br />
+lurkmore.so<br />
+lurkmore.to<br />
+l-userpic.livejournal.com<br />
+magboss.pl<br />
+magzdb.org<br />
+marat2012.livejournal.com<br />
+mc.yandex.ru<br />
+mediametrics.ru<br />
+melpa.org<br />
+mignews.com<br />
+mihaistanescu.wordpress.com<br />
+mirageswar.com<br />
+mk.wikipedia.org<br />
+mobile.flibusta.is<br />
+mobile-review.com<br />
+moronlab.blogspot.com<br />
+motls.blogspot.com<br />
+m.theweek.com<br />
+mwomercs.com<br />
+myaccount.google.com<br />
+myfhology.info<br />
+nakamotoinstitute.org<br />
+nanog.kaskadian.com<br />
+net-livejournal.livejournal.com<br />
+news.duke.edu<br />
+nl.wikipedia.org<br />
+noperapon.livejournal.com<br />
+nosuchlabs.com<br />
+nouveau.lurkmore.net<br />
+nplus1.ru<br />
+obzor.westsib.ru<br />
+oglaf.com<br />
+ok.ru<br />
+on.msnbc.com<br />
+openid.net<br />
+orwell.ru<br />
+ossasepia.com<br />
+pages.cs.wisc.edu<br />
+patentimages.storage.googleapis.com<br />
+p.bvulpes.com<br />
+p-cos.blogspot.com<br />
+philip.greenspun.com<br />
+photomatt.net<br />
+phuctor.nosuchlabs.com<br />
+pizarroisp.net<br />
+planet.wordpress.org<br />
+plasmastik.livejournal.com<br />
+platform.twitter.com<br />
+plouffe.fr<br />
+pl.wikipedia.org<br />
+premium-publishing.ru<br />
+prince-consort.livejournal.com<br />
+prod-cdn.wetransfer.net<br />
+professionalrakeback.com<br />
+prog21.dadgum.com<br />
+pt.wikipedia.org<br />
+purl.org<br />
+putnik1.livejournal.com<br />
+pypi.org<br />
+qntra.net<br />
+qrator.net<br />
+radar.qrator.net<br />
+radio.mediametrics.ru<br />
+ravkooktorah.org<br />
+redthreaddesign.ru<br />
+regnum.ru<br />
+relap.io<br />
+richardkulisz.blogspot.com<br />
+rnd.cnews.ru<br />
+romanoff.1nsk.ru<br />
+ro.wikipedia.org<br />
+ru.m.wikipedia.org<br />
+ru.wikipedia.org<br />
+s06.flagcounter.com<br />
+s0.videopress.com<br />
+scripts.dailymail.co.uk<br />
+search.bbc.co.uk<br />
+search.bitcoin-assets.com<br />
+share.flipboard.com<br />
+shiko-1st.livejournal.com<br />
+ship.bsu.by<br />
+shop.imedia.ru<br />
+shrani.si<br />
+shushpanzer_ru.livejournal.com<br />
+sk.ru<br />
+sks-keyservers.net<br />
+sk.wikipedia.org<br />
+smart-lab.ru<br />
+solutionsforscreenprinters.com<br />
+sooo.2x2forum.ru<br />
+store.steampowered.com<br />
+strangernn.livejournal.com<br />
+studioht.burpees.fr<br />
+support.fri-gate.org<br />
+sv.wikipedia.org<br />
+szhaman.com<br />
+telecom.cnews.ru<br />
+therealbitcoin.org<br />
+thescientificshrimper.wordpress.com<br />
+thesophisticatedinvestor.com.au<br />
+thetarpit.org<br />
+tiomkin.livejournal.com<br />
+t.me<br />
+to1ne.gitlab.io<br />
+top100.rambler.ru<br />
+top.mail.ru<br />
+topwar.ru<br />
+toursnord.burpees.fr<br />
+tourssud.burpees.fr<br />
+travisgoodspeed.blogspot.com<br />
+tvrain.ru<br />
+twobithistory.org<br />
+uk.wikipedia.org<br />
+unenumerated.blogspot.com<br />
+unqualified-reservations.blogspot.com<br />
+upload.wikimedia.org<br />
+upnorthmedia.nl<br />
+upnorthmemorabilia.com<br />
+ushinskij-konstantin-pisatel.larec-skazok.ru<br />
+versu.com<br />
+vk.com<br />
+waronline.org<br />
+w.b-a.link<br />
+web.archive.org<br />
+widgets.sprinkletxt.com<br />
+wiki.bitcoin-otc.com<br />
+wiki.liveinternet.ru<br />
+wikimediafoundation.org<br />
+wiki.teamfortress.com<br />
+winrar.com<br />
+wordpress.org<br />
+wp.theintercept.com<br />
+writersblock.livejournal.com<br />
+www.03.ru<br />
+www.adacore.com<br />
+www.addthis.com<br />
+www.americanthinker.com<br />
+www.amf-france.org<br />
+www.artsy.net<br />
+www.aviationtoday.com<br />
+www.bay12forums.com<br />
+www.bitstamp.net<br />
+www.blogger.com<br />
+www.books.ru<br />
+www.cfda.gov<br />
+www.chrishowie.com<br />
+www.coindesk.com<br />
+www.contravex.com<br />
+www-cs-faculty.stanford.edu<br />
+www.cyc.com<br />
+www.dailymail.co.uk<br />
+www.darkgrot.ru<br />
+www.darwinawards.com<br />
+www.daveswarbirds.com<br />
+www.deepstorm.ru<br />
+www.dianacoman.com<br />
+www.digitaltrends.com<br />
+www.dreamsongs.com<br />
+www.elobservador.com.uy<br />
+wwwen.zte.com.cn<br />
+www.eulorum.org<br />
+www.farmtek.com<br />
+www.feasta.org<br />
+www.freebsdmall.com<br />
+www.gamewoods.ru<br />
+www.g-loaded.eu<br />
+www.gnu.org<br />
+www.google.com<br />
+www.google.fr<br />
+www.heritage.nf.ca<br />
+www.huffingtonpost.com<br />
+www.imi-israel.com<br />
+www.independent.co.uk<br />
+www.instagram.com<br />
+www.interfax.by<br />
+www.interfax.ru<br />
+www.irz.ru<br />
+www.itnews.com.au<br />
+www.jeg.ro<br />
+www.kommersant.ru<br />
+www.laverdad.es<br />
+www.leonacraig.com<br />
+www.linux.org.ru<br />
+www.li.ru<br />
+www.liveinternet.ru<br />
+www.livejournal.com<br />
+www.liveleak.com<br />
+www.loper-os.org<br />
+www.math.columbia.edu<br />
+www.math.rutgers.edu<br />
+www.mediawiki.org<br />
+www.militaryparitet.com<br />
+www.mobile-review.com<br />
+www.modernlib.ru<br />
+www.mosis.com<br />
+www.msnbc.com<br />
+www.museumofhoaxes.com<br />
+www.mvd.ru<br />
+www.news.com.au<br />
+www.newsru.com<br />
+www.niknews.mk.ua<br />
+www.niquette.com<br />
+www.nosuchlabs.com<br />
+www.nytimes.com<br />
+www.odnoklassniki.ru<br />
+www.old-games.ru<br />
+www.openbsd.org<br />
+www.openwall.com<br />
+www.phpbb.com<br />
+www.pinterest.com<br />
+www.playhawken.com<br />
+www.popmech.ru<br />
+www.postgresql.org<br />
+www.radioscanner.ru<br />
+www.rambler.ru<br />
+www.rust-lang.org<br />
+www.sbir.gov<br />
+www.slate.com<br />
+www.softwareforscreenprinters.com<br />
+www.songworm.com<br />
+www.souz.co.il<br />
+www.speedyshare.com<br />
+www.sqlite.org<br />
+www.staedtler.com<br />
+www.subrayado.com.uy<br />
+www.svobodanews.ru<br />
+www.technohelp.ru<br />
+www.templeos.org<br />
+www.thedrinkingrecord.com<br />
+www.thesitewizard.com<br />
+www.thewire.com<br />
+www.tinaja.com<br />
+www.trademarkia.com<br />
+www.trustedsec.com<br />
+www.utro.ru<br />
+www.uzi.com<br />
+www.warbirdalley.com<br />
+www.webcitation.org<br />
+www.wikidata.org<br />
+www.wikimediafoundation.org<br />
+www.windytan.com<br />
+www.with-emacs.com<br />
+www.worldcat.org<br />
+www.xach.com<br />
+www.yandex.ru<br />
+www.yapfiles.ru<br />
+www.yaplakal.com<br />
+x4.fjcdn.com<br />
+xahlee.org<br />
+xc3.services.livejournal.com<br />
+yandex.ru<br />
+yaplakal.com<br />
+yastatic.net<br />
+zen.yandex.ru<br />
+zh.wikipedia.org</p></blockquote>
+<p>A 77 element overlap would tend to suggest a list of strings to choose from at least in the thousands. [<a href="#identifier_3_81898" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_81898" class="footnote">Which <em>of course</em> it's not, <a href="http://trilema.com/2015/on-how-the-factored-4096-rsa-keys-story-was-handled-and-what-it-means-to-you/">slug knows no scarier salt</a>. What next, <a href="http://trilema.com/2017/the-practical-costs-of-hallucinated-freedom/">hallucinated optionality</a> <a href="http://trilema.com/2018/must-suck-to-be-one-of-you-average-guy-with-a-great-sense-of-humor-losers-seriously-now/">poseurs</a> admitting their existence to date was not just lame, but <em>necessarily</em> lame ?! And then what ? Making amends ?! <a href="http://loper-os.org/?p=165#selection-311.0-311.492">Laissez</a>. [<a href="#identifier_4_81898" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2018/the-problems/">The problems</a></div>
+                <div class="alignright"><a href="http://trilema.com/2019/what-is-meant-by-ai/">What is meant by AI ?</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2019/i-dont-get-it/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2019/i-dont-get-it/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>4 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-127341" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127341" title="">Tuesday, 1 January 2019</a>
+							</div>
+						<p>It's spamola. Just about all of these appear in my www's refer log (in approx. same frequency, but this is admittedly an eyeball comparison, I'ma do a proper set of stats at some point)</p>
+						</li>
+
+										<li id="comment-127342" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127342" title="">Tuesday, 1 January 2019</a>
+							</div>
+						<p>What's the payoff supposed to look like ?</p>
+						</li>
+
+										<li id="comment-127343" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127343" title="">Tuesday, 1 January 2019</a>
+							</div>
+						<p>Could easily ask same q. re: most other spamola. Cargo cult, no payoff but in the substances-induced dreams of the dreamers.</p>
+						</li>
+
+										<li id="comment-127344" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127344" title="">Tuesday, 1 January 2019</a>
+							</div>
+						<p>I don't understand how the dreams go. So </p>
+<p>1. he's going to curl trilema -R "hurrdurr.org".<br />
+2. ???<br />
+3. profit.</p>
+<p>What happens at step 2 ? I mean, it's one think to dream prince charming will one day show up to shower you with kisses and so on ; it's another thing to dream that one day a grass of strand frog eat not pebble also will.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="81898" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833785-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-81898")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-81898");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-81898");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>How the beastforum.com private messaging function became a paid-user-only item on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">It mildly annoys me, as a capable sheep,<br />that people like you exist.<br />~ <a href=http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-one/#comment-118639>nicknaem</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-75689"><div class="post" id="post-75689">                    <h1><a href="http://trilema.com/2017/how-the-beastforumcom-private-messaging-function-became-a-paid-user-only-item/" rel="bookmark" title="Permanent Link to How the beastforum.com private messaging function became a paid-user-only item">How the beastforum.com private messaging function became a paid-user-only item</a></h1>                        <div class="date">                                     Monday, 06 November, Year 9 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>You probably never heard of the largest bestiality forum on the internets, home to nearly 2mn registered users who regularily spew stuff like "since I first knotted with him six months ago my body has been changing I think I am adapting and we are becoming lovers nature wants us together" and so forth. </p>
+<p>Nevertheless, beastforum.com exists, and has for many years existed. During those years and up until yesterday the collected population of... well, I suppose furries is the technical term, neh ? have produced a total of 11`324`994 public posts, and a whopping 12`511`460<sup><a href="#footnote_0_75689" id="identifier_0_75689" class="footnote-link footnote-identifier-link" title="You wonder how I know the precise count ? Ah, that's easy, they leak them everwhere, such as via &#038;MSID=number.">i</a></sup> private messages. That's right, they PM more than they post. Who knew, who could have guessed!</p>
+<p>This tendency aggravated in the past 24 hours : while they went from 11`324`994 published posts to 11`362`293 (+299) they also went from 12`511`460 private messages to a whopping 13`154`912 (+643`452). What could have possibly issued over half a million PMs in a day, increasing the total count by something like 5% ? Well...</p>
+<blockquote><p>curl -k<sup><a href="#footnote_1_75689" id="identifier_1_75689" class="footnote-link footnote-identifier-link" title="Ignores ssl `certificates` bullshit">ii</a></sup> -v<sup><a href="#footnote_2_75689" id="identifier_2_75689" class="footnote-link footnote-identifier-link" title="Verbose.">iii</a></sup> --cookie-jar<sup><a href="#footnote_3_75689" id="identifier_3_75689" class="footnote-link footnote-identifier-link" title="Explicitly saves cookies.">iv</a></sup> - -A "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:20.0) Gecko/20100101 Firefox/20.0" --interface "eth0:30"<sup><a href="#footnote_4_75689" id="identifier_4_75689" class="footnote-link footnote-identifier-link" title="Allows you to switch IPs. Nifty, huh.">v</a></sup> --cookie "_cfduid=d0c2892e05534f0779df2f54dd73bedf71509847835;surfer=Ch4ADVn+cxsVYnzyIZmpAg==;Anti-Robot=51af22c8a0c2eff90a4d8781cee82723b189371e<sup><a href="#footnote_5_75689" id="identifier_5_75689" class="footnote-link footnote-identifier-link" title="Their `anti-robot` protection consists of some inept cookie setting via javascript. Like so : 
+&lt;html>
+&lt;body onload=`challenge();`>
+&lt;script>
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String) ){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('d a(){1.e=\'5=6; 7-8=9; 4=/\';1.b.c=2.3.f+2.3.g;1.h[0].i()}',19,19,'|document|window|location|path|Anti-Robot|696bd05573b4b04517028db39723b962dd3ac1af|max|age|86400|challenge|response|action|function|cookie|pathname|search|forms|submit'.split('|'),0,{}) )
+&lt;/script>
+
+Evidently no robots can ever read this, you know ?
+">vi</a></sup>" --data "referer=&#038;UserName=whatever&#038;PassWord=whatever&#038;CookieDate=1"  "https://www.beastforum.com/index.php?act=Login&#038;CODE=01" > hurr.txt</p></blockquote>
+<p>A cat hurr.txt will yield some items of interest : __cfduid (not really used for anything), session_id (basically the actual login token), member_id and pass_hash which are not strictly speaking required but help with long term session life.</p>
+<p>You put those into</p>
+<blockquote><p>for i in {1934360<sup><a href="#footnote_6_75689" id="identifier_6_75689" class="footnote-link footnote-identifier-link" title="Don't wonder how I know the user count, they leak it all sorts of places such as for instance showuser-n.html.">vii</a></sup>..1..12<sup><a href="#footnote_7_75689" id="identifier_7_75689" class="footnote-link footnote-identifier-link" title="If we're going to use 12 simultaneous sessions of this script (via, for instance, screen ; Ctrl-A c ; you're welcome) it is useful to count by 12s and decrement the start by 1 for each session.">viii</a></sup>}; do usr<sup><a href="#footnote_8_75689" id="identifier_8_75689" class="footnote-link footnote-identifier-link" title="They're kind enough to prepopulate our message sending form with the correct name of the user on the basis of referencing him by his index. We use this property to extract some valuable data for later on (mostly for our own reporting --the akey bit is there mostly to appear elegant, in practice the keys are reused over multiple postings).">ix</a></sup>=$(curl -m 20 -k -A "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:20.0) Gecko/20100101 Firefox/20.0" --interface "eth0:29" --cookie "__cfduid=01a62af28652383bd3e53d09180e75b7161f8842ead; session_id=bae22d4ff56ab9eb16ac77f470f74b76;member_id=1934360;Anti-Robot=696bd05573b4b04517028db39723b962dd3ac1af;pass_hash=f1e414681cfa28ee6aca32336ba97e91" "https://www.beastforum.com/index.php?act=Msg&#038;CODE=4&#038;MID=$i"); uname<sup><a href="#footnote_9_75689" id="identifier_9_75689" class="footnote-link footnote-identifier-link" title="We extract the recipient's name to keep track of what's going on.">x</a></sup>=$(echo "$usr" | grep "entered_name" | awk -F "'" '{print $8;}'); akey<sup><a href="#footnote_10_75689" id="identifier_10_75689" class="footnote-link footnote-identifier-link" title="Similarily extract the mostly worthless `authentication key`.">xi</a></sup>=$(echo "$usr" | grep "auth_key" | awk -F "'" '{print $6;}');res=$(curl -m 20 -k -A "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:20.0) Gecko/20100101 Firefox/20.0" --interface "eth0:29" --cookie  "__cfduid=01a62af28652383bd3e53d09180e75b7161f8842ead; session_id=bae22d4ff56ab9eb16ac77f470f74b76;member_id=1934360;Anti-Robot=696bd05573b4b04517028db39723b962dd3ac1af;pass_hash=f1e414681cfa28ee6aca32336ba97e91" --data "act=Msg&#038;CODE=04&#038;MODE=01&#038;OID=&#038;auth_key=$akey&#038;entered_name=$uname&#038;msg_title=Hey+is+this+story+about+you%3F&#038;bbmode=normal&#038;ffont=0&#038;fsize=0&#038;fcolor=0&#038;tagcount=0&#038;helpbox=Hint%3A+Use+Guided+Mode+for+helpful+prompts&#038;Post=trilema.com<sup><a href="#footnote_11_75689" id="identifier_11_75689" class="footnote-link footnote-identifier-link" title="We do not want the url clickable ([URL] wrapping would do the trick) because that'd also get it filtered out. 
+As it is, you could not believe how many people are befuddled by the incomprehensible item that looks like a link but is not clickable. About an eight of the total or so! Help, wut do ?
+Other things you'd probably not believe is the immense count of people willing to respond! I read thousands of malformed epistles before finally giving up, including the sad confessions of large numbers of people who'd never before received a PM but would like to make friends and even one that informed me that there's `a complaint going` about some other post on Trilema!">xii</a></sup>%2F2014%2Fhow-i-was-wrong-cuckolding-or-a-story-about-sigmas%2F%23selection-219.0-219.17%0D%0ASame+name%2C+right.&#038;submit=Send+Message" "https://www.beastforum.com/index.php?" > usr.txt); echo $uname, $i; sleep 1<sup><a href="#footnote_12_75689" id="identifier_12_75689" class="footnote-link footnote-identifier-link" title="Not really used for anything, here as a placeholder rather.">xiii</a></sup>; done</p></blockquote>
+<p>While the script is working it will print out a count and a username ; at any point one can $ cat usr.txt | grep "has been" to see who's last received a message.</p>
+<p>Every six hours or so the sender will get banned, by account, which is terrible terrible news because believe it or not beastforum.com permits a single account be created per IP (which makes one think that conceivably there actually <em>are</em> a coupla million English speakers out there into watching horses fuck people etc) except it doesn't at all matter because the lousiest of webproxies is perfectly capable of creating a new account for you.</p>
+<p>And so here we are : after banning four different "users" the technologically apt<sup><a href="#footnote_13_75689" id="identifier_13_75689" class="footnote-link footnote-identifier-link" title="Don't they remind you of the Bitlove LLC tech mavens, btw ?">xiv</a></sup> folk running beastforum.com gave in and took the PM function offline altogether (well, technically put it behind the paywall<sup><a href="#footnote_14_75689" id="identifier_14_75689" class="footnote-link footnote-identifier-link" title="Amusingly, you can sign up using Bitcoin, it's 19.95 EUR for 30 days (if you use a credit card it's only 19.95 USD for some reason). This allows us to do some math together : the economic value of the ~5,395 users redirected so far to Trilema by this procedure would be worth at ~2.5 USD/1k (talk to the traffic brokers) a whooping 13.4875 USD, which would almost make paying for an account a feasible proposition! I wonder if they did the same math when they came up with the solution.">xv</a></sup>, which I suspect might be the same thing). Sorry, furfies looking for group, I guess I fucked this one up for you<sup><a href="#footnote_15_75689" id="identifier_15_75689" class="footnote-link footnote-identifier-link" title="But had you NOT complained about it -- who knows, maybe you'd still have PMs available ?">xvi</a></sup>.</p>
+<p>PS. Today as in <A href=http://trilema.com/2014/askfm-laid-bare-or-whats-half-a-million-uniques-to-you/>2014</a>,</p>
+<blockquote><p>Go make up your own traffic figures, it's a worthless pursuit that will teach you a lot about both computers and the human nature ;</p></blockquote>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_75689" class="footnote">You wonder how I know the precise count ? Ah, that's easy, they leak them everwhere, such as via &#038;MSID=number. [<a href="#identifier_0_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_75689" class="footnote">Ignores ssl "certificates" bullshit [<a href="#identifier_1_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_75689" class="footnote">Verbose. [<a href="#identifier_2_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_75689" class="footnote">Explicitly saves cookies. [<a href="#identifier_3_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_75689" class="footnote">Allows you to switch IPs. Nifty, huh. [<a href="#identifier_4_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_75689" class="footnote">Their "anti-robot" protection consists of some inept cookie setting via javascript. Like so : </p>
+<blockquote><p>&lt;html><br />
+&lt;body onload="challenge();"><br />
+&lt;script><br />
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String) ){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('d a(){1.e=\'5=6; 7-8=9; 4=/\';1.b.c=2.3.f+2.3.g;1.h[0].i()}',19,19,'|document|window|location|path|Anti-Robot|696bd05573b4b04517028db39723b962dd3ac1af|max|age|86400|challenge|response|action|function|cookie|pathname|search|forms|submit'.split('|'),0,{}) )<br />
+&lt;/script>
+</p></blockquote>
+<p>Evidently no robots can ever read this, you know ?<br />
+ [<a href="#identifier_5_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_75689" class="footnote">Don't wonder how I know the user count, they leak it all sorts of places such as for instance showuser-<strong>n</strong>.html. [<a href="#identifier_6_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_75689" class="footnote">If we're going to use 12 simultaneous sessions of this script (via, for instance, screen ; Ctrl-A c ; you're welcome) it is useful to count by 12s and decrement the start by 1 for each session. [<a href="#identifier_7_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_75689" class="footnote">They're kind enough to prepopulate our message sending form with the correct name of the user on the basis of referencing him by his index. We use this property to extract some valuable data for later on (mostly for our own reporting --the akey bit is there mostly to appear elegant, in practice the keys are reused over multiple postings). [<a href="#identifier_8_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_75689" class="footnote">We extract the recipient's name to keep track of what's going on. [<a href="#identifier_9_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_75689" class="footnote">Similarily extract the mostly worthless "authentication key". [<a href="#identifier_10_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_75689" class="footnote">We do not want the url clickable ([URL] wrapping would do the trick) because that'd also get it filtered out. </p>
+<p>As it is, you could not <em>believe</em> how many people are befuddled by the incomprehensible item that looks like a link but is not clickable. About an eight of the total or so! Help, wut do ?</p>
+<p>Other things you'd probably not believe is the immense count of people willing to respond! I read thousands of malformed epistles before finally giving up, including the sad confessions of large numbers of people who'd never before received a PM but would like to make friends and even one that informed me that there's "a complaint going" about some other post on Trilema! [<a href="#identifier_11_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_75689" class="footnote">Not really used for anything, here as a placeholder rather. [<a href="#identifier_12_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_75689" class="footnote">Don't they remind you of the <a href="http://trilema.com/2015/the-bitlove-llc-spin-on-their-recent-implosion-as-presented-to-their-captive-audience/">Bitlove LLC</a> tech mavens, btw ? [<a href="#identifier_13_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_75689" class="footnote">Amusingly, you can sign up using Bitcoin, it's 19.95 EUR for 30 days (if you use a credit card it's only 19.95 USD for some reason). This allows us to do some math together : the economic value of the ~5,395 users redirected so far to Trilema by this procedure would be worth at ~2.5 USD/1k (talk to the traffic brokers) a whooping 13.4875 USD, which would almost make paying for an account a feasible proposition! I wonder if they did the same math when they came up with the solution. [<a href="#identifier_14_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_75689" class="footnote">But had you NOT complained about it -- who knows, maybe you'd still have PMs available ? [<a href="#identifier_15_75689" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2017/simple-method-to-moisturize-the-female/">Simple method to moisturize the female</a></div>
+                <div class="alignright"><a href="http://trilema.com/2017/alexandru-osvald-pastorel-teodoreanu/">Alexandru Osvald "Pastorel" Teodoreanu</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2017/how-the-beastforumcom-private-messaging-function-became-a-paid-user-only-item/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2017/how-the-beastforumcom-private-messaging-function-became-a-paid-user-only-item/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>6 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-123433" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123433" title="">Monday, 6 November 2017</a>
+							</div>
+						<p><a href="https://archive.is/nnNgL">https://archive.is/nnNgL</a> for posterior.</p>
+						</li>
+
+										<li id="comment-123441" class="commentbody"><div class="commenthead"><img alt='spartacus`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">spartacus</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123441" title="">Monday, 6 November 2017</a>
+							</div>
+						<p>bullish though</p>
+						</li>
+
+										<li id="comment-123444" class="commentbody"><div class="commenthead"><img alt='tok peps`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">tok peps</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123444" title="">Monday, 6 November 2017</a>
+							</div>
+						<p>There's also <a href="https://archive.is/cP7hr">https://archive.is/cP7hr</a></p>
+						</li>
+
+										<li id="comment-123445" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-123445" title="">Monday, 6 November 2017</a>
+							</div>
+						<p>Let the peps flow fleery!</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-144008">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/heres-why-you-will-end-your-days-in-a-concentration-camp?b=works%20like%20i&amp;e=ory.#select' class='url'>Here's why you will end your days in a concentration camp on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144008" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] works like it always works ; evidently if you alter the for range it will target different times in the site's history. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146224">
+					<div class='trackhead'>
+						<div class="commentcount">6</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-according-to-time-the-worlds-most-influential-person-is-adnotated?b=even%21%2C%20which&amp;e=%2C%20of#select' class='url'>thelastpsychiatrist.com - According to Time, The World's Most Influential Person Is.... Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146224" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] even!, which is exactly the sort of thing that happens when "I get a new haircut" and at any and all myriad interfaces between the Republic of men and the... "empire", let's call it, why not, of [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="75689" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834564-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-75689")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-75689");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-75689");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

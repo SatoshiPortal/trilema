@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The planetary model of software development. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">It mildly annoys me, as a capable sheep,<br />that people like you exist.<br />~ <a href=http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-one/#comment-118639>nicknaem</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-69529"><div class="post" id="post-69529">                    <h1><a href="http://trilema.com/2016/the-planetary-model-of-software-development/" rel="bookmark" title="Permanent Link to The planetary model of software development.">The planetary model of software development.</a></h1>                        <div class="date">                                     Monday, 17 October, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><strong>Intro.</strong> If you've not been following along, Eulora is a shockingly successful<sup><a href="#footnote_0_69529" id="identifier_0_69529" class="footnote-link footnote-identifier-link" title="I suppose it depends on what your idea of success is. 
+If you're the mercenary type and think success = money, then a Grimy Toolkit sold on auction Sunday for 10 mn ECu, which is 0.1 BTC or about $65. This isn't by any means a record, just happens to be the most recent example.
+If you're the corporate type that despises human life and so think success = man-hours in aggregate, then Eulora stands at 42`780 aggregate play-hours to date, which puts it firmly in the top 1% of all games ever released.
+If you're the Elliot type and imagine success = individual fixation, then Eulora reported 221 hours monthly average gameplay over its entire playerbase back in 2015, and 4.75 hours monthly average (2.5 median) for the least active half of its population in 2016.
+If however you're the cat-v.org type and imagine you and your online clique are the gatekeepers of success, then there's not much worth saying - enjoy the delusion while it lasts ; I'm sure you, like every other delusionist to date have a scapegoat at the ready for when the bubble bursts.">i</a></sup>  reality simulator that has already delivered <a href="http://trilema.com/2016/multivariate-calculus-for-experts/">very important practical results</a>, and will no doubt continue to shape human understanding of the digital environment for many decades to come.</p>
+<p>Those lofty points aside, a major part of the player's daily life is automation, much like in any other research lab. Large piles of experimental data are required to chart a profitable path through the murky waters of Eulora ; and once such a path is charted even larger piles of work will have to go into actually realising that knowledge - for what use is it to discover a way to realise a 0.35% profit on an economic cycle if you don't then proceed to actually go through the cycle and actually realise that profit ?</p>
+<p>Since it's not practical to do the millions of clicks involved in even moderate operations by hand ; and since Minigame (MPEx:<a href="http://mpex.biz/?mpsic=S.MG">S.MG</a>, Eulora's publisher) implements a very enlightened policy with regards to botting<sup><a href="#footnote_1_69529" id="identifier_1_69529" class="footnote-link footnote-identifier-link" title="The discussion is scattered through the monthly reports as well as irc logs, with the gist being that the only reason a game publisher has to fear or dislike bots is that they're trying to publish a broken game and defraud the general public into paying to use it, much on the lines of Microsoft and its Windows abomination.">ii</a></sup> ; and since Eulora's vibrant community is composed almost exclusively of intelligent, IT-literate folks, it then follows that there exists an open source general purpose platform bot. It's called Foxybot, and it recently <a href="http://www.dianacoman.com/2016/09/18/happy-1st-anniversary-foxybot/">celebrated its one year aniversary</a>!</p>
+<p>The problem with it being, of course, that it does not work. Exactly like cars, which do not work - because they break down occasionally, not to mention they need fuel ; exactly like airplanes, which don't go through water nor outer space ; exactly like bridges, which can't be moved ; exactly like any other bit of human industry or application of technology Foxybot does not work because it does what it does rather than what you wanted it to do. </p>
+<p><strong>Example.</strong></p>
+<blockquote><p><strong>mircea_popescu</strong> And in daily miner's frustration, leave bot running, it "loses" table in inventory<sup><a href="#footnote_2_69529" id="identifier_2_69529" class="footnote-link footnote-identifier-link" title="Sometimes lag may cause a command to fail. The bot asks for the table to be dropped from inventory to the ground, this fails to happen, and so the table stays in its inventory. For intricate reasons that have to do with the extant codebase, the bot can't simply identify this failure mode and remedy it, so it panicks that `its table is gone`.
+The whole reason the bot even wants to drop the table is because it's `cheating` - normally players can't move if overweight. However, if they put all the heavy stuff in a craft table and drop it on the ground they can then move a little ways, pick it up again, drop it further off and move a little more and so forth. This is called table-walking, and is extremely useful for miners, because it meshes very well with the activity of mining in the first place - which is very much move a little, try finding something, move a little more - and because it allows the carrying of huge loads such as on occasion result from very rich veins. 
+This also means that failure to drop a table means failure to move (as the character is still overweight) and subsequently failure to mine (as you can't explore twice in the same spot), which means that once it fails to drop the table, it's pretty much fucked, until a human operator comes to its rescue.
+It should perhaps be noted here that throughout September we were offering 0.01 BTC an hour (which is US-level minimum wage, it should be pointed out) to any and all comers on an Internet forum which pretends to have 894`074 members. 
+About a dozen or so of these supposed almost-million members did manage to generate a PGP key for themselves and therefore play the game (0.0013%, if you like percentages), but none of them took less than half a day to do so, notwithstanding it's a ten minute task. Some particularly amusing outliers spent weeks dicking around the wide open gates of open source software. Apparently doing anything whatsover is really really hard for the chickens composing the general population - they're good enough at cycling through what they've always done forever, but entirely incapable of establishing a novel course of action. Also apparently, Internet numbers are lies - 894k members my foot. But we kinda knew that already.
+Of this dozen, not one managed to discover by their own lights that no, you don't have to drag materials in small chunks to town. Of that same dozen, not one managed to find the matter being discussed openly in the logs and on the wiki, notwithstanding that they were repeatedly asked to review both. Apparently there's no fate worse than having to read, according to the general-population-chicken (except perhaps having to think, of course). 
+They did get frustrated with their inability to achieve efficiency, obviously. And they lashed out. Obviously. They never did nor ever would have, for dear life and all that's holy and dear on Earth, ever, no matter what, review their own behaviour or the writs available. 
+A couple of them even lunged at the obvious hole of just cycling through PGP signatures for the bitcent prize, rather than actually earn in game. Because, again, the chickens that compose the general population are good enough at cycling through what they've always done, and would so cycle forever, but are otherwise entirely incapable of establishing a novel course of action. 
+This is why the world is choking. This is why `America` needs to be made great again. It all has absolutely nothing to do with `carbon` or with `resources` or anything else. The only thing making human economy, and human society, and human life altogether unsustainable is that out of 894 thousand `people` a dozen may actually try doing something with themselves. They'll do a very poor job of it, and the couple among them bereft of ethics will not manage to significantly improve the standing of the group. 
+The problem is that after a couple of centuries of tolerant policies we find ourselves so covered in subhuman gunk, so far submerged under a tide of excrement that one has to sift through a million names to find a dozen that are marginally not qualified to do a simple task. Of the seven billion sacks of flesh polluting the Earth, a few hundred maybe have any business being here whatsoever.
+That's the only problem, and it needs a solution imperatively. Preferably, a final solution.">iii</a></sup> at try 100, spends the next 2540 tries "not finding it" and there we go.<br />
+<strong>diana_coman</strong> Weird, mine went fine the whole night, 3400 tries. Even found an sb<sup><a href="#footnote_3_69529" id="identifier_3_69529" class="footnote-link footnote-identifier-link" title="Small Branch.">iv</a></sup> ord bh<sup><a href="#footnote_4_69529" id="identifier_4_69529" class="footnote-link footnote-identifier-link" title="Bare Handed, ie, not using any tools. Because yes, Eulora allows you to do anything by yourself.">v</a></sup>.</p>
+<p><strong>mircea_popescu</strong> Aaand it just did it again. 99th explore, lost table, 4k explores sat in spot did jack shit. I simply can not explore anymore, it NEVER works. It just leaves table in inv and sits there.<br />
+<strong>diana_coman</strong> Well, you can always go *without* a table if that is the thing that annoys most.</p>
+<p><strong>mircea_popescu</strong> No, because w/o a table I'm guaranteed to stop in say 100 tries anyway because weight. ~7k clicks - wasted since yest, I'm running at 0.3% capacity over here.<br />
+<strong>diana_coman</strong> Basically the only real solution to this is to make the bot a bit brighter to actually search the inventory for the right table.</p>
+<p><strong>mircea_popescu</strong> Could just use the first...<br />
+<strong>diana_coman</strong> Uhm, no. That will just give you a different thing to complain about, lol.</p>
+<p><strong>mircea_popescu</strong> What, "don't be an idiot and keep all other tables in last slots" ?<br />
+<strong>diana_coman</strong> Because at some point you'll get stuff in inv and then an old table will become "first" and then complain.</p>
+<p><strong>mircea_popescu</strong> I keep all my other tables in the absolute last slots anyway.<br />
+<strong>diana_coman</strong> Oh, you mean if they are all very last slots then if inv gets full it will segfault anyway, so yeah.</p>
+<p><strong>mircea_popescu</strong> Yup.<br />
+<strong>diana_coman</strong> Mmk, will look for the smallest patch. I suppose that is the root cause there: pretty much nothing is actually reliable so poor bot is kind of trying as best it can. Anyways, will cook up something.</p>
+<p><strong>mircea_popescu</strong> Yeah this'll have to be fixed eventually. Whole client is written in this "fuck you, click again" Windows persepective. It needs to be a lot more like the linux kernel : either it's done or it's not done and you know which it was.<br />
+<strong>shinohai</strong> pidof craftable1.<br />
+<strong>diana_coman</strong> shinohai, laugh or cry but the same damn table has an entirely new id each time it moves from inventory to world and the other way around. See this table on my back? Abracadabra now it's a whole NEW table on the ground!!</p>
+<p>[after a time]</p>
+<p><strong>diana_coman</strong> mircea_popescu and anyone struggling with the bot getting jammed on not finding table in inventory: in botactivity.cpp, method ExploreActivity: DoDropTable() replace the line " worldHandler::DropFromSlot(tableSlot, 1);" with "worldHandler::ExecCmd(csString("/drop Craft-Table"));". This means the bot will always drop A craft-table, hopefully the right one (obv, keeping only one table in inventory ensures it drops the right one; keeping all *other* tables on the very last slots in inventory gives you a good chance that it always drops the one you want rather than a different one, but no guarantees). Should be line 556 in src/client/foxybot/botactivity.cpp that you need to replace there.<br />
+<strong>mircea_popescu</strong> Ah ty. Will need recompile yes ?</p>
+<p><strong>diana_coman</strong> Yes.<br />
+<strong>mircea_popescu</strong> Aite Ima try this later an' report. Can I just ftjam or do I have to reconfiugure ?</p>
+<p><strong>diana_coman</strong> Ftjam is enough.<br />
+<strong>mircea_popescu</strong> Well im back in! Seems to be working.</p>
+<p><strong>diana_coman</strong> Good then.<br />
+<strong>mircea_popescu</strong> It's not dropping off the first table.</p>
+<p><strong>diana_coman</strong> Ahem, as I was saying "drop" is not reliable.<br />
+<strong>mircea_popescu</strong> It's dropping off the LAST one. This was some havoc lol.<sup><a href="#footnote_5_69529" id="identifier_5_69529" class="footnote-link footnote-identifier-link" title="Annoying as all fuck, made a mess of my things!">vi</a></sup></p>
+<p><strong>diana_coman</strong> Ahahahaha. So move everything to the first slots then? TBH I would not even guarantee that it is *always* the last one.<br />
+<strong>mircea_popescu</strong> It's not. It's not the fiurst, it's noit the last, it's not the first he touched, nore the last he touched. It's... random. Motherfucker.</p>
+<p><strong>diana_coman</strong> Welcome to the wonders of the planeshift code. Now you know *why* the poor bot was trying to keep track of where *the table* actually is<br />
+<strong>mircea_popescu</strong> I got an idea though. Might work with single table.<sup><a href="#footnote_6_69529" id="identifier_6_69529" class="footnote-link footnote-identifier-link" title="You see ? This. This right here is what makes me better than the spurious billion. This right here is what makes you better, or doesn't. Do you have it ?
+This is all that matters - if you don't have this, if you don't do this, you have no business here. Go kill yourself. Now. Today. You're extra, and you're in the way.">vii</a></sup></p>
+<p><strong>diana_coman</strong> That for sure, yes. If you have only one table in inv, it should always work. Kind of "hey, cut a leg and then this car will move you about faster" but myeah.<sup><a href="#footnote_7_69529" id="identifier_7_69529" class="footnote-link footnote-identifier-link" title="She has a point - I'm changing the software to bake into it assumptions that are particular.">viii</a></sup><br />
+<strong>mircea_popescu</strong> So Ima move all these shits into other types of containers. Hey, if this solves my stuck problems im happy because it really kills my production.</p>
+<p>[after a time]</p>
+<p><strong>mircea_popescu</strong> Bot seems to be working ok in the new formulation.</p>
+<p>[after more time]</p>
+<p><strong>mircea_popescu</strong> Well now it just decided to stop putting keys in claims, so still wasted half the time.<sup><a href="#footnote_8_69529" id="identifier_8_69529" class="footnote-link footnote-identifier-link" title="Whenever you find a resource, a claim stick appears in the world, which is locked, and you receive the key. The keys don't stack, so if you find 80 resources, you have 80 keys. The bot puts the keys of claims it ate inside the claim - which creates an interesting niche for noobs, because the keys decay into LBN after a while, so they could just follow a bot miner and pick out the keys to sell the LBN later.
+However, if the `put key in claim` thing fails (like the drop table thing fails) then you end up loading the inventory with keys and eventually the client crashes.">ix</a></sup> At least not 99.7% like last time.<br />
+<strong>diana_coman</strong> Lags WILL mess it up to some extent, no decision involved though, lol.</p>
+<p>[after some time]</p>
+<p><strong>mircea_popescu</strong> So after all the work "fixing" Foxybot, it's altoghether not clear any improvement was had. The main point is that the bot is still not working when I wake up, just as it wasn't before. With the fix it evidently worked longer, which is an advantage, but it also worked wastefully, which is to say i have >50 enums it never exploited, like 100k ECu<sup><a href="#footnote_9_69529" id="identifier_9_69529" class="footnote-link footnote-identifier-link" title="The ECu, ie Eulora Copper, is equal one satoshi.">x</a></sup> worth. Which is better ? Total toss-up I guess. Very fucking frustrating<br />
+<strong>diana_coman</strong> Sucks. Not sure what the bot can do though, it sends the right things in right order; things get delayed/lost.</p>
+<p><strong>mircea_popescu</strong> I guess the only thing it can do is make a queue, an executor AND a checker.<br />
+<strong>diana_coman</strong> That's why I was a bit weary of powering it through everything: because usually when something goes wrong, powering through means only that you will end up wasting stuff. Remaking the client basically works, I agree.</p>
+<p><strong>mircea_popescu</strong> Myeah. Anyway, wrt the keys : could it be made to DROP them like the table, instead of putting them in ? Or even better, could it also do a /drop tiny key every step ?<br />
+<strong>diana_coman</strong> Sure, why not, especially now that the keys have different names so you don't end up dropping an ord key. Add for instance after that line you added last time another one with the command for dropping a tiny.</p>
+<p><strong>mircea_popescu</strong> Yeah totally, will do this. Becomes unsafe to carry tiny keys, meaning it's a very kludge, but I don't and I need a fix here.<br />
+<strong>diana_coman</strong> So worldHandler::ExecCmd(csString("/drop Tiny Claim Key"));</p>
+<p><strong>mircea_popescu</strong> Yup ty. This is actually great, because it fixes what was definitely a specific problem (tiny key choke). I'm curious if it can find anything now. Anyway. 300 tools, one stack lbn, 1k cft, altered bot mark III deployed. Will report moar.<br />
+<strong>shinohai</strong> Good luck!<br />
+<strong>diana_coman</strong> Hm, I'd run out of 1k cft with waaay less than 300 tools. Then again: what q are those tools of yours?</p>
+<p><strong>mircea_popescu</strong> 10-11k durability. Anyway, if it exhausts the cft stock without a hitch I'm entirely happy, it's like 2 days' worth. But so far this has been beautiful - the bot lost the supply of tiny keys from the prev failure, I didn't have to click like an idiot myself :D</p>
+<p>*	mircea_popescu has just realised that this fix is actually pretty dangerous. Before - if you sent it mining without cft/lbn, it'd eventually choke on keys and stop. But enums stack, you can end up wasting all the tools you got and ending up with a pile of unusable enums.<br />
+<strong>diana_coman</strong> Aha. Bot design is a very interesting thing.</p>
+<p><strong>mircea_popescu</strong> Yeah srsly. I'm half considering adding a stop condition for no lbn / no cft. In the end this thing is organically evolving under industrial pressure very far away from any sort of sensible design. Perhaps informative as to the destructive forces applying to software generally.<br />
+<strong>diana_coman</strong> Well, that's how it usually happens, yes.</p>
+<p><strong>mircea_popescu</strong> It's understood that planets can not be arbitrarily close to the star, because the changing attraction force (it stays the same modulus, but changes direction, which IS a change and which therefore DOES deliver mechanical work), the same thing that keeps the Earth's core motlen, are strong enough to tear them apart. It's starting to look to me as if software is in the same situation, every distinct item gravitating against the Sun of practice.<br />
+<strong>diana_coman</strong> More like applying to open source as it were because you are changing your own version but essentially I have the option to see what people need/what changes they make/how it works and then incorporate it into a more reasonable design at next update if needed.</p>
+<p><strong>mircea_popescu</strong> But the design can not be reasonable for fundamental reasons which happen to be exactly those stated by Godel. And I wouldn't advise running this AB Mk 3 if one's a noob. it's very finely tuned to my particular needs.<br />
+<strong>diana_coman</strong> Yeah, it's not the sort of thing I would *add* /deploy as update for sure. FWIW as experience: this structure of the bot which is quite sane still is actually at least the 2nd total re-write basically. Not because I started with an insane structure but because the first one got totally messed up when confronted with practice basically.</p>
+<p><strong>mircea_popescu</strong> I recall.<br />
+<strong>diana_coman</strong> So no, it's not that it can't be held sane, it's only that it is VERY expensive basically. Because yeah, it's totally possible you end up needing some 3rd rewrite and so on.</p></blockquote>
+<p>So how's this for a planetary model of software development : there's an absolute origin of the space. The quality of the design of any given piece of software is inversely proportional to the distance from the origin - the further out it is, the kludgier. Centered in the very origin, there's a star, its mass a function of the practical utility of the software in question - useless software has very tiny stars. </p>
+<p>This model then allows us to make some predictions : </p>
+<ul>
+<li>If the utility is very slight, the planet can aim to grow larger than the star, and accrete it. This prediction is confirmed by practice - there do indeed exist software projects which attempt to subsume their very faint utility.</li>
+<p></p>
+<li>If the utility is moderate, worse designs will overpower better designs, which will implode due to gravitational forces. This prediction is confirmed by practice - it's what happened to lisp according to more than one expert.</li>
+<p></p>
+<li>There exists a closest-safe distance from origin, given by the specific resistance of materials (ie, hardware, programming languages and other meta-tools), wherein the software presents as a molten core surrounded by a solid crust. Should such a planet move closer to the origin, through a rationalization of its design, it will thereby implode. This prediction is confirmed by practice - it's what happened to Naggum's SGML.</li>
+<p></p>
+<li>Planets in the closest-safe band will outperform planets further out (because more rational design) as well as planets further in (because gravitational forces exceed the crystal bond and tear the planet apart). This is why linux exists still, and how C came to be.</li>
+<p></p>
+<li>If the utility is significant, no software solution can be produced - all items that are far enough from the star to survive its pull are too far from the origin to make any sort of sense - their design is too dysfunctional for them to work at all. This prediction is confirmed by sad, sad practice.</li>
+</ul>
+<p>How about that!</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_69529" class="footnote">I suppose it depends on what your idea of success is. </p>
+<p>If you're the mercenary type and think success = money, then a Grimy Toolkit sold on <a href="http://trilema.com/2016/mysterious-auction-of-grimy-mystery/">auction</a> Sunday for 10 mn ECu, which is 0.1 BTC or about $65. This isn't by any means <a href="http://trilema.com/2016/eulora-auction-march-6th/">a record</a>, just happens to be the most recent example.</p>
+<p>If you're the corporate type that despises human life and so think success = man-hours in aggregate, then Eulora stands at 42`780 aggregate play-hours to date, which puts it firmly in the top 1% of all games ever released.</p>
+<p>If you're the <a href="http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-nine/#selection-67.0-81.795">Elliot</a> type and imagine success = individual fixation, then Eulora reported <a href="http://trilema.com/2015/minigame-smg-september-2015-statement/#selection-557.0-565.604">221 hours monthly average</span> gameplay</a> <em>over its entire playerbase</em> back in 2015, and <a href="http://trilema.com/2016/minigame-smg-august-2016-statement/#selection-841.0-841.112">4.75 hours monthly average</a> (2.5 median) for <em>the least active half of its population</em> in 2016.</p>
+<p>If however you're the <a href="http://trilema.com/cat-vorg-adnotated">cat-v.org</a> type and imagine you and your online clique are the gatekeepers of success, then there's not much worth saying - enjoy the delusion while it lasts ; I'm sure you, like every other <a href="http://trilema.com/2013/the-strange-case-of-the-delusionist-and-later-stories/">delusionist</a> to date have a scapegoat at the ready for when the bubble bursts. [<a href="#identifier_0_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_69529" class="footnote">The discussion is scattered through the <a href="http://trilema.com/category/smg/">monthly reports</a> as well as <a href="http://logs.minigame.biz/latest.log.html">irc logs</a>, with the gist being that the only reason a game publisher has to fear or dislike bots is that they're trying to publish a broken game and defraud the general public into paying to use it, much on the lines of Microsoft and its Windows abomination. [<a href="#identifier_1_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_69529" class="footnote">Sometimes lag may cause a command to fail. The bot asks for the table to be dropped from inventory to the ground, this fails to happen, and so the table stays in its inventory. For intricate reasons that have to do with the extant codebase, the bot can't simply identify this failure mode and remedy it, so it panicks that "its table is gone".</p>
+<p>The whole reason the bot even wants to drop the table is because it's "cheating" - normally players can't move if overweight. However, if they put all the heavy stuff in a craft table and drop it on the ground they can then move a little ways, pick it up again, drop it further off and move a little more and so forth. This is called table-walking, and is extremely useful for miners, because it meshes very well with the activity of mining in the first place - which is very much move a little, try finding something, move a little more - and because it allows the carrying of <a href=http://logs.minigame.biz/2016-10-15.log.html#t01:14:27>huge loads</a> such as on occasion result from very rich veins. </p>
+<p>This also means that failure to drop a table means failure to move (as the character is still overweight) and subsequently failure to mine (as you can't explore twice in the same spot), which means that once it fails to drop the table, it's pretty much fucked, until a human operator comes to its rescue.</p>
+<p>It should perhaps be noted here that throughout September we were offering 0.01 BTC an hour (which is US-level minimum wage, it should be pointed out) to any and all comers on an Internet forum which pretends to have 894`074 members. </p>
+<p>About a dozen or so of these supposed almost-million members did manage to generate a PGP key for themselves and therefore play the game (0.0013%, if you like percentages), but none of them took less than half a day to do so, notwithstanding it's a ten minute task. Some particularly amusing outliers spent weeks dicking around the wide open gates of open source software. Apparently doing anything whatsover is really <em>really</em> hard for the chickens composing the general population - they're good enough at cycling through what they've always done forever, but entirely incapable of establishing a novel course of action. Also apparently, Internet numbers are lies - 894k members my foot. But we kinda <A href=http://trilema.com/forum-logs-for-17-aug-2016#2149834>knew that already</a>.</p>
+<p>Of this dozen, <em>not one</em> managed to discover by their own lights that no, you don't have to drag materials in small chunks to town. Of that same dozen, <em>not one</em> managed to find the matter being discussed openly in the logs and on the wiki, notwithstanding that they were repeatedly asked to review both. Apparently there's no fate worse than having to read, according to the general-population-chicken (except perhaps having to think, of course). </p>
+<p>They <em>did</em> get frustrated with their inability to achieve efficiency, obviously. And they lashed out. Obviously. They never did nor ever would have, for dear life and all that's holy and dear on Earth, ever, no matter what, review their own behaviour or the writs available. </p>
+<p>A couple of them even lunged at the obvious hole of just cycling through PGP signatures for the bitcent prize, rather than actually earn in game. Because, again, the chickens that compose the general population are good enough at cycling through what they've always done, and would so cycle forever, but are otherwise entirely incapable of establishing a novel course of action. </p>
+<p>This is why the world is choking. This is why "America" needs to be made great again. It all has absolutely nothing to do with "carbon" or with "resources" or anything else. The only thing making human economy, and human society, and human life altogether unsustainable is that out of 894 thousand "people" a dozen may actually try doing something with themselves. They'll do a very poor job of it, and the couple among them bereft of ethics will not manage to significantly improve the standing of the group. </p>
+<p>The problem is that after a couple of centuries of tolerant policies we find ourselves so covered in subhuman gunk, so far submerged under a tide of excrement that one has to sift through a million names to find a dozen that are marginally not qualified to do a simple task. Of the seven billion sacks of flesh polluting the Earth, a few hundred maybe have any business being here whatsoever.</p>
+<p>That's the only problem, and it needs a solution imperatively. Preferably, a final solution. [<a href="#identifier_2_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_69529" class="footnote">Small Branch. [<a href="#identifier_3_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_69529" class="footnote">Bare Handed, ie, not using any tools. Because yes, Eulora allows you to do anything by yourself. [<a href="#identifier_4_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_69529" class="footnote">Annoying as all fuck, made a mess of my things! [<a href="#identifier_5_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_69529" class="footnote">You see ? This. This right here is what makes me better than the spurious billion. This right here is what makes you better, or doesn't. Do you have it ?</p>
+<p>This is all that matters - if you don't have this, if you don't do this, you have no business here. Go kill yourself. Now. Today. You're extra, and you're in the way. [<a href="#identifier_6_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_69529" class="footnote">She has a point - I'm changing the software to bake into it assumptions that are particular. [<a href="#identifier_7_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_69529" class="footnote">Whenever you find a resource, a claim stick appears in the world, which is locked, and you receive the key. The keys don't stack, so if you find 80 resources, you have 80 keys. The bot puts the keys of claims it ate inside the claim - which creates an interesting niche for noobs, because the keys decay into LBN after a while, so they could just follow a bot miner and pick out the keys to sell the LBN later.</p>
+<p>However, if the "put key in claim" thing fails (like the drop table thing fails) then you end up loading the inventory with keys and eventually the client crashes. [<a href="#identifier_8_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_69529" class="footnote">The ECu, ie Eulora Copper, is equal one satoshi. [<a href="#identifier_9_69529" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/peruvian-immigrants-argentine-natives/">Peruvian immigrants > Argentine natives</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/i-dont-think-you-understand-how-credit-cards-work/">I don't think you understand how credit cards "work".</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/the-planetary-model-of-software-development/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/the-planetary-model-of-software-development/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>3 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-119524">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://www.dianacoman.com/blog/2016/10/21/neasteptat-programez-boti-si-jocuri/' class='url'>Neasteptat, programez boti si jocuri in Merisire</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-119524" title="">Friday, 21 October 2016</a>
+					</div>
+					<p>[...] resursele, n-are treaba. [&#8617;]S-ar zice ca nici altora nu le pare dat fiind propunerea unui model &#8220;planetar&#8221; de dezvoltare software pornind -macar in parte- de la experienta cu Foxybot. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-119971">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://cascadianhacker.com/software-maintenance-costs-and-depreciation-schedules' class='url'>Software Maintenance Costs and Depreciation Schedules &laquo; CH</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-119971" title="">Friday, 2 December 2016</a>
+					</div>
+					<p>[...] Mircea Popescu's "The planetary model of software development.":  mircea_popescu: ...It's starting to look to me as if software is in the same situation, every [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144950">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/algorithmics-problem-seeking-experts?b=both%20intelle&amp;e=ion.#select' class='url'>Algorithmics problem seeking experts on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144950" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] both intellectual (example, further example etc) as well as market-share leadership (example, further example etc) and so following. Economics is a major focus, and realism is a fundamental consideration. [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="69529" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833249-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-69529")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-69529");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-69529");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>How I almost created a constellation of Bitcoin nodes on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The fates are cruel an' the chances are slim<br />so grab a good sieve and dig in.<br />~<a href=http://trilema.com/2020/nannare/#comment-147503>my elder slavegirl</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-71933"><div class="post" id="post-71933">                    <h1><a href="http://trilema.com/2017/how-i-almost-created-a-constellation-of-bitcoin-nodes/" rel="bookmark" title="Permanent Link to How I almost created a constellation of Bitcoin nodes">How I almost created a constellation of Bitcoin nodes</a></h1>                        <div class="date">                                     Tuesday, 14 March, Year 9 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><a href="http://trilema.com/forum-logs-for-13-mar-2017#2252061">Originally</a> I intended to bring up a half dozen boxes or so using alf's well advertised ssh tunneling scheme, and I started this article as a reference for that. Meanwhile we ran into various minor bugs ; and the major wtf whereby my box sits with a bunch of connections in TIME_WAIT state and nothing useful happens past that -- the tunnel evidently dun work.</p>
+<p>The process was <a href="http://trilema.com/forum-logs-for-13-mar-2017#2252017">slower than it needs to be</a>, certainly, but what actually put the kibosh on the idea was the twin discovery that a) nodes can still be blackholed with this arrangement, and if they are they will happily drop their ssh pipes and b) even when this doesn't happen there is no advantage whatever<sup><a href="#footnote_0_71933" id="identifier_0_71933" class="footnote-link footnote-identifier-link" title="This is disputed ; there exists the to my eyes entirely negligible advantage that the node won't forget about the piped node. Leaving aside this theory hasn't been tested at all, this forgetting (which does happen, glory be to the genius of the original author) nevertheless isn't a major problem in the field for operational reasons.">i</a></sup> to the piped node, it is still treated exactly like an all-comers node in all respects. These two factors combined make it both unfeasible and unappealing to eat the significant <em>materiel</em> and management costs of maintaining the proposed constellation, at least from my point of view.</p>
+<p>Evidently, a solution to both a) and b) is expected to emerge from the eventual implementation of the <a href="http://trilema.com/forum-logs-for-03-jan-2017#2221721">TRB.N / TRB.B</a> wallet split. The TRB.N could be run as servlets, one dedicated for tunneling peers, another dedicated to allcomers, which would make the peered one both immune to blackholing and passible of being priviledged in whatever other manner.</p>
+<p>That said, I will be preserving the recipe I was preparing while doing all this so I can just pick up from here in half year or so when I try again.</p>
+<p><center>~ * ~</center></p>
+<p>We will be broadly relying on the <a href="http://thebitcoin.foundation/">Bitcoin Foundation</a>'s most recent release : <a href=http://thebitcoin.foundation/trb-howto.html>thebitcoin.foundation/trb-howto.html</a>. The item is curated by mod6, who is doing an absolutely fabulous job of it. To watch the whole process unravel, safely and correctly, is one of those <em>extremely</em> rare pleasures in the *nix world, notwithstanding their promise was why we even got into nixen in the first place. </p>
+<p>We will be however making some adjustments to it, so as to serve our own purposes (the introduction of an experimental patch<sup><a href="#footnote_1_71933" id="identifier_1_71933" class="footnote-link footnote-identifier-link" title="Consequently significant portions borrowed from asciilifeform's own instructions.">ii</a></sup> in the press). For convenience the whole thing is reproduced below : </p>
+<ol>
+<br />	
+<li>Log into a box, such as for instance via ssh root@wherever</li>
+<p>	
+<li>Install autossh.<sup><a href="#footnote_2_71933" id="identifier_2_71933" class="footnote-link footnote-identifier-link" title="On the system we used (2.6.32-573.12.1.el6.x86_64) this works as 
+yum autossh
+but your system might use apt or whatever it uses. ">iii</a></sup></li>
+<p>	
+<li>Create fuckoff.c, to contain : </p>
+<blockquote><p>#include &lt;stdio.h><br />
+#include &lt;unistd.h><br />
+#include &lt;stdlib.h></p>
+<p>int main() {<br />
+  printf("OK\n");<br />
+  while(1) { sleep(1); }<br />
+  exit(0);<br />
+}</p></blockquote>
+<p>	
+<li>gcc fuckoff.c -o fuckoff</li>
+<p>	
+<li>cp fuckoff /sbin/fuckoff</li>
+<p>	
+<li>useradd -d /home/tbnode -s /sbin/fuckoff<sup><a href="#footnote_3_71933" id="identifier_3_71933" class="footnote-link footnote-identifier-link" title="Create a user (here `tbnode`) that will be doing the node work, with fuckoff shell.">iv</a></sup></li>
+<p>	
+<li>su tbnode<sup><a href="#footnote_4_71933" id="identifier_4_71933" class="footnote-link footnote-identifier-link" title="We're done with root stuff.">v</a></sup></li>
+<p>	
+<li>mkdir trb-ssh<sup><a href="#footnote_5_71933" id="identifier_5_71933" class="footnote-link footnote-identifier-link" title="Simply creates a new directory.">vi</a></sup></li>
+<p>	
+<li>cd trb-ssh</li>
+<p>	
+<li>curl -s http://thebitcoin.foundation/v/V-20160220.tar.gz -o V-20160220.tar.gz<sup><a href="#footnote_6_71933" id="identifier_6_71933" class="footnote-link footnote-identifier-link" title="These two steps acquire the current pressing mechanism as well as its signature. It will be verified later.">vii</a></sup></li>
+<p>	
+<li>curl -s http://thebitcoin.foundation/v/V-20160220.tar.gz.mod6.sig -o V-20160220.tar.gz.mod6.sig</li>
+<p>	
+<li>mkdir .wot<sup><a href="#footnote_7_71933" id="identifier_7_71933" class="footnote-link footnote-identifier-link" title="These six steps procure the public keys that you need in order to verify the patches as well as the V version you obtained in steps 3 and 4.">viii</a></sup></li>
+<p>	
+<li>curl http://wot.deedbot.org/4F7907942CA8B89B01E25A762AFA1A9FD2D031DA.asc -o ben_vulpes.asc
+</li>
+<p>	
+<li>curl http://wot.deedbot.org/FC66C0C5D98C42A1D4A98B6B42F9985AFAB953C4.asc -o trinque.asc
+</li>
+<p>	
+<li>curl http://wot.deedbot.org/17215D118B7239507FAFED98B98228A001ABFFC7.asc -o asciilifeform.asc
+</li>
+<p>	
+<li>curl http://wot.deedbot.org/6160E1CAC8A3C52966FD76998A736F0E2FB7B452.asc -o mircea_popescu.asc
+</li>
+<p>	
+<li>curl http://wot.deedbot.org/027A8D7C0FB8A16643720F40721705A8B71EADAF.asc -o mod6.asc</li>
+<p>	
+<li>gpg --verify V-20160220.tar.gz.mod6.sig V-20160220.tar.gz<sup><a href="#footnote_8_71933" id="identifier_8_71933" class="footnote-link footnote-identifier-link" title="We are now in a position to verify the Vtron we're about to use.">ix</a></sup></li>
+<p>	
+<li>tar -xf V-20160220.tar.gz<sup><a href="#footnote_9_71933" id="identifier_9_71933" class="footnote-link footnote-identifier-link" title="Assuming the above step yielded 
+gpg: Signature made Sat 20 Feb 2016 06:26:52 PM UTC using RSA key ID B71EADAF
+gpg: Good signature from `mod6 (mod6) `
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 027A 8D7C 0FB8 A166 4372  0F40 7217 05A8 B71E ADAF
+
+If it didn't please report.">x</a></sup></li>
+<p>	
+<li>./v.pl i http://thebitcoin.foundation<sup><a href="#footnote_10_71933" id="identifier_10_71933" class="footnote-link footnote-identifier-link" title="The i flag inits, in this case on the basis of the mirror kept by the foundation. This will populate your /.seals and /patches directories with the standard TRB tree as of the date of issuance (22 February 2017, in this case).
+See the description of the Vtron's functioning via ./v.pl --help by the way.">xi</a></sup></li>
+<p>	
+<li>curl http://btcbase.org/patches/asciilifeform_wires_rev1/file -o ~/trb-ssh/patches/asciilifeform_wires_rev1.vpatch<sup><a href="#footnote_11_71933" id="identifier_11_71933" class="footnote-link footnote-identifier-link" title="This step and the next add the relevant portions of the experimental patch we wish to use (asciilifeform_wires_rev1) to the patches and seals directories respectively.
+If adding other patches, repeat the process for all of them.">xii</a></sup></li>
+<p>	
+<li>curl http://btcbase.org/patches/asciilifeform_wires_rev1/seal/asciilifeform -o ~/trb-ssh/.seals/asciilifeform_wires_rev1.vpatch.asciilifeform.sig</li>
+<p>	
+<li>./v.pl p v trb54 asciilifeform_wires_rev1.vpatch<sup><a href="#footnote_12_71933" id="identifier_12_71933" class="footnote-link footnote-identifier-link" title="Press a TRB tree.">xiii</a></sup></li>
+<p>	
+<li>cd trb54/bitcoin</li>
+<p>	
+<li>make ONLINE=1<sup><a href="#footnote_13_71933" id="identifier_13_71933" class="footnote-link footnote-identifier-link" title="Compile the press, loading the dependencies from deedbot's central repository.">xiv</a></sup></li>
+<p>	
+<li>Create a ssh key<sup><a href="#footnote_14_71933" id="identifier_14_71933" class="footnote-link footnote-identifier-link" title="If your user already has a ssh key, simply use its pubkey (it may be a good idea to create a separate user for this entire process).
+It is a horrendously bad idea to use ssh-keygen for this process, as you won't really obtain a key.">xv</a></sup></li>
+<p>	
+<li>cat ~/.ssh/id_rsa.pub<sup><a href="#footnote_15_71933" id="identifier_15_71933" class="footnote-link footnote-identifier-link" title="You will give this to people you connect via ssh tunnel to.">xvi</a></sup></li>
+<p>	
+<li>echo "autossh -f -M 0  -L 9000:127.0.0.1:8333 name@master" > do_tunnel.sh<sup><a href="#footnote_16_71933" id="identifier_16_71933" class="footnote-link footnote-identifier-link" title="If you are connecting to master hurr @ 1.2.3.4 the `name@master` part will read hurr@1.2.3.4. Do not mess with the 9000:127.0.0.1:8333 part, that's good as it is.">xvii</a></sup></li>
+<p>	
+<li>chmod +x do_tunnel.sh<sup><a href="#footnote_17_71933" id="identifier_17_71933" class="footnote-link footnote-identifier-link" title="We do want to run it.">xviii</a></sup></li>
+<p>	
+<li>./do_tunnel.sh<sup><a href="#footnote_18_71933" id="identifier_18_71933" class="footnote-link footnote-identifier-link" title="Might also put it in cron for good measure, @boot or something.">xix</a></sup></li>
+<p>	
+<li>LC_ALL="C" nohup ./bitcoind -myip=46.166.160.36 -addwire=127.0.0.1:9000 -wirerefresh=3600 -verifyall 2>&#038;1 &#038;<sup><a href="#footnote_19_71933" id="identifier_19_71933" class="footnote-link footnote-identifier-link" title="We are done, our node at 46.166.160.36 will create a resilient ssh tunnel to the master specified, and accept incoming tunnels from whichever slaves you allowed via authorized_keys. Should you wish to tunnel towards more than one masters, make sure you increment the port, 9001 etc.
+Mind that the original patch has the complaint timeout set at one second, which results in four lines per second per dead connection being spit into your debug.log. This is excessive, for which reason we have the above switch. It however doesn't actually work in the original, to quote 
+mircea_popescu one a second. why does it ignore the setting ?
+asciilifeform this, i figured out last night. tardoshi did the disconnect routine in a very 'special' way, where it slowly sits and drools and 'waits for any references to expire'
+mircea_popescu ahahaha
+asciilifeform i oughta have throttled the eggog, it gets printed continuously during this idiocy
+mircea_popescu because if he did it like he thinks he should it crashes right
+asciilifeform aha.
+but I understand will be fixed in a future development.">xx</a></sup></li>
+</ol>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_71933" class="footnote">This is disputed ; there exists the to my eyes entirely negligible advantage that the node won't <em>forget</em> about the piped node. Leaving aside this theory hasn't been tested at all, this forgetting (which does happen, glory be to the genius of the original author) nevertheless isn't a major problem in the field for operational reasons. [<a href="#identifier_0_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_71933" class="footnote">Consequently significant portions borrowed from <a href="http://therealbitcoin.org/ml/btc-dev/2017-February/000252.html">asciilifeform's own instructions</a>. [<a href="#identifier_1_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_71933" class="footnote">On the system we used (2.6.32-573.12.1.el6.x86_64) this works as </p>
+<blockquote><p>yum autossh</p></blockquote>
+<p>but your system might use apt or whatever it uses.  [<a href="#identifier_2_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_71933" class="footnote">Create a user (here "tbnode") that will be doing the node work, with fuckoff shell. [<a href="#identifier_3_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_71933" class="footnote">We're done with root stuff. [<a href="#identifier_4_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_71933" class="footnote">Simply creates a new directory. [<a href="#identifier_5_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_71933" class="footnote">These two steps acquire the current pressing mechanism as well as its signature. It will be verified later. [<a href="#identifier_6_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_71933" class="footnote">These six steps procure the public keys that you need in order to verify the patches as well as the V version you obtained in steps 3 and 4. [<a href="#identifier_7_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_71933" class="footnote">We are now in a position to verify the Vtron we're about to use. [<a href="#identifier_8_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_71933" class="footnote">Assuming the above step yielded </p>
+<blockquote><p>gpg: Signature made Sat 20 Feb 2016 06:26:52 PM UTC using RSA key ID B71EADAF<br />
+gpg: Good signature from "mod6 (mod6) <modsix@gmail.com>"<br />
+gpg: WARNING: This key is not certified with a trusted signature!<br />
+gpg:          There is no indication that the signature belongs to the owner.<br />
+Primary key fingerprint: 027A 8D7C 0FB8 A166 4372  0F40 7217 05A8 B71E ADAF
+</p></blockquote>
+<p>If it didn't please <a href="https://kiwiirc.com/client/irc.freenode.net/trilema">report</a>. [<a href="#identifier_9_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_71933" class="footnote">The i flag inits, in this case on the basis of the mirror kept by the foundation. This will populate your /.seals and /patches directories with the standard TRB tree as of the date of issuance (22 February 2017, in this case).</p>
+<p>See the description of the Vtron's functioning via ./v.pl --help by the way. [<a href="#identifier_10_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_71933" class="footnote">This step and the next add the relevant portions of the experimental patch we wish to use (asciilifeform_wires_rev1) to the patches and seals directories respectively.</p>
+<p>If adding other patches, repeat the process for all of them. [<a href="#identifier_11_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_71933" class="footnote">Press a TRB tree. [<a href="#identifier_12_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_71933" class="footnote">Compile the press, loading the dependencies from deedbot's central repository. [<a href="#identifier_13_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_71933" class="footnote">If your user already has a ssh key, simply use its pubkey (it may be a good idea to create a separate user for this entire process).</p>
+<p>It is a horrendously bad idea to use ssh-keygen for this process, as <a href="http://qntra.net/2016/07/phuctor-finds-rsa-collision-in-ssh-key-dump/">you won't really obtain a key</a>. [<a href="#identifier_14_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_71933" class="footnote">You will give this to people you connect via ssh tunnel to. [<a href="#identifier_15_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_71933" class="footnote">If you are connecting to master hurr @ 1.2.3.4 the "name@master" part will read hurr@1.2.3.4. Do not mess with the 9000:127.0.0.1:8333 part, that's good as it is. [<a href="#identifier_16_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_71933" class="footnote">We do want to run it. [<a href="#identifier_17_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_71933" class="footnote">Might also put it in cron for good measure, @boot or something. [<a href="#identifier_18_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_19_71933" class="footnote">We are done, our node at 46.166.160.36 will create a resilient ssh tunnel to the master specified, and accept incoming tunnels from whichever slaves you allowed via authorized_keys. Should you wish to tunnel towards more than one masters, make sure you increment the port, 9001 etc.</p>
+<p>Mind that the original patch has the complaint timeout set at one second, which results in four lines per second per dead connection being spit into your debug.log. This is excessive, for which reason we have the above switch. It however <em>doesn't actually work</em> in the original, to quote </p>
+<blockquote><p><b>mircea_popescu</b> one a second. why does it ignore the setting ?<br />
+<b>asciilifeform</b> this, i figured out last night. tardoshi did the disconnect routine in a very 'special' way, where it slowly sits and drools and 'waits for any references to expire'</p>
+<p><b>mircea_popescu</b> ahahaha<br />
+<b>asciilifeform</b> i oughta have throttled the eggog, it gets printed continuously during this idiocy</p>
+<p><b>mircea_popescu</b> because <a href="http://trilema.com/forum-logs-for-21-jan-2016#1996666">if he did it like he thinks he should it crashes</a> right<br />
+<b>asciilifeform</b> aha.</p></blockquote>
+<p>but I understand will be fixed in a future development. [<a href="#identifier_19_71933" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2017/fake-news-are-just-one-tail-of-the-failed-female-state/">Fake news are just one tail of the failed female state</a></div>
+                <div class="alignright"><a href="http://trilema.com/2017/how-to-be-a-pimp-the-simple-comprehensible-and-exhaustive-guide/">How to be a pimp - the simple, comprehensible and exhaustive guide</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2017/how-i-almost-created-a-constellation-of-bitcoin-nodes/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2017/how-i-almost-created-a-constellation-of-bitcoin-nodes/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>5 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-121566" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121566" title="">Tuesday, 14 March 2017</a>
+							</div>
+						<p>Wikilix bonux : </p>
+<p><b>mircea_popescu</b> <a href="http://trilema.com/2017/how-i-almost-created-a-constellation-of-bitcoin-nodes/">http://trilema.com/2017/how-i-almost-created-a-constellation-of-bitcoin-nodes/</a> in conclusion.<br />
+<b>asciilifeform</b> didja mention the actual cause ?<br />
+* asciilifeform reads</p>
+<p><b>mircea_popescu</b> well i dunno teh actual cause beyond "ssh tunnels suck".<br />
+<b>asciilifeform</b> btw does ssh work on that box at all ?<br />
+<b>asciilifeform</b> ( can ssh to localhost ? )</p>
+<p><b>mircea_popescu</b> im in neh ?<br />
+<b>asciilifeform</b> nope, that's sshd<br />
+<b>asciilifeform</b> i mean ssh.<br />
+<b>asciilifeform</b> client.</p>
+<p><b>mircea_popescu</b> ah<br />
+<b>mircea_popescu</b> i have nfi.<br />
+<b>asciilifeform</b> try?</p>
+<p><b>mircea_popescu</b> Permission denied (publickey,gssapi-keyex,gssapi-with-mic).<br />
+<b>mircea_popescu</b> i dun have a key.<br />
+<b>asciilifeform</b> that's farther than it gets here.</p>
+<p><b>mircea_popescu</b> yea.<br />
+<b>asciilifeform</b> btw if you addwire dulap straight, it'll run plaintext.</p>
+<p><b>mircea_popescu</b> bout same as -addnode neh<br />
+<b>asciilifeform</b> again, no<br />
+<b>asciilifeform</b> trb FORGETS NODES<br />
+<b>asciilifeform</b> deliberately.</p>
+<p><b>mircea_popescu</b> yes yes.<br />
+<b>mircea_popescu</b> anyway, nevermind this, it's a total timesink and out of line anyway.<br />
+<b>mircea_popescu</b> pick rsatron or wallet split, do that.<br />
+<b>mircea_popescu</b> evidently new ssh is needed altogether.<br />
+<b>asciilifeform</b> funnily enough that's what the wire thing was originally intended to run with<br />
+<b>asciilifeform</b> but 'g' not ready for prime time yet.<br />
+<b>asciilifeform</b> i'ma knee deep in rsatron.</p>
+<p><b>mircea_popescu</b> well... when it is.<br />
+<b>asciilifeform</b> anyway you can switch wire off (just omit the flag, dun have to rebuild the binary) if you're happy to let the thing occasionally forget that dulap or any of the other known boxes exist<br />
+<b>asciilifeform</b> i'd still like to know wtf is the deal with your ssh client, but 0 clue and yes potentially infinite tarpit.</p>
+<p><b>mircea_popescu</b> the sad fact of the matter is that "dulap" or any specified boxes don't, actually, exist. not as of yet.<br />
+<b>asciilifeform</b> aha.<br />
+<b>asciilifeform</b> this also.<br />
+<b>asciilifeform</b> sorta why i did not recommend straight tcp wire.<br />
+<b>asciilifeform</b> i'ma let folx back in nao.</p>
+<p><b>mircea_popescu</b> and i'm not too eager to spend resources to convince the machine to not forget my own cherished hallucinations. might as well call things thinking(); for that money<br />
+<b>mircea_popescu</b> and yes, do.<br />
+<b>asciilifeform</b> (the ones whose ssh worx..)</p>
+<p><b>mircea_popescu</b> i am not sure a situation where you can't say why it "works" and why it doesn't work can be called working, but let's go with it.<br />
+<b>asciilifeform</b> whole machine is made of this, can laugh or cry. sorta why i want to make a new one.<br />
+<b>asciilifeform</b> thx for grunting through this experiment. consider updating article with the find..</p>
+<p><b>mircea_popescu</b> which find ?<br />
+<b>asciilifeform</b> that ssh breaks</p>
+						</li>
+
+										<li id="comment-121567" class="commentbody"><div class="commenthead"><img alt='Pete Dushenski`s avatar' src='http://www.contravex.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink"><a href='http://www.contravex.com' class='url'>Pete Dushenski</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121567" title="">Tuesday, 14 March 2017</a>
+							</div>
+						<p>For step #23, don't you want to press the tree to "asciilifeform_wires_rev1.vpatch" ?</p>
+						</li>
+
+										<li id="comment-121568" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121568" title="">Tuesday, 14 March 2017</a>
+							</div>
+						<p>Right you are, revisions conflict failure! Fixed.</p>
+						</li>
+
+										<li id="comment-121593" class="commentbody"><div class="commenthead"><img alt='Pete Dushenski`s avatar' src='http://www.contravex.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink"><a href='http://www.contravex.com' class='url'>Pete Dushenski</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121593" title="">Friday, 17 March 2017</a>
+							</div>
+						<p>Step 23 again : leading "." in front of "/v.pl" required. <a href="http://www.contravex.com/2017/03/14/a-quick-recipe-for-pressing-experimental-trb-trees/" title="A quick recipe for pressing experimental TRB trees." >My guide</a> also had this error and I just caught it. Cheers!</p>
+						</li>
+
+										<li id="comment-121594" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-121594" title="">Friday, 17 March 2017</a>
+							</div>
+						<p>Ah there we go.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="71933" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834113-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-71933")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-71933");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-71933");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

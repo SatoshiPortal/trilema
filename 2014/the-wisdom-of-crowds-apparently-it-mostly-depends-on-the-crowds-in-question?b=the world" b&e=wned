@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The wisdom of crowds. Apparently, it mostly depends on the crowds in question. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The world’s greatest erotica writer.<br /><a href=http://trilema.com/2019/i-own-erotica-like-zeus-owns-olympus/>By far</a>.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-58031"><div class="post" id="post-58031">                    <h1><a href="http://trilema.com/2014/the-wisdom-of-crowds-apparently-it-mostly-depends-on-the-crowds-in-question/" rel="bookmark" title="Permanent Link to The wisdom of crowds. Apparently, it mostly depends on the crowds in question.">The wisdom of crowds. Apparently, it mostly depends on the crowds in question.</a></h1>                        <div class="date">                                     Thursday, 20 November, Year 6 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>As you may or may not know<sup><a href="#footnote_0_58031" id="identifier_0_58031" class="footnote-link footnote-identifier-link" title="Like from instance from my anger at that Sam Hartman fellow.">i</a></sup>, the SystemD &#038; USG vs Sanity, Freedom &#038; Everything Nice<sup><a href="#footnote_1_58031" id="identifier_1_58031" class="footnote-link footnote-identifier-link" title="Socialists want to `save` individuals that don't need any saving by recourse to `the group`. Individualists don't care about any random nut's notions of what `the group` is or what its putative normatives would look like, and expect all inviduals to save themselves, if such a thing is desirable or for that matter possible. 
+That's right : it is not a `political` debate. It's a religious debate, in exactly that ancient manner. At issue is `salvation` and generally speaking interaction with the metaphysical - the scary, the unknown, the au-delà. And yes in this context Sam Hartmans paralogies make a lot of sense, in the sense that they fit well in the context, much like puss fits with septicemia. That doesn't make either puss or Hartman (should someone find a way to distinguish between puss and pustule) the right thing, but quite wrong. So, so very wrong.
+Turns out you were wrong to think magical thinking had been somehow `defeated`. This is not possible in practice, magical thinking is intellectually cheap. Always, always cheap, and men - reasonable men even! - will try the reasonable approach just as soon as all cheaper alternatives have been exhausted.">ii</a></sup> debate came to a head yesterday, at a GR vote in Debian.<sup><a href="#footnote_2_58031" id="identifier_2_58031" class="footnote-link footnote-identifier-link" title="In fairness, it's been brewing for over a year by now.">iii</a></sup></p>
+<p>I <a href="http://trilema.com/forum-logs-for-17-nov-2014#1527143">was fully expecting</a> for the lot to just give in and accept their "salvation", such as it is. This is, generally speaking, a safe bet, and in the immortal words of <a href="http://trilema.com/2014/millers-crossing/">Casper</a> "I'm a sporting man. I like a sure thing."</p>
+<p>Then the vote came out, and people seem to agree : </p>
+<blockquote><p><strong>decimation</strong> Speaking of which <strong>mircea_popescu</strong> so you called it with the debian GR re: systemd, they 'voted' to make init scripts 'optional'.<br />
+<strong>mircea_popescu</strong> Aha. I was merely following the hints.</p>
+<p><strong>asciilifeform</strong> They actually voted for surrender to enemy, because that is what 'meeting halfway' is. 'Camel's nose' etc. Achilles said to tortoise, let me stick the cock in halfway. And then again halfway. Again. (recurse)<br />
+<strong>decimation</strong> I don't blame Red Hat et.al., like Larry Ellison, they are just exploiting what they can exploit.<br />
+<strong>asciilifeform</strong> Lest anyone think tortoise gets nothing from this deal - think again. He gets to derp in front of the other cartoon animals, that - even while his shell is bursting from megacock thrust - that nothing at all is happening. Because it isn't really "in". Or something like this.<br />
+<strong>mircea_popescu</strong> Well, in truth the entire "free software" thing was dead a while back. So the remaining pretenders don't manage to cling on to the shoes of their forebears. This should be shocking or what ?</p></blockquote>
+<p>But I must confess that I've spent some time with this issue, and am not nearly as sure what we've seen there is any kind of surrender. Consider yourself : why is money attacked by the socialist horde ? Because <a href="http://trilema.com/2013/digging-through-archives-yields-gold/">there's something there to attack</a>. The correct solution, then, is to make banking optional, and issuance immutable. What, if you consider the issue with due seriousness, would in your estimation be the difference between the Bitcoin solution to "socialists want to spend your money" and the "optional init scripts" solution to "socialists want to improve your computing" ?</p>
+<p>Poettering &#038; the rest of the shitgnomes are doing SystemD rather than whatever atrociously unusable sound server or whatever it is they do under their rock. Why ? Because they think it's important, right ? They, like the whole rest of the EOL<sup><a href="#footnote_3_58031" id="identifier_3_58031" class="footnote-link footnote-identifier-link" title="English as an only language.">iv</a></sup> retards<sup><a href="#footnote_4_58031" id="identifier_4_58031" class="footnote-link footnote-identifier-link" title="I blame the parents. You really should be very, very ashamed of yourselves, people.">v</a></sup> of their generation seek the light of the stage. But this begs the question, why exactly is SystemD important at all ? </p>
+<p>The obvious answer, at least to me, seems to be... "init scripts aren't optional". You have to pick a particular system and you're stuck with it. That's what Poettering &#038; the rest of the shitgnomes are doing here : they are seeking "<a href="http://trilema.com/2012/gpg-contracts/">now I can get fat</a>" aka marriage. With you, on your dime. Hey, it worked for their mothers, right ? And they were raised by <del datetime="2014-11-20T16:26:08+00:00">a pack of rabid wolves</del> their mothers, so they aspire to become... their mothers. Except they're not waitresses and pedicurists, trying to get pizza, beer and pot money. They're smart kids, don't you know, so they'd like your intellectual welfare. They'd like to "change the world" by means of you know, being in your workspace. Whether you want them or not (hey, <a href="http://trilema.com/2009/exceptionalismul-feminin/">the feminine guile!!! they gots it!!1</a>), and whether you think they suck or not. They just want to be there. Like the women that spawned</span> them, to a t. </p>
+<p>The solution found at the GR seems to me cruelly exact and quite on point. Kids that failed to mature are trying to use your thing <a href="http://trilema.com/2013/youre-the-guy-who-wasnt-good-enough-to-sling-dope/">to mature against</a> ? Remove the parts in question. Ideally implemented, the GR vote results in a situation where no program can rely on aforeknowledge as to what sort of init scripts it is going to encounter in the wild. </p>
+<p>Some will choose the monolythic approach and assume anyway, Windows style. One of these may even be propped by the full "faith and credit" of the USG, such as it is these days. Which propping costs money, and which expenditure makes - in typical USG manner - exactly no difference : the entire lot is doomed to failure.</p>
+<p>Some will choose the linux way, and this is really the point of this GR, as well as any other, as well as Debian in general and sanity altogether : that the right way may survive. There's no aspiration, indeed there could never be any aspiration to make the right way the only way. The only plan is for it to survive indefinitely, so the Poettering infantile minds of tomorrow have something to be wrong against then, too, while the rest of the people - those five or five dozen or five hundred people that actually matter - can go about living their life.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_58031" class="footnote">Like from instance from my anger at that <a href="http://trilema.com/forum-logs-for-17-nov-2014#1527129">Sam Hartman</a> fellow. [<a href="#identifier_0_58031" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_58031" class="footnote">Socialists want to "save" individuals that don't need any saving by recourse to "the group". Individualists don't care about any random nut's notions of what "the group" is or what its putative normatives would look like, and expect all inviduals to save themselves, if such a thing is desirable or for that matter possible. </p>
+<p>That's right : it is not a "political" debate. It's a <em>religious</em> debate, in exactly <a href="http://www.edwardgoldsmith.org/28/">that ancient manner</a>. At issue is "salvation" and generally speaking interaction with the metaphysical - the scary, the unknown, the <em>au-delà</em>. And yes in this context Sam Hartmans paralogies make a lot of sense, in the sense that they fit well in the context, much like puss fits with septicemia. That doesn't make either puss or Hartman (should someone find a way to distinguish between puss and pustule) the right thing, but quite wrong. So, so very wrong.</p>
+<p>Turns out you were wrong to think magical thinking had been somehow "defeated". This is not possible in practice, magical thinking is <em>intellectually <a href="http://trilema.com/2014/fun-hate-facts-about-the-bell-curve-with-james-a-donald/#footnote_1_57869">cheap</a></em>. Always, always cheap, and men - reasonable men even! - will try the reasonable approach just as soon as all cheaper alternatives have been exhausted. [<a href="#identifier_1_58031" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_58031" class="footnote">In fairness, it's been brewing for over a year by now. [<a href="#identifier_2_58031" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_58031" class="footnote">English as an only language. [<a href="#identifier_3_58031" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_58031" class="footnote">I blame the parents. You really should be very, very <a href="http://trilema.com/forum-logs-for-20-nov-2014#1530068">ashamed of yourselves</a>, people. [<a href="#identifier_4_58031" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2014/psa-if-youre-trying-to-escape-the-gravity-well-youll-meet-this-on-your-way/">PSA : If you're trying to escape the gravity well, you'll meet this on your way.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2014/the-gui-the-twerk-and-the-most-valuable-resource/">The GUI, the twerk and the most valuable resource</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2014/the-wisdom-of-crowds-apparently-it-mostly-depends-on-the-crowds-in-question/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2014/the-wisdom-of-crowds-apparently-it-mostly-depends-on-the-crowds-in-question/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>17 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-110068" class="commentbody"><div class="commenthead"><img alt='pankkake`s avatar' src='http://headfucking.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://headfucking.net/' class='url'>pankkake</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110068" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>This was a desperate try to overturn the technical committee vote, and it didn't work - at all.</p>
+<p>As it turns out, the people who actually maintain packages - the people who actually make Debian and not some random wankers - want systemd and don't want those marvelous shell scripts. By the way, the votes are public.</p>
+<p>It is also never written "SystemD" but "systemd".</p>
+						</li>
+
+										<li id="comment-110072" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110072" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>The "random wankers" aka the users are the only power on this field. The actual wankers, aka "people who actually can't sling dope" are entirely inconsequential in this discussion, if they all miraculously found girlfriends tomorrow we'd take two weeks to notice.</p>
+						</li>
+
+										<li id="comment-110073" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110073" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>The phenomenon pankkake is speaking of is called (by the perpetrators) - 'do-ocracy.'</p>
+<p>That is, a number of folks have positioned themselves into being seen, at least on the surface, as 'those who actually make Debian' and therefore are, to use G. W. Bush's term, 'the deciders.' Elementary meatpuppetry in action - want to be 'decider?' throw in Moar Code. Form 'imperium in imperio' clique, pull each other's dicks, undesirables (old guard) get euchred out. Rivers of meat, 'victory.'</p>
+						</li>
+
+										<li id="comment-110074" class="commentbody"><div class="commenthead"><img alt='chett`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">chett</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110074" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>Stan,<br />
+ So in fact no Jon Galt is needed to lead the doers away, the wankers are just gonna push em out. Might be a good thing at that.</p>
+						</li>
+
+										<li id="comment-110075" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110075" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>So this would be like what exactly, USGavin pooh-poohing Satoshi, the only guy involved so far with Bitcoin that actually did something useful. Then further pretending like the cruddy, makeshift "implementation" that's really a very shoddy prototype which only happens to exist because Satoshi was trying to breach the <a href=http://btcbase.org/log/?date=31-08-2014#817166 >Al Gap</a> is "the spec" strictly because that readily maps to "USGavin is important" and so on and so forth ? </p>
+<p>Oh but I'm so very impressed, for all values of being impressed that reduce to 0. Vaguely related,</p>
+<blockquote><p>And while I’m setting the record straight, the original (TECO-based) Emacs was created and designed by Guy L. Steele Jr. and David Moon. After they had it working, and it had become established as the standard text editor at the AI lab, Stallman took over its maintenance.</p></blockquote>
+<p>Could this be called "Stallman's legacy", then ?</p>
+						</li>
+
+										<li id="comment-110076" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110076" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>Seems just spillover from academia. Kids that didn't get tenure / didn't think they can get tenure / not smart enough to phd trying to import "publish or perish" and generally the worst parts of academia into the one field where there's no barrier to entry.</p>
+						</li>
+
+										<li id="comment-110077" class="commentbody"><div class="commenthead"><img alt='pankkake`s avatar' src='http://headfucking.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://headfucking.net/' class='url'>pankkake</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110077" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>There has been a lot of talk about "forking" but no end results. So, we'll see if the end-users actually want to commit resources on not using systemd.</p>
+<p>My prediction is that those will be either too poor or too unqualified to do it, and this will show again that free software is a do-ocracy, not a democracy.</p>
+<p>Yet, the dependency on systemd is greatly exagerated. For example, OpenRC very easily handles systemd's tmpfiles.d, which are very well documented: <a href="http://www.freedesktop.org/software/systemd/man/tmpfiles.d.html">http://www.freedesktop.org/software/systemd/man/tmpfiles.d.html</a><br />
+This has allowed many simplifications on ebuilds and init scripts.</p>
+<p><a href="https://github.com/desrt/systemd-shim">https://github.com/desrt/systemd-shim</a> does the same with other (documented) systemd APIs.</p>
+						</li>
+
+										<li id="comment-110078" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110078" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>Yeah, we'll see if the rape victims actually want to commit resources to not being raped anymore. Also a do-ocracy.</p>
+<p>Such logic, well done.</p>
+						</li>
+
+										<li id="comment-110079" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110079" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>Funny how it's either a cult or a "do-ocracy" depending on which side one sits on.</p>
+						</li>
+
+										<li id="comment-110080" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110080" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>In any event this "we'll see" aproach completely misses the boat. What else will we see, how css 17.0 is a thing, how web 2.0 matters, how what exactly ? Half the Internet is still transitional 1.0, no further than yesterday we ran into a heartbleeding would-be C&#038;C center, what is there to see ? </p>
+<p>You can see anything you want to see. In most cases, you do.</p>
+						</li>
+
+										<li id="comment-110081" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110081" title="">Friday, 21 November 2014</a>
+							</div>
+						<p>The one 'we'll see' that seems rather likely is - a logical conclusion of the schism, where Linux as a going concern dies of cancer, and folks who actually want something recognizable as a genuine Linux box (vs. an ad-hoc reimplementation of Ms-Winblows) will be strapping on their parachutes, of whatever kind and quality are available.</p>
+<p>The Linux kernel will become, to them, merely an encyclopaedia from which to silently crib device driver specs.  Hell, the only reason why I ever used any variant of Linux at all was hardware support.</p>
+						</li>
+
+										<li id="comment-110083" class="commentbody"><div class="commenthead"><img alt='pankkake`s avatar' src='http://headfucking.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink"><a href='http://headfucking.net/' class='url'>pankkake</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110083" title="">Saturday, 22 November 2014</a>
+							</div>
+						<p>What do you propose, exactly? Developers should follow what some vocal users say, despite them having no clue on what they are talking about*? In other words, slavery?</p>
+<p>* If you say systemd = windows or = monolithic, you didn't even take the time to look at what it is.</p>
+						</li>
+
+										<li id="comment-110084" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110084" title="">Saturday, 22 November 2014</a>
+							</div>
+						<p>@<b>Stanislav Datskovskiy</b> Seems kinda a future-in-the-past, this. I don't seem to recall using Debian anything past Sarge, unless you count Ubuntu as Debian, therewhich 10.04 makes a decent entry level system for noobs. Ulterior versions are, of course, worse than nothing.</p>
+<p>@<b>pankkake</b> So stated the question is useless. What I propose is sticking to the original ideas that made linux worth using, and that made unix worth using enough so that when the previous generation of tards fucked it up (back then it was "patents" idiocy) it was worth reimplementing as linux. If what those are needs any expounding in this venue, the student in question is <em>not ready yet to make anything at all</em>. This last point is too easily glossed over, by imbecile adolescents in their fear of "slavery". It is an important point. Not anybody, anytime, anywhere is intellectually apt and mentally ready to write code. If this is what you fear under the name of "slavery", then let me tell you that no manumission can ever free you from this particular slavery.</p>
+						</li>
+
+										<li id="comment-110088" class="commentbody"><div class="commenthead"><img alt='pankkake`s avatar' src='http://headfucking.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink"><a href='http://headfucking.net/' class='url'>pankkake</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110088" title="">Saturday, 22 November 2014</a>
+							</div>
+						<p>Getting a straight answer is such a pain.</p>
+<p>So what ideas made "linux" and "unix" "worth using", and why is systemd changing that? Will I get a straight answer or yet another deflection?</p>
+<p>I'm not sure where you are going here. I have no doubt systemd detractors have little abilities, which is why I said "resources". They could fund development if it was so important. My prediction was that it won't happen.</p>
+						</li>
+
+										<li id="comment-110090" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-110090" title="">Saturday, 22 November 2014</a>
+							</div>
+						<p>You're not going to get a "straight answer", principally because your definition of "straight answer" is "an answer which neatly fits my precoinceived ideas - which aren't even randomly preconceived for that matter, but instead so constructed as to reach particular mistaken conclusions I happen to feel comfortable with". Feel free to complain that the world doesn't readily satisfy your expectations on this score.</p>
+<p>I'm not going to go into a silly comparison of namedropping. For one thing, there is no such thing as "systemd detractors". There's a very precious few kids pushing a particular agenda on one hand, and the whole rest of the world on the other hand. This comparison is by definition and will perpetually stay unequal. And no, Poettering won't matter in a few years, after this debacle settles into the dust of public forgetfulness any more than he matters today, a few years after his avahi debacle settled into the dust of public forgetfulness. </p>
+<p>Anf fuck you with your "funding development" bullshit. Yes, I get it, the USG is printing money like there's no tomorrow, and its agents masquerading as "contractors" like to pretend like the pointless crud they try to pave the world with is "backed by money". It's not. It's backed by empty promises. systemd development is not funded in any sense. Most importantly, it's not intellectually funded.</p>
+						</li>
+
+										<li id="comment-127390" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127390" title="">Saturday, 12 January 2019</a>
+							</div>
+						<p>Meanwhile <a href="http://www.edwardgoldsmith.org">http://www.edwardgoldsmith.org</a> &gt;&gt; "connection reset by peer". RIP.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-131552">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://qntra.net/2019/09/systemds-poettering-wants-to-break-linux-user-management-to-suspend-his-laptop/?b=Syste&amp;e=#select' class='url'>SystemD&#39;s Poettering Wants To Break Linux User Management To Suspend His Laptop | Qntra</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131552" title="">Wednesday, 25 September 2019</a>
+					</div>
+					<p>[...] SystemD wrecking artist Lennart Poettering has proposed a substantial reworking of the way Linux handles users which would break many of the ways Linux is actually used under the pretext that the changes would make him feel more comfortable leaving his laptop in a suspended power state (archived). [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="58031" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834654-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-58031")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-58031");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-58031");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Bitcoin Recapitulation on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Moving targets for a fast crowd.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-85030"><div class="post" id="post-85030">                    <h1><a href="http://trilema.com/2019/bitcoin-recapitulation/" rel="bookmark" title="Permanent Link to Bitcoin Recapitulation">Bitcoin Recapitulation</a></h1>                        <div class="date">                                     Monday, 15 July, Year 11 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>To start off in style, let's revisit, explicitly, an important matter <a href=http://trilema.com/forum-logs-for-04-mar-2016#2047322>obliquely mentioned</a> by yours truly with some regularity within the walls and by nobody outside the walls ever with any comprehension.</p>
+<p>Contrary to "<a href=http://trilema.com/2012/the-stockexchange-shareholders-on-welfare/#selection-4831.1-4831.59>expert</a> <a href=http://trilema.com/2016/superficial-ustardian-onanism-suto/#selection-217.1-217.96>consensus</a>" and other such "<a href=http://trilema.com/2019/thelastpsychiatristcom-4-unintended-consequences-of-seroquels-adjunct-to-antidepressants-indication-adnotated/#footnote_5_85009>scientific</a>" lulz<sup><a href="#footnote_0_85030" id="identifier_0_85030" class="footnote-link footnote-identifier-link" title="Just five articles off that large TLP adnotation project in, I already have an excellent reference point, one of those shining jewels of great explanatory power that you know will just recur time and again. Add to this that no less than the adnotation required the involvement of twenty-five other Trilema articles (that's a factor of >5 per!) and all of a sudden it's pretty fucking obvious the digestion was a strictly fabulous idea. Go me.">i</a></sup>, Bitcoin is not fractionary.<sup><a href="#footnote_1_85030" id="identifier_1_85030" class="footnote-link footnote-identifier-link" title="Yes, I'm aware that most everyone's introduction to fractions came at their encounter with Bitcoin ; prior to that moment they were living a happy life made out of Baťa prices ">ii</a></sup> There are no Bitcoin digits. All Bitcoin sums <em>are integers</em>.</p>
+<p>What you call "Bitcoin", as in "a Bitcoin" or "half a Bitcoin" is rather Indian numeration, a sort of lakh, or crore. In those terms, one Bitcoin'd be 10 crore, or a tenth of an arab (अरब) ; and no, I'm not implying genetic-driven cognitive inferiority with these statements. I'm outright saying it : the manner in which "you find it natural" to think betrays your appartenance to inferior genetic stock. Just like <a href=http://trilema.com/forum-logs-for-05-nov-2014#1509337>the Indians'</a>.</p>
+<p>Your genetic inferiority and the phenotypic sadness it drives aside, the interesting question would be "ten crore <em>whats</em> ?!?!" ; and the readily obvious answer follows in the same breath : one Bitcoin is just shorthand for a hundred million satoshi. That's the unit of account in Bitcoin, the satoshi. See ?</p>
+<p>It's not that "there never will be more than 21 million Bitcoins ever issued". It's that there never will be more than 2099999997690000<sup><a href="#footnote_2_85030" id="identifier_2_85030" class="footnote-link footnote-identifier-link" title="Exact figue. Source.">iii</a></sup> satoshis ever in existence. That's about 2.1e+15 in scientific notation, or roughly 1.865 peta in binary notation<sup><a href="#footnote_3_85030" id="identifier_3_85030" class="footnote-link footnote-identifier-link" title="Since the principal considerations have to do with disk space, and disk space is allocated in bytes, knowing what factor of 1024^5 the total satoshi count comes to is desirable.">iv</a></sup>. This is an absolute, logical limit ; but there probably also exists a higher practical limit, because if the coinbase is fully fragmented (meaning -- all Bitcoin is held in individual single satoshi containing addresses) payment for mining will perhaps become somewhat awkward.<sup><a href="#footnote_4_85030" id="identifier_4_85030" class="footnote-link footnote-identifier-link" title="This is entirely possible, though perhaps not likely -- a situation where one maintains off-blockchain relationships with a miner combine, and communicates their desired transactions as, say, a gpg dump, only to have them later introduced into the blockchain as `zero fee` (with an actual fee paid in kind in some manner, rather than in coin on the blockchain). Like so.">v</a></sup></p>
+<p>Consider the implications of this <a href=http://trilema.com/2012/bitcoin-and-the-poor/#selection-73.0-77.362>harsh reality</a> for the assortment of would-be &#038; pretend sovereigns outside The Most Serene Republic : they're going to "track" bitcoin ? Reheheally ? Do some math, why don't you. Each output must reside in an address, that's 160 bits<sup><a href="#footnote_5_85030" id="identifier_5_85030" class="footnote-link footnote-identifier-link" title="Provided the pretender isn't actually USGtarded, doing lulzy shit with excel etcetera, in which case a Bitcoin address is rather 25 to 33 base58 symbols stored as bytes.
+Judging by embedded girlies' reports, pretty much all all banking currently happens through java-on-Windows unexamined (and unexaminable) towers of chairs, so no, I don't expect much efficiency will be seen deployed by the celebrated makers of papier-mache boats.">vi</a></sup> or... 160 * 1.865 = 298.4 PetaBytes to merely store <em>the collection of labels</em> describing the worldstate at any given time. </p>
+<p>Let's take a moment to put that 300 PetaBytes figure in context. The peak production of storage media in human history occured in year 2014, when <a href=http://trilema.com/wp-content/uploads/2019/07/seagate-media-report-2018.jpg>roughly speaking</a> 1.2 bn items were produced<sup><a href="#footnote_6_85030" id="identifier_6_85030" class="footnote-link footnote-identifier-link" title="Don't worry though -- there was hope to overtake this by 2020, back in early 2018.">vii</a></sup>. This would then mean that <b>the storage required to reflect the collection of labels describing the Bitcoin worldstate at one given moment represents about 0.0000025% of the total storage production during the one year to date humanity produced most storage media</b>. Talk about <a href=http://trilema.com/2016/the-megawatt-standard/>a megawatt standard</a>!</p>
+<p>Talk, talk, but keep thinking : one snapshot's meaningless, you want these at least daily<sup><a href="#footnote_7_85030" id="identifier_7_85030" class="footnote-link footnote-identifier-link" title="Let's amuse ourselves for a moment considering what second-accurate snapshotting would do.">viii</a></sup>, yes ? So then each year that's 365 * 298.4. Then you also want to retain the transactions involved, which, even with very careful pruning<sup><a href="#footnote_8_85030" id="identifier_8_85030" class="footnote-link footnote-identifier-link" title="The absolute size of a Bitcoin transaction falls within a range centered on 180 bytes * count of inbound tx + 34 bytes * count of outbound tx + 10 and as wide as the count of inbound transactions. 
+As a forinstance : if you move from 32 addresses into 64 addresses your transaction size will be between 7`914 and 7`978 byts (32 above or below 180 * 32 + 34 * 64 + 10) while if you contrariwise move from 64 addresses into 32 addresses, your transaction size will then be 12`554 to 12`682 bytes, ie 64 above or below 180 * 64 + 34 * 32 + 10.
+The significant differential, whereby the marginal input address adds a 180 byte weight to the transaction, whereas the marginal output address adds merely 34 bytes (18.9%, less than one fifth) creates a very heavy incentive towards coinbase fragmentation (moving from fewer to more addresses results in fewer average coins per address as a mathematical necessity) and against coinbase concentration.">ix</a></sup>, can readily average above 1kB per address per transaction<sup><a href="#footnote_9_85030" id="identifier_9_85030" class="footnote-link footnote-identifier-link" title="Suppose you're tracking all the 64 addresses mentioned on the wide side of one of our foregoing examples. You may get away with storing each transaction only once, but you're storing a 8 to 12kB transaction, plus the set of indexes allowing you to link each of the addresses back to it. Figuring index overhead as equal to the data may well be an understatement, for which reason simply rounding to the unit appears a very defensible stance. Hence, 1kB.">x</a></sup>.</p>
+<p>If you're snapshotting daily and each address transacts on average weekly, you're looking at the following beauty : (160 * 365 + 1024<sup><a href="#footnote_10_85030" id="identifier_10_85030" class="footnote-link footnote-identifier-link" title="You could, I suppose, replace this with a narrower 180 + 34 + 10 = 224, though I doubt the wisdom.">xi</a></sup> * 52) * 1.865 peta = 203.34 exabytes! Each year! </p>
+<p>Now look again at those 2014 figures : are 1.2bn units enough ? To make the question easier : 203.34 exabytes split among 1.2bn units implies a 181.95 GB (gigabyte) average size per unit. Are hard drives larger on average than 181 GB as far as you've seen ? Well... that's good then! How many platters to the hard drive do you think ? Ever <a href=http://trilema.com/2014/spy-stuff/#selection-65.0-65.46>looked</a> ? </p>
+<p>Bitcoin fragmentation<sup><a href="#footnote_11_85030" id="identifier_11_85030" class="footnote-link footnote-identifier-link" title="Here's some numbers, for the actuarially inclined.">xii</a></sup> poses various problems to various other people<sup><a href="#footnote_12_85030" id="identifier_12_85030" class="footnote-link footnote-identifier-link" title="It poses problems to them, yes ; it doesn't however outright kill them, like it does kill the fiatards and their insufferable regine. Which is, and always was, exactly the point : pentru unii muma, pentru altii ciuma.">xiii</a></sup> besides fiatist pretenders, of course, which is why my only other<sup><a href="#footnote_13_85030" id="identifier_13_85030" class="footnote-link footnote-identifier-link" title="Well, only big one, at any rate. Or maybe not.">xiv</a></sup> measure as Bitcoin's central bank and only financial, <a href=http://trilema.com/2014/interacting-with-fiat-institutions-a-guide/>political</a> and <a href=http://trilema.com/2015/the-news-in-brief-hearn-is-a-shitstain-mp-is-right-fuck-reddit-love-satoshi/>ideological</a> authority -- besides killing an early rally <a href=http://trilema.com/2013/people-bitcoin-is-not-worth-100-dollars-per-stop-buying/>back in 2013</a><sup><a href="#footnote_14_85030" id="identifier_14_85030" class="footnote-link footnote-identifier-link" title="You recall the `epic few days` era, the times of Karpeles and Keisers ? Look at all those coincidences, wooowee!">xv</a></sup> -- was killing "<a href=http://trilema.com/2019/the-bitcoin-discussion/#selection-265.1-265.49>bitcoin as medium of exchange</a>" nonsense <a href=http://trilema.com/2016/thats-right-time-to-move-on-please-do-bitcoin-is-really-not-for-you/#selection-33.67-33.169>back in ~2016</a>.</p>
+<p>Nevertheless, problems or no problems : Bitcoin prevails. It is, warts and all, still today the more interesting thing happening in the world, as it has been <a href=http://trilema.com/2013/things-that-matter-these-days-things-that-dont-matter-these-days/>since forever</a>.</p>
+<p>That'd be all.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_85030" class="footnote">Just five articles off that large <a href=http://trilema.com/2019/christos-ballas-tlp-thelastpsychiatristcom-archive/>TLP adnotation</a> project in, I already have an excellent reference point, one of those shining jewels of great explanatory power that you know will just recur time and again. Add to this that no less than the adnotation required the involvement of twenty-five other Trilema articles (that's a factor of >5 per!) and all of a sudden it's pretty fucking obvious the digestion was a strictly <em>fabulous</em> idea. Go me. [<a href="#identifier_0_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_85030" class="footnote">Yes, I'm aware that most everyone's introduction to fractions came at their encounter with Bitcoin ; prior to that moment they were living a happy life made out of <a href=http://trilema.com/2019/continuing-with-the-reflective-history-of-the-republican-forum-still-on-logday-659-year-6-dtr/#selection-695.46-695.57>Baťa prices</a>  [<a href="#identifier_1_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_85030" class="footnote">Exact figue. <a href=http://trilema.com/2016/the-sad-state-of-bitcoin-code/#comment-116296>Source</a>. [<a href="#identifier_2_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_85030" class="footnote">Since the principal considerations have to do with disk space, and disk space is allocated in bytes, knowing what factor of 1024^5 the total satoshi count comes to is desirable. [<a href="#identifier_3_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_85030" class="footnote">This is entirely possible, though perhaps not likely -- a situation where one maintains off-blockchain relationships with a miner combine, and communicates their desired transactions as, say, a gpg dump, only to have them later introduced into the blockchain as "zero fee" (with an actual fee paid in kind in some manner, rather than in coin on the blockchain). <a href=http://btcbase.org/log/2019-03-28#1905338>Like so</a>. [<a href="#identifier_4_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_85030" class="footnote">Provided the pretender isn't actually USGtarded, doing <a href=http://trilema.com/2012/law-enforcement-never-fails-to-unintentionally-entertain/#selection-161.155-165.52>lulzy shit with excel</a> etcetera, in which case a Bitcoin address is rather 25 to 33 base58 symbols stored as bytes.</p>
+<p>Judging by embedded <a href=http://btcbase.org/log/2019-07-14#1922441>girlies</a>' reports, pretty much all all banking currently happens through java-on-Windows unexamined (and unexaminable) <a href=http://trilema.com/2013/why-mpex-is-better-than-fiat-institutions-part-349085-we-dont-use-excel/#selection-149.0-151.0>towers of chairs</a>, so no, I don't expect much efficiency will be seen deployed by the <a href=http://btcbase.org/log-search?q=%22littoral%22>celebrated</a> makers of <a href=http://qntra.net/2019/07/airstrip-one-queens-newest-capital-ship-struggling-with-water/>papier-mache</a> boats. [<a href="#identifier_5_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_85030" class="footnote">Don't <a href=http://btcbase.org/log/2013-09-14#314177>worry</a> though -- there was hope to overtake this by 2020, back in early 2018. [<a href="#identifier_6_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_85030" class="footnote">Let's amuse ourselves for a moment considering what second-accurate snapshotting would do. [<a href="#identifier_7_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_85030" class="footnote">The absolute size of a Bitcoin transaction falls within a range centered on 180 bytes * count of inbound tx + 34 bytes * count of outbound tx + 10 and as wide as the count of inbound transactions. </p>
+<p>As a forinstance : if you move from 32 addresses into 64 addresses your transaction size will be between 7`914 and 7`978 byts (32 above or below 180 * 32 + 34 * 64 + 10) while if you contrariwise move from 64 addresses into 32 addresses, your transaction size will then be 12`554 to 12`682 bytes, ie 64 above or below 180 * 64 + 34 * 32 + 10.</p>
+<p>The significant differential, whereby the marginal input address adds a 180 byte weight to the transaction, whereas the marginal output address adds merely 34 bytes (18.9%, less than one fifth) creates a very heavy incentive towards coinbase fragmentation (moving from fewer to more addresses results in fewer average coins per address as a mathematical necessity) and against coinbase concentration. [<a href="#identifier_8_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_85030" class="footnote">Suppose you're tracking all the 64 addresses mentioned on the wide side of one of our foregoing examples. You may get away with storing each transaction only once, but you're storing a 8 to 12kB transaction, plus the set of indexes allowing you to link each of the addresses back to it. Figuring index overhead as equal to the data may well be an understatement, for which reason simply rounding to the unit appears a very defensible stance. Hence, 1kB. [<a href="#identifier_9_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_85030" class="footnote">You could, I suppose, replace this with a narrower 180 + 34 + 10 = 224, though I doubt the wisdom. [<a href="#identifier_10_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_85030" class="footnote">Here's <a href="http://trilema.com/wp-content/uploads/2019/07/bitcoin-unique-addresses.csv">some numbers</a>, for the actuarially inclined. [<a href="#identifier_11_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_85030" class="footnote">It poses problems to them, yes ; it doesn't however outright kill them, like it does kill the fiatards and their insufferable regine. Which is, and <span style="background-color:#d3d3d3" id="select">always was, exactly the point : <em>pentru unii muma, pentru altii ciuma</em>. [<a href="#identifier_12_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_85030" class="footnote">Well, only big one, <a href="http://trilema.com/2016/usg-in-btc-a-history-of-constant-failure/">at any rate</a>. Or <a href=http://trilema.com/2014/this-is-how-much-i-rule-today/>maybe not</a>. [<a href="#identifier_13_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_85030" class="footnote">You recall the "<a href=http://trilema.com/2013/its-been-an-epic-few-days-what-happened/>epic few days</a>" era, the times of Karpeles and <a href=http://trilema.com/2013/in-which-noobs-learn-lessons-and-pay-for-the-privilege/>Keisers</a> ? Look at all those coincidences, wooowee! [<a href="#identifier_14_85030" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2019/thelastpsychiatristcom-4-unintended-consequences-of-seroquels-adjunct-to-antidepressants-indication-adnotated/">thelastpsychiatrist.com - 4 Unintended Consequences of Seroquel's Adjunct to Antidepressants Indication. Adnotated.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2019/thelastpsychiatristcom-50-of-american-kids-receive-food-stamps-adnotated/">thelastpsychiatrist.com - 50% of American Kids Receive Food Stamps. Adnotated.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2019/bitcoin-recapitulation/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2019/bitcoin-recapitulation/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>13 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-129789" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129789" title="">Monday, 15 July 2019</a>
+							</div>
+						<p>Not finding it in this piece, I'll assume you left it as an exercise. Taking the 12554 byte tx min. figure, the 1e6 byte block houses at most 79 tx. With the avg. 10min. block, that's 87600 tx/yr. Sol burns out long before you get anywhere near the "house each satoshi in own addr" fragocalypse.</p>
+						</li>
+
+										<li id="comment-129790" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129790" title="">Monday, 15 July 2019</a>
+							</div>
+						<p>Grr, posted this comment prematurely, you can make smaller tx naturally. So the "79" is really closer to 1000. Sol -- still burns out.</p>
+						</li>
+
+										<li id="comment-129791" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129791" title="">Monday, 15 July 2019</a>
+							</div>
+						<p>Corrected ~figure : 6x24x365x1e6 , i.e. 5.245e10 byte/yr, no matter what. And I'ma lay off commenting before morning tea.</p>
+						</li>
+
+										<li id="comment-129796" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129796" title="">Monday, 15 July 2019</a>
+							</div>
+						<p>:p</p>
+						</li>
+
+										<li id="comment-129799" class="commentbody"><div class="commenthead"><img alt='Princess Rik`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Princess Rik</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129799" title="">Tuesday, 16 July 2019</a>
+							</div>
+						<p>As a theoretical alternative, each block can consist of one single splitting tx, 200 bytes in headers and output addresses for the remainder 999800 bytes, coming to exactly 29405 of them.</p>
+						</li>
+
+										<li id="comment-129800" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129800" title="">Tuesday, 16 July 2019</a>
+							</div>
+						<p>Inspired by Princess Rik's comment, could not resist to actually calculate. Suppose objective were to frag ~one~ "whole btc" into 1sat. spendables.</p>
+<p>Block header: version (4 byte) + prevblockhash (32 byte) + merkleroothash (32 byte) + timestamp (4 byte) + timestamp (4 byte) + difficulty (4 byte) + nonce (4 byte) + txcount (3 byte, in our case, it's a 'varint', i.e. 0xFD then 2 byte unsigned int) == 83 byte, leaving 999917 for transactions.</p>
+<p>Then the mega-tx, considering all but the output-count and outputs themselves: version (4 byte) + inputcount (1 byte, varint, but we have 1 input) + the input (outpoint (32 byte tx hash) + index (4 byte) + signaturescript length (1 byte) + script itself (139 byte, afaik, minimal meaningful) + sequence (4 byte)) + locktime turd (4 byte) : 189 bytes; this leaves 999702 for the remaining data.</p>
+<p>Now an output wants 8 bytes for the value, 1 byte for script length, and 25 for script, i.e. 34 bytes per. (still ignoring the output-count.)</p>
+<p>999702 would hold 29403 outputs evenly. But! we also need output count (in this case, a 3-byte shitoshi 'varint' (i.e. 0xFD then 16 bits.)) So we can't have 29403, and must settle for 29402.</p>
+<p>So 29402*34 and then we add the 3byte count, 999671 byte block, cuts one input into 29402 outputs.</p>
+<p>Now taking one coin as 1e8 shitoshi, one such block can cut it among 29402 addrs, of which say each but the last will receive 3401 s., while the last gets 3798. Let's call this type of frag block 'a'.</p>
+<p>To actually frag a 'whole coin' into 1 s. per unique spendable addr, supposing someone were willing to mine this (let's suppose), you can do ~8 (for simplicity let's pessimistically ignore the 3798) of the above parcels in 1e6 block. This we can call 'b', the 2nd level of recursion. I.e. you need 1 'a' + ~(29402 / 8)=3675 'b' to properly pulverize 1 'whole coin', i.e. 3676 fraggism blocks. 21e6 coins, supposing they all started 'whole' (granted they are ~not~ whole in reality) would need 21e6 * 3676 == 77196000000 blocks.</p>
+<p>If block takes ~10min avg. to mine, then 77196000000 * 10 / 60 / 24 / 365 == 1468721 , ~1.5 mil. years, are needed. (again supposing there were no fraggage today to begin with, but the fraggage there is appears to be a droplet in the necessary ocean.) So in fact I stand corrected, Sol will ~not~ burn out!</p>
+<p>Who wants, can re-do this calc for larger frags (suppose 1000 sat. is already 'dust', and can leave off there.)</p>
+						</li>
+
+										<li id="comment-129801" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129801" title="">Tuesday, 16 July 2019</a>
+							</div>
+						<p>*errata: listed in para. 2 'timestamp' twice, but the sum there is correct, i.e. 4 + 32 + 32 + 4 + 4 + 4 + 3 == 83.</p>
+						</li>
+
+										<li id="comment-129802" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129802" title="">Tuesday, 16 July 2019</a>
+							</div>
+						<p>If 1k is already dust, and can leave there, it's 1468.721 year, ie less time than when Seneca walked the Earth.</p>
+<p>And Seneca <em>did</em> in fact walk the Earth, and he <em>did</em> in fact have a name, being both familiar with the concept equally as we are and also using it practically as we do. He'd even have <em>spelled it</em>, much like we spell things in general ; and he'd have done it exactly like we do it in practice, also : S E N E C A.</p>
+<p>There exist human artefacts, both of the material and of the ideal kind, which perdure past the millenia. Bitcoin isn't the first.</p>
+<p>Bitcoin merely is the greatest.</p>
+						</li>
+
+										<li id="comment-129826" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129826" title="">Tuesday, 16 July 2019</a>
+							</div>
+						<p>1468.721y. supposing no one ever again did anything but emit fragolade per given recipe. But indeed. (Before say "lasts like Seneca" though, really ought to fix the 2030s constant overflow, and other, subtler, protocol bugs.)</p>
+						</li>
+
+										<li id="comment-129833" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129833" title="">Tuesday, 16 July 2019</a>
+							</div>
+						<p>Quite.</p>
+						</li>
+
+										<li id="comment-150529" class="commentbody"><div class="commenthead"><img alt='blockchain`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">blockchain</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-150529" title="">Thursday, 14 May 2020</a>
+							</div>
+						<p>Some extremely valid points!</p>
+						</li>
+
+										<li id="comment-150531" class="commentbody"><div class="commenthead"><img alt='karl`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">karl</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-150531" title="">Thursday, 14 May 2020</a>
+							</div>
+						<p>I’m not that much of a online reader to be honest but your blogs really nice, keep it up!</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-132756">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://qntra.net/2019/12/alphabets-youtube-takes-down-bitcoin-and-crypto-videos-before-quickly-restoring-them-as-irrelevant/?b=Youtube%20su&amp;e=Youtube%20subsidary%20briefly%20removed%20large%20numb' class='url'>Alphabet&#39;s Youtube Takes Down &quot;Bitcoin and Crypto&quot; Videos Before Quickly Restoring Them As Irrelevant | Qntra</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132756" title="">Friday, 27 December 2019</a>
+					</div>
+					<p>[...] Youtube subsidary briefly removed large numbers of &#34;Bitcoin and cryptocurrency&#34; videos after designating their content &#34;harmful or dangerous&#34;, [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="85030" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834204-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-85030")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-85030");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-85030");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

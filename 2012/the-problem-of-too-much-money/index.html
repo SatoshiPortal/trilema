@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The problem of too much money on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The scandalous blog of a sexual predator.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-44259"><div class="post" id="post-44259">                    <h1><a href="http://trilema.com/2012/the-problem-of-too-much-money/" rel="bookmark" title="Permanent Link to The problem of too much money">The problem of too much money</a></h1>                        <div class="date">                                     Monday, 26 November, Year 4 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>No such thing, right ? Heh. Let me illustrate how this goes : </p>
+<blockquote><p><strong>Engineer</strong> : Hi, I would like to make a car and need financing.<br />
+<strong>Financier</strong> : How much would you need ?<br />
+<strong>Engineer</strong> : Well... about 5k I think.<br />
+<strong>Financier</strong> : Tell you what, you're our beloved Engineer and we trust you. So we'll give you 50k.<br />
+<strong>Engineer</strong> : O gosh jolly. Well in that case... I won't make a car anymore. I'll make a talking tin woman.<br />
+<strong>Financier</strong> : You have any experience with making tin women ?<br />
+<strong>Engineer</strong> : Not really... but I've always dreamed of trying it, ever since I was a kid!<br />
+<strong>Financier</strong> : Do you have any reason to suspect a tin woman can even be made in the first place ?<br />
+<strong>Engineer</strong> : Not really, so why not ?<br />
+<strong>Financier</strong> : Sounds legit. Here's the 50k.</p></blockquote>
+<p>Does that sound legit to you ? It doesn't, does it. It sounds motherfucking insane on a stick, doesn't it. Well... that's kind of unfortunate, because it happens to be exactly how inflationary economies work (to revisit <a href="http://trilema.com/2012/lets-dig-a-little-deeper-into-this-entire-deflation-problem/">that old topic</a>). We have the problem of way too much money, useless stupid unwanted money that nobody knows what to do with.</p>
+<p>Take the example of LTCM (Long Term Capital Management). A douche by the name Meriwether got kicked out of Salmon Brothers<sup><a href="#footnote_0_44259" id="identifier_0_44259" class="footnote-link footnote-identifier-link" title="For allowing some subordinate to make a false bid on US Ts, then to cover it up, then spending four months dicking around with the rest of the big whigs on the topics of who shall call whom to report it, all the while allowing the subordinate in question to retain his position, make another fake bid, get investigated and land Meriwether a 50k civil penalty.">i</a></sup> and not wanting to enter any regulated trade he set up shop as a hedge fund<sup><a href="#footnote_1_44259" id="identifier_1_44259" class="footnote-link footnote-identifier-link" title="Which are, or at least were, pretty much immune to any regulation, on the theory that if rich people want to waste their money let them and if they don't let them do their due diligence themselves as they can afford it and should know better.">ii</a></sup>. He hired Scholes, of Black-Scholes fame and Merton, of Merton Model fame, and a bunch of other people. </p>
+<p>The idea was quite slick and pretty workable : Each year there's a new issue of 30 year Treasuries. These are very liquid, being "on the run". Last year's treasuries, being "off the run" aren't quite as liquid. Because of this, they're a little cheaper than their 30 year counterparties would imply. Factually there's not much reason for this difference, the two make the same, come from the same issuer etc. They're equal instruments in pretty much all aspects, but they're still distinct and as such there's discrepancies in price. The idea was to arbitrage this difference. </p>
+<p>LTCM collected over one billion dollars in capital. If you've been following up to here you probably have a question in your mind : what in the world were they going to do with a billion of their own money ? Good question. The fund had access to heavy leverage, as high as 100:1 in many cases. One billion leveraged 100:1 means one hundred billion, and turn it any way you please there's not going to be room for deplyoing a hundred billion in capital for the purpose of arbitraging minute differences between the 29 y T and the current T. There just can't be.</p>
+<p>So they started dicking around with stock options, betting on mergers, the works. At some point they were the main seller of vega on the S&#038;P 500, which was in great demand (precisely because the market knew anyone selling it is going to bite a steel girder). </p>
+<p>The crater left behind their implosion still stands. The cause of that crater ? </p>
+<blockquote><p><strong>Financier</strong> : How much would you need ?<br />
+<strong>Engineer</strong> : Well... about 5k I think.<br />
+<strong>Financier</strong> : We'll give you 50k.</p></blockquote>
+<p>Why ? Because there's money, fake, bullshit, useless, fiat money constantly being pumped into the economy. This money is <strong>a fucking burden</strong> of the first degree on the shoulders of the people who do capital allocation, which is to say the investment bankers, fund managers and all the rest of the "evil" "financial elite". You see, the curse of money is that you have to do something with it. You can't simply take the Seinfeld out and "Why should my money work for me ? Let my money relax, I've worked hard enough for it."</p>
+<p>So what are you going to do with it ? Tin women, that's what.</p>
+<p>The problem inflationary currency bestows upon capital allocators is insolvable. They are given money of no certain value (pretty much the only sure thing about the paper currency is that it is, literally, burning in your hands, it ticks away like a bomb, it blows in the wind like dust - all this while you're holding it) and have  to do something with it. They always, always, always, absolutely always have more than is in fact needed. </p>
+<p>The end result ? Well... certainly not more nigger homeowners, certainly not more teenage responsible mothers, certainly not more of the hungry clothed and certainly not more of the shivering fed. There's just as many homes and homeowners, teenagers and parents, food and clothes as there were before. Those things of the real world are inelastic, and as discussed in the linked article no matter how much "money" Bernanke helicopters into the state of New York, not one single turkey is going to materialize out of thin air. Money does not make prosperity, money simply measures prosperity that already <strong>and independently</strong> exists.</p>
+<p>The end result is nothing else than a horde of poor unfortunate fucks running around like headless chickens trying to stuff bills where they don't belong, trying to give engineers that need 5k to build a car 50k instead and generally speaking wreaking all sorts of havoc. </p>
+<p>Capital misallocation is the magic word. Inflationary systems produce it, necessarily, unavoidably and unerringly. Capital misallocation is the feared word. Its effects are the Holodomor, its effects are the collapse of Socialism, both in Russia and Eastern Europe, its effects are without exception and without possible salvation unmitigated disaster.</p>
+<p>Capital misallocation is actually the principal reason inflationary models do not hold, do not work and do not help. Let capital allocators allocate capital, rather than impersonate headless chickens. We'll all be better off for it. Including the hungry, the cold, the ethnically colored and the lusciously hipped. Everyone'll be better off, just leave the currency be.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_44259" class="footnote">For allowing some subordinate to make a false bid on US Ts, then to cover it up, then spending four months dicking around with the rest of the big whigs on the topics of who shall call whom to report it, all the while allowing the subordinate in question to retain his position, make another fake bid, get investigated and land Meriwether a 50k civil penalty. [<a href="#identifier_0_44259" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_44259" class="footnote">Which are, or at least were, pretty much immune to any regulation, on the theory that if rich people want to waste their money let them and if they don't let them do their due diligence themselves as they can afford it and should know better. [<a href="#identifier_1_44259" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2012/gtrl-or-gtfo/">GTRL or GTFO.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2012/the-nigger-homeowners-and-other-niggers/">The nigger homeowners and other niggers</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2012/the-problem-of-too-much-money/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2012/the-problem-of-too-much-money/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>42 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-90665" class="commentbody"><div class="commenthead"><img alt='Omega Peter`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Omega Peter</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90665" title="">Monday, 26 November 2012</a>
+							</div>
+						<p>Aparent toti stim ce sa facem cu ei, real....cam deloc</p>
+						</li>
+
+										<li id="comment-90727" class="commentbody"><div class="commenthead"><img alt='Paul Troon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Paul Troon</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90727" title="">Wednesday, 28 November 2012</a>
+							</div>
+						<p>Best article yet; the popular focus on inflation when talking about central bank money printing is too simplistic.   The misallocation story is much more to the point.   I did not fully understand it when Detlev Schlichter tried to describe the misallocation problem in his book; your way is much easier to understand.   I hope "tin women" becomes a new shorthand for the effects of fiat debasement.</p>
+						</li>
+
+										<li id="comment-90728" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90728" title="">Wednesday, 28 November 2012</a>
+							</div>
+						<p>@<b>Paul Troon</b> Hehe I guess that's a dis<b>tin</b>ct possibility.</p>
+						</li>
+
+										<li id="comment-98522" class="commentbody"><div class="commenthead"><img alt='Seraph`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Seraph</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98522" title="">Monday, 17 March 2014</a>
+							</div>
+						<p>Thank you for writing this. Brilliant and insightful, easy to understand. I will be sharing widely.</p>
+						</li>
+
+										<li id="comment-98523" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98523" title="">Monday, 17 March 2014</a>
+							</div>
+						<p>My pleasure.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-99507">
+					<div class='trackhead'>
+						<div class="commentcount">6</div>
+						<span class="authorlink"><a href='http://bitcoinpete.com/2014/05/01/plastic-zerg-laughing-protoss/' class='url'>Plastic Zerg, Laughing Protoss | When Bitcoin Met Pete</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-99507" title="">Saturday, 3 May 2014</a>
+					</div>
+					<p>[...] this is a problem of Zerg being &#8220;people.&#8221; A problem somewhat related to the problem of too much money : when you construct a welfare state so the scum of society doesn’t starve, because “they’re [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-102677">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink"><a href='http://bitcoinpete.com/2014/07/14/kickstarter-is-a-waste-pirate-is-a-skyscraper/' class='url'>Kickstarter Is A Waste, Pirate Is A Skyscraper | When Bitcoin Met Pete</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-102677" title="">Monday, 14 July 2014</a>
+					</div>
+					<p>[...] Ponzi schemer in the history of the world. Bernie Madoff will be but a footnote of his. [&#8617;]The problem of too much money pe Trilema. [&#8617;]Turns out you don&#8217;t want a playground that&#8217;s too safe. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-107735">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://contravex.com/2014/09/14/peter-diamandis-is-a-lab-modified-organism/' class='url'>Peter Diamandis Is A Lab Modified Organism | Contravex: A blog by Pete Dushenski</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-107735" title="">Sunday, 14 September 2014</a>
+					</div>
+					<p>[...] SV State Religion is, of course, the rewarming of socialist ideals in a bezzle-flavoured wrapper of too much money and technological salvation. [&#8617;]This is the conflation of absence of evidence for evidence [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-120171">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://cascadianhacker.com/how-to-learn-programming' class='url'>"How To Learn Programming" &laquo; CH</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-120171" title="">Tuesday, 27 December 2016</a>
+					</div>
+					<p>[...] referring to other documents, semantically organizing the world's knowledge, it got as full-bore tin-woman as you might expect with very bad results). Eventually, some well-intentioned asshole (funny how it [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130379">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://bingology.net/2018/02/24/conscious-contact-and-other-things/?b=times&amp;e=#select' class='url'>Conscious Contact And Other Things &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130379" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] times you have to look backwards to bring light to a problem of the present. Too much money is a problem. There would be quite a number of ways to shortcut bringing and ISP into existence by throwing [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130381">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://bingology.net/2018/02/24/conscious-contact-and-other-things/?b=Idon&amp;e=#select' class='url'>Conscious Contact And Other Things &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130381" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] I don't see having more fiat demonimated capital on hand leading to any effect other than it getting flushed into all sorts of tin women and away from Republican [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132305">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://ztkfg.com/2019/11/a-helpful-handbot/?b=credit%20car&amp;e=credit%20cards%20wreak%20havoc%20on%20the%20economy.%20They%20destroy%20capital%20allocation%20by%20burdening%20everyone%20with%20even%' class='url'>A helpful han(d)bot &laquo; whaack</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132305" title="">Friday, 15 November 2019</a>
+					</div>
+					<p>[...] credit cards wreak havoc on the economy. They destroy capital allocation by burdening everyone with even more money. I would love to get rid of my card, perhaps in style., but I don't know if that would be prudent. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-138988">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/the-nigger-homeowners-and-other-niggers?b=you%20possibly&amp;e=pic%2C#select' class='url'>The nigger homeowners and other niggers on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-138988" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] you possibly imagine, the previous article on the problem of too much money has created a lot of debate. All this debate had little to do with the article's main topic, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139228">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-future-of-bitcoin-regulation?b=is%20possibly%20&amp;e=s%20an#select' class='url'>The future of Bitcoin regulation on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139228" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] is possibly the last chance to take those piles of fundamentally worthless US dollars and use them for something with any sort of future value.  &mdash;&mdash;&mdash;There's an [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139244">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-dilemma-of-fake-money?b=banks%20are%20pu&amp;e=%20all#select' class='url'>The dilemma of fake money on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139244" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] banks are pushing around "to provide liquidity" are the very core of the "too much" part in the too much money problem of fiat, they're that money which only exists as long as nobody seriously intends to spend it. You know all [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139298">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-wonder-of-inflation?b=situation%2C%20w&amp;e=%2C%20or#select' class='url'>The wonder of inflation on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139298" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] situation, which is exactly what money is supposed to buy, but let's not get into this discussion again. [&#8617;]   Category: SUA care este     Comments feed : RSS 2.0. Leave your own comment below, or [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139590">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/bitcoin-as-replacement-for-the-electoral-system?b=costs%20is%20tha&amp;e=tter#select' class='url'>Bitcoin as replacement for the electoral system on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139590" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] costs is that this is a burden that will actually have to be borne - Bitcoin isn't Bernankoin to just keep printing worthless fiat paper. So yes, indeed I could have a more refined system in place, that better [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139771">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/why-dogecoin-is-a-scam-why-the-people-pushing-it-are-assholes-why-business-insider-is-a-contemptible-piece-of-shit-why-anyone-who-ever-worked-for-it-will-be-dancing-in-the-stre' class='url'>Why Dogecoin is a scam, why the people pushing it are assholes, why Business Insider is a contemptible piece of shit, why anyone who ever worked for it will be dancing in the street for nickels and why Kevin Rose is a fuckwit. Plus other considerations. o</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139771" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] The "problems Bitcoin faces". Like you know, the imaginary problem of "deflation", as if Bicoin was in fact deflationary. Here's a hint : it isn't, and no amount of repeating a falsehood will make it count. As if the dollar can in fact survive the problems its inflationary nature bestows upon the economy. Here's a hint : it couldn't possibly. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139827">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/mpoe-february-2014-statement?b=behind%20this%20&amp;e=this#select' class='url'>MPOE, February 2014 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139827" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] behind this system being that a Put is simply a promise to deliver strike dollars, and fiats being extremely easy to obtain it's not particularly difficult for a well connected, well capitalised party to simply cover this [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139882">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/an-era-ends-today-a-new-era-starts-today?b=much%20more%20mo&amp;e=m%20to#select' class='url'>An era ends today. A new era starts today. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139882" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] much more modest Bitcoin monetary mass is about 10 million. The application of the same proportion would seem to [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140048">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/idiocy-without-borders-idiots-sans-frontieres?b=I%20buy%20parts.&amp;e=ople#select' class='url'>Idiocy without borders / Idiots sans frontieres on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140048" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] I buy parts. Like fucking sane people. [&#8617;]A problem somewhat related to the problem of too much money : when you construct a welfare state so the scum of society doesn't starve, because "they're people [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140525">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/money-fucking-and-lying?b=the%20other%2C%20i&amp;e=%20the#select' class='url'>Money, fucking and lying on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140525" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the other, in The problem of too much money Why ? Because there’s money, fake, bullshit, useless, fiat money constantly being pumped into the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140594">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/how-to-deal-with-pseudoscience?b=and%20its%20exac&amp;e=lds.#select' class='url'>How to deal with pseudoscience ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140594" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] and its exact workings, the precise manner in which it wages an attrition war it can't lose against fiat currency, and the welfare state dependent upon that fiat currency, can be readily expanded to other fields. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140714">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/minigame-smg-november-2014-statement?b=There%27s%20noth&amp;e=akes#select' class='url'>MiniGame (S.MG), November 2014 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140714" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] There's nothing more corrosive to a state, and a society, and ultimately a culture, than fake money. It's the curse of fucking doom, you don't even need enemies if you got that. undata It makes [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140770">
+					<div class='trackhead'>
+						<div class="commentcount">25</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-sexodus?b=sitting%20in%20a&amp;e=t%20as#select' class='url'>The "sexodus". on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140770" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] sitting in a room doing needlework was cheap, for whatever reasons (such as overpopulation and generally inflation) female education flowers and men count as [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141173">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/more-problems-of-meta?b=that%27s%20a%20dif&amp;e=%20%20%20%20#select' class='url'>More problems of meta. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141173" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] that's a different discussion. [&#8617;]And this isn't the only problem meta-existance brings. See tin women for another. [&#8617;]How did you think Athens failed ? [&#8617;]   Category: SUA care este     [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141581">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/you-know-what-gets-no-airplay-unflattering-truth?b=also%20have%20mo&amp;e=very#select' class='url'>You know what gets no airplay ? Unflattering truth. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141581" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] also have money is a key factor in the success of any Ponzi scheme, and a required contributor to financial misallocation and economic instability (you know these as "growth" and "social mobility", because you're so very [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141607">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/how-the-world-worked-back-when-the-world-worked?b=is%20the%20impor&amp;e=trol#select' class='url'>How the world worked back when the world worked on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141607" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] is the important point : not "how much" as some sort of absolute term (which absolute is necessarily meaningless) but, in the Bitcoin fashion, how much as a relative share of the total. One that did not control [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141788">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/okcupidcom-the-dating-site?b=thousands%20of&amp;e=ocus#select' class='url'>Okcupid.com, the dating site. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141788" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] thousands of "different" spamsites scattered across 50 or so language spaces. [&#8617;]They're way, way oversupplied. The reasons they're oversupplied are not hard to understand : the US Government exists as a focus [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141835">
+					<div class='trackhead'>
+						<div class="commentcount">30</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/thats-right-time-to-move-on-please-do-bitcoin-is-really-not-for-you?b=for%20you.%20%26md&amp;e=%3B%5D%20%20#select' class='url'>That's right, time to move on. Please do. Bitcoin is really not for you. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141835" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] for you. &mdash;&mdash;&mdash;English as a single language. [&#8617;]Add that VC's have money (no, they don't), and that they matter in the world (no, they don't) and tons and tons of other things. [&#8617;]   [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142362">
+					<div class='trackhead'>
+						<div class="commentcount">31</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/fred-wilson-is-an-idiot-and-other-things?b=think%20Fred%20W&amp;e=hink#select' class='url'>Fred Wilson is an idiot, and other things on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142362" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] think Fred Wilson is good for anything other than wasting wealth away ? He ain't. I'd know. You think he's a business man ? He's a businessman of that kind. You think [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142451">
+					<div class='trackhead'>
+						<div class="commentcount">32</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/the-text-and-the-piddly-recantion?b=to%20get%20your%20&amp;e=ture#select' class='url'>The text ; and the piddly recantion on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142451" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] to get your telescope correctly calibrated for this topic. One's that one with the tin women : the problem of too much money ; the other's the sad story of how the US ignored the warning and then lost its future : The future [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142648">
+					<div class='trackhead'>
+						<div class="commentcount">33</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/observations-on-certain-documents-contained-in-the-history-of-the-united-states-for-the-year-1796-in-which-the-charge-of-speculation-against-alexander-hamilton-late-secretary-o' class='url'>Observations on certain documents contained in the history of the United States for the year 1796 in which the charge of speculation against Alexander Hamilton, late secretary of the treasury is fully refuted. Written by himself. Adnotated by myself. on T</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142648" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] trying in the same manner : making "businessmen" out of hand puppets through liberal application of imaginary money ; making "soldiers" out of cowardly capons through liberal application of Pulizer prostitutes ; [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142684">
+					<div class='trackhead'>
+						<div class="commentcount">34</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/ideological-history-of-the-republic?b=2013%5D%20A%20conc&amp;e=many#select' class='url'>Ideological History of the Republic on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142684" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] 2013] A concise explanation of the functioning of inflation in socialism is unearthed. While in no sense novel, this snippet will nevertheless prove extremely influential in shaping Republican thinking for many [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142845">
+					<div class='trackhead'>
+						<div class="commentcount">35</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/the-conundrums-of-the-contemporaneous-financier?b=Yes%20the%20rela&amp;e=very#select' class='url'>The conundrums of the contemporaneous financier on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142845" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Yes the relation to tin women is very [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145218">
+					<div class='trackhead'>
+						<div class="commentcount">36</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/the-problems?b=with%20the%20wor&amp;e=%2C%20by#select' class='url'>The problems on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145218" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] with the word "money" (as fucking if) will necessarily result in the useless, obnoxious shit piling in the way but also finding its way everywhere, including in hats, upturned or not, held out or not, by [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147193">
+					<div class='trackhead'>
+						<div class="commentcount">37</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-magics-of-cereal-boxes?b=term.%20As%20a%20r&amp;e=t%20is#select' class='url'>The magics of cereal boxes on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147193" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] term. As a result the abstract downstream of a node was moved, to make way for socialism's ever-inflating needs of self-representation, while the concrete downstream was neglected in place. The result is [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-153479">
+					<div class='trackhead'>
+						<div class="commentcount">38</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/thelastpsychiatristcom-christopher-columbus-was-wrong-adnotated/?b=long%20abandon&amp;e=ning#select' class='url'>thelastpsychiatrist.com - Christopher Columbus Was Wrong. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-153479" title="">Monday, 10 August 2020</a>
+					</div>
+					<p>[...] long abandoned any semblance of meaning. [&#8617;]It's not just okay. It's absolutely needed by the tin women society of morons. Here, listen to this sample of out and out imbecility :  America's reckoning [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-153840">
+					<div class='trackhead'>
+						<div class="commentcount">39</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/pp-irloff/?b=you%27ve%20never&amp;e=%20let#select' class='url'>P&#38;P, irl&#38;off on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-153840" title="">Monday, 24 August 2020</a>
+					</div>
+					<p>[...] you've never the fuck seen anywhere else, it's utterly post-pantsuit meaningful in terms of the meanings of pantsuit currency. Obviously it's no fun to be blitzed constantly and consistently, without let [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-158965">
+					<div class='trackhead'>
+						<div class="commentcount">40</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/joseph-bekannt-joe/?b=twitter%20refe&amp;e=bles#select' class='url'>Joseph, bekannt Joe on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-158965" title="">Tuesday, 19 January 2021</a>
+					</div>
+					<p>[...] twitter reference was not in the slightest misplaced : the imbecility machine's been working its wonderous inflation, and so now the problem's aggrieved : far from the legions of tarabostes, little knownii nobles [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-164021">
+					<div class='trackhead'>
+						<div class="commentcount">41</div>
+						<span class="authorlink"><a href='http://dorion-mode.com/2021/05/simple-steps-part-3-smiling-dialing-and-closing/?b=2010%2C%20etc.%20a&amp;e=h%20of#select' class='url'>Simple Steps Part 3: Smiling, Dialing and Closing &laquo; Dorion Mode</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-164021" title="">Saturday, 22 May 2021</a>
+					</div>
+					<p>[...] 2010, etc. about the fundamental imbalances caused by the FED fixing interest rates too low, i.e. the problem of too much money, that would ultimately lead to massive price corrections that'd likely result in a big bunch of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-164115">
+					<div class='trackhead'>
+						<div class="commentcount">42</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/the-difference-between-me-and-everyone-else-i-havent-a-sense-of-humour-or-hahaha-lalala/?b=%26mdash%3B%26mdas&amp;e=cent#select' class='url'>The difference between me and everyone else : I haven't a sense of humour, or hahaha-lalala on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-164115" title="">Tuesday, 25 May 2021</a>
+					</div>
+					<p>[...] &mdash;&mdash;&mdash;And that's a grand of last decade's money, easily twice if not outright thrice the value of today's sad fiat. [&#8617;]Sadly I didn't screenshot, but the girls did giggle at, this recent [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="44259" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832770-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-44259")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-44259");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-44259");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The Bitcoin Drama Timeline on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Din bube, mucegaiuri si noroi<br />Mi-am facut bici, si m-am cicat pe voi.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-44660"><div class="post" id="post-44660">                    <h1><a href="http://trilema.com/2012/the-bitcoin-drama-timeline/" rel="bookmark" title="Permanent Link to The Bitcoin Drama Timeline">The Bitcoin Drama Timeline</a></h1>                        <div class="date">                                     Sunday, 09 December, Year 4 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>This must be preserved for future generations.</p>
+<hr />
+<p><strong>13 June 2011</strong> "Allinvain" announces the loss of ~25`000 BTC (all mined). The proximate cause would be the idiocy of Bitcoin-qt developers, who released about five versions of the thing before making the wallet encryptable. Consequently, <strong>for years</strong>, someone could lose all his coins simply by having one file read. Yes, they were that fucking stupid.</p>
+<p><strong>Total loss</strong>: 25k BTC (declared).</p>
+<hr />
+<p><strong>19 June 2011</strong> - MtGox<sup><a href="#footnote_0_44660" id="identifier_0_44660" class="footnote-link footnote-identifier-link" title="Ex pokemon-trading website turned into BTC exchange. Not worth as much as MPEx.">i</a></sup> <a href="http://www.dailytech.com/Inside+the+MegaHack+of+Bitcoin+the+Full+Story/article21942.htm">is hacked</a>. </p>
+<blockquote><p>I have hacked into mtgox database. Got a huge number of logins password combos.<br />
+Mtgox has fixed the problem now. Too late, cause I've already got the data.</p>
+<p>Will sell the database for the right price.<br />
+Send your offers to:<br />
+gfc06@hotmail.com</p></blockquote>
+<p>Amusingly, reports about the security such as it was having been breached were trickling in for weeks prior. Tis impossible to evaluate the actual loss with this one, but suffice it to observe that BTC was temporarily trading for 1 cent at the time.</p>
+<hr />
+<p><strong>26 July 2011</strong> Bitomat.pl, mostly serving the Polish exchange market goes down because "human error". </p>
+<blockquote><p>On 26 July 2011 at about 11:00 PM, I noticed that bitcoin server was out of resources and I had to increase RAM. As a result of this operation, the virtual machine was deleted and all data lost, including bitcoin wallet and its backups.</p>
+<p>I have established that data was lost because settings of the virtual machine were changed, although I didn’t change them myself. Amazon Web Services Company, which hosts our servers, says that the cleared machine has been set up to be irretrievably destroyed (including the data on the disks) at the shutdown.</p>
+<p>I’m still trying to establish who has changed the settings and whether I will be able to recover the lost data. Unfortunately cooperation with Amazon Web Services is very difficult. As soon as I realized that my virtual machine was lost I have ordered AWS premium support, talked to the manager and asked for securing of the disk data. So far, without success.</p></blockquote>
+<p>Basically, the guy kept his wallet.dat in a ramdisk which went away. </p>
+<p><strong>Total loss</strong> : 17k BTC (declared). MtGox (under new-ish management) acquired the exchange for the value of the loss and made good to the customers.</p>
+<hr />
+<p>Also in <strong>July 2011</strong> Ubitex, one of the three scams then running on GLBSE<sup><a href="#footnote_1_44660" id="identifier_1_44660" class="footnote-link footnote-identifier-link" title="The Global Scam Exchange, owned and operated by a collection of Bitcoin's funniest">ii</a></sup> packed up and left. Yes, just like that.</p>
+<p><strong>Total loss</strong> : 1k BTC (estimated)</p>
+<hr />
+<p><strong>5 August 2011</strong> Mybitcoin.com<sup><a href="#footnote_2_44660" id="identifier_2_44660" class="footnote-link footnote-identifier-link" title="Probably the first web wallet">iii</a></sup> vanishes. A week later a mysterious Tom Williams announces that all ur BTC are belong to us. </p>
+<blockquote><p>On Friday of last week we noticed that one of our pooled holding servers was missing a large amount of Bitcoins. After a prompt investigation we realized that the security of our SCI (Shopping Cart Interface) system had been breached by an unknown attacker.</p>
+<p>Our response was rash, but necessary. We simply switched the system off until we could have system-wide forensics performed. The forensics took some time, as the system is quite complex by nature.</p>
+<p>After weighing all of our options, we have realized that we have no option but to go into receivership. We will settle all accounts with a online claim process that we are currently in the process of working out.</p>
+<p>We will release more detailed information about the security breach, the claim process, and our balance sheet in the next few days.</p></blockquote>
+<p><strong>Total loss</strong> : 100k BTC (estimated).</p>
+<hr />
+<p><strong>Oct 5th 2011</strong> Bitcoin7<sup><a href="#footnote_3_44660" id="identifier_3_44660" class="footnote-link footnote-identifier-link" title="An exchange I never heard of.">iv</a></sup> announces </p>
+<blockquote><p>Dear User,<br />
+Please read carefully the following critical announcement.</p>
+<p>On Oct 5th 2011 Bitcoin7.com became the victim of a number of pre-planned hacker attacks. While our investigation is still going, evidence reveals that the attacks originated from Russia and Eastern Europe.</p>
+<p>The attack itself took action not only against the bitcoin7.com server but also against other websites and servers which were part of the same network. Eventually the hackers managed to breach into the network which subsequently lead to a major breach into the bitcoin7.com website.</p>
+<p>As a result of the hacking, unknown individuals managed to gain full access to the site's main bitcoin depository/wallet and 2 of the 3 backup wallets.</p>
+<p>In addition the hackers gained access to our user database.</p>
+<p>Even though our faith in the bitcoin project and community remains as strong as it ever was, it is our responsibility to admit that the scale of the damage is far beyond our financial and physical capabilities.</p>
+<p>This is why we have decided to cease the operation of bitcoin7.com and instead of investing in new technology and personnel that could possibly help us overcome this unfortunate situation, we decided that we'd rather gather all possible finances through all possible means and initiate a crisis plan for reimbursing the lost balances of our users.</p>
+<p>This is also an open invitation to all interested investors which have interest in taking over the site at the only cost of recovering the stolen bitcoins.</p>
+<p>The crisis plan will take action over the next 90 days. On behalf of the management of bitcoin7.com we want to apologize for this extremely stressful situation.</p>
+<p>More specific updates will follow within the next 24 hours with detailed instructions about how to withdraw your funds.</p></blockquote>
+<p>It's not quite clear whether the hack was genuine or a set-up, hoping to cash in on the moral hazard brought about the bitomat.pl takeover.</p>
+<p><strong>Total loss</strong> : 10-15k BTC (estimated).</p>
+<hr />
+<p><strong>28 October 2011</strong> Mt. Gox was mysteriously hacked, about 3`000 BTC of customer funds stolen in a couple dozen transactions. MtGox reimbursed customers so there is no loss.</p>
+<hr />
+<p>Sometime in <strong>November 2011</strong> another one of the three scams then running on GLBSE, this one under the guise of a mining farm (SkepsiDyne Integrated Node) finally decided to man up and take the "investor's" GPUs. </p>
+<p><strong>Total loss</strong> : 1k BTC (estimate)</p>
+<hr />
+<p><strong>18 January 2012</strong> Yet another one of the scams then running on GLBSE<sup><a href="#footnote_4_44660" id="identifier_4_44660" class="footnote-link footnote-identifier-link" title="The third one of the triplet above (dishwara) went rogue at some point in this interval creating much drama in the forum, but having never taken in sufficient money to be worth the mention it quietly joins irrelevant scammer-wannabe's a la ciuciu etc.">v</a></sup> (this one under the guise of some sort of investment fund family, LIF.A, LIF.B, LIF.C, LIF.X) also packed. Selected quotes : </p>
+<blockquote><p>Quote from: Peter Lambert on January 18, 2012, 01:23:56 AM<br />
+For personal reasons, I have decided to get out of the bitcoin business. I have put up orders to buy back the outstanding shares of the LIF assets. </p>
+<p>Unfortunately, my trading strategy seems to have been flawed, we lost a bunch of money.</p>
+<p>Quote from: Nefario on January 28, 2012, 03:54:19 PM<br />
+I would like to thank Peter for fulfilling his obligations while winding up his company. I think he was a valuable part of the GLBSE community.</p>
+<p>Quote from: teek on January 28, 2012, 03:54:19 PM<br />
+He didn't really fulfil much, he just paid a dividend equal to the amount he was offering for his shares.  Which is roughly 15% of what they were the day before he made the announcement, a number alot of us were refusing to take.</p>
+<p>Quote from: 2weiX<br />
+fucking shit.<br />
+NOT A SINGLE ONE of my investents on GLBSE is in the green.
+</p></blockquote>
+<p><strong>Total loss</strong> : 2k BTC (estimated)</p>
+<hr />
+<p><strong>In February 2012</strong> it was discovered that Andrew Nollan aka shakaru had been running a confidence/loan scam, borrowing large amounts from multiple people who didn't know about each other. </p>
+<p><strong>Total loss</strong> : 10k BTC (estimated)</p>
+<hr />
+<p>Also sometime in <strong>February 2012</strong> about 3`000 BTC of missing funds in Bitcoinica<sup><a href="#footnote_5_44660" id="identifier_5_44660" class="footnote-link footnote-identifier-link" title="MPOE and Bitcoinica were born the same week, in that order. MPOE traded options, Bitcoinica was a sort of forex-y bucket shop.">vi</a></sup> came to light. The entire thing was pretty hush-hush.</p>
+<p><strong>Total loss</strong> : 3k BTC (estimated)</p>
+<hr />
+<p><strong>2 March 2012</strong> Linode<sup><a href="#footnote_6_44660" id="identifier_6_44660" class="footnote-link footnote-identifier-link" title="A VPS provider">vii</a></sup> was hacked (most likely an insider job, possibly just loose admin security policies) resulting in losses for two major BTC operations, Bitcoinica and Slush's pool (bitcoin.cz). This is the reason pretty much nobody should consider hosting with Linode.</p>
+<p><strong>Total loss</strong> : 47k BTC (declared)</p>
+<hr />
+<p><strong>7 March 2012</strong> Tradehill, at the time the second largest Bitcoin exchange closes down, claiming Dwolla stole its customer funds and threatens to sue. Dwolla demures, suit goes nowhere. Jared Kenna makes secret payments to select users. Partners with Jonathan Ryan Owens (see above) creating 20 Moves, which somehow magically has the capital to start real estate development in San Francisco. </p>
+<p><strong>Total loss</strong> : 200k BTC (estimate<sup><a href="#footnote_7_44660" id="identifier_7_44660" class="footnote-link footnote-identifier-link" title="Note this is disputed and may well be as low as 25k BTC.">viii</a></sup>)</p>
+<hr />
+<p><strong>11 April 2012</strong> Betco.in<sup><a href="#footnote_8_44660" id="identifier_8_44660" class="footnote-link footnote-identifier-link" title="BTC poker site.">ix</a></sup>  </p>
+<blockquote><p>server was hacked brutally. this time - not by stupid site bug, but something else. still looking.</p>
+<p>it would be fine, since I never keep all coins on server, but hacker was able somehow to hack into my laptop and desktop through vpn i have between my home and server and wiped all wallets i had in there.. have no clue how it was done yet. all machines uses different passwords and different ubuntu distro versions.</p>
+<p>still investigating. all money went there - http://blockexplorer.com/address/1L4kz6BA8mzi8KLV9VQ2pYcW8QQFVihWLg almost in the same time. </p>
+<p>this was quite sophisticated attack i must say..</p></blockquote>
+<p>Doesn't seem that sophisticated by comparison, but anyway.</p>
+<p><strong>Total loss</strong>: 2.9k BTC (declared).</p>
+<hr />
+<p><strong>20 April 2012</strong> Buyers on silkroad<sup><a href="#footnote_9_44660" id="identifier_9_44660" class="footnote-link footnote-identifier-link" title="Tor-based pill swapping/trading site.">x</a></sup> were taken by one Tony for a good chunk of change.</p>
+<p><strong>Total loss</strong>: 20k BTC (declared).</p>
+<hr />
+<p><strong>12 May 2012</strong> Bitcoinica in the news yet again, with yet another "hack" if it's what it was. Supposedly an insecure email address (being used for a mailing list) was escalating into somehow getting Bitcoins. </p>
+<p><strong>Total loss</strong>: 18k BTC (declared).</p>
+<hr />
+<p><strong>4 July 2012</strong> Paul Mumby/Bitcoin Sindicate absconds with 2k BTC of GLBSE user funds. Or otherwise,</p>
+<blockquote><p>- I slept until noon, and when I woke up I was still not feeling well, so I went and checked my email.<br />
+- In my email I discovered that On July 4th 2012, at 14:34:19 GMT (10:34am EDT my local time) there was a withdraw from my mtgox account.<br />
+- I checked and an IP address 130.83.54.115 Initiated a withdraw from my account at this time.<br />
+- Someone had gained access to my account illegally, they sold off the USD for bitcoin, and withdrew the bitcoin while I slept.</p></blockquote>
+<p><strong>Total loss</strong>: 2k BTC (declared).</p>
+<hr />
+<p><strong>13 July 2012</strong> Yet another dubious Bitcoinica "hack" which might have been theft etc. Basically, <a href="http://trilema.com/2012/amir-taaki-has-done-and-continues-to-do-huge-disservice-to-anyone-serious-involved-in-bitcoin/">Amir Taaki</a><sup><a href="#footnote_10_44660" id="identifier_10_44660" class="footnote-link footnote-identifier-link" title="From his vanity page :
+Amir Taaki was born 6 February 1988 in London, the eldest of three children of a Scottish-English mother and an Iranian father. From an early age Taaki took an interest in computer technology, teaching himself computer programming. After briefly attending several British universities, Taaki gravitated to the free software movement. Taaki assisted in the creation of SDL Collide, an extension of Simple DirectMedia Layer, an open source library used by video game developers. In 2006, Taaki became heavily involved in Crystal Space development under the pseudonym of genjix. He also developed a number of video games making use of free software, including the adventure game Crystal Core and the futuristic racer game Ecksdee. Taaki was also a participant in the Blender project Yo Frankie!. His experience with online gambling attracted him to the Bitcoin project. He founded a UK Bitcoin exchange called `Britcoin`, which was succeeded in 2011 by a new British exchange called Intersango, in which he is a principal. In April 2011, Taaki and Donald Norman established the Bitcoin Consultancy, a group focused on bitcoin project development.
+">xi</a></sup> "open sourced" proprietary code he sort of acquired or otherwise stole from Bitcoinica, which included a password which happens to have been reused on a high value email which could be leveraged and was leveraged to empty the hot wallet. </p>
+<p>Amusingly enough, the stolen funds were identified on AurumExchange, in the account<sup><a href="#footnote_11_44660" id="identifier_11_44660" class="footnote-link footnote-identifier-link" title="Same email as one used to open a known MtGox account, which makes identification pretty certain - are you starting to see a pattern here by the way ?">xii</a></sup> of none other than "Zhou Tong", the purported 14 year old original author of the codebase &#038; administrator of the site. </p>
+<p>His explanation ? He was framed! He was framed by none other than Chinese millionaire/relic hunter Chen Jianhai, who (the story goes) admitted to this even, in a heartfelt face to face, when told to his suprise that "this is a matter of international intrigue" (and world diplomacy)<sup><a href="#footnote_12_44660" id="identifier_12_44660" class="footnote-link footnote-identifier-link" title="This may sound like I'm making it up just to paraphrase Seinfeld. I am not.">xiii</a></sup>. And then paid the sum back. Yes, you have it right : the story is that the admin turned thief did not steal, but was framed by a millionaire who then disgorged his haul when told that "international".</p>
+<p><strong>Total loss</strong> : 45k BTC (declared).</p>
+<hr />
+<p><strong>31 July 2012</strong> BTC-E<sup><a href="#footnote_13_44660" id="identifier_13_44660" class="footnote-link footnote-identifier-link" title="Exchange.">xiv</a></sup> had its 16 character long secret API key broken. BTC-E declared about 4.5k BTC lost but covered for customers with their own funds.</p>
+<hr />
+<p><strong>16 August 2012</strong> : A bunch of either scammers or idiots (sorted from the likeliest scammer to the likeliest idiot : Jonathan Ryan Owens, Alberto Armandi, Meni Rosenfeld, Matthew Neal Wright, Ben Malec, James McCarthy, Ludvig Öberg) created a number of supposed services/companies/GLBSE assets (sorted from most to least amusing, <a href="http://www.reddit.com/r/Bitcoin/comments/ybaut/do_not_invest_in_bitdaytrade_this_website_is/">Bitdaytrade</a>,  Bitscalper, ZIP.A, Bitcoin Rebate, BDT, kronos.io). These failed in such a way that someone else from the remainder is to blame for it no matter how you select a subgroup of people/projects that doesn't include everyone and everything.</p>
+<p><strong>Total loss</strong> : 25k BTC (estimated).</p>
+<hr />
+<p><strong>18 August 2012</strong> Bitcoin Savings and Trust, the largest ponzi in Bitcoin history <a href="https://bitcointalk.org/index.php?topic=50822.msg854918#msg854918">finally</a> croaked. </p>
+<p><strong>Total loss</strong>: 500k BTC (estimate, upper ceiling).</p>
+<hr />
+<p><strong>4 September 2012</strong> Bitfloor<sup><a href="#footnote_14_44660" id="identifier_14_44660" class="footnote-link footnote-identifier-link" title="Yet another exchange.">xv</a></sup> found out it was storing an unencrypted wallet (see first item in this list) on a server. </p>
+<p><strong>Total loss</strong> : 24k BTC (declared).</p>
+<hr />
+<p><strong>6 September 2012</strong> Independent miner and premier Bitcoin Savings and Trust supporter Hash King closes up shop. Scammer tag issued on the forum against his vague promise to repay BTC owed over three years if investors agree to 70% haircut.</p>
+<p><strong>Total loss</strong>: 100k BTC (estimate, upper ceiling).</p>
+<hr />
+<p><strong>9 September 2012</strong> Matthew Neal Wright (mentioned above) had been offering interested parties bets on whether the Bitcoin Savings and Trust will fail or not. Numerous people took the bet, MNW failed to pay out when the collapse of that Ponzi scheme became fact. Consequently scammertagged in the forum.<sup><a href="#footnote_15_44660" id="identifier_15_44660" class="footnote-link footnote-identifier-link" title="It has been perhaps rightly argued that this entry doesn't belong here on the grounds that unlike all others, MNW accepted no coins from others, merely made stupid promises.">xvi</a></sup></p>
+<p><strong>Total loss</strong> : 50k BTC (estimate)</p>
+<hr />
+<p><strong>11 September 2012</strong> Ben Malec<sup><a href="#footnote_16_44660" id="identifier_16_44660" class="footnote-link footnote-identifier-link" title="Famous for, in the words of Something Awful, 
+So let me get this straight... The guy basically robbed his girlfriend of tens of thousands of dollars and defaulted on a mortgage after using the money his mother gave him... on imaginary internet money?
+or otherwise for being an unemployable jerkoff with delusions of self importance.">xvii</a></sup> announces his default in the funniest terms : he got out of pirate before it sunk which explains why it sinks him, he's going to make it right but please don't ask questions, he's got guns and something else. Literally :</p>
+<blockquote><p>I am defaulting on my BDK.BND debt. Beyond this, I will no longer be honoring the contract in the form I originally laid out. I previously intended to empty my non-legal wife's (we personally consider ourselves married, but legally, we are individual and thus have rights we'd otherwise forfeit) 401(k). I obviously did not want to do this, but it became clear it was necessary as I was looking at $200-250/wk interest on this single debt while having been financially raped by loans to various members of the community (No, Pirate is not the primary cause of my distress. Please don't turn this into some Pirate discussion.). After weeks of tha stress, on top of previous stress... heated arguments... -- this is no longer an option. I do not think her response to my actions is unreasonable (she's already effectively lost tens of thousands due to my actions), but this clearly affects my ability to repay within what I'd consider a reasonable time-frame. I currently have a negative net worth excluding my residence which would be protected under a personal bankruptcy filing which I will not pursue unless a suit is formally filed against me. I'd advise against taking action on potential cynicism, and suggest you give me at least a couple months to confirm I am indeed making a decent effort toward repaying what I owe.</p>
+<p>I am unable to pay interest on my current BDK.BND debt. It's impossible for me to keep up with that, living expenses, and interest on other debts which are small enough where I can close them - and I apologize, in a sense, for the unfairness of how this is being handled. BDK.BND-holders, who I've always wanted most protected from risk, are now getting the shaft. I cannot subject my wife to more loss, and will be forcing BDK.BND holders to suffer as a result of my unwillingness to liquidate my residence. I apologize for the trust I've violated, the business mismanagement, and this default as a result. If I were unable to compartmentalize, I would be unable to write this. I am truly and deeply sorry. I also apologize for not having the emotional fortitude to prevent what I'm also about to announce: I will not be communicating much, if at all. I will likely not read anything written in this thread beyond this post for months. I just can't handle it when there are many things I need to do to get the situation in order. I will not be responding to phone calls, Skype messages, nor responding to emails. I will not be clarifying what I've written, and will not be responding to questions. I just can't right now, and understand how bad that looks and is. Again, I apologize. I will post an impersonal message each time I make a dividend payment.</p>
+<p>All BTC I currently own will go toward BDK.BND payments. These will come in the form of irregular, unannounced dividends -- there will no longer be .001BTC/bond dividends each week. I will never buy BDK.BND back, and that section of the contract can be considered practically void. I can do nothing but assure everyone that I have no intent to make any purchases of BDK.BND units, and will allow them to trade freely on GLBSE as people value them given I have absolutely no information on when, and in what amount, these bonds will be repaid. However, I promise I will repay the debt as it stands, as I'm able. So long as GLBSE is active, I am alive, and earning income, I will continue to make dividend payments on BDK.BND units as a gesture of goodwill (and appreciation for not suing me into bankruptcy) beyond the .101BTC "hard debt" I currently consider as existing. Basically - I will be making larger, more rapid payments until dividends beyond this date reach .101BTC/bond. After that time, I will continue paying irregular dividends in a way which is appropriate for the gratitude I owe, and possible for the amount I need to live. I am unable to provide a repayment schedule or dividend schedule. Essentially - I'm giving what I can without forcing an unreasonable amount of loss (beyond what I've currently caused) onto my non-legal wife, and I naively hope everyone trusts me to be doing exactly what I'm saying I will. I'll provide instructions in my will to give an update (with death certificate) on this forum in the event of my death. Though things have been pretty poo poo lately, I am not at all suicidal -- just gave the info in that last sentence as an FYI.</p>
+<p>-Ben</p>
+<p>(Additionally... Someone may remember I recently posted assets/liabilities on my side. This included many of my non-legal wife's assets. The CU/bank assets have been largely emptied to repay CD-holders and my mother, who fronted us money to purchase this house [I've since defaulted on that loan, too, after a partial repayment so I could repay CD-holders]. There is still one outstanding CD-holder who has been excessively generous in providing me time to repay.)</p>
+<p>(Many individuals have my home address [NOT the Spring Arbor address. That is a family member's house. DO NOT release that address.]. I would prefer my home address not be released publicly, but would also not consider public release of that information unwarranted. If you are coming for a visit, I would like at least a voice message a day or two prior. Harm toward family's off-limits, and I would physically object to bodily harm which may result in my stay in a hospital, as that'd further impede repayment. I am armed, so please keep ideas of physical violence in check.)</p></blockquote>
+<p>Lengthy read but quite worth it as an illustration of the intellectual capacity of the average drama source.</p>
+<p><strong>Total loss</strong> : 30k BTC (estimated).</p>
+<hr />
+<p><strong>11 September 2012</strong> nckrazze<sup><a href="#footnote_17_44660" id="identifier_17_44660" class="footnote-link footnote-identifier-link" title="Yet another forum `bank`.">xviii</a></sup> went under. Pirate exposure. Scammer tag in forum. Some funny quotes : </p>
+<blockquote><p>Quote from: nckrazze on May 15, 2012, 09:41:24 PM<br />
+Though I have a great deal of personal savings that are invested with pirate, none of the coins deposited to NCKRAZZE's Deposits were used to deposit into BTCST.</p>
+<p>Quote from: nckrazze on September 10, 2012, 04:26:43 AM<br />
+Mostly due to bad planning on my part as well as a large flow of coins at once and the rising difficulty rate, I was unable to continue my mining project and ended up liquidating most of it. Around July 18th, I had completely liquidated all of the mining hardware that belonged to the Deposits Service. I kept a bit over 2000$ worth of hardware for myself (which were my personal assets), to continue generating coins with. My funds remained dormant until August 6th, when I decided that the magnitude of the payouts was too great for the coins to be sitting around for. For this reason, I chose to place all the funds with pirate and continue to payout weekly interest until terms were over. As terms ended, I would not offer term renewals, and would return all of the coins to the depositors.</p></blockquote>
+<p><strong>Total loss</strong> : 5k BTC (estimate).</p>
+<hr />
+<p>Mid <strong>September 2012</strong> it came out that then-CEO of Butterfly Labs<sup><a href="#footnote_18_44660" id="identifier_18_44660" class="footnote-link footnote-identifier-link" title="Famous for having taken pre-orders months in advance for delivering FPGAs, then missing the delivery date by about four months and delivering chips that were significantly below the original quoted specs but getting away with it because at least they delivered something, which did work for its intended purporse - a rare sight in BTC land. Famous for having taken even more pre-orders even more months in advance for delivering ASICs, then missing the delivery date by two months and counting.">xix</a></sup>, one Sonny Vleisides <a href="https://bitcointalk.org/index.php?topic=110805">had in fact been convicted of fraud</a>.</p>
+<p>The BFL board was reshuffled quietly and the matter is presently being ignored to the best of everyone's ability. Consequently, there's no loss to  associate with this item as of yet. The previous scam which resulted in the fraud conviction did cost the general public 19 million USD.</p>
+<hr />
+<p><strong>17 September 2012</strong> Mybitcointrade.com<sup><a href="#footnote_19_44660" id="identifier_19_44660" class="footnote-link footnote-identifier-link" title="Apparently some sort of HYIP flavour.">xx</a></sup> operated anonymously went away. </p>
+<p><strong>Total loss</strong> : 2k BTC.</p>
+<hr />
+<p><strong>Somewhat later</strong>, OBSI.*<sup><a href="#footnote_20_44660" id="identifier_20_44660" class="footnote-link footnote-identifier-link" title="A scammy/HYIP-y GLBSE asset run anonymously">xxi</a></sup> went away. </p>
+<p><strong>Total loss</strong> : 3k BTC.</p>
+<hr />
+<p><strong>28 September 2012</strong> Oliver Richman, aka Serena, Usagi &#038; al had been operating a number of various assets (NYAN.A, .B, .C purporting to be some sort of bonds ; CPA purporting to be some sort of insurer ; BMF purporting to be some sort of mining thing). Appaling accounting practices, cross-deals and inter-asset gifts in disregard of shareholder's rights, solidly reinforced by completely insane business moves (buying things known to be worthless for singificant premiums etc) pretty much ensured a complete loss for investors.</p>
+<p>The holder proceeded to have a complete mental meltdown in the forum (posts since deleted), declared famously that milk is a scammer, possibly made some efforts to repay his investors out of selling his guitar and in any event was conveniently rescued by the collapse of GLBSE and ensuing drama the next week.</p>
+<p><strong>Total loss</strong> : 1k BTC (estimated).</p>
+<p>Late <strong>September 2012</strong> Patrick McFarland aka DiabloD3<sup><a href="#footnote_21_44660" id="identifier_21_44660" class="footnote-link footnote-identifier-link" title="Known for having written the first java miner for Bitcoin">xxii</a></sup> came up with the idea of a "million BTC company" sometime in April. This was going to be some sort of mining venture then modified to datacenter then eventually further modified to include electricity generation and other lines. </p>
+<p>The subsequent GLBSE ipo yielded roughly 10k BTC for 10k shares. Unable to complete the original plan McFarland devised his own system for valuating miner bonds and proceeded to trade on the open market according to it, impervious to <a href="http://trilema.com/2012/lolvacute-pentru-posteritate/">warnings that both his system was broken</a> and that in any event his implementation is defective. </p>
+<p>Once he unavoidably ran out of cash he proceeded to issue more shares, deeply diluting existing shareholders (new shares were issued for values at times below even 1% of what early investors had paid). Eventually GLBSE took control of the asset and forced a motion. At the time GLBSE management was acting in such an inept and erratic manner however (delisting spontaneously some other asset) that McFarland was returned as CEO. The audit promised by GLBSE never materialised and in any event the implosion of GLBSE a few weeks later sealed the deal.</p>
+<p><strong>Total loss</strong> : <del datetime="2012-12-24T21:58:35+00:00">10k</del> 2k<sup><a href="#footnote_22_44660" id="identifier_22_44660" class="footnote-link footnote-identifier-link" title="Even if the original plan was to sell one million shares for one BTC each, it'd seem even 1% is too high an estimate of the sharecount actually sold.">xxiii</a></sup> BTC (estimate).</p>
+<hr />
+<p><strong>6 October 2012</strong> GLBSE is abrubptly closed, apparently by James McCarthy acting against the orders of shareholders. About three dozen assets worth in total maybe 30k BTC find themselves suspended in limbo. Another ~5k of user funds is thus frozen. Later McCarthy issues most of the customer funds and partial lists of beneficial owners for most assets, in such a way that the data can't actually be trusted or used safely (plaintext over email). </p>
+<p><strong>Total loss</strong> : 10k BTC (estimated).</p>
+<hr />
+<p><strong>14 October 2012</strong> Clipse<sup><a href="#footnote_23_44660" id="identifier_23_44660" class="footnote-link footnote-identifier-link" title="Mining pool">xxiv</a></sup> defaulted on its promises to miners (seems to be BST related).</p>
+<p><strong>Total loss</strong> : 2k BTC (estimated).</p>
+<hr />
+<p><strong>2 November 2012</strong> : Consequent of his default to the MPCD series<sup><a href="#footnote_24_44660" id="identifier_24_44660" class="footnote-link footnote-identifier-link" title="500 BTC principal, for the curious">xxv</a></sup>, <a href="https://bitcointalk.org/index.php?topic=121915.0">my PR asks for and a couple weeks later receives</a> a scammer tag in the forum for Patrick Harnett, who had been operating a purported ratings agency, was one of the backers of GLBSe listings of Bitcoin Savings and Trust toxic paper and ran yet another Bitcoin "bank".</p>
+<p><strong>Total loss</strong> : 25k BTC (estimated)</p>
+<hr />
+<p><strong>8 December 2012</strong> Bitcoin Magazine, a scam in itself (having produced a total of 4 issues in about two years, many of which of appalingly poor quality and content) originally announces selling itself to a consortium of Bitcoin corps including BFL (see above) and 20 Mission (the Kenna-Owens partership mentioned above). One shareholder and ex manager (Vladimir Marchenko) claims the current manager (<a href="http://trilema.com/2012/ciuciu-bond/#comment-87615">Mihai Alisie</a>) stole the company. Mihai Alisie responds by claiming Vladimir Marchenko stole from the company, and also failed to steal ~65k USD from a third party which could have been stolen in his estimation. </p>
+<p><strong>Total loss</strong> : 3k BTC (estimated)</p>
+<hr />
+<p>And that pretty much brings us up to date! Quite the ride, isn't it. </p>
+<p>For the actuarially inclined, the total losses to theft, fraud and stupidity plus anything in between amount to 1.296 million BTC. That comes to about 75k BTC monthly average for the ~18 months we've discussed. </p>
+<p>Considering an average monetary mass of 7mn BTC for the interval, the aggregate of theft, fraud and stupidity registers as about 18%. Considering fiat monetary mass is somewhere on the order of magnitude of 5 trillion USD, proportionally the same levels of loss would come to about 900 billion total or roughly 50 billion a month. Shockingly enough, this figure is not quite that far off the mark (provided we discount government actions from the "stupidity" label).</p>
+<p>Finally, here's a nice little monthly graph :</p>
+<p><a href="http://trilema.com/wp-content/uploads/2012/12/btc-scams-graph.png"><img src="http://trilema.com/wp-content/uploads/2012/12/btc-scams-graph.png" alt="btc-scams-graph" title="btc-scams-graph" width="560" height="439" class="aligncenter size-full wp-image-44691" /></a></p>
+<p>Should we be expecting something like 1 mn BTC default in about a couple of months ? </p>
+<p><strong>Later Edit</strong> (as suggested by Reddit) : </p>
+<blockquote><p>The only really amazing thing to me is that we haven't seen this entry on the list:</p>
+<p>"Shady ROMANIAN character opens up unregistered bitcoin options exchange (complete with HTML from 1993) on his personal website (which also hosts porn) and charges exorbitant fees just to join, while constantly accusing pretty much everyone else in the bitcoin community of being a scammer, and, along with his (possibly virtual) -PR lackey, acts like a loudmouthed douchebag ... but apperantly scams no one." (yet?)</p>
+<p>Thank you Mircea for your services to the bitcoin community and for apparently being an honest and trustworthy entrepreneurial businessman. (Making you perhaps the only honest and trustworthy Romanian I know.)</p>
+<p>Moral of the story? It can be hard to judge people.</p></blockquote>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_44660" class="footnote">Ex pokemon-trading website turned into BTC exchange. <a href="http://trilema.com/2012/why-smpoe-is-worth-more-than-mtgox/">Not worth as much as MPEx</a>. [<a href="#identifier_0_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_44660" class="footnote">The <a href="http://trilema.com/wp-content/uploads/2013/11/glbse.png">Global Scam Exchange</a>, owned and operated by a collection of <a href="http://trilema.com/2012/the-stockexchange-shareholders-on-welfare/">Bitcoin's funniest</a> [<a href="#identifier_1_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_44660" class="footnote">Probably the first web wallet [<a href="#identifier_2_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_44660" class="footnote">An exchange I never heard of. [<a href="#identifier_3_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_44660" class="footnote">The third one of the triplet above (dishwara) went rogue at some point in this interval creating much drama in the forum, but having never taken in sufficient money to be worth the mention it quietly joins irrelevant scammer-wannabe's a la ciuciu etc. [<a href="#identifier_4_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_44660" class="footnote">MPOE and Bitcoinica were born the same week, in that order. MPOE traded options, Bitcoinica was a sort of forex-y bucket shop. [<a href="#identifier_5_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_44660" class="footnote">A VPS provider [<a href="#identifier_6_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_44660" class="footnote">Note this is disputed and may well be as low as 25k BTC. [<a href="#identifier_7_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_44660" class="footnote">BTC poker site. [<a href="#identifier_8_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_44660" class="footnote">Tor-based pill swapping/trading site. [<a href="#identifier_9_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_44660" class="footnote">From his vanity page :</p>
+<blockquote><p>Amir Taaki was born 6 February 1988 in London, the eldest of three children of a Scottish-English mother and an Iranian father. From an early age Taaki took an interest in computer technology, teaching himself computer programming. After briefly attending several British universities, Taaki gravitated to the free software movement. Taaki assisted in the creation of SDL Collide, an extension of Simple DirectMedia Layer, an open source library used by video game developers. In 2006, Taaki became heavily involved in Crystal Space development under the pseudonym of genjix. He also developed a number of video games making use of free software, including the adventure game Crystal Core and the futuristic racer game Ecksdee. Taaki was also a participant in the Blender project Yo Frankie!. His experience with online gambling attracted him to the Bitcoin project. He founded a UK Bitcoin exchange called "Britcoin", which was succeeded in 2011 by a new British exchange called Intersango, in which he is a principal. In April 2011, Taaki and Donald Norman established the Bitcoin Consultancy, a group focused on bitcoin project development.</p></blockquote>
+<p> [<a href="#identifier_10_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_44660" class="footnote">Same email as one used to open a known MtGox account, which makes identification pretty certain - are you starting to see a pattern here by the way ? [<a href="#identifier_11_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_44660" class="footnote">This may sound like I'm making it up just to paraphrase Seinfeld. I am not. [<a href="#identifier_12_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_44660" class="footnote">Exchange. [<a href="#identifier_13_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_44660" class="footnote">Yet another exchange. [<a href="#identifier_14_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_44660" class="footnote">It has been perhaps rightly argued that this entry doesn't belong here on the grounds that unlike all others, MNW accepted no coins from others, merely made stupid promises. [<a href="#identifier_15_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_44660" class="footnote">Famous for, in the words of <a href="http://forums.somethingawful.com/showthread.php?threadid=3486823&#038;pagenumber=150&#038;perpage=40#post408115334">Something Awful</a>, </p>
+<blockquote><p>So let me get this straight... The guy basically robbed his girlfriend of tens of thousands of dollars and defaulted on a mortgage after using the money his mother gave him... on imaginary internet money?</p></blockquote>
+<p>or otherwise for being an unemployable jerkoff with delusions of self importance. [<a href="#identifier_16_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_44660" class="footnote">Yet another forum "bank". [<a href="#identifier_17_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_44660" class="footnote">Famous for having taken pre-orders months in advance for delivering FPGAs, then missing the delivery date by about four months and delivering chips that were significantly below the original quoted specs but getting away with it because at least they delivered something, which did work for its intended purporse - a rare sight in BTC land. Famous for having taken even more pre-orders even more months in advance for delivering ASICs, then missing the delivery date by two months and counting. [<a href="#identifier_18_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_19_44660" class="footnote">Apparently some sort of HYIP flavour. [<a href="#identifier_19_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_20_44660" class="footnote">A scammy/HYIP-y GLBSE asset run anonymously [<a href="#identifier_20_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_21_44660" class="footnote">Known for having written the first java miner for Bitcoin [<a href="#identifier_21_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_22_44660" class="footnote">Even if the original plan was to sell one million shares for one BTC each, it'd seem even 1% is too high an estimate of the sharecount actually sold. [<a href="#identifier_22_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_23_44660" class="footnote">Mining pool [<a href="#identifier_23_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_24_44660" class="footnote">500 BTC principal, for the curious [<a href="#identifier_24_44660" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2012/runcible-doom/">Runcible Doom</a></div>
+                <div class="alignright"><a href="http://trilema.com/2012/futures-on-mpex/">Futures on MPEx</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2012/the-bitcoin-drama-timeline/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2012/the-bitcoin-drama-timeline/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>38 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-90887" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90887" title="">Sunday, 9 December 2012</a>
+							</div>
+						<p>Updated because <a href="http://www.reddit.com/r/Bitcoin/comments/14j542/the_bitcoin_drama_timeline/" >reddit</a>. Also ty ferroh, no idea how Buterin got mixed in there.</p>
+						</li>
+
+										<li id="comment-90891" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90891" title="">Sunday, 9 December 2012</a>
+							</div>
+						<p>You could default/pull off your exchange just for the lulz, seems it's a trend.</p>
+						</li>
+
+										<li id="comment-90892" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90892" title="">Sunday, 9 December 2012</a>
+							</div>
+						<p>Sure I could.</p>
+						</li>
+
+										<li id="comment-90893" class="commentbody"><div class="commenthead"><img alt='Meni Rosenfeld`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Meni Rosenfeld</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90893" title="">Sunday, 9 December 2012</a>
+							</div>
+						<p>My good name requires that I defend it, no matter where it is smeared.</p>
+<p>I was the IPO manager of the BDT bonds (which is quite distinct from creating a service or issuing an asset). You can read up how it started at <a href="https://bitcointalk.org/index.php?topic=93445.msg1032119#msg1032119">https://bitcointalk.org/index.php?topic=93445.msg1032119#msg1032119</a> (complete with disclaimers about my fairly limited involvement); a "post mortem" I wrote when things went awry at <a href="https://bitcointalk.org/index.php?topic=93445.msg1204361;topicseen#msg1204361">https://bitcointalk.org/index.php?topic=93445.msg1204361;topicseen#msg1204361</a>; and the latest attempts to resolve the situation at the end of that thread.</p>
+<p>I may or may not be an idiot, but I am definitely not a scammer and will not tolerate being accused as such.</p>
+						</li>
+
+										<li id="comment-90894" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90894" title="">Sunday, 9 December 2012</a>
+							</div>
+						<p>For my curiosity, what do you mean by this "IPO manager" term ? In most implementations an actual IPO Lead certifies that all the disclosures made are true, correct, adequate and compliant (and is liable if it is found out that they weren't true, correct, adequate or compliant). </p>
+<p>The best possible construction for your case would be that you were in fact nothing but a busy-body, injecting yourself in matters you really had nothing to do with (as you in general do, as far as I know this is practically the only thing you've ever done). That construction would make you a pure idiot.</p>
+<p>The worst possible construction for your case would be that you masterminded the entire thing. That would make you a pure scammer. </p>
+<p>Your position in that list reflects my judgement on these otherwise imponderable matters. But as far as your good name goes, there is no cause for much alarm : you don't have a good name.</p>
+						</li>
+
+										<li id="comment-90895" class="commentbody"><div class="commenthead"><img alt='Meni Rosenfeld`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Meni Rosenfeld</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90895" title="">Sunday, 9 December 2012</a>
+							</div>
+						<p>You can read up on what my role was in the relevant thread.</p>
+<p>It was fairly clear what of my report was by my own knowledge - which was all true - and what was based on information from the issuer, the truth value of which I have never had firsthand knowledge of (and for that reason explicitly did not guarantee it, regardless of what would be done by an analogous role in traditional ecosystems).</p>
+<p>You drive a hard bargain; I most certainly did not mastermind anything, and I agree that I should not have gotten involved in this, so I'll take you up on your "pure idiot" offer. Have a nice day.</p>
+						</li>
+
+										<li id="comment-90896" class="commentbody"><div class="commenthead"><img alt='Drake Ness`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Drake Ness</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90896" title="">Monday, 10 December 2012</a>
+							</div>
+						<p>Great reporting/commenting, as always.  I remembered the TradeHill amount being less, when it went down.  You say 200k BTC... and I thought it was more like 100k USD.  Big difference, obviously.  You may be correct.  Found this quotation:<br />
+<a href="http://arstechnica.com/tech-policy/2012/02/major-bitcoin-exchange-shuts-down-blaming-regulation-and-loss-of-funds/">http://arstechnica.com/tech-policy/2012/02/major-bitcoin-exchange-shuts-down-blaming-regulation-and-loss-of-funds/</a></p>
+						</li>
+
+										<li id="comment-90898" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90898" title="">Monday, 10 December 2012</a>
+							</div>
+						<p>@<b>Drake Ness</b> You may also be correct. The difference is that the 100k figure is what Kenna declared as having been lost to Dwolla (which may or may not be true) and the total loss figure is intended to represent the total users lost (which, based on their volume at the time etc could even be larger). But I've added a further note to clarify this point just to be on the safe side.</p>
+						</li>
+
+										<li id="comment-90904" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90904" title="">Monday, 10 December 2012</a>
+							</div>
+						<p>Updated to clarify the Bitcoinica adventures. Also adding the famous "<a href=https://bitcointalk.org/index.php?topic=95795.msg1055627#msg1055627 >Important truths</a>" reference. Thanks repentance!</p>
+						</li>
+
+										<li id="comment-90906" class="commentbody"><div class="commenthead"><img alt='Matamare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Matamare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90906" title="">Monday, 10 December 2012</a>
+							</div>
+						<p>You spoke a little to early.<br />
+Here is a scam accusation for you:<br />
+<a href="https://bitcointalk.org/index.php?topic=129544.0">https://bitcointalk.org/index.php?topic=129544.0</a></p>
+						</li>
+
+										<li id="comment-90908" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-90908" title="">Monday, 10 December 2012</a>
+							</div>
+						<p>Seems they want to see your girl nude or smth and the butthurtness is just &gt;9k.</p>
+<blockquote><p>II.2. The Rota supersedes the jurisdiction of any other court, institution, group, organisation, corporation, reigning monarch, city fool etc.</p></blockquote>
+<p>This is just too much fun.</p>
+						</li>
+
+										<li id="comment-93095" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-93095" title="">Tuesday, 7 May 2013</a>
+							</div>
+						<p>What kind of an argument is "hosts porn" ?</p>
+						</li>
+
+										<li id="comment-93882" class="commentbody"><div class="commenthead"><img alt='subSTRATA`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">subSTRATA</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-93882" title="">Tuesday, 9 July 2013</a>
+							</div>
+						<p>Finaly found some time to read through all that shit above, what a read, LOL!!!</p>
+						</li>
+
+										<li id="comment-109313" class="commentbody"><div class="commenthead"><img alt='Amy`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink">Amy</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-109313" title="">Tuesday, 28 October 2014</a>
+							</div>
+						<p>Hello.</p>
+<p>I am Ben Malec's wife--I had no idea of the extent of his BTC insanity, since I was too busy raising our child along with other things.</p>
+<p>I'm so sorry for anyone he's hurt--I wish I could do something about it, but I wouldn't even know where to begin. I don't think he's actually a bad guy, just naive, I hope.</p>
+<p>So, so, so sorry.</p>
+<p>Amy</p>
+						</li>
+
+										<li id="comment-109321" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-109321" title="">Tuesday, 28 October 2014</a>
+							</div>
+						<p>Parasites are much more dangerous for their targets than simple preditors. In this sense, naive is much, much worse than plain old evil for people in one's immediate social circle, much like ringworms are much, much worse than lions for poor Africans.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-95244">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2013/09/26/anti-bitcoin-bitcoin-apps-part-3-gliph-in-particular/' class='url'>Anti-Bitcoin &#8220;Bitcoin Apps&#8221; Part 3: Gliph in particular | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-95244" title="">Thursday, 26 September 2013</a>
+					</div>
+					<p>[...] concerns about MtGox were laid out in April by Mircea Popescu though he had criticized then before and after then. Since April MtGox has been the center of a lot drama involving their lack of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-117754">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://thestringpuller.com/2016/06/the-coinbase-implosion-timer/' class='url'>The Coinbase Implosion Timer | Pull Your Own Strings</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-117754" title="">Thursday, 23 June 2016</a>
+					</div>
+					<p>[...] early sphere of Bitcoin attracted harmful venture capitalists. When you look at the early drama timeline most individuals and &#8220;companies&#8221; that raised Bitcoin capital ended up losing it &#8211; [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-127775">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://bingology.net/2019/02/11/just-about-everything-i-grew-up-understanding-to-be-normal-is-a-recent-invention/' class='url'>Just About Everything I Grew Up Understanding To Be Normal Is A Recent Invention &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-127775" title="">Monday, 11 February 2019</a>
+					</div>
+					<p>[...] on this point. I lack the energy to organize an outline on this point tonight. But not free, requiring a full node and literacy to carry out. [&#8617;]Slave empires are discounted as exceptions for their known failure modes. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130395">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://bingology.net/2018/03/03/privacy-and-other-re-readings/?b=Bitco&amp;e=#select' class='url'>Privacy And Other Re-Readings &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130395" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] Bitcoin price movement, or now more appropriately USD price movement, feels a bit 2013. However in that time entire generations of scammers have come, gone, and been disposed of. Who is still out there calling for the head of Matthew N Wright? [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130426">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='http://bingology.net/2013/09/26/anti-bitcoin-bitcoin-apps-part-3-gliph-in-particular/?b=conce&amp;e=#select' class='url'>Anti-Bitcoin &quot;Bitcoin Apps&quot; Part 3: Gliph in particular (Updated) &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130426" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] concerns about MtGox were laid out in April by Mircea Popescu though he had criticized MtGox before and after then. Since April MtGox has been the center of a lot drama involving their lack of [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139013">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/law-enforcement-never-fails-to-unintentionally-entertain?b=stupid%2C%20as%20a&amp;e=ops.#select' class='url'>Law enforcement never fails to unintentionally entertain on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139013" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] stupid, as a population, to correctly handle computers. People get all inflamed about all the heists, losses and general drama going over in Bitcoin and publicly and loudly deride the poor mental quality of Bitcoin site ops. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139037">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://trilema.com/2012/and-another-one-bites-the-dust-bitmarketeu?b=roughly%20spea&amp;e=idea#select' class='url'>And another one bites the dust : bitmarket.eu on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139037" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] roughly speaking a drop in the bucket, but given how full that bucket is... no drops allowed. Earlier this year, I had this "genius" idea [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139060">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/soft-consensus-aka-fecal-matter?b=instance%2C%20th&amp;e=hese#select' class='url'>Soft consensus, aka fecal matter. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139060" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] instance, the consensus was that ASICs will be developed and delivered by a rag-tag assembly of dubious characters. Leave aside that a novel run will take years if not decades and millions if not billions. These [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139069">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/preemptive-strike-to-have-on-hand-for-when-butterfly-labs-gets-hauled-off-to-jail-in-corpore?b=Butterfly%20La&amp;e=ist.#select' class='url'>Preemptive strike, to have on hand for when Butterfly Labs gets hauled off to jail in corpore on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139069" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Butterfly Labs aka BFL is probably the largest BTC scam to date, at least if we judge by the publicly known list. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139162">
+					<div class='trackhead'>
+						<div class="commentcount">25</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/children-and-their-delusions-today-jared-kenna-and-ryan-singer?b=The%20net%20resu&amp;e=with#select' class='url'>Children and their delusions. Today, Jared Kenna and Ryan Singer on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139162" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] The net result of trying to apply their imaginary "expertise" in the real world ? Bitcoinica crater #2. This is what happens when you have somebody famous for being mentally retarded team up with [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139212">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/how-to-fail-the-scott-locklin-method?b=It%20is%20of%20cou&amp;e=ine.#select' class='url'>How to fail - the Scott Locklin method. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139212" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] It is of course moderately concerning that as improbable as that may sound, there may in fact exist a deluded party seriously contemplating following this particular idiot's advice. We could of course snottily conclude that anyone stupid enough to take what this guy says seriously deserves his fate, much like anyone taking Keiser seriously deserves their fate. Still, I would much prefer it if well meaning ignorance would not end up driven into the spiked pit by millitant, arrogant idiocy. After all it's not Keiser paying the twenty million in stupid tax we've recently levied nor is Locklin paying the however many Bitcoins his putative employer is going to contribute to the greater drama timeline. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139235">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-best-investments-in-the-history-of-bitcoin?b=after%20all%2C%20w&amp;e=LBSE#select' class='url'>The best investments in the history of Bitcoin on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139235" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] after all, what difference could a "type" be expected to make. For more details and discussion see The Bitcoin Drama Timeline. [&#8617;]In fairness the asset did trade as high as 1.4 (in small volumes) before the GLBSE [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139496">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/recapitulatio?b=processes%20fo&amp;e=nds%22#select' class='url'>Recapitulatio on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139496" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] processes for the BDT scam, in a similar attempt to hinder constructive recovery), and to Jonathan Ryan Owens (the guy originally involved in raising backing for the Bitdaytrade fiasco through the BDT "bonds" [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139546">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/why-you-cant-invest-with-cryptostocks?b=The%20problem%20&amp;e=y%20no#select' class='url'>Why you can't invest with Cryptostocks on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139546" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] The problem of Bitcoin is that a bunch of smarmy kids (like Amir Taaki, like Nefario, like the endless list of the rest of them) figure they would really be the emperors of the world with very little skills and absolutely no [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139649">
+					<div class='trackhead'>
+						<div class="commentcount">30</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/mpoe-pr-almost-two-years-in-the-swamp-an-anthology?b=they%20did%20not&amp;e=s%20in#select' class='url'>MPOE-PR, almost two years in the swamp. An anthology. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139649" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] they did not. For that matter they are to this day one of the largest scams in [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139793">
+					<div class='trackhead'>
+						<div class="commentcount">31</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/mtgox-and-ancient-bitcoin-history-the-straight-dope?b=who%20magicall&amp;e=tory#select' class='url'>MtGox and ancient Bitcoin history - the straight dope. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139793" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] who magically decided to return stolen goods when told about the powers of the interwebs. Remember that story [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139830">
+					<div class='trackhead'>
+						<div class="commentcount">32</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/mpoe-february-2014-statement?b=failure%20and%20&amp;e=like#select' class='url'>MPOE, February 2014 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139830" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] failure and Jesse's enthusiastic support of the well known and universally reviled Jared Kenna scammerx. There are some others out there, and they pop up and down like [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140235">
+					<div class='trackhead'>
+						<div class="commentcount">33</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/further-derps-dbstp-dcbse-dcifi-dokco-dxapo?b=similar%20to%20t&amp;e=%5DYou#select' class='url'>Further derps : D.BSTP, D.CBSE, D.CIFI, D.OKCO, D.XAPO on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140235" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] similar to the previous set of derps. &mdash;&mdash;&mdash;Yes Kenna, the scam you pulled with TradeHill has not been forgotten, will not be forgotten. [&#8617;]Website Bitcoin exchanging [&#8617;]You [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140457">
+					<div class='trackhead'>
+						<div class="commentcount">34</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/so-the-dollar-vigilante-scam-ring-is-going-to-jail?b=tears%22%20bASIC&amp;e=%20the#select' class='url'>So the Dollar Vigilante scam ring is going to jail. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140457" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] tears" bASIC scammer guy ; or any of the other fifty or so billion trillion scammers trying to run Bitcoin scams and getting eviscerated by my PR, then you're already cringing at what you already see in the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140493">
+					<div class='trackhead'>
+						<div class="commentcount">35</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-witch-hunt?b=lots%29%2C%20and%20i&amp;e=uman#select' class='url'>The witch hunt on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140493" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] lots), and in even rarer cases the smacked may realise what exactly happened there (Preston Byrne, Peter Lambert etc), which reaction is a great predictor of intelligence and generally speaking human [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141231">
+					<div class='trackhead'>
+						<div class="commentcount">36</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/since-rebecca-hiles-broke-her-wp-heres-some-comments-to-stuff-on-her-site?b=Irrespective&amp;e=ctly#select' class='url'>Since Rebecca Hiles broke her WP, here's some comments to stuff on her site on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141231" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Irrespective of how persuasive his con may seem to the uninformed, he is exactly undifferent from Jonathan Ryan Owens, Alberto Armandi, Meni Rosenfeld &#38; friends, and Fetlife is exactly [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144201">
+					<div class='trackhead'>
+						<div class="commentcount">37</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/totally-legit-traffix-sir?b=%5B%26%238617%3B%5DRem&amp;e=nken#select' class='url'>Totally legit traffix sir! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144201" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] [&#8617;]Remember "phantomcircuit" aka Patrick Strateman, the erstwhile "expert" from ye olde Bitcoinica days ? Yeah, that guy. What, you think he's the only monkey that ever crawled out of some drunken [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-149892">
+					<div class='trackhead'>
+						<div class="commentcount">38</div>
+						<span class="authorlink"><a href='http://dorion-mode.com/2020/05/protect-what-matters-with-jwrd/?b=example%2C%20in%20&amp;e=PS%294#select' class='url'>Protect What Matters with JWRD &laquo; Dorion Mode</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-149892" title="">Saturday, 2 May 2020</a>
+					</div>
+					<p>[...] example, in 2012, 47k BTC was declared to be lost by two companies using Linode, a Virtual Private Server (VPS)4 [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="44660" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835108-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-44660")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-44660");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-44660");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

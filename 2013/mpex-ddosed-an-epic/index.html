@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>MPEx DDOSed, an epic. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Heretiquarium.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-46741"><div class="post" id="post-46741">                    <h1><a href="http://trilema.com/2013/mpex-ddosed-an-epic/" rel="bookmark" title="Permanent Link to MPEx DDOSed, an epic.">MPEx DDOSed, an epic.</a></h1>                        <div class="date">                                     Wednesday, 13 March, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><em>Since Trilema has been down for the interval I'm a little backed up here. If this thing doesn't run ten thousand words I'd be surprised.</em></p>
+<p><strong>On or about March 1st</strong> (possibly earlier) MPEx webservers started receiving ever increasing volumes of broken and out-of-context packets.<sup><a href="#footnote_0_46741" id="identifier_0_46741" class="footnote-link footnote-identifier-link" title="These are the bogonic building blocks of any DDOS attack. Abroken packet is simply a packet that either misses some part or for whatever reason isn't quite able to stand on his own. An out-of-context packet is something like a large authoritative DNS response that was never solicited (and boy were we well informed of the state of various DNS records this past week) or a SYN that's never followed by an ACK, or an ACK that never had a SYN etc.">i</a></sup> This was not particularly remarkable at the time, the Internet is a messy soup, stuff happens. </p>
+<p>However, by the 2nd of March the noise was becoming sufficient that maintenance admin on duty was doing stuff to the iptables.</p>
+<blockquote><p>Mar 02 02:24:36<strong> jurov</strong> if anyone desperately needs to place orders, mpex.coinbr.com still works<br />
+Mar 02 02:24:45<strong> jurov</strong> at leat stat does<br />
+Mar 02 02:26:15<strong> jurov</strong> mircea_popescu , no comment? it's ddos?<br />
+Mar 02 02:26:26<strong> mircea_popescu</strong> what is ?!<br />
+Mar 02 02:26:34<strong> mircea_popescu</strong> site's fine ?<br />
+Mar 02 02:26:45<strong> jurov</strong> i can't access mpex.co .. times out<br />
+Mar 02 02:26:51<strong> jurov</strong> only via proxy<br />
+Mar 02 02:27:00<strong> mircea_popescu</strong> tehn you may have a dns issue locally<br />
+Mar 02 02:27:05<strong> mircea_popescu</strong> but the site is on the web.</p></blockquote>
+<p>Upon examination later that day I shot a</p>
+<blockquote><p>csf -dr ju.ro.v.ip #This is legitimate traffic</p></blockquote>
+<p>and never thought more of it. Just some junior sysadmin being overzealous, right ?</p>
+<p>Wrong, obviously. Floods kept waxing and waning but mostly waxing &#038; creeping up until finally, March 6th, </p>
+<blockquote><p>Mar 06 14:13:03<strong> Bugpowder</strong> Alt link for mpex? Getting ddosed?<br />
+Mar 06 14:14:06<strong> jurov</strong> Bugpowder, mpex.coinbr.com</p></blockquote>
+<p>Trade moved to the various proxies and well... that's that, time for a statement.</p>
+<blockquote><p>Mar 06 18:44:33<strong> mircea_popescu</strong> if you're having trouble loading trilema, please flush your dns.<br />
+Mar 06 18:44:49<strong> mjr_</strong> yay<br />
+Mar 06 18:44:50<strong> mircea_popescu</strong> and otherwise, mpex,co is being ddosed by someone too stupid to know that doesn't work.<br />
+Mar 06 18:44:56<strong> ZedsterX</strong> i never load it no problem<br />
+Mar 06 18:44:58<strong> mircea_popescu</strong> use the various proxies, such as<br />
+Mar 06 18:45:07<strong> ZedsterX</strong> :)<br />
+Mar 06 18:45:17<strong> error4733</strong> hi mp<br />
+Mar 06 18:45:28<strong> smickles</strong> damn, i thought your sexdungeon revolted</p></blockquote>
+<p>So that's basically it, wait for script kiddie / neckbeard to get bored and leave, right ? </p>
+<p>Wrong, obviously. A few hours later...</p>
+<blockquote><p>Mar 07 00:09:29<strong>mircea_popescu</strong> lol so our friendly ddosers actually wiped the upstream provider.<br />
+Mar 07 00:10:10<strong>mircea_popescu</strong> NOW mpex is offline.<br />
+Mar 07 00:10:25<strong>jurov</strong> indeed<br />
+Mar 07 00:11:01<strong>mircea_popescu</strong> i guess never scorn a script kiddie.<br />
+Mar 07 00:11:19<strong>Lyspooner</strong> hell hath no fury like a script kiddie scorned<br />
+Mar 07 00:12:10<strong>mircea_popescu</strong> anyway. should be resolved momentarily.<br />
+Mar 07 00:12:16<strong> mircea_popescu</strong> the worst case scenario is we move over to tor.<br />
+Mar 07 00:12:28<strong> mircea_popescu</strong> that'd likely be a coupla days of downtime.<br />
+Mar 07 00:12:37<strong> mircea_popescu</strong> in between these extremes a number of intermediate solutions.<br />
+Mar 07 00:13:03<strong> Lyspooner</strong> Heaven has no rage like love to hatred turned, Nor hell a fury like a script kiddie scorned<br />
+Mar 07 00:13:17<strong> kakobrekla</strong> so the proxy idea doesnt work after all<br />
+Mar 07 00:13:36<strong> mircea_popescu</strong> kakobrekla well anything on the internet is limited by the internet actually existing.<br />
+Mar 07 00:14:06<strong> BitHub</strong> it is?<br />
+Mar 07 00:14:09<strong> BitHub</strong> dear god<br />
+Mar 07 00:14:42<strong> jurov</strong> mircea_popescu can't the engine just get moved to completely different dc?<br />
+Mar 07 00:14:48<strong> mircea_popescu</strong> jurov yes, it could.<br />
+Mar 07 00:15:01<strong> mircea_popescu</strong> but i dislike this sort of solutions, just hop around dcs ?<br />
+Mar 07 00:15:10<strong> mircea_popescu</strong> what if i need to take a piss one day ?<br />
+Mar 07 00:15:19<strong> jurov</strong> and only proxies would know where.. as long as it stays secret, no hoppin necessary<br />
+Mar 07 00:15:43<strong> mircea_popescu</strong> this is a small scale garden variety tor implementation.<br />
+Mar 07 00:15:55<strong> kakobrekla</strong> tor sux<br />
+Mar 07 00:15:58<strong> mircea_popescu</strong> why ?<br />
+Mar 07 00:16:00<strong> Lyspooner</strong> Uncertainty and expectation are the joys of life. Security is an insipid thing.<br />
+Mar 07 00:16:17<strong> mircea_popescu</strong> Lyspooner shush you, you're not the one with the suspended exchange.<br />
+Mar 07 00:16:34<strong> Lyspooner</strong> that's not me, that's william congreve<br />
+Mar 07 00:16:48<strong> kakobrekla</strong> tor is not friendly<br />
+Mar 07 00:16:57<strong> mod6</strong> for whom?<br />
+Mar 07 00:17:01<strong> kakobrekla</strong> to ME<br />
+Mar 07 00:17:11<strong> mircea_popescu</strong> kakobrekla mpex would be on tor, proxies would be on normal web.<br />
+Mar 07 00:17:24<strong> mircea_popescu</strong> problem is it's slow<br />
+Mar 07 00:17:39<strong> kakobrekla</strong> what the point then<br />
+Mar 07 00:17:55<strong> kakobrekla</strong> if proxies hide location<br />
+Mar 07 00:17:59<strong> mircea_popescu</strong> well look, ddos mitigation is an exercise in moving upstream.<br />
+Mar 07 00:18:12<strong> mircea_popescu</strong> what i had here was enough to make 10 Gb attacks ineffectual.<br />
+Mar 07 00:18:37<strong> mircea_popescu</strong> someone taking down all tor nodes is a coupla degrees of magnitude over that.<br />
+Mar 07 00:19:23<strong> kakobrekla</strong> ya but they still know your current location<br />
+Mar 07 00:19:34<strong> kakobrekla</strong> and you need to change that<br />
+Mar 07 00:19:47<strong> kakobrekla</strong> if they are fuckin your isp<br />
+Mar 07 00:19:51<strong> kakobrekla</strong> or what<br />
+Mar 07 00:20:00<strong> mircea_popescu</strong> half of gnax atlanta is dark atm.</p></blockquote>
+<p>At this point in the game the brilliant idea of redirecting mpex.co to whitehouse.gov popped up. </p>
+<blockquote><p>Mar 07 00:33:10<strong> mircea_popescu</strong> try mpex.co nao<br />
+Mar 07 00:33:10<strong> jcpham</strong> nope<br />
+Mar 07 00:33:10<strong> Pucilowski</strong> what happened to mpex.co?<br />
+Mar 07 00:33:27<strong> pigeons</strong> OMG surely there are no alternative sites using twitter bootstrap that will buy bitcoins for us off an exchange for an extra fee<br />
+Mar 07 00:34:11<strong> jurov</strong> btw, didn't anyone try to compare coinlab sales with pirate's loot? whether the amount isn't approximately similar, perchance<br />
+Mar 07 00:34:16<strong> pigeons</strong> why'd you wait till june, japan had gained a lot by then<br />
+Mar 07 00:34:27<strong> Bugpowder</strong> lol<br />
+Mar 07 00:34:33<strong> Bugpowder</strong> very patriotic<br />
+Mar 07 00:34:56<strong> iz</strong> jurov: how much did pirate actually make off with?  i think it's unknown, b/c everyone won't fess up about how much they got paid back in interest<br />
+Mar 07 00:35:04<strong> pigeons</strong> it is unknown<br />
+Mar 07 00:35:05<strong> mircea_popescu</strong> hey, people wanna show off their muscle, let them show it off to people who care.<br />
+Mar 07 00:35:17<strong> pigeons</strong> i doubt he had much left<br />
+Mar 07 00:35:20<strong> iz</strong> pigeons: same<br />
+Mar 07 00:35:37<strong> Bugpowder</strong> is that going to redirect the ddos to wh?<br />
+Mar 07 00:35:41<strong> Bugpowder</strong> no right?<br />
+Mar 07 00:35:52<strong> mircea_popescu</strong> i imagine yes.<br />
+Mar 07 00:36:01<strong> jurov</strong> mpex.co -> http://www.whitehouse.gov LMAO<br />
+Mar 07 00:36:22<strong> mircea_popescu</strong> i figure i got a 1% shot of making us national news.<br />
+Mar 07 00:36:26<strong> Bugpowder</strong> heh<br />
+Mar 07 00:36:36<strong> Bugpowder</strong> its a very clever idea<br />
+Mar 07 00:36:43<strong> mod6</strong> lol, that actually worked.<br />
+Mar 07 00:37:03<strong> mod6</strong> WE GET SIGNAL<br />
+Mar 07 00:37:05<strong> mircea_popescu</strong> mod6 what ?!<br />
+Mar 07 00:37:10<strong> mircea_popescu</strong> don't tell me it's down<br />
+Mar 07 00:37:21<strong> mod6</strong> redirect from mpex.co to whitehouse.gov<br />
+Mar 07 00:37:24<strong> mircea_popescu</strong> a a<br />
+Mar 07 00:37:25<strong> mircea_popescu</strong> yeah<br />
+Mar 07 00:37:26<strong> mod6</strong> i luld<br />
+Mar 07 00:37:37<strong> mod6</strong> and needed to subsequently quote zero-wing<br />
+Mar 07 00:37:59<strong> jcpham</strong> that's terrible mircea_popescu<br />
+Mar 07 00:38:16<strong> jurov</strong> everyone, now try to submit post requests to whitehouse<br />
+Mar 07 00:38:28<strong> jurov</strong> with gpg encrypted mpex stuff<br />
+Mar 07 00:38:49<strong> mircea_popescu</strong> lol it has no hole<br />
+Mar 07 00:39:08<strong> Bugpowder</strong> not working</p></blockquote>
+<p>To be sure, the outage was momentary, and within minutes the bot was again streaming trades</p>
+<blockquote><p>Mar 07 00:52:55<strong> assbot</strong> [MPEX] [O.BTCUSD.C450T] 120 @ 0.22222082 = 26.6665 BTC [+]</p></blockquote>
+<p>and for maximal hybris,</p>
+<blockquote><p>Mar 07 01:07:48<strong> assbot</strong> [MPEX] [S.MPOE] 19250 @ 0.00072389 = 13.9349 BTC [+]<br />
+Mar 07 01:07:49<strong> assbot</strong> [MPEX] [S.MPOE] 9076 @ 0.00073711 = 6.69 BTC [+]<br />
+Mar 07 01:08:01<strong> assbot</strong> [MPEX] [S.MPOE] 5247 @ 0.00074548 = 3.9115 BTC [+]<br />
+Mar 07 01:08:03<strong> assbot</strong> [MPEX] [S.MPOE] 41427 @ 0.00074999 = 31.0698 BTC [+]<br />
+Mar 07 01:08:43<strong> mircea_popescu</strong> o hey. "mpoe surges on news of failed ddos"</p></blockquote>
+<p>At about this time the Bitcoin network was starting to heat up. The various MtGox API livecharts and other charting services (bitcoincharts.com, bitcoinity.com) were going up and down, a little later blockchain.info took an extended break, unconfirmed transactions were piling up by the thousands and the BTC/USD started tumbling (from almost 50 to under 35 within that day).</p>
+<p>Chaos, in short. But MPEx was still trading, and ~50k open option contracts were closed in the next hour or so. A few hours later the MPOE bot mostly stopped quoting because it couldn't make sense of the feeds, but by then orders had already stopped.</p>
+<p>So, basically... the worst was behind us, right ? </p>
+<p>Wrong. The attacker had spent all this time methodically taking the proxies out, one by one. Soon enough,</p>
+<blockquote><p>Mar 07 12:09:40<strong> Namworld</strong> both mpex.coinbr.com and mpex.co seem unavailable now.<br />
+Mar 07 12:09:53<strong> Namworld</strong> Someone is really DDoS'ing everything<br />
+Mar 07 12:10:22<strong> maximian</strong> yeah looks like coinbr.com is getting the DDoS treatment</p></blockquote>
+<p>Coinbr.com was at the time hosted by BitVPS. Apparently the attack took out their Switzerland DC or whatever slice thereof, and being threatened with expulsion they sent jurov packing. For shame, eh ? Perhaps it's time for an announcement.</p>
+<blockquote><p>Mar 07 12:19:05<strong> mircea_popescu</strong> hey all.<br />
+Mar 07 12:19:30<strong> mircea_popescu</strong> mpex servers will be offline for a few hours. we are reconfiguring the router system, putting in new optics<br />
+Mar 07 12:19:37<strong> mircea_popescu</strong> and doing a lot of other overhauling.<br />
+Mar 07 12:20:00<strong> mircea_popescu</strong> no need to panic, all data is safe, by the time this is done mpex will have 10gb dedicated.<br />
+Mar 07 12:20:16<strong> mircea_popescu</strong> and a few other perks.<br />
+Mar 07 12:20:29<strong> Namworld</strong> 10 Gbps?<br />
+Mar 07 12:20:38<strong> mircea_popescu</strong> yes.<br />
+Mar 07 12:20:45<strong> Namworld</strong> Seems massive.<br />
+Mar 07 12:20:50<strong> Namworld</strong> Good thing.<br />
+Mar 07 12:20:53<strong> mircea_popescu</strong> hey. 1gb x2 seemed massive.</p></blockquote>
+<p>The ugly truth behind this is : some people had private proxy access to MPEx. With the fall of jurov's last proxy there was however no public way to access MPEx left. Rather than split the users among the elite, with access, and the plebs, without, I judged it most expedient to simply halt trading. There weren't at the time any positions desperately at risk as best I could determine so nobody risked getting his toes caught in the door, I had the measure announced on the forum with a "if you're desperate to close option exposure contact me" for the people not in the know that may be trapped over there and that was that. In retrospect I think this was the correct move under the circumstances. </p>
+<p>Originally the plan was to simply wait for a full day, because new MPEx megapipe was supposed to be deployed early on the 8th. However...</p>
+<blockquote><p>Mar 07 20:16:30<strong> imsaguy</strong> how about mpex over irc?<br />
+Mar 07 20:16:44<strong> imsaguy</strong> let freenode get ddos<br />
+Mar 07 20:16:47<strong> imsaguy</strong> I hear they like that<br />
+[...]<br />
+Mar 07 20:17:44<strong> mircea_popescu</strong> dawg...<br />
+Mar 07 20:17:52<strong> mircea_popescu</strong> fuck you srsly.<br />
+Mar 07 20:17:55<strong> mircea_popescu</strong> why didn't i think of that<br />
+Mar 07 20:17:57<strong> imsaguy</strong> dee oh gee<br />
+Mar 07 20:18:05<strong> mircea_popescu</strong> people can just paste a pastebin link or w/e<br />
+Mar 07 20:18:06<strong> Diablo-D3</strong> oh em gee</p></blockquote>
+<p>This is brilliant, you must admit. The first bot was up within about six hours, and with it the ability to trade on MPEx could be restored without wrangling over fairness issues. Soon after a 2nd was available, and from there on things went a little wild. It's not just MPEx, you see, and it certainly isn't just MP. The support people showed themselves willing to lend was fantastic. Obviously it was imsaguy's idea. Nanotube generously drafted some module interface for supybot. Smickles made mpexbot out of a stock supybot, nanotube's drafts and some pseudocode (which read something like "I dunno dood, pastebin must have an api"). Kakobrekla wrote the same functionality into assbot. It doesn't stop there, either. FabianB wrote <a href=https://github.com/fawuxi/mpex>a Ruby (not ROR) expansion to pympex</a>, which is irc bot aware. Gabridome <a href= https://github.com/gabridome/mpex-sh>wrote her own</a>. There's talk of minecraft MPEx and MPEx GUI and all sorts of stuff. Don't you wonder how Second Life MPOE-PR looks like ?</p>
+<p>Lots more people offered - publicly and privately - to contribute hosting resources. These I mostly turned down, not because I didn't appreciate the offers - which I did and do - but because by now it had become apparent that it wouldn't be safe. Most hosting out there happens on shared servers, whether they are actually called "shared" and go for 5-10 dollars a month or are called "VPS" and go for 50 or so. The principle is the same, one physical machine hosts multiple instances which may look and feel more or less like an "actual" machine but nevertheless are not.</p>
+<p>The physical machine itself is most likely a "dedicated server"<sup><a href="#footnote_1_46741" id="identifier_1_46741" class="footnote-link footnote-identifier-link" title="As opposed to `colocated` - the difference is strictly one of ownership, roughly following the distinction between renting and owning.">ii</a></sup>, which probably shares a 100 Mbit port with one or even a few other machines. A single rack can have as little as 2 Gbit actually available, and contain dozens of machines. So a very common structure would be something like 100 Gbit optics -> main router which splits it into 10 Gbit pipes -> subrouters which split each into 1Gbit -> rack routers which further split into 100 Mbit and beyond -> physical machine which splits its resources among the hosted VPS/shared accounts. </p>
+<p>The early attack (end of January) actually took out the datacenter's main router. The current one did not, but the frames were piling up at that level and the next router down was unresponsive so IPs had to be null routed. I have no idea how things looked for BitVPS's datacenter - the people in charge didn't say much / don't seem like they know what to say, so my best guess would be that it was similar. I've somehow lost a number of Google Cloud and Amazon EC instances<sup><a href="#footnote_2_46741" id="identifier_2_46741" class="footnote-link footnote-identifier-link" title="In fairness I didn't have the time/resources to look into exactly what happened there.">iii</a></sup>, and jurov also lost one. This is not the sort of thing that <a href=http://thebotnet.com/guides-and-tutorials/49828-how-to-access-the-hidden-wiki/>random interwebs omnipotent dweller</a> can commonly omnipote. This is military grade stuff. That doesn't rule out some private person being behind it, seeing how the Internet is the ultimate individualist medium, and indeed one person can accomplish anything that at all can be accomplished. Nevertheless, the resources employed were vast. In these circumstances, accepting someone's offer to run a MPEx proxy off their VPS wouldn't have been something I could in good conscience do, since I knew the future so to speak, and it didn't look bright for the would-be helper.</p>
+<p>And that pretty much brings us up to date : trade has been ongoing without problems via the irc bots since then, </p>
+<blockquote><p>Mar 10 20:21:07<strong> gabridome</strong> http://mpex.coinbr.com/ on line! Am I drunk?</p></blockquote>
+<p>Third generation proxies are online, an .onion MPEx proxy is ready and going to be released<sup><a href="#footnote_3_46741" id="identifier_3_46741" class="footnote-link footnote-identifier-link" title="I did not wish to release it before ample alternatives exist because of concerns that the DDOS might actually cause significant problems on TOR - not necessarily by taking it offline but perhaps by separating its graph in undesirable ways. It's a complicated topic.">iv</a></sup>. Unfortunately some of the hardware being delivered for March 8th proved defective, the 9th and the 10th being the weekend saw little movement, and so the new MPEx public website should be arriving sometime this week. If you're reading this post it means it's just happened, you can compare my estimate to actual reality.</p>
+<p>That's the whole story. I said before that MPEx is immune to DDOS attacks and I am saying it again now. The fact that two weeks' worth of DDOS<sup><a href="#footnote_4_46741" id="identifier_4_46741" class="footnote-link footnote-identifier-link" title="Which would cost north of $100k to replicate, by the way, if you had to hire the techs and the bots. My costs defending from it were a tenth that or less, and most of it went to provisioning new hardware that's not yet online, so could as well have been eschewed.">v</a></sup> resulted in half a day's worth of trading being paused<sup><a href="#footnote_5_46741" id="identifier_5_46741" class="footnote-link footnote-identifier-link" title="Because I didn't want to go to private-only mode which, incidentally, is exactly how finance works IRL, they've long lost this battle I've just won.">vi</a></sup> supports this notion. </p>
+<p>At the end of the day, MPEx finds itself in a much better position to withstand similar attacks in the future (not similar in size, similar in type, irrespective of size). This is exactly the lesson I wish embedded in the skull of any would-be attacker, incidentally (again, irrespective of size - for this application I see no difference between the government of the United States and some random lonely guy sitting among piles of empty pizza boxes) : the more you try the stronger MPEx gets. The only way this story ends is with the offender's abject submission, because for as long as there's anyone who has an inkling of hope that they may cause trouble for MPEx, I will be here and I will humiliate them into oblivion. Again and again and again until either suicide or capitulation, unconditional and heartfelt, releases the would-be attacker from his mindless entrapment.</p>
+<p>MPEx is forever. The world may not make it that long.</p>
+<p>PS. If you're thinking this article is a little heavy on irc quotes, consider that the channel log is over 1.3 Mb <strong>for the current month</strong>. You're getting off easy.</p>
+<p>PPS. Everyone named in this article for helping gets a block of 10`000 S.MPOE shares. Contact jurov to take possession.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_46741" class="footnote">These are the bogonic building blocks of any DDOS attack. A<a href=http://lcamtuf.coredump.cx/mobp/>broken packet</a> is simply a packet that either misses some part or for whatever reason isn't quite able to stand on his own. An out-of-context packet is something like a large authoritative DNS response that was never solicited (and boy were we well informed of the state of various DNS records this past week) or a SYN that's never followed by an ACK, or an ACK that never had a SYN etc. [<a href="#identifier_0_46741" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_46741" class="footnote">As opposed to "colocated" - the difference is strictly one of ownership, roughly following the distinction between renting and owning. [<a href="#identifier_1_46741" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_46741" class="footnote">In fairness I didn't have the time/resources to look into exactly what happened there. [<a href="#identifier_2_46741" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_46741" class="footnote">I did not wish to release it before ample alternatives exist because of concerns that the DDOS might actually cause significant problems on TOR - not necessarily by taking it offline but perhaps by separating its graph in undesirable ways. It's a complicated topic. [<a href="#identifier_3_46741" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_46741" class="footnote">Which would cost north of $100k to replicate, by the way, if you had to hire the techs and the bots. My costs defending from it were a tenth that or less, and most of it went to provisioning new hardware that's not yet online, so could as well have been eschewed. [<a href="#identifier_4_46741" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_46741" class="footnote">Because I didn't want to go to private-only mode which, incidentally, is exactly how finance works IRL, they've long lost this battle I've just won. [<a href="#identifier_5_46741" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/the-delusion-of-infrastructure/">The delusion of infrastructure</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/search-and-destroy/">Search and Destroy</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/mpex-ddosed-an-epic/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/mpex-ddosed-an-epic/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>8 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-92302" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92302" title="">Wednesday, 13 March 2013</a>
+							</div>
+						<blockquote><p>sider that the channel log is over 1.3 Mb for the current month</p></blockquote>
+<p>I doubt anyone will ever surpass me.</p>
+						</li>
+
+										<li id="comment-92303" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92303" title="">Wednesday, 13 March 2013</a>
+							</div>
+						<p>Who are you again ?</p>
+						</li>
+
+										<li id="comment-92315" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92315" title="">Thursday, 14 March 2013</a>
+							</div>
+						<blockquote><p>I am da law for muhself, I am da law for all. Fuck tha polis is now MUH way, whichis' youre brotha?</p>
+<p>Skilled in fight and big beast, no sucker, no White o'Shitt, ready for da fight and fists, healthy and 6 packd.</p>
+<p>Da people swallow and follow me, and if da rich like you think dey be bitchin me, I's all take you down and steal ur best watermellon, da best rimz, da best rhymes and all da gud booty slaves.</p></blockquote>
+<p>Thus I's spoke tho.</p>
+						</li>
+
+										<li id="comment-92318" class="commentbody"><div class="commenthead"><img alt='Vexare`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Vexare</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92318" title="">Thursday, 14 March 2013</a>
+							</div>
+						<p>How much in mb is <a href="http://trilema.com/2012/o-luna-de-trilema-prin-ochii-lu-gribble/" >this log</a>, for I guess you kept logs or smth?</p>
+<p>At ~15000 total lines and ~6-80000 words, I might have output some 2-300 kb of text.</p>
+<p>You had something like 2x, so 600 kb of text. Taking into account other users it might had been 1mb or more?</p>
+<p>You just don't understand hater humor.</p>
+						</li>
+
+										<li id="comment-92320" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-92320" title="">Thursday, 14 March 2013</a>
+							</div>
+						<p>1 month vs 10 days. Also, me + a bunch of Romanian peeps vs me + a bunch of bitcoin peeps.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-139145">
+					<div class='trackhead'>
+						<div class="commentcount">6</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/the-many-ways-available-for-talking-to-mpex?b=was%20saying%20r&amp;e=ilar#select' class='url'>The many ways available for talking to MPEx on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139145" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] was saying recently that  At the end of the day, MPEx finds itself in a much better position to withstand similar [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139151">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/boys-and-girls-i-got-news-were-being-probed?b=number%20of%20ot&amp;e=good#select' class='url'>Boys and girls, I got news : we're being probed. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139151" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] number of other major services have been hit with DDoS attacks in the past week or two : MPEx (and once before in January but that didn't do much at all), blockchain.info as pretty good [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139182">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://trilema.com/2013/mpoe-march-2013-statement?b=expenses%20wit&amp;e=ese%2C#select' class='url'>MPOE, March 2013 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139182" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] expenses with hardware, consulting and such related to DDoS mitigation during the epic week. About 1 BTC from there will be a recurring monthly cost starting in 2014. [&#8617;]Chinese, [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="46741" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833929-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-46741")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-46741");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-46741");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

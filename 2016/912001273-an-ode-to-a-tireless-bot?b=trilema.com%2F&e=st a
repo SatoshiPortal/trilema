@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>91.200.12.73 - An ode to a tireless bot. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Moving targets for a fast crowd.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-66074"><div class="post" id="post-66074">                    <h1><a href="http://trilema.com/2016/912001273-an-ode-to-a-tireless-bot/" rel="bookmark" title="Permanent Link to 91.200.12.73 - An ode to a tireless bot.">91.200.12.73 - An ode to a tireless bot.</a></h1>                        <div class="date">                                     Monday, 25 April, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>The Project Honeypot has <a href="http://www.projecthoneypot.org/ip_91.200.12.73">an ample file on it</a>, of course. Ukrainian harvester, first seen about two years ago, last seen this week, before that straight spammer for about four years with a list of (mostly Korean) associated mail servers a mile long, etcetera.</p>
+<p>So... what does it do ? Let's see.</p>
+<blockquote><p>$ wc -l trilema-apr2016.txt<br />
+2097579 trilema-apr2016.txt</p>
+<p>$ grep -c "91.200.12.73" trilema-apr2016.txt<br />
+468</p></blockquote>
+<p>If you think that there's tens of thousands of these, suddenly logfiles a coupla million lines long doesn't sound like much, you know ?  Anyway, let's try a narrative. </p>
+<p>So, on March 31st at 8:16:30 the Tireless Bot loads <a href="http://<span style="background-color:#d3d3d3" id="select">trilema.com/2012/climax/">trilema.com/climax</a> coming from nowhere and claiming to be running Chrome<sup><a href="#footnote_0_66074" id="identifier_0_66074" class="footnote-link footnote-identifier-link" title="`Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36`">i</a></sup>. At 9:23:25 it loads <a href=http://trilema.com/2014/an-era-ends-today-a-new-era-starts-today/>An era ends today. A new era starts today.</a> coming from http://trilema.com/ which is a place it's never been. A second later it tries to post a</span> comment<sup><a href="#footnote_1_66074" id="identifier_1_66074" class="footnote-link footnote-identifier-link" title="This time it's `PHP/5.3.40` and no longer Chrome, lulz.">ii</a></sup>, and two seconds later it reloads the page. </p>
+<p>Then at 9:25:34 goes back to Climax, and 09:29:24 it's back on the page it tried to spam. At no point during all this does it load any of the page design elements or anything. Then at 11:10:17 back on Climax, and at 11:14:21 back on An era ends today. Then same thing, 12:53:33 / 13:00:38.<sup><a href="#footnote_2_66074" id="identifier_2_66074" class="footnote-link footnote-identifier-link" title="The deltas are 1:09:04 / 0:05:59 ; 1:44:43 / 1:44:57 ; 1:43:16 / 1:44:43. Such coincidental, you know ?">iii</a></sup></p>
+<p>Then, out of character, loads <A href=http://trilema.com/2014/awstats-and-stuff/>Awstats and stuff</a> at 13:49:21, still calling itself Chrome and still coming from http://trilema.com ; and at 13:49:22 tries to post (still as "PHP/5.2.31"), and then checks. Twice, this time : once at 13:49:24 still as "PHP/5.2.31", then once more at 13:53:47, this time back to being Chrome. Then at 14:41:32 checks the previous attempt once more, and at 15:33:49, 17:17:47, and 19:03:54 checks this attempt. By 22:19:14 it moves on to <a href=http://trilema.com/2013/mpex-status-report/>MPEx - Status Report</a>, where it tries to send a comment at 22:19:15 and then checks twice (at 22:19:16 as "PHP/5.3.56", at 22:21:52 as Chrome). And then moves back to Climax at 23:13:32, which it has time to try and post to before the day is out, in the usual manner. </p>
+<p>This much brings us to the end of March, you see ? There's still all of April ahead of us! Out of curiosity I checked to see why its attempts to post fail. I found the IP blacklisted in my custom tailored antispam system in 2014<sup><a href="#footnote_3_66074" id="identifier_3_66074" class="footnote-link footnote-identifier-link" title="If you're curious it was
+name : moncler jackts
+email : lkmjpexpu@gmail.com
+url : www.littledresskits.co.uk/wp-content/uploads/cache/
+with an empty payload.">iv</a></sup>! So no, its efforts didn't start in March current, nor in March last.</p>
+<p>The attempts continue unabated, with variations in the PHP version installed (so far we've seen 5.2.31 and 5.3.56, but there's also 5.2.53, 5.3.18, 5.3.93, 5.2.05, 5.3.85, 5.3.64, 5.2.61, 5.2.70, 5.3.76, 5.2.83, 5.3.86, 5.2.90 and so on and so forth) but little variation in the user agent, until on April 9th it becomes "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.3.4000 Chrome/30.0.1599.101 Safari/537.36". You know, the "cloud browser", which apparently sucks because on April 11 we move on to "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0" which turns to rv:34.0 within hours. We're then happy with this until the next day, when upgrading to rv:35.0 is <em>de rigueur</em>. Imagine the horror of this upgrade cycle, even the spammers <em>pretending</em> to be using the shit are stuck constantly modifying strings! Yet oddly enough, through thick and thin 20100101 stays 2010101. </p>
+<p>This version serves us well until the 13th, on which it receives an adition : "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0 AlexaToolbar/alxf-2.21"<sup><a href="#footnote_4_66074" id="identifier_4_66074" class="footnote-link footnote-identifier-link" title="Speaking of which, get a load of this other peacock of a kalash : 
+`Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; Crazy Browser 5.3.58; Dealio Toolbar 3.4.42; Dealio Toolbar 2.3.65; Alexa Toolbar)`
+It comes from 89.34.126.145 which is actually a fixed cable address in Galati, Romania so for all we know it could even be an actual granny with TWO versions of something called the `Dealio Toolbar`. The only strange is that the same IP identifies the running browser as `Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Dealio Toolbar 3.8.85)` at 03:13:22 ; as `Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; Crazy Browser 5.3.58; Dealio Toolbar 3.4.42; Dealio Toolbar 2.3.65; Alexa Toolbar)` at 3:13:22 and as `Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Dealio Toolbar 3.8.85)` at the same 3:13:22 ; then as `Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; MSN Optimized; GB; ZangoToolbar 6.5.14; .NET CLR 5.9.70)` at 3:13:23. Seems a little rich, doesn't it ?
+Especially as we've earlier that same day (April 6th) seen this exact IP claiming to be `Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36` or doing strange like
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] `GET /wp-content/themes/trilema/style.css HTTP/1.1` 200 10392 `http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D` `Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36`
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] `GET /wp-content/themes/trilema/images/insigna-printre-primii.png HTTP/1.1` 200 267 `http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D` `Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36`
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] `GET /wp-content/themes/trilema/images/insigna-trol.png HTTP/1.1` 200 259 `http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D` `Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36`
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] `GET /wp-content/themes/trilema/images/insigna-1k.png HTTP/1.1` 200 269 `http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D` `Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36`
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] `GET /avatar.png HTTP/1.1` 200 13024 `http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D` `Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36`
+85.9.20.151 - - [06/Apr/2016:04:08:53 -0400] `GET /2009/fumez/ HTTP/1.0` 200 72050 `http://trilema.com/2009/fumez/` `Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; 240x320)`
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] `GET /default_avatar.png HTTP/1.1` 200 3500 `http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D` `Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36`
+89.34.126.145 - - [06/Apr/2016:04:08:54 -0400] `GET /wp-content/themes/trilema/images/rss.jpg HTTP/1.1` 200 1455 `http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D` `Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36`
+
+Cognitive SEO FTW, I guess.">v</a></sup>. The Alexa toolbar nominally stays until April 14th (no doubt greatly if nominally improving the overall relevancy and pertinence of yet another Amazon service), at which point we're again upgrading, this time to "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko" which in turn changes to "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0" on the 18th and so on and so on and so on and so on AND SO ON. <strong>And so on</strong>.</p>
+<p>By April 19th the Tireless Bot is <em>still</em> checking the Awstats article, who knows, maybe, and it's still trying to leave comments, this time on <a href=http://trilema.com/2014/five-bucks-for-great-justice/>Five bucks for great justice</a>. Who knows, maybe that one works. And if it doesn't - all the better, more stuff to check anyway. Same way as with any bureaucracy, amirite ?</p>
+<p>Here's the <a href="http://trilema.com/wp-content/uploads/2016/04/ukrbot.txt">source</a> for your files, and remember you must have been amused as per Regulations of Insistence and Artificial Cognitive Products #574 dash W. Don't forget to leave your green copy of lulz with the girl at the entrance and remember to mail the crossword puzzle variant on the mauve (not the purple!) paper sometime before the cutoff (but not after the <em>other</em> cutoff!!1). Thank you.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_66074" class="footnote">"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36" [<a href="#identifier_0_66074" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_66074" class="footnote">This time it's "PHP/5.3.40" and no longer Chrome, lulz. [<a href="#identifier_1_66074" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_66074" class="footnote">The deltas are 1:09:04 / 0:05:59 ; 1:44:43 / 1:44:57 ; 1:43:16 / 1:44:43. Such coincidental, you know ? [<a href="#identifier_2_66074" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_66074" class="footnote">If you're curious it was</p>
+<blockquote><p>name : moncler jackts<br />
+email : lkmjpexpu@gmail.com<br />
+url : www.littledresskits.co.uk/wp-content/uploads/cache/</p></blockquote>
+<p>with an empty payload. [<a href="#identifier_3_66074" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_66074" class="footnote">Speaking of which, get a load of this other peacock of a kalash : </p>
+<blockquote><p>"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; Crazy Browser 5.3.58; Dealio Toolbar 3.4.42; Dealio Toolbar 2.3.65; Alexa Toolbar)"</p></blockquote>
+<p>It comes from 89.34.126.145 which is actually a fixed cable address in Galati, Romania so for all we know it could even be an actual granny with TWO versions of something called the "Dealio Toolbar". The only strange is that the same IP identifies the running browser as "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Dealio Toolbar 3.8.85)" at 03:13:22 ; as "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; Crazy Browser 5.3.58; Dealio Toolbar 3.4.42; Dealio Toolbar 2.3.65; Alexa Toolbar)" at 3:13:22 and as "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Dealio Toolbar 3.8.85)" at the same 3:13:22 ; then as "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; MSN Optimized; GB; ZangoToolbar 6.5.14; .NET CLR 5.9.70)" at 3:13:23. Seems a little rich, doesn't it ?</p>
+<p>Especially as we've earlier that same day (April 6th) seen this exact IP claiming to be "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" or doing strange like</p>
+<blockquote><p>89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] "GET /wp-content/themes/trilema/style.css HTTP/1.1" 200 10392 "http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"<br />
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] "GET /wp-content/themes/trilema/images/insigna-printre-primii.png HTTP/1.1" 200 267 "http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"<br />
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] "GET /wp-content/themes/trilema/images/insigna-trol.png HTTP/1.1" 200 259 "http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"<br />
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] "GET /wp-content/themes/trilema/images/insigna-1k.png HTTP/1.1" 200 269 "http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"<br />
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] "GET /avatar.png HTTP/1.1" 200 13024 "http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"<br />
+85.9.20.151 - - [06/Apr/2016:04:08:53 -0400] "GET /2009/fumez/ HTTP/1.0" 200 72050 "http://trilema.com/2009/fumez/" "Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; 240x320)"<br />
+89.34.126.145 - - [06/Apr/2016:04:08:53 -0400] "GET /default_avatar.png HTTP/1.1" 200 3500 "http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"<br />
+89.34.126.145 - - [06/Apr/2016:04:08:54 -0400] "GET /wp-content/themes/trilema/images/rss.jpg HTTP/1.1" 200 1455 "http://navigator.cognitiveseo.com/parser/?rq=1NH5L5ogOd5k8ff8vAaZePhLnSCl9vfCeEn5Q%2Fz%2B1HEUDbIya21N%2F1x7Tg8NhrcuS6TZ5S2o%2Ff6n4mTdcaItusjsr77fTv0XS%2BBP0s4i%2F0b3%2FyQkS1Q4NQe2PXO1PSlUV37wYKpW86LFWh%2BvzyqrDQWkv%2FuczBqDK5wA82uphIcVVB2cyT1FZileR3ck%2BhAO2gWwHVmHc0Ae48IDr%2F1GRPJFq4usS7kyDuAN0thAYreek6EW35IgHSSdWBNIOzjxzeB%2FYps7s2Lr1MzMczwYi7sThRrNul7lLQpaWBWHjlc%2BgPdcmvBpoqN6bhwOT6mRpqY3WwSuNoj5kQa5zzhpuw%3D%3D" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"</p>
+</blockquote>
+<p>Cognitive SEO FTW, I guess. [<a href="#identifier_4_66074" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/the-chosen/">The Chosen</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/today-on-trilema-a-history-of-the-polar-crabs-a-discussion-of-very-deep-globules-a-general-theory-of-the-corn-cobb-as-well-as-an-autobiography-of-herzog-balthasar-hedgehog-by-mr-burt-mugg/">Today on Trilema : A history of the Polar Crabs ; A Discussion of Very Deep Globules ; A General Theory of the Corn Cobb as well as an Autobiography of Herzog Balthasar Hedgehog by Mr. Burt Mugg.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/912001273-an-ode-to-a-tireless-bot/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/912001273-an-ode-to-a-tireless-bot/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>5 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-117128" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">anon</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117128" title="">Tuesday, 26 April 2016</a>
+							</div>
+						<p>&gt; through thick and thin 20100101 stays 2010101</p>
+<p>That's not staying, that's wavering.</p>
+						</li>
+
+										<li id="comment-117129" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117129" title="">Tuesday, 26 April 2016</a>
+							</div>
+						<p>Lol guess so huh.</p>
+						</li>
+
+										<li id="comment-117162" class="commentbody"><div class="commenthead"><img alt='20100101`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">20100101</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117162" title="">Saturday, 30 April 2016</a>
+							</div>
+						<p>20100101 is due to Mozilla. It used to be a meaningful date but then they stopped changing it becaue user agent sniffing bla bla kdfjbj wifubskd.</p>
+						</li>
+
+										<li id="comment-117163" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-117163" title="">Saturday, 30 April 2016</a>
+							</div>
+						<p>Aha.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-142248">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/the-internet-of-shit?b=is%20a%20run%20of%20&amp;e=ur%20%3A#select' class='url'>The Internet of Shit on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142248" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] is a run of the mill spambot, as discussed in more detail back in April. We'll call it type A because it does check after spamming. [&#8617;]Typical behaviour : [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="66074" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832781-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-66074")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-66074");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-66074");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

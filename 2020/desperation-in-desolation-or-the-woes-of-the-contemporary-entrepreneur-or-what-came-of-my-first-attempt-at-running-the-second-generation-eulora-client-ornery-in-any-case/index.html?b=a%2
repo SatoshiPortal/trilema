@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Desperation in desolation ; Or, the woes of the contemporary entrepreneur ; Or, what came of my first attempt at running the second generation Eulora client. Ornery, in any case. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Moving targets for a fast crowd.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-96446"><div class="post" id="post-96446">                    <h1><a href="http://trilema.com/2020/desperation-in-desolation-or-the-woes-of-the-contemporary-entrepreneur-or-what-came-of-my-first-attempt-at-running-the-second-generation-eulora-client-ornery-in-any-case/" rel="bookmark" title="Permanent Link to Desperation in desolation ; Or, the woes of the contemporary entrepreneur ; Or, what came of my first attempt at running the second generation Eulora client. Ornery, in any case.">Desperation in desolation ; Or, the woes of the contemporary entrepreneur ; Or, what came of my first attempt at running the second generation Eulora client. Ornery, in any case.</a></h1>                        <div class="date">                                     Saturday, 12 September, Year 12 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Gnarly, you know this word ? At about the time "awesome" became the meaningless token of <a href="http://trilema.com/2018/the-retards-handshake/">ready retards' handshakes</a>, "gnarly" became some kind of its polar opposite. A word for the unpleasant, vaguely nauseating complexity of no value and no import. Improfitable, ahistorical, the direct <a href="http://trilema.com/2019/phantastes-para-leer/">female</a> equivalent of the "awesome" <a href="http://trilema.com/2017/when-did-america-end/">last gasp</a>. Gnarly foeti an' awesome sunsets (or whatever cosmic phenomena), that'd be the 2000s in bijocular summary.</p>
+<p>But... it's not the <a href="http://trilema.com/2020/my-first-mister/">2000</a>s, anymore. The year's been 2020 for long enough it's about to change, 2021's no doubt gonna bring more of the same (but less of everything)... The desperation's well seated at the table, no doubt about that. Let's see about the desolation then, might as well deliver the complete menu, as promised, <em>a la carte</em>.</p>
+<p>So : back on <a href="http://ossasepia.com/2020/06/01/swarming-limbs-and-twisted-nets-5th-parade-of-hopefuls/#comment-8554">June 4</a> I made the call that diligent effort intervening had meanwhile accumulated to the point of resembling enough a workable a solution to the fundamental problem we had encountered earlier (and is perhaps best summarized on <a href="http://trilema.com/2020/get-back-to-me/">January 23</a>) to justify taking a closer look. At that juncture, three months ago, the Eulora server v2.0 had for a while been steadily running in a <em>private</em> environment, insulating it from the insanity that is "computing" ; and Diana had been running a private client v2.0 for her own testing needs, on a CentOs 6. In such a context one might be perhaps excused for thinking that "alright, make me a client I can run here myself" is not exactly an unreasonable work order, especially garnished with "I don't care what OS you want for it to sit in or anything else, really, it can have its own machine". I mean... two weeks, right ?</p>
+<p>By appointment we sat down Thursday, each with something like half a day cleared &#038; readily at their disposal, to hopefully get through this triviality of a task as soon as possible and move on. Well... not so fast, right ? I mean, you know where this is going, and exactly, for having had some experience of your own with, to quote, </p>
+<blockquote><p>In a major reversal, former Microsoft CEO Steve Ballmer, who had called Linux a "cancer" that attaches itself to the intellectual property of everything it touches back in 2001, has commended his former company's latest move toward open sores, their own reinterpretation of the meanwhile defunct open source movement.</p>
+<p>Earlier this week, when Microsoft announced its SQL Server will run on Ubuntu, Ballmer sent an email to Microsoft's CEO Satya Nadella saying he "loved" the announcement, according to a Reuters report. Speaking at a dinner Wednesday hosted by Fortune, Ballmer told the attendees that his earlier stance on Linux was right for the time but that now that kind of Linux was "in the rearview mirror," according to Reuters.</p></blockquote>
+<p><a href="http://trilema.com/2020/forum-logs-for-14-aug-2019/#2548335">Indeed</a> so : </p>
+<ol>
+<li>Our first attempt occured on a modern<sup><a href="#footnote_0_96446" id="identifier_0_96446" class="footnote-link footnote-identifier-link" title="Sep 10 19:04:10 &lt;diana_coman>	tu ce versiune de gcc ai in sistem?
+Sep 10 19:04:18 &lt;mircea_popescu>	acum ma uit
+Sep 10 19:04:51 &lt;mircea_popescu>	7.5 o.o
+Sep 10 19:04:57 &lt;diana_coman>	lmao
+Sep 10 19:05:08 &lt;mircea_popescu>	plm noa da-le nota.">i</a></sup> Debian upon which I attempted to install a hefty<sup><a href="#footnote_1_96446" id="identifier_1_96446" class="footnote-link footnote-identifier-link" title="267 MB, pai ce-i aia...">ii</a></sup> list of "<a href="http://trilema.com/2014/ubuntu-is-a-worse-piece-of-shit-than-ms-dos-ever-was/">needed</a>" packages, which broadly succeeded<sup><a href="#footnote_2_96446" id="identifier_2_96446" class="footnote-link footnote-identifier-link" title="Excepting things like `libpng-12-dev has no installation candidate` means you gotta know it's just called libpng-dev, `now`, or `here`, or whatever ; or more bluntly `selecting libcal3d12-dev instead of libcal34-dev` `should be okay` and so on etcetera. I mean, it's 3d12, how bad can it be, sword of infinity minus one, right ?">iii</a></sup>. The idea was to proceed with our own, gnat-based build environment<sup><a href="#footnote_3_96446" id="identifier_3_96446" class="footnote-link footnote-identifier-link" title="Which, incidentally, is supplied as a binary. I don't mean `in my case` ; I mean in all cases, there's no such thing as `compiled` gnat, everyone's got a binary gnat in the exact same sense as this binary gnat I used here. I am aware you might like to pretend otherwise, but in point of fact there's no bootstrap chain available, if you're `compiling` `your own` gnat you're still doing it on a binary you got from somewhere, yes ? So then... fucking spare me, aite ?">iv</a></sup>, because obviously gcc 5 and over can't actually compile anything. This failed in practice, because of a quite unexpected<br />
+<blockquote>4.9.4/ld final link failed<br />
+unrecognized relocation 0x2a in .init</p></blockquote>
+<p> which left us grasping at straws. A well supplied sea of straws -- maybe the PATH reference is to be like this not like that ?<sup><a href="#footnote_4_96446" id="identifier_4_96446" class="footnote-link footnote-identifier-link" title="Specifically : export LD_LIBRARY_PATH=/home/lordmpoftmsr/eulora2/gnat/lib64:$LD_LIBRARY_PATH ? Or export LD_LIBRARY_PATH=/home/lordmpoftmsr/eulora2/gnat/lib:$LD_LIBRARY_PATH ? Well, which is it ? And why ? And are you sure ?">v</a></sup> Maybe the directory permissions aren't right ? Maybe <a href="http://trilema.com/2010/top-1-reason-you-suck-as-a-blogger/?b=A,%20vreti&#038;e=puteti#select">your mother was a whore</a> ? It was obvious enough there's some sort of superficial, administrative, purely bureaucratic <a href="http://trilema.com/2009/se-da-o-membrana/">semi-permeable membrane</a> between us and the intended cake, but the sea of entirely spurious "<a href="http://trilema.com/2017/the-practical-costs-of-hallucinated-freedom/">options</a>" "<a href="http://trilema.com/2017/fake-news-are-just-one-tail-of-the-failed-female-state/">available</a>" to "fix" what shouldn't exist in the first place is... well, just vast enough. Right ?</li>
+<p>
+<li>Thus therefore, three hours in both ways, making a grand total of six hours' worth of engineer time<sup><a href="#footnote_5_96446" id="identifier_5_96446" class="footnote-link footnote-identifier-link" title="You think lawyers bill insanely ? You should see what I used to charge, back when I could still be bothered to take custom.">vi</a></sup> we had to bow to the obvious : the notion of gnat as a "build environment" is laughable on the face<sup><a href="#footnote_6_96446" id="identifier_6_96446" class="footnote-link footnote-identifier-link" title="The words spoken being
+Sep 10 20:34:34 &lt;mircea_popescu>	tu deci... precit se vadeste visu' nostru frumos ca om putea cumva compila nu tine.
+Sep 10 20:35:30 &lt;mircea_popescu>	auzi, tu daca faci direct obiect binar cal3d / cs ? 
+Sep 10 20:35:36 &lt;diana_coman>	ce ma seaca e ca nu pricep chiar bine ce bucata ii e lipsa/ia din sistem sau cum
+Sep 10 20:35:46 &lt;mircea_popescu>	io ce nu pricep ii ce o luat DE LA TINE
+Sep 10 20:35:54 &lt;diana_coman>	adica?
+Sep 10 20:35:55 &lt;mircea_popescu>	pentru ca sa-ti zic ceva, asta cu `compulat in gnat` e un pipe dream. el nu compileaza IN gnat. el compileaza in ce sistem ai. al tau merge si al meu nu merge, dar gnat e asa, tichie pe cacat.
+Sep 10 20:36:13 &lt;diana_coman>	de acord; da' gnat are gcc. al lui, acolo.
+Sep 10 20:36:22 &lt;mircea_popescu>	degeaba
+Sep 10 20:36:26 &lt;diana_coman>	si glibc si alea
+Sep 10 20:36:24 &lt;mircea_popescu>	poa avea si popcorn. faptu' ca are de aratat nu inseamna ca are in sensul de avut folosit aici. ca uite ca nu are. si eu asa zic, ca el la fel nu are peste tot.
+Sep 10 20:36:52 &lt;diana_coman>	asa ma rog, pe undeva m-am cam uitat eu stramb da' stand drept ca zau daca nu e si gnat fix a la stan
+Sep 10 20:36:56 &lt;mircea_popescu>	nu-s eu special doar pentru ca-s simptomatic.
+Sep 10 20:37:07 &lt;mircea_popescu>	ma-ntelegi cum zic ?
+Sep 10 20:37:18 &lt;diana_coman>	apai eu nu zic ca esti tu problema acolo, lol
+Sep 10 20:37:44 &lt;mircea_popescu>	noa, si atunci noi de fapt avem o problema, si e structurala : compilat `in` gnat nu exista mai mult decit compilat `in` nano. faptu' ca tu te uiti la ceva in nano nu e relevant.
+Sep 10 20:37:35 &lt;diana_coman>	tu, eu pot sa zic ca iti pun acolo .so si de la cal3d si de la cs da' ... o merge apoi sau nu, n-am idee. stii cum zic? da' in fine, nu-i nimic de pierdut sa incercm posibil, ma gandesc
+Sep 10 20:38:03 &lt;mircea_popescu>	pai da sa vedem, daca ne am apucat.
+Sep 10 20:38:19 &lt;diana_coman>	bine, deci sa iau ce lib am eu si sa le pun si pe alea pt download, da? sa vad cat or fi si alea de uriase, lol
+Sep 10 20:38:25 &lt;mircea_popescu>	pls.
+Sep 10 20:38:50 &lt;diana_coman>	cu nenorocirea ca la cs nici nu-i doar una, pfuai
+Sep 10 20:39:04 &lt;mircea_popescu>	heh. fa si tu un tar. nu stau sa tot sha 500 de cacacele
+Sep 10 20:39:39 &lt;diana_coman>	pai nici nu, numai ca ...ce dracu iau de acolo, cam aia
+Sep 10 20:40:06 &lt;mircea_popescu>	e, vezi si tu, eu oricum sunt prin zona, nu e bai
+">vii</a></sup> ; and we settled on a hail <a href="http://trilema.com/2011/sa-ma-fut-in-sfinta-maria-voastra/">mary</a> attempt of importing pre-made binary version of various custom libraries, to link with the actual project locally -- not out of any great expectation of anything besides getting a better notion of the shape of the hole in human thought left behind the varmints<sup><a href="#footnote_7_96446" id="identifier_7_96446" class="footnote-link footnote-identifier-link" title="For a long while `smart` morons, the sort that read the cheapest dictionary and populate bureaucracies readily agreed human hunger is a problem, in the manner these agree on anything -- for to have had something agreed upon, and in that agreement assuage, at least to themselves and in their worthless estimation, their countless many maculant shortcomings &#038; damnations. 
+At first this was just idle prattle of the sort typical to them ; but over time the moron enabler, the human bovine, adding effort upon piled effort eventually got us to this cursed state wherein hunger is no longer a concern for the mass. Far, quite very fucking far from the age of wonder and `unleashed human potential` this misfortunate state of affairs was supposed to bring upon us, the cold reality of the matter is that humanity without hunger reverts to something rather akin plants. The vegetative state and manner of the moronic subhumans, now empowered by a sort of photosynthesis substitute enacted through the femstate's food pellet dispensaries, has torn an undenyable hole in the very fabric of existence, leaving us behind to probe at the margins, while they `mobilize` to `fight the war` on... not staying at home.">viii</a></sup>. This also failed, and in the same manner.</li>
+<p>
+<li>Along with my observation that I do not believe actually functional systems still exist anywhere, but merely systems broken in ways the idiot "sysadmining" them hasn't yet discovered, it was then decided that in preference of undertaking yet another sea drinking project I'll just replicate her working environment ; and thereby releasing Diana to her own affairs I put a hold on Hannah, who was now to install CentOS 6 on the box in question. Perhaps one day she recounts the tribulations involved in that nonsense ; I'll limit myself to the discussion of my end : CentOS is not a distribution in any meaningful sense<sup><a href="#footnote_8_96446" id="identifier_8_96446" class="footnote-link footnote-identifier-link" title="The actual discussion : 
+Sep 11 14:13:25 &lt;mircea_popescu>	deci tu, io nu cred ca centos poate fi o distributie. ma bucur mult ca-ti merge tie anume, dar e o gluma proasta cam din toate motivele posibile. ti le enumar ?
+Sep 11 14:13:42 &lt;diana_coman>	deja le-am cam auzit mai dinsus, zic. si-mi cam pare rau ca te-am varat in nebunia aia, ce sa mai zic
+Sep 11 14:13:58 &lt;mircea_popescu>	hai sa zic clar si explicit decit asa infuriat, si pe indelete, sa stim ce facem. pe urma intr-un an avem concret.
+Sep 11 14:14:04 &lt;diana_coman>	ascult
+Sep 11 14:14:44 &lt;mircea_popescu>	deci 1. e fix gnome. nu e `linux`, nu e `centos`. e GNOME. gnome e porcaria aia din ubuntu, cu `network applet manager`, de exemplu. nu exista `linux grafic` ca toate is X, si nu exista linux-windows. ca toate is gnome. daca e sa pui gnome pe calculator -- nu, NU linux ; nu, NU `distributie`. e gnome, plm. atunci mai bine pui ubuntu, ca e a lor. tot asa cum daca ma apuc de marxism citesc direct in rusa, ce plm sa fac io cu marxism cubanez.
+Sep 11 14:15:45 &lt;diana_coman>	este ce zici
+Sep 11 14:16:21 &lt;mircea_popescu>	2. nu are grub2. are grub legacy. tu stii ce pula mea inseamna aia ?! nu poate citi cam toate partiile. pe bune acuma. nu e capabil de nimic, nu are set, nu are ls, daca e de o panica mori cu el acolo. tu i-ai vazut shellu la grub legacy ? intra o data de curiozitate, e o traznaie imposibila din 94. daca e sa ceva, cum plm rescue un system fara set, fata tabcomplete, fara ls, fara absolut nimic ? revenim la cind dura doua zile sa salvezi un sistem busit ?
+Sep 11 14:17:30 &lt;diana_coman>	eu de cand am renuntat la ideea ca exista un sistem de operare pe bune, am renuntat si la pretentia ca partitii ca alea, le dau fiecaruia un hard si basta; decat sa stau de toate pretentiile fiecarui `sistem de operare` si `boot loader` cacat
+Sep 11 14:17:57 &lt;mircea_popescu>	tu, eu am de date si 2-3 partitii de os. ca asta nu e sistem de security, e de gaming. si asa se fac alea noa. ce plm acuma, pun direct un emulator de amiga zici ?
+Sep 11 14:18:28 &lt;diana_coman>	lol; eu nu mai zic nimic, ca nu-i ca n-ai dreptate acolo sau ceva.
+Sep 11 14:19:36 &lt;mircea_popescu>	mai departe, 3. nu are suport pentru absolut nimic. deci el NU are drivere care sa mearga cu realtek, care's 90% din piata de net hardware din 2010 in 2020, fara discutii. si stiu ca nu au, si stau asa. community entreprise, da-ti seama. de zece ani, citeste numa' ce `alternative` exista, `pai puteti pune direct de la realtek, da' pe urma recompilati la fiecare kernel. sau puteti pune de la puletii astia obscuri, da' e ca si cum va insurati cu ei. sau puteti...`
+Sep 11 14:20:17 &lt;mircea_popescu>	e asa, pui centos, ai 2% sanse sa-ti mearga sistemul. pai plm, cumpar cite 50 de computere odata? cum fac, ca nu exista diversitate reala, daca cumpar 50 deodata cumpar 50 aceleasi.
+Sep 11 14:20:45 &lt;mircea_popescu>	sigur, din cind in cind merge. stii ce merge cam la fel de bine ? orice, plm. adus ploaia infigindu-ti ananasi in cur merge tot asa, 2%. ca asa e meteorologia.
+Sep 11 14:21:27 &lt;mircea_popescu>	~ fin ~
+Sep 11 14:21:28 &lt;diana_coman>	cand merge merge iar cand nu merge, sta.
+Sep 11 14:22:02 &lt;mircea_popescu>	noa, pentru aceste motive io nu cred ca centos e o solutie reala. eventual pot sa-mi cumpar exact-exact ce sistem ai tu, ceea ce la mine dureaza, ca plm, astia nu is producatori, is importatori.
+Sep 11 14:22:10 &lt;diana_coman>	n-are sens, nu">ix</a></sup>.</li>
+<p>
+<li>The next day, after as you might have guessed multiple engineer-days already wasted in the pursuit of a computer working to the standard of doing what I want, <a href="http://trilema.com/2017/the-day-of-failure-trilemma/?b=then%20go%20work&#038;e=for#select">not what it wants</a>, and having had the partitions imbecile centos destroyed reinstated, we're in a prime position to restart the discussion at the "why the fuck is gnat using system ld, when it has its own ld bundled anyways" juncture. This matter was never resolved, nobody can fucking explain why nor does anyone seem to exist who's ever considered such things. Because why should they, right ? Meanwhile however the error's been traced : 0x2a ie relocation42 is R_X84_64_REX_GTPCRELX, and comes  to us from binutils 2.26<sup><a href="#footnote_9_96446" id="identifier_9_96446" class="footnote-link footnote-identifier-link" title="Here's some absolutely unparalelled fuming material : everyone complains about their toolset being fucking broken, overnight, for no reason ; glibc maintainer meekly asserts `it ain't his fault`. Not kidding, here :
+Message #10 received at 808205@bugs.debian.org (full text, mbox, reply):
+From: Aurelien Jarno 
+To: Dima Kogan , Christophe , Emmanuel Charpentier , Vlad Orlov , John Aston , Max Kellermann 
+Cc: 808181@bugs.debian.org, 808205@bugs.debian.org, 808206@bugs.debian.org
+Subject: Re: Bug#808181: libc6: Upgrade can make the linker unusable
+Date: Thu, 17 Dec 2015 11:10:43 +0100
+reassign 808181 libc6-dev
+reassign 808205 libc6-dev
+forcemerge 808181 808205
+forcemerge 808181 808206
+severity 808181 serious
+thanks
+On 2015-12-16 23:36, Aurelien Jarno wrote:
+> On 2015-12-16 13:15, Dima Kogan wrote:
+> > Package: libc6
+> > Severity: normal
+> >
+> > Hi. I had
+> >
+> >   libc6    = 2.19-22
+> >   binutils = 2.25-4
+> >
+> > and all was well. Then I upgraded to libc6 = 2.21-4 (currently latest in
+> > sid). As a result, even the most basic build-time linking would fail.
+> > For instance, with a trivial hello-world program:
+> >
+> >   $ gcc-5 -o tst tst.c
+> >
+> >   /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o: unrecognized relocation (0x2a) in section `.init'
+> >   /usr/bin/ld: final link failed: Bad value
+> >   collect2: error: ld returned 1 exit status
+> >
+> > This would happen with gcc-5 and with gcc-4.9. Downgrading libc6 would
+> > fix it. After some fiddling I realized that upgrading to binutils =
+> > 2.25.90.20151209-1 (currently latest in sid) fixes it. I.e. with the
+> > latest libc6 and the latest binutils packages things work.
+>
+> The problem is not introduced by the glibc, but just by the fact that
+> it has been built with a recent binutils version which adds new
+> relocation types on i386 and amd64. This means that ALL static libraries
+> are affected by this problem.
+>
+> > Can the broken combination be prevented with some Conflicts: tags?
+> > Currently this is a trap for the unwary.
+>
+> I therefore don't think we need to fix that at the glibc level. Either
+> we just ignore the problem saying we don't support partial upgrades or
+> we try to find a global way to fix the dependencies for all libraries.
+We are working to migrate binutils version 2.25.90.20151209-1 into
+testing asap. If everything goes well it should be the case after the
+13:52 UTC dinstall run, so a few hours after that on the mirrors.
+In the meantime fetching and installing this version from sid, should
+solve the issue.
+Aurelien
+Isn't that cute ? Explain this to me : what the fuck is the point of this pointless cunt being called `Aurelien` ? What, so I can construct a relationship with this whore of an object, a `lock` in name only readily opened by any and all keys (and for that matter -- no keys at all) ? So I can be sold up, down, left &#038; right the river at the drop of a hat -- not even a real hat, a drawing of a hat might suffice, an intimation of a hat potentially enough. Why the fuck would he be `Aurelien` to me, when he fails, evidently, deliberately, by construction and by design fails to protect my interest in the world and with it my equity in his supposed name ? Why doesn't the more adequately general `pointless cunt` denomination work as well for him as for the other ones ? Why exactly would there be a `Dima Kogan` supposedly different from a `Vlad Orlov` in turn putatively distinguishable from a `Christophe` or an `Emanuel` ? What exactly -- and please be precise in answering this -- what exactly is the difference between them ? What would be lost if I just called them all `pointless cunt`, identically and indistinguishedly seeing how that is exactly what they are ? A pile of grains of salt, which all added to water melt and otherwise there sit aren't called `Joe` and `Bob`. They are called a pile of grains of salt. Why's this pile-up of pointless cunts supposed to carry individual lables, I don't fucking get it, for the life of me. What do they do that in any sense distinguishes them, did any of the list raise to the absolute minimum bar of manhood at any point ? Did they say -- and yes I very much expect they'd have said this exactly, verbatim, 
+hey you stupid pointless cunt, a) stop forwarding me your imbecile secretions and b) NO IT IS NOT OKAY TO HAVE YOUR SHIT BROKEN!!!! Why the fuck are you still alive while `binutils` isn't burned down yet ?
+Binutils still fucking exists past Thu, 17 Dec 2015, and `Aurelien` wasn't buried in the trenches right in front of it, so what fucking gives ?!
+But enough of the pointless cunts ; let's look instead at the poisonous shitheads, why not, let's see if blood pressure over 300 is achievable in humans. So, do you recall H J Lu ? Of Boot/Root, back in... ninety-fuckin'-two ? No ? But of course not, you weren't there, you're just here-and-now,  momentarily if indistinctly befouling the world with your false memories and pseudo-identities, only to reappear, five seconds after being dispatched in a pool of your own... xylegm. Of  course, of course.
+Anyways, either that H J Lu of thirty years ago -- or if not, the hollow name, the empty symbyl meanwhile absorbed into the borg ; or else I suppose the hollow clothes perambulated on a stick by some Bob Beck or other -- is `making proposals`. Here, here's how `proposals` look :
+Add R_X86_64_[REX_]GOTPCRELX support to gas and ld
+author	H.J. Lu 
+	Thu, 22 Oct 2015 11:49:20 +0000 (04:49 -0700)
+committer	H.J. Lu 
+	Thu, 22 Oct 2015 11:49:38 +0000 (04:49 -0700)
+This patch adds support for the R_X86_64_GOTPCRELX and
+R_X86_64_REX_GOTPCRELX relocations proposed in
+https://groups.google.com/forum/#!topic/x86-64-abi/n9AWHogmVY0
+to gas and ld.  It updates gas to generate R_X86_64_GOTPCRELX,
+R_X86_64_REX_GOTPCRELX if there is a REX prefix, relocation for memory
+operand, foo@GOTPCREL(%rip).  With the locally defined symbol, foo, we
+convert
+  mov foo@GOTPCREL(%rip), %reg
+to
+   lea foo(%rip), %reg
+and convert
+   call/jmp *foo@GOTPCREL(%rip)
+to
+   nop call foo/jmp foo nop
+When PIC is false, convert
+   test %reg, foo@GOTPCREL(%rip)
+to
+test $foo, %reg
+and convert
+   binop foo@GOTPCREL(%rip), %reg
+to
+   binop $foo, %reg
+where binop is one of adc, add, and, cmp, or, sbb, sub, xor instructions.
+bfd/
+* elf64-x86-64.c: Include opcode/i386.h.
+(x86_64_elf_howto_table): Add R_X86_64_GOTPCRELX and
+R_X86_64_REX_GOTPCRELX.
+(R_X86_64_standard): Replace R_X86_64_PLT32_BND with
+R_X86_64_REX_GOTPCRELX.
+(x86_64_reloc_map): Add BFD_RELOC_X86_64_GOTPCRELX and
+BFD_RELOC_X86_64_REX_GOTPCRELX.
+(need_convert_mov_to_lea): Renamed to ...
+(need_convert_load): This.
+(elf_x86_64_check_relocs): Handle R_X86_64_GOTPCRELX and
+R_X86_64_REX_GOTPCRELX.  Replace need_convert_mov_to_lea with
+need_convert_load.
+(elf_x86_64_gc_sweep_hook): Handle R_X86_64_GOTPCRELX and
+R_X86_64_REX_GOTPCRELX.
+(elf_x86_64_size_dynamic_sections): Likewise.
+(elf_x86_64_relocate_section): Likewise.
+(elf_x86_64_convert_mov_to_lea): Renamed to ...
+(elf_x86_64_convert_load): This.  Replace need_convert_mov_to_lea
+with need_convert_load.  Support R_X86_64_GOTPCRELX and
+R_X86_64_REX_GOTPCRELX transformations.
+* reloc.c (BFD_RELOC_X86_64_GOTPCRELX): New.
+(BFD_RELOC_X86_64_REX_GOTPCRELX): Likewise.
+* bfd-in2.h: Regenerated.
+* libbfd.h: Likewise.
+gas/
+* config/tc-i386.c (tc_i386_fix_adjustable): Handle
+BFD_RELOC_X86_64_GOTPCRELX and BFD_RELOC_X86_64_REX_GOTPCRELX.
+(tc_gen_reloc): Likewise.
+(i386_validate_fix): Generate BFD_RELOC_X86_64_GOTPCRELX or
+BFD_RELOC_X86_64_REX_GOTPCRELX if fx_tcbit2 is set.
+* config/tc-i386.h (TC_FORCE_RELOCATION_LOCAL): Also return
+true for BFD_RELOC_X86_64_GOTPCRELX and
+BFD_RELOC_X86_64_REX_GOTPCRELX.
+gas/testsuite/
+* gas/i386/i386.exp: Run x86-64-gotpcrel.
+* gas/i386/x86-64-gotpcrel.d: New file.
+* gas/i386/x86-64-gotpcrel.s: Likewise.
+* gas/i386/ilp32/x86-64-gotpcrel.d: Likewise.
+* gas/i386/x86-64-localpic.d: Replace R_X86_64_GOTPCREL with
+R_X86_64_REX_GOTPCRELX.
+* gas/i386/ilp32/x86-64-localpic.d: Likewise.
+include/elf/
+* x86-64.h (R_X86_64_GOTPCRELX): New.
+(R_X86_64_REX_GOTPCRELX): Likewise.
+ld/testsuite/
+* ld-ifunc/ifunc-5r-local-x86-64.d: Replace R_X86_64_GOTPCREL
+with R_X86_64_REX_GOTPCRELX.
+* ld-x86-64/plt-main1.rd: Likewise.
+* ld-x86-64/plt-main3.rd: Likewise.
+* ld-x86-64/plt-main4.rd: Likewise.
+* ld-x86-64/gotpcrel1.dd: New file.
+* ld-x86-64/gotpcrel1.out: Likewise.
+* ld-x86-64/gotpcrel1a.S: Likewise.
+* ld-x86-64/gotpcrel1b.c: Likewise.
+* ld-x86-64/gotpcrel1c.c: Likewise.
+* ld-x86-64/gotpcrel1d.S: Likewise.
+* ld-x86-64/load1.s: Likewise.
+* ld-x86-64/load1a.d: Likewise.
+* ld-x86-64/load1b.d: Likewise.
+* ld-x86-64/load1c.d: Likewise.
+* ld-x86-64/load1d.d: Likewise.
+* ld-x86-64/x86-64.exp: Run load1a, load1b, load1c and load1d
+tests.  Run gotpcrel1 test.
+X86-64 System V Application Binary Interface ›
+RFC: Add R_X86_64_GOTPCRELX and R_X86_64_REX_GOTPCRELX
+2 publicaciones por 1 autor
+	H.J. Lu
+7/10/15
+Traducir mensaje al español
+X86 instruction encoding supports converting some instructions on memory
+operand with GOTPCREL relocation against symbol, foo, into a different
+form on immediate operand if foo is defined locally.  Those instructions
+are:
+call *foo@GOTPCREL(%rip)         =>   nop call foo or call foo nop
+jmp *foo@GOTPCREL(%rip)          =>   jmp foo nop
+mov foo@GOTPCREL(%rip), %reg     =>   lea foo(%rip), %reg
+When PIC is false,
+test %reg, foo@GOTPCREL(%rip)    =>   test $foo, %reg
+binop foo@GOTPCREL(%rip), %reg   =>   binop $foo, %reg
+where binop is one of adc, add, and, cmp, or, sbb, sub, xor instructions.
+I am proposing to add 2 new relocations, R_X86_64_GOTPCRELX and
+R_X86_64_REX_GOTPCRELX, to x86-64 psABI.  Instead of generating
+R_X86_64_GOTPCREL relocation agasint foo for foo@GOTPCREL(%rip),
+we generate R_X86_64_GOTPCRELX or R_X86_64_REX_GOTPCRELX if there
+is a REX prefix.  Linker can treat them the same as R_X86_64_GOTPCREL
+or it can perform the transformations listed above.
+Any feedbacks?
+Thanks.
+--
+H.J.
+	H.J. Lu
+20/10/15
+Traducir mensaje al español
+- mostrar texto citado -
+Here are 3 patches against x86-64 psABI.  The updated pdf file is
+available from
+https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-gotpcrelx.pdf
+They have been implemented on binutils users/hjl/got branch.  I
+will check it into binutils master branch this week.
+--
+H.J.
+Archivos adjuntos (3)
+0001-Add-R_X86_64_GOTPCRELX-and-R_X86_64_REX_GOTPCRELX.patch
+3 KB   Ver   Descargar
+0002-Combine-GOTPLT-and-GOT-Slots.patch
+4 KB   Ver   Descargar
+0003-Optimize-GOTPCRELX-Relocations.patch
+2 KB   Ver   Descargar
+That is it. That is the fuck it, some obscure emokid/fury/poisonous fuckwit posted some shit on his wall on Myspace, asking for `any feedbacks`. Exactly like they all do, but I do mean fucking exactly, there's at least fifty millions of these (if you don't count all my autogenerated ones -- which `not count` I am in a position to do, but you aren't in a position to do, for the obvious fucking reason), and they all do exactly this crap.
+There was no feedback, needless to say. Leaving alone the spurious plural, there was nothing, I'm willing to wager the situation is exactly the same seen in all other cases, since forever : I am, literally, the first person to have read either of those ; and now that I discuss it I'll thereby drive reliably six nines of all the public exposure either the piece, the supposed `author` or anything connected will ever get in their entire historical existence. Yet nevertheless -- everyone's toolchain is broken now, not that anyone even fucking understands anything of anything. 
+But the toolchain's broken, factually, and it'll stay that way, not like anyone's in danger of ever noticing anything, let alone fixing anything. Exactly as in the case of anonymous `epidemiologists`, who wrote some dumb shit in their online journal and now everyone's country's broken on account of bovinely herding pointless cunts (yet well fed and awareness-energized) everywhere, ever-ready to amplify every random fart into a deafening hurricane of malodourous nonsense. Exactly as in the case of `ecologists` writing some bullshit in their online journals twenty years ago such that now everyone's cars are fucking broken. Exactly as in the case of everything, from the 1970s `childhood abuse` meme to the 2010s `campus rape culture` meme, exactly as with the whole rest of `women in the marketplace` bullshit, the sad if ongoing effort of replacing Grace Hopper with `I knitted in the situation room!!!! Where were you while I was sitting and knitting a lovely pair of woolen socks in the situation room?!?!?!` sulphurous fuckwads.">x</a></sup>, aforewhich it didn't exist.</li>
+<p>
+<li>Needless to say, asking GNAT to pretty please, with sugar on top, <em>use its own fucking ld, <b>which it comes with</b></em> doesn't fix anything -- I mean the directories change, but otherwise<br />
+<blockquote>/home/lordmpoftmsr/eulora2/gnat/bin/../libexec/gcc/x86_64-pc-linux-gnu/4.9.4/ld: /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o: unrecognized relocation (0x2a) in section `.init'<br />
+/home/lordmpoftmsr/eulora2/gnat/bin/../libexec/gcc/x86_64-pc-linux-gnu/4.9.4/ld: final link failed: Bad value<br />
+collect2: error: ld returned 1 exit status
+</p></blockquote>
+<p>Nor is downgrading binutils, <em>nor is downgrading make itself</em> (which yes, is something I know how to do, just like I know how to rescue partition tables some idiot distribution over-wrote as part of its natural functioning) to the exact version her "working" system happened to have (ie, from 4.1 to 3.81) actually fix it ; no code can be linked and fuck you, compilation is no longer a possibility in this brave new world Dancing Monkeyboy "loves".</li>
+</ol>
+<p>So I threw my hands up in the air, at the point two women had laboured whole days for my satisfaction -- a satisfaction which they never got to see, I ended up every day more frustrated than a bagful of internet whiteknights<sup><a href="#footnote_10_96446" id="identifier_10_96446" class="footnote-link footnote-identifier-link" title="If for no reason then simply because I have greater capacities for life, and generally everything than that species of sad, dry fucks.">xi</a></sup>. Days, you understand me ? Plural. We've exchanged -- I'm not counting the automatically generated "textual" spew, in the megabytes ; I'm not counting viva voce allocution, with its decibels. I'm just counting the words written down by thinking minds' hands, like the words here ; we've exchanged 22`687 words to <em>not</em> manage to make this thing "work" that had no business not working or taking any "making to work" in the first place -- and speaking of which, do me a fucking favour : if "you know" what "<a href="http://trilema.com/2016/the-text-and-the-piddly-recantion/">the solution is</a>", just go fucking hang yourself. </p>
+<p>I'm not even fucking kidding, the only thing more shamefully, just out and out shamefully miserable, than <em>knowing</em> what all this bullshit is, is having made it in the first place. Violently raping twelve year olds to death isn't even on the list. It's not in the same top ten. The first, the foremost thing that turns man into monstrous non-man is cognitive involvement with this pile of shit ; and there is no excuse. So yes, I very much mean it : if "you know what the solution is" do the world a fucking favour and kill yourself, you piece of shit you.</p>
+<p>Anyways, I've no doubt Diana will manage to package me something, after working way the fuck harder than she needs to at pointless nonsense that had absolutely no business existing in the first place. But -- not today.</p>
+<p>Today, desperation in desolation ; and fuck all'yall.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_96446" class="footnote">Sep 10 19:04:10 &lt;diana_coman>	tu ce versiune de gcc ai in sistem?<br />
+Sep 10 19:04:18 &lt;mircea_popescu>	acum ma uit<br />
+Sep 10 19:04:51 &lt;mircea_popescu>	7.5 o.o<br />
+Sep 10 19:04:57 &lt;diana_coman>	lmao<br />
+Sep 10 19:05:08 &lt;mircea_popescu>	plm noa da-le nota. [<a href="#identifier_0_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_96446" class="footnote">267 MB, <em>pai ce-i aia</em>... [<a href="#identifier_1_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_96446" class="footnote">Excepting things like "libpng-12-dev has no installation candidate" means you gotta know it's just called libpng-dev, "now", or "here", or whatever ; or more bluntly "selecting libcal3d12-dev instead of libcal34-dev" "should be okay" and so on etcetera. I mean, it's 3d12, how bad can it be, sword of infinity minus one, right ? [<a href="#identifier_2_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_96446" class="footnote">Which, incidentally, is supplied as a binary. I don't mean "in my case" ; I mean in <em>all</em> cases, there's no such thing as "compiled" gnat, everyone's got a binary gnat in the exact same sense as this binary gnat I used here. I am aware you might like to pretend otherwise, but in point of fact there's no bootstrap chain available, if you're "compiling" "your own" gnat you're still doing it on a binary you got from somewhere, yes ? So then... fucking spare me, aite ? [<a href="#identifier_3_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_96446" class="footnote">Specifically : export LD_LIBRARY_PATH=/home/lordmpoftmsr/eulora2/gnat/lib64:$LD_LIBRARY_PATH ? Or export LD_LIBRARY_PATH=/home/lordmpoftmsr/eulora2/gnat/lib:$LD_LIBRARY_PATH ? Well, which is it ? And why ? And are you sure ? [<a href="#identifier_4_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_96446" class="footnote">You think lawyers bill insanely ? You should see what I used to charge, back when <em>I could still be bothered</em> to take custom. [<a href="#identifier_5_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_96446" class="footnote">The words spoken being<br />
+<blockquote>Sep 10 20:34:34 &lt;mircea_popescu>	tu deci... precit se vadeste visu' nostru frumos ca om putea cumva compila nu tine.<br />
+Sep 10 20:35:30 &lt;mircea_popescu>	auzi, tu daca faci direct obiect binar cal3d / cs ? </p>
+<p>Sep 10 20:35:36 &lt;diana_coman>	ce ma seaca e ca nu pricep chiar bine ce bucata ii e lipsa/ia din sistem sau cum<br />
+Sep 10 20:35:46 &lt;mircea_popescu>	io ce nu pricep ii ce o luat DE LA TINE</p>
+<p>Sep 10 20:35:54 &lt;diana_coman>	adica?<br />
+Sep 10 20:35:55 &lt;mircea_popescu>	pentru ca sa-ti zic ceva, asta cu "compulat in gnat" e un pipe dream. el nu compileaza IN gnat. el compileaza in ce sistem ai. al tau merge si al meu nu merge, dar gnat e asa, tichie pe cacat.</p>
+<p>Sep 10 20:36:13 &lt;diana_coman>	de acord; da' gnat are gcc. al lui, acolo.<br />
+Sep 10 20:36:22 &lt;mircea_popescu>	degeaba</p>
+<p>Sep 10 20:36:26 &lt;diana_coman>	si glibc si alea<br />
+Sep 10 20:36:24 &lt;mircea_popescu>	poa avea si popcorn. faptu' ca are de aratat nu inseamna ca are in sensul de avut folosit aici. ca uite ca nu are. si eu asa zic, ca el la fel nu are peste tot.</p>
+<p>Sep 10 20:36:52 &lt;diana_coman>	asa ma rog, pe undeva m-am cam uitat eu stramb da' stand drept ca zau daca nu e si gnat fix a la stan<br />
+Sep 10 20:36:56 &lt;mircea_popescu>	nu-s eu special doar pentru ca-s simptomatic.<br />
+Sep 10 20:37:07 &lt;mircea_popescu>	ma-ntelegi cum zic ?</p>
+<p>Sep 10 20:37:18 &lt;diana_coman>	apai eu nu zic ca esti tu problema acolo, lol<br />
+Sep 10 20:37:44 &lt;mircea_popescu>	noa, si atunci noi de fapt avem o problema, si e structurala : compilat "in" gnat nu exista mai mult decit compilat "in" nano. faptu' ca tu te uiti la ceva in nano nu e relevant.</p>
+<p>Sep 10 20:37:35 &lt;diana_coman>	tu, eu pot sa zic ca iti pun acolo .so si de la cal3d si de la cs da' ... o merge apoi sau nu, n-am idee. stii cum zic? da' in fine, nu-i nimic de pierdut sa incercm posibil, ma gandesc<br />
+Sep 10 20:38:03 &lt;mircea_popescu>	pai da sa vedem, daca ne am apucat.</p>
+<p>Sep 10 20:38:19 &lt;diana_coman>	bine, deci sa iau ce lib am eu si sa le pun si pe alea pt download, da? sa vad cat or fi si alea de uriase, lol<br />
+Sep 10 20:38:25 &lt;mircea_popescu>	pls.</p>
+<p>Sep 10 20:38:50 &lt;diana_coman>	cu nenorocirea ca la cs nici nu-i doar una, pfuai<br />
+Sep 10 20:39:04 &lt;mircea_popescu>	heh. fa si tu un tar. nu stau sa tot sha 500 de cacacele</p>
+<p>Sep 10 20:39:39 &lt;diana_coman>	pai nici nu, numai ca ...ce dracu iau de acolo, cam aia<br />
+Sep 10 20:40:06 &lt;mircea_popescu>	e, vezi si tu, eu oricum sunt prin zona, nu e bai</p></blockquote>
+<p> [<a href="#identifier_6_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_96446" class="footnote">For a long while "smart" morons, the sort that read <a href="http://trilema.com/2012/sa-ne-distram-putin-cu-inutilitatea-internetului/">the cheapest dictionary</a> and <a href="http://trilema.com/2013/fried-chicken/">populate bureaucracies</a> readily agreed human hunger <a href="http://trilema.com/2016/observations-on-certain-documents-contained-in-the-history-of-the-united-states-for-the-year-1796-in-which-the-charge-of-speculation-against-alexander-hamilton-late-secretary-of-the-treasury-is-fully/?b=the%20three%20great%20scourges&#038;e=Famine#select">is a problem</a>, in <a href="http://trilema.com/2013/soft-consensus-aka-fecal-matter/">the manner</a> these agree on anything -- for to have had something agreed upon, and in that agreement <a href="http://trilema.com/2020/thelastpsychiatristcom-the-wisdom-of-crowds-turns-into-madness-adnotated/?b=the%20guesses%20converge&#038;e=Yikes#select">assuage</a>, at least to themselves and in their worthless estimation, their countless many maculant shortcomings &#038; damnations. </p>
+<p>At first this was just idle prattle of the sort typical to them ; but over time the moron enabler, the human <a href="http://trilema.com/2016/a-story-of-men/#identifier_1_70650">bovine</a>, adding effort upon piled effort eventually got us to this cursed state wherein hunger is no longer a concern for <a href="http://trilema.com/2017/hela-matter/">the mass</a>. Far, quite very fucking far from the age of wonder and "unleashed human potential" this misfortunate state of affairs was supposed to bring upon us, the cold reality of the matter is that humanity without hunger reverts to something rather akin plants. The vegetative state and manner of the moronic subhumans, now empowered by a sort of photosynthesis substitute enacted through the femstate's food pellet dispensaries, has torn an undenyable hole in the very fabric of existence, leaving us behind to probe at the margins, while they "mobilize" to "fight the war" on... not staying at home. [<a href="#identifier_7_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_96446" class="footnote">The actual discussion : </p>
+<blockquote><p>Sep 11 14:13:25 &lt;mircea_popescu>	deci tu, io nu cred ca centos poate fi o distributie. ma bucur mult ca-ti merge tie anume, dar e o gluma proasta cam din toate motivele posibile. ti le enumar ?<br />
+Sep 11 14:13:42 &lt;diana_coman>	deja le-am cam auzit mai dinsus, zic. si-mi cam pare rau ca te-am varat in nebunia aia, ce sa mai zic</p>
+<p>Sep 11 14:13:58 &lt;mircea_popescu>	hai sa zic clar si explicit decit asa infuriat, si pe indelete, sa stim ce facem. pe urma intr-un an avem concret.<br />
+Sep 11 14:14:04 &lt;diana_coman>	ascult<br />
+Sep 11 14:14:44 &lt;mircea_popescu>	deci 1. e fix gnome. nu e "linux", nu e "centos". e GNOME. gnome e porcaria aia din ubuntu, cu "network applet manager", de exemplu. nu exista "linux grafic" ca toate is X, si nu exista linux-windows. ca toate is gnome. daca e sa pui gnome pe calculator -- nu, NU linux ; nu, NU "distributie". e gnome, plm. atunci mai bine pui ubuntu, ca e a lor. tot asa cum daca ma apuc de marxism citesc direct in rusa, ce plm sa fac io cu marxism cubanez.<br />
+Sep 11 14:15:45 &lt;diana_coman>	este ce zici</p>
+<p>Sep 11 14:16:21 &lt;mircea_popescu>	2. nu are grub2. are grub legacy. tu stii ce pula mea inseamna aia ?! nu poate citi cam toate partiile. pe bune acuma. nu e capabil de nimic, nu are set, nu are ls, daca e de o panica mori cu el acolo. tu i-ai vazut shellu la grub legacy ? intra o data de curiozitate, e o traznaie imposibila din 94. daca e sa ceva, cum plm rescue un system fara set, fata tabcomplete, fara ls, fara absolut nimic ? revenim la cind dura doua zile sa salvezi un sistem busit ?<br />
+Sep 11 14:17:30 &lt;diana_coman>	eu de cand am renuntat la ideea ca exista un sistem de operare pe bune, am renuntat si la pretentia ca partitii ca alea, le dau fiecaruia un hard si basta; decat sa stau de toate pretentiile fiecarui "sistem de operare" si "boot loader" cacat</p>
+<p>Sep 11 14:17:57 &lt;mircea_popescu>	tu, eu am de date si 2-3 partitii de os. ca asta nu e sistem de security, e de gaming. si asa se fac alea noa. ce plm acuma, pun direct un emulator de amiga zici ?<br />
+Sep 11 14:18:28 &lt;diana_coman>	lol; eu nu mai zic nimic, ca nu-i ca n-ai dreptate acolo sau ceva.</p>
+<p>Sep 11 14:19:36 &lt;mircea_popescu>	mai departe, 3. nu are suport pentru absolut nimic. deci el NU are drivere care sa mearga cu realtek, care's 90% din piata de net hardware din 2010 in 2020, fara discutii. si stiu ca nu au, si stau asa. community entreprise, da-ti seama. de zece ani, citeste numa' ce "alternative" exista, "pai puteti pune direct de la realtek, da' pe urma recompilati la fiecare kernel. sau puteti pune de la puletii astia obscuri, da' e ca si cum va insurati cu ei. sau puteti..."<br />
+Sep 11 14:20:17 &lt;mircea_popescu>	e asa, pui centos, ai 2% sanse sa-ti mearga sistemul. pai plm, cumpar cite 50 de computere odata? cum fac, ca nu exista diversitate reala, daca cumpar 50 deodata cumpar 50 aceleasi.<br />
+Sep 11 14:20:45 &lt;mircea_popescu>	sigur, din cind in cind merge. stii ce merge cam la fel de bine ? orice, plm. adus ploaia infigindu-ti ananasi in cur merge tot asa, 2%. ca asa e meteorologia.<br />
+Sep 11 14:21:27 &lt;mircea_popescu>	~ fin ~<br />
+Sep 11 14:21:28 &lt;diana_coman>	cand merge merge iar cand nu merge, sta.</p>
+<p>Sep 11 14:22:02 &lt;mircea_popescu>	noa, pentru aceste motive io nu cred ca centos e o solutie reala. eventual pot sa-mi cumpar exact-exact ce sistem ai tu, ceea ce la mine dureaza, ca plm, astia nu is producatori, is importatori.<br />
+Sep 11 14:22:10 &lt;diana_coman>	n-are sens, nu</blockqote> [<a href="#identifier_8_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_96446" class="footnote">Here's some absolutely unparalelled fuming material : everyone complains about their toolset being fucking broken, overnight, for no reason ; glibc maintainer meekly asserts "it ain't his fault". Not kidding, here :</p>
+<blockquote><p>Message #10 received at 808205@bugs.debian.org (full text, mbox, reply):<br />
+From: Aurelien Jarno <aurelien@aurel32.net><br />
+To: Dima Kogan <dima@secretsauce.net>, Christophe <christophe.fish@gmail.com>, Emmanuel Charpentier <emm.charpentier@free.fr>, Vlad Orlov <monsta@inbox.ru>, John Aston <johnastonsr@gmail.com>, Max Kellermann <max@duempel.org><br />
+Cc: 808181@bugs.debian.org, 808205@bugs.debian.org, 808206@bugs.debian.org<br />
+Subject: Re: Bug#808181: libc6: Upgrade can make the linker unusable<br />
+Date: Thu, 17 Dec 2015 11:10:43 +0100</p>
+<p>reassign 808181 libc6-dev<br />
+reassign 808205 libc6-dev<br />
+forcemerge 808181 808205<br />
+forcemerge 808181 808206<br />
+severity 808181 serious<br />
+thanks</p>
+<p>On 2015-12-16 23:36, Aurelien Jarno wrote:<br />
+> On 2015-12-16 13:15, Dima Kogan wrote:<br />
+> > Package: libc6<br />
+> > Severity: normal<br />
+> ><br />
+> > Hi. I had<br />
+> ><br />
+> >   libc6    = 2.19-22<br />
+> >   binutils = 2.25-4<br />
+> ><br />
+> > and all was well. Then I upgraded to libc6 = 2.21-4 (currently latest in<br />
+> > sid). As a result, even the most basic build-time linking would fail.<br />
+> > For instance, with a trivial hello-world program:<br />
+> ><br />
+> >   $ gcc-5 -o tst tst.c<br />
+> ><br />
+> >   /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o: unrecognized relocation (0x2a) in section `.init'<br />
+> >   /usr/bin/ld: final link failed: Bad value<br />
+> >   collect2: error: ld returned 1 exit status<br />
+> ><br />
+> > This would happen with gcc-5 and with gcc-4.9. Downgrading libc6 would<br />
+> > fix it. After some fiddling I realized that upgrading to binutils =<br />
+> > 2.25.90.20151209-1 (currently latest in sid) fixes it. I.e. with the<br />
+> > latest libc6 and the latest binutils packages things work.<br />
+><br />
+<b>> The problem is not introduced by the glibc, but just by the fact that<br />
+> it has been built with a recent binutils version which adds new<br />
+> relocation types on i386 and amd64. This means that ALL static libraries<br />
+> are affected by this problem.</b><br />
+><br />
+> > Can the broken combination be prevented with some Conflicts: tags?<br />
+> > Currently this is a trap for the unwary.<br />
+><br />
+> I therefore don't think we need to fix that at the glibc level. Either<br />
+> we just ignore the problem saying we don't support partial upgrades or<br />
+> we try to find a global way to fix the dependencies for all libraries.</p>
+<p>We are working to migrate binutils version 2.25.90.20151209-1 into<br />
+testing asap. If everything goes well it should be the case after the<br />
+13:52 UTC dinstall run, so a few hours after that on the mirrors.</p>
+<p>In the meantime fetching and installing this version from sid, should<br />
+solve the issue.</p>
+<p>Aurelien</p></blockquote>
+<p>Isn't that cute ? Explain this to me : what <em>the fuck</em> is the point of this pointless cunt being called "Aurelien" ? What, so I can construct a relationship with this whore of an object, a "lock" in name only readily opened by any and all keys (and for that matter -- no keys at all) ? So I can be sold up, down, left &#038; right the river at the drop of a hat -- not even a real hat, a drawing of a hat might suffice, an intimation of a hat potentially enough. Why the fuck would he be "Aurelien" to me, when he <em>fails</em>, evidently, deliberately, by construction and by design <b>fails</b> to protect my interest in the world and with it my equity in his supposed name ? Why doesn't the more adequately general "pointless cunt" denomination work as well for him as for the other ones ? Why exactly would there be a "Dima Kogan" supposedly different from a "Vlad Orlov" in turn putatively distinguishable from a "Christophe" or an "Emanuel" ? What exactly -- and please be <em>precise</em> in answering this -- what <b>exactly</b> is the difference between them ? What would be lost if I just called them all "pointless cunt", identically and indistinguishedly seeing how <em>that is exactly what they are</em> ? A <a href="http://trilema.com/2018/wood-impregnated-in-oil-a-metaphor/">pile</a> of grains of salt, which all added to water melt and otherwise there sit aren't called "Joe" and "Bob". They are called <em>a pile</em> of grains of salt. Why's this pile-up of pointless cunts supposed to carry individual lables, I don't fucking get it, for the life of me. What do they <em>do</em> that in any sense distinguishes them, did any of the list raise to the absolute minimum bar of manhood at any point ? Did they say -- and yes I very much expect they'd have said this <em>exactly</em>, verbatim, </p>
+<blockquote><p>hey you stupid pointless cunt, a) stop forwarding me your imbecile secretions and b) NO IT IS NOT OKAY TO HAVE YOUR SHIT BROKEN!!!! Why the fuck are you still alive while "binutils" isn't burned down yet ?</p></blockquote>
+<p>Binutils still fucking exists past Thu, 17 Dec 2015, and "Aurelien" wasn't <a href="http://trilema.com/2015/joe-stack-1956-2010/">buried</a> in the <a href="http://trilema.com/2020/one-day/">trenches</a> right in front of it, so what fucking <a href="http://trilema.com/2015/that-unpleasant-moment-when-principles-you-were-supporting-strictly-because-of-the-principle-of-the-thing-and-pointedly-not-because-of-the-convenient-manner-in-which-they-worked-upon-a-restr/">gives</a> ?!</p>
+<p>But enough of the pointless cunts ; let's look instead at the poisonous shitheads, why not, let's see if blood pressure over 300 is achievable in humans. So, do you recall H J Lu ? Of Boot/Root, back in... ninety-fuckin'-two ? No ? But of course not, you weren't there, <a href="http://trilema.com/2013/the-story-of-pointless-and-witless/">you're just here-and-now</a>,  momentarily if indistinctly befouling the world with your false memories and pseudo-identities, only to reappear, five seconds after being dispatched in a pool of your own... xylegm. Of  course, of course.</p>
+<p>Anyways, either <em>that</em> H J Lu of thirty years ago -- or if not, the hollow name, the empty symbyl meanwhile <a href="http://trilema.com/2016/asscience/">absorbed into the borg</a> ; or else I suppose the hollow clothes perambulated on a stick by some <a href="http://trilema.com/2014/the-public-burning-of-bob-beck/">Bob Beck</a> or other -- is "making proposals". Here, here's how "proposals" look :</p>
+<blockquote><p>Add R_X86_64_[REX_]GOTPCRELX support to gas and ld<br />
+author	H.J. Lu <hjl.tools@gmail.com><br />
+	Thu, 22 Oct 2015 11:49:20 +0000 (04:49 -0700)<br />
+committer	H.J. Lu <hjl.tools@gmail.com><br />
+	Thu, 22 Oct 2015 11:49:38 +0000 (04:49 -0700)<br />
+This patch adds support for the R_X86_64_GOTPCRELX and<br />
+R_X86_64_REX_GOTPCRELX relocations proposed in</p>
+<p>https://groups.google.com/forum/#!topic/x86-64-abi/n9AWHogmVY0</p>
+<p>to gas and ld.  It updates gas to generate R_X86_64_GOTPCRELX,<br />
+R_X86_64_REX_GOTPCRELX if there is a REX prefix, relocation for memory<br />
+operand, foo@GOTPCREL(%rip).  With the locally defined symbol, foo, we<br />
+convert</p>
+<p>  mov foo@GOTPCREL(%rip), %reg</p>
+<p>to</p>
+<p>   lea foo(%rip), %reg</p>
+<p>and convert</p>
+<p>   call/jmp *foo@GOTPCREL(%rip)<br />
+to</p>
+<p>   nop call foo/jmp foo nop</p>
+<p>When PIC is false, convert</p>
+<p>   test %reg, foo@GOTPCREL(%rip)<br />
+to</p>
+<p>test $foo, %reg</p>
+<p>and convert</p>
+<p>   binop foo@GOTPCREL(%rip), %reg</p>
+<p>to</p>
+<p>   binop $foo, %reg</p>
+<p>where binop is one of adc, add, and, cmp, or, sbb, sub, xor instructions.</p>
+<p>bfd/</p>
+<p>* elf64-x86-64.c: Include opcode/i386.h.<br />
+(x86_64_elf_howto_table): Add R_X86_64_GOTPCRELX and<br />
+R_X86_64_REX_GOTPCRELX.<br />
+(R_X86_64_standard): Replace R_X86_64_PLT32_BND with<br />
+R_X86_64_REX_GOTPCRELX.<br />
+(x86_64_reloc_map): Add BFD_RELOC_X86_64_GOTPCRELX and<br />
+BFD_RELOC_X86_64_REX_GOTPCRELX.<br />
+(need_convert_mov_to_lea): Renamed to ...<br />
+(need_convert_load): This.<br />
+(elf_x86_64_check_relocs): Handle R_X86_64_GOTPCRELX and<br />
+R_X86_64_REX_GOTPCRELX.  Replace need_convert_mov_to_lea with<br />
+need_convert_load.<br />
+(elf_x86_64_gc_sweep_hook): Handle R_X86_64_GOTPCRELX and<br />
+R_X86_64_REX_GOTPCRELX.<br />
+(elf_x86_64_size_dynamic_sections): Likewise.<br />
+(elf_x86_64_relocate_section): Likewise.<br />
+(elf_x86_64_convert_mov_to_lea): Renamed to ...<br />
+(elf_x86_64_convert_load): This.  Replace need_convert_mov_to_lea<br />
+with need_convert_load.  Support R_X86_64_GOTPCRELX and<br />
+R_X86_64_REX_GOTPCRELX transformations.<br />
+* reloc.c (BFD_RELOC_X86_64_GOTPCRELX): New.<br />
+(BFD_RELOC_X86_64_REX_GOTPCRELX): Likewise.<br />
+* bfd-in2.h: Regenerated.<br />
+* libbfd.h: Likewise.</p>
+<p>gas/</p>
+<p>* config/tc-i386.c (tc_i386_fix_adjustable): Handle<br />
+BFD_RELOC_X86_64_GOTPCRELX and BFD_RELOC_X86_64_REX_GOTPCRELX.<br />
+(tc_gen_reloc): Likewise.<br />
+(i386_validate_fix): Generate BFD_RELOC_X86_64_GOTPCRELX or<br />
+BFD_RELOC_X86_64_REX_GOTPCRELX if fx_tcbit2 is set.<br />
+* config/tc-i386.h (TC_FORCE_RELOCATION_LOCAL): Also return<br />
+true for BFD_RELOC_X86_64_GOTPCRELX and<br />
+BFD_RELOC_X86_64_REX_GOTPCRELX.</p>
+<p>gas/testsuite/</p>
+<p>* gas/i386/i386.exp: Run x86-64-gotpcrel.<br />
+* gas/i386/x86-64-gotpcrel.d: New file.<br />
+* gas/i386/x86-64-gotpcrel.s: Likewise.<br />
+* gas/i386/ilp32/x86-64-gotpcrel.d: Likewise.<br />
+* gas/i386/x86-64-localpic.d: Replace R_X86_64_GOTPCREL with<br />
+R_X86_64_REX_GOTPCRELX.<br />
+* gas/i386/ilp32/x86-64-localpic.d: Likewise.</p>
+<p>include/elf/</p>
+<p>* x86-64.h (R_X86_64_GOTPCRELX): New.<br />
+(R_X86_64_REX_GOTPCRELX): Likewise.</p>
+<p>ld/testsuite/</p>
+<p>* ld-ifunc/ifunc-5r-local-x86-64.d: Replace R_X86_64_GOTPCREL<br />
+with R_X86_64_REX_GOTPCRELX.<br />
+* ld-x86-64/plt-main1.rd: Likewise.<br />
+* ld-x86-64/plt-main3.rd: Likewise.<br />
+* ld-x86-64/plt-main4.rd: Likewise.<br />
+* ld-x86-64/gotpcrel1.dd: New file.<br />
+* ld-x86-64/gotpcrel1.out: Likewise.<br />
+* ld-x86-64/gotpcrel1a.S: Likewise.<br />
+* ld-x86-64/gotpcrel1b.c: Likewise.<br />
+* ld-x86-64/gotpcrel1c.c: Likewise.<br />
+* ld-x86-64/gotpcrel1d.S: Likewise.<br />
+* ld-x86-64/load1.s: Likewise.<br />
+* ld-x86-64/load1a.d: Likewise.<br />
+* ld-x86-64/load1b.d: Likewise.<br />
+* ld-x86-64/load1c.d: Likewise.<br />
+* ld-x86-64/load1d.d: Likewise.<br />
+* ld-x86-64/x86-64.exp: Run load1a, load1b, load1c and load1d<br />
+tests.  Run gotpcrel1 test.</p></blockquote>
+<blockquote><p>X86-64 System V Application Binary Interface ›<br />
+RFC: Add R_X86_64_GOTPCRELX and R_X86_64_REX_GOTPCRELX<br />
+2 publicaciones por 1 autor<br />
+	H.J. Lu<br />
+7/10/15<br />
+Traducir mensaje al español<br />
+X86 instruction encoding supports converting some instructions on memory<br />
+operand with GOTPCREL relocation against symbol, foo, into a different<br />
+form on immediate operand if foo is defined locally.  Those instructions<br />
+are:</p>
+<p>call *foo@GOTPCREL(%rip)         =>   nop call foo or call foo nop<br />
+jmp *foo@GOTPCREL(%rip)          =>   jmp foo nop<br />
+mov foo@GOTPCREL(%rip), %reg     =>   lea foo(%rip), %reg</p>
+<p>When PIC is false,</p>
+<p>test %reg, foo@GOTPCREL(%rip)    =>   test $foo, %reg<br />
+binop foo@GOTPCREL(%rip), %reg   =>   binop $foo, %reg</p>
+<p>where binop is one of adc, add, and, cmp, or, sbb, sub, xor instructions.</p>
+<p>I am proposing to add 2 new relocations, R_X86_64_GOTPCRELX and<br />
+R_X86_64_REX_GOTPCRELX, to x86-64 psABI.  Instead of generating<br />
+R_X86_64_GOTPCREL relocation agasint foo for foo@GOTPCREL(%rip),<br />
+we generate R_X86_64_GOTPCRELX or R_X86_64_REX_GOTPCRELX if there<br />
+is a REX prefix.  Linker can treat them the same as R_X86_64_GOTPCREL<br />
+or it can perform the transformations listed above.</p>
+<p>Any feedbacks?</p>
+<p>Thanks.</p>
+<p>--<br />
+H.J.<br />
+	H.J. Lu<br />
+20/10/15<br />
+Traducir mensaje al español<br />
+- mostrar texto citado -<br />
+Here are 3 patches against x86-64 psABI.  The updated pdf file is<br />
+available from</p>
+<p>https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-gotpcrelx.pdf</p>
+<p>They have been implemented on binutils users/hjl/got branch.  I<br />
+will check it into binutils master branch this week.</p>
+<p>--<br />
+H.J.<br />
+Archivos adjuntos (3)<br />
+0001-Add-R_X86_64_GOTPCRELX-and-R_X86_64_REX_GOTPCRELX.patch<br />
+3 KB   Ver   Descargar<br />
+0002-Combine-GOTPLT-and-GOT-Slots.patch<br />
+4 KB   Ver   Descargar<br />
+0003-Optimize-GOTPCRELX-Relocations.patch<br />
+2 KB   Ver   Descargar</p></blockquote>
+<p>That is <em>it</em>. That is the fuck it, some obscure emokid/fury/poisonous fuckwit posted some shit on his wall on Myspace, asking for "any feedbacks". Exactly like they all do, but I do mean fucking exactly, there's at least fifty millions of these (if you don't count all my <a href="http://trilema.com/2016/give-computers-the-vote-theyre-cheaper-than-women-even/">autogenerated</a> ones -- which "not count" I am in a position to do, but you aren't <a href="http://trilema.com/2015/the-bitlove-llc-spin-on-their-recent-implosion-as-presented-to-their-captive-audience/">in a position to do</a>, for <a href="http://trilema.com/2014/spamming-reddit-an-experiment/">the obvious fucking reason</a>), and they all do exactly this crap.</p>
+<p>There was no feedback, needless to say. Leaving alone the spurious plural, there was <em>nothing</em>, I'm willing to wager the situation is exactly the same seen in <a href="http://trilema.com/2011/ahahahahahaaaaa/">all other cases</a>, since forever : I am, literally, the first person to have read either of those ; and now that I discuss it I'll thereby drive reliably six nines of all the public exposure either the piece, the <a href="http://trilema.com/2014/how-to-make-money-on-the-internet-while-pretending-you-know-what-youre-talking-about-and-accumulating-a-legion-of-mindless-followers-for-fun-and-profit/">supposed "author"</a> or anything connected will ever get in their entire historical existence. Yet nevertheless -- everyone's toolchain is broken now, not that anyone even fucking understands anything of anything. </p>
+<p>But the toolchain's broken, factually, and it'll stay that way, not like anyone's in danger of ever noticing anything, let alone fixing anything. Exactly as in the case of <a href="trilema.com/2011/profesorul-si-minora/">anonymous</a> "<a href="http://trilema.com/2020/san-jose-vive-and-other-narrative-fancies-of-the-failed-female-state/">epidemiologists</a>", who wrote some dumb shit in their online journal and now everyone's country's broken on account of bovinely herding pointless cunts (yet well fed and awareness-energized) everywhere, ever-ready to amplify every random fart into a deafening hurricane of malodourous nonsense. Exactly as in the case of "<a href="http://trilema.com/2011/ecologistii-cei-mai-ipocriti-dintre-paminteni/">ecologists</a>" writing some bullshit in their online journals twenty years ago such that now <a href="http://trilema.com/2020/thelastpsychiatristcom-how-does-the-shutdown-relate-to-me-adnotated/?b=And%20so%20no&#038;e=expected#select">everyone's cars are fucking broken</a>. Exactly as in the case of everything, from the 1970s "childhood abuse" meme to the 2010s "campus rape culture" meme, exactly as with the whole rest of "<a href="http://trilema.com/2018/scar-tissue-where-law-used-to-be/">women in the marketplace</a>" bullshit, the sad if ongoing effort of replacing Grace Hopper with "I knitted in the situation room!!!! Where were you while I was <a href="http://trilema.com/2017/the-day-of-failure-trilemma/?b=so,&#038;e=session#select">sitting</a> and knitting a lovely pair of woolen socks <em>in the situation room</em>?!?!?!" <a href="http://trilema.com/2013/nobody-could-have-foreseen-their-using-a-plane-like-a-rocket/">sulphurous</a> <a href="http://trilema.com/2017/in-case-you-were-wondering-where-all-the-worthless-nuland-drones-ended-up/">fuckwads</a>. [<a href="#identifier_9_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_96446" class="footnote">If for no reason then simply because I have greater capacities for life, and generally everything than that species of <a href="http://trilema.com/2015/the-peak-of-insanity/?b=On%20the%20male%20side&#038;e=fail#select">sad</a>, <a href="http://trilema.com/2011/respectul-umilinta-si-fericirea-femeii/?b=Doi%20oameni&#038;e=vietuirii#select">dry</a> <a href="http://trilema.com/2011/cum-era-sa-il-pleznesc-pe-unu/">fucks</a>. [<a href="#identifier_10_96446" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2020/aaaalge-bra/">Aaaalge-bra</a></div>
+                <div class="alignright"><a href="http://trilema.com/2020/night-and-the-city/">Night And The City</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2020/desperation-in-desolation-or-the-woes-of-the-contemporary-entrepreneur-or-what-came-of-my-first-attempt-at-running-the-second-generation-eulora-client-ornery-in-any-case/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2020/desperation-in-desolation-or-the-woes-of-the-contemporary-entrepreneur-or-what-came-of-my-first-attempt-at-running-the-second-generation-eulora-client-ornery-in-any-case/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>11 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-154280" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154280" title="">Saturday, 12 September 2020</a>
+							</div>
+						<p>For the record, this article makes 37 references. Their publication date's distributed from 2009 to 2020, and the average lands at 2015.297297, somewhat off from the self-obvious average of 2014.5. I suppose that .79 differential's learning, huh.</p>
+<p>Meanwhile in original sources, </p>
+<blockquote><p>Sep 11 14:42:10 &lt;mircea_popescu>	atita timp cit exista femstatu' substitut de fotosinteza, uite ca se poate emula accacia-n pulete.</p></blockquote>
+						</li>
+
+										<li id="comment-154294" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154294" title="">Sunday, 13 September 2020</a>
+							</div>
+						<p>I've got "current" Debian to finally install somewhere - its gcc is 8.3 so it beats yours!</p>
+						</li>
+
+										<li id="comment-154298" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154298" title="">Sunday, 13 September 2020</a>
+							</div>
+						<p>I suspect the only purpose of the whole rigamarole is ye olde Microsoft "get the latest version" "market"herding strategy. None of the shit works deliberately, such that "today's magic key" can exist.</p>
+						</li>
+
+										<li id="comment-156021" class="commentbody"><div class="commenthead"><img alt='jewsKilledKurtKobain`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">jewsKilledKurtKobain</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-156021" title="">Monday, 16 November 2020</a>
+							</div>
+						<p>&gt; some absolutely unparalelled fuming material</p>
+<p>Nicholas A. Christakis (born May 7, 1962) even better example.</p>
+<blockquote><p>===Research===<br />
+Christakis uses quantitative methods (e.g., mathematical models, statistical analyses, and experiments). His work focuses on [[network science]] and [[sociobiology|biosocial science]], and it has also involved [[evolutionary biology]], [[evolutionary psychology]], [[behavior genetics]], [[epidemiology]], [[demography]], and [[sociology]]. He is an author or editor of five books, more than 180 peer-reviewed academic articles, numerous editorials in national and international publications, and at least three patents.[ref&gt;{{Cite web|url=https://patents.google.com/patent/US5655084A/en|title=Radiological image interpretation apparatus and method|last=|first=|date=|website=|access-date=}}[/ref&gt;[ref&gt;{{Cite web|url=https://patents.google.com/patent/US8713143B2/en|title=Establishing a social network|last=|first=|date=|website=|access-date=}}[/ref&gt;[ref&gt;{{Cite web|url=https://patents.google.com/patent/US20080183454A1|title=Disease diagnoses-based disease prediction|last=|first=|date=|website=|access-date=}}[/ref&gt; His laboratory is also active in the development and release of software to conduct experiments and other studies (e.g., Breadboard, Trellis).</p>
+<p>Studies by Christakis and [[James H. Fowler]], beginning in 2007, suggested that a variety of attributes like obesity,[ref name="CF Obesity"&gt;{{cite journal|title=The Spread of Obesity in a Large Social Network over 32 Years |journal=The New England Journal of Medicine |last1=Christakis |first1=Nicholas A. |last2=Fowler |first2=James H. |volume=357 |issue=4 |pages=370–379 |doi=10.1056/NEJMsa066082 |year=2007 |pmid=17652652|url=http://nrs.harvard.edu/urn-3:HUL.InstRepos:3710802 }}[/ref&gt; smoking,[ref name="CF Smoking"&gt;{{cite journal|title=The Collective Dynamics of Smoking in a Large Social Network |journal=The New England Journal of Medicine |last1=Christakis |first1=Nicholas A. |last2=Fowler |first2=James H. |volume=358 |issue=21 |year=2008 |doi=10.1056/NEJMsa0706154 |pmid=18499567 |pmc=2822344 |pages=2249–2258}}[/ref&gt; and happiness,[ref&gt;{{cite journal|title=Dynamic spread of happiness in a large social network: longitudinal analysis over 20 years in the Framingham Heart Study |last1=Christakis |first1=Nicholas A. |last2=Fowler |first2=James H. |journal=British Medical Journal |issue=337 |doi=10.1136/bmj.a2338 |pmid=19056788 |pmc=2600606 |volume=337 |year=2008 |pages=a2338}}[/ref&gt; rather than being solely individualistic, also arise via social contagion mechanisms over some distance within social networks (see: "[[three degrees of influence]]").[ref&gt;{{cite book |title=Connected:The Surprising Power of Our Social Networks and How They Shape Our Lives |last1=Christakis |first1=Nicholas A. |last2=Fowler |first2=James H. |year=2009 |publisher=Little, Brown and Co. |isbn=978-0316036146 |url-access=registration |url=https://archive.org/details/connectedsurpris00chri }}[/ref&gt; Other work in the Christakis and Fowler labs has used experimental methods to study social networks,[ref name="pnas.org" /&gt;[ref name="D. Rand, S. Arbesman 2011"/&gt;[ref&gt;{{cite journal|title=A Randomised Controlled Trial of Social Network Targeting to Maximise Population Behaviour Change |last1=Kim |first1=David.  |journal=The Lancet |doi=10.1016/S0140-6736(15)60095-2 |volume=386 |issue=9989 |year=2015 |pages=145–153 |pmid=25952354 |pmc=4638320}}[/ref&gt;[ref&gt;{{cite journal|title=Inequality and Visibility of Wealth in Experimental Social Networks |last1=Nishi |first1=Akihiro.  |journal=Nature |doi=10.1038/nature15392 |volume=526 |issue=7573 |year=2015 |pages=426–429 |pmid=26352469|bibcode=2015Natur.526..426N |s2cid=4446774 }}[/ref&gt;[ref&gt;{{Cite journal|last1=Shirado|first1=Hirokazu|last2=Christakis|first2=Nicholas A.|date=2017-05-18|title=Locally noisy autonomous agents improve global human coordination in network experiments|journal=Nature|volume=545|issue=7654|pages=370–374|doi=10.1038/nature22332|pmid=28516927|issn=0028-0836|bibcode=2017Natur.545..370S|pmc=5912653}}[/ref&gt; and has broadened to use many data sets and approaches. In 2010, they demonstrated, using an experiment, that cooperative behavior could spread to three degrees of separation.[ref&gt;{{Cite journal|last1=Christakis|first1=Nicholas A.|last2=Fowler|first2=James H.|date=2010-03-23|title=Cooperative behavior cascades in human social networks|journal=Proceedings of the National Academy of Sciences|volume=107|issue=12|pages=5334–5338|doi=10.1073/pnas.0913149107|issn=0027-8424|pmid=20212120|pmc=2851803|bibcode=2010PNAS..107.5334F|arxiv=0908.3497}}[/ref&gt; In a [[TED (conference)|TED]] talk, Christakis summarizes the broader implications of the role of networks in human activity.[ref&gt;{{cite web|url=http://www.ted.com/talks/lang/eng/nicholas_christakis_the_hidden_influence_of_social_networks.html|title=Nicholas Christakis: The hidden influence of social networks &#124; TED Talk|date=|publisher=TED.com|accessdate=2015-11-10}}[/ref&gt;</p>
+<p>In 2009, his group extended the study of social networks to genetics, publishing in ''[[Proceedings of the National Academy of Sciences of the United States of America|PNAS: Proceedings of National Academy of Sciences]]'' a finding that social network position may be partially [[heritable]], and specifically that an increase in twins' shared genetic material corresponds to differences in their social networks.[ref&gt;{{cite journal | last1 = Fowler | first1 = J.H. | last2 = Dawes | first2 = C.T. | last3 = Christakis | first3 = N.A. | title = Model of Genetic Variation in Human Social Networks | journal = Proceedings of the National Academy of Sciences | volume = 106 | issue = 6| pages = 1720–1724 | doi=10.1073/pnas.0806746106 | pmid=19171900 | pmc=2644104 | date=February 2009| arxiv = 0807.3089 | bibcode = 2009PNAS..106.1720F }}[/ref&gt; In 2011, Fowler and Christakis published a follow-up paper on "Correlated Genotypes in Friendship Networks" in PNAS, advancing the argument that humans may be "metagenomic" with respect to the people around them.[ref&gt;{{Cite journal |doi = 10.1073/pnas.1011687108|pmid = 21245293|pmc = 3033315|title = Correlated genotypes in friendship networks|journal = Proceedings of the National Academy of Sciences|volume = 108|issue = 5|pages = 1993–1997|year = 2011|last1 = Fowler|first1 = James H.|last2 = Settle|first2 = Jaime E.|last3 = Christakis|first3 = Nicholas A.|bibcode = 2011PNAS..108.1993F}}[/ref&gt; Further work on this topic included "Friendship and Natural Selection" in PNAS in 2014.[ref&gt;{{cite journal|title=Friendship and natural selection|author=Nicholas A. Christakis|doi=10.1073/pnas.1400825111|pmid=25024208|pmc=4113922|volume=111|journal=Proceedings of the National Academy of Sciences|pages=10796–10801|year=2014|arxiv=1308.5257|bibcode=2014PNAS..111S0796C}}[/ref&gt; In 2012, in a paper in ''[[Nature (journal)|Nature]]'', the group analyzed the social networks of the [[Hadza people|Hadza]] hunter gatherers, showing that human social network structure appears to have ancient origins.[ref&gt;{{Cite journal | doi=10.1038/nature10736| pmid=22281599| pmc=3340565| title=Social networks and cooperation in hunter-gatherers| journal=Nature| volume=481| issue=7382| pages=497–501| year=2012| last1=Apicella| first1=Coren L.| last2=Marlowe| first2=Frank W.| last3=Fowler| first3=James H.| last4=Christakis| first4=Nicholas A.| bibcode=2012Natur.481..497A}}[/ref&gt; Christakis and his colleagues did similar work mapping the networks of the [[Nyangatom people]] in 2016.[ref&gt;{{Cite journal|last1=Glowacki|first1=Luke|last2=Isakov|first2=Alexander|last3=Wrangham|first3=Richard W.|last4=McDermott|first4=Rose|last5=Fowler|first5=James H.|last6=Christakis|first6=Nicholas A.|date=2016-10-25|title=Formation of raiding parties for intergroup violence is mediated by social network structure|journal=Proceedings of the National Academy of Sciences|volume=113|issue=43|pages=12114–12119|doi=10.1073/pnas.1610961113|issn=0027-8424|pmid=27790996|pmc=5086992}}[/ref&gt; His group has also demonstrated that social networks are deeply related to human cooperation.[ref name="pnas.org"&gt;{{Cite journal | doi=10.1073/pnas.0913149107| pmid=20212120| pmc=2851803| title=Cooperative behavior cascades in human social networks| journal=Proceedings of the National Academy of Sciences| volume=107| issue=12| pages=5334–5338| year=2010| last1=Fowler| first1=J. H.| last2=Christakis| first2=N. A.| bibcode=2010PNAS..107.5334F| arxiv=0908.3497}}[/ref&gt;[ref name="D. Rand, S. Arbesman 2011"&gt;{{cite journal|title=Dynamic social networks promote cooperation in experiments with humans |date= November 2011|doi=10.1073/pnas.1108243108 |pmid=22084103 |volume=108 |issue=48 |pmc=3228461 |journal=Proc. Natl. Acad. Sci. U.S.A. |pages=19193–8 | last1 = Rand | first1 = DG | last2 = Arbesman | first2 = S | last3 = Christakis | first3 = NA|bibcode=2011PNAS..10819193R }}[/ref&gt; These ideas are explored in his 2019 book, ''Blueprint: The Evolutionary Origins of a Good Society.''</p>
+<p>In 2010, Christakis and Fowler published a paper (based on the spread of H1N1 at [[Harvard University]] in 2009) regarding the use of social networks as 'sensors' for forecasting epidemics (of germs and other phenomena).[ref&gt;{{cite journal | last1 = Christakis | first1 = N.A. | last2 = Fowler | first2 = J.H. | year = 2010| title = Social Network Sensors for Early Detection of Contagious Outbreaks | journal = PLOS ONE | volume = 5 | issue = 9| page = e12948 | doi = 10.1371/journal.pone.0012948 | pmid=20856792 | pmc=2939797| arxiv = 1004.4792 | bibcode = 2010PLoSO...512948C }}[/ref&gt; In another [[TED (conference)|TED]] talk, Christakis describes this effort (and computational social science more generally).[ref&gt;{{cite web|url=http://www.ted.com/talks/lang/en/nicholas_christakis_how_social_networks_predict_epidemics.html|title=Nicholas Christakis: How social networks predict epidemics &#124; TED Talk|date=|publisher=TED.com|accessdate=2015-11-10}}[/ref&gt; A follow-up paper in 2014 documented the utility of this approach to forecast trends, again based on the "[[friendship paradox]]," using [[Twitter]] data.[ref&gt;{{cite journal|doi=10.1371/journal.pone.0092413|pmid=24718030|pmc=3981694|title=Using Friends as Sensors to Detect Global-Scale Contagious Outbreaks|journal=PLOS ONE|volume=9|issue=4|pages=e92413|year=2014|last1=Garcia-Herranz|first1=Manuel|last2=Moro|first2=Esteban|last3=Cebrian|first3=Manuel|last4=Christakis|first4=Nicholas A.|last5=Fowler|first5=James H.|bibcode=2014PLoSO...992413G}}[/ref&gt;</p>
+<p>Beginning in 2010, Christakis and his colleagues initiated a program of research to deploy social networks to improve health and other social phenomena—for example, facilitating the adoption of public health innovations in the developing world (published in 2015),[ref&gt;{{Cite journal|last1=Kim|first1=David A.|last2=Hwong|first2=Alison R.|last3=Stafford|first3=Derek|last4=Hughes|first4=D. Alex|last5=O'Malley|first5=A. James|last6=Fowler|first6=James H.|last7=Christakis|first7=Nicholas A.|date=2015-07-11|title=Social network targeting to maximise population behaviour change: a cluster randomised controlled trial|url=http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(15)60095-2/abstract|journal=The Lancet|language=English|volume=386|issue=9989|pages=145–153|doi=10.1016/S0140-6736(15)60095-2|issn=0140-6736|pmc=4638320|pmid=25952354}}[/ref&gt; or demonstrating the utility of autonomous agents ([[Artificial intelligence|Artificial Intelligence]] "bots") in optimizing coordination in groups online (published in 2017).[ref name=":2"&gt;{{Cite journal|last1=Shirado|first1=Hirokazu|last2=Christakis|first2=Nicholas A.|title=Locally noisy autonomous agents improve global human coordination in network experiments|journal=Nature|volume=545|issue=7654|pages=370–374|doi=10.1038/nature22332|pmid=28516927|pmc=5912653|year=2017|bibcode=2017Natur.545..370S}}[/ref&gt;</p>
+<p>The 2017 [[Nature (journal)|Nature]] paper on bots[ref name=":2" /&gt; initiated a program of work on "hybrid systems" composed of humans and machines (endowed with AI) that reshape how humans interact not with the machines, but with each other. A paper published in 2020 in [[Proceedings of the National Academy of Sciences of the United States of America|PNAS]] extended this idea by showing that physical robots could modify conversations among people interacting in groups.[ref&gt;{{Cite journal|last1=Traeger|first1=Margaret L.|last2=Strohkorb Sebo|first2=Sarah|last3=Jung|first3=Malte|last4=Scassellati|first4=Brian|last5=Christakis|first5=Nicholas A.|date=2020-03-09|title=Vulnerable robots positively shape human conversational dynamics in a human–robot team|journal=Proceedings of the National Academy of Sciences|language=en|volume=117|issue=12|pages=6370–6375|doi=10.1073/pnas.1910402117|pmid=32152118|pmc=7104178|issn=0027-8424|doi-access=free}}[/ref&gt; Another paper that year showed that simply programmed bots could re-engineer social connections among humans in networked groups in order to make them become more cooperative.[ref&gt;{{Cite journal|date=2020-09-25|title=Network Engineering Using Autonomous Agents Increases Cooperation in Human Groups|url=https://www.sciencedirect.com/science/article/pii/S2589004220306301|journal=iScience|language=en|volume=23|issue=9|pages=101438|doi=10.1016/j.isci.2020.101438|issn=2589-0042|doi-access=free|last1=Shirado|first1=Hirokazu|last2=Christakis|first2=Nicholas A.|pmid=32823053}}[/ref&gt; Christakis has argued that "the effects of AI on human-to-human interaction stand to be intense and far-reaching, and the advances rapid and broad, we must investigate systematically what second-order effects might emerge, and discuss how to regulate them on behalf of the common good."[ref&gt;{{Cite web|url=https://www.theatlantic.com/magazine/archive/2019/04/robots-human-relationships/583204/|title=How AI Will Rewire Us|last=Christakis|first=Nicholas A.|date=2019-03-04|website=The Atlantic|access-date=2019-05-21}}[/ref&gt;</p>
+<p>Christakis' lab has been supported by grants from the [[National Institutes of Health]] (NIH), by the Pioneer Program of the [[Robert Wood Johnson Foundation]], by the [[Bill &amp; Melinda Gates Foundation]], and by other funders. In 2019, his lab received support to extend their work to studies of the [[human microbiota]] from the Nomis Foundation.[ref&gt;{{Cite web|url=https://nomisfoundation.ch/news/yale-news-new-yale-led-project-looks-at-the-microbiome-social-network-connection/|title=Yale News: "New Yale-led project looks at the microbiome-social network connection"|last=Stoeter|first=Author Sarah|website=The NOMIS Foundation|access-date=2019-05-12}}[/ref&gt;</p></blockquote>
+<p>Turns out you're not the only one <a href="http://trilema.com/2014/spamming-reddit-an-experiment/">fucking the other party's shit up</a> through computers, Christakis of Yale did <a href="http://trilema.com/2020/in-a-transparent-attempt-by-the-man-to-distract-attention-from-the-internal-problems-of-the-republic-by-focusing-it-instead-on-the-lulz-in-africa/">Covid</a>.</p>
+						</li>
+
+										<li id="comment-156022" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-156022" title="">Monday, 16 November 2020</a>
+							</div>
+						<p>Lulzy.</p>
+						</li>
+
+										<li id="comment-156024" class="commentbody"><div class="commenthead"><img alt='QAnon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">QAnon</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-156024" title="">Monday, 16 November 2020</a>
+							</div>
+						<p>It's really the same thing, isn't it? One interdicts the common man meeting online, the other interdicts the common man meeting offline, the loser is the same for both and together between them loses everything.</p>
+						</li>
+
+										<li id="comment-156026" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-156026" title="">Monday, 16 November 2020</a>
+							</div>
+						<p>It's not a matter of "online", it's a matter of "faux-online [on the other's controlled platforms]".</p>
+						</li>
+
+										<li id="comment-156044" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-156044" title="">Tuesday, 17 November 2020</a>
+							</div>
+						<p>"The common man" != laziest man possible, conceivable or imaginable, always and forever 100% comfort-motivated and ease-seeking, always taking the path of the least resistance. Because the common man isn't the common ape.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-154881">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/10/11/the-bugureaucracy/?b=on%20the%20heels&amp;e=ause#select' class='url'>The Bugureaucracy &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154881" title="">Sunday, 11 October 2020</a>
+					</div>
+					<p>[...] on the heels of having solved that gnarly compilation trouble, I ended up taking a walk through the byzantine labyrinth of bugs that may - or may not! - cause [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-155479">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-cost-of-doing-things/?b=in%20fact%20as%20s&amp;e=sfy.#select' class='url'>The cost of doing things on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-155479" title="">Wednesday, 28 October 2020</a>
+					</div>
+					<p>[...] in fact as simple facts allow me to correctly decode and interpret offensive over-reach by inept bois pretending to be me without either the substance or the structure to even infinitesimally satisfy. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-161393">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/ioai-pisa-v-as-in-freza-de-tolomaci-supranumerari/?b=Nor%20does%20itt&amp;e=ion.#select' class='url'>Ioai pisa-v-as in freza de tolomaci supranumerari... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-161393" title="">Wednesday, 17 March 2021</a>
+					</div>
+					<p>[...] Nor does itt limit itself to code-writing by the post-September generation. [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="96446" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833007-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-96446")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-96446");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-96446");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

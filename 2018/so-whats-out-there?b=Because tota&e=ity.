@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>So what's out there ? on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Din bube, mucegaiuri si noroi<br />Mi-am facut bici, si m-am cicat pe voi.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-80197"><div class="post" id="post-80197">                    <h1><a href="http://trilema.com/2018/so-whats-out-there/" rel="bookmark" title="Permanent Link to So what&#039;s out there ?">So what's out there ?</a></h1>                        <div class="date">                                     Saturday, 30 June, Year 10 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>I expect this wasn't immediately obvious, but...</p>
+<blockquote><p>cat <a href=http://trilema.com/2018/lets-duckduckgo-a-little-see-what-comes-out/>t-ddg.txt</a> | grep '\.' | awk '{print "&lt;a href="substr($0,3)">"substr($0,3)"&lt;/a>&lt;br />"}' | grep<sup><a href="#footnote_0_80197" id="identifier_0_80197" class="footnote-link footnote-identifier-link" title="Excluding Trilema, as we've already read it. Haven't we.">i</a></sup> -v "trilema\.com" | grep<sup><a href="#footnote_1_80197" id="identifier_1_80197" class="footnote-link footnote-identifier-link" title="Also excluding crap like 
+https://duckduckgo.com/y.js%3Fu3%3Dhttps%253A%252F%252Fr.search.yahoo.com%252Fcbclk%252FdWU9NEQwNTkzOUNFOEI0NEFEMCZ1dD0xNTMwMjU1MjU1NjUwJnVvPTc0OTA0MzAxNDQwNDc0Jmx0PTImZXM9MF95UEJaUUdQU19YVl9aUCZqZT0zY2NkMzE0Ni03YjY5LTExZTgtYjBkZC0wMDhjZmE1YjYyZmMtMmI3OGI3YTI0NzAwJnVpPTIwMS4xOTYuNDguODcmanQ9MTUzMDI1NTI1NTY2NiZwcD1uMQ%252D%252D%252FRV%253D2%252FRE%253D1530284055%252FRO%253D10%252FRU%253Dhttps%25253a%25252f%25252fwww.bing.com%25252faclick%25253fld%25253dd3YIUzEWy5_9l8SY8Bmhfv_jVUCUw5oc9kkWkjig2lXPFqiYRwO_P9xD1Vg%252DkBdArp%252DJxPV9Wqy6lgXZfY3x4jgIyF1Thg0MI2jknHyAd7QZne7gs8UEGESTO3ipUIpGjyWf4zhMvyGnKoN2fkNmzqmiNb81pV95r6a5aa1a7vzy9U2dbY%252526u%25253dhttp%2525253a%2525252f%2525252fclickserve.dartsearch.net%2525252flink%2525252fclick%2525253flid%2525253d43700033865994544%25252526ds_s_kwgid%2525253d58700004123299567%25252526%25252526ds_e_adid%2525253d74904301440474%25252526%25252526ds_url_v%2525253d2%25252526ds_dest_url%2525253dhttp%2525253a%2525252f%2525252fwww.lastminute.com%2525252fentertainment%2525252ftheatre%2525252fharold%252Dand%252Dmaude%25252526utm_source%2525253dbing%25252526utm_medium%2525253dcpc%25252526utm_term%2525253d%2525255b%25252asearchterm%25252a%2525255d%25252526utm_campaign%2525253d%2525255b%25252aCampaign%25252a%2525255d%25252526acntb%2525253dlifestyle%25252526msclkid%2525253d%2525257bmsclkid%2525257d%252FRK%253D2%252FRS%253DJ3MYu0aPAxclMh4XeKcIXI7xqIo%252D%26ad_provider%3Dyhs%26vqd%3D12339031712492762327278538162407728101
+because seriously now...">ii</a></sup> -v "duckduckgo\.com" >> tddg-o.html</p></blockquote>
+<p>After all, the <em>entire point</em> of these exercises is <a href=http://trilema.com/2018/and-in-other-dead-things/#selection-51.0-67.2>escape</a>, right ? And so I'd be genuinely interested in what other folks have to say about the same things I write articles about, right ? Because that's how sanity works, yes ?</p>
+<p>Right ?</p>
+<p>So there we go, I went through 10`184 links (no joke) and you may find a summary below : </p>
+<blockquote><p>What is really the purpose of $i$?<br />
+up vote 13 down vote favorite 4</p>
+<p>We started talking about imaginary numbers again this year and asked this question in class, but nobody could really give a straight answer. So if anyone could tell me the real reason we have imaginary numbers that would be great! :)
+</p></blockquote>
+<p>Fucking stackexchange.</p>
+<blockquote><p>why are employers so bad at training people?<br />
+by Alison Green on May 19, 2012 </p></blockquote>
+<p>Chick also wrote a "book" about it. It's dumb. The book I mean ; the article linked is just a sad exercise in dumb bitch not even trying, because coasting should be enough. She's a strong independent lichen or however it went.</p>
+<blockquote><p> Compendium: Catechism of the Catholic Church<br />
+by United States Conference of Catholic Bishops
+</p></blockquote>
+<p>Meh.</p>
+<blockquote><p>Compendium<br />
+Superior Court Cases</p>
+<p>Procedural Issues Involving ALS Cases</p>
+<p>I. (a) Sworn Report 	II. (b) Hearing Conducted After 20 Days 	IV. Collateral Estoppel/Double Jeopardy<br />
+I. (b) Issues Regarding Pink Copy of ALS Form 	II. (c) "Good Cause" for continuance 	V. Procedural Issues Pertaining to Conduct of Hearing<br />
+I. (c) Miscellaneous 	II. (d) Copy of Recording 	VI. Appeals<br />
+II. (a) Decision Within 15 Days 	III. Hearing Requested at DMV Beyond 30-Days 	VII. Miscellaneous</p></blockquote>
+<p>Court minutia, not really interesting, precisely because <em>they themselves</em> don't give the first inkling of a shit about any of it.<sup><a href="#footnote_2_80197" id="identifier_2_80197" class="footnote-link footnote-identifier-link" title="Example pro toto :
+Kalcic v. Beecher, 03-E-439, (SD Hillsborough, Hicks, 02/27/04) AFFIRMED
+Arrested for DWI; Petitioner challenged jurisdiction and alleged the officer's report was not properly sworn; and that the officer could not identify by name the person before whom he took his oath. Court held: Absent a transcript, after reviewing `the Hearings Examiner's report it is apparent that numerous factual findings support the action taken by the Director.`
+">iii</a></sup></p>
+<blockquote><p> If there ever was an angel, then surely you must be one<br />
+If there ever was a perfect love when I look at you I see one<br />
+If there's heaven on earth, then this must surely be<br />
+And I want you to be the last one to touch me</p></blockquote>
+<p>Dolly Parton, Album Joshua. Whatever, chick interest clucking.</p>
+<blockquote><p>Sincere Mommy<br />
+Being Pregnant at Dragoncon<br />
+1 comment<br />
+By Tara Schile, September 20, 2015 at 7:00 am<br />
+I didn't know what to expect this year. We've been going to Dragoncon for 11 years now, and I'd never been pregnant at the con before.
+</p></blockquote>
+<p><span style="background-color:#d3d3d3" id="select">Because totally, someone cares, it immensely matters and bla bla bla. Spoiler : she's fat.</p>
+<blockquote><p>
+Not Just Bitchy<br />
+And I'll play wearing fuzzy slippers if I damned well want to!</p>
+<p>How to get responses on Fetlife</p>
+<p>Maybe if I title a post with the exact search string I saw in my stats, people will read it A lot of this advice is going to sound familiar if you’ve already read my post how to make friends on fetlife for the hard of thinking, but in the spirit of the holidays this post is going to be a bit gentler of a guide to getting responses to your fetlife (or collarspace or okcupid or whatever social network or personals site you choose to message people on) messages. Merry Christmas, I’m going to teach you how to get responses to your messages!</p></blockquote>
+<p>Spoiler : bla bla.</p>
+<blockquote><p>    Home	RooshV.com Search (Via Forum) Search (Via Google) Member List<br />
+Fetlife<br />
+Author 	soup Offline Innovative Casanova ******* Gold Member Posts: 11,058 Joined: Jul 2011 Reputation: 117 	</p>
+<p>Anyone check out this social networking tool for BDSM people? It's called fetlife.com . I've seen it mentioned on a girl's profile on OKC and wonder if there's a poosy paradise hiding out here. </p>
+<p>kosko Offline Innovative Casanova ******* Gold Member Posts: 6,390 Joined: Sep 2011 Reputation: 142<br />
+I am a swinger and in that lifestyle and be default my world crosses with BDSM. I am on Fetlife as I thought it might be some hidden nugget. In all honestly the BDSM is just like regular life but for weirdo and freaks. You still get the ego and bitch shields but from 3's 4's and 5's.</p>
+<p>And unless you have to put in a lot of legwork to gain some traction. Since the scene is small in whatever City your in large or small there are parties and social things you have to go to be be seen. Its literally just a Facebook for World of Warcraft players, fat people, or nymphos. They whore and troll on it just like FB. At the Swinger club the staff will be busy trolling Fetlife like FB instead of serving drinks and attending to us.</p></blockquote>
+<p>What can I say, <a href=http://trilema.com/2018/must-suck-to-be-one-of-you-average-guy-with-a-great-sense-of-humor-losers-seriously-now/>must suck</a>...</p>
+<blockquote><p> practicalmachinist.com Thread: OT - impregnating wood</p>
+<p>Royldean Join Date    Dec 2011 Location    Schwenksville, PA Posts     1,261<br />
+Hello GregSY<br />
+I'm not sure if you can impregnate wood with polyurethane or not, but you sure can with oil. I used to use some oak for saw blade guides on my sawmill &#038; they would wear out in a few days. An old time sawyer told me to have them soaking in a can of oil when they were not in use. It made a world of difference. I sawed thousands of feet of lumber &#038; never had to adjust them as there was zero wear after that oak was impregnated with oil</p>
+<p>thermite Join Date    Sep 2011 Country    UNITED STATES State/Province     Virginia Posts    19,279<br />
+WVU had a research project going on in the early '60's casually referred to as 'Atomic Wood'. They had to use a vacuum chamber to get the resins they were testing INTO the wood samples. Irradiation in a nuke reactor followed, hardening the infused plastics. Goal was improved strength, rot-resistance, dimensional stability, etc. And cheap scalability.</span> Which last part failed.</p>
+<p>Closest commercial product seen, at least in concept, were the trim strips on BMW and Mercedes 'genuine walnut' interiors. AFAIK done with heat and pressure, 'maybe' UV light, but not radiation.</p>
+<p>May have lasted longer with less care than the 'natural' ones used on British luxury cars, but looked like plastic the whole time, and not even as 'natural' looking as GOOD plastic, so no real gain.</p>
+<p>Otherwise, when as-growed, dried, and reasonably cheaply post-treated wood won't do, one simply uses a better wood (lignum vitae and cousins) ..... or some other material entirely.</p>
+<p>The economics just aren't right for fighting Mother Nature much further than that.</p>
+<p>One half-solvent thin coat, one quarter-solvent thin coat, one full-strength coat of urethane is all I am willing to put into such projects. It works well - really well - on particle board/OSB, but only marginally better than two ordinary coats on 'real' wood.</p></blockquote>
+<p>Interesting stuff ; and yes this is how <a href=http://btcbase.org/log-search?q=faberge>Faberge</a> died, too!</p>
+<blockquote><p>Hakemasi sivu on väliaikaisesti poissa käytöstä, tai sivua ei ehkä enää ole.</p>
+<p>URL: https://tukes.fi/en/Branches/Chemicals-biocides-plant-protection-products/Biocides/Restrictions-on-the-use-of-biocidal-products/Wood-impregnated-with-creosote/</p>
+<p>Tee jokin seuraavista:</p></blockquote>
+<p>The Finns are idiots, I guess.</p>
+<blockquote><p>Hygroscopicity of wood impregnated with linseed oil<br />
+Article in Wood Science and Technology 14(2):107-114 · June 1980 with 29 Reads<br />
+DOI: 10.1007/BF00584040<br />
+Marc H Schneider</p>
+<p>    22.91University of New Brunswick</p>
+<p>Abstract<br />
+The reduction in hygroscopicity as spruce wood is impregnated with linseed oil may be accounted for using a molecular exclusion model. On the basis of the model, each linseed oil molecule appears to displace 90 water molecules and occupy 6 hydrogen bonding sites in the wood. </p>
+<p>Hygroscopicity of wood impregnated with linseed oil | Request PDF. Available from: https://www.researchgate.net/publication/226718611_Hygroscopicity_of_wood_impregnated_with_linseed_oil [accessed Jun 29 2018].</p></blockquote>
+<p>This item actually made it into <a href=http://trilema.com/forum-logs-for-29-jun-2018#2455362>the logs</a> ; coincidentally or not it is both a) the only item penned in the 1980s on this list so far and b) the only item that didn't require reformatting to be quoted. </p>
+<p>Though from what I hear the alternative is cheaper, or something.</p>
+<blockquote><p>If These Women Love Their Bodies, Why Are They Wearing Shoes Which Will Destroy Them?<br />
+kestrel sparhawk<br />
+Sunday January 25, 2015 · 6:01 PM CST
+</p></blockquote>
+<p>Because totally, <a href=http://trilema.com/2018/an-examination-of-conflict/>dailykos decides</a> what destruction is ; and let's pretend like we really don't understand <em>what</em> <a href=http://trilema.com/2018/imaginary-questions-nobody-asked-of-me-an-incomplete-compendium/>precisely</a> women love about their bodies, because pretense <a href=http://trilema.com/2013/search-and-destroy/#selection-65.1-65.96>totally enacts reality</a>. </p>
+<p>How can these people stand themselves ?</p>
+<blockquote><p>Can I drink one cup of coffee while pregnant?<br />
+I am 6 weeks pregnant and I found out I was pregnant pretty early, like my 4th week. I immediately stopped smoking and drinking coffee. </p></blockquote>
+<p>At least she means well...</p>
+<blockquote><p>Here's Why You Need to Poop After Your Morning Cup of Coffee</p>
+<p>Science, answering all the really important questions.<br />
+FIONA MACDONALD 11 AUG 2015</p></blockquote>
+<p>Because if it's "ironic" then it's no longer a stupid waste of the strong independent womens' time.</p>
+<blockquote><p>Here’s Why You Sometimes Feel So Tired After Drinking Coffee<br />
+by Sebastian Dillon 4 years ago
+</p></blockquote>
+<p>NextShark, The Voice of Global Asians. What can you do.</p>
+<blockquote><p>DontGetIt Lyrics<br />
+Lil Wayne<br />
+Baby, you understand me now<br />
+If sometimes you see that I'm mad<br />
+Don't you know no one alive can always be an angel?<br />
+When everything goes wrong you see some bad<br />
+But I'm just a soul whose intentions are good<br />
+Oh Lord, please don't let me be misunderstood</p></blockquote>
+<p>"Misunderstood", you know. Like <a href=http://trilema.com/2018/the-problem-with-christians/>that</a> and <a href=http://trilema.com/2014/the-definitive-tract-on-sociopathy/>the other</a>.</p>
+<blockquote><p>How to Use the Word FUCK: 26 Different Ways to Use it<br />
+By Chad | October 3, 2012 | 47</p>
+<p>how to use the word fuckIf you gave a fuck at all about the fucking amazing English language, you would stop fucking around and study the word fuck.</p></blockquote>
+<p>Nothing substantial in there, just playing with the play-duh. Maybe one day.</p>
+<blockquote><p>The positive and negative implications of anonymity in Internet social interactions: “On the Internet, Nobody Knows You’re a Dog”<br />
+Article in Computers in Human Behavior 23(6):3038-3056 · November 2007 with 12,618 Reads<br />
+DOI: 10.1016/j.chb.2006.09.001 · Source: DBLP</p></blockquote>
+<p>Deeply uninteresting, mostly "why are boys mean to fat pregnant women" churned.</p>
+<blockquote><p>
+Harold and Maude1971<br />
+TOMATOMETER 86%<br />
+Average Rating: 7.7/10<br />
+Reviews Counted: 44<br />
+Fresh: 38<br />
+Rotten: 6</p>
+<p>Critics Consensus: Hal Ashby's comedy is too dark and twisted for some, and occasionally oversteps its bounds, but there's no denying the film's warm humor and big heart.<br />
+AUDIENCE SCORE 93% liked it<br />
+Average Rating: 4.1/5<br />
+User Ratings: 56,257</p>
+<p>Harold, the 20-year-old son of a wealthy, neglectful woman, tries to gain attention for himself with various hilariously staged "suicides." Obsessed with death, Harold meets a like-minded 79-year-old woman named Maude. Harold and Maude become inseparable friends, both helping each other out of various personal travails.</p>
+<p>Richard McGuinness Village Voice Top Critic<br />
+The fact that [it] isn't very funny and, like its 80-year-old heroic, long outlives its necessary life, is less important than the fact that the characters frequently react gently or like credible human beings to the script's impossible notions.<br />
+January 18, 2013 | Full Review…</p>
+<p>Dave Kehr Chicago Reader Top Critic<br />
+Simpleminded, but it's fairly inoffensive, at least until Ashby lingers over the concentration-camp serial number tattooed on Gordon's arm. Some things are beyond the reach of whimsy.<br />
+October 24, 2007 | Full Review…
+</p></blockquote>
+<p>We'll be skipping this cesspoll of moronity in the future, just like we're skipping wikipedia, expert sex change etcetera. </p>
+<blockquote><p>Martin Sheen Is Making A Docuseries That Tries To Prove That O.J. Simpson Is Innocent<br />
+April 1, 2016 / Posted by: Allison</p></blockquote>
+<p>Not even terrible, by web standards. </p>
+<p>Psych.</p>
+<blockquote><p>curl -v wallstreetinsanity.com/24-things-women-dont-understand-about-men<br />
+* About to connect() to wallstreetinsanity.com port 80 (#0)<br />
+*   Trying 104.196.178.242... Connection timed out<br />
+* couldn't connect to host<br />
+* Closing connection #0<br />
+curl: (7) couldn't connect to host
+</p></blockquote>
+<p>A well.</p>
+<blockquote><p>Everspace dev paid thousands to influencers who were “shit at playing the game”<br />
+By Matt Martin, Thursday, 19 April 2018 14:43 GMT</p>
+<p>When you pay an influencer or streamer to promote your game, make sure they don’t play it like a “fucking moron”.</p>
+<p>That’s the brutal advice from one of the developers of Everspace, Michael Schade, who revealed Rockfish Games had paid up to 5,000 euros per hour for a pro streamer only for it to backfire very publicly.</p></blockquote>
+<p>Illiterate report on personally experienced pain. All that the experience buys is a uselessly unactionable "before paying a moron 5`000 euros an hour, pay a different moron to review the first moron's previous hours" piece of advice. </p>
+<blockquote><p>Jonathan Martin Posted A Pic Of His Gun On Instagram and Tagged Richie Incognito, Threatening "Suicide, Or Revenge"<br />
+Nate 2/23/2018 2:03 PM</p>
+<p>Nick Brown @NickyBeaster<br />
+Former Dolphins OL Jonathan Martin with some seriously disturbing stuff on his IG story...<br />
+12:36 PM - Feb 23, 2018    2,592     3,134 people are talking about this</p>
+<p>Well, this is certainly fucked up. Jonathan Martin…just no. No, no, no. I mean, this is a serious cry for help.</p></blockquote>
+<p>Wank.</p>
+<blockquote><p>curl -v www.rhymeswithsnitch.com/2018/02/rae-carruth-accuses-cherrica-adams.html<br />
+* About to connect() to www.rhymeswithsnitch.com port 80 (#0)<br />
+*   Trying 172.217.2.83... Connection timed out<br />
+*   Trying 2607:f8b0:4008:80c::2013... Failed to connect to 2607:f8b0:4008:80c::2013: Network is unreachable<br />
+* couldn't connect to host</p></blockquote>
+<p>Dead.</p>
+<blockquote><p>Cheri Parker is 63 years old and was born on 05/00/1955. Currently, she lives in Seattle, WA. Previously, she lived in carlsbad, CA and bellevue, WA. Sometimes Cheri goes by various nicknames including Cheri Rae Parker, Cheri R Parker, Cherie Rae Parker, Parker Cheri Rae,. Cheri is now Single.</p></blockquote>
+<p>No idea.</p>
+<blockquote><p>
+Gay Essential Films To Watch, Bad Education (La Mala Educación)</p>
+<p>Bad Education begins in 1980, when Enrique (Gael García Bernal) meets Ignacio (Fele Martínez). Enrique is a young film director looking for the next project to tackle, and Ignacio is an actor looking for work, who has brought a script that he himself has written. He also claims to have been Enrique’s first love, and classmate at boarding school.</p></blockquote>
+<p>Nothing there besides moronic flat narrative in that vein.</p>
+<blockquote><p> The Almodóvar Project<br />
+Julieta (2016) 14/04/2016</p>
+<p>It’s not been a great week for Pedro Almodóvar. First, one of his most beloved Chicas, Chus Lampreave, died at the age of 85. Then he was one of the many people named with connections to the Panama Papers and he cancelled his promotional appearance for Julieta, his first film in three years and follow up to what is considered to be by many (not me!) one of his weakest films, Los pasajeros amantes.</p>
+<p>I’ve been looking forward to this film, so much that I started this project rewatching all 19 of his previous films. I wanted something good, something brilliant, another Todo sobre mi madre or at least a ¡Átame!</p>
+<p>My expectations were high as I went to the Cines Golem in the Alhóndiga, I mean Zentroa Azkuna, in central Bilbao to see the film the (very rainy) day after its Spanish release date. Were they met? The jury’s still out on that.</p></blockquote>
+<p>Nothing there besides moronic self-absorbtion in that vein.</p>
+<blockquote><p> AccueilCinémaTous les filmsFilms Comédie Le Grand Blond avec une chaussure noire<br />
+Le Grand Blond avec une chaussure noire<br />
+Spectateurs 3,33331 notes dont 162 critiques<br />
+Francois Perrin, arrive a Orly avec aux pieds une chaussure jaune et l'autre noire. Une aubaine pour Perrache, adjoint du colonel Toulouse, chef d'un service secret, que ce jeune violoniste fantasque. Il le choisit, pour jouer à ses dépends, le rôle d'un redoutable espion international. Toulouse, las de défendre sa place contre son très ambitieux adjoint Milan, a decidé de s'en débarraser une fois pour toute, en le lancant sur une fausse piste. </p></blockquote>
+<p>Just as bad as the anglotardation it attempts to copy.</p>
+<blockquote><p>Impax Shareholders Approve Proposed Business Combination with Amneal<br />
+March 27, 2018</p>
+<p>BRIDGEWATER, N.J., March 27, 2018 /PRNewswire/ -- Impax Laboratories, Inc. (NASDAQ: IPXL), today announced that at its special meeting of stockholders held today, Impax stockholders overwhelmingly approved the previously announced business combination of Impax with Amneal Pharmaceuticals LLC. At the meeting, 51.8 million shares, or approximately 99% of votes cast, voted in favor of the business combination.   </p></blockquote>
+<p>Whatever.</p>
+<blockquote><p>NIH statement on HIV Vaccine Awareness Day - May 18, 2018<br />
+Anthony S. Fauci, M.D., Director, National Institute of Allergy and Infectious Diseases, National Institutes of Health (NIH)<br />
+Maureen M. Goodenow, Ph.D., Director, NIH Office of AIDS Research</p>
+<p>As a result of the many scientific research advances over 37 years, we now have highly effective methods of HIV treatment and prevention. These tools have allowed us to make important strides in reducing the burden of HIV in the United States and globally.</p></blockquote>
+<p>Comment with the occasion of commenting in the spot for commenting. Aren't you glad you read it.</p>
+<blockquote><p>Miramax Miramax<br />
+No Country For Old Men R 2007 122 minutes
+</p></blockquote>
+<p>The Miramax page for their own film is just as shitty as if it were a MFA made by some orc. Which I expect it is, and was. </p>
+<blockquote><p>Scotts Miracle-Gro (SMG) Q2 2018 Results - Earnings Call Transcript<br />
+May. 1.18 | About: The Scotts (SMG)<br />
+Q1: 04-29-18 Earnings Summary<br />
+EPS of $2.88 misses by $-0.43<br />
+Revenue of $1.01B (- 7.3% Y/Y) misses by $-70M</p>
+<p>Scotts Miracle-Gro Co. (NYSE:SMG) Q2 2018 Earnings Call May 1, 2018 9:00 AM ET</p>
+<p>Executives<br />
+Jim King - Scotts Miracle-Gro Co.<br />
+James Hagedorn - Scotts Miracle-Gro Co.<br />
+Thomas Randal Coleman - Scotts Miracle-Gro Co.<br />
+Michael C. Lukemire - Scotts Miracle-Gro Co.</p>
+<p>Analysts<br />
+Joseph Nicholas Altobello - Raymond James &#038; Associates, Inc.<br />
+Christopher M. Carey - Bank of America Merrill Lynch<br />
+Jon R. Andersen - William Blair &#038; Co. LLC<br />
+William B. Chappell - SunTrust Robinson Humphrey, Inc.<br />
+Eric Bosshard - Cleveland Research Co. LLC</p>
+<p>Operator</p>
+<p>Good day, and welcome to the Scotts Miracle-Gro 2018 Second Quarter Earnings Conference Call. Today's conference is being recorded, and at this time, I would like to turn the conference over to Jim King. Please go ahead.</p>
+<p>Jim King - Scotts Miracle-Gro Co.</p>
+<p>Thank you, Savannah. Good morning, everyone and welcome to our second quarter conference call. With me this morning in Marysville, Ohio is our Chairman and CEO, Jim Hagedorn; and our CFO, Randy Coleman. Also joining us for the Q&#038;A session is Mike Lukemire, our President and Chief Operating Officer.</p>
+<p>In a moment, Jim and Randy will share some prepared remarks.</p></blockquote>
+<p>They can go on in this manner for quite a while, as I expect you know. The gist being that nothing in particular needed be said or can meaningfully be said ; and this takes 15 pages of transcript and an overwhelmingly busybody impersonation of busyness. Almost as good as business, amirite.</p>
+<blockquote><p>from Asia Unbound<br />
+North Korea’s May 16, 2018 Statements and Their Implications for a Trump-Kim Summit<br />
+Blog Post by Scott A. Snyder May 21, 2018
+</p></blockquote>
+<p>I'm not reading that shit, specifically <a href=http://trilema.com/2017/i-think-they-might-be-overdoing-it-in-places/>because</a>.</p>
+<blockquote><p> Cooking Rule of Claw Everything you need to know about buying crabs<br />
+4/24/15 diamond-divider By Elyse Inamine<br />
+Photos: Lizzie Munro/Tasting Table
+</p></blockquote>
+<p>Abso-fucken-lutely nothing there. The two pompous bitches involved could have just stayed <a href=http://trilema.com/2016/an-immodest-proposal/#selection-57.0-59.1>in bed</a> for all the good getting out of it did anyone.</p>
+<blockquote><p>Cleaning and Picking Meat from a Crab<br />
+By Hank Shaw Updated 01/12/18<br />
+    Picking and eating crabs is an earthy, down-home way to enjoy these tasty crustaceans — but crabs don't give up their treasures lightly. Picking crab meat takes time, but it's pretty easy when you know some tricks and tips.</p>
+<p>    First, prepare a large workspace. Lay down newspaper because you're going to get messy. Sorry, but pickin' crabs ain't dainty. Use a bowl for your cooked crabs, a bowl for good shells — you can use these for stocks and sauces — a bowl for the pure meat, and...MORE<br />
+    Continue to 2 of 10 below.
+</p></blockquote>
+<p>Just fucking shoot him.</p>
+<blockquote><p><a href=https://www.vetbabble.com/small-pets/hermit-crabs/>Hermit Crab Care Guide</a><sup><a href="#footnote_3_80197" id="identifier_3_80197" class="footnote-link footnote-identifier-link" title="Ima link the ones worth linking, which isn't very many as it (sadly) turns out.">iv</a></sup></p>
+<p>Hermit crabs make adorable pets but these little packages of cuteness are surprisingly high-maintenance and require very exacting care.</p>
+<p>Hermit crabs are widely believed to be easy to care for, and ideal first pets for children. Neither of these beliefs is true. Unfortunately, hermit crabs are very difficult to keep healthy, and they should be kept in groups. Not only are hermit crabs are not hermit-like at all, they are gregarious partiers who will keep a crab-party going all night.</p>
+<p>You’ve probably seen the clear plastic critter-carriers and one-gallon fish tanks where hermit crabs are sometimes displayed. These are not safe homes for hermit crabs. In fact, if the critter-carrier has a standard “berry-basket” top for ventilation, the crab inside is probably already dying a slow and painful death. Hermit crabs breathe air through modified gills. They will drown in water, and they have no lungs. If the gills ever dry out, the animal is in serious trouble. The resulting death by suffocation can take months, but it is inevitable. Therefore, maintaining sufficient humidity in the hermit crab enclosure is very, very important.</p></blockquote>
+<p>You know, there's oodletons of <a href=http://trilema.com/2017/and-the-sun-sets-over-the-pacific/>them</a> at <a href=http://trilema.com/2018/the-fabulous-day-of-many-firsts/#selection-55.117-55.229>my favorite beach</a>, and we did briefly consider taking one in as a pet, but then it seemed like they'd be very fucking unhappy away from the beach. Turns out we were right ; and I had no idea about the utterly insane "can't breathe either in air or in water" arrangement. Poor little guys!</p>
+<p>It turns out that the ready accessibility of a pristine beach is saving me a lot of work and a decent chunk of change -- I can go commune with the supercute whenever I damn well feel like.</p>
+<blockquote><p>Deselection guide to get rid of unwanted Labour MPs</p>
+<p>An online guide has been designed to help Labour activists get rid of their current MP if they want a different candidate. Daily Politics reporter Greg Dawson looks at the four methods offered in the How to Deselect Your Labour MP article.</p></blockquote>
+<p>Meh.</p>
+<blockquote><p>Record-breaking Amelia Kerr has ‘the world ahead of her’</p>
+<p>New Zealand all-rounder smashes record for highest score in women’s ODIs, returns to pick up five wickets in milestone performance. It was arguably the greatest 50-over performance in cricket, ever, across genders. </p></blockquote>
+<p>I guess. </p>
+<blockquote><p>Psychosis<br />
+Psychosis is a general term to describe a set of symptoms of mental illnesses that result in strange or bizarre thinking, perceptions (sight, sound), behaviors, and emotions. Psychosis is a brain-based condition that is made better or worse by environmental factors - like drug use and stress. </p></blockquote>
+<p>No, that's very much not what it fucking is. "mentalhealthamerica.net", yet another spun MFA "resource".</p>
+<blockquote><p>What is psychosis?<br />
+Last updated Thu 14 December 2017<br />
+By Markus MacGill<br />
+Reviewed by Timothy J. Legg, PhD, CRNP	</p>
+<p>Broadly speaking, psychosis means a loss of contact with reality; it is a symptom of a number of mental illnesses rather than a medical condition in its own right. </p></blockquote>
+<p>That's better.</p>
+<blockquote><p>	Science, Tech, Math › Animals and Nature<br />
+10 Fascinating Facts About Fireflies and Lightning Bugs<br />
+Interesting Behaviors and Traits of Lampyridae</p></blockquote>
+<p>Whatever.</p>
+<blockquote><p>Updated 30 June 2014<br />
+12 types of psychosis<br />
+Psychosis is associated with several medical disorders and conditions. Here's more about twelve of them.
+</p></blockquote>
+<p>"Make lists" methodology of handspun webspam. Beyond idiotic.</p>
+<blockquote><p>AMENDED AND RESTATED PRINCE HALL COMPACT SIGNED<br />
+The Grand Lodge of Texas and The Most Worshipful Prince Hall Grand Lodge of Texas and<br />
+Jurisdictions Free and Accepted Masons formally signed the Amended and Restated Compact on<br />
+15 January 2015 to allow expanded fraternal relations between the two Grand Lodges subject to<br />
+the laws, rules, and regulations of each Grand Lodge. This action followed the approval of the<br />
+Amended and Restated Compact, which was voted upon and approved by the members and<br />
+representatives of The Grand Lodge of Texas during its 179th Grand Annual Communication held<br />
+in December 2014. The Amended and Restated Compact includes the right of visitation by<br />
+Freemasons of the respective Grand Lodge to the Lodges of both Grand Lodges.
+</p></blockquote>
+<p>Apparenty this still "exists", at least in the sense of how things "still exist" these days.</p>
+<blockquote><p>
+We print your custom design on Tote Bags Easy, on-demand, online printing, fulfillment and shipping.
+</p></blockquote>
+<p>Why the fuck would anyone wear written objects ?!</p>
+<blockquote><p>The Cisco Learning Network<br />
+Communication Protocols<br />
+Posted by Jared in VIP Perspectives on Mar 14, 2014 5:05:56 AM</p>
+<p>Communication ProtocolsIn the networking world, we see the word "protocols" quite often.  Just what is a protocol?  The dictionary will define a protocol as a set of  rules or a process or procedure of how to proceed or act.  Communication protocols in the network are the rules that are followed when transmitting and receiving or exchanging information. Back when I was studying for the CCNA, two protocols came to mind when we exchange data over a network.  Yes, you know them well. They are Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). TCP has certain attributes.  It is connection oriented, has greater overhead, is slower than UDP, has acknowledgements and is reliable in helping to make sure our message arrives.  It has a larger header and contains flow control mechanisms.</p></blockquote>
+<p>I really dislike this attempt to merge technical writing with bad female prose ; in any case it sure as fucksticks isn't "VIP".</p>
+<blockquote><p>Closing the Books<br />
+Transitional Justice in Historical Perspective</p>
+<p>JON ELSTER<br />
+Columbia University</p>
+<p>published by the press syndicate of the university of cambridge<br />
+The Pitt Building, Trumpington Street, Cambridge, United Kingdom</p>
+<p>Preface and Acknowledgments<br />
+page ix<br />
+part i the universe of transitional justice 1<br />
+1 Athens in 411 and 403 b.c. 3<br />
+2 The French Restorations in 1814 and 1815 24<br />
+3 The Larger Universe of Cases 47</p>
+<p>[...]<br />
+Other pieces of Solon’s legislation are indirectly relevant, qua impe-<br />
+tus to a process of democratization that eventually led to untrammeled<br />
+popular rule triggering an oligarchic backlash. </p></blockquote>
+<p>The thing is a 20-page exercise in unmitigable idiocy quite reminiscent of the <a href=http://btcbase.org/log/2018-06-22#1828518>Timothy Williamson</a> moron. It's not even accurate to describe it as anachronistic. It's not even wrong, not even ahistorical -- it's nude and rude ooga-booga, no more and <a href=http://trilema.com/2015/what-the-actual-threat-of-the-medicalisation-of-individuality-looks-like/#selection-105.0-105.487>naught else</a>.</p>
+<blockquote><p>
+Eight years on and Canterbury's environment still has no democracy<br />
+SAM MAHON Last updated 05:00, February 9 2018</p>
+<p>Artist Sam Mahon and others carry his sculpture, a very large statue of Nick Smith defecating into a drinking glass, on ...<br />
+DAVID WALKER/STUFF</p>
+<p>Artist Sam Mahon and others carry his sculpture, a very large statue of Nick Smith defecating into a drinking glass, on the footpath outside of the Christchurch ECan office in September.</p>
+<p>OPINION: Two thousand five hundred years ago, the Athenian, Cleisthenes, invented democracy and ostracism. At base what he had established were equal rights for all citizens along with a common vote to exile any oligarchy that might threaten the common good.</p></blockquote>
+<p>Holy shit just beat a pantsuit to grease spot height today.</p>
+<blockquote><p>In some works democracy is bad. It is generally presented as an ineffectual form of government highly prone to corruption, demagoguery and takeovers by radicals and, in some portrayals, as a form of mob rule which tramples on individual rights to appeal to public sentiment.<br />
+It can also be presented this way by authors who don't necessarily approve of other forms of government, but are cynical enough that they consider all forms of government to be flawed (with the inclusion of no government at all). As Winston Churchill put it "Democracy is the worst form of government, except for all the other methods that have been tried".note<br />
+For most of history, say, before the Dutch Republic, the term "Democracy" was more-or-less synonymous with "Anarchy" or "Mob Rule," believed by many to be a utopian idea that could never work in practice and would lead to the collapse of society. The term is rarely used this way today because the forms and ideas of democracy shifted radically from Athens to the Middle Ages.</p></blockquote>
+<p>TvTropes went to shit. And to think I used to enjoy reading that site!</p>
+<blockquote><p>Community › The Walking Dead<br />
+Raccoon Symbolism Discussion</p>
+<p>Did anyone else notice after the new trailer with the raccoon in it and Amid the Ruins with the raccoon scene that there was a raccoon on the boat from Episode 1?</p>
+<p>SYMBOLISM OF RACCOON:</p>
+<p>It is clearly used as symbolism towards hope and life in the Walking Dead specifically, but I wanted to examine other meanings.</p></blockquote>
+<p>Epileptic trees, perhaps ?</p>
+<blockquote><p>
+Symbolism Discussion Questions<br />
+This Study Guide consists of approximately 49 pages of chapter summaries, quotes, character analysis, themes, and more - everything you need to sharpen your knowledge of Symbolism.</p>
+<p>The symbolist movement in literature was an important influence on modern painting. The major symbolist painters were Gustave Moreau, Odilon Redon, and Puvis de Chavannes. Find art books with reproductions of symbolist paintings by these or other artists. Choose one symbolist painter and provide a brief biography of him or her, focusing on the period during which he produced the majority of his symbolist works. Discuss one painting by the artist, describing the painting in your own words. In what ways does this painting express the ideals of the symbolist movement?</p>
+<p>Read Mallarmé's The Afternoon of a Faun, then find and listen to a recording of Debussy's musical adaptation Prelude to the Afternoon of a Faun. Compare and contrast the poem to the prelude. In what ways are the ideals of the symbolist movement expressed through Debussy's musical composition? How...</p></blockquote>
+<p>Fucking terrible, there's not a shred of anything substantial in there. 100% girltalk, "assign this" "here's a list" stultifying inane bullshit. Why ? Why would anyone ~ever~!</p>
+<blockquote><p>Notes for a Discussion of Ricoeur's Symbolism of Evil<br />
+    Uploaded by    Sean Hannan</p>
+<p>2<br />
+Contingency of Historical Symbols: At the end of his introduction (p. 19-24), Ricoeur<br />
+acknowledges that there‟s a fundamental contingency in his project. That contingency<br />
+comes out of the fact that he has to start from within a certain historical tradition of symbolism. His happens t<br />
+o be „Western,‟ which he takes to be a kind of encounter between<br />
+philosophy as it was practiced by the Greeks and ancient Jewish culture. He is not saying that all humans from every possible background must be held up to some standard of  Western symbolism. Instead, he is trying to get from a historically situated position<br />
+ —<br />
+the<br />
+symbolism of evil in „Western‟ texts—<br />
+to a broader understanding of the experiences those texts can evoke. It may seem awkward that he puts historical contingency side by side with a description of human experience, but his procedure here is related to how he sees<br />
+phenomenology and hermeneutics intersecting (see above). Phenomenology‟s<br />
+openness to meaning also<br />
+opened it up to history, culture, contingency. The „bare evidence‟ of lived experience was then made slightly less bare, since it comes to us<br />
+dressed in historically and culturally influenced clothing. If we want to get at meaningful experience, then, we have to start with specific historical traditions and then try to go through them to reach out at something more broad-ranging. In other  words, we have to start with<br />
+symbols<br />
+ and go through<br />
+myths<br />
+ before we get at abstract or universalizing<br />
+speculation<br />
+.  The Symbols<br />
+Ricoeur starts to get at the „substance‟ of his argument in the next three chapters, each of<br />
+ which deals with a way of symbolizing fault. What he gives us is a<br />
+typology<br />
+ of symbols. The point is to run through these three<br />
+types<br />
+ of symbols and trace out the picture of evil they<br />
+paint for us. On the one hand, Ricoeur‟s approach is<br />
+historical<br />
+and<br />
+ hermeneutical<br />
+: it makes use of particular examples from textual traditions (e.g., the prophets, the Pharisees, Greek tragedy). On the other hand, his main criterion for judgment is<br />
+ phenomenological<br />
+: he is trying to demarcate different types of experience, not just different historical representations. He is, in some way, trying to use historical representations to get at distinct modes of possible experience.</p></blockquote>
+<p>Fucking terrible.</p>
+<blockquote><p>
+Symbolics.com</p>
+<p>World's first and oldest registered .com domain name on the Internet<br />
+Media Coverage<br />
+If you see Symbolics.com covered in the media, email us and tell us about it.  We'll add you to the list.<br />
+Symbolics.com In the Media:</p>
+<p>Gerry -  USA  :  Spotted us on CNN Television<br />
+Mike Berkens -  USA :  Spotted us on Wired.com<br />
+Shane -  USA :  Spotted us on Digg<br />
+Bruce – USA :  Spotted us on Telegraph.co.uk<br />
+Lauren – USA : Spotted us on BusinessWeek.com<br />
+Anonymous :  Spotted us on CBSnews.com</p></blockquote>
+<p>They're fucked in the head, these people.</p>
+<blockquote><p>An Examination of Conflict Style Preferences in India<br />
+Article (PDF Available)  in International Journal of Conflict Management 22(1):10-34 · February 2011 with 467 Reads<br />
+DOI: 10.1108/10444061111103607<br />
+Stephen M. Croucher     22.96Massey University<br />
+Kyle J Holody    12.67Coastal Carolina University<br />
+Manda V. Hicks<br />
+Alfred DeMaris</p>
+<p>Abstract<br />
+Purpose – This study sets out to examine conflict style preferences in India and the predictive effects of various demographic variables on conflict style preference. Design/methodology/approach – Data were gathered in India (n=827) among Muslims and Hindus. Conflict was measured using Oetzel's Conflict Style Measure. To answer the research questions, repeated measures ANOVA and multiple regressions were conducted. Findings – The findings reveal that conflict style preference among Hindus in India differs significantly and that Hindus prefer the integrating and dominating styles, whilst showing the least inclination towards the avoiding and obliging styles. Muslims prefer the integrating and compromising styles and least prefer the dominating and avoiding styles. Analyses of the demographic variables' predictive influence reveal that age and sex are significant predictors for all five conflict styles for both Muslims and Hindus. Education has a mixed predictive influence on conflict style among Hindus and Muslims. Research limitations/implications – Use of self-report instruments and the majority of the participants coming from middle-class backgrounds could limit the generalizability of the study. Practical implications – The study calls for conflict mediators to consider the influence of group membership and educational level on conflict management/resolution. The research also discusses national/international conflict intervention. Social implications – This paper informs individuals regarding the way in which two large religious and cultural groups differ in their approaches to conflict. For a nation that has experienced a history of conflict between these two cultural/religious groups, this paper can help shed light on how to bridge the conflict between them. Originality/value – There are no studies directly comparing the conflict styles of Muslims and Hindus. </p>
+<p>(PDF) An Examination of Conflict Style Preferences in India. Available from: https://www.researchgate.net/publication/235308088_An_Examination_of_Conflict_Style_Preferences_in_India [accessed Jun 29 2018].</p></blockquote>
+<p>If the "Data were gathered in India (n=<a href=http://trilema.com/2015/the-genetics-of-intelligence/#selection-289.0-291.1>827</a>)" part didn't send you off laughing like a maniac there's no saving you. Let it be said that any study of humans sporting n<1e9 is to be discarded outright. But then you get to "the majority of the participants coming from middle-class backgrounds" and just...</p>
+<p>Fucking <a href=http://trilema.com/2016/and-they-wont-fucking-yield/#selection-181.0-181.191>die already</a>, idiots.</p>
+<p>PS. You know that <em>one exact item</em> appears <em>every time</em> in all the venues ? Here :</p>
+<blockquote><p>an+examination+of+conflict\n\n<br />
+1.https://www.researchgate.net/publication/235308088_An_Examination_of_Conflict_Style_Preferences_in_India<br />
+2.https://www.scribd.com/document/330661707/An-Examination-of-Conflict-Style-in-India<br />
+3.https://works.bepress.com/alfred_demaris/1/<br />
+4.https://www.deepdyve.com/lp/emerald-publishing/an-examination-of-conflict-style-preferences-in-india-ZSgIQgc5ZZ<br />
+5.http://www.iosrjournals.org/iosr-jbm/papers/Vol19-issue10/Version-5/E1910055968.pdf</p></blockquote>
+<p>They're all the same one thing! It's not <em>just</em> that they're doing "studies" on "India" by asking the ten fucktards they know whether they like <a href=http://trilema.com/2015/heres-what-you-dont-know-or-understand-about-facebook-everything/>the faceshit item</a> they all agreed to like in advance. It's that the whole fucking content of the web as far as "an examination of conflict" is concerned then becomes that single piece of inconsequential crap. This is your information superhighway, how do you like it ? </p>
+<p>Careful you don't get run over by a sheep on it.</p>
+<blockquote><p>@0x4E0x650x6F Tweets 10.2K Following 327 Followers 319 Likes 4,201 Lists 7 </p>
+<p>A proud GEEK, sec researcher that loves to find flaws others code, and one of the Guys behind the first BMX trick sensor in the world. #im_iddo<br />
+Lisbon<br />
+tiagoalexandre.com<br />
+Joined January 2010</p>
+<p>Verified account @nowthisnews<br />
+GOP Rep. Jim Jordan tried to go after Rod Rosenstein with an unverified Fox News report — and it blew up in his face<br />
+0 replies 1 retweet 1 like<br />
+0x4E 0x65 0x6F Retweeted<br />
+Elon Musk<br />
+‏Verified account @elonmusk<br />
+Jun 26<br />
+Replying to @Penenberg</p>
+<p>For sure! When doing US govt crash safety testing, the Model S roof was so strong, it broke their testing machine.<br />
+252 replies 1,560 retweets 10,999 likes<br />
+0x4E 0x65 0x6F<br />
+‏ @0x4E0x650x6F<br />
+11h11 hours ago</p>
+<p>Over the years I “heard” a lot about Chinese ip ranges, old OS’s like win98 and other apocalyptic descriptions. Then I looked as some French ip ranges and HOLLY FUCKING SHITBALLS ON CRACKERS. Bank’s websites running Wordpress, https with F score.<br />
+1 reply 0 retweets 0 likes<br />
+0x4E 0x65 0x6F<br />
+‏ @0x4E0x650x6F<br />
+Jun 27</p>
+<p>World Cup #Germany is out.<br />
+0 replies 0 retweets 1 like<br />
+0x4E 0x65 0x6F<br />
+‏ @0x4E0x650x6F<br />
+Jun 27</p>
+<p>With the visit of Portuguese president to USA the White House / USA saw how a healthy president looks  like since Obama left.<br />
+0 replies 0 retweets 0 likes<br />
+0x4E 0x65 0x6F Retweeted<br />
+PauloM<br />
+‏ @PaulJorg<br />
+Jun 27<br />
+Replying to @0x4E0x650x6F</p>
+<p>As one person wise man told one day “"Religion is the opium of the people" (German philosopher and economist Karl Marx )<br />
+0 replies 1 retweet 1 like<br />
+0x4E 0x65 0x6F‏ </p></blockquote>
+<p>Twitter is just this cesspool of inept infantile wank ; I skipped a few occurences up to now and will skip the rest, in the firm belief that there is literally nothing there.</p>
+<blockquote><p>The privacy posse: Roger McNamee, Tristan Harris and Jim Steyer.<br />
+The New Tech Avengers</p>
+<p>An unlikely triumvirate of Silicon Valley insiders is holding the tech industry accountable on privacy and addiction. Yesterday, they scored a major victory in California, where legislators passed a sweeping data-privacy law.</p></blockquote>
+<p>Wall Street Journal. No thank you ; banned.</p>
+<blockquote><p> Tuesday a day of many firsts for Indian Americans<br />
+By Geeta Goindi | January 6, 2017</p>
+<p>Swearing-in ceremony in the morning, a celebratory gala in the evening.<br />
+Pramila Jayapal is being sworn in by House Speaker Paul Ryan on January 3, 2017. Her mother, Maya Jayapal arrived well in time to witness and even partake in the historic swearing-in event holding a copy of both the Bhagavad Gita and the United States Constitution on which Pramila took the ceremonial oath of office.</p>
+<p>WASHINGTON, DC:  Tuesday was a day of many firsts!</p></blockquote>
+<p>Whatever, the original lazy bums taking over the Make Lazy Bums Great Again lands. I predict great things for the "continent their fathers conquered", after all America needs a latrine just like Eurasia has one. </p>
+<blockquote><p><a href=https://www.linns.com/howto/refresher/postalhistory_20010702/refreshercourse.html>The mantra of many</a> so-called serious collectors is, "In order to be a serious collector, you must collect postal history." Casual collectors may or may not choose to agree.</p>
+<p>A little history lesson can be useful in any area of stamp collecting, so here we will take a look at the basics: a brief history of the United States postal system and postage stamp production.Some casual collectors, however, simply might see postal history as too daunting, or they might just have no idea where to begin.</p></blockquote>
+<p>Not my cup, but still a cut above the usual webfare.</p>
+<blockquote><p>
+The First Of Many Firsts<br />
+There is a first time for everything.</p>
+<p>A terrifying, electrifying, exciting, nerve-racking first. Something new and foreign to you.</p>
+<p>Everyone has a first. Don’t worry if you are behind on one of them, or even have yet to have that first that someone else has.</p>
+<p>A first kiss, a first intimate moment, first job, a first full time job, and or a first boyfriend, girlfriend. There are firsts all over the world, first time walking, first time riding a bike, first time driving a car. First time flying alone on an airplane, traveling alone, staying home alone, traveling to a new city, state, country.</p>
+<p>There are many firsts.</p></blockquote>
+<p>Yeah, like that first time you've got a mandated wordcount, a "topic", some "keywords" and absolutely nothing to say. </p>
+<blockquote><p>A day of Firsts (Lesson in depth)<br />
+by Dave (Baton Rouge) </p>
+<p>Today was my first-day with my new Airstage 340. Today was my first-day using Mummy Worms. Today was also my first-day ultra light (pseudo) worm fishing. **Quick note on the air stage. The air stage 340 is an amazing do it all seiyru rod and on sale for $130, I think it is the best rod for the money on the site right now.** </p></blockquote>
+<p>Fishing with Dave, whatever.</p>
+<blockquote><p>In the words of Kenneth Scott Latourette, historian of Christianity at Yale University: "It is not His teachings which make Jesus so remarkable, although these would be enough to give Him distinction. It is a combination of the teachings with the man Himself. The two cannot be separated." </p></blockquote>
+<p>In the quaint words of the virgin Mary, <a href=http://trilema.com/2017/and-dont-go-around-upgrading-the-testaments-either/>fuck you</a>.</p>
+<blockquote><p>Las carnes más saludables y que menos engordan (y no son las de ternera y pollo)<br />
+Ninguna de las carnes convencionales es la más saludable que podemos tomar. Hay diversas carnes exóticas que tienen mayores beneficios para la salud</p></blockquote>
+<p>Hurr. Buncha these with the "non fattening meats", whatever got into them.</p>
+<blockquote><p>Oregon’s 2nd Congressional District<br />
+Senators<br />
+Each state elects two senators to the United States Senate for staggered 6-year terms. Senators represent the entire state. Oregon’s senators are:</p>
+<p>Ron Wyden Senior Senator for Oregon Since Jan 1, 1996 (Next Election in 2022) Democrat</p></blockquote>
+<p>A bunch of data re Oregon local politics. No idea, but both Ron Wyden and Jeff Merkley look like subnormal faggots -- the junior even more pronouncedly so.</p>
+<blockquote><p>April 16, 2018 WW2 Zombies: Shadowed Throne – How To Get ‘The Classic’ PPSh | Secrets Guide</p>
+<p>Unlock the all-powerful, Treyarch-inspired original Russian SMG — here’s how to get ‘The Classic’ PPSh in ‘The Shadowed Throne’.</p>
+<p>Kevin Thielenhaus / Features / Call of Duty: WW2, Guides, PC, PS4, Xbox One /</p>
+<p>The original, awesome PPSh is back in Call of Duty: WW2 Zombies yet again — transplanted from ‘The Final Reich’, a couple of clever Easter egg hunters were able to discover how to unlock ‘The Classic’ Treyarch version of the Russian PPSh SMG in ‘The Shadowed Throne’. Now this OP weapon can be earned through a fun little minigame.</p></blockquote>
+<p>Some Easter egg in a shooter. Could have shed 90% of the "content" to no detriment.</p>
+<blockquote><p>There’s No Such Thing as a Cyber-Risk</p>
+<p>Wednesday, Apr 18 | 08:00 a.m. - 08:45 a.m. | Moscone West 2018<br />
+Evan Wheeler CISO, VP Risk Management, Financial Engines</p>
+<p>If you want your information risk program to be taken seriously by the business, you have to do more than just throwing around a few business terms. You need to embrace enterprise risk techniques. See how the engagement changes when you start talking about a product delivery risk instead of a Struts vulnerability. Cyber isn’t your top risk; focusing on the wrong priorities is your top risk.</p>
+<p>Learning Objectives:<br />
+1: Learn how to integrate into a broader enterprise risk program.<br />
+2: Understand techniques from other disciplines that can be used in your cyber-program.<br />
+3: Learn to communicate security risks in business context.</p></blockquote>
+<p>"<a href=http://btcbase.org/log/2018-06-28#1830577>RSA Conference | Where the world talks security</a>". </p>
+<blockquote><p>HHS Secretary: “There really is no such thing as medical marijuana”<br />
+    By Megan Bachman    Published: March 3, 2018    4 Comments</p>
+<p>U.S. Secretary of Health and Human Services Alex Azar, visiting the Dayton area to learn about responses to the opioid crisis, said he sees no role for medical marijuana as a pain relief alternative to prescription opioids.</p>
+<p>“I would want to emphasize first that there really is no such thing as medical marijuana,” Azar said. “We have treatments that are approved by the Food and Drug Administration that are safe, that are proven to be safe and effective for pain, safe and effective for other conditions.”</p>
+<p>“There is no FDA approved use of marijuana, a botanical plant,” he added.</p></blockquote>
+<p>Absolutely no conceivable relation between the title, the summary and the soundbytes. The most transparent of drivers behind both "content" and "packaging". How to not despise the empire of imbeciles ?</p>
+<p>It's a "botanical plant", don't you know. Because the entire scam is spun out of categorical errors, and what's the fuel of a categorical error engine if not a ready supply of spurious categories ?</p>
+<blockquote><p>World Socialist Web Site wsws.org<br />
+Published by the International Committee of the Fourth International (ICFI)</p>
+<p>UK’s Porton Down military lab head: Russia not identified as source of Skripal poisoning<br />
+By Julie Hyland 4 April 2018</p>
+<p>Scientists at the UK’s Porton Down military laboratory have not identified Russia as the source of the nerve agent used in the alleged attempted assassination of former double agent Sergei Skripal and his daughter, Yulia.</p></blockquote>
+<p>How would this fucking work, anyway ? Doctors down at the trauma unit routinely fail to identify perpetrators. </p>
+<p>Oh, wait, "scientists" is the last remaining faux font of credibility ersatz, is it. Will scientists down at Idiots' Government Labs turn tricks for pay anytime soon, by the way ? I might have <a href=http://trilema.com/2014/ill-pay-for-your-tits/>some ideas</a>.</p>
+<blockquote><p>Matriarchy vs. Patriarchy<br />
+AKBear  Saturday April 11, 2015 · 6:37 PM CST</p>
+<p>In the last few weeks, I've had several discussions with people about matriarchy and patriarchy in social structures, matrilineal and patrilineal ways of viewing the world.  And, what I've found out is rather amazing.</p>
+<p>A lot of people think that matriarchy is the exact opposite in structure as patriarchy.  Patriarchy is what most people see these days in dominant, mainstream societies -- being governed by men, having judiciaries dominated by men, children taking the man's last name, the old idea in the modern practice of coverture in Christian, straight marriage, the veneration of old white guys throughout history and the nearly-complete disregard to women's contribution to that history, etc, etc, etc.</p>
+<p>Matriarchy, following this logic, would be the complete subjugation of men to women and follow the strict hierarchical structure inherent in patriarchy.  I can see why matriarchy is such a scary idea to those deeply invested in patriarchy . . . and, I'm here to offer some reassurance by offering what matriarchy looked like in pre-contact Americas.</p>
+<p>Matriarchy was a term used to label any society that did not follow the European idea of hierarchical patriarchy.  It was applied to every society that did not conform to what Europeans thought of as being "civilized," (which was anything but civilized, imho), </p></blockquote>
+<p>Very not fucking amazing at all. Banning dailykos.com also.</p>
+<blockquote><p>Discussionist<br />
+Sat Apr 11, 2015, 09:01 PM Argentina (16,962 posts)</p>
+<p>Matriarchy vs. Patriarchy<br />
+A lot of people think that matriarchy is the exact opposite in structure as patriarchy.. Patriarchy is what most people see these days in dominant, mainstream societies -- being governed by men, having judiciaries dominated by men, children taking the man's last name, the old idea in the modern practice of coverture in Christian, straight marriage, the veneration of old white guys throughout history and the nearly-complete disregard to women's contribution to that history, etc, etc, etc.</p>
+<p>Matriarchy, following this logic, would be the complete subjugation of men to women and follow the strict hierarchical structure inherent in patriarchy. I can see why matriarchy is such a scary idea to those deeply invested in patriarchy . . . and, I'm here to offer some reassurance by offering what matriarchy looked like in pre-contact Americas. </p></blockquote>
+<p>Just like the case with "conflict [in India]", the whole web consists of the same repackaged nonsense here, also!</p>
+<blockquote><p> Matriarchy is the future</p>
+<p>On July 23, 2016, we discontinued our forums. We ask our members to please join us in our new community site, The Hartmann Report. Please note that you will have to register a new account on The Hartmann Report.
+</p></blockquote>
+<p>I'd say that's just about right. <a href=http://trilema.com/2017/fake-news-are-just-one-tail-of-the-failed-female-state/>Matriarchy is how society fails</a>, after all.</p>
+<blockquote><p>10 Truly Fascinating Books from the End of 2015, not yet reviewed at BookNotes: 10% OFF<br />
+Posted on January 25, 2016 by Byron Borger	</p>
+<p>Thanks for your interest in our last two posts, the Best Books of 2015 Part One and the Best Books of 2015 Part Two.  What a joy to get orders for these kinds of great books.</p>
+<p>Putting together such lists is always a bit dicey for me — I forget books that I read earlier in the year and I wonder how I might honor titles that look so good and seem so impressive but that I haven’t really read yet. It’s a lot for me to manage during our store’s busy holiday season, and I know I miss some.
+</p></blockquote>
+<p>Spoiler : they're fucking terrible piles of crap, not in any sense books. One Nation Under God: A Christian Hope for American Politics  Bruce Ashford and Christ Pappalardo (B&#038;H Academic) ?! The Listening Life: Embracing Attentiveness in a World of Distraction Adam S. McHugh (IVP) ? The Book of Womanhood Amy F. David Abdallah (Cascade) !? Fucking spare me.</p>
+<blockquote><p>893 Essential Songs<br />
+Submit your Top 10 Essential Songs — your favorite songs of all time!</p>
+<p>Use this form to submit your 10 essential songs and enter the 893 Essential Songs giveaway between Tuesday, April 3 at 2 p.m. CDT and 11:59 p.m. CDT Monday, April 16, 2018.</p>
+<p>One (1) winner will receive one (1) gift certificate redeemable at Amazon.com for $893.00. Winner must provide a signed prize acceptance and a W-9 before receiving prize. Three (3) back up names will be drawn.</p></blockquote>
+<p>A W-9 ?! How about <a href=http://trilema.com/2013/time-for-europe-to-repeal-the-us-backed-aml-crap/>fuck you</a> ?</p>
+<blockquote><p>The following cryptic crossword-type clues are listed alphabetically by their solutions (with a few exceptions, as noted).</p>
+<p>To learn more about cryptic crosswords, click here (acknowledgements to Trazom).</p>
+<p>Solutions</p>
+<p>A<br />
+Alpha particle (1)<br />
+First of all, has Ms. Ephron written back to Mr. Spelling? (5)<br />
+"Not even two articles countering the established position? Is this a police state??" says the American composer (5,7)<br />
+Chance of coming clean is, unfortunately, about nil (8)<br />
+A plank on a ship (6)<br />
+Fruity liquid. . . adding in two cups for chest rub (6)</p></blockquote>
+<p>Meh.</p>
+<blockquote><p>'My work is not done, I have more people to kill': More horrifying details emerge about the teen who stabbed 21 people at Pennsylvania high school</p>
+<p>    Alex Hribal, 16, stands charged with 21 counts of attempted homicide<br />
+    He is accused of running through a suburban Pittsburgh high school while wielding two eight-inch kitchen knives he used to stab and slash students</p>
+<p>By Ryan Gorman and Associated Press Reporter</p>
+<p>Published: 21:34 BST, 25 April 2014 | Updated: 05:58 BST, 26 April 2014 </p></blockquote>
+<p>I guess.</p>
+<blockquote><p>You are here: Home / *Articles of the Bound* / The Royal Side of the Fascism Behind Agenda 21<br />
+The Royal Side of the Fascism Behind Agenda 21<br />
+May 20, 2012, 1:13 pm by Guest Author 3 Comments</p>
+<p>William Kay has contributed previously in the Gulag. He is a student of the Old European-side roots of the ecofascist movement, which has, collaborating with their Marxist cousins, given us the Agenda 21 strategy for the destruction of popular and national sovereignty and with it, Western Civilization – all in the name of environmentalism.</p>
+<p>One should note that Kay tends to refer to Old Europe’s right-left paradigm, perhaps best defined in the French Revolution and onward, of aristocrats on the right and Jacobins/Marxists on the left, each competing for their own brands of authoritarianism. That is distinct from our American view, of the authoritarian Marxists on the left and devotees of the republican social contract of sovereign Citizens on the right. The Old European right-left paradigm is much like the Marxian view, except the Marxists have no regard for the Natural Law responsibilities of free moral agents accountable to God, and thus they bundle us patriots in with the those of the aristocrats they cannot swing their way, into the bourgeoisie, as they may prefer to say.</p></blockquote>
+<p>Seems pretty well dead, but hey, maybe interesting item to entomologists : <a href=http://gulagbound.com/29938/royal-side-fascism-behind-agenda-21/>gulagbound.com</a>.</p>
+<blockquote><p>The Terror of Thorn (Child of War, #2)<br />
+by Alonna Lissett (Goodreads Author)<br />
+3.66  ·  Rating details ·  56 Ratings  ·  0 Reviews<br />
+In the powerful Queendom of Rangel, women have sole control of the government due to their use of powerful magic and men are treated little better than chattel. Rangel is the only nation in the land with Magic users, the powerful witches that give the Queendom her power. Xander is the world’s only Enchanter and has been forced to marry the powerful Rangelian Queen Celeste' ...more
+</p></blockquote>
+<p>Hurr durr.</p>
+<blockquote><p>Bitter Hearts (A Southern Loving Book 3)<br />
+by Ava Thorn (Goodreads Author)<br />
+3.95  ·  Rating details ·  81 Ratings  ·  11 Reviews<br />
+Kari moved from the bright lights of Beverly Hills to Nashville, Tennessee. Leaving behind everything she had ever known for a fresh start, where no one knew her family or her past. Starting fresh and struggling to make a name for herself, Kari has almost succeeded in her efforts. In the two years she had been in Nashville, she was starting to get a solid customer base, an ...more
+</p></blockquote>
+<p>Why do they suck at writing <em>so fucking bad</em>!</p>
+<blockquote><p>The Story Journal is a tab on the hero panel that tracks and displays character progress through the narrative of Guild Wars 2. The journal has section for the personal story and each season of the Living World. Each section is further divided into chapters and episodes for the personal story and Living World respectively. Each chapter or episode is further divided into a series of instances that are completed sequentially. </p></blockquote>
+<p>Well then...</p>
+<blockquote><p>The Balance Careers<br />
+What You Have Been Doing Since Your Last Job?<br />
+Tips for Answering Interview Questions When You Have an Employment Gap<br />
+By Alison Doyle Updated January 29, 2018</p>
+<p>If you have an employment gap since your last job, employers will want to know how you have spent your time since you last worked. You can expect to be asked, "What have you been doing since your last job?"</p>
+<p>The best way to answer this question is, to be honest, but do have an answer prepared. You will want to let the interviewer know that you were busy and active, regardless of whether you were out of work by choice, or otherwise.
+</p></blockquote>
+<p>This has been so very tipful I need a drink.</p>
+<blockquote><p>How to Find out What Someone is Doing on Your Computer<br />
+By Techwalla Contributor</p>
+<p>When you share your computer with multiple people, there are a number of things that can go wrong. Users could be downloading harmful content to your PC or using it for unauthorized purposes. Your child could be using the Internet unsafely. If you find yourself dealing with harmful or suspicious computer activity, you can monitor how the computer is being used.</p></blockquote>
+<p>No, actually, <a href=http://btcbase.org/log/2018-05-17#1814985>you can't</a>. </p>
+<blockquote><p>Dave the Kiwi / Faith. Hope. Love.<br />
+Tuesday, March 22, 2011<br />
+What have I been doing?</p>
+<p>Above: The Excel Family @ Laidlaw.I know this photo makes the webpage freak out being this big, but any smaller of a photo wouldn't do it justice. Pictures update!, click the link to the right ------></p>
+<p>What haven't I done, would be a better question. From hustling around Auckland trying to sort out the medical scene for the visa, to welcoming the new Laidlaw Students and new Excel Students to the campus, proceeding in and out of all sorts of meetings, it has been full on.</p>
+<p>Hebrew has proved to be on this side of ridiculous to learn, and I have never been this scheduled/meeting'ed out in my life. For two weeks I maintained a strenuous early morning regiment of study and exercise, which ended up exhausting me as I was burning the candle on both ends by not sleeping well as my brain was fully engaged upon going to bed. From about the 11th-13th I began to get the flu, which I shrugged off for a time then relentlessly took me out as I slept 40 hours over a two day period. I'm on the mend (10 days later), feeling better and now "sleeping in."</p></blockquote>
+<p>Why are personal bloggers so fucking terrible at it ? Honest question. I'm not nearly this fucking terrible at it, why is everyone else ?</p>
+<p>Because I am starting to suspect it's because they're trying to lie.</p>
+<blockquote><p>mugambi January 27, 2018<br />
+What have I Been doing in the last 5 years?<br />
+What have I Been doing in the last 5 years? 500 word essay to get into LVN nursing progam, hese are the questions that got to be answered why I’m interested in being a nurse?(I’ve been a CNA for 30 years),What have I Been doing in the last 5 years?What are my goals in 5 years(to be a RN)<br />
+Do you want a quality paper free from plagiarism, you are at the right place where quality is guaranteed. We have a team of writers with a wide range of experience in writing. We assure you a quality paper that meets your expectations
+</p></blockquote>
+<p>Check it out, we found the author of <a href=http://trilema.com/2015/the-strange-case-of-the-woodcollector-and-other-stories/#selection-93.0-97.319>the Graham-Andreessen web</a>.</p>
+<blockquote><p>What Have I Been Doing?<br />
+Subscribe Enter your email address to subscribe to this blog and receive notifications of new posts by email. Join 4 other subscribers</p>
+<p>    May 12, 2014 Vanessa General No Comments </p>
+<p>Busy Times</p>
+<p>No, I have not fallen off the face of the earth! Believe me when I say that I have not forgotten about you all! I’ve been meaning to update my blog this past month but I’ve just been extremely busy with school. Over the past month I have spent most of my time in Toronto and then back in Ottawa finishing up my schooling.<br />
+Toronto Experiences</p>
+<p>The last thing I left you with was mentioning that I had arrived in Toronto to complete my 80hour field placement for school. I did just that and had a great time! </p></blockquote>
+<p>Right.</p>
+<blockquote><p>Enthusiasm For young people<br />
+“Enthusiasm delivers projects, working with young people who are most at risk of offending and social exclusion. Joe Russo, the founder and Chief Executive of Enthusiasm, talks about what the organisation offers communities.”</p></blockquote>
+<p>Somewhere there's a bunch of <a href=http://trilema.com/2012/people-i-know/>feminized retards</a> sitting around thinking they're "doing something". After all they were 4th in their Harvard class!</p>
+<blockquote><p>Seinfeld (Curb Your Enthusiasm)<br />
+From Wikipedia, the free encyclopedia</p>
+<p>"Seinfeld" is the tenth and final episode of the seventh season of American situation comedy Curb Your Enthusiasm. The episode's story was written by Larry David and was directed by Jeff Schaffer. It originally aired on November 22, 2009 on HBO.[1] The episode revolves around a fictional Seinfeld reunion show featuring the original cast.</p></blockquote>
+<p>Fucking fascinating ; banning wikipedo also.</p>
+<blockquote><p>Enthusiasm of 'Como Joe' makes racing series grow<br />
+By Jon Nowacki on May 24, 2009 at 12:00 a.m.</p>
+<p>The Como Modified Series has grown from humble beginnings into one of the best-known racing circuits in the Upper Midwest, making a name for itself and the senior vice president and chief financial officer of Como Oil &#038; Propane, Joe Stariha of Duluth.</p>
+<p>The fourth installment of the series kicks off at 5 p.m. today at Proctor Speedway.</p></blockquote>
+<p>Whatevs.</p>
+<blockquote><p>Gender and Women's Studies</p>
+<p>Gender and Women’s Studies is an interdisciplinary journal that aspires to engage with aspects of gender and sex through a feminist lens covering a broad spectrum of issues, including, but not limited to, the social and natural sciences, the arts, the humanities, and media and popular culture. Being primarily an open access journal, the content of Gender and Women’s Studies will retain readability while maintaining rigorous methodology and critical theoretical approach.</p></blockquote>
+<p>Really ? How ? Don't tell me, "by paying men to proofread" ?</p>
+<blockquote><p>Article Processing Charges<br />
+Gender and Women’s Studies accomplishes global open access. The journal, therefore, levies an affordable article-processing charge of $395 for each article accepted for publication.</p></blockquote>
+<p>Ahahahahaha.</p>
+<p>Fucktards. I can almost see the mental process, "<a href=http://trilema.com/2017/the-day-of-failure-trilemma/#selection-123.205-129.149>hey, I make about that much on the street doing about the same thing</a>"...</p>
+<p>Start beating them again. Seriously now.</p>
+<blockquote><p>Can I Buy My Own Debt for Pennies on the Dollar?</p>
+<p>December 18, 2013 • 6 min read by Michael Bovee Comments 2 Comments<br />
+During the past few years, there has been a growing awareness of how unpaid debts get bought and sold. The fact that debts can be purchased for steep discounts by investors and collection companies — who then work to collect the full balances owed — has lead to some meaningful discussions, and increased scrutiny of debt buying, and debt collection practices in general. So much so that California recently passed new laws governing how debt buyers go about collecting.</p></blockquote>
+<p>Smartphone'd retards everywhere working towards creating INFINITE POWAR!!!! If only they could pay fiddy cents to buy back the owing of a dollar they'd borrowed, why... </p>
+<blockquote><p>Can You Pay Back Taxes on Someone Else's House?<br />
+Written by Tony Guerra; Updated July 19, 2017<br />
+Paying someone else's property taxes normally gains you no interest in the property.</p>
+<p>Delinquent or back property taxes have caused many homeowners to lose their properties. However, homeowners owing delinquent property taxes usually have some time to pay and can even have somebody else pay them. No law prohibits someone from paying the property taxes due on another person's property, after all.</p></blockquote>
+<p>This is actually fucking untrue : a) squat followed by b) pay delinquent property taxes so you can proceed to c) sue for title.</p>
+<blockquote><p>13 Ways to Deal with Debt Collectors &#038; Agencies</p>
+<p>The debt collection industry generates $11 billion a year from the 70 million Americans who haven’t or can’t pay their bills.</p>
+<p>Debt collectors get most of their revenue from people who fall hopelessly behind on student loans, medical bills, auto loans, credit cards and home mortgages. Some forms of debt – student loans and medical debt especially – are shooting up so fast that many consumers aren’t even aware they are behind until they receive a call from a collection agency.</p>
+<p>Collection agencies often are intimidating, demanding and most of all persistent, in trying to extract whatever money you have available to satisfy your debt. They can be just as aggressive in trying to collect debts you don’t owe, yet some people still pay, just to avoid any more contact with the debt collection agency.</p>
+<p>And that is where the trouble begins.<br />
+Rule 1: Get Everything in Writing</p></blockquote>
+<p>Pro tip : simply ignore them. There's absolutely nothing they can do, and <a href=http://trilema.com/2017/the-universal-plan-for-wealth/>besides</a>.</p>
+<blockquote><p>Home   >   Ask The Get Out of Debt Experts   >   How Can I Pay My Delinquent Wells Fargo Car Loan When They Won’t Reply?<br />
+How Can I Pay My Delinquent Wells Fargo Car Loan When They Won’t Reply?<br />
+By Steve Rhode on October 27, 2016</p>
+<p>Question:</p>
+<p>Dear Steve,</p>
+<p>I have a 2008 Chevy Malibu that I defaulted on the loan to Wells Fargo in 2015 when my work fell way off. I tried to negotiate reinstatement but they ignored both my calls and letters. I even had an attorney write them and got no response. I have kept the car in my garage and have not driven it since March 2016 due to my fear of it being repossessed while I was out. I got a small inheritance and now just want to pay off the car so it will not be repossessed. But Wells Fargo will not reply.</p>
+<p>How do I negotiate an agreement with the bank to pay off the car? I am sure the fees are adding up. I think I owe about $12,000 in the contract but am not sure. It seems to me that it would be a win-win for both of us and it would save us both time and money. Thank you</p></blockquote>
+<p>Small claims, probably, though it's unlikely the item's worth the hassle.</p>
+<blockquote><p>10 things debt-settlement companies won’t tell you<br />
+By Elizabeth O'Brien Published: Oct 22, 2016 10:37 a.m. ET</p>
+<p>When you find yourself in debt — and almost everyone does to some extent at some point — it’s a good idea to ask for help. But you need to be very careful about the companies and service providers you seek help from; the cure may end up being worse than the illness.</p>
+<p>First, read our MarketWatch and Learn story about How to get out of debt</p></blockquote>
+<p>Banning marketwatch.com also.</p>
+<blockquote><p>Las claves para la oración dinámica<br />
+La oración es vital para la vida espiritual de los cristianos. Ésta es una de las cinco herramientas del crecimiento cristiano. Sin embargo, esta herramienta es poco utilizada y grandemente mal aplicada. Muchos profesan ser cristianos y jamás oran. Otros dicen que sus oraciones nunca son respondidas. ¡Aquí están las claves para la oración dinámica!</p>
+<p>Los cristianos oran. La oración es hablar con Dios. ¿Sabe usted cómo hablar con Dios?</p></blockquote>
+<p>I want dynamic prayer like I want <a href=http://trilema.com/2010/stabilizarea-vaginului/#selection-41.0-41.177>stable vaginas</a>.</p>
+<blockquote><p>Revista Dominical<br />
+Auto Oración: tocar a Dios con las manos en el volante</p>
+<p>Desde hace tres semanas el Auto Oración, en Paseo Colón, ofrece a los conductores un espacio para recibir bendiciones sin salir del carro. ¿Qué lugar tendrá en la sociedad costarricense un servicio de esta naturaleza?<br />
+Por: Carlos Soto Campos.   11 noviembre, 2017</p></blockquote>
+<p>Meh.</p>
+<blockquote><p>Cover Photo, Image may contain: sky, tree, ocean, outdoor and nature<br />
+Janice Boboban's Profile Photo, Image may contain: 1 person, text<br />
+Janice Boboban is on Facebook.<br />
+To connect with Janice, sign up for Facebook today.<br />
+Favorites Music<br />
+    [Pinoy Rap Radio]<br />
+    Pinoy Rap Radio</p></blockquote>
+<p>Facebook may contain : turds.</p>
+<p>And that'll have to be it for now. Maybe I'll continue the exercise at some later point -- but to be honest I don't think so. There just doesn't seem to be anything out there, you know ?</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_80197" class="footnote">Excluding Trilema, as we've already read it. Haven't we. [<a href="#identifier_0_80197" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_80197" class="footnote">Also excluding crap like </p>
+<blockquote><p>https://duckduckgo.com/y.js%3Fu3%3Dhttps%253A%252F%252Fr.search.yahoo.com%252Fcbclk%252FdWU9NEQwNTkzOUNFOEI0NEFEMCZ1dD0xNTMwMjU1MjU1NjUwJnVvPTc0OTA0MzAxNDQwNDc0Jmx0PTImZXM9MF95UEJaUUdQU19YVl9aUCZqZT0zY2NkMzE0Ni03YjY5LTExZTgtYjBkZC0wMDhjZmE1YjYyZmMtMmI3OGI3YTI0NzAwJnVpPTIwMS4xOTYuNDguODcmanQ9MTUzMDI1NTI1NTY2NiZwcD1uMQ%252D%252D%252FRV%253D2%252FRE%253D1530284055%252FRO%253D10%252FRU%253Dhttps%25253a%25252f%25252fwww.bing.com%25252faclick%25253fld%25253dd3YIUzEWy5_9l8SY8Bmhfv_jVUCUw5oc9kkWkjig2lXPFqiYRwO_P9xD1Vg%252DkBdArp%252DJxPV9Wqy6lgXZfY3x4jgIyF1Thg0MI2jknHyAd7QZne7gs8UEGESTO3ipUIpGjyWf4zhMvyGnKoN2fkNmzqmiNb81pV95r6a5aa1a7vzy9U2dbY%252526u%25253dhttp%2525253a%2525252f%2525252fclickserve.dartsearch.net%2525252flink%2525252fclick%2525253flid%2525253d43700033865994544%25252526ds_s_kwgid%2525253d58700004123299567%25252526%25252526ds_e_adid%2525253d74904301440474%25252526%25252526ds_url_v%2525253d2%25252526ds_dest_url%2525253dhttp%2525253a%2525252f%2525252fwww.lastminute.com%2525252fentertainment%2525252ftheatre%2525252fharold%252Dand%252Dmaude%25252526utm_source%2525253dbing%25252526utm_medium%2525253dcpc%25252526utm_term%2525253d%2525255b%25252asearchterm%25252a%2525255d%25252526utm_campaign%2525253d%2525255b%25252aCampaign%25252a%2525255d%25252526acntb%2525253dlifestyle%25252526msclkid%2525253d%2525257bmsclkid%2525257d%252FRK%253D2%252FRS%253DJ3MYu0aPAxclMh4XeKcIXI7xqIo%252D%26ad_provider%3Dyhs%26vqd%3D12339031712492762327278538162407728101</p></blockquote>
+<p>because seriously now... [<a href="#identifier_1_80197" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_80197" class="footnote">Example pro toto :<br />
+<blockquote>Kalcic v. Beecher, 03-E-439, (SD Hillsborough, Hicks, 02/27/04) AFFIRMED<br />
+Arrested for DWI; Petitioner challenged jurisdiction and alleged the officer's report was not properly sworn; and that the officer could not identify by name the person before whom he took his oath. Court held: Absent a transcript, after reviewing "the Hearings Examiner's report it is apparent that numerous factual findings support the action taken by the Director."</p></blockquote>
+<p> [<a href="#identifier_2_80197" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_80197" class="footnote">Ima link the ones worth linking, which isn't very many as it (sadly) turns out. [<a href="#identifier_3_80197" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2018/lets-duckduckgo-a-little-see-what-comes-out/">Let's duckduckgo a little, see what comes out.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2018/the-unaided-rape-position/">The unaided rape position</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2018/so-whats-out-there/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2018/so-whats-out-there/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>3 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-126234">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://thewhet.net/2018/07/and-they-said-you-cant-take-it-with-you/' class='url'>And they said you can't take it with you. &laquo; The Whet</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-126234" title="">Sunday, 15 July 2018</a>
+					</div>
+					<p>[...] hermit crabs like bananas, among other things it's hard to imagine stumbling upon just-so on a shore human scrapsmaking [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-152998">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-last-blog/?b=instead%20of%20p&amp;e=well#select' class='url'>The last blog on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-152998" title="">Friday, 24 July 2020</a>
+					</div>
+					<p>[...] instead of penning yet another one of these depressing obits the circumstances unabashedly call for... let's instead make merry and amuse ourselves with well [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154386">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/a-slew-of-supersluou-subdates/?b=diagnosed%20it&amp;e=ntly#select' class='url'>A slew of supersluou subdates on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154386" title="">Saturday, 19 September 2020</a>
+					</div>
+					<p>[...] diagnosed it with the help of "online resources", all of which offer the exact same verbiage, somehow ; and all of which are mildly insulting, both to my manhood and to my intelligence -- apparently [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="80197" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833936-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-80197")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-80197");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-80197");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

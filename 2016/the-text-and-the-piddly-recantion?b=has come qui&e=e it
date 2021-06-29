@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The text ; and the piddly recantion on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Lucruri fine pentru oameni subtiri.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-68274"><div class="post" id="post-68274">                    <h1><a href="http://trilema.com/2016/the-text-and-the-piddly-recantion/" rel="bookmark" title="Permanent Link to The text ; and the piddly recantion">The text ; and the piddly recantion</a></h1>                        <div class="date">                                     Thursday, 18 August, Year 8 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Paul Biggar, a <a href="https://paulbiggar.com/">recent CompSci graduate</a><sup><a href="#footnote_0_68274" id="identifier_0_68274" class="footnote-link footnote-identifier-link" title="Yes, `last decade` is `recent`.">i</a></sup> with serious social integration problems<sup><a href="#footnote_1_68274" id="identifier_1_68274" class="footnote-link footnote-identifier-link" title="I can tell because CompSci. 
+The one true fact about pseudoscientific fields is that they attract the mentally broken. Depending on size and the exact flows of kink that year, sane and otherwise whole people may find themselves ensconced in the goop of a pseudoscientific field. Nevertheless - they're always marginal, and their message is always typical of the alienation the sane suffers among the idiotarian tribe. Meanwhile those who are happy to pose as `Earth scientists`, alchemists, dillutionists, `Computer scientists` and so following are always defective.">ii</a></sup>  had what drunks know as "a moment of clarity" last year, out of which (and a dubious lack of impulse control) came a text, which he published. Soon thereafter he also published a rather shameful retraction. Their interplay will be our subject of study here today, in the vague hope that a teenager or two may be spared the sad fate of turning a lively intelligence into whatever sort of a sad swamp dweller Paul Biggar is.</p>
+<p>First, in normal, citizenship black, the text : </p>
+<blockquote><p>Hey, my boss said to talk to you - I hear you know a lot about web apps?</p>
+<p><em>-Yeah, I’m more of a distributed systems guy now. I’m just back from ContainerCamp and Gluecon and I’m going to Dockercon next week. Really excited about the way the industry is moving - making everything simpler and more reliable. It’s the future!</em></p>
+<p><!-- more --></p>
+<p>Cool. I’m just building a simple web app at the moment - a normal CRUD app using Rails, going to deploy to Heroku. Is that still the way to go?</p>
+<p><em>-Oh no. That’s old school. Heroku is dead<sup><a href="#footnote_2_68274" id="identifier_2_68274" class="footnote-link footnote-identifier-link" title="Heroku was bought in 2010 by salesforce.com. As that spam outfit isn't on Paul Graham's list of things which may exist - therefore `Heroku is dead` and `nobody` uses it anymore.
+These shitheads couldn't be more transparent if they tried - and speaking of which, if you make a blog on medium I'm going to kill your children. All of them. With my penis.">iii</a></sup> - no-one uses it anymore. You need to use Docker now. It’s the future.</em></p>
+<p>Oh, OK. What’s that?</p>
+<p><em>-Docker is this new way of doing containerization. It’s like LXC, but it’s also a packaging format, a distribution platform, and tools to make distributed systems really easy.</em></p>
+<p>Containeri.. — what now? What’s LXE?</p>
+<p><em>-It’s LXC. It’s like chroot on steroids!</em></p>
+<p>What’s cher-oot?</p>
+<p><em>-OK, look. Docker. Containerization. It’s the future. It’s like virtualization but faster and cheaper.</em></p>
+<p>Oh, so like Vagrant.</p>
+<p><em>-No, Vagrant is dead. Everything is going to be containerized now, it’s the future.</em></p>
+<p>OK, so I don’t need to know anything about virtualization?</p>
+<p><em>-No, you still need virtualization, because containers don’t provide a full security story just yet. So if you want to run anything in a multi-tenant environment, you need to make sure you can’t escape the sandbox.</em></p>
+<p>OK, I’m getting a little lost here. Let’s back it up. So there’s a thing like virtualization, called containers. And I can use this on Heroku?</p>
+<p><em>-Well, Heroku has some support for docker, but I told you: Heroku’s dead. You want to run your containers on CoreOS.</em></p>
+<p>OK, what’s that?</p>
+<p><em>-It’s this cool Host OS you can use with Docker. Hell, you don’t even need Docker, you can use rkt.</em></p>
+<p>Rocket?</p>
+<p><em>-No, rkt.</em></p>
+<p>Right, Rocket.</p>
+<p><em>-No, it’s called rkt now. Totally different. It’s an alternative containerization format that isn’t as bundled together as Docker is, and so it’s more composable.</em></p>
+<p>Is that good?</p>
+<p><em>-Of course it’s good. Composability is the future.</em></p>
+<p>OK, how do you use it?</p>
+<p><em>-I don’t know. I don’t think anyone uses it.</em></p>
+<p>Sigh. You were saying something about CoreOS?</p>
+<p><em>-Yeah, so it’s a Host OS you use with Docker.</em></p>
+<p>What’s a Host OS?</p>
+<p><em>-A Host OS runs all your containers.</em></p>
+<p>Runs my containers?</p>
+<p><em>-Yeah, you gotta have something run your containers. So you set up like an EC2 instance, you put CoreOS on it, then run the Docker daemon, and then you can deploy Docker images to it.</em></p>
+<p>Which part of that is the container?</p>
+<p><em>-All of it. Look, you take your app, write a Dockerfile, turn it into an image locally, then you can push that to any Docker host.</em></p>
+<p>Ah, like Heroku?</p>
+<p><em>-No, not Heroku. I told you. Heroku is dead. You run your own cloud now using Docker.</em></p>
+<p>What?</p>
+<p><em>-Yeah, it’s real easy. Look up #gifee.</em></p>
+<p>Gify?</p>
+<p><em>-“Google’s infrastructure for everyone else”. You take some off the shelf tools and stacks, using containers, and you can have the same infrastructure Google has.</em></p>
+<p>Why don’t I just use Google’s thing?</p>
+<p><em>-You think that’s going to be around in 6 months?</em></p>
+<p>OK, doesn’t someone else do hosting of this stuff? I really don’t want to host my own stuff.</p>
+<p><em>-Well, Amazon has ECS, but you gotta write XML or some shit.</em></p>
+<p>What about something on OpenStack?</p>
+<p><em>-Ew.</em></p>
+<p>Ew?</p>
+<p><em>-Ew.</em></p>
+<p>Look I really don’t want to host my own stuff.</p>
+<p><em>-No, it’s really easy. You just set up a Kubernetes cluster.</em></p>
+<p>I need a cluster?</p>
+<p><em>-Kubernetes cluster. It’ll manage the deployments of all your services.</em></p>
+<p>I only have one service.</p>
+<p><em>-What do you mean? You have an app right, so you gotta have at least 8-12 services?</em></p>
+<p>What? No, just one app. Service, whatever. Just one of them.</p>
+<p><em>-No, look into microservices. It’s the future. It’s how we do everything now. You take your monolithic app and you split it into like 12 services. One for each job you do.</em></p>
+<p>That seems excessive.</p>
+<p><em>-It’s the only way to make sure it’s reliable. So if your authentication service goes down…</em></p>
+<p>Authentication service? I was just going to use this gem I’ve used a few times before.</p>
+<p><em>-Great. Use the gem. Put it into it’s own project. Put a RESTful API on it. Then your other services use that API, and gracefully handle failure and stuff. Put it in a container and continuously deliver that shit.</em></p>
+<p>OK, so now that I’ve got dozens of unmanageable services, now what?</p>
+<p><em>-Yeah, I was saying about Kubernetes. That let’s you orchestrate all your services.</em></p>
+<p>Orchestrate them?</p>
+<p><em>-Yeah, so you’ve got these services and they have to be reliable so you need multiple copies of them. So Kubernetes makes sure that you have enough of them, and that they’re distributed across multiple hosts in your fleet, so it’s always available.</em></p>
+<p>I need a fleet now?</p>
+<p><em>-Yeah, for reliability. But Kubernetes manages it for you. And you know Kubernetes works cause Google built it and it runs on etcd.</em></p>
+<p>What’s etcd?</p>
+<p><em>-It’s an implementation of RAFT.</em></p>
+<p>OK, so what’s Raft?</p>
+<p><em>-It’s like Paxos.</em></p>
+<p>Christ, how deep down this fucking rabbit hole are we going? I just want to launch an app. Sigh. Fuck, OK, deep breaths. Jesus. OK, what’s Paxos?</p>
+<p><em>-Paxos is like this really old distributed consensus protocol from the 70s that no-one understands or uses.</em></p>
+<p>Great, thanks for telling me about it then. And Raft is what?</p>
+<p><em>-Since no-one understands Paxos, this guy Diego…</em></p>
+<p>Oh, you know him?</p>
+<p><em>-No, he works at CoreOS. Anyway, Diego built Raft for his PhD thesis cause Paxos was too hard. Wicked smart dude. And then he wrote etcd as an implementation, and Aphyr said it wasn’t shit.</em></p>
+<p>What’s Aphyr?<sup><a href="#footnote_3_68274" id="identifier_3_68274" class="footnote-link footnote-identifier-link" title="Believe it or not this isn't a fictitious name.">iv</a></sup></p>
+<p><em>-Aphyr is that guy who wrote, ‘Call Me Maybe.’ You know, the distributed systems and BDSM guy?</em></p>
+<p>What? Did you say BDSM?</p>
+<p><em>-Yeah, BDSM. It’s San Francisco. Everyone’s into distributed systems and BDSM.</em></p>
+<p>Uh, OK. And he wrote that Katy Perry song?</p>
+<p><em>-No, he wrote a set of blog posts about how every database fails CAP.</em></p>
+<p>What’s CAP?</p>
+<p><em>-The CAP theorem. It says that you can only have 2 out of 3 of Consistency, Availability and Partition tolerance.</em></p>
+<p>OK, and all DBs fail CAP? What does that even mean?</p>
+<p><em>-It means they’re shit. Like Mongo.</em></p>
+<p>I thought Mongo was web scale?</p>
+<p><em>-No one else did.</em></p>
+<p>OK, so etcd?</p>
+<p><em>-Yeah, etcd is a distributed key-value store.</em></p>
+<p>Oh, like Redis.</p>
+<p><em>-No, nothing like Redis. etcd is distributed. Redis loses half its writes if the network partitions.</em></p>
+<p>OK, so it’s a <em>distributed</em> key-value store. Why is this useful?</p>
+<p><em>-Kubernetes sets up a standard 5-node cluster using etcd as a message bus. It combines with a few of Kubernetes’ own services to provide a pretty resilient orchestration system.</em></p>
+<p>5 nodes? I have one app. How many machines am I gonna need with all this?</p>
+<p><em>-Well, you’re going to have about 12 services, and of course you need a few redundant copies of each, a few load balancers, the etcd cluster, your database, and the kubernetes cluster. So that’s like maybe 50 running containers.</em></p>
+<p>WTF!</p>
+<p><em>-No big deal! Containers are really efficient, so you should be able to distribute these across like 8 machines! Isn’t that amazing?</em></p>
+<p>That’s one way to put it. And with all this, I’ll be able to simply deploy my app?</p>
+<p><em>-Sure. I mean, storage is still an open question with Docker and Kubernetes, and networking will take a bit of work, but you’re basically there!</em></p>
+<p>I see. OK, I think I’m getting it.</p>
+<p><em>-Great!</em></p>
+<p>Thanks for explaining it.</p>
+<p><em>-No problem.</em></p>
+<p>Let me just repeat it back to see if I’ve got it right.</p>
+<p><em>-Sure!</em></p>
+<p>So I just need to split my simple CRUD app into 12 microservices, each with their own APIs which call each others’ APIs but handle failure resiliently, put them into Docker containers, launch a fleet of 8 machines which are Docker hosts running CoreOS, “orchestrate” them using a small Kubernetes cluster running etcd, figure out the “open questions” of networking and storage, and then I continuously deliver multiple redundant copies of each microservice to my fleet. Is that it?</p>
+<p><em>-Yes! Isn’t it glorious?</em></p>
+<p>I’m going back to Heroku.</p>
+</blockquote>
+<p>Second, in the gray of subhumanity, the recantion : </p>
+<blockquote><p><font color=#ededed>
+<p>Last week I wrote It’s the Future<sup><a href="#footnote_4_68274" id="identifier_4_68274" class="footnote-link footnote-identifier-link" title="Ie, the item above.">v</a></sup>, a piece that satirized the container ecosystem, lightly mocking Docker and Google and CoreOS and a bunch of other technologies. Lots of Docker enthusiasts enjoying being the butt of the joke, but it was also much loved and shared by lots of people yelling “I told you this was all bullshit”.</p>
+<p></font></p></blockquote>
+<p>For one thing, the mocking of Docker and CoreOS was nothing light. It was the essential, life-threatening sort of terrorism only fragile, doomed systems can experience. </p>
+<p>Mixing Google in the meta-discussion is entirely unwarranted on the basis of the text ; but it carries for the author the significance of solidity. He hopes that by pretending a doomed, "let's-go-through-the-motions" attempt by Google's committees to compete with Bezos in the virtualization space somehow is just as integral to Google as it is for its downstream spawn, some sort of magical amulet may be constructed that'll somehow protect the various "corporations" with no money formed by "<a href="http://trilema.com/forum-logs-for-17-aug-2016#2149879">experts</a>" with no experience from their inevitable doom once the bottom falls out.<sup><a href="#footnote_5_68274" id="identifier_5_68274" class="footnote-link footnote-identifier-link" title="The bottom has arguably already fallen out. 
+Apple's `app store` has ~no revenue to show for ever increasing `developer mindshare`, especially in places you can't compete with, such as India, and there's trouble afoot across the board. The once-proud `hope of the future` solution for USG-style full spectrum dominance, bridging a vast span from Apple-likes TiVoizing the consumption on one end all the way to CISCO shitware peddlers  eating away at network infrastructure on the other end, with a bevy of Intel-Amd Fritz chips in between - the whole kaboodle lies in ruins, its various broken cogs whirring and whizzing sadly. 
+It's not just that CISCO died suddenly in 2013, or that the Chinese are attacking and likely will dismantle the Xilinx stack before the decade's out (a development whose significance I doubt you are equipped to evaluate), or that the Republic stands proud, its currency far above any fiat, not to mention castrated substitutes. Even the holy secrets of `Equation Group Which Is Not NSA` are on sale - and notice the flaming butthurt at the choice of marketplace. 
+Bitcoin has come quite a ways since the days back in 2014, when Buffett was still daring to pretend `there are no shorts` ; the Republic stands ever closer to its goal of crushing the Empire and salting the land where it stood. 
+All these major economic shifts are of course not perceptible to the immersed termite, and so there they go, trying their best to allign with an impossible vector, at the usual cost of their life's labour and ultimately their sanity.">vi</a></sup></p>
+<blockquote><p><font color=#ededed></p>
+<p>It’s very easy to see why people might think the container ecosystem is bullshit, in exactly the way I satirized.</font></p></blockquote>
+<p>That'd be for the obvious reason : because it exactly is bullshit, without remainder.</p>
+<blockquote><p><font color=#ededed>After all, it’s not exactly clear at first glance what Docker is.</font></p></blockquote>
+<p>Or, as it happens, at the nth glance, or the mth look, or the qth investigation.</p>
+<blockquote><p><font color=#ededed> It’s containerization, which is like virtualization, but not quite. It’s got a Dockerfile which is kinda like Chef, but it’s combined with something called layers which involves a weird filesystem or something. It solves similar problems to AWS and Heroku and VMware and Vagrant, but in each case it’s slightly different in a way that’s not particularly clear at first and also it’s really not clear why at all.</font></p></blockquote>
+<p>The author seems blissfully unaware, and dead set on depending on a readership that is blissfully unaware that similar crud gets crushed all the time. </p>
+<p>Recall, for instance, <a href="http://btcbase.org/log/2014-02-02#473654">the battlestarislands lulz</a> ? That similarly was a this-of-that and hurr-with-durr etc etc. That similarly consisted of a lengthy string of Lacanian symbolology, connected by pure conjunctive tissue, without any meaningful definition in sight. "Pears are like apples, but not quite" might pass muster in a context dominated by five year olds ; but for anyone with pretension to a life of the mind such nonsense is entirely disqualifying.</p>
+<p>It'd appear Paul Biggar's expectation is that an in-the-field diagnosis of AD&#038;D will work together with some imaginary hurry - that only exists in his mind - to make the reader swallow this latest product of Sokal's machine. This doesn't speak in favour of his intelligence - an altogether different affair from what he's been induced to believe intelligence is so far - not to mention the nonsense he's trying to peddle. By and large, if something doesn't have a definition it's because <em>that something doesn't exist</em>, not because that something somehow magically doesn't need one.<sup><a href="#footnote_6_68274" id="identifier_6_68274" class="footnote-link footnote-identifier-link" title="Perception is no proof of existence. If this is not directly obvious, there's a funny gif of a racoon playing with a water jet that should make the point to you.">vii</a></sup> </p>
+<blockquote><p><font color=#ededed> It’s got 27 competing versions of tools that do you-can’t-tell-exactly-what, with funny names like machine and swarm and flannel and weave and etcd and rkt and kubernetes and compose and flocker.</font></p></blockquote>
+<p>More importantly, and very characteristically, it's "got" 27 "competing" version of "tools" that aren't actually useful, for the very simple reason that they do not work. Not in the <a href="http://trilema.com/2016/werner-koch-confirmed-usg-stooge/">Werner Koch</a> sense of "works - but sabotaged" ; rather in the sense that they exist marginally at best, mostly consisting of vague thoughts in the head of their <em>soi dissant</em> "developer", and otherwise a collection of napkin sketches and assorted bad prose. Such an item doesn't merit the moniker of "tool", and it's altogether dubious they'd even meet the considerably lower bar of "prototype". </p>
+<p>It should be pointed out that merely using the word competition to describe anything in that monkey cage is <em>flagitium in flagitia</em> and nothing less. Not one of the participants ever had as much as a stray thought <em>of their own</em>, nor for that matter as much as a girlfriend with whom they interacted on a paradigm other than "checking out what the instagram comments say". The concept of competition is much further to these oversugared chimps than the considerable space between their after-dinner doodles and proper tools.<sup><a href="#footnote_7_68274" id="identifier_7_68274" class="footnote-link footnote-identifier-link" title="A hammer is a tool. A drill is a tool. These aren't `invented`, they're discovered - because a tool is a necessary configuration, not merely an `interesting`, and much less a `novel` one. If Shakespeare hadn't written Your Mother's A Whore, we wouldn't have ever read that poem ; but if my great-grandfather hadn't invented the six bladed dildo, your grandfather would have.">viii</a></sup></p>
+<blockquote><p><font color=#ededed>It’s somehow linked to microservices which are new and shiny but seem like a fantastically stupid idea considering how hard it is to keep a single service running in the first place.</font></p></blockquote>
+<p>Which is exactly correct : a fantastically stupid idea. Not, of course, for the reasons the author would like to pretend, so then he can win imaginary wars with strawmen in his own head ; not because, somehow, replication wasn't a correct approach to stability ; but because it's fucking stupid to overshoot, and to overengineer, and generally to waste one's life, one's productive labour and one's inheritance chasing dreams and posturing wildly.</p>
+<blockquote><p><font color=#ededed>And after all that, it’s got this weird culty vibe to it, with dozens of startups and big corps all competing to get “developer mindshare” which might somehow someday relate to money and it’s all very 1999 and there’s definitely some kind of Koolaid being drunk.</p>
+<p></font></p></blockquote>
+<p>There's two important things you must read to get your telescope correctly calibrated for this topic. One's that one with the tin women : t<a href="http://trilema.com/2012/the-problem-of-too-much-money/">he problem of too much money</a> ; the other's the sad story of how the US ignored the warning and then lost its future : <a href="http://trilema.com/2013/the-future-of-bitcoin-regulation/">The future of Bitcoin regulation</a>. It's easy enough to imagine that waste has no actual impact ; that somehow the "boundless recuperative capacities of the new continent" will see to it no matter what they do. <a href="http://trilema.com/2014/la-florida-and-other-places/#selection-111.0-117.21">No such thing</a>.</p>
+<blockquote><p><font color=#ededed></p>
+<p>It’s really not unreasonable to look at the whole Docker and container thing and conclude that it’s all bullshit.</p>
+<p></font></p></blockquote>
+<p>Quite.</p>
+<blockquote><p><font color=#ededed></p>
+<p>Except it’s not.</p>
+<p>It’s actually the future of how we build applications.</p>
+<p></font></p></blockquote>
+<p>Entirely out of the question. For one thing, there's no "we". The author is suffering from <a href="http://btcbase.org/log/2016-08-17#1523121">that bizarre geek derealization</a> where he perceives himself multiple people. For the other thing, there's not really any future for "apps"<sup><a href="#footnote_8_68274" id="identifier_8_68274" class="footnote-link footnote-identifier-link" title="Note that everyone everywhere likes to tell himself `hay mas futuro!`. Even the hopelessly idiotic Argentines.">ix</a></sup> <em>altogether</em>, let alone this marmalade.</p>
+<blockquote><p><font color=#ededed><br />
+Why the Haterade?</p>
+<p>Many of the folks who reacted to It’s the Future were those who felt that it was 100% accurate, not satirical at all, and who questioned the hype around this whole container thing. Why?</p>
+<p></font></p></blockquote>
+<p>For one thing, because for each of the fifty or so derpy kids who "truly believe", there's a few thousand people who are both older and actually <em>compos mentis</em> who point and laugh. Statistically unavoidable situation.</p>
+<blockquote><p><font color=#ededed></p>
+<p>The Docker and container ecosystem (hereafter “Docker”) is taking a bunch of staples of the application developer world, such as virtualization, service-oriented architectures, and operating systems, and redelivering them with different goals and benefits. As it does so, it raises the hackles of a large portion of the developer community: curmudgeons who hate anything new.</p>
+<p></font></p></blockquote>
+<p>The problem here is that you can't "take" the named things. You can't "take" virtualization, in the manner your sister takes the cock. It's not a cock. You definitely can't "take" a pinch of virtualization, add to a well stirred service-oriented goop, bake for thirty minutes and at the end retrieve a fruitcake just like your granma used to make. </p>
+<p>The difference between realia and idealia is precisely this : that the entire domain limitation for realia is given in the object ; whereas all domain limitations for idealia are outside the object. So, if you <em>can</em> use raisins, cocks or thin plastic foil a certain way, then there you go, you'll get something or the other. Not like the universe is going to BSOD on you because you put a single raisin inside the microwave and the dumbass demiurge in charge of development forgot to add a test for that.</p>
+<p>Meanwhile, that you can string words together in any particular way makes absolutely no guarantees of any kind. The results of random manipulation of abstract concepts is necessarily meaningless, notwithstanding how attractive it is to the monkey brain. You can't "take" some cool, you'll have to do <em>the things</em> which constituted that cool, in such a way as they constitute it again. You can't "take" virtualization. Calling it "a staple" does give away that you are aware you're being stupid, but does not work as an incantation to protect you from that stupidity. It's not a fucking staple, programming computers isn't your grandma's fucking home ec class, and the mental process that outputs that sort of noise is just broken.</p>
+<p>Curmudgeonry has exactly nothing to do with any of this. It's the second in a chain of copouts by a kid who knows he's being stupid yet doesn't want to desist, but it has no more juju than the rest of the gargle.</p>
+<blockquote><p><font color=#ededed></p>
+<p>The software industry, contrary to what you might expect, is absolutely filled with people who hate progress. The sort of people who would walk into the Sistine Chapel after Michelangelo was done and declare that they already had a perfectly good picture of god, they prefer their ceilings to be white, and that frescos aren’t that cool anyway.</p>
+<p></font></p></blockquote>
+<p>If your definition of progress is "vaguely black pompous butthead", like a sort of Dan Quayle who fell through cocoa powder, then yes, absolutely - every place is filled with people who hate progress, because that progress is ominous.</p>
+<p>That aside, the tendency of idiots to pretend engineering "is art" has already been well dissected by Maciej Cegłowski in <a href=http://idlewords.com/2005/04/dabblers_and_blowhards.htm>that piece about Paul Graham</a>, a work which I recommend warmly on its own merits and insistently on the grounds that apparently every idiot sooner or later ends up with the same "ideas".</p>
+<blockquote><p><font color=#ededed></p>
+<p>At the same time, most of the software industry makes its decisions like a high school teenager: they obsessively check for what’s cool in their clique, maybe look around at what’s on Instagram and Facebook, and then follow blindly where they are led. Around these technologies they form cliques of conformity, even going so far as to carve their own identities around the technological niche they fit into—they even cover their laptops with their gang colors–and hate and complain about things that are strange or different.</p>
+<p></font></p></blockquote>
+<p>I am no part of this "software industry" which, ridiculously, seems to have no fucking idea what the word "industry" even means, so much so that they run screaming from <a href="http://btcbase.org/log/2016-08-18#1524540">even cursory encounters</a> with the process.</p>
+<blockquote><p><font color=#ededed></p>
+<p>Into that world drops Docker: a new way of doing almost everything.</font></p></blockquote>
+<p>No, it's not "a new way of doing almost everything". It's a new way of doing absolutely nothing at all - because apparently "measuring traffic" wasn't enough of a pointless timesink for the "industry".</p>
+<blockquote><p><font color=#ededed>It throws away old rules about operating systems, and deployment, and ops, and packaging, and firewalls, and PaaSes, and everything else.</font></p></blockquote>
+<p>The concerning mental model transparent from this description is of a schoolboy who imagines "don't start a fire in the crotch of the underwear you're currently wearing" is something of the nature of "the rule of law", <em>malum prohibitum</em>. Supposedly "throwing away old rules about fire in your underwear" is then the halmark of progress. </p>
+<p>It would appear so to him, because his <strong>lack of experience</strong> couples detrimentally with his overlong nurture period<sup><a href="#footnote_9_68274" id="identifier_9_68274" class="footnote-link footnote-identifier-link" title="They do spend too long in school, kids today. They should be out there getting killed left and right as soon as 15, not being coddled into cloying security by the motherhood-statal complex.">x</a></sup> to create a patently insane view of reality. In any case, engineering rules aren't there because it never occured to anyone they shouldn't be - much like the reason you can't fly batting your arms has nothing to do with "the rule" and everything to do with actual rules.</p>
+<blockquote><p><font color=#ededed>Some developers instantly love it, sometimes for valid reasons such as the problems it solves,</font></p></blockquote>
+<p>"Problems it solves" that are yet to be mentioned. Can you think of any problem this nonsense actually solves ? Let me know.</p>
+<blockquote><p><font color=#ededed>and sometimes because it’s a shiny toy that allows them to be cool before the other kids get to it. Other developers hate it—its pure hype, they say; it’s just the same as what came before and I don’t see why everyone is talking about it, they say—often for reasons that are more tribal than rational.</p>
+<p>So reactions to Docker are not necessarily based on the technology itself.</font></p></blockquote>
+<p>Actually, this is a ploy older than dirt. Given an unselected group, so that intelligence distributes normally, a scammer comes in with an item that is both self contradictory and vaguely defined to the degree that only about half the group has the werewithal to notice. The scammer then eschews the fact that the item is vaguely defined deliberately, by him, and instead pushes the theory that "haters react irrationally to something they couldn't even possibly know". This twist has the merit of turning at least some of the group members (in practice, the more... intellectually vulnerable, so to speak) against their natural salvation : their superiors. The scammer now carved himself a little niche he might extract some value out of - the whole process being rather reminescent of how pathogen-cell interaction functions.</p>
+<p>Obviously, Paul Biggar's audience is supposed to be rather... innocent, mentally, given that even a half hour's reading on the trails of MPOE-PR, for instance, would suffice to disabuse anyone with a working noggin of this nonsense.</p>
+<blockquote><p><font color=#ededed>Most haters are not really reacting to Docker’s solutions to important and complex problems.</font></p></blockquote>
+<p>Let's name them.</p>
+<blockquote><p><font color=#ededed>Mostly, this is because those problems are ones you might not have noticed if you haven’t spent time scaling big systems.</font></p></blockquote>
+<p>"My theory which is mine has the support of great people as well as armies just over the horizon"<br />
+"Which great people ?"<br />
+"Oh these great people are great indeed!"</p>
+<p>Bitch... really ?</p>
+<blockquote><p><font color=#ededed>If you don’t intuitively and deeply understand what’s meant by “cattle not pets” and why that’s important, then a lot of the choices made by Docker and related tools are going to seem weird and scary to you.</p>
+<p></font></p></blockquote>
+<p>Nice slide into "scary", but the problem here isn't that I'm afraid. The fear is projected, entirely Paul Biggar's. What does he fear ? Well, in a word... this. Exactly this. Precisely that someone who actually is someone instead of aspiring to one day be someone sees through the whole charade and tells him what he sees. </p>
+<p>So... kiddo... welcome to your worst nightmare, I guess. Was it worth it ?</p>
+<blockquote><p><font color=#ededed><br />
+Merging worlds</p>
+<p>Docker is at the merge point of two disciplines: web applications and distributed systems.</font></p></blockquote>
+<p>Neither of these are disciplines. Maybe he wanted to say staples ?</p>
+<blockquote><p><font color=#ededed>For the past decade, we in the web community</font></p></blockquote>
+<p>No.</p>
+<p>Seriously, "the web community" ? </p>
+<p>Just no.</p>
+<blockquote><p><font color=#ededed>have largely been pretending that we can build web applications by knowing how to code. We write some HTML</font></p></blockquote>
+<p>Html is a mark-up language. This is coding exactly in the sense altering labels constitutes social reform.</p>
+<blockquote><p><font color=#ededed>and some JavaScript and some Rails and we have a site. We add some forms and some handlers and maybe an API and we’re done: that’s enough to launch a product that can gain traction and customers and revenue and change the world!</p>
+<p></font></p></blockquote>
+<p>Neither javascript nor rails are acceptable parts of a website. Stop importing that shit, nobody needs it, wants it, likes it or wants to see it.</p>
+<blockquote><p><font color=#ededed></p>
+<p>Meanwhile, over the last two decades, the distributed systems people have been doing some rather boring shit. They’ve experimented with complex protocols like CORBA and SOAP, and learned how to deal with issues like the CAP theorem,</font></p></blockquote>
+<p>The "cap theorem" is <strong>not a theorem</strong>.</p>
+<p>Here's what a theorem is : a proposition whose truth is established deductively. Zooko-triangle-metooisms, insufficiently formal to qualify as propositions, or have any sort of properly defined truth domain, aren't theorems. They're heuristics at best, and <em>bon mots</em> in general. They also come with a ready Shannonizing interface, you can produce them by the pail.<sup><a href="#footnote_10_68274" id="identifier_10_68274" class="footnote-link footnote-identifier-link" title="`You can have two out of three : polygyny, 1950s households and a loyal mate.`
+`You can have two out of three : good underwear ; cheap underwear ; abundant underwear.`
+`There's two kinds of threeple in the world : 01, 10 and 11`.
+They don't even have to mean anything! Entirely post-structuralist nonsense, go write a sequel to Murphy's laws and submit it to the Social Sciences Today `peer reviewed` fishwrapper why don't you.">xi</a></sup></p>
+<blockquote><p><font color=#ededed>and how clock synchronization is impossible,</font></p></blockquote>
+<p>This is nonsense the author brought from home.</p>
+<blockquote><p><font color=#ededed>and the Two Generals Problem, that appear largely theoretical to most.</font></p></blockquote>
+<p>I think the joke embedded there must be lost on him. Sad.</p>
+<blockquote><p><font color=#ededed>And those problems and their solutions have been rather uninteresting to anyone who is simply trying to take their knowledge of how to code and use it to ship web applications.</p>
+<p>But then something interesting happened. Web applications got large enough that they started to need to scale. Enough people arrived on the internet that web apps could no longer sit on a single VPS,</font></p></blockquote>
+<p>This is such rank nonsense. For one thing, there's infinitely fewer anythings on the web of today, as curated by these idiots and their corporate patrons, than there were a decade ago. For the other thing, the cheapest dedicated box can carry worlds on its shoulders of <a href="http://btcbase.org/log/2016-08-03#1513958">staggering size</a><sup><a href="#footnote_11_68274" id="identifier_11_68274" class="footnote-link footnote-identifier-link" title="To put that in its proper context : at the peak of the newspaper trade, a million circulation a day was a pinnacle of performance reserved for very few entities in the world - maybe half a dozen.">xii</a></sup>, until recently inconceivable. The "need" is entirely self-created, and will die with the weeds.</p>
+<blockquote><p><font color=#ededed>or just scale up vertically. And as we started to scale, we started seeing all these bugs in our applications, bugs with interesting names like “race conditions”</font></p></blockquote>
+<p>This obnoxious cocksucker imagining "race conditions" are things discovered just about the time he was discovering which way the slit goes on a woman is utterly galling. What the fuck else did he invent, one wonders.</p>
+<blockquote><p><font color=#ededed>and “network partitions” and “deadlock” and “Byzantine failures”. These were problems the distributed systems folks had been working on for quite some time, problems whose solutions were not only difficult, but in many cases theoretically impossible.</p>
+<p></font></p></blockquote>
+<p>Name one of these "theoretically impossible" things that were "made possible" by practice. What is this, the US democrat party campaign trail ?</p>
+<blockquote><p><font color=#ededed></p>
+<p>In the early years of this scalability crisis, Heroku happened. And Heroku made it really easy to scale infrastructure horizontally, allowing us to pretend once again that we were really just making simple web apps. And we bought ourselves, as an industry, maybe 5 years of pretending and self-delusion.</p>
+<p></font></p></blockquote>
+<p>This is in no sense a fair description of Heroku. For one thing, it never worked, and consequently it never did anything. Bezos (no, pointedly not "Amazon" - Bezos alone, all the "engineers" bitching and whining under his iron fist aren't worth a name or a bullet) did make clusters work better than they worked before, and importantly marketed them to the monkeys, which finally registered "it" as "a thing" in their TV-oriented brains. But nobody actually involved in the technology would claim anything fundamental - it is entirely incremental improvement on ancient basis. And, importantly - it barely works (and only for definitions of "working" that are permissive enough to not include you know, actually working).</p>
+<blockquote><p><font color=#ededed></p>
+<p>We’ve now hit the limit of that self-delusion, and as we come out of it, we find ourselves trying to build scalability early, and re-architecting broken things so that they can scale,</font></p></blockquote>
+<p>Virtually nothing worth building today will ever need to "scale", in the sense of necessitating more than one single box. It's a fact.</p>
+<p>The things that do scale past that - such as Bitcoin - do not in any way use any of the nonsense here contemplated, which circumstance has no small part in their success.</p>
+<blockquote><p><font color=#ededed>and learning about the downsides of monolithic architectures and why using a single database won’t just keep working for us.</font></p></blockquote>
+<p>What's the definition of "single" contemplated here ? Because I suspect, and on the basis of this schmuck's record to date I have excellent reason to suspect, that the distinction is entirely without a difference.</p>
+<blockquote><p><font color=#ededed>And we come up with phrases like Immutable Architecture, “Pets vs Cattle”, Microservices, and a whole set of best and worst practices to try and make some of this easier.</p>
+<p></font></p></blockquote>
+<p>Words never made anything easier.</p>
+<blockquote><p><font color=#ededed></p>
+<p>At this point, during this shift, Docker comes in and tries to solve a lot of problems.</font></p></blockquote>
+<p>Name one.</p>
+<blockquote><p><font color=#ededed>But instead of telling us we can pretend the problem of scaling doesn’t exist and we can keep doing things in basically the same way, like Heroku did, Docker tells us that distributed systems are fundamentally what we’ve been doing all along, and so we need to accept it and start to work within this model. Instead of dealing with simple things like web frameworks, databases, and operating systems, we are now presented with tools like Swarm and Weave and Kubernetes and etcd, tools that don’t pretend that everything is simple, and that actually require us to step up our game to not only solve problems, but to understand deeply the problems that we are solving.</p>
+<p></font></p></blockquote>
+<p>Alternatively, Docker adds yet another layer of pointless complexity, so pointless complexitists like Paul Biggar, all his friends and all the ugly roadkill they've ever fucked can keep on pretending like they have things to do so they don't have to go outside and notice the other kids are pointing at them.</p>
+<p>Nice, and I suppose it beats masturbation. </p>
+<blockquote><p><font color=#ededed></p>
+<p>The upside is that we gain the ability to build scalable architecture so long as we don’t pretend we can abstract it away. We now need to know what a network partition is and how to deal with it, and how to choose between an AP and a CP system, and how to build architectures that can actually scale under the duresses of real networks and machines. Sometimes there’s an electrical storm in Virginia, and sometimes things get set on fire, and sometimes a shark bites an undersea cable, and sometimes there is latency, and delivery failures, and machines die, and  abstractions leak.</p>
+<p></font></p></blockquote>
+<p>The sharks biting undersea cables belong right in there with "fuck you, I'm a dragon" and other avatars of <a href="http://trilema.com/2016/the-darkening/">Dreamer culture</a>.</p>
+<blockquote><p><font color=#ededed></p>
+<p>Everything needs to be more resilient, more reliable, and we need to acknowledge that those are things we need to think about as part of developing applications. And we need to do it not because it’s shiny, or because it’s some mythical best practices, but because people like Amazon and Netflix and Google have put 15 years of sweat and blood and industry experience into working this shit out and telling us how to build systems at real scale.</p>
+<p></font></p></blockquote>
+<p>Actually, everything <em>does</em> need to be more resilient and more reliable. The correct path to this is through removing cruft - such as <a href="http://thebitcoin.foundation">TRB</a> has been doing - and especially through removing the tendrils of the USG. From anything and everything. Which specifically means that Paul Biggar, his "company", his friends and anyone he ever met at those dumbass VC conferences can't possibly ever have a job in anything to do with computers ever again. </p>
+<p>Such an irreparable loss - for no one outside of them.</p>
+<blockquote><p><font color=#ededed><br />
+Real problems solved</p>
+<p>So what exactly is Docker solving for us, then? Everything that we’re doing as we build web applications is extremely fragile, and Docker is forcing some sanity to it:</p>
+<ul>
+<li>
+<p>Up until now we’ve been deploying machines (the ops part of DevOps) separately from applications (the dev part). And we’ve even had two different teams administering these parts of the application stack. Which is ludicrous because the application relies on the machine and the OS as well as the code, and thinking of them separately makes no sense. Containers unify the OS and the app within the developer’s toolkit.</p>
+</li>
+<p></font></p></blockquote>
+<p>So Docker is a... workforce management tool now ?! Because why, because HR didn't dare make sense of the workforce before holy Docker came by to give it permission ?</p>
+<p>Get off your fucking high horse, kiddos. The entire "we" consists of separate, individual lonely men doing everything and "wearing all the hats" in between flights paid for by someone else ; catered meals paid for by someone else and time alone in the sad box.</p>
+<blockquote><p><font color=#ededed></p>
+<li>
+<p>Up until now, we’ve been running our service-oriented architectures on AWS and Heroku and other IaaSes and PaaSes that lack any real tools for managing service-oriented architectures. Kubernetes and Swarm manage and orchestrate these services.</p>
+</li>
+<p></font></p></blockquote>
+<p>Except they don't manage to "orchestrate" anything, which is why it has to be called "orchestrate". If it worked it'd be called something sane, if anything at all.</p>
+<p>More importantly, actual applications doing actual heavy lifting (such as for instance Phuctor) do not use AWS. They use monster <a href="http://trilema.com/2016/no-such-labs-snsa-march-2016-statement/">dedicated servers</a>. The only practical utility of AWS is for quick deployment of prototypes, and for other <a href="http://btcbase.org/log/2016-05-21#1470181">seasonal miscellanea</a>. </p>
+<blockquote><p><font color=#ededed></p>
+<li>
+<p>Up until now, we have used entire operating systems to deploy our applications, with all of the security footprint that they entail, rather than the absolute minimal thing which we could deploy. Containers allow you to expose a very minimal application, with only the ports you need, which can even be as small as a single static binary.</p>
+</li>
+<p></font></p></blockquote>
+<p>The notion that all this layered cake of shit somehow improves the security profile of the end product is shocking in itself. Given the contents of the septic tank in which it floats, it is perhaps unremarkable, but god damned is Paul Biggar a shithead.</p>
+<blockquote><p><font color=#ededed></p>
+<li>
+<p>Up until now, we have been fiddling with machines after they went live, either using “configuration management” tools or by redeploying an application to the same machine multiple times. Since containers are scaled up and down by orchestration frameworks, only immutable images are started, and running machines are never reused, removing potential points of failure.</p>
+</li>
+<p></font></p></blockquote>
+<p>"I find anal rape hurts less when I keep my eyes closed."</p>
+<p>I suppose the voice of experience should count for something.</p>
+<blockquote><p><font color=#ededed></p>
+<li>
+<p>Up until now, we have been using languages and frameworks that are largely designed for single applications on a single machine. The equivalent of Rails’ routes for service-oriented architectures hasn’t really existed before. Now Kubernetes and Compose allow you to specify topologies that cross services.</p>
+</li>
+<p></font></p></blockquote>
+<p>There isn't proper language support for threading, or come to think of it kernel support - and this schmuck is going to somehow make threading-over-lan work ? Pass the koolaid, brother.</p>
+<blockquote><p><font color=#ededed></p>
+<li>
+<p>Up until now, we’ve been deploying heavy-weight virtualized servers in sizes that AWS provides. We couldn’t say “I want 0.1 of a CPU and 200MB of RAM”. We’ve been wasting both virtualization overhead as well as using more resources than our applications need. Containers can be deployed with much smaller requirements, and do a better job of sharing.</p>
+</li>
+<p></font></p></blockquote>
+<p>This has got to be the dumbest thing I ever read.</p>
+<p>An entire "industry" which is "the future" predicated on "Bezos will be too lazy to add a simple, costless (to him) size selection interface" ? </p>
+<blockquote><p><font color=#ededed></p>
+<li>
+<p>Up until now, we’ve been deploying applications and services using multi-user operating systems. Unix was built to have dozens of users running on it simultaneously, sharing binaries and databases and filesystems and services. This is a complete mismatch for what we do when we build web services. Again, containers can hold just simple binaries instead of entire OSes, which results in a lot less to think about in your application or service.</p>
+</li>
+<p></font></p></blockquote>
+<p>It's entirely unclear what sort of unfamiliarity with computers is required before someone imagines that "simple binaries" is the proper way to reference a system-in-a-turd.</p>
+<blockquote><p><font color=#ededed>
+</ul>
+<p>The only constant is change<br />
+</font></p></blockquote>
+<p>Not all the time and not everywhere. I am starting to deeply dislike this particular kitschy phrase.</p>
+<blockquote><p><font color=#ededed></p>
+<p>Our industry moves so quickly to deify new and exciting technologies that it doesn’t wait for those technologies to mature. Docker is moving at an incredible pace, meaning that it hasn’t come close to stabilizing or maturing. We have multiple options for container run-times and image formats and orchestration tools and host OSes, each with a different level of utility, scope, traction and community support.</p>
+<p></font></p></blockquote>
+<p>In fact, computing hasn't moved appreciably in many decades now - in no small part because the kids are too fucking aggitated. They can't be bothered to sit down five minutes and read the code, because too busy running all over the monkey cage "revolutionizing" nothing at all. Change for the sake of changing necessarily will end up in a big fat zero. Not that it makes any difference to the monkeys in question - they'll still "have needs" which someone (else) will "have to meet", and why should they care that their inept wranging covered essential infrastructure in so much shit nobody knows how to run anything anymore ?</p>
+<blockquote><p><font color=#ededed></p>
+<p>Looking around the rest of our industry, things don’t get stable until they become old and boring.</font></p></blockquote>
+<p>No, actually, the problem is entirely the reverse and purely psychogenic. A generation of acultural twits who are conditioned to be unable to productively resolve their conflicts will necessarily misapprehend stability as "the bad thing" - and what's worse to the narcissist than "old" ie ugly and "boring" ie death ?</p>
+<blockquote><p><font color=#ededed><br />
+As an example, how many protocols had to die before we got REST? We built REST and AJAX and JSON over the corpses of SOAP and CORBA, using the lessons we learned while building them. That’s two major technology transitions, over the course of about 10 years. Yet, we still haven’t got the same level of tooling for REST-based APIs that we had for SOAP a decade ago, and SOAP in particular has yet to fully die.</p>
+<p></font></p></blockquote>
+<p>Leaving aside the dubious utility of the items listed<sup><a href="#footnote_12_68274" id="identifier_12_68274" class="footnote-link footnote-identifier-link" title="AJAX for instance is nothing other than a fad that failed to catch on and died, an exact equivalent of `3d cinema` in this space. They will be resurrected later, of course, and under the same tired old pretenses no doubt - because there's really nothing older, or more boring, than the `excitement` of a memoryless, change-addled people.">xiii</a></sup>, it is entirely nonsensical to pretend some sort of continuity. None of these "build" on anything - and especially not on each other, if they build on anything it's the wanna-be "developer"'s existential vacuity and quintessential frantic activity (as a cover for impotence). It is about as dishonest to pretend anything in the manner of scientific evolution - such as for instance seen in Physics - is at work here as it was early on. The man will latch on anything - actual sciences, Google, you name it.</p>
+<blockquote><p><font color=#ededed></p>
+<p>The same thing is happening in the frontend, and indeed lots of folks compared my parody of the Docker ecosystem to the shit-show that’s going on in frontend development. And the same thing has been going on with programming languages since we escaped Java a decade ago.</font></p></blockquote>
+<p>Wait, they escaped java ?! </p>
+<blockquote><p><font color=#ededed>Consistently, until problems are good and solved, developers will continually come up with new solutions. And the Docker ecosystem has tons of problems to be solved.</p>
+<p></font></p></blockquote>
+<p>Most of them, of its own making.</p>
+<blockquote><p><font color=#ededed></p>
+<p>So we can expect that Docker isn’t that mature yet. There will still be many edge cases and weirdnesses that you’re going to hit when you try it, and some of its decisions are weird and may actually be plain wrong when we look back on them from a few years hence. Best practices still have to be tried and failed and retried and refailed until we get them right.</p>
+<p></font></p></blockquote>
+<p>Who the fuck thinks this is how you engineer ?</p>
+<p>"Oh hi, this bridge will fall and kill people and fall and kill people until we figure out why chewing gum is no mortar and why tin foil, while technically sheet metal, still doesn't work for the purpose of holding up trucks. It really makes no sense, it's just as opaque as anything, should be fine."</p>
+<blockquote><p><font color=#ededed></p>
+<p>It’s going to take a number of years until we figure all this stuff out and it settles down. But that doesn’t mean that containers are bullshit, or that we can ignore them. We are always faced with a choice between staying still with the technologies we know, or taking a bit of a leap and trying the new thing, learning the lessons and adapting and iterating and improving the industry around us.</p>
+<p></font></p></blockquote>
+<p>No. It will take a number of years until you grow tired and go away, to wither like <a href="http://btcbase.org/log/2016-04-21#1454640">the previous generation of fatuous, vapid idiots</a>, beggars in a desert of your own making. Meanwhile actual people will be doing actual things, and you won't be invited to the party.</p>
+<blockquote><p><font color=#ededed></p>
+<p>If you’re looking for me, I’ll be in the future.</p>
+<p></font></p></blockquote>
+<p>Fortunately, you'll be in an alt future that'll never happen. Good riddance.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_68274" class="footnote">Yes, "last decade" is "recent". [<a href="#identifier_0_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_68274" class="footnote">I can tell because CompSci. </p>
+<p>The one true fact about pseudoscientific fields is that they attract the mentally broken. Depending on size and <a href="http://trilema.com/2014/kink-high/">the exact flows of kink that year</a>, sane and otherwise whole people may find themselves ensconced in the goop of a pseudoscientific field. Nevertheless - they're always marginal, and their message is always typical of <a href="http://trilema.com/2016/buenos-aires-that-southern-village/">the alienation</a> the sane suffers among the idiotarian tribe. Meanwhile those who are happy to pose as "Earth scientists", alchemists, dillutionists, "Computer scientists" and so following are always defective. [<a href="#identifier_1_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_68274" class="footnote">Heroku was bought in 2010 by salesforce.com. As that spam outfit isn't on Paul Graham's list of things which may exist - therefore "Heroku is dead" and "nobody" uses it anymore.</p>
+<p>These shitheads couldn't be more transparent if they tried - and speaking of which, if you make a blog on medium I'm going to kill your children. All of them. With my penis. [<a href="#identifier_2_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_68274" class="footnote">Believe it or not this isn't a fictitious name. [<a href="#identifier_3_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_68274" class="footnote">Ie, the item above. [<a href="#identifier_4_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_68274" class="footnote">The bottom has arguably already fallen out. </p>
+<p>Apple's "app store" has ~no revenue to show for ever increasing "developer mindshare", especially in places you can't compete with, such as India, and there's trouble afoot across the board. The once-proud "hope of the future" solution for USG-style full spectrum dominance, bridging a vast span from Apple-likes TiVoizing the consumption on one end all the way to CISCO shitware peddlers  eating away at network infrastructure on the other end, with a bevy of Intel-Amd Fritz chips in between - the whole kaboodle lies in ruins, its various broken cogs whirring and whizzing sadly. </p>
+<p>It's not just that <a href="http://trilema.com/forum-logs-for-15-nov-2013#963483">CISCO died suddenly in 2013</a>, or that the Chinese are attacking and likely will dismantle <a href="http://trilema.com/forum-logs-for-14-aug-2016#2147829">the Xilinx stack</a> before the decade's out (a development whose significance I doubt you are equipped to evaluate), or that the Republic stands proud, its currency far above any fiat, not to mention <a href="http://trilema.com/2016/to-the-dao-and-the-ethereum-community-fuck-you/">castrated substitutes</a>. Even the holy secrets of "Equation Group Which Is Not NSA" <a href="http://qntra.net/2016/08/github-enforces-usg-nsa-copyright-and-other-lols-roundup-xtendd/">are on sale</a> - and notice the <a href="http://btcbase.org/log/2016-08-17#1523425">flaming butthurt</a> at the choice of marketplace. </p>
+<p>Bitcoin <span style="background-color:#d3d3d3" id="select">has come quite a ways since the days back in 2014, when Buffett was still daring to pretend "<a href="http://trilema.com/2014/an-era-ends-today-a-new-era-starts-today/">there are no shorts</a>" ; the Republic stands ever closer to its goal of crushing the Empire and salting the land where it</span> stood. </p>
+<p>All these major economic shifts are of course not perceptible to the immersed termite, and so there they go, trying their best to allign with an impossible vector, at the usual cost of their life's labour and ultimately their sanity. [<a href="#identifier_5_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_68274" class="footnote">Perception is no proof of existence. If this is not directly obvious, there's a funny gif of a racoon playing with a water jet that should make the point to you. [<a href="#identifier_6_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_68274" class="footnote">A hammer is a tool. A drill is a tool. These aren't "invented", they're discovered - because a tool is a <em>necessary</em> configuration, not merely an "interesting", and much less a "novel" one. If Shakespeare hadn't written Your Mother's A Whore, we wouldn't have ever read that poem ; but if my great-grandfather hadn't invented the six bladed dildo, your grandfather would have. [<a href="#identifier_7_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_68274" class="footnote">Note that everyone everywhere likes to tell himself "<em><a href="http://trilema.com/2015/further-views-from-noesunpaispobre/#selection-85.0-94.0">hay mas futuro</a>!</em>". Even the hopelessly idiotic Argentines. [<a href="#identifier_8_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_68274" class="footnote">They do spend too long in school, kids today. They should be out there getting killed left and right as soon as 15, not being coddled into cloying security by the motherhood-statal complex. [<a href="#identifier_9_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_68274" class="footnote">"You can have two out of three : polygyny, 1950s households and a loyal mate."<br />
+"You can have two out of three : good underwear ; cheap underwear ; abundant underwear."<br />
+"There's two kinds of threeple in the world : 01, 10 and 11".</p>
+<p>They don't even have to mean anything! Entirely post-structuralist nonsense, go write a sequel to Murphy's laws and submit it to the Social Sciences Today "peer reviewed" fishwrapper why don't you. [<a href="#identifier_10_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_68274" class="footnote">To put that in its proper context : at the peak of the newspaper trade, a million circulation a day was a pinnacle of performance reserved for very few entities in the world - maybe half a dozen. [<a href="#identifier_11_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_68274" class="footnote">AJAX for instance is nothing other than a fad that failed to catch on and died, an exact equivalent of "3d cinema" in this space. They will be resurrected later, of course, and under the same tired old pretenses no doubt - because there's really nothing older, or more boring, than the "excitement" of a memoryless, change-addled people. [<a href="#identifier_12_68274" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2016/werner-koch-confirmed-usg-stooge/">Werner Koch, confirmed USG stooge</a></div>
+                <div class="alignright"><a href="http://trilema.com/2016/cia-factbook-the-most-serene-republic/">CIA Factbook : The Most Serene Republic</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2016/the-text-and-the-piddly-recantion/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2016/the-text-and-the-piddly-recantion/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>5 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-142520">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-eight?b=the%20slightes&amp;e=even#select' class='url'>The Story of Elliot Rodger. By Elliot Rodger. Adnotated. Part Eight. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142520" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] the slightest hint of understanding of the underlyings, or computing altogether. Both Elliot and Paul Biggar would be much happier subjectively, not to mention less offensive and destructive, perhaps even [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144432">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/incursion-in-classical-pantsuit-discourse?b=you%27re%20the%20s&amp;e=%20the#select' class='url'>Incursion in classical pantsuit discourse on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144432" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] you're the sort inclined to be frightened by the pantsuit's "over the horizon"i heroes, you and I have really nothing to say to each other. &mdash;&mdash;&mdash;It is always the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146333">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-a-primer-on-pedophilia-adnotated?b=fuck%20is%20this&amp;e=%20and#select' class='url'>thelastpsychiatrist.com - A Primer on Pedophilia. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146333" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] fuck is this latest xtian bullshit supposed to work, you have two brains, and then they... what, they vote ? Forget about it, sheer maleficent nonsense. There's absolutely no difference between desire and [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154274">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/desperation-in-desolation-or-the-woes-of-the-contemporary-entrepreneur-or-what-came-of-my-first-attempt-at-running-the-second-generation-eulora-client-ornery-in-any-case/?b=to%' class='url'>Desperation in desolation ; Or, the woes of the contemporary entrepreneur ; Or, what came of my first attempt at running the second generation Eulora client. Ornery, in any case. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154274" title="">Saturday, 12 September 2020</a>
+					</div>
+					<p>[...] to work" in the first place -- and speaking of which, do me a fucking favour : if "you know" what "the solution is", just go fucking hang [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-155475">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/the-cost-of-doing-things/?b=envying%20my%20d&amp;e=reft#select' class='url'>The cost of doing things on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-155475" title="">Wednesday, 28 October 2020</a>
+					</div>
+					<p>[...] envying my domestic arrangements, because they understand things, and are trained to respect things spurious boyhood's bereft [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="68274" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832783-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-68274")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-68274");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-68274");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

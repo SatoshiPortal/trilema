@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The miracles that matter on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Joe Bidden Reales<br />La Al Paispcelea Congres!
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-52713"><div class="post" id="post-52713">                    <h1><a href="http://trilema.com/2014/the-miracles-that-matter/" rel="bookmark" title="Permanent Link to The miracles that matter">The miracles that matter</a></h1>                        <div class="date">                                     Wednesday, 12 February, Year 6 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Let's work our minds together, it'll be fun. So :</p>
+<p><strong><span style="text-decoration: underline;">Part I.</span></strong></p>
+<p>Let's consider the set of all the cardinals of definite sets<sup><a href="#footnote_0_52713" id="identifier_0_52713" class="footnote-link footnote-identifier-link" title="The particular form of the definition is important for reasons. The meaning is as follows : any collection of anything is a set. A definite set is any collection which you could - in principle - produce for my inspection. In this sense the fingers on your hand are a definite set of fingers, the pockets on your jacket a definite set of pockets and the stars on the sky a definite set of stars, whereas your future jobs aren't a definite set of jobs, all the potatoes you could eat aren't a definite set of potatoes and so on. A cardinal is simply the count, for instance the cardinal of the set of the fingers on your hand is - in most cases - five.">i</a></sup>, we'll call it the set of natural numbers and note it ℕ.</p>
+<p>We can now define the function addition, which takes two elements out of ℕ and adds them together. For instance :</p>
+<ul> 2 + 4 = 6</ul>
+<p>Addition happens to be a commutative operation, which means it yields the same result irrespective of the order of the two elements :</p>
+<ul> 4 + 2 = 6</ul>
+<p>Since in the lovely field of mathematics there exists no entropy and thus no time<sup><a href="#footnote_1_52713" id="identifier_1_52713" class="footnote-link footnote-identifier-link" title="Because time is strictly the direction in which entropy flows, much like `down` is, as far as rubber ducklings in a tub are concerned, the direction in which the water sucks them.">ii</a></sup> any function can be reversed, which is to say we can define the function subtraction, which given a pair of numbers yields that third number which at some point in the indefinite past was added to the second to yield the first. Like so :</p>
+<ul>6 - 4 = 2</ul>
+<p>2 being that number which was sometime added to 4 in order to yield 6. Unlike addition, however, subtraction is not commutative. That is to say,</p>
+<ul>4 - 6 = -2</ul>
+<p>-2 is clearly not 2, and what's worse, -2 is not actually in ℕ, as there may exist an empty bag in which if you put two eggs you'll get a bag with two eggs in it, and there may also exist a bag with two eggs in it from which you can thus extract two eggs rendering it empty. However there exists no bag in which you can insert two eggs in order to thus render it empty, nor an empty bag from which you could pull forth two eggs<sup><a href="#footnote_2_52713" id="identifier_2_52713" class="footnote-link footnote-identifier-link" title="Ah, if only, how popular frittata'd be.">iii</a></sup>. Which means that by logically extending the original addition function through constructing its reverse, we've also forced an expansion of our original set of cardinals. And so ℤ is born<sup><a href="#footnote_3_52713" id="identifier_3_52713" class="footnote-link footnote-identifier-link" title="ℤ stads for Zahlen, which in German means number, because Frege and the gang did a lot of work on the topic.">iv</a></sup>.</p>
+<p>ℤ is simply ℕ with its evil mirror -ℕ, which is to say 1 and -1, 2 and -2, 56 and -56 and so on. Now on this ℤ we can define the function multiplication, which takes two elements and multiplies them together. Like so :</p>
+<ul> 2 × 4 = 8</ul>
+<p>Much like the earlier addition, multiplication is also commutative, which is to say</p>
+<ul> 4 × 2 = 8</ul>
+<p>And much like in the case of addition an inverse could be constructed, which is to say a function which given two numbers would find the third which multiplied with the second would yield the first. Like this :</p>
+<ul> 8 ÷ 4 = 2</ul>
+<p>This would be called division, and much like subtraction, it is not commutative. To wit :</p>
+<ul> 4 ÷ 8 = 1/2</ul>
+<p>1/2, or 0.5 as it is otherwise known, is a fraction, which is to say not an integer, which is to say not <em>Zahlen</em> and thus not in ℤ. So yet again we've ended up extending our original set of "numbers" to include even more types of numbers to satisfy the ever growing demands of our synthetic constructs which at the time seemed logical and down the road ended up spelling trouble. And thus ℚ is born.<sup><a href="#footnote_4_52713" id="identifier_4_52713" class="footnote-link footnote-identifier-link" title="It so happens that while ℕ and ℤ both have the same cardinal, which is to say contain the same count of elements, ℚ ℝ is actually larger. This is a topic of much advanced studying we won't really be covering here.">v</a></sup></p>
+<p>ℚ is the set of rational numbers, which is to say all natural ℕs, its evil mirror the un-natural -ℕ as well as all un-integers ie the fractions, much to teenagers' delight. </p>
+<p>ℚ of course allows the following abstraction be introduced, that the function power is defined, which simply multiplies its first element with itself as many times as the second counts. This function can well be defined on ℤ, because :</p>
+<ul> 4 <sup>2</sup> = 16</ul>
+<p>whereas</p>
+<ul> 4 <sup>-2</sup> = 1/16<sup><a href="#footnote_5_52713" id="identifier_5_52713" class="footnote-link footnote-identifier-link" title="This is why your height, say 187 centimeters, could be expressed as 1.86 × 10-3 kilometers just as well as 1.86 × 103 milimeters.">vi</a></sup></ul>
+<p>So now we're stuck with a function defined on ℚ with elements from ℤ ? What nonsese is this, seriously. It should properly be expanded so it takes elements from ℚ and gives results in ℚ, if indeed ℚ is to hold its rank of truely and definitively the last and ultimate all-numbers concentration camp. (<em>Javohl</em>!)</p>
+<p>What could a fraction possibly mean should it happen in the 2nd spot however ? Quite obviously... the reverse function of this raising to the power. Thus</p>
+<ul> 4 <sup>1/2</sup> = the square root of 4 = that number which multiplied with itself twice yields 4.</ul>
+<p>And now... suddenly we've lost commutativity, because</p>
+<ul> 2 <sup>1/4</sup> = <font size=4>√</font><span style="border-top:1px solid; padding:3px;"><font size=3>√</font></span><span style="border-top:4px; border-top-style:double; padding:0px;">2</span> and god help us.</ul>
+<p>God help us, because the square root of 2 is not a fraction, nor could it be expressed as a finite decimal notation. It's only 1.414213562 because your computer runs out of decimals there, but with a better one you could see it's really <a href="http://apod.nasa.gov/htmltest/gifcity/sqrt2.1mil">endless</a>.</p>
+<p>So now it seems we've managed to expand ℚ again. Fine, but let this be for the last time : we'll call it ℝ for <em>real</em> numbers and let it include nonsense like the square root of two, with the strong implication behind the name being, of course, that we are finally done : really and definitively 4ever&amp;ever, these are the numbers and we're done with the nonsense.</p>
+<p>Except... what do you suppose would be the square root of -1 ? Clearly a negative multiplied with itself could only yield a positive, and thus the square root of -1 could never yield a number, even in ℝ. Which means ℝ just got expanded again, we'll call the √</font></span><span style="border-top:1px; border-top-style:double; padding:0px;">-1</span> beauty i - short for imaginary, 'cause by now we've definitely run ourselves outside of reality - and the new set ℂ, for complex, because well... it's complicated. </p>
+<p>ℂ will thus include all natural and all unnatural numbers, as well as the uninteger, irrational and imaginary. All ℂ numbers will be noted as a+ib, where a is the real part and ib the imaginary part, so that all ℝ numbers are simply ℂ numbers with a convenient b = 0 tail. </p>
+<p>And now we're done, right ? Wrong, of course. The reason we're not done is expressed by <a href="http://trilema.com/2012/adnotated-words-of-wisdom-on-the-topic-of-online-fraud/#footnote_3_44461">Godel</a>, we'll never be done, we can not be done. We can't ever have a set of numbers and a set of operations so that we include everything. Just how it goes.</p>
+<p>This completes the first part of our miracle.</p>
+<p><strong><span style="text-decoration: underline;">Part II.</span></strong></p>
+<p>Every circle has a radius. </p>
+<p>Every circle also has a circumference.</p>
+<p>The ratio of a circle's radius and a circle's circumference will always be π, which is an irrational number, much like the square root of 2.</p>
+<p>This completes the 2nd part of our miracle.</p>
+<p><strong><span style="text-decoration: underline;">Part III.</span></strong></p>
+<p>Suppose you have a Bitcoin on deposit somewhere, with a merchant of spotless reputation and infinite credibility, who pays you 100% per year. If the interest is credited at the end of the year, clearly after one year you will have two Bitcoins. What happens however if the interest is computed more often ? </p>
+<p>If you get the interest calculated each 6 months, you will end up with 50% and 50% yielding 2.25 Bitcoin at the end of the year. If if is calculated each quarter you will end up with 2.44140625 Bitcoin. </p>
+<p>And if it is calculated every millionth of a millionth of a millionth of a ... microsecond ? Why, you will end up with e Bitcoins. That's right, e, Euler's constant, it's the limit of f(x) = (1 + 1/x)<sup>x</sup> when x goes to infinity. An irrational number, just like π and i.</p>
+<p>This completes the third and last part of our miracle, we are now ready to proceed. Behold : </p>
+<h1><Center> e <sup>π × i</sup> = -1</center></h1>
+<p>That's right baby : the piece-of-shit tail-of-the-devil problem-number we ended up straddled with while doing set theory, the essence of the circle and the essence of <a href="http://trilema.com/2014/the-most-serene-republic-and-its-laws/">usury</a> all come together, as if by magic, into one breathtakingly simple formula. </p>
+<p>Why is this ? Why should this be ? What in the world and all the stars could these three things possibly have to do with each other ? And nevertheles... there they are. </p>
+<p>So now : this is why educated gentlemen such as yourselves have no need, no use and no interest for pedestrian nonsense a la "intelligent design", and this is why we don't go to church, that <a href="http://trilema.com/2015/the-christian-europe-and-other-aberrant-notions/">wanna-be thought simulacrum</a> built entirely in the manner of a ten year old wearing his father's pistol belt.</p>
+<p>We don't need to, we got all the miracles we could possibly need right here. Enjoy!</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_52713" class="footnote">The particular form of the definition is important <a href="http://trilema.com/2014/its-not-the-sauce-its-the-poultry-and-other-metamathematical-considerations/">for reasons</a>. The meaning is as follows : any collection of anything is a set. A definite set is any collection which you could - in principle - produce for my inspection. In this sense the fingers on your hand are a definite set of fingers, the pockets on your jacket a definite set of pockets and the stars on the sky a definite set of stars, whereas your future jobs aren't a definite set of jobs, all the potatoes you could eat aren't a definite set of potatoes and so on. A cardinal is simply the count, for instance the cardinal of the set of the fingers on your hand is - in most cases - five. [<a href="#identifier_0_52713" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_52713" class="footnote">Because time is strictly the direction in which entropy flows, much like "down" is, as far as rubber ducklings in a tub are concerned, the direction in which the water sucks them. [<a href="#identifier_1_52713" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_52713" class="footnote">Ah, if only, how popular frittata'd be. [<a href="#identifier_2_52713" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_52713" class="footnote">ℤ stads for Zahlen, which in German means number, because Frege and the gang did a lot of work on the topic. [<a href="#identifier_3_52713" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_52713" class="footnote">It so happens that while ℕ and ℤ both have the same cardinal, which is to say contain the same count of elements, <del datetime="2014-02-12T18:30:30+00:00">ℚ</del> ℝ is actually larger. This is a topic of <a href="http://trilema.com/2013/squares-do-morals-a-porno/#footnote_9_49613">much advanced studying</a> we won't really be covering here. [<a href="#identifier_4_52713" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_52713" class="footnote">This is why your height, say 187 centimeters, could be expressed as 1.86 × 10<sup>-3</sup> kilometers just as well as 1.86 × 10<sup>3</sup> milimeters. [<a href="#identifier_5_52713" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2014/no-its-not-the-revenue/">No, it's not the revenue.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2014/strategic-thinking-as-an-exercise/">Strategic thinking as an exercise</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2014/the-miracles-that-matter/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2014/the-miracles-that-matter/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>14 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-98034" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98034" title="">Wednesday, 12 February 2014</a>
+							</div>
+						<p>This tale is sadly incomplete without a mention of the legendary drowned Pythagorean.</p>
+						</li>
+
+										<li id="comment-98035" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98035" title="">Wednesday, 12 February 2014</a>
+							</div>
+						<p>As per Godel's express orders.</p>
+						</li>
+
+										<li id="comment-98044" class="commentbody"><div class="commenthead"><img alt='Anonimosław`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Anonimosław</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98044" title="">Wednesday, 12 February 2014</a>
+							</div>
+						<p>Q larger? What kind of larger do you mean?</p>
+						</li>
+
+										<li id="comment-98052" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98052" title="">Wednesday, 12 February 2014</a>
+							</div>
+						<p>It's like this : </p>
+<p>If you take every odd natural number and associate it a negative integer, and then take every even natural number and associate it a positive integer, you will have created a one-to-one association between natural numbers and integers, which means the two sets are equal sizes.</p>
+<p>If you try to enumerate fractional numbers so that they may be associated with natural numbers, for any subset of that enumeration a fractional number can be constructed which differs from each of the numbers on the list on a different decimal position (in the end you need as many decimal positions as the cardinal of the elected set). This means the natural numbers and the fractional numbers won't be placed in such a one-to-one association, and this means the natural numbers are fewer.</p>
+						</li>
+
+										<li id="comment-98053" class="commentbody"><div class="commenthead"><img alt='Anonimosław`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Anonimosław</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98053" title="">Wednesday, 12 February 2014</a>
+							</div>
+						<p>Isn't your explanation for real numbers? I could totally fit whole ZxN into N even with some room left (up to aleph zero of unused N elements) and rationals are subset of ZxN. Sorry for poor formatting. I ne habla LaTeX.</p>
+						</li>
+
+										<li id="comment-98054" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98054" title="">Wednesday, 12 February 2014</a>
+							</div>
+						<p>Aw shit we were discussing Q not R. Eh what do you want from me, it's been a while since 5th grade.</p>
+						</li>
+
+										<li id="comment-98578" class="commentbody"><div class="commenthead"><img alt='spyked`s avatar' src='http://lucian.mogosanu.ro/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://lucian.mogosanu.ro' class='url'>spyked</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98578" title="">Wednesday, 19 March 2014</a>
+							</div>
+						<p>To expand, we could define cartesian products of sets using sets (theoretically we could define "sums" of sets too, but let's not go that far) and have something like A x B denoting all the ordered pairs (a, b), where a and b are elements of A and B respectively.</p>
+<p>Then we can show that ℂ and ℝ x ℝ are correspondent to each other, or that well, they're isomorphic, but then we'd have to define isomorphisms; which is also true for ℚ and ℤ x ℤ, by the way (and that can be used to show that ℚ is countable).</p>
+<p>But pairs are more important than that, since we can use them to define relations, which we can then use to define functions. And suddenly mathematics don't look that difficult when we start from these basic building blocks. :)</p>
+						</li>
+
+										<li id="comment-98580" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98580" title="">Wednesday, 19 March 2014</a>
+							</div>
+						<p>This is quite so.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-131631">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://wp.thetarpit.org/2014/on-numbers-structure-and-induction?b=The&amp;e=#select' class='url'>On numbers, structure and induction &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131631" title="">Friday, 4 October 2019</a>
+					</div>
+					<p>[...] "The miracles that matter", Mircea Popescu gives a beautiful description of numbers, starting from set-theoretical constructs [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131679">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://wp.thetarpit.org/2017/development-log-i?b=Which&amp;e=#select' class='url'>The Tar Pit development log [i] &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131679" title="">Tuesday, 8 October 2019</a>
+					</div>
+					<p>[...] Which in any civilized world everywhere and everywhen means any intellectual, period. This is Leonardo's most important lesson: you're not human unless you're willing to understand the important things that your lazy reptilian brain otherwise refuses to, i.e. the miracles that matter.&#160;&#8617; [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139805">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-nigger-a-practical-exercise?b=I%20can%20do%20so%20&amp;e=yzed#select' class='url'>The nigger, a practical exercise. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139805" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] I can do so at any level and to any degree of complexity you have the time and intelligence for. Like so. Should you require a random nigger to introduce his nonsense to you, he'll sit there paralyzed [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140808">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/come-see-me-dream-math?b=i%20and%20n%20are%20&amp;e=o%20to#select' class='url'>Come see me dream math. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140808" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] i and n are natural numbers (positive integers and 0) ; the ai series is however rational, not real. And X can be anything. So you'd have to prove that given a certain n (the thing's "class" so to [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141167">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-genetics-of-intelligence?b=reason%20%3A%20the&amp;e=tion#select' class='url'>The genetics of intelligence on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141167" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] reason : the odds are there that the constant's actually a natural constant, one of the dozen or so magic numbers of the universe. But if the author's inept, the odds are much better that the constant's actually just a creation [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-164472">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/the-state-of-the-fart/?b=ci%20ca%20sa%20fie&amp;e=leme#select' class='url'>The State of the (f)Art on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-164472" title="">Thursday, 3 June 2021</a>
+					</div>
+					<p>[...] ci ca sa fie 3. diana_coman da mircea_popescu e numar magic, ca si cum ar vrea acuma sa fie alt e. diana_coman bun atunci; restul ca si format imi pare ok, nu vad deocamdata probleme [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="52713" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834451-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-52713")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-52713");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-52713");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>What the WoT is for, how it works and how to use it. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">It mildly annoys me, as a capable sheep,<br />that people like you exist.<br />~ <a href=http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-one/#comment-118639>nicknaem</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-53927"><div class="post" id="post-53927">                    <h1><a href="http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/" rel="bookmark" title="Permanent Link to What the WoT is for, how it works and how to use it.">What the WoT is for, how it works and how to use it.</a></h1>                        <div class="date">                                     Saturday, 12 April, Year 6 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>This is a re-write of some older material published by my PR on some forum, which I'm too lazy to dig up. It's expanded, clarified, revised and so forth, so the old version is obsolete anyway. Normally this article would have included by way of example a private conversation, but meanwhile the other party dun scooped me, so you can <a href="http://blog.khersonus.com/2014/first-bitcoin-otc-rating/">read it there</a>. </p>
+<p><strong>I. The Web of Trust is not</strong>, as the name would seem to imply, an oilfield in which trust plays the role of oil, and you deploy some apparatuses and other devices to extract the trust therewith. </p>
+<p>Trust is not in the web, that or any other web. Trust is not in the wording, not on the paper, not in the symbols, or certificates, or seals. Trust is not in others and other things, but much like faith - for which it serves as a ready synonym - trust is within oneself.</p>
+<p>The Web of Trust is "of trust" in the same exact manner the walk of shame is "of shame" : it's not in the clothes you wear, nor in your tussled up hair, nor in the eyes of random jocks passing by that notice these, nor in the memories of your friends that recall perfectly fine what you wore yesterday that shame lies. It's within you, if at all, if you're the amateur sort of slut who'd be shamed by something like this. All up to you.</p>
+<p>The Web of Trust is merely the infrastructure upon which trust is built, by you, for your own use, within yourself. The same objective set of relations can result in drastically different trust in the eyes of drastically different third parties. The point of the WoT is not to make these judgements for you.</p>
+<p><strong>II. The WoT works by</strong> reducing the unknowns problem.<sup><a href="#footnote_0_53927" id="identifier_0_53927" class="footnote-link footnote-identifier-link" title="As observed with some regularity, there's a major difference between the unknowns we know we don't know, and the unknowns we don't know we don't know.">i</a></sup> It allows the user - any user - to confidently identify the sources of information, <em>both</em> in the negative and in the positive. That is to say, if sources of information exist, the user may by the WoT find them, <em>and</em> safely assume that should no sources of information be thus found, no sources of information in fact exist. It further allows the user to judge the quality, reliability and precision of said sources, and this independent both of the direct source and of the counterparty he's examining. </p>
+<p><strong>III. How to use it.</strong> Let's understand what all this means with a simple example. Consider the village of Wotania, wherein there exist exactly 100 agents<sup><a href="#footnote_1_53927" id="identifier_1_53927" class="footnote-link footnote-identifier-link" title="Philosophical sense, entities capable of agency.">ii</a></sup>, all participating in the Wotania WoT, and wherein strong currency<sup><a href="#footnote_2_53927" id="identifier_2_53927" class="footnote-link footnote-identifier-link" title="This means irreversible. The GPG contracts article makes for good companionship reading at this juncture.">iii</a></sup> is used for all transactions. Suppose Joe wants to buy a used car from Moe. While the currency he'd be paying Moe in is strong, the car he's buying is anything but, and so Joe would like to evaluate Moe before paying him. What's he to do ?</p>
+<p>First off, he should evaluate Moe's relevancy. Obviously since there are 100 agents in total, the highest score any one agent could achieve in the WoT would be 990<sup><a href="#footnote_3_53927" id="identifier_3_53927" class="footnote-link footnote-identifier-link" title="Admiting the Wotania WoT is just like the Bitcoin WoT, which is to say, limited to a 10.">iv</a></sup>. This would reflect the situation where one particular citizen was considered as <em>perfectly known</em> by all other citizens.<sup><a href="#footnote_4_53927" id="identifier_4_53927" class="footnote-link footnote-identifier-link" title="It is important to remember that the score associated to a relationship does not mark the direct trust of the scorer for the scoree, but merely the scorer's confidence that the information he has about scoree is correct, accurate, relevant and complete. All four. 
+Let's also note that such a thing as `the direct trust` of X for Y can not even be noted down in the first place, it being entirely a subjective determination of X, and consequently wovon man nicht sprechen kann, darüber muss man schweigen applies.">v</a></sup> Thus if Moe has accumulated a score of 33, this clearly shows that at least 4 of the agents know him, which roughly means one in 25. If Joe knows 80 agents personally, but none of the agents he knows rated Moe, this makes Moe suspect on the first pass. </p>
+<p>Sure, it's possible that Moe is only known to the minority subgroup of 20 agents doing things with cars, and within that subgroup he's quite well known, whereas Joe is strictly a part of the Wotania web industry, and they walk everywhere. However, this is something that Joe can evaluate <em>by himself</em>, without having any need for Moe, and without needing to ask him anything. For instance, if the island has a total of 3 car manufacturers, and all of them are in Joe's 80, Moe's position suddenly became untenable. Sure, it's possible that used car salesmen are completely separated from car manufacturers in the manner car people are separated from web people. But it seems less likely (and the likeliness of it is, again, fully within Joe's estimative hands).</p>
+<p>Leaving that aside, if the average rating in Joe's WoT is 3.14, whereas Moe has received his 33 trust from exactly 4 people, averaging thus 8.25, there's suddenly exposed a very strange divergence between the two groups. Sure, it is legitimately possible for Moe's subgroup to be much more tightly knit, and thus his friends much more familiar with him than is the case in Joe's group. This happens, but not without other consequences, which again add valuable information into the credibility equation. </p>
+<p>Or suppose instead that Moe's rating of 33 was provided by 10 people, yet still none of them are in Joe's reach. Somehow it is possible that out of 10 different people, 10% of the population of Wotania, nobody had any dealings with the 80 people Joe knows. They live on the same island, they go about their daily business, yet no one's ever met. Possible, especially if one lives in the US, but also improbable, and in this improbability, <em>informative</em>. Because this is the point of the WoT : its factual information reduces to a pile of factually correct statements, which all work as probabilities, and it's trivial to calculate the likeliness of a fact that depends on a number of other facts with known likelinesses : you just need multiply. 0.2 here, 0.5 there, 0.66 and another 0.15 suddenly you're at 0.8% which may well be under your risk tolerance threshold.</p>
+<p>But let's say that out of Moe's 10 raters, 3 are in Joe's WoT. One supplied 3 points, the others one point each. Joe directs his questions as to Moe to each of them : </p>
+<blockquote><p>Dear Sue, Hue, Lue :<br />
+I am considering buying a used car from Moe.<br />
+I see that you have rated him in the past. How did that go ?
+</p></blockquote>
+<p>To which the three are held to answer (and the treatment for non-answering is <em>again</em> an informative variable, whose treatment rests with Joe) in the canonical form : </p>
+<blockquote><p>Hi Joe!<br />
+I bought a pair of shocks from him April last. They were broken, but he refunded my payment without much hassle.<br />
+All the best, Sue.
+</p></blockquote>
+<p>or </p>
+<blockquote><p>Hi Joe!<br />
+I bought a car stereo from him. It had a big scratch on the side and some other misc damage, but he let it go real cheap.<br />
+All the best, Hue.
+</p></blockquote>
+<p>At this point, Joe knows, but quite <em>exactly</em>, what the story with Moe is : he's a small time car thief, and he's trying to make ends meet by selling whatever car parts he can get his hands on. Simple, really.</p>
+<p>Alternatively, of course, he could be a very reputable used cars salesman. 0.8%, or <a href="http://trilema.com/2014/a-short-compendium-of-stupid-things-you-should-never-say/">as the clueless say</a>,  “it’s impossible to call it one way or the other”.<sup><a href="#footnote_5_53927" id="identifier_5_53927" class="footnote-link footnote-identifier-link" title="This sort of people also loves to bring up pirateat40, the 2012 Ponzi scammer, as some sort of proof or indicia that `the WoT doesn't work`. Obviously, it doesn't work by itself. But to anyone paying attention, it was quite plainly clear what exactly the guy was doing, to the degree they could evaluate roughly a six months interval for the scheme's demise (my PR said `May to September`, the thing croaked in August). ">vi</a></sup></p>
+<p>The important parts here are the easiest to overlook : </p>
+<ol type="i">
+<li><strong>All this was established with no input required from Moe.</strong> Sure, if you want to get fancy you could easily ask a few choice questions just to see how the guy answers. But at its core, simplest, most barebone functionality, the WoT does not require you to talk to your subject of interest, at all.</li>
+<p></p>
+<li><strong>The process works universally :</strong> If it worked you know it worked, and of what quality its results are. If it failed you know it failed, and why and how come. It has, in other words, exactly the opposite properties to those decried by Naggum in his Lisp advocacy misadventures piece.<sup><a href="#footnote_6_53927" id="identifier_6_53927" class="footnote-link footnote-identifier-link" title="For future generations :
+Subject: Re: Lisp advocacy misadventures
+From: Erik Naggum &lt;erik@naggum.no>
+Date: 25 Oct 2002 22:56:26 +0000
+Newsgroups: comp.lang.lisp
+Message-ID: &lt;3244575386963745@naggum.no>
+* Tim Daly, Jr.
+| I was talking with a friend of mine about Lisp.  He said that people
+| write things in C because of speed.
+
+But this is incorrect.  People use C because it /feels/ faster.  Like, if you build a catapult strong enough that it can hurl a bathtub with someone crouching inside it from London to New York, it will feel /very/ fast both on take-off and landing, and probably durng the ride, too, while a comfortable seat in business class on a transatlantic airliner would probably take less time (except for getting to and from the actual plane, of course, what with all the `security`¹) but you would not /feel/ the speed nearly as much.
+¹ http://www.theonion.com/onion3838/faa_passenger_ban.html
+| I said that Lisp will not necessarily cause a program to be slow, and in
+| fact, because it lets you write a better program, things may even get
+| much faster.  He said 'like what?'
+|
+| Hmm.
+Better algorithms and type systems are well known to produce better performance by people who actually study these things.  It is often very hard to implement better algorithms correctly and efficiently in C because of the type poverty of that language.  Yes, you get to tinker with the bits as fast as the machine can possibly tinker, but, and this is the catch, you get to tinker with the bits.  If you are not super smart and exceptionally experienced, the compiler will produce code that is faster than yours.  If this holds from assembly to C, it holds from C to Common Lisp, given that you want to do exactly the same thing.
+The core problem is that C programmers think they can get away with doing much less than the Common Lisp programmer causes the computer to do.  But this is actually wrong.  Getting C programmers to understand that they cause the computer to do less than minimum is intractable.  They would not /use/ C if they understood this point, so if you actually cause them to understand it in the course of a discussion, you will only make them miserable and hate their lives.  People are pretty good at detecting that this is a likely outcome of thinking, and it takes conscious effort to brace yourself and get through such experiences.  Most people are not willing even to /listen/ to arguments or information that could threaten their comfortable view of their own existence, much less think about it, so when you cannot answer a C programmer's `arguments` that his way of life is just great the way it is, it is a pretty good sign that you let him set the agenda once he realized that his way of life was under threat. Since you have nothing to defend, your self-preservation instinct will not activate hitherto unused parts of your brain to come up with reasons and rationalizations for what you have done, you will not be aware that you have been taken for a ride before it is over and you `lost`.
+If you deny people the opportunity to defend something they feel is under threat, however, some people go completely insane with rage and actually believe that you threaten them on purpose and that you willfully seek to destroy something very valuable to them.  However, some of the time, you meet people who /think/ and who are able to deal with threats in a calm and rational way because they realize that the threat is all in their head and it will not go away just because they can play word games with people and stick their head in the sand.  If it /is/ the threat they feel it is, they realize they had better pay some real attention to it instead of fighting off the messenger so they can feel good about themselves again.
+Much of the New Jersey approach is about getting away with less than is necessary to get the /complete/ job done.  E.g., perl, is all about doing as little as possible that can approximate the full solution, sort of the entertainment industry's special effects and make-believe works, which for all practical purposes /is/ the real thing.  Regular expressions is a pretty good approximation to actually parsing the implicit language of the input, too, but the rub with all these 90% solutions is that you have /no/ idea when they return the wrong value because the approximation destroys any ability to determine correctness.  Most of the time, however, the error is large enough to cause a crash of some sort, but there is no way to do transactions, either, so a crash usually causes a debugging and rescue session to recover the state prior to the crash.  This is deemed acceptable in the New Jersery approach.  The reason they think this also /should/ be acceptable is that they believe that getting it exactly right is more expensive than fixing things after crashes.  Therefore, the whole language must be optimized for getting the first approximations run fast.
+See how elegantly this forms a completely circular argument?  But if you try to expose this circularity, you necessarily threaten the stabiliity of the whole house of cards and will therefore be met with incredible hostility and downright hatred, and you will not even hear about the worst fits of insane rage until years later when some moron thinks he can get back at you for `hurting` him only because his puny brain could not handle the information he got at the time.
+| Well, I'm blinded by the very misconceptions that led me to this point,
+| and I'm not sure what to tell him.  Can you help me out?
+Ask him why he thinks he should be able to get away with unsafe code, core dumps, viruses, buffer overruns, undetected errors, etc, just because he wants `speed`.
+--
+Erik Naggum, Oslo, Norway
+Act from reason, and failure makes you rethink and study harder.
+Act from faith, and failure makes you blame someone and push harder.
+
+">vii</a></sup> </li>
+<p></p>
+<li>Especially considering the alternatives, <strong>this is mindbogglingly cheap</strong>. In fact, I am ready to argue that the savings this model brings are, both in aggregate and on a percent basis, more significant than the savings Bitcoin brings in payments, or provably-fair in gambling. </li>
+</ol>
+<p>So why isn't it used more often ? Because people are stupid, in that many words, or should you prefer a longer version, because allowing citizenship to the US African-Americans and empowering the universal pretense of "democracy" and equality has come with its own Pandora's box of ills and curses. Chief among which, a very pernicious return to idolatry. People like to think their juicer is their happiness, and their diploma their competency and whatever seal their trust. Because it's easier, especially if you're lazy, or stupid, and even moreso if you're both.</p>
+<p>None of this has anything to do with race, in any sense, of course. People of all races are slothful and dumb, especially if they're allowed to be. <a href="http://www.rci.rutgers.edu/~schochet/101/Cosby_Speech.htm">Let's not</a>.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_53927" class="footnote">As observed with some regularity, there's a major difference between the unknowns we know we don't know, and the unknowns we don't know we don't know. [<a href="#identifier_0_53927" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_53927" class="footnote">Philosophical sense, entities capable of agency. [<a href="#identifier_1_53927" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_53927" class="footnote">This means irreversible. The <a href="http://trilema.com/2012/gpg-contracts/">GPG contracts</a> article makes for good companionship reading at this juncture. [<a href="#identifier_2_53927" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_53927" class="footnote">Admiting the Wotania WoT is just like the Bitcoin WoT, which is to say, limited to a 10. [<a href="#identifier_3_53927" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_53927" class="footnote">It is important to remember that the score associated to a relationship does not mark the <em>direct</em> trust of the scorer for the scoree, but merely the scorer's <em>confidence</em> that the information he has about scoree is correct, accurate, relevant and complete. All four. </p>
+<p>Let's also note that such a thing as "the direct trust" of X for Y can not even be noted down in the first place, it being entirely a <em>subjective</em> determination of X, and consequently <em>wovon man nicht sprechen kann, darüber muss man schweigen</em> applies. [<a href="#identifier_4_53927" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_53927" class="footnote">This sort of people also loves to bring up pirateat40, the 2012 Ponzi scammer, as some sort of proof or indicia that "the WoT doesn't work". Obviously, it doesn't work by itself. But to anyone paying attention, it was quite plainly clear what exactly the guy was doing, to the degree they could evaluate roughly a six months interval for the scheme's demise (my PR said "May to September", the thing croaked in August).  [<a href="#identifier_5_53927" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_53927" class="footnote">For future generations :<br />
+<blockquote><p>Subject: Re: Lisp advocacy misadventures<br />
+From: Erik Naggum &lt;erik@naggum.no><br />
+Date: 25 Oct 2002 22:56:26 +0000<br />
+Newsgroups: comp.lang.lisp<br />
+Message-ID: &lt;3244575386963745@naggum.no></p>
+<p>* Tim Daly, Jr.</p>
+<blockquote><p>| I was talking with a friend of mine about Lisp.  He said that people<br />
+| write things in C because of speed.
+</p></blockquote>
+<p>But this is incorrect.  People use C because it /feels/ faster.  Like, if you build a catapult strong enough that it can hurl a bathtub with someone crouching inside it from London to New York, it will feel /very/ fast both on take-off and landing, and probably durng the ride, too, while a comfortable seat in business class on a transatlantic airliner would probably take less time (except for getting to and from the actual plane, of course, what with all the "security"¹) but you would not /feel/ the speed nearly as much.</p>
+<p>¹ http://www.theonion.com/onion3838/faa_passenger_ban.html</p>
+<blockquote><p>| I said that Lisp will not necessarily cause a program to be slow, and in<br />
+| fact, because it lets you write a better program, things may even get<br />
+| much faster.  He said 'like what?'<br />
+|<br />
+| Hmm.</p></blockquote>
+<p>Better algorithms and type systems are well known to produce better performance by people who actually study these things.  It is often very hard to implement better algorithms correctly and efficiently in C because of the type poverty of that language.  Yes, you get to tinker with the bits as fast as the machine can possibly tinker, but, and this is the catch, you get to tinker with the bits.  If you are not super smart and exceptionally experienced, the compiler will produce code that is faster than yours.  If this holds from assembly to C, it holds from C to Common Lisp, given that you want to do exactly the same thing.</p>
+<p>The core problem is that C programmers think they can get away with doing much less than the Common Lisp programmer causes the computer to do.  But this is actually wrong.  Getting C programmers to understand that they cause the computer to do less than minimum is intractable.  They would not /use/ C if they understood this point, so if you actually cause them to understand it in the course of a discussion, you will only make them miserable and hate their lives.  People are pretty good at detecting that this is a likely outcome of thinking, and it takes conscious effort to brace yourself and get through such experiences.  Most people are not willing even to /listen/ to arguments or information that could threaten their comfortable view of their own existence, much less think about it, so when you cannot answer a C programmer's "arguments" that his way of life is just great the way it is, it is a pretty good sign that you let him set the agenda once he realized that his way of life was under threat. Since you have nothing to defend, your self-preservation instinct will not activate hitherto unused parts of your brain to come up with reasons and rationalizations for what you have done, you will not be aware that you have been taken for a ride before it is over and you "lost".</p>
+<p>If you deny people the opportunity to defend something they feel is under threat, however, some people go completely insane with rage and actually believe that you threaten them on purpose and that you willfully seek to destroy something very valuable to them.  However, some of the time, you meet people who /think/ and who are able to deal with threats in a calm and rational way because they realize that the threat is all in their head and it will not go away just because they can play word games with people and stick their head in the sand.  If it /is/ the threat they feel it is, they realize they had better pay some real attention to it instead of fighting off the messenger so they can feel good about themselves again.</p>
+<p>Much of the New Jersey approach is about getting away with less than is necessary to get the /complete/ job done.  E.g., perl, is all about doing as little as possible that can approximate the full solution, sort of the entertainment industry's special effects and make-believe works, which for all practical purposes /is/ the real thing.  Regular expressions is a pretty good approximation to actually parsing the implicit language of the input, too, but the rub with all these 90% solutions is that you have /no/ idea when they return the wrong value because the approximation destroys any ability to determine correctness.  Most of the time, however, the error is large enough to cause a crash of some sort, but there is no way to do transactions, either, so a crash usually causes a debugging and rescue session to recover the state prior to the crash.  This is deemed acceptable in the New Jersery approach.  The reason they think this also /should/ be acceptable is that they believe that getting it exactly right is more expensive than fixing things after crashes.  Therefore, the whole language must be optimized for getting the first approximations run fast.</p>
+<p>See how elegantly this forms a completely circular argument?  But if you try to expose this circularity, you necessarily threaten the stabiliity of the whole house of cards and will therefore be met with incredible hostility and downright hatred, and you will not even hear about the worst fits of insane rage until years later when some moron thinks he can get back at you for "hurting" him only because his puny brain could not handle the information he got at the time.</p>
+<blockquote><p>| Well, I'm blinded by the very misconceptions that led me to this point,<br />
+| and I'm not sure what to tell him.  Can you help me out?</p></blockquote>
+<p>Ask him why he thinks he should be able to get away with unsafe code, core dumps, viruses, buffer overruns, undetected errors, etc, just because he wants "speed".</p>
+<p>--<br />
+Erik Naggum, Oslo, Norway</p>
+<p>Act from reason, and failure makes you rethink and study harder.<br />
+Act from faith, and failure makes you blame someone and push harder.
+</p></blockquote>
+<p> [<a href="#identifier_6_53927" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2014/why-everything-you-think-you-know-about-dns-is-entirely-wrong/">Why everything you think you know about DNS is entirely wrong</a></div>
+                <div class="alignright"><a href="http://trilema.com/2014/china-is-the-place-to-be/">China is the place to be!</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>70 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-98996" class="commentbody"><div class="commenthead"><img alt='pankkake`s avatar' src='http://headfucking.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://headfucking.net/' class='url'>pankkake</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-98996" title="">Saturday, 12 April 2014</a>
+							</div>
+						<p>I'm lazy too but I had it in my essential reading list.<br />
+<a href="https://bitcointa.lk/threads/reputation-system.67046/#post-1153370">https://bitcointa.lk/threads/reputation-system.67046/#post-1153370</a></p>
+<p>"So why isn’t it used more often ?" assburgers probably<br />
+<a href="http://bash.bitcoin-assets.com/?quote=27">http://bash.bitcoin-assets.com/?quote=27</a></p>
+						</li>
+
+										<li id="comment-99002" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-99002" title="">Saturday, 12 April 2014</a>
+							</div>
+						<p>A that's it, tyvm.</p>
+						</li>
+
+										<li id="comment-116436" class="commentbody"><div class="commenthead"><img alt='Felipe Micaroni Lalli`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Felipe Micaroni Lalli</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-116436" title="">Friday, 5 February 2016</a>
+							</div>
+						<p>I just love this article! Thank you Mircea for this pearl.</p>
+						</li>
+
+										<li id="comment-116437" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-116437" title="">Friday, 5 February 2016</a>
+							</div>
+						<p>Cheers.</p>
+						</li>
+
+										<li id="comment-122236" class="commentbody"><div class="commenthead"><img alt='Gabriel Laddel`s avatar' src='http://btcbase.org/log/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://btcbase.org/log/' class='url'>Gabriel Laddel</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-122236" title="">Thursday, 15 June 2017</a>
+							</div>
+						<p>"Especially considering the alternatives, this is mindbogglingly cheap. In fact, I am ready to argue that the savings this model brings are, both in aggregate and on a percent basis, more significant than the savings Bitcoin brings in payments, or provably-fair in gambling."</p>
+<p>Example #459401,</p>
+<p>"I really do apologize for this. However, let me give a little insight into what has been going on lately. We just lost our 9th bank account, due to fraud from customers. Yes, nine bank accounts have been shut down now. We've had over a hundred thousand dollars in attempted fraud over the past year. There was an entire fraud ring that hit us, and made hundreds of accounts to scam us. It's the reason we lost our last payment processor, and the reason we no longer allow gift certificates. The fraudsters would use stolen credit cards to purchase gift certificates, which they would use the proper billing address for. So our systems would not catch the mismatch. Then they would use those gift certificates to purchase product to their actual address. Since the billing address matched on the first order, and there is no check for billing when using a gift cert, our systems did not catch it. We lost tens of thousands of dollars before we could stop it. Even then, we lost our processor, and it took months of trying to get the ring to stop. It was, and still is, a nightmare. The same people hit Powder City before they shut down, and I am sure they are hitting other nootropics vendors as well.</p>
+<p>We got a new processor through a lot of work and contacts, and thankfully were able to get back to somewhat normal operation. However, we cannot lose this processor. We just can't. If we lose this processor, I am shutting the company down. I would have no choice. As such, we are being very cautious about approving larger charges for new customers. If you have a history with us, then it is not an issue. This is only for new customers with no order history. I completely understand the frustration. I had to deal with this same thing when I bought some expensive car parts online before. I was pissed, too. Who the hell do these people think they are asking for all this info on me?!? I get it. However, now I have lived through the experience of losing banks and card processors due to fraud. So I am on the other end of the equation. It sucks, because I know we are pissing people off, and losing customers. However, we cannot lose this processor. It would be the end of Nootropics Depot. I really am sorry. I wish I was not in this position right now. I wish people were just honest, and we could operate how we used to. The larger we get, the less honest people we attract. I'm sorry that has to affect you, and I completely understand if you want to go elsewhere because of it. I'm trying to fix things, but our banking and card processing system is broken, and it is destroying the nootropics industry as a whole.</p>
+<p>Now let's talk about security. Every single page where you enter personal information on our site is secured by SSL. We do not have the product, info, or blog pages SSL secured like we do on Ceretropic. However, all the payment pages at checkout are secure. You can test this by making a test cart, then going to checkout. You will see the page becomes secure at that point. That's how Bigcommerce works by default. We can SSL the entire site, and we have been talking about it. However, there are implications to Google links when we do that. So we have held off till this point. The main takeaway is that every checkout page where you have personal information being sent to us is completely secured by SSL. We are not putting anyone's information at risk. This is the exact same way the site has been operating since 2013. Your information is completely secure.</p>
+<p>Regarding the extra information we requested, the landing page instructing you what to do is not behind SSL. However, the Jotform itself is. Again, any page where you enter personal information is completely secured by SSL. Once your extra information is sent to my team, we review it, then delete it from Jotform's secure server. Your information is never kept by my team or on any server. It is used to verify, then destroyed. The reason we only give people 5 hours is because of the batch times. I'm going to give you some info about how the payment processing systems work that nobody really talks about. Hopefully this does not come back to bite me in the ass, but I like being open and honest. When you make a credit/debit card purchase on a website, you are actually only participating in an "authorize and capture" scenario at that point. That means that our systems take the information you input into our site, and verify that through the backend Visa/Mastercard/Discover/Amex systems. They tell us if everything matches, and go through a bunch of filters to check for the validity of the charge. At that time, your bank puts a hold on those funds. However, we still have not charged you. That only happens at the batching time later in the day. Then every charge that was authorized and captured earlier in the day gets batched, and the charges process like you would think. That's technically when the real charge happens. If we void the transaction before batching, we do not have to worry about any fraud coming back to bite us later. The card was never actually charged. So if it was stolen, nothing comes back to screw us later. If we let it batch, then things become real, and we have to fight things if they later turn out to be fraud. That's why we have a time limit on this. I know it sucks, and I am very very sorry that I am being put in this position that I have to do this to honest customers. However, that is why we only give so much time. If we void the fraudulent transactions before they batch, our bank never has to deal with it. The unfortunate reality is that not everyone is fraud, and we have to inconvenience honest customers. It kills me to have to do it, but it is only because we have to survive.</p>
+<p>Our industry is getting absolutely hammered right now. Every major nootropics company has lost their processor at least once. A few have even gone out of business because of it. I almost had to shut Ceretropic down because of it happening in 2015. We are still fighting this adverse banking environment, and I don't know if we are going to ultimately prove successful. However, we are still here fighting. I've spoken to more banks and processors than I can accurately count now. Our system is broken, and many of the major nootropics companies many not survive till it gets fixed. I am so grateful that the /r/nootropics community has been so understanding and supportive throughout this whole mess. Our customers have jumped through a lot of hoops, and I cannot thank them enough. Anyone that knows me, knows that I am a very open and honest person. Hopefully that comes across to people that don't know me as well. In no way shape or form will we ever scam a customer. If you have an issue with anything, you can always private message me here, and I will do everything I can to take care of you. We are trying our hardest to be the best nootropics company out there, even through all these hurdles. Before I opened Reddit and saw this thread, my morning was going to consist of going and sitting in a few new banks, and opening new accounts for both Ceretropic and Nootropics Depot. I can't tell you how disheartening it is to constantly have the rug pulled out from under you, when you are just trying to run an honest business. I don't want it to be hard for any of you to purchase products from either of my companies. I would offer any and every payment option under the sun if I could. The reality of the matter is that the world doesn't care. It will steamroll you and move onto the next, unless you keep pushing forward. While I am so burnt out by all this over the past two years, I am still pushing forward. I am still trying to build what I set out to years ago: to advance nootropics and make the community a safer place. I thank you in advance for any support and understanding that you send our way, and know that anyone can reach out to me here on Reddit if they are having issues or concerns, and I will always help you.</p>
+<p>OP, please PM me your details, and I will make sure you are taken care of."</p>
+<p>-- <a href="https://www.reddit.com/r/Nootropics/comments/6fy88f/nootropics_depot_asking_for_a_lot_of_personal/dimv7t2/">https://www.reddit.com/r/Nootropics/comments/6fy88f/nootropics_depot_asking_for_a_lot_of_personal/dimv7t2/</a></p>
+						</li>
+
+										<li id="comment-122239" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-122239" title="">Thursday, 15 June 2017</a>
+							</div>
+						<p>Eh, let them learn how to use money or sink with fiat. </p>
+<p>Buggy whip companies sounded just like this too, "oh getting hammered". Bitch, learn to make brakes or get the fuck off the pig.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-99001">
+					<div class='trackhead'>
+						<div class="commentcount">7</div>
+						<span class="authorlink">First bitcoin-otc rating | Khersonus Blog</span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-99001" title="">Saturday, 12 April 2014</a>
+					</div>
+					<p>[...] on this, you can read more about what he has to say on the Web of Trust in this post of his: <a href="http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/">http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/</a>   This entry was posted in Bitcoin on April 12, 2014 by [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-101227">
+					<div class='trackhead'>
+						<div class="commentcount">8</div>
+						<span class="authorlink"><a href='http://theumlaut.com/2014/06/10/bitcoin-is-great-but-it-wont-fix-our-monkey-brains/' class='url'>Bitcoin Is Great, But It Won&#8217;t Fix Our Monkey Brains | The Ümlaut</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-101227" title="">Sunday, 15 June 2014</a>
+					</div>
+					<p>[...] The problem here is not the diagnosis, which I share, nor the proposed solutions, which are proper and potent to repel the growing democratic sickness that chokes human creation. Bitcoin provides us a critical escape from forced trust in unaccountable monopolies. However, trust in  transactions, per se, should not be the object of ire and in fact cannot be if we want to participate in beneficial ways. Distributed ledgers obviate the need for trust in the money changers, but humans are still trust-seeking and Bitcoin is still money and money is still trust. In a post-Bitcoin world, trust will become more important than ever. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-103281">
+					<div class='trackhead'>
+						<div class="commentcount">9</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2014/07/25/the-same-thing/' class='url'>The Same Thing | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-103281" title="">Friday, 25 July 2014</a>
+					</div>
+					<p>[...] own than a single convenience store, but as the only owner operated convenience store in the town they get to enjoy numerous competitive advantages including the ability to act sanely. Where other convenience store waste their shelves on overprice seldom bought sundries and junk [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-106561">
+					<div class='trackhead'>
+						<div class="commentcount">10</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2014/08/25/a-law-enforcement-encounter-if-you-ran-a-bitcoin-related-service-before-the-thing-hit-100-you-prolly-ought-to-be-somewhat-concerned-andor-prepared/' class='url'>A Law Enforcement Encounter: If you ran a Bitcoin related service before the thing hit $100 you prolly ought to be somewhat concerned and/or prepared | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-106561" title="">Monday, 25 August 2014</a>
+					</div>
+					<p>[...] and act with established, credible pseudononymity in a space long enough, especially one with such an effective Web of Trust surrounding it. The layperson Toby gets asked about the learned amateur Bingo&#39;s hobby and suddenly you find [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-108656">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://www.8btc.com/bitcoin-is-great-but-it-wont-fix-our-monkey-brains' class='url'>比特币很伟大，但它修不好我们古板的脑袋 | 巴比特</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-108656" title="">Saturday, 11 October 2014</a>
+					</div>
+					<p>[...] 这里的问题不是我刚刚分享的分析，或者已经提出的各种方案。这些方案都是对的，而且有潜力击败扼杀人类创造力的民主病。比特币给我们提供了救生船，逃脱被迫的信任和不负责任的垄断集团。但是，交易中产生的信用却无可厚非，实际上如果我们想参与交易，信用反而是有益的。分布式总账让我们无需信任货币兑换商，但人类仍旧是寻求信用的物种。比特币是钱，而钱就是信用。在后比特币时代，信用比任何时候都更重要。 [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-117922">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://thestringpuller.com/2016/07/closing-the-loop/' class='url'>Closing the Loop | Pull Your Own Strings</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-117922" title="">Monday, 4 July 2016</a>
+					</div>
+					<p>[...] previously mentioned, trust is everything in an unregulated market where peers transact freely. Cryptography provides the tools for peers to rationally underwrite trust based on the relationships between these peer to peer trade routes. Merchants survive on their [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-118273">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://thestringpuller.com/2016/07/slockit-enables-scamming/' class='url'>Slockit Enables Scamming | Pull Your Own Strings</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-118273" title="">Wednesday, 27 July 2016</a>
+					</div>
+					<p>[...] the use of coercive force. As with children and their parents, trust must be earned. When one knows what a Web of Trust is and how it works, scammers are caught in a self-imposed filter, while building relationships with trustworthy peers [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-124653">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://thetarpit.org/posts/y04/06b-dining-in-troglodyte-lands.html' class='url'>The Tar Pit - How to (not) dine in troglodyte lands in N very simple steps</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-124653" title="">Sunday, 18 February 2018</a>
+					</div>
+					<p>[...] how one would attempt to eat in the lands of troglodytes and fail. Oh, and in the spirit of the WoT, you pull out the broken star-based implementation thereof and leave the following [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-126028">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://blog.esthlos.com/fuckgoats-some-thoughts-and-minimal-tests/' class='url'>FUCKGOATS: Some Thoughts and Minimal Tests &laquo; esthlos</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-126028" title="">Monday, 18 June 2018</a>
+					</div>
+					<p>[...] implications quickly follow. For instance, we see that existence in the web of trust is a mandatory component of personhood, as without it you are operating with implicit trust, not [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-126905">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://161.0.121.194/?p=4' class='url'>The complete noob's guide to setting up mp-wp on a pizarro rock chip server &laquo; billymg</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-126905" title="">Monday, 22 October 2018</a>
+					</div>
+					<p>[...] guide outlines the steps required to go from not being a person to having your very own, uncensorable, blogging platform. Some of the prerequisite steps will be [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-127017">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://bingology.net/2018/11/14/censorship-resistance-in-2018-an-introduction/' class='url'>Censorship Resistance In 2018 - An Introduction &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-127017" title="">Thursday, 15 November 2018</a>
+					</div>
+					<p>[...] aweb of trust you can't be part of an actual social network. Having a WoT presence tied to your identity, as [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130166">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://s.ragavan.co/?p=51?b=&amp;#xa&amp;e=#select' class='url'>Week 1: Notes on PGP &#8211; Pretty Good Privacy, GPG, WOT [0/3] &#8211; Ruminations</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130166" title="">Tuesday, 23 July 2019</a>
+					</div>
+					<p>[...] [&#xa0;] <a href="http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/">http://trilema.com/2014/what-the-wot-is-for-how-it-works-and-how-to-use-it/</a> [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130405">
+					<div class='trackhead'>
+						<div class="commentcount">19</div>
+						<span class="authorlink"><a href='http://bingology.net/2014/07/25/the-same-thing/?b=ownt&amp;e=#select' class='url'>The Same Thing &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130405" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] own than a single convenience store, but as the only owner operated convenience store in the town they get to enjoy numerous competitive advantages including the ability to act sanely. Where other convenience store waste their shelves on overprice seldom bought sundries and junk [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130437">
+					<div class='trackhead'>
+						<div class="commentcount">20</div>
+						<span class="authorlink"><a href='https://s.ragavan.co/2019/08/the-wot-revisited/?b=entit&amp;e=#select' class='url'>The WoT &#8211; revisited &#8211; Ruminations</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130437" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] entity, the WoT provides a relatively inexpensive infrastructure to formulate a probability based 1 reduction of the unknowns, which in turn aids in the credibility [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130763">
+					<div class='trackhead'>
+						<div class="commentcount">21</div>
+						<span class="authorlink"><a href='http://qntra.net/2019/08/imperial-anti-v-unveiled-eat-more-star-topology/?b=regis&amp;e=#select' class='url'>Imperial Anti-V Unveiled: Eat More Star Topology | Qntra</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130763" title="">Wednesday, 7 August 2019</a>
+					</div>
+					<p>[...] registry&#34; where folks offering files for download submit their hashes to. Notably absent is any discussion of identity, with this core problem simply brushed aside. Why allow weighing who&#39;s who when the register [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131136">
+					<div class='trackhead'>
+						<div class="commentcount">22</div>
+						<span class="authorlink"><a href='http://thewhet.net/2019/08/localbitcoins-cracked-corn-and-i-dont-care/?b=thes&amp;e=#select' class='url'>Localbitcoins cracked corn, and I don't care. &laquo; The Whet</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131136" title="">Sunday, 25 August 2019</a>
+					</div>
+					<p>[...] the same time. I know this, or at least, I knew it as quickly as I did, because various members of the WoT I built there over the years wrote to me to decry the fact and point out that they were still [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131573">
+					<div class='trackhead'>
+						<div class="commentcount">23</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/09/27/ossabots-hoster-after-1-month/?b=from&amp;e=#select' class='url'>Ossabot's Hoster After 1 Month &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131573" title="">Friday, 27 September 2019</a>
+					</div>
+					<p>[...] from them. Hopefully though they actually want more business and so they will make it into the WoT once asked for it, so I can rate them and get them in a position where they can offer further [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131687">
+					<div class='trackhead'>
+						<div class="commentcount">24</div>
+						<span class="authorlink"><a href='http://wp.thetarpit.org/2018/dining-in-troglodyte-lands?b=howo&amp;e=#select' class='url'>How to (not) dine in troglodyte lands in N very simple steps &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131687" title="">Tuesday, 8 October 2019</a>
+					</div>
+					<p>[...] how one would attempt to eat in the lands of troglodytes and fail. Oh, and in the spirit of the WoT, you pull out the broken star-based implementation thereof and leave the following [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131692">
+					<div class='trackhead'>
+						<div class="commentcount">25</div>
+						<span class="authorlink"><a href='http://wp.thetarpit.org/2018/trilemabot-i?b=ofsc&amp;e=#select' class='url'>trilemabot [i]: introduction and self-voicing patch proposal &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131692" title="">Tuesday, 8 October 2019</a>
+					</div>
+					<p>[...] of scaffolding: self-voicing, a means to implement prefixed commands, querying deedbot to get WoT ratings or perform automated payments, and others -- the list, I suspect, is far from exhaustive. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131720">
+					<div class='trackhead'>
+						<div class="commentcount">26</div>
+						<span class="authorlink"><a href='http://wp.thetarpit.org/2019/hunchentoot-iii?b=signs&amp;e=#select' class='url'>Hunchentoot: further architectural notes; and usage examples &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131720" title="">Thursday, 10 October 2019</a>
+					</div>
+					<p>[...] signs shitty code I use" or w/e. Then it's fucking clear, very specifically and most precisely WoT-wise : everyone's doing exactly their job, you're negrating the asshole, A+++ spyked would trade again ; [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131979">
+					<div class='trackhead'>
+						<div class="commentcount">27</div>
+						<span class="authorlink"><a href='http://thetarpit.org/2019/feedbot-manual?b=new1&amp;e=#select' class='url'>Feedbot manual &laquo; The Tar Pit</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131979" title="">Monday, 28 October 2019</a>
+					</div>
+					<p>[...] new1 RSS bot. For further details on all these words you don't know, read the logs, get in the WoT [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132222">
+					<div class='trackhead'>
+						<div class="commentcount">28</div>
+						<span class="authorlink"><a href='http://fixpoint.welshcomputing.com/2019/my-present-understanding-of-the-wot-part-1/?b=WebofTrust&amp;e=Web#select' class='url'>My present understanding of the WoT, part 1 &laquo; Fixpoint</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132222" title="">Monday, 11 November 2019</a>
+					</div>
+					<p>[...] Web of Trust (WoT) as conceived by Mircea Popescu is a set of concepts and practices for publishing and finding information pertinent to making trust [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132336">
+					<div class='trackhead'>
+						<div class="commentcount">29</div>
+						<span class="authorlink"><a href='http://thewhet.net/2019/11/why-i-go-to-the-gym-and-what-i-do-when-i-get-there/?b=and%20a%20gr&amp;e=and%20a%20great%20one%2C%20but%20it%27s%20not%20a%20cause.%20Gyms%20are%20also%20reasonable%20venues' class='url'>Why I Go to the Gym, and What I Do When I Get There &laquo; The Whet</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132336" title="">Sunday, 17 November 2019</a>
+					</div>
+					<p>[...] and a great one, but it's not a cause. Gyms are also reasonable venues for building local WoTs in new places, especially since the vast majority of people there are ahead of the general public [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132620">
+					<div class='trackhead'>
+						<div class="commentcount">30</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/12/13/a-walk-among-the-trees-of-v/?b=hence%20auth&amp;e=hence%20author%20of%20code%29%20being%20the%20reader%20of%20code%20and%20never%20the%20writer9.%20Worth%20adding%20her' class='url'>A Walk among the Trees of V &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132620" title="">Friday, 13 December 2019</a>
+					</div>
+					<p>[...] hence author of code) being the reader of code and never the writer9. Worth adding here that only a WoT-person can ever be a reader of code10 and only through their signing and publishing of the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132634">
+					<div class='trackhead'>
+						<div class="commentcount">31</div>
+						<span class="authorlink"><a href='http://dorion-mode.com/2019/12/contribution-guidelines-for-tmsr-os/?b=fugit%20inte&amp;e=fugit%20interea%20fugit%20irreparabile%20tempus%2C%20singula%20dum%20captos%20circumvectamur%20amore.%20Bitcoin' class='url'>Contribution Guidelines for TMSR OS &laquo; Dorion Mode</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132634" title="">Saturday, 14 December 2019</a>
+					</div>
+					<p>[...] fugit interea fugit irreparabile tempus, singula dum captos circumvectamur amore. Bitcoin [&#8617;]Web of Trust (WoT). [&#8617;]The logs and blogs. [&#8617;]Linking to Diana Coman's latest as it provides context and [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139985">
+					<div class='trackhead'>
+						<div class="commentcount">32</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-discreet-escort-or-how-bitcoin-makes-prostitution-unprosecutable?b=extra%20safety&amp;e=%20sow#select' class='url'>The discreet escort, or how Bitcoin makes prostitution unprosecutable on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139985" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] extra safety, this is where the discreet escort can leverage the WoT. For instance, she knows that I'm not likely to rate some guy who's just a cop married to a fat sow [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140391">
+					<div class='trackhead'>
+						<div class="commentcount">33</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-perfect-pitch?b=%26mdash%3B%26mdas&amp;e=w%20in#select' class='url'>The perfect pitch on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140391" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] &mdash;&mdash;&mdash;The canonical form of this would be "some guy I don't know", because in the WoT world that's really all that matters. This'd be the superlative of that : some guy that I don't know in [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140468">
+					<div class='trackhead'>
+						<div class="commentcount">34</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/fuck-africa-or-exploration-in-the-idiocy-of-the-crowd?b=for%20opinions&amp;e=your#select' class='url'>Fuck Africa, or Exploration in the idiocy of the crowd on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140468" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] for opinions of "people" outside of your WoT is an exercise in patent nonsense, because no people exist outside of your [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140505">
+					<div class='trackhead'>
+						<div class="commentcount">35</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/dear-derps-you-are-being-herded?b=point%20%3A%20CISC&amp;e=rate#select' class='url'>Dear derps : you are being herded. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140505" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] point : CISCO, for a long time the most respected name in network hardware, lost all its market share last year as a result of having defrauded its customers at the behest of the USG. It is now in the desperate [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140625">
+					<div class='trackhead'>
+						<div class="commentcount">36</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/the-thorny-problem-of-violence-or-the-miracle-of-the-talking-ass?b=that%20derp%2C%20w&amp;e=ou%27d#select' class='url'>The thorny problem of violence, or the miracle of the talking ass. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140625" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] that derp, whatever his name was. [&#8617;]Yes, seriously. Read A complete theory of economics and What the WoT is for, how it works and how to use it. It's all there. [&#8617;]Reference being the sad story of Rhodesia. [&#8617;]Cheaper than you'd [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140884">
+					<div class='trackhead'>
+						<div class="commentcount">37</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/mika-epstein-aka-ipstenu-is-a-thoroughly-clueless-poser?b=is%20predicate&amp;e=ctly#select' class='url'>Mika Epstein aka Ipstenu is a thoroughly clueless poser on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140884" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] is predicated on nothing whatsoever, other than fakery &#38; poseurism, because they don't know what a WoT is - and all the fakers and the posers, with their massive vested interest in things staying exactly [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140900">
+					<div class='trackhead'>
+						<div class="commentcount">38</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/introducing-the-trilema-jobs-board?b=like%20the%20act&amp;e=your#select' class='url'>Introducing the Trilema jobs board on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140900" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] like the actual software engineers involved. [&#8617;][MAINTAINER], whom you can search for in the WoT. [&#8617;]There is no such thing as working for free. If you do useful things pro bono your [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-140977">
+					<div class='trackhead'>
+						<div class="commentcount">39</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/ok-so-what-is-bitcoin-disrupting?b=Adlai%20That%27s&amp;e=WoT.#select' class='url'>Ok, so what is Bitcoin disrupting ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140977" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Adlai That's not what it is, maybe you should read the actual paper? mircea_popescu Papers of unknown authors have a chance of being read ~0%vii. Especially if said authors are alive. Let them get in the WoT. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141045">
+					<div class='trackhead'>
+						<div class="commentcount">40</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/fetlife-the-meat-market?b=But%20Bitcoin%20&amp;e=rely#select' class='url'>Fetlife, the meat market on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141045" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] But Bitcoin came around and disrupted the shit out of it. [&#8617;]Ie, membership of the relevant WoT. Obviously most niches are still run on some sort of feudal or fiat remnant, so you will rarely [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141257">
+					<div class='trackhead'>
+						<div class="commentcount">41</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/the-bitlove-llc-spin-on-their-recent-implosion-as-presented-to-their-captive-audience?b=the%20word%20he%27&amp;e=at%20a#select' class='url'>The Bitlove LLC spin on their recent implosion, as presented to their captive audience. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141257" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] the word he's looking for is WoT. [&#8617;]My bet is that the fallout of this is an end to Bitlove, actually. I guess we see what a [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141350">
+					<div class='trackhead'>
+						<div class="commentcount">42</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/introducing-the-bitcoin-isp?b=You%20are%20in%20m&amp;e=WoT.#select' class='url'>Introducing the Bitcoin ISP on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141350" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] You are in myii L2 WoT. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141401">
+					<div class='trackhead'>
+						<div class="commentcount">43</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/on-how-the-factored-4096-rsa-keys-story-was-handled-and-what-it-means-to-you?b=we%20did%20Phuct&amp;e=dia%2C#select' class='url'>On how the factored 4096 RSA keys story was handled, and what it means to you. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141401" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] we did Phuctor except it doesn't work and we forgot to publish any results" play but applied to the WoT this time. Who uses it ? The sort of twerps you'd find pushing The Narrative on social media, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141476">
+					<div class='trackhead'>
+						<div class="commentcount">44</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/women-and-incentives-in-tech?b=from%20Josh%20Ga&amp;e=age%22#select' class='url'>Women and incentives in tech on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141476" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] from Josh Garza are not Bitcoin. And no, the "opinions" of Tim Swanson are NOT opinions. Because no WoT. And so fucking on. The source matters first and foremost. Just like you cant have "a message" [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141481">
+					<div class='trackhead'>
+						<div class="commentcount">45</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/open-callgraph-for-therealbitcoin-in-svg-format?b=is%20one%20singl&amp;e=%20for#select' class='url'>[OPEN] Callgraph for therealbitcoin, in SVG format. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141481" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] is one single file, as a .svg (see Mike's excellent work on this score with regards to the Bitcoin Web of Trust for [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141512">
+					<div class='trackhead'>
+						<div class="commentcount">46</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/prophylaxis?b=of%20the%20insti&amp;e=list#select' class='url'>Prophylaxis on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141512" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] of the institutional delusions of the god people ? Take the sane parts - the contract, revised, the WoT, sound money as the foundation of all things. Throw aside the useful nonsense - the socialist [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141723">
+					<div class='trackhead'>
+						<div class="commentcount">47</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/a-modern-lovestory-ioan-niculaie-diana-guresoaie?b=Petra%20had%20be&amp;e=blic#select' class='url'>A modern lovestory : Ioan Niculaie &#38; Diana Guresoaie. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141723" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Petra had been born, rather than the other way around, so the possessive line simply traces the WoT relationship : owned by his father whom we know from the mother. [&#8617;]For fear of public [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141751">
+					<div class='trackhead'>
+						<div class="commentcount">48</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/btmsr-and-fundamental-justice-reform?b=Copying%20this&amp;e=like#select' class='url'>B,TMSR~ and fundamental justice reform. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141751" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] Copying this is not optional, but mandatory. Just like making a signature and registering it in the WoT is not optional, but mandatory : for the SEC, for "the press"xiii and for everyone else. Not like [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141791">
+					<div class='trackhead'>
+						<div class="commentcount">49</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/okcupidcom-the-dating-site?b=whatsoever%2C%20&amp;e=into#select' class='url'>Okcupid.com, the dating site. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141791" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] whatsoever, and for that matter there is exactly no difference between sucking cock to get your WoT rating turned from 1 to 2 on one hand or sucking cock to get your "million" turned into [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141873">
+					<div class='trackhead'>
+						<div class="commentcount">50</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/btmsr-block-cipher-competition?b=and%20the%20ensl&amp;e=cak.#select' class='url'>B,TMSR~ Block Cipher Competition on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141873" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] and the enslavement of its supporters. [&#8617;]Citizenship revolves around presence in the WoT. [&#8617;]The difference between works and "works" is best illustrated by the discussion of keccak. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141951">
+					<div class='trackhead'>
+						<div class="commentcount">51</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/la-tati-ni-i-greu-or-the-pervy-romanians-etnobotanical-study?b=balance%20once&amp;e=re%22%2C#select' class='url'>La tati ni-i greu, or "The pervy Romanians - etnobotanical study" on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141951" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] balance once again shifted, and now like in the days of Henry learned counsel comes in through a WoT shaped ear, and nonsense via VEVO. [&#8617;]Briefly, sinistru in Romanian means "great big fire", [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141999">
+					<div class='trackhead'>
+						<div class="commentcount">52</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/files-from-the-war-on-the-web-today-literotica?b=The%20idea%20bei&amp;e=t%20on#select' class='url'>Files from the War on the Web. Today, Literotica. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141999" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] The idea being that any current "social media" website is a defective implementation of the WoT, what I intend to do is prove this point. Because the sort of idiots involved won't figure it on [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142067">
+					<div class='trackhead'>
+						<div class="commentcount">53</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/introducing-permanence?b=arms%21%20And%20ma&amp;e=sipd#select' class='url'>Introducing [P]ermanence on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142067" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] arms! And may we all live to see a world which harbors no intelligent life outside the WoT. &mdash;&mdash;&mdash;Autonomous Artificial Intelligence. [&#8617;]To be supplanted with gossipd [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142070">
+					<div class='trackhead'>
+						<div class="commentcount">54</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/the-mathematics-of-scamming?b=for%20the%20sake&amp;e=v%20is#select' class='url'>The mathematics of scamming on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142070" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] for the sake of this Gedankenexperiment that the cost of creating a new WoT identity is 0i, the EPDii is 1%, the SELDiii is ε, the DGFiv is 1.5 and the MDGIv is [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142204">
+					<div class='trackhead'>
+						<div class="commentcount">55</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/republican-thesaurus-with-vocabulary-and-dictionary?b=WoT%20%282014%29.%20&amp;e=ust.#select' class='url'>Republican Thesaurus with Vocabulary and Dictionary! on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142204" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] WoT (2014). The Web of Trust. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142223">
+					<div class='trackhead'>
+						<div class="commentcount">56</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/the-longest-s-expression-in-the-history-of-lisp-of-which-computing-science-is-a-subset-of-which-information-technology-is-a-subset-of-which-what-youre-currently-doing-probably-' class='url'>The longest S-expression in the history of Lisp (of which Computing Science is a subset, of which "Information Technology" is a subset, of which what you''re currently doing probably is a subset - a circumstance which does not plead in favour of your inte</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142223" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] the logs :  phf: entire wot as one giant s-expression, for people who are into that sort of shit, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142687">
+					<div class='trackhead'>
+						<div class="commentcount">57</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/ideological-history-of-the-republic?b=2014%5D%20The%20We&amp;e=ever#select' class='url'>Ideological History of the Republic on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142687" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] 2014] The Web of Trust is conceptually introduced. The terminology is not novel ; the correct defintion however [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142713">
+					<div class='trackhead'>
+						<div class="commentcount">58</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/mps-definitive-dark-deep-etc-web-faq?b=To%20summarize&amp;e=oT%29.#select' class='url'>MP's Definitive Dark / Deep / Etc Web FAQ on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142713" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] To summarize : the shithead trap (I) is what you see whether you want to or not ; its obscure fringes (II) you could see if you gave a shit, which you don't, much to the chagrin of the idiots involved, who somehow perceive themselves as people equal to all people notwithstanding they're much closer to goats ; the commercial trap (III) you can see if you're willing to pay, be it in dollars, patience, skill, connections, what have you ; the private web (IV) is where someone lied to you about how secret your secret stuff was ; the gimmicky dark web (V) is where someone lied to you about how secret your stuff was ; the dark web (VI) is encrypted and unavailable to you (because no WoT). [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142725">
+					<div class='trackhead'>
+						<div class="commentcount">59</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/i-dont-think-you-understand-how-credit-cards-work?b=scamming%20%3F%20A&amp;e=%20can#select' class='url'>I don't think you understand how credit cards "work". on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142725" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] scamming ? A shoddy, slow, bug ridden, unauditable, ad-hoc reimplementation of the common WoT.iv And if the operator decides to charge your card twice, or fifty billiard times, the best you can [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142870">
+					<div class='trackhead'>
+						<div class="commentcount">60</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/modernism-and-traditionalism?b=is%20endless%20a&amp;e=ence#select' class='url'>Modernism ; and traditionalism on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142870" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] is endless and the only possible trail is offered by strong identity, be it of the chivalricx or V/WoT type, society works a certain way. In order for the modernist delusionxi to work, some equivalence [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143652">
+					<div class='trackhead'>
+						<div class="commentcount">61</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/the-job-board?b=irrational%20m&amp;e=%20the#select' class='url'>The Job Board on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143652" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] irrational mantle of the lordship as today it exists, supported by the steely infrastructure of the WoT and the forum as they have been deliberately (but not necessarily rationally -- if you review the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144590">
+					<div class='trackhead'>
+						<div class="commentcount">62</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/patriarchy-vs-matriarchy-the-straight-dope?b=simple%20disti&amp;e=%83%D1%8F%21#select' class='url'>Patriarchy vs matriarchy, the straight dope. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144590" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] simple distinction among two strictly disjunct and absolutely male ways of thinking. Are you cool because your friends think you're cool and за честь должна считать Знакомство юнкерского хуя! [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-144655">
+					<div class='trackhead'>
+						<div class="commentcount">63</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/democracy-sucks-the-two-thousand-four-hundred-and-change-years-old-version?b=blanket%20wove&amp;e=vel.#select' class='url'>Democracy sucks, the two thousand four hundred (and change) years old version. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-144655" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] blanket woven of deliberate silence. [&#8617;]People living under the protection of another in the WoT. [&#8617;]The great benefit of socialism -- bringing all down to the same lowest level. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145275">
+					<div class='trackhead'>
+						<div class="commentcount">64</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/the-golden-fleece?b=tree%20of%20poss&amp;e=s%20so#select' class='url'>The Golden Fleece on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145275" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] tree of possibilities. [&#8617;]Yes, as in Levinas. [&#8617;]How things have changed! We have the WoT now, and as predicted it thoroughly supplants the antiquated models of identity grasped at as so [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147356">
+					<div class='trackhead'>
+						<div class="commentcount">65</div>
+						<span class="authorlink"><a href='http://qntra.net/2020/01/some-altcoin-forked-off-of-bitcoin-forking-again-to-implement-developer-tax-on-block-rewards/?b=Ver%20%28WoT%3Anon&amp;e=fund#select' class='url'>Some altcoin Forked Off Of Bitcoin Forking Again To Implement Developer Tax On Block Rewards | Qntra</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147356" title="">Tuesday, 28 January 2020</a>
+					</div>
+					<p>[...] Ver (WoT:nonperson) and Jihan Wu (WoT:nonperson), have announced a 6 month plan to implement a 12.5% tax on block rewards in order to fund [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147411">
+					<div class='trackhead'>
+						<div class="commentcount">66</div>
+						<span class="authorlink"><a href='http://thimbron.com/2020/02/review-of-bingoboingos-edits-of-unpersoning-piece/?b=Erwin%20Chemer&amp;e=that#select' class='url'>Review of BingoBoingo's edits of Unpersoning piece &laquo; Thimbron</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147411" title="">Monday, 3 February 2020</a>
+					</div>
+					<p>[...] Erwin Chemerinsky (WoT:nonperson), a USG propagandist, has moved to change the name of UC Berkeley's Boalt Hall from that [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-148179">
+					<div class='trackhead'>
+						<div class="commentcount">67</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/03/29/the-young-hands-club-moving-forwards/?b=%28meaning%2C%20sp&amp;e=s%20to#select' class='url'>The Young Hands Club Moving Forwards &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148179" title="">Sunday, 29 March 2020</a>
+					</div>
+					<p>[...] (meaning, specifically: #ossasepia as a real-time communications and interactions channel, the WoT as support for building up one's own history and reputation, younghands.club as easy access to [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-149189">
+					<div class='trackhead'>
+						<div class="commentcount">68</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/03/27/a-review-of-the-bitcoin-category-on-trilemacom/?b=Web%20of%20Trust&amp;e=rks.#select' class='url'>A Review of the Bitcoin Category on trilema.com &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-149189" title="">Sunday, 19 April 2020</a>
+					</div>
+					<p>[...] Web of Trust and how it works. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154584">
+					<div class='trackhead'>
+						<div class="commentcount">69</div>
+						<span class="authorlink"><a href='http://younghands.club/2020/09/30/initial-thoughts-and-questions-on-jwrd/?b=should%26rsquo&amp;e=are%3A#select' class='url'>Initial Thoughts and Questions on JWRD &laquo; Young Hands Club</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154584" title="">Wednesday, 30 September 2020</a>
+					</div>
+					<p>[...] should&rsquo;ve engaged with these guys while YH was open, and started building relationships with people. Still &ndash; no time like the present! There&rsquo;s value beyond the training/software/hardware: [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-158582">
+					<div class='trackhead'>
+						<div class="commentcount">70</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/the-problem-of-distributed-counting-and-how-we-avoided-it-at-significant-mental-cost-to-you/?b=but%20also%20amb&amp;e=ined#select' class='url'>The problem of distributed counting, and how we avoided it (at significant mental cost to you) on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-158582" title="">Saturday, 9 January 2021</a>
+					</div>
+					<p>[...] but also ambiguousii. The RSA key is fixed and intrinsically melded into the notion of identity (as it should be!) whereas serpent keys are just kept in a round buffer by the hundreds, intended for and destined [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="53927" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832079-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-53927")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-53927");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-53927");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Eulora's Communication Protocol, restated. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">It mildly annoys me, as a capable sheep,<br />that people like you exist.<br />~ <a href=http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-one/#comment-118639>nicknaem</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-79596"><div class="post" id="post-79596">                    <h1><a href="http://trilema.com/2018/euloras-communication-protocol-restated/" rel="bookmark" title="Permanent Link to Eulora&#039;s Communication Protocol, restated.">Eulora's Communication Protocol, restated.</a></h1>                        <div class="date">                                     Sunday, 20 May, Year 10 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><em>This is the current take on an ongoing effort towards specification, last revised January 21st, 2021.</em></p>
+<p><b>1. Overall Goals:</b></p>
+<ul>
+<li>1.1. All communications between clients and server to be encrypted.</li>
+<li>1.2. Clients to be able to receive from server any data they lack (including maps, skins, sound or video content etcetera), on demand.</li>
+<li>1.3. Clients to be able to choose and adjust both the level of security and their volume of communications with the server, as they will ultimately have to pay for the load that they generate.</li>
+</ul>
+<p><b>2. Explicit Dependencies :</b></p>
+<ul>
+<li>2.1. Eucrypt for RSA with Keccak-based OAEP and Serpent symmetric ciphering.</li>
+</ul>
+<p><b>3. Data Structures :</b></p>
+<ul>
+<li>3.0. Basic types :
+<ul>
+<li>char / uint8 (1 byte) ;</li>
+<li>uint16 (2 byte) ;</li>
+<li>uint32 (4 byte) ;</li>
+<li>uint64 (8 byte) ;</li>
+<li>float<sup><a href="#footnote_0_79596" id="identifier_0_79596" class="footnote-link footnote-identifier-link" title="Floating point item deliberately not specified.">i</a></sup> (4 byte) ;</li>
+</ul>
+</li>
+<li>3.1. Special types :
+<ul>
+<li>hash (128 bits) ;</li>
+<li>chunk [of file] (bitfield, 11760 bits) ;</li>
+<li>serpent-packet (1472 bytes) ;</li>
+<li>rsa-message<sup><a href="#footnote_1_79596" id="identifier_1_79596" class="footnote-link footnote-identifier-link" title="Each such message is OAEP-padded and then encrypted with a (3920 bit) RSA key. Three such messages are strung together to form a RSA packet. Because of the significant overhead involved (both in terms of space and time), Serpent-encrypted comms are preferred whenever feasible.">ii</a></sup> (1872 bits<sup><a href="#footnote_2_79596" id="identifier_2_79596" class="footnote-link footnote-identifier-link" title="See TMSR-RSA OAEP padding for the principle and this discussion for details.">iii</a></sup>) ;</li>
+<li>rsa-packet<sup><a href="#footnote_3_79596" id="identifier_3_79596" class="footnote-link footnote-identifier-link" title="This is the total size of a packet containing RSA-encrypted material. The useful size (ie payload) of such a packet is merely 702 bytes.">iv</a></sup> (1470 bytes) ;</li>
+<li>object (size of 104 bits<sup><a href="#footnote_4_79596" id="identifier_4_79596" class="footnote-link footnote-identifier-link" title="We really really want to keep this down. 13 bytes is the lowest I can conceive of, but I would so not mind halving it.">v</a></sup> : uint32<sup><a href="#footnote_5_79596" id="identifier_5_79596" class="footnote-link footnote-identifier-link" title="Representing the identifying hash of the object in question.
+We're using the narrower size to save on network traffic -- all the expenditure of another 32 bits here would buy us is de-ambiguation for cases where the count of objects around makes 1 in 2 billion collisions relevant. It doesn't seem likely a client could support such abundance of objects.
+Note that the hashes used here are client-specific, the server doesn't leak its own internal representation of objects to the clients.">vi</a></sup> followed by 3 uint16s representing position<sup><a href="#footnote_6_79596" id="identifier_6_79596" class="footnote-link footnote-identifier-link" title="Coordinates X, Y and Z in that order. Because the map goes from -500 to +500, the relationship between the given figure (GF) and map coordinates (MC) is GF / 65.535 - 500 = MC.">vii</a></sup> followed by 3 uint8s representing rotation<sup><a href="#footnote_7_79596" id="identifier_7_79596" class="footnote-link footnote-identifier-link" title="As a full rotation is 2 pi, the relationship between the given figure (GF) and object rotation (OR) is GF / 128 * pi = OR.">viii</a></sup> ) ;</li>
+<li>legacy-text (size of n+n/256+1 bytes ; where the leading byte is the bytecount of the 2nd segment and the 2nd segment is the bytecount of the third segment).<sup><a href="#footnote_8_79596" id="identifier_8_79596" class="footnote-link footnote-identifier-link" title="This arrangement permits the representation of arbitrarily large textfields (2nd segment can represent up to 115`792`089`237`316`195`423`570`985`008`687`907`853`269`984`665`640`564`039`457`584`007`913`129`639`936 bytes, which is more than enough space for all the text ever produced -- or likely to ever be produced -- by humanity) at the modest cost of a fixed 3 byte header.
+Unfortunately, it has no longer any utility for Eulora, since we've moved to fixed packets. I'm preserving it here because I really like it in the abstract and it has no other place to go.">ix</a></sup></li>
+<li>text (2 byte hearder containing the ~total~ byte length ; up to 1470 bytes of text ).</li>
+</ul>
+</li>
+</ul>
+<p><b>4. Serpent Packets<sup><a href="#footnote_9_79596" id="identifier_9_79596" class="footnote-link footnote-identifier-link" title="These packets consist of 92 successive 128 bit chunks, Serpent-enciphered individually. To extract the payload one splits the message into 92 16-byte chunks, deciphers them then collates the output into a final result. To produce the packet one cuts a 11`776 bit payload into 92 128-bit chunks, Serpent-enciphers them, and collates the results into the outbound packet.">x</a></sup> :</b></p>
+<li>4.1. Serpent Key Set :
+<ul>
+<li>uint8 (type ID, =100), followed by</li>
+<li>uint8 (count of keys in this set, n), followed by</li>
+<li>n*(4*int64 + uint32) (32 bytes each key followed by a 4 byte ID calculated through crc32<sup><a href="#footnote_10_79596" id="identifier_10_79596" class="footnote-link footnote-identifier-link" title="Polynomial generator 0x04c11db7. Keys with null IDs are discarded and regenerated.">xi</a></sup> ), followed by</li>
+<li>an uint8 flag (LSB bit set -- keys to be used to talk to client ; MSB set -- key to be used to talk to server ; client-set MSB is ignored), followed by</li>
+<li>uint16 (message count<sup><a href="#footnote_11_79596" id="identifier_11_79596" class="footnote-link footnote-identifier-link" title="Each client and the server will keep a count of messages they sent each other. This value must be incremented on each subsequent message sent by no less than 1 and no more than 255.">xii</a></sup>), followed by</li>
+<li>padding to Serpent-message length.</li>
+</ul>
+</li>
+<li>4.2. Serpent Keys Lifecycle Management :
+<ul>
+<li>uint8 (type ID, =102), followed by</li>
+<li>uint8 (count of server keys requested), followed by</li>
+<li>uint8 (count of client keys requested), followed by</li>
+<li>uint8 (id<sup><a href="#footnote_12_79596" id="identifier_12_79596" class="footnote-link footnote-identifier-link" title="Keys are maintained by both client and server in an ordered ring buffer 256 elements long. The server will not send more keys than the total count of 0(absent)-keys in the respective buffer, irrespective of request count. If the message contains an unknown ID or otherwise is unprocessable, the issuance of a 5.2 packet is adequate response.">xiii</a></sup> of serpent key preferred for further inbound Serpent-messages), followed by</li>
+<li>uint8 (count of burned keys in this message), followed by</li>
+<li>n*int8 (id of burned key), followed by</li>
+<li>uint16 (message count), followed by</li>
+<li>padding to Serpent-message length. </li>
+</ul>
+</li>
+<li>4.4.a. File Request, manifest
+<ul>
+<li>uint8 (type ID, =3), followed by</li>
+<li>hash (corresponding to the sought file<sup><a href="#footnote_13_79596" id="identifier_13_79596" class="footnote-link footnote-identifier-link" title="This is the keccak hash of the actual file contents. By convention this hash rendered as a 32 alphanumeric character string is also used as the filename for the file in question.">xiv</a></sup>), followed by</li>
+<li>uint8 (manifest packets sought count, 0=all), followed by</li>
+<li>n* uint16 (manifest packet index sought), followed by</li>
+<li>padding to Serpent-message length.</li>
+</ul>
+</li>
+<li>4.4.b. File Transfer, manifest (always sent and only sent in response to ID 3)
+<ul>
+<li>uint8 (type ID, =4), followed by</li>
+<li>uint16 (count of manifest packets for this file<sup><a href="#footnote_14_79596" id="identifier_14_79596" class="footnote-link footnote-identifier-link" title="This system allows up to 65`536 manifest packets, adding up to potentially 11`993`088 (65`536 * 183) fragments representing a file of up to about 140 Gb (141`038`726`624 = 11`993`088 * 11`760 + 11`744 bits exactly). This will have to be sufficient.">xv</a></sup>), followed by</li>
+<li>uint16 (index of current packet in list above), followed by</li>
+<li>uint8 (fragment count<sup><a href="#footnote_15_79596" id="identifier_15_79596" class="footnote-link footnote-identifier-link" title="From 1 to 146 inclusive.">xvi</a></sup>), followed by</li>
+<li>n* uint64 (hash of the nth fragment of manifested file).</li>
+<li>uint16 (keccak hash of foregoing), followed by</li>
+<li>padding to Serpent-message length.</li>
+</ul>
+</li>
+<li>4.4.c. File Request, chunks
+<ul>
+<li>uint8 (type ID, =5), followed by</li>
+<li>hash (corresponding to the sought file), followed by</li>
+<li>uint8 (file chunks sought count), followed by</li>
+<li>n* uint64 (the hash of fragment sought), followed by</li>
+<li>padding to Serpent-message length.</li>
+</ul>
+</li>
+<li>4.4.d. File Transfer, non-last chunk (always sent and only sent in response to ID 5)
+<ul>
+<li>uint8 (type ID, =6), followed by</li>
+<li>chunk.</li>
+</ul>
+</li>
+<li>4.4.f. File Transfer, last chunk (sent at most once per ID 3)
+<ul>
+<li>uint8 (type ID, =7), followed by</li>
+<li>uint16 (bytesize of useful part of the chunk following<sup><a href="#footnote_16_79596" id="identifier_16_79596" class="footnote-link footnote-identifier-link" title="This also means the protocol does not allow the transfer of files of certain sizes (within 8 bits of a multiple of 11760), which is fine with me.">xvii</a></sup>, followed by</li>
+<li>chunk.<sup><a href="#footnote_17_79596" id="identifier_17_79596" class="footnote-link footnote-identifier-link" title="The final fragment of the file will have to be padded to length as per this spec.">xviii</a></sup></li>
+</ul>
+</li>
+<li>4.5. Client Action<sup><a href="#footnote_18_79596" id="identifier_18_79596" class="footnote-link footnote-identifier-link" title="This is never issued by the server.">xix</a></sup> :
+<ul>
+<li>uint8 (type ID, =8), followed by</li>
+<li>text (fully specified action, see section 7), followed by</li>
+<li>uint16 (message count), followed by</li>
+<li>padding to Serpent-message length. </li>
+</ul>
+</li>
+<li>4.6. World Bulletin<sup><a href="#footnote_19_79596" id="identifier_19_79596" class="footnote-link footnote-identifier-link" title="This is never issued by the client.">xx</a></sup> :
+<ul>
+<li>uint8 (type ID, =9), followed by</li>
+<li>uint32 (id of top level item<sup><a href="#footnote_20_79596" id="identifier_20_79596" class="footnote-link footnote-identifier-link" title="As discussed in comments, the world is a hierarchical structure of objects within objects.">xxi</a></sup>), followed by</li>
+<li>uint8 (count of objects), followed by</li>
+<li>object list<sup><a href="#footnote_21_79596" id="identifier_21_79596" class="footnote-link footnote-identifier-link" title="This portion will get more clarification later on!">xxii</a></sup>, followed by</li>
+<li>uint16 (message count), followed by</li>
+<li>padding to Serpent-message length. </li>
+</ul>
+</li>
+<li>4.7. Object Request :
+<ul>
+<li>uint8 (type ID, =10), followed by</li>
+<li>uint8 (count of objects), followed by</li>
+<li>n*int32 (id of object), followed by</li>
+<li>uint16 (message count), followed by</li>
+<li>padding to Serpent-message length. </li>
+</ul>
+</li>
+<li>4.8. Object Info :
+<ul>
+<li>uint8 (type ID, =11), followed by</li>
+<li>uint8 (count of objects), followed by</li>
+<li>n times uint32 (id of object) and text (object properties, as per extant game structures, including art files needed and so on<sup><a href="#footnote_22_79596" id="identifier_22_79596" class="footnote-link footnote-identifier-link" title="The complete list of these is currently exposed by the extant client, but in any case we'll publish a complete schematic.  The server will set the `target` of the player on the last object in the list.">xxiii</a></sup>), followed by</li>
+<li>uint16 (message count), followed by</li>
+<li>padding to Serpent-message length. </li>
+</ul>
+</li>
+</ul>
+<p><b>5. RSA Packets<sup><a href="#footnote_23_79596" id="identifier_23_79596" class="footnote-link footnote-identifier-link" title="These packets consist of three 490 byte successive chunks RSA-encrypted individually. To extract the payload one splits the message into three 490 byte chunks, RSA-decrypts and de-OAEP-pads each one, the collates the results into a final result. To produce the packet one cuts a 5`616 bit payload into three 1`872 bit chunks, OAEP-pads and encrypts them, and collates the results into the outbound packet.">xxiv</a></sup> :</b></p>
+<ul>
+<li>5.1. RSA key set.<sup><a href="#footnote_24_79596" id="identifier_24_79596" class="footnote-link footnote-identifier-link" title="This is the manner in which new clients register their RSA key with the server (thereby opening a new game account). Later replacement of a registered key IS NOT POSSIBLE. Keep your client's RSA key safe.
+This is also the manner through which IP changes for an account are registered with the server. See the Protocol Mechanics heading for details.">xxv</a></sup></p>
+<ul>
+<li>uint8 (equal to 251 to indicate packet contains a new RSA key), followed by</li>
+<li>uint8 (protocol version), followed by</li>
+<li>uint16 (subversion), followed by</li>
+<li>uint32 (IP of server<sup><a href="#footnote_25_79596" id="identifier_25_79596" class="footnote-link footnote-identifier-link" title="This is used by the server when signalling to the client to talk to a different server (which is a thing for scaling, because different sectors will be handled by different servers).">xxvi</a></sup>), followed by</li>
+<li>uint32 (IP of client<sup><a href="#footnote_26_79596" id="identifier_26_79596" class="footnote-link footnote-identifier-link" title="If the client doesn't know its own IP, it's acceptable for this to be zero.">xxvii</a></sup>), followed by</li>
+<li>uint64 (keccak hash of client binary), followed by</li>
+<li>uint64 (e of RSA key), followed by</li>
+<li>uint8*490 (N of RSA key), followed by</li>
+<li>uint64 (preferred padding -- the magic value of 0x13370000 requests random padding ; all other values will be used as such, bitwise, ie like an infinite-length OTP consisting of the value repeated), followed by</li>
+<li>uint16 (message count), followed by</li>
+<li>padding to RSA-message length, 1424 (5616-8-8-16-32-64-64-3920-64-16) bits exactly. </li>
+</ul>
+</li>
+<li>5.2. Serpent key set<sup><a href="#footnote_27_79596" id="identifier_27_79596" class="footnote-link footnote-identifier-link" title="This permits either client or server to declare Serpent keys via RSA. It is not mandatory (as there exists a Serpent-encapsulated mechanism for the same end) but entirely legal. The server will always respond with at least one 5.2 packet after an accepted 5.1 packet creates a new player account, consisting of 40 Serpent keys to be used to talk to the server. Should the client respond with any other packet than 5.2 or 4.1, the server will send a 2nd 5.2 packet, containing 40 Serpent keys for the client's use.">xxviii</a></sup> :
+<ul>
+<li>uint8 (equal to 157 to indicate packet contains new Serpent keys), followed by</li>
+<li>uint8 (count of keys<sup><a href="#footnote_28_79596" id="identifier_28_79596" class="footnote-link footnote-identifier-link" title="Keys obtained through a 5.2 packet are always indexed in the client's buffer in the order they were found in that packet, starting with the first position.">xxix</a></sup> in this set, n ; n<=19<sup><a href="#footnote_29_79596" id="identifier_29_79596" class="footnote-link footnote-identifier-link" title="A RSA packet has 702 total bytes available, of which 5 are used otherwise and the remainder of 697 are available for packing serpent keys, which take 36 bytes each (crc32 id inclusive).">xxx</a></sup>), followed by</li>
+<li>n*(4*int64 + uint32) (32 bytes each key followed by a 4 byte ID calculated as crc32 on the key itself), followed by</li>
+<li>an uint8 flag (LSB bit set -- keys to be used to talk to client ; MSB set -- key to be used to talk to server ; client-set MSB is ignored by server ; server will set LSB on keys requested by client for its own use thus supporting clients with no trustworthy random generators of their own), followed by</li>
+<li>uint16 (message count), followed by
+<li>
+</li>
+<p> padding to RSA-message length.</ul>
+</li>
+</ul>
+<p><b>6. Protocol Mechanics :</b></p>
+<ul>
+<li>6.0. All communications between server and client will consist of messages. These messages may be encrypted either via eucrypt.RSA or eucrypt.Serpent. All RSA-encrypted messages will be exactly 1`470 bytes in length ; all Serpent messages will be exactly 1`472 bytes in length<sup><a href="#footnote_30_79596" id="identifier_30_79596" class="footnote-link footnote-identifier-link" title="Lenght being actually how they're sorted on the server side.">xxxi</a></sup>. The server will handle Serpent messages in preference of RSA messages (which are processed on an as-available basis). Clients that send garbage will be punished ; the costs involved (encryption/decryption ; generating entropy ; lookups and whatnots) will be pushed onto the client, for which reason writing the clients lightly pays off.</li>
+<p>
+<li>6.1 The handshake works as follows :
+<ol>
+
+<li>New client issues 5.1 packet keyed to the server's public key, including its own RSA key.</li>
+<p>
+<li>The client's IP is recorded, and will have to be explicitly changed by the client later if needed. Server replies with 5.1 packet keyed to the client's announced key, including its private RSA key for use by that client ; and with 5.2 packet containing key material for client's use in keying messages to the server. If the client fails to provide its own set of serpent keys, the server will further issue it a set of serpent keys ; thenceforth the server will send more serpent keys mirroring the client's supply, and will similarily mirror key burning and select operations on its own set.</li>
+<p>
+<li>Should the client's IP change, it will issue a 5.1 packet keyed to the server public key immediately followed by a 5.1 packet keyed to the server's original private key. The server will then update the client's IP accordingly (this also trashes the extant Serpent keyset and triggers 5.2).</li>
+<p>
+<li>The bulk of communication is intended to go through the Serpent system ; outside of identification and bootstrap handshakes RSA isn't used. Should either party believe the Serpent keysets've been FUBAR'd, a 5.2 packet will reset that keyset.</li>
+</ol>
+</li>
+<li>6.2. The server will issue type 4.6 packets in response to relevant type 4.5 packets received -- these can either signify the acceptance or the rejection of the client action, and the client must adjust its internal state accordingly.</li>
+</ul>
+<p><b>7. Character Actions :</b></p>
+<ul>
+<li>7.0. Lock :
+<ul>
+<li>uint8 (type ID, =0), followed by</li>
+<li>uint8 (count of objects), followed by</li>
+<li>n* uint32 (object ids). Defaults to currently targeted item.</li>
+</ul>
+</li>
+<li>7.1. Make :
+<ul>
+<li>uint8 (type ID, =1), followed by</li>
+<li>uint32 (object id, defaults to current target), followed by</li>
+<li>uint32 (object id, defaults to current recipe in mind), followed by</li>
+<li>uint32 (object id, defaults to currently equipped tool), followed by</li>
+<li>uint8 (count of objects). The order for producing count items is entered into the queue (note that crafting only progresses if the player and/or hireling NPCs find themselves in certain situations re equipment, position, etc).</li>
+</ul>
+</li>
+<li>7.2. Explore : uint8 (type ID, =2). The character will attempt to find some resources.</li>
+<li>7.3. Exchange :
+<ul>
+<li>uint8 (type ID, =3), followed by</li>
+<li>uint32 (object id, the other party), followed by</li>
+<li>uint32 (object id, the trade itself<sup><a href="#footnote_31_79596" id="identifier_31_79596" class="footnote-link footnote-identifier-link" title="This is set by server through a type 6 message for both players involved, the trade is an object like any other that the OP has to request. The server will also expire trades, enforce them etc.">xxxii</a></sup>), followed by</li>
+<li>uint8 (count of objects), followed by</li>
+<li>n* uint32 (object ids) and uint64 (object count), followed by</li>
+<li>uint8 (flag, set to 0x10 to lock a trade and to 0x0c to approve a trade previously locked by both players).</li>
+</ul>
+</li>
+<li>7.4. Attack :
+<ul>
+<li>uint8 (type ID, =4), followed by</li>
+<li>uint32 (object id, the other party), followed by</li>
+<li>uint32 (object id, the battle itself (server set, exactly in the way trade works). This not currently implemented, except player setting itself the bomb results in instadeath.</li>
+</ul>
+</li>
+<li>7.5. Repair :
+<ul>
+<li>uint8 (type ID, =5), followed by</li>
+<li>uint32 (object id, defaults to current target), followed by</li>
+<li>uint32 (object id, defaults to current equipped tool).</li>
+</ul>
+</li>
+<li>7.6. Move :
+<ul>
+<li>uint8 (type ID, =6), followed by</li>
+<li>uint32 (destination id, defaults to current target), followed by</li>
+<li>uint32 (slot id), followed by</li>
+<li>uint32 (object id, of the item being moved), followed by</li>
+<li>uint32 (quantity moved).</li>
+</ul>
+</li>
+<li>7.7. Train :
+<ul>
+<li>uint8 (type ID, =7), followed by</li>
+<li>uint32 (object id, the other party), followed by</li>
+<li>uint32 (object id, the train session itself (server set, exactly in the way trade and battle work). This not currently muchly implemented, except some NPCs train for money -- but will get greatly expanded asap.</li>
+</ul>
+</li>
+<li>7.8. Relocate :
+<ul>
+<li>uint8 (type ID, =8), followed by</li>
+<li>object type, containing new client position.</li>
+</ul>
+<p>Please leave your comments below.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_79596" class="footnote">Floating point item <a href=http://www.dianacoman.com/2018/05/03/eucrypt-chapter-13-smg-rng/#selection-135.177-135.299>deliberately not specified</a>. [<a href="#identifier_0_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_79596" class="footnote">Each such message is OAEP-padded and then encrypted with a (3920 bit) RSA key. Three such messages are strung together to form a RSA packet. Because of the significant overhead involved (both in terms of space and time), Serpent-encrypted comms are preferred whenever feasible. [<a href="#identifier_1_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_79596" class="footnote">See <a href=http://www.dianacoman.com/2018/02/15/eucrypt-chapter-10-oaep-with-keccak-a-la-tmsr/>TMSR-RSA OAEP</a> padding for the principle and <a href=http://trilema.com/forum-logs-for-02-oct-2018#2481090>this discussion</a> for details. [<a href="#identifier_2_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_79596" class="footnote">This is the total size of a packet containing RSA-encrypted material. The useful size (ie payload) of such a packet is merely 702 bytes. [<a href="#identifier_3_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_79596" class="footnote">We really <em>really</em> want to keep this down. 13 bytes is the lowest I can conceive of, but I would <em>so</em> not mind <a href=http://trilema.com/forum-logs-for-28-sep-2018#2479017>halving</a> it. [<a href="#identifier_4_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_79596" class="footnote">Representing the identifying hash of the object in question.
+<p>We're using the narrower size to save on network traffic -- all the expenditure of another 32 bits here would buy us is de-ambiguation for cases where the count of objects around makes 1 in 2 billion collisions relevant. It doesn't seem likely a client could support such abundance of objects.</p>
+<p>Note that the hashes used here are client-specific, the server doesn't leak its own internal representation of objects to the clients. [<a href="#identifier_5_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_79596" class="footnote">Coordinates X, Y and Z in that order. Because the map goes from -500 to +500, the relationship between the given figure (GF) and map coordinates (MC) is GF / 65.535 - 500 = MC. [<a href="#identifier_6_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_79596" class="footnote">As a full rotation is 2 pi, the relationship between the given figure (GF) and object rotation (OR) is GF / 128 * pi = OR. [<a href="#identifier_7_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_79596" class="footnote">This arrangement permits the representation of <em>arbitrarily</em> large textfields (2nd segment can represent up to 115`792`089`237`316`195`423`570`985`008`687`907`853`269`984`665`640`564`039`457`584`007`913`129`639`936 bytes, which is more than enough space for all the text ever produced -- or <a href=http://trilema.com/2011/limba-latina-versiunea-87/>likely to ever be produced</a> -- by humanity) at the modest cost of a fixed 3 byte header.
+<p>Unfortunately, it has no longer any utility for Eulora, since we've moved to fixed packets. I'm preserving it here because I really like it in the abstract and it has no other place to go. [<a href="#identifier_8_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_79596" class="footnote">These packets consist of 92 successive 128 bit chunks, Serpent-enciphered individually. To extract the payload one splits the message into 92 16-byte chunks, deciphers them then collates the output into a final result. To produce the packet one cuts a 11`776 bit payload into 92 128-bit chunks, Serpent-enciphers them, and collates the results into the outbound packet. [<a href="#identifier_9_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_79596" class="footnote">Polynomial generator 0x04c11db7. Keys with null IDs are discarded and regenerated. [<a href="#identifier_10_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_79596" class="footnote">Each client and the server will keep a count of messages they sent each other. This value must be incremented on each subsequent message sent by no less than 1 and no more than 255. [<a href="#identifier_11_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_79596" class="footnote">Keys are maintained by both client and server in an ordered ring buffer 256 elements long. The server will not send more keys than the total count of 0(absent)-keys in the respective buffer, irrespective of request count. If the message contains an unknown ID or otherwise is unprocessable, the issuance of a 5.2 packet is adequate response. [<a href="#identifier_12_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_79596" class="footnote">This is the keccak hash of the actual file contents. By convention this hash rendered as a 32 alphanumeric character string is also used as the filename for the file in question. [<a href="#identifier_13_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_79596" class="footnote">This system allows up to 65`536 manifest packets, adding up to potentially 11`993`088 (65`536 * 183) fragments representing a file of up to about 140 Gb (141`038`726`624 = 11`993`088 * 11`760 + 11`744 bits exactly). This will have to be sufficient. [<a href="#identifier_14_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_79596" class="footnote">From 1 to 146 inclusive. [<a href="#identifier_15_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_79596" class="footnote">This also means the protocol does not allow the transfer of files of certain sizes (within 8 bits of a multiple of 11760), which is fine with me. [<a href="#identifier_16_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_79596" class="footnote">The final fragment of the file will have to be padded to length as per this spec. [<a href="#identifier_17_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_79596" class="footnote">This is never issued by the server. [<a href="#identifier_18_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_19_79596" class="footnote">This is never issued by the client. [<a href="#identifier_19_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_20_79596" class="footnote">As discussed <a href=http://www.dianacoman.com/2018/04/17/rfc-euloras-communication-protocol-eucomms/#comment-1167>in comments</a>, the world is a hierarchical structure of objects within objects. [<a href="#identifier_20_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_21_79596" class="footnote">This portion will get more clarification later on! [<a href="#identifier_21_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_22_79596" class="footnote">The complete list of these is currently exposed by the extant client, but in any case we'll publish a complete schematic.  The server will set the "target" of the player on the last object in the list. [<a href="#identifier_22_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_23_79596" class="footnote">These packets consist of three 490 byte successive chunks RSA-encrypted individually. To extract the payload one splits the message into three 490 byte chunks, RSA-decrypts and de-OAEP-pads each one, the collates the results into a final result. To produce the packet one cuts a 5`616 bit payload into three 1`872 bit chunks, OAEP-pads and encrypts them, and collates the results into the outbound packet. [<a href="#identifier_23_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_24_79596" class="footnote">This is the manner in which new clients register their RSA key with the server (thereby opening a new game account). Later replacement of a registered key <b>IS NOT POSSIBLE</b>. Keep your client's RSA key safe.
+<p>This is also the manner through which IP changes for an account are registered with the server. See the Protocol Mechanics heading for details. [<a href="#identifier_24_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_25_79596" class="footnote">This is used by the server when signalling to the client to talk to a different server (which is a thing for scaling, because different sectors will be handled by different servers). [<a href="#identifier_25_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_26_79596" class="footnote">If the client doesn't know its own IP, it's acceptable for this to be zero. [<a href="#identifier_26_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_27_79596" class="footnote">This permits either client or server to declare Serpent keys via RSA. It is not mandatory (as there exists a Serpent-encapsulated mechanism for the same end) but entirely legal. The server will always respond with at least one 5.2 packet after an accepted 5.1 packet creates a new player account, consisting of 40 Serpent keys to be used to talk to the server. Should the client respond with any other packet than 5.2 or 4.1, the server will send a 2nd 5.2 packet, containing 40 Serpent keys for the client's use. [<a href="#identifier_27_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_28_79596" class="footnote">Keys obtained through a 5.2 packet are always indexed in the client's buffer in the order they were found in that packet, starting with the first position. [<a href="#identifier_28_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_29_79596" class="footnote">A RSA packet has 702 total bytes available, of which 5 are used otherwise and the remainder of 697 are available for packing serpent keys, which take 36 bytes each (crc32 id inclusive). [<a href="#identifier_29_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_30_79596" class="footnote">Lenght being actually how they're sorted on the server side. [<a href="#identifier_30_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_31_79596" class="footnote">This is set by server through a type 6 message for both players involved, the trade is an object like any other that the OP has to request. The server will also expire trades, enforce them etc. [<a href="#identifier_31_79596" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2018/pepi-luci-bom-y-otras-chicas-del-monton/">Pepi, luci, Bom y otras chicas del monton</a></div>
+                <div class="alignright"><a href="http://trilema.com/2018/printul/">Printul.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2018/euloras-communication-protocol-restated/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2018/euloras-communication-protocol-restated/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>134 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-125734" class="commentbody"><div class="commenthead"><img alt='Mocky`s avatar' src='http://mocky.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink"><a href='http://mocky.org' class='url'>Mocky</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125734" title="">Sunday, 20 May 2018</a>
+							</div>
+						<p>Should there be a flag in 5.3 (and 5.4) for the client to initiate a new trade (or a new attack) where there exists no trade object yet?</p>
+<p>Should there be a character action to signal player movement (x y coords, direction, speed)?</p>
+<p>Should there be character actions for 'speaking' (say, tell, shout, etc.)?</p>
+						</li>
+
+										<li id="comment-125736" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125736" title="">Monday, 21 May 2018</a>
+							</div>
+						<p>In order :</p>
+<p>Why ? Player aiming to initiate trade sends 5.3 ; server creates new object ; both players involved can review object and send further 5.3 packets, setting the flag to 10 or 0c as appropriate. Server destroys all trades that are older than some interval ; and enforces all ones that complete.</p>
+<p>There is : 5.6.</p>
+<p>Nah, that's all moving to irc ; client is expected to implement chat facilities (via #eulora) but is not specifically required to.</p>
+						</li>
+
+										<li id="comment-125738" class="commentbody"><div class="commenthead"><img alt='ave1`s avatar' src='http://ave1.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='http://ave1.org' class='url'>ave1</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125738" title="">Monday, 21 May 2018</a>
+							</div>
+						<p>In case of the text type, it consists of 1 byte (length of next block) + 255 text bytes. It's minimum length will be at least 256 bytes long. How can a shorter text be parsed? will it be zero padded? </p>
+<p>For message 7, the length calculation does not account for the byte in front of each segment.  Also the comma's seem a bit strange, no text encoding of the e or N is specified (base64, hex or dec?). So these can contain comma's too. </p>
+<p>BTW in the calculation (1960*4-8-8-16-64-24-6144) which part contains the comma's and should the 24 not be 16 (for message count?)</p>
+						</li>
+
+										<li id="comment-125739" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125739" title="">Monday, 21 May 2018</a>
+							</div>
+						<p>1. No, actually, the single byte text (say the character "C") will appear as 0x01 0x01 0x43, ie, one byte 2nd segment, one byte 3rd segment, byte "C". It's true you get a 200% overhead for this case, but then again text isn't really intended for very short fields. Were we encoding the longer string "ABC", it'd have read 0x01 0x03 0x041 0x42 0x43, 5 total bytes.</p>
+<p>2. It's not clear to me what you mean. For one thing, the e is always 2048 bits, and the N is always 4096 bits. The text field will therefore be always 0x02 followed by a value between 6144 (0x1800) and 7720 (0x1E28) reflecting the available space for the comment field. I suppose my statement is misleading with the commas comment -- I'm rephrasing that.</p>
+<p>3. The total available space for the message is 4 1960 bit chunks, which once OAEP'd and RSA'd result in 4 4096 bit chunks, which is the set size of the item. Out of this 4 * 1960 = 7840 bits, we use : 8 for the type id ; 8 more for the protocol version ; 16 more for the protocol subversion ; 64 for the client hash ; another 16 for the message count, and a set 6144 for the e and N. What's left behind is a maximum of 1960*4-8-8-16-64-16-24-6144 = 1560 (the 24 is because of the 3 bytes needed by the text header system).</p>
+						</li>
+
+										<li id="comment-125740" class="commentbody"><div class="commenthead"><img alt='ave1`s avatar' src='http://ave1.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://ave1.org' class='url'>ave1</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125740" title="">Monday, 21 May 2018</a>
+							</div>
+						<p>2. Ah now I get my mistake with 1., There are 3 segments; the first for the length (in bytes) of the length of the text. The second for the length of the text. The last for the actual bytes. (I assumed the segments to be max 255 bytes length blocks, each block having the length in bytes of the next bytes)</p>
+						</li>
+
+										<li id="comment-125745" class="commentbody"><div class="commenthead"><img alt='Anonimosu`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Anonimosu<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125745" title="">Monday, 21 May 2018</a>
+							</div>
+						<p>If you fully specified it, by adding another byte in front to say how many segments are involved it would extend to perfection: could encode up to 256 segments, the first of which one byte long, the next up to 256 bytes long, the third up to 256^256 bytes long, the fourth uo to 256 ^ 256 ^ 256 (2.6e157826) bytes long. I can't even calculate what the theoretical maximum size of this structure would even come to.</p>
+<p>Speaking of which, why are you counting from 1 rather than from 0? It just costs you ~0.4% of the total addressable space for no clear benefit.</p>
+						</li>
+
+										<li id="comment-125748" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125748" title="">Tuesday, 22 May 2018</a>
+							</div>
+						<p>@<b>Ave1</b> Exactly.</p>
+<p>@<b>Anonimosu</b> Eh, there's really no need for that. But yes, in principle.</p>
+<p>Anyway, seems a very inconsquential loss ; and you get the benefit of more intuitive counters. Though, I suppose, the question of which style of counting is "more intuitive" isn't so easily resolved. I suppose it could be altered to count from 0, personally I don't feel too strongly about it either way.</p>
+						</li>
+
+										<li id="comment-125755" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://dianacoman.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink"><a href='http://dianacoman.com' class='url'>Diana Coman</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125755" title="">Tuesday, 22 May 2018</a>
+							</div>
+						<p>The slots vs coords issue starts annoying me beyond measure: why exactly should containers have "slots" with ids rather than coords inside them, anyway? Why have 'craft-table has 100 "slots" with ids from 0 to 99' instead of 'craft-table has internal space with length 20 and height 5, therefore available coordinates for stuff inside in the form (x,y) with x from 0 to 19 and y from 0 to 5'? Sure, the (x,y) is now the "slot id" if one wants to think of it that way, but I don't see the benefit of this "slot" differentiation really. </p>
+<p>Basically 5.6 (and Mocky's question above I suspect) illustrates this point: move as described by 5.6 expects a "slot id " which works fine when moving things *inside some container* but not so well when moving things *in the world* (i.e. changing their x,z coordinates). I'm not even sure how exactly is 5.6 supposed to reflect a change of x,z coordinates?</p>
+<p>Other questions:<br />
+1. What is the meaning of "lock" for exchange? (not to mention, if it is lockable now, why not use 5.0 to lock it?)<br />
+2. How does one cancel an ongoing thing (e.g. exchange, training session, craft-that-doesn-t-end-until-the-world-goes-out-in-flames)?<br />
+3. Is the "top level" in 3.6 (world bulletin) meant as "id of item that contains this following list of stuff" (i.e. not necessarily top level in the full hierarchy as that would always be some world's id)?</p>
+						</li>
+
+										<li id="comment-125756" class="commentbody"><div class="commenthead"><img alt='Mocky`s avatar' src='http://mocky.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink"><a href='http://mocky.org' class='url'>Mocky</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125756" title="">Tuesday, 22 May 2018</a>
+							</div>
+						<p>re: container slots vs. coords. I think the slots makes more sense, coords is more a function of how the client wants to display the container. </p>
+<p>re: 5.6, it doesn't seem compatible with player movement where coords are floats and also direction and speed are desirable to have.</p>
+						</li>
+
+										<li id="comment-125757" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125757" title="">Tuesday, 22 May 2018</a>
+							</div>
+						<p>@<b>Diana Coman</b> I think you actually have a fine point, could just use coords, make them ints, be done with it.</p>
+<p>Re lock exchange : if exchanges are dual state, open and accepted, one player could steal some things from the box in the short interval before the other clicks to accept. So many years ago the three state was introduced, whereby a locked trade can no longer be modified, but only accepted, and an unlocked trade can be modified but not accepted, only locked.</p>
+<p>It could use 5.0, but I'd rather use the flag in here, not sure what the benefit of using 5.0 instead would be, seems just code bloat.</p>
+<p>One does not cancel anything. There is no cancel.</p>
+<p>Top level item is generally a sector (if outdoors) or a location (otherwise, like if in a room). </p>
+<p>@<b>Mocky</b> Speed is supposed to be enforced by client, server will just dump inacceptable movements reported.</p>
+						</li>
+
+										<li id="comment-125759" class="commentbody"><div class="commenthead"><img alt='Mocky`s avatar' src='http://mocky.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink"><a href='http://mocky.org' class='url'>Mocky</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125759" title="">Wednesday, 23 May 2018</a>
+							</div>
+						<p>Dump bad movements, sure. But good speed and direction is not for the server to use but to pass to other clients.</p>
+						</li>
+
+										<li id="comment-125760" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125760" title="">Wednesday, 23 May 2018</a>
+							</div>
+						<p>Why would server communicate speed/direction, I don't get it ?</p>
+						</li>
+
+										<li id="comment-125764" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://dianacoman.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink"><a href='http://dianacoman.com' class='url'>Diana Coman</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125764" title="">Wednesday, 23 May 2018</a>
+							</div>
+						<p>Currently there is this "movement modes" thing that client asks for and server replies with but it's just a legacy thing, no particular reason for it to exist. Basically server doesn't really care whether you "fly" or "run" or "jump on one foot" (or what such things even really mean from client's point of view) - all it cares is where you are at some given time.</p>
+						</li>
+
+										<li id="comment-125765" class="commentbody"><div class="commenthead"><img alt='Mocky`s avatar' src='http://mocky.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink"><a href='http://mocky.org' class='url'>Mocky</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125765" title="">Wednesday, 23 May 2018</a>
+							</div>
+						<p>Right, the server doesn't have to care, and a text based client doesn't have to care. But a graphical client cares about the speed and direction of the *other* players in view. </p>
+<p>The client uses the speed of other players to choose between standing/walking/running/strafing animations for their avatars. And their direction to know if they are moving forward, backwards or sideways relative to themselves. Also to know if they are facing you or facing away or who/what they are fighting.</p>
+<p>Otherwise you get strange looking rendering of other players like they are moonwalking backwards or sliding around with no walking animation, fishing with back to the water, walking up to you and talking with back turned, all facing the same direction, etc.</p>
+						</li>
+
+										<li id="comment-125767" class="commentbody"><div class="commenthead"><img alt='Mocky`s avatar' src='http://mocky.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink"><a href='http://mocky.org' class='url'>Mocky</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125767" title="">Wednesday, 23 May 2018</a>
+							</div>
+						<p>&gt;&gt; One does not cancel anything. There is no cancel.</p>
+<p>There has to be a cancel for trade. What would it mean to open a trade, add some items and then walk away? Trade goes on forever? Even after one player logs out? If not then how does the server notify the other player?</p>
+<p>If something happens where the trade can definitely not continue, the other player needs to know that fact.</p>
+<p>The server can detect if one party does something that will invalidate a pending exchange (e.g. moving out of range, logging out, zoning, dying, entering combat) and send a cancel to the other party in the world bulletin. However this should also be sent if one party closes the trade window, which requires a way for a client to send this signal to the server. One possibility would be a cancel flag on 5.3 that both client and server can use.</p>
+<p>I would suggest a more general solution, how does the server tell players that some item is no longer there (claim marker or bag of loot disappeared, player logged off)? perhaps instead of a cancel flag there could be a designated location where things move (5.6) to when they are to be considered gone.</p>
+<p>I also suggest to consider if an active exchange will block the parties from taking other actions or not. Can I trade while crafting, while in combat, while exploring, with multiple players at the same time? This impacts the protocol because if an active trade blocks other actions then you need to allow the second party to decline ever entering into the trade. If a player has the power to pop up a blocking trade window unbidden on my screen, he can disrupt me from crafting/exploring etc.</p>
+<p>If a trade window will be blocking, suggest to add an additional flag to 5.3: 'requested', or if not a flag some protocolitic way to accomplish the cancel without ever blocking the recipients crafting/exploring.</p>
+<p>Also, are items actually moved from inventory to exchange object in the same sense as a craft table where I can move heavy stuff to a trade window and continue with other activities/movement unburdened?</p>
+						</li>
+
+										<li id="comment-125768" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125768" title="">Wednesday, 23 May 2018</a>
+							</div>
+						<p>> Right, the server doesn't have to care</p>
+<p>So if it cares let it figure it out ; as it's guess is exactly as good as the server and the server doesn't care to guess.</p>
+<p>> The client uses the speed of other players to choose</p>
+<p>Animations, see, are not really a server concern. I am aware ~nobody  in "<a href=http://logs.minigame.biz/2015-11-09.log.html#t04:23:15 >AAA games</a>" is even aware, or would dare make the point ; but this makes entirely no difference. Items such as whether the OP is running or not are to be ~guessed~ by any client that cares to, not somehow be attempted at enforcement from the top down by the server ; and in the meta-sense, fuck the fucking barometer nonsense. We're doing virtual realities here, not spending our lives in a doomed effort to support the conceits of others at our own expense.</p>
+<p>The character object has a direction vector which tells you where it is facing. You can query it as often as you please, though it won't be free.</p>
+<p>> Otherwise you get strange</p>
+<p>If that's what the client wants to display, by all fucking means. This is a field where ~clients compete~ to deliver the best results ~the world permits~ to their players ; not a field where clients run over to mommy to "solve" their unsolvable problems for them (in the shape of presenting them with a certificate to show the problems were OfFiCiAlLy SoLvEd and honi soit qui mal y pense).</p>
+<p>See ?</p>
+						</li>
+
+										<li id="comment-125769" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125769" title="">Wednesday, 23 May 2018</a>
+							</div>
+						<p>> What would it mean to open a trade, add some items and then walk away?</p>
+<p>The server keeps the trade object around for as long as it feels like, then reclaims it, and the objects drop to the ground. Where they stay until they are picked up or swept.</p>
+<p>Server does not notify ~anyone~. Other player can query for the trade object whenever feels like.</p>
+<p>>  how does the server tell players that some item is no longer there</p>
+<p>By the clients asking for the top node and the server omitting it from the list.</p>
+<p>Inexistence is entirely passive, and not a positive thing.</p>
+<p>> I also suggest to consider if an active exchange will block </p>
+<p>The current blocking model is going away in favour of a queuing model for crafts ; in general blocking as now implemented is slated for retirement.</p>
+<p>> If a player has the power to pop up a blocking trade window unbidden</p>
+<p>This is a client concern. Don't like Windows-style clients, don't use.</p>
+<p>> Also, are items actually moved from inventory to exchange object</p>
+<p>I expect, yes.</p>
+						</li>
+
+										<li id="comment-125790" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-125790" title="">Saturday, 26 May 2018</a>
+							</div>
+						<p>On the basis of mature meditation and taking into consideration the commentary received, I've made the following changes : </p>
+<ul>
+<li>The "object" object was redefined to include better coordinates (both position and rotation). Because of changes otherwise, this did not result in a significant bytesize increase.</li>
+<li>The id hashes were universally reduced to 32 bits (with the exception of the client string -- mostly because that's not frequently communicated).</li>
+</ul>
+<p>Most modern machines will allign to bus size, meaning that 8 bit or 64 bit ints actually take the same space : 64 machine bits. While this is fine when the internals of a machine are involved, it is not at all fine on the internet ; clients will have to contain code to bytepack according to the above standard irrespective of their internal organization, so that packets actually take the specified number of bits.</p>
+						</li>
+
+										<li id="comment-126792" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126792" title="">Monday, 1 October 2018</a>
+							</div>
+						<p>Where do the 8192 bits in 4.0, 16384 bits in 4.1 and in 4.2 come from?</p>
+<p>In other words: there's something I don't get regarding the sizes of messages at 4.0 and 4.1, as they seem to keep doubling and then doubling again. Why 8192 bits for a RSA message since a TMSR RSA-encrypted message is actually 4096 bits? This 4096 already includes the "doubling+" caused by OAEP (i.e. the RSA-payload transported in a message of 4096 bits is 1960 bits and that's fixed, as per <a href="http://ossasepia.com/2018/02/15/eucrypt-chapter-10-oaep-with-keccak-a-la-tmsr/#selection-63.0-65.271">http://ossasepia.com/2018/02/15/eucrypt-chapter-10-oaep-with-keccak-a-la-tmsr/#selection-63.0-65.271</a> ).</p>
+<p>As to Serpent messages, in principle they can be any size that is however a multiple of 128 bits since that's the length of a Serpent output block. So at 4.0 to 4.2 I'd just say that server will first attempt to decrypt using current Serpent key for that client and if that fails, it looks at message size: if it's precisely 4096 bits, then it will try decrypting with server's own RSA key and proceed according to result; if any other size, then discard.</p>
+						</li>
+
+										<li id="comment-126797" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126797" title="">Tuesday, 2 October 2018</a>
+							</div>
+						<p>Yeah, I suspect the numbers there need rewriting, I spend a while trying to figure out wtf I was talkign about back in May but it's not coming back to me.</p>
+<p>So basically, the sane thing here is for the server to<br />
+a) discard all messages whose size is not a multiple of 128 bits<br />
+b) attempt to de-serpent all messages whose size is a multiple of 128 bits<br />
+c) should b fail, and should the message size be exactly 4096 bits, server should attempt to de-rsa it.</p>
+<p>That right ?</p>
+						</li>
+
+										<li id="comment-126798" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126798" title="">Tuesday, 2 October 2018</a>
+							</div>
+						<p>Sounds right to me, yes. </p>
+<p>At any rate, if there is some good reason for other numbers/different approach there I think it will become clear as soon as we get some prototype out so we'll see.</p>
+						</li>
+
+										<li id="comment-126801" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126801" title="">Tuesday, 2 October 2018</a>
+							</div>
+						<p>Of course now I finally see what I just couldn't figure out earlier despite all the reading and re-reading before even asking the question: the 4096 bits size and specific 4.2 description is to allow the sending of RSA keys themselves (either by client or by server) via a 3.7 message that is padded to 4*4096, yes. </p>
+<p>The confusion arose from this contradiction between "RSA encrypted means 4096 size, fixed" on one hand and "sending RSA key in a RSA-encrypted 4*4096 message" on the other. Seeing the int16 message count in 3.7 there I tend to think that the idea here was that a 3.7 message will in fact be split into 4 parts with their corresponding counts so at message level it still IS "either 4096 bits or discard" (although the server will then have to keep track of parts from each IP for a while in this case) but I can't locate any proper discussion of this. So what's the approach for sending 3.7?</p>
+						</li>
+
+										<li id="comment-126802" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126802" title="">Tuesday, 2 October 2018</a>
+							</div>
+						<p>I think I finally got it: the 3.7 there is meant to be simply 4 RSA-encrypted chunks put together in which case 4*4096 makes sense for total size of message and the "padding to 4*RSA-message length" in fact refers to 4*1960 (matches the footnote there too). </p>
+<p>I guess that "RSA-message" confused me as it's more of a RSA-payload basically, while the "message" being 4096 is a RSA-encrypted message.</p>
+						</li>
+
+										<li id="comment-126804" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126804" title="">Tuesday, 2 October 2018</a>
+							</div>
+						<p>Yeah, the "message" as in, payload, and the "message" as in, encapsulated payload ambiguity is counterproductive. Though I did attempt to call the former a message and the latter a packet throughout, I guess I didn't do such a good job of sticking to it.</p>
+<p>Ima give the whole thing a re-read today and update it.</p>
+						</li>
+
+										<li id="comment-126805" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126805" title="">Tuesday, 2 October 2018</a>
+							</div>
+						<p>" In the case of Serpent these are the same thing -- which should make it painfully obvious why we use it. " - uhm, not quite the same thing, merely the same size! From pov of protocol, same data structure though, indeed.  </p>
+<p>"http://trilema.com/2018/euloras-communication-protocol-restated/#selection-1099.361-1099.513" - is this 2nd packet with *new* Serpent keys or same keys as before? Also, is this 2nd packet the last or does the server keep re-sending the same Serpent keys in reply to any client message that is not 5.2 or 4.1 until it receives one of those?</p>
+<p><a href="http://trilema.com/2018/euloras-communication-protocol-restated/#selection-864.10-989.92">http://trilema.com/2018/euloras-communication-protocol-restated/#selection-864.10-989.92</a> - I assume that keys are entered in the order they are generated (&amp;sent) rather than received, since with UDP they might arrive in a different order so the only reliable indicator would be presumably the message count. What happens though if/when some keys don't make it at all to the client? The way I see it now, client would have to either ask the server to "burn" those it did not receive (if it's not the very first set so it still has some working Serpent key it can use to send the 3.2 management message) or otherwise, if it is the first set to just re-send the message so that the server in turn re-sends the keys. Is this the intended behaviour or am I missing some other option there?</p>
+<p>At 5.2 and 5.3 the id is on 8 bits so the magic values there should be much smaller as asciilifeform pointed out already in the log (http://btcbase.org/log/2018-10-02#1857434 )</p>
+						</li>
+
+										<li id="comment-126807" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">26</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126807" title="">Wednesday, 3 October 2018</a>
+							</div>
+						<p>> uhm, not quite the same thing</p>
+<p>Right, I just meant it has no overhead. RSA message is  Is this 2nd packet with *new* Serpent keys</p>
+<p>Server sends 40 Serpent keys for client to use to talk to it in any case. If client doesn't send Serpent keys for server to use to talk to it, then server sends client a further 40 Serpent keys, for server to talk to client.</p>
+<p>>  I assume that keys are entered in the order they are generated</p>
+<p>There's something weird going on with the selection there. But yes, message count orders items irrespective of transport layer. </p>
+<p>Keys are burned one at a time ; and client selects whichth key the server to use anyway. There is no re-sending of already sent keys in any case.</p>
+<p>Good point re magix huh, 8 bits not 8 bytes. Will fix.</p>
+						</li>
+
+										<li id="comment-126812" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">27</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126812" title="">Thursday, 4 October 2018</a>
+							</div>
+						<p>Further updates :<br />
+ - correct magic packet ids for the RSA packets ;<br />
+ - replaced a spurious keccak with a lighter (and more useful) crc32<br />
+ - removed a spurious keccak altogether (in 4.6).</p>
+						</li>
+
+										<li id="comment-126813" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">28</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126813" title="">Thursday, 4 October 2018</a>
+							</div>
+						<p>How about the ID in 5.2 ?</p>
+						</li>
+
+										<li id="comment-126814" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">29</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126814" title="">Thursday, 4 October 2018</a>
+							</div>
+						<p>That's a server-computed item. The server creates unique per-client ids out of its own unique global ids via keccak.</p>
+						</li>
+
+										<li id="comment-126822" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">30</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126822" title="">Friday, 5 October 2018</a>
+							</div>
+						<p>At 4.7 and 4.8 the n*int32 should also simply be "id of object."</p>
+<p>At 5.2 - what will server do with messages that have the count of keys set to anything above 40? Consider n=40 or discard the whole message as invalid?</p>
+						</li>
+
+										<li id="comment-126824" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">31</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126824" title="">Friday, 5 October 2018</a>
+							</div>
+						<p>Updated 4.7 4.8</p>
+<p>All illegal packets (including a packet purporting to carry more keys than possible) should be a) discarded and b) marked, because clients sending illegal packets will be examined (so the author can debug) and/or punished (so as to protect the server).</p>
+						</li>
+
+										<li id="comment-126972" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">32</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126972" title="">Wednesday, 7 November 2018</a>
+							</div>
+						<p>At note vi: "GF / 65.535 - 500 = MC" . Isn't that GF / 65.535 * 500 = MC ? (With GF a signed value.)</p>
+						</li>
+
+										<li id="comment-126975" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">33</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126975" title="">Wednesday, 7 November 2018</a>
+							</div>
+						<p>No. You are mapping the [0, 65535] interval onto the [-500,500] interval. As we want the mapping to be homogenuous, the function will be f(x) = (b-a)/(b' - a') x + (a'-a) where a and b, a' and b' are the limits of the respective intervals. </p>
+<p>Numerically, (65535 - 0)/(500 - -500) x + (-500 - 0) = x / 65.535 - 500.</p>
+						</li>
+
+										<li id="comment-126982" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">34</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126982" title="">Thursday, 8 November 2018</a>
+							</div>
+						<p>Ah, I read the 65.535 Ro style with "." as thousands separator, hence the confusion. The full formula makes perfect sense, of course.</p>
+						</li>
+
+										<li id="comment-126983" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">35</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126983" title="">Friday, 9 November 2018</a>
+							</div>
+						<p>At 5.1 the public exponent e of the client's RSA key is fixed as an int64 but this is not going to fit a republican RSA exponent (which is half the length of the modulus, so it would need 245 octets rather than 8).</p>
+						</li>
+
+										<li id="comment-126984" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">36</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126984" title="">Friday, 9 November 2018</a>
+							</div>
+						<p>At 7.7 (Train) the ID is probably 7.</p>
+						</li>
+
+										<li id="comment-126986" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">37</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-126986" title="">Friday, 9 November 2018</a>
+							</div>
+						<p>Re 5.1 : we're doing a variant special key here anyway, republican keys are 4096 bits.</p>
+<p>Re 7.7 : correct.</p>
+						</li>
+
+										<li id="comment-127061" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">38</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127061" title="">Monday, 19 November 2018</a>
+							</div>
+						<p>At 4.3 (File Transfer) and 4.4 (File Request) my current understanding is that the text fields include each a 2 octets header that states their own total length as per the "text" basic type. If this is correct, why use ";" to separate file names at 4.4? Why not just go like everywhere else int8 number of files requested, n*text filenames.</p>
+<p>At 4.5 I'm not sure there really is a need for the action itself to be packed as "text" (i.e. to have a leading 2 octets with total size) since any action is quite clearly specified and it starts with an int8 id that effectively sets everything else. I suppose it kind of gets forced in there because of the counter being at the end so one needs to know where to look for it to find message order without/before fully decoding the message but other than this I can't really come up with much need for it.</p>
+						</li>
+
+										<li id="comment-127062" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">39</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127062" title="">Monday, 19 November 2018</a>
+							</div>
+						<p>The expectation re 4.4 is that it might contain all the files a client wants in a single packet (so something like "hurr.jpg;durr.jpg;durr1.jpg;derp.png;herp.png" and so on. Should the client need more files than fit in a packet (so >1.x kb worth of filenames) it'd issue multiple packets ; but otherwise it's expected to issue one. 4.3 is specified as it is because a) the server is expected to return fully specified filenames ie including paths (something the client doesn't have to do, as it's not necessarily privy to them), which may be long ; b) the server is expected to send one file per packet and c) it seemed easier to use the same filename type than to have two different types, one for sending one for receiving. This indeed comes at a potential loss of two octets, but hail mary.</p>
+<p>Re 4.5, the portion regarding client actions is missing yet from the spec, consider that 5 section only lists some key management portions. Handling something such as "/show top" is undefined as of yet. The idea however is that the client'd issue text-style commands, to ease client implementation, so something like "move dx" or "attack $object" etc. And yes these have to be added up in section 5 once you're ready for it.</p>
+						</li>
+
+										<li id="comment-127063" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">40</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127063" title="">Monday, 19 November 2018</a>
+							</div>
+						<p>Any filenames that the client knows are anyway obtained from the server and as such they come with the full path. I suppose the client can simply use the filename without path to save space/pack more requested files in a single message but this means that the server then will search and send any file that matches the name (i.e. if there are 2 such files at different paths it will send both). Is this the intended behaviour? </p>
+<p>The section to add client action types is probably 7 rather than 5.</p>
+						</li>
+
+										<li id="comment-127064" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">41</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127064" title="">Monday, 19 November 2018</a>
+							</div>
+						<p>It's actually not currently specified whether 4.8 will include as object properties a full name or just a filename as a property of an object. The reason I've not done it is precisely because it's not yet clear to me what I prefer... maybe we should actually go by hashes instead of names (ie, object id) ?</p>
+						</li>
+
+										<li id="comment-127065" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">42</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127065" title="">Monday, 19 November 2018</a>
+							</div>
+						<p>I'm not sure that hashes provide much benefit here (the filename itself can be a hash at the end of the day) and they introduce the potential collision issue/ fixing space. But more to the point, my understanding was that the client can request files for any content that the server publishes so not even directly linked to a current object in the world - simply art files that are currently available. My (fuzzy) current model of such files is essentially a tree with the path in this tree indicating the "type" (i.e. siblings or perhaps even cousins are interchangeable/alternatives) and the "name" (that can be a hash of author + time or whatevers) identifying a specific thing.</p>
+<p>My observation that the client knows filename only from server simply focused on the fact that the server has to publish first those filenames + paths (not even only via those messages, presumably on a site works just as fine). </p>
+<p>Perhaps it's still a bit too early to fix this though, if we are too muddy on it.</p>
+						</li>
+
+										<li id="comment-127080" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">43</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127080" title="">Tuesday, 20 November 2018</a>
+							</div>
+						<p>Well yes "for any object the server publishes", but in the sense that if the object has a "file" property then the client can go "you know what, I don't have that file".</p>
+						</li>
+
+										<li id="comment-127086" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">44</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127086" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>Hm, the point was that there are alternative files for the same "property" - if client is to be able to choose whatever graphics they want basically. So to my mind the object's property is not the file itself but rather the path for that "type" of file in the tree I mentioned earlier. For instance, an object in Eulora's world has a "mesh" property but the value of this property is not a fixed file from the server's point of view - rather, it's something like "world/objects/meshes/" and at that path there are then for instance blue_with_dots_cat.png and pink_cat.png or whatever. So client can go "I don't know of this path" and request/get the full list of files there or it can go "I don't have already a choice made by the player for this path" or "the choice for this path is currently blue_with_dots but I don't have this file". Basically I don't think that the server should really care (as it currently does) directly about specific files when it describes an object - it should care instead only about the type of property i.e. the subset of files that fit in that slot. </p>
+<p>Unrelated: at 4.3 File Transfer, the message count seems to be all of a sudden used as a chunk count, is that intended? I thought the message count field in ALL messages is a global count i.e. irrespective of type of message so that "first" chunk can have for all one knows message count 100. Shouldn't there be a different field, basically "chunk count" for the order of this file's chunks?</p>
+						</li>
+
+										<li id="comment-127087" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">45</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127087" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>> there are alternative files for the same "property" - if client is to be able to choose</p>
+<p>There's only one coherent set at a time, and the server only exposes that. If the client wants to switch to a different scheme, it has to notify the server specifically, and henceforth the server will expose the new selection. There's no atomic choice at client level, but only global : "i wanna see joe's skin of this game, rather than moe's". </p>
+<p>And I also don't intend to ~ever~ drop one. If a client spends some time on Moe's scheme, that time will be counted for Moe. If then the client switches to Joe's scheme, the client's time will be counted half for Moe half for Joe. And if it adds a third, thirds to each, and so on. The more you know the less you matter, medieval style.</p>
+<p>> Unrelated: at 4.3 File Transfer</p>
+<p>I was hoping to get away with reusing the message count as a chunk count. Consider : yes it can start at any arbitrary value, such as 100 or anything else, but it can only increase. The only problem with overloading it for use as a chunk count seems to be that any overflows have to happen ~slowly~ enough, ie, server shouldn't increment it by too large a fraction of a 16 bit int at a time. But otherwise, if it does work as a message count, then it necessarily also works as a file chunk count, because what's the difference, bitfields both. What specifically is gained by having another, dedicated field ?</p>
+						</li>
+
+										<li id="comment-127088" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">46</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127088" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>Ah, so at least I uncovered that I had the level of granularity wrong there for "choose art" - I thought user could choose individual files and the authors get credited per file. It would be more of a mess though to track everything, for sure. Anyways, I'll chew on it a bit more then.</p>
+<p>Regarding the message id becoming chunk id: the main benefit is in keeping separate 2 things that are actually different (i.e. sure, I can count chunks and messages with the same counter but doing it *at the same time* means that effectively I can't tell anymore just what am I counting at any given time and therefore whether something is out of sequence or not - at least not without looking at the message type). Specifically, the main trouble I see is that the message counter resets when a file transfer starts (because first chunk is either 1 if there's more or otherwise 0). As a result, I'm not sure how to handle the case where delayed messages of another type arrive in between two chunks. Normally if it's out of sequence (or at least out of sequence by a large enough factor) it gets discarded. But now, for example: client gets message counters 1, 2, 3, 4, 5, 99, 100, 6, 7 where the 99,100 are not file chunks, just older messages from before-counter-reset. Does the client need now to look at the *type* of message before it interprets counter? Or does it update counter to 99 and then drops 6 + rest on the floor as out of sequence? Or it drops 1 on the floor because it's out of sequence badly since 99 was not yet received?</p>
+						</li>
+
+										<li id="comment-127089" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">47</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127089" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>There's also that "don't ask the customer for things you don't have to -- customer pays, that's enough".</p>
+<p>On the other score : client gets messages 1, 7, 22, 27, 31, 35, 44, 47, 51, 62, 63, 0, 19, 21, 24, 35, 41, 60, 7. Of these, 1, 22, 27, 31, 44, 47, 51, 62, 21, 24, 35, 41 are type 4.3 and as they sport the same filename they get arranged into the same file. The others are different messages and so don't get dumped into the file. So what's the problem ? Protocol specifically says message counter thing can only increase, so you can't do 100, 9.</p>
+						</li>
+
+										<li id="comment-127090" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">48</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127090" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>It wasn't about dumping wrong bits into the file because that has nothing to do with counters (it's all on type of message + filename) - it was about messing the order/processing of non-file messages because of a sudden reset of the message counter whenever a file transfer is started. So perhaps there is still something I don't quite get in the role of the message counter in general. Let me try to see if I can tease out what that might be. </p>
+<p>To my mind, the whole point of the message counter is to 1. preserve order of messages 2. provide a way for both sender and receiver to gauge their sync with one another at any given time. Resetting the counter at random places can mess up 1 in some cases (just like an overflow would do) and 2 in ~all cases. From what I gather you say that 1 doesn't matter *overall* but only for file chunks (for which it is preserved, yes) and that 2 doesn't matter that much. Is this the idea?</p>
+						</li>
+
+										<li id="comment-127091" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">49</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127091" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>Not at all. There's no resetting, the client still knows it received a packet, which is why the first order includes file packets as well as non-file packets. Then when it goes to process the files, it will have a subset of the list of counts.</p>
+						</li>
+
+										<li id="comment-127092" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">50</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127092" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>So that's the part that I don't get: it received "a" packet, but the counter in it went from 45323 previous packet to 1 now so how is that not a reset?</p>
+						</li>
+
+										<li id="comment-127093" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">51</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127093" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>There's nowhere in the protocol a promise that you will be able to predict the exact count of the next packet. All you know is that it will be larger than the previous, and in this context 0 > maxint. </p>
+<p>I mean, what, sessions are endless, counts are finite, evidently they run over sometimes. This isn't a remarkable event, unless they run over too quickly.</p>
+						</li>
+
+										<li id="comment-127095" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">52</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127095" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>Precisely, it's not about "exact next count" but about "too quickly", hence my initial tiny example with small numbers. Through a file transfer, the counter can effectively run over at any point, so no matter how quick is "too quickly", it can actually happen.</p>
+						</li>
+
+										<li id="comment-127096" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">53</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127096" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>But if it happens less than once per five or so packets, who cares.</p>
+						</li>
+
+										<li id="comment-127097" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">54</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127097" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>Lol, so it's about "not often enough." I'm sure it can be worked with as it is - it just grates as added trouble for saving 16 bits per file transfer packet and I'd rather make sure it's intended+worth it.</p>
+						</li>
+
+										<li id="comment-127098" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">55</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127098" title="">Wednesday, 21 November 2018</a>
+							</div>
+						<p>It's not clear to me that spending more would provide a benefit (literally -- it's not clear to me that if we had another 16 bits, it'd be better to actually make a dedicated file counter for 4.3 or simply make the general counter 32 bits). But I guess the matter can also be re-considered later.</p>
+						</li>
+
+										<li id="comment-127409" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">56</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127409" title="">Sunday, 13 January 2019</a>
+							</div>
+						<p>How can the client check that the RSA messages it receives (5.2 aka Serpent keys set and 5.3 aka Serpent keys management) are actually from the server and not from an attacker (since public key is public key so possibly known to an attacker)?</p>
+						</li>
+
+										<li id="comment-127412" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">57</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127412" title="">Sunday, 13 January 2019</a>
+							</div>
+						<p>Beyond a correct sequence number, it can't / doesn't. </p>
+<p>The protocol is designed for secure cheapness rather than pure security ; in this vein following and because the situation is asymmetrical (the client being fooled by Eve is relatively harmless ; the server being fooled by Eve is potentially a lot more harmful) follow measures <a href=http://trilema.com/2018/euloras-communication-protocol-restated/#selection-1109.0-1109.256 >such as</a>.</p>
+<p>In general, both situations where a) the server is tricked into sending encrypted messages to someone who can't decrypt them or b) the client receives correctly encrypted messages seemingly from the server that the server never originated are regarded as acceptable.</p>
+						</li>
+
+										<li id="comment-127483" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">58</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127483" title="">Tuesday, 22 January 2019</a>
+							</div>
+						<p>At Serpent Key management (5.3 and 4.2): presumably the IDs of Serpent keys used to set current key and/or burn key are those CRC32 values calculated for the full key, correct? Footnote XII mentions passive IDs for Serpent keys aka position in a ring-buffer of keys hence the uncertainty as to what ID is meant there. Also: while the upper limit of 256 keys / account makes perfect sense, why is the protocol concerned with the structure in which Serpent key are kept (i.e. ring buffer or whatever else, how does it matter protocol-wise)?</p>
+						</li>
+
+										<li id="comment-127484" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">59</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127484" title="">Tuesday, 22 January 2019</a>
+							</div>
+						<p>Come to think of it I guess the "ID" is actually meant to be "position in the ring buffer" while the other "ID" is in fact just a checksum to be used at reception for checking validity but nothing more. In which case there is potentially a mess to sync since lost messages and/or out of order can mess up the position and if message counter is not even reliably meant to be "received message + 1 " or something similar, it's not even very clear just how to check that there is no lost message.</p>
+						</li>
+
+										<li id="comment-127485" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">60</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127485" title="">Tuesday, 22 January 2019</a>
+							</div>
+						<p>> presumably the IDs of Serpent keys used to set current key and/or burn key are those CRC32 values</p>
+<p>No, they're the 0 to 255 values describing the position of the key in the fixed ring buffer. Unless you specifically and for good reason prefer it working the other way.</p>
+<p>> why is the protocol concerned with the structure</p>
+<p>Specifically so as the indexing above can be maintained. Consider a situation where a client burns keys 17, 233 and 219 in that order ; after which sends three keys. That the third key sent is now ID 219 can only be guaranteed if the model implementation is said ring buffer as described (more complicated interplay of burns and supplies can be devised to tease out more subtle differences between the specific instrument and possible alternatives).</p>
+<p>> there is potentially a mess</p>
+<p>There is, but since the only possible result is some burned keys, this is regarded as a positive outcome. In this view, the omni-Eve would have to exactly predict which packets made it and which didn't on top of everything else.</p>
+<p>> how to check that there is no lost message.</p>
+<p>I can't imagine why one would. UDP comes with no guarantees, and the things built upon it'd better keep to that principle lest they end up reimplementing TCP halfway in.</p>
+						</li>
+
+										<li id="comment-127486" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">61</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127486" title="">Tuesday, 22 January 2019</a>
+							</div>
+						<p>If it's not self-obvious : the expected behaviour of client in case it selects a key from its buffer and the server responds by using a different key than expected is to a) reselect, a different key and b) burn the surprise  (with the optional extra c) send a replacement key for the burned surprise). </p>
+<p>Through this algo the misindexed keyset is attrited over some time interval (and in case the whole platoon ends up hanged, key exchange can be restarted in the usual bootstrap way).</p>
+						</li>
+
+										<li id="comment-127642" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">62</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127642" title="">Monday, 28 January 2019</a>
+							</div>
+						<p>Follow up from <a href="http://trilema.com/2018/euloras-communication-protocol-restated/#comment-126807">http://trilema.com/2018/euloras-communication-protocol-restated/#comment-126807</a>  : what does the server do if client keeps sending 5.1 or at similar? For example: client requested account (5.1), server made it and sent one set (5.2) of S keys (for client's use), then at next not-5.2-nor-4.1 sent 2nd set (for server's use, still 5.2) and then client still sends 5.1 (perhaps because it hasn't received either of server's messages with keys for instance).</p>
+						</li>
+
+										<li id="comment-127643" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">63</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127643" title="">Tuesday, 29 January 2019</a>
+							</div>
+						<p>Ban the IP for an hour on the first instance, for a month on the second and permanently thereafter. Something like that.</p>
+						</li>
+
+										<li id="comment-127649" class="commentbody"><div class="commenthead"><img alt='Stanislav Datskovskiy`s avatar' src='http://www.loper-os.org/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">64</div>
+								<span class="authorlink"><a href='http://www.loper-os.org' class='url'>Stanislav Datskovskiy</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127649" title="">Tuesday, 29 January 2019</a>
+							</div>
+						<p>@Mircea Popescu you'll probably want to ban /24 (or even /16); a perma-ban list containing individual IPs will potentially weigh 100s of MB, and palpably cost CPU.</p>
+						</li>
+
+										<li id="comment-127650" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">65</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-127650" title="">Tuesday, 29 January 2019</a>
+							</div>
+						<p>Cross that bridge when next to it, I think.</p>
+						</li>
+
+										<li id="comment-128634" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">66</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128634" title="">Tuesday, 26 March 2019</a>
+							</div>
+						<p>What happens if/when client requests to burn the currently selected preferred communication key? Does the server comply and burn it - in which case there is the potential situation of having some keys still available but no preferred one and if so, what does the server do when/if it needs to reply? Does it fall back on the "initial" mode aka reply with another set of serpent keys (i.e. it needs to check that it doesn't overwrite existing but not set ones) RSA-encrypted for as long as there is no preferred serpent key?</p>
+<p>On server side I don't quite see any reason/situation where it would set to burn its preferred key without setting a different one. And for this reason I rather tend to see a message that burns the preferred key without setting a new valid one as spam/invalid rather than something to act on.</p>
+						</li>
+
+										<li id="comment-128635" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">67</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128635" title="">Tuesday, 26 March 2019</a>
+							</div>
+						<p>Nobody can burn a preferred key ; though not specifically stated, that's in the meaning of preference.</p>
+<p>In fact, this'd be a reportable event, considering it betrays significant mechanical malfunction on the burner's part.</p>
+						</li>
+
+										<li id="comment-128636" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">68</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128636" title="">Tuesday, 26 March 2019</a>
+							</div>
+						<p>I think it can happen also in some out of sync situations, not necessarily more than that: client requests new set of keys and burns current one, setting a new one from the new set; this would normally be fine but if the new set ends up on different positions on the server, it can well be that the news "preferred" one from client's point of view does not exist as far as the server knows. (E.g. current preferred is 3; client thinks there are 40 keys and requests to burn 3, create 11 and set 50; server onth thinks there were only 20 keys so there is no "50" to set even if it adds 20 new ones.)</p>
+<p>And just to make sure since it came up above:<br />
+1. Do new Serpent keys fill any holes (i.e. previously burnt) in the circular buffer? (since adding them "at the end" still potentially runs into going back to beginning and filling holes. Or do they have to end up on consecutive positions?<br />
+2. On receipt of a request for keys management what's the order: first burn, then create and place in buffer/assign indices or the other way around?</p>
+						</li>
+
+										<li id="comment-128637" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">69</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128637" title="">Tuesday, 26 March 2019</a>
+							</div>
+						<p>1. Yes.</p>
+<p>2. In the order received.</p>
+<p>I'm not sure what you mean re "preferred doesn't exist". If the client thinks his keys end up on say positions 3, 5, 7, 9, but for reasons having to do with de-sync they end up on position 2, 4, 6, 8 they're in fact as good as gone, irrecoverably lost as well as if shredded mechanically. The server can't at this juncture accept the inexistent key 5 being set as preferred, and as a matter of consequence the client can never ask to burn a preferred key.</p>
+<p>Indices are absolute, this much is clear, yes ? Both in client and server hands, 5 references the 5th item in ring buffer, there's no possibility of confusion as to this part. Whether it contains something and what exactly is up for grabs, but what "5" means, that's built-in.</p>
+						</li>
+
+										<li id="comment-128642" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">70</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128642" title="">Tuesday, 26 March 2019</a>
+							</div>
+						<p>Indices are absolute, yes. </p>
+<p>"the client can never ask to burn a preferred key." - &gt; message 5.3 does 2 things at the same time namely A. sets preferred key and B. burns a number of keys. Hence my question: in what order are A and B done? Does the set go first and the burn afterwards e.g. in situation with preferred key 5, client can ask to set preferred key 6 and burn 5,7,9. Or does the burn go first in which case the same message would be invalid since it would amount to burning the preferred key?</p>
+						</li>
+
+										<li id="comment-128643" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">71</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128643" title="">Tuesday, 26 March 2019</a>
+							</div>
+						<p>In ordine, A inainte de B. Ar fi mai bine sa specific ca int-ul selectat la preferred nu poa' sa apara in array-ul de burned ? Mi se pare cam superfluu asa...</p>
+						</li>
+
+										<li id="comment-128644" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">72</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128644" title="">Tuesday, 26 March 2019</a>
+							</div>
+						<p>Daca ordinea e clara, nu-i nevoie de altceva dar din text cum era, n-am vazut sa fie clar ca adica intai seteaza cheia si abia apoi se pune pe belit, atat. Logic cam asa ar fi sa fie dar fiind protocol, mai bine explicit, atat.</p>
+						</li>
+
+										<li id="comment-128646" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">73</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128646" title="">Tuesday, 26 March 2019</a>
+							</div>
+						<p>Pai in sensul ca "int8 (id of serpent key preferred for further inbound Serpent-messages), <em>followed by</em> [...] n*int8 (id of burned key)". In tot cazul, acum e clar. Nu mai editez dinsus ca noa, sa nu se stufoseasca.</p>
+						</li>
+
+										<li id="comment-128847" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">74</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128847" title="">Thursday, 11 April 2019</a>
+							</div>
+						<p>I think that the initial number of Serpent keys sent (when creating a new account, i.e.  <a href="http://trilema.com/2018/euloras-communication-protocol-restated/#selection-1119.178-1119.360">http://trilema.com/2018/euloras-communication-protocol-restated/#selection-1119.178-1119.360</a> ) should be 19 rather than 40 because the first set will inevitably be sent via RSA and a RSA message fits only 19 keys at a time (so sending 40 means sending 2 full messages and one message with only 2 keys). The 40 is calculated as it's maximum fitting one single Serpent message but RSA suffers from the fact that useful space is less than half (specifically the number n of Serpent keys that fit in one message is n</p>
+						</li>
+
+										<li id="comment-128849" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">75</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-128849" title="">Thursday, 11 April 2019</a>
+							</div>
+						<p>It ate muh Maffs! Max number is 40 for Serpent and 19 for RSA, calculated as floor (  ( msg_length - 5 ) / 36 where msg_length is 1472 for Serpent but only 702 for RSA.</p>
+						</li>
+
+										<li id="comment-129025" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">76</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129025" title="">Wednesday, 1 May 2019</a>
+							</div>
+						<p>At File Request / Transfer (4.3 and 4.4) it strikes me that the "filename" is in fact for all intents and purposes an id, although one of variable-but-limited length. Am I missing something there or why even restrict it to ASCII-valid characters (if that's the implication of "filename") ? Sure, it's an ID in a different (and presumably much bigger) set than that of objects but that in itself is not a problem. Even as a "full path" as the names discussion suggests, there is nothing to say that software should use human strings *internally*.</p>
+<p>What is the reason anyway for not fixing the length of this ID (be it "string")? Variable length is a source of big trouble (the ; separator is just the beginning) and the reality is that there is anyway an upper limit given by the message's own size. I can see the argument of not wasting space but it's unclear to me if variable-size really is the best approach here.</p>
+						</li>
+
+										<li id="comment-129031" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">77</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129031" title="">Thursday, 2 May 2019</a>
+							</div>
+						<p>That's a jumble of questions, so let's try taking them one by one.</p>
+<p>I'm not sure what's the source or cause of things besides history. Historically this "arbitrary length id composed of a subset of characters" being extensively used, it readily sees its usage extended into the present.</p>
+<p>I don't think there's a serious cause of concern, re length or char subset, or anything else, because the server is the only one capable of creating new entries in the set of "filenames", and so we simply won't make names we, for whatever reason, do not like. In any case the problem with fixing the length is that if you fix it long enough to "never have problems" you then waste on padding, and if you save on padding then etcetera.</p>
+<p>I do believe it's important to use a subset of available characters specifically so that things like "; is separator" can stand meaningful. "Ascii" as extended for use in said tradition ("filename ascii" ie, including dots and / but not including ? or ; etc) directly extends its history into the present etcetera.</p>
+<p>All that being said, I don't necessarily think this is perfect or that all the thought went into it already that ever can or will. Is there some actual problem that needs solving somewhere in there ?</p>
+						</li>
+
+										<li id="comment-129033" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">78</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129033" title="">Thursday, 2 May 2019</a>
+							</div>
+						<p>It started mainly from being a bit confusing/difficult to get the idea behind it - in part I think precisely because of "filename" having such lengthy history, paths included or not and all that. This can arguably be addressed quite easily once it's settled enough. </p>
+<p>Strings are a cumbersome thing from a programming perspective (and especially so in Ada, I'd say) but there is of course no requirement to actually treat them as strings and not as raw octets in the implementation, now that I stopped stumbling on the name as it were. </p>
+<p>Working on figuring all of this out, so far my understanding of it is that there are in fact 3 distinct types of IDs: object_id (i.e. for all and any entity be it actor, object, world, whatever in the game itself), property_id (that basically selects one specific structure + meaning) and value_id (that would be the filename). The full set of possible properties is to be made public at some point by the server (and in principle it can even be added to, since the mechanism is there). The object info effectively contains a list of tuples (property_id, property_content) where the property_content can be anything basically but according to the structure and meaning for that type of property; specifically, property_content can be a value_id (i.e. a filename) or it can be an object_id or even a list of values (perhaps for location since one needs x,y,z). Is this correct?</p>
+						</li>
+
+										<li id="comment-129034" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">79</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-129034" title="">Thursday, 2 May 2019</a>
+							</div>
+						<p>I'd say so.</p>
+						</li>
+
+										<li id="comment-148746" class="commentbody"><div class="commenthead"><img alt='Arden Wehmeyer`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">80</div>
+								<span class="authorlink">Arden Wehmeyer</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148746" title="">Sunday, 12 April 2020</a>
+							</div>
+						<p>My developer is trying to convince me to move to .net from PHP. I have always disliked the idea because of the expenses. But he's tryiong none the less. I've been using WordPress on a number of websites for about a year and am concerned about switching to another platform. I have heard excellent things about blogengine.net. Is there a way I can transfer all my wordpress posts into it? Any kind of help would be greatly appreciated!</p>
+						</li>
+
+										<li id="comment-148766" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">81</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148766" title="">Sunday, 12 April 2020</a>
+							</div>
+						<p>Fuck .net nonsense with a red hot poker ; and fire that moron, he's no developer, he's just some NEETard.</p>
+						</li>
+
+										<li id="comment-153045" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">82</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153045" title="">Friday, 24 July 2020</a>
+							</div>
+						<p>As I'm getting finally closer on clientside to having to handle this: how is the player supposed to actually "move"? The way I understand the mechanism currently is that the client defines and uses its own movement locally but from time to time it has to sync with the server on this so it has to send its proposed position. At the moment I couldn't figure out what sort of message would fit - is this an action too or is the position of the main char sent by the client with all action messages anyway or is there something I'm missing here still?</p>
+						</li>
+
+										<li id="comment-153047" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">83</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153047" title="">Friday, 24 July 2020</a>
+							</div>
+						<p>I think it should be an action. Exactly as the client tells the server "now X is equipped", the client also tells the server "now I'm at X, Y". If the server deems this possible it updates the client in its own books, and if not it does not (the client is more than welcome to believe itself in the right, until the next WB). Whatever the client may be displaying on the screen, movement then consists in these actions. No ?</p>
+						</li>
+
+										<li id="comment-153049" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">84</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153049" title="">Friday, 24 July 2020</a>
+							</div>
+						<p>Makes perfect sense to me and it's exactly how I think it should be. Only the current "Move" action ie 7.6 is clearly made for items in inventory/containers and I'm not sure it fits directly the character movement too - mainly because "position" means 3 int16 (x,y,z) and 3 int8 (rotation) while 7.6 gives the slot id as position (ie 1 int32) and doesn't care about rotation. Should there be another Move type added to section 7 for character movement as such or do we spec this 7.6 to fit both cases?</p>
+						</li>
+
+										<li id="comment-153050" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">85</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153050" title="">Friday, 24 July 2020</a>
+							</div>
+						<p>Re-reading I discovered also that 7.7 had the wrong typeid  (type ID, =4) ; but yes, it seems indeed the protocol's insufficient as stated. Ima re-read again.</p>
+						</li>
+
+										<li id="comment-153051" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">86</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153051" title="">Friday, 24 July 2020</a>
+							</div>
+						<p>Upon re-reading, it's obvious the original intention was for movement to go into <a href=http://trilema.com/2018/euloras-communication-protocol-restated/#identifier_16_79596>4.5</a> ; it is not specified in 7 because, for some reason, movement wasn't deemed an action (or not an action, in abeyance for clarifying that "fully specified action, see section 5" item -- which I believe was intended to reference to section 7).</p>
+<p>So I guess it is now time to clarify, thus look above at 7.8 : </p>
+<p>I propose the server not store nor bother with client facings/rotations. This comes at the cost of never being able to tell the client "you're facing the wrong way, your action's invalid/penalized/whatever" ; but I believe this is a cost we are willing to pay (the only circumstance in which this could be relevant, namely combat, I intend to handle in "a special instance" rather than the open world). It also comes with the benefit of saving three small ints moving back and forth all the time. Are you sold ?</p>
+<p>Also I suppose the client could produce both a next and a projected-next signal, but this complication seems somewhat of a waste of time, let the client smooth things out on its own dime, no need to involve the server with that.</p>
+						</li>
+
+										<li id="comment-153052" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">87</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153052" title="">Friday, 24 July 2020</a>
+							</div>
+						<blockquote><p>
+Upon re-reading, it's obvious the original intention was for movement to go into 4.5
+</p></blockquote>
+<p>I think this is indeed so and it's why I said in my earlier comment that perhaps the position was meant to be sent anyway with *all* actions ie outside of the "fully specified" specific part, as a generic present with all and any actions. Then again, not sure if this would make any more sense then just having this new Relocate and leave it at that.</p>
+<blockquote><p>
+It also comes with the benefit of saving three small ints moving back and forth all the time.
+</p></blockquote>
+<p>I'm not sure that there's much to this benefit at all: there is anyway only one action per message and in turn that message gets packed into a fixed-size packet so the bytes sent are the same whether the message includes the rotation or not. So the only gain as such is at most not having to pack those 3 ints but nothing more. Moreover, the server can ignore them anyway (ie not bother to check them or even read them) but otherwise note that the server sends them at all times anyway so again the benefit gets further reduced since they'd be missing at most from client-sent messages, not from server-sent messages.</p>
+<blockquote><p>
+Also I suppose the client could produce both a next and a projected-next signal, but this complication seems somewhat of a waste of time, let the client smooth things out on its own dime, no need to involve the server with that.
+</p></blockquote>
+<p>I agree with this, it's entirely up to the client, not much concern of the server's.</p>
+						</li>
+
+										<li id="comment-153053" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">88</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153053" title="">Friday, 24 July 2020</a>
+							</div>
+						<p>I don't think there is any benefit to welding client position updates into everything, not least because the Eulora player does spent large portions of gameplay immotile.</p>
+<p>The discussion of the "benefit" was an exercise in sarcasm, ill advised as thus proceeding may be in context ; but I am also contemplating removing the server-sent orientation, to go with this. Do you have any strong notions on the topic ?</p>
+						</li>
+
+										<li id="comment-153054" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">89</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153054" title="">Friday, 24 July 2020</a>
+							</div>
+						<p>Hm, if you mean to send only coordinates for each object (ie never the rotation at all), I suppose it could work. I think initially there was some idea re pictures hanging on walls and the like requiring orientation even more than the characters themselves but it's true that at the end of the day it's not an absolute must - though it is an unexpected change, lol.</p>
+						</li>
+
+										<li id="comment-153056" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">90</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153056" title="">Friday, 24 July 2020</a>
+							</div>
+						<p>I suppose it doesn't have to be muntzed right now. Seeing how the rest's padding anyways, might as well add some more ints.</p>
+<p>I updated the message to use the pre-defined "object" object, hopefully that's okay.</p>
+						</li>
+
+										<li id="comment-153069" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">91</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153069" title="">Saturday, 25 July 2020</a>
+							</div>
+						<p>Works, I don't see any problem with it at all.</p>
+						</li>
+
+										<li id="comment-153710" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">92</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153710" title="">Monday, 17 August 2020</a>
+							</div>
+						<p>Looking at the basic types that are all defined as signed integers, it seems to me that there is potentially a clash between the Ada world that aims to define the types correctly so that all code afterwards has a guarantee that the value is valid (in the valid range) by definition and the C/CPP world that ends up more on the side of "define the types so that out of range values don't make at least *too much* of a mess". The way I saw those definitions of basic types at that time in the very beginning of trying to pin down this protocol was mainly to fix the number of octets while leaving still the option of negatives since I had no idea if we could get away without them. Currently going through all of the protocol though, I don't really see *any* of the items/types making sense as signed/negative at all.</p>
+<p>As I am not sure though if considering all values on the wire simply unsigned is not cutting it too close or undesirable anyway, I'd rather have it discussed in clear: should all values of basic types sent/received on the wire be treated as signed (with the rather unfortunate effect that well, kind of importing therefore the c/cpp style of values may be out of range), treated as unsigned or specified individually as one or the other (doubling thus the basic types to have int64 and uint64)?</p>
+						</li>
+
+										<li id="comment-153721" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">93</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153721" title="">Monday, 17 August 2020</a>
+							</div>
+						<p>I agree it was originally specified that way mostly to have something definite set down against which to work later ; I also agree negative values don't seem to have any actual, practical utility. In any case I'm not at all against following the ada view.</p>
+<p>It's funny that you bring this up now, because for the past day or two I've been pondering the issue of ints versus "reals" (sprung as a corner joy by the wider attempt to set down the combat mechanics already). The problem is that on one hand, it's self-obvious nothing but discrete, natural numbers exist on or are truly available to the machines ; yet on the other the sort of calculations involved in arbitering combat most greatly benefit by a "zoomed in" so to speak view of the numeric reality, because obviously not all digits of a long number are equally interesting to the human riding on top. Given the choice between "sanity, potentially taking an arbitrary -- and unknown in advance because <em>unknowable</em> in advance -- number of bytes" and the imprecise mantissa insanity that nevertheless comes with a firm promise of fitting in 40 bits or whatever... I am very much inclined to take what's behind door number two.</p>
+<p>One way or another there's gonna have to be something like scientific notation in Eulora, simply because the infinitely scaling numeric universe it is philosophically predicated upon can not be physically afforded on finite machines otherwise. Wut do ?</p>
+						</li>
+
+										<li id="comment-153722" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">94</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153722" title="">Monday, 17 August 2020</a>
+							</div>
+						<p>Hm, new problem to ponder but indeed, I don't see any way in which int+fixed length would be enough. Still, do those floats need to be sent on the wire too or are they at least only server-side?</p>
+						</li>
+
+										<li id="comment-153725" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">95</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153725" title="">Tuesday, 18 August 2020</a>
+							</div>
+						<p>For very deliberate &#038; intentional fundamental reasons server side only.</p>
+						</li>
+
+										<li id="comment-153728" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">96</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153728" title="">Tuesday, 18 August 2020</a>
+							</div>
+						<p>I suppose then one theoretical option would be to go the route of arbitrarily long integers but I really can't say I see the whole additional weight it brings as justified at least based on what I know so far. Perhaps it becomes clearer/we might end up figuring out some options when looking at that in more concrete detail as well, I don't yet know. It's at least an interesting thing to think of, heh.</p>
+						</li>
+
+										<li id="comment-153927" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">97</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153927" title="">Thursday, 27 August 2020</a>
+							</div>
+						<p>At Move (7.6), is that slotID actually desired/needed/useful in there? The deeper I go with this part of moving stuff around, the less and less I see any reason why the server would exactly care as to what "slot" the thing is set in, as such. The destination id seems quite enough: depending on context, the result is either mixing with that destination object or putting into that destination object (e.g. "picking up" in this sense is simply moving objects to the player, while mixing stuff in inventory is simply moving object A to object B. As to "slots", that's in the end purely a clientside thing: why would the server care if one imagines that their backpack is this magically neat thing with ordered rows or whatever?</p>
+<p>The only part where I can see perhaps some trouble is the equip vs inventory but I think that "equip" is arguably a different action rather than "a different slot to move stuff into", especially in the light of that older discussion that there is no reason to limit/predefine the places for equipping stuff anyway.</p>
+<p>To summarise my points:<br />
+1. I think that slotID is purely a clientside concern and I don't currently see any actual reason to send it to the server/have it as a requirement in the protocol.<br />
+2. I think the Equip part might need some more fleshing out and possibly setting as a separate action from "Move".</p>
+						</li>
+
+										<li id="comment-153929" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">98</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153929" title="">Thursday, 27 August 2020</a>
+							</div>
+						<p>The only concern here is that the ordering of items in containers is purely a manifestation of player arbitrarity. If the client has no specific way to tell the server item x comes in the list before item y, how can the server return containers sorted as the player sorted them, rather than in some (approximation of a) random order ?</p>
+<p>I suppose this could be left to the client entirely, the notion of container contents ordering I mean... but it seems... hm. Basically we'd be doing something nutty here, wherein the world state got cut in two parts, one held on the server, the other held on the client. It doesn't seem advisable from up high.</p>
+						</li>
+
+										<li id="comment-153931" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">99</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153931" title="">Thursday, 27 August 2020</a>
+							</div>
+						<p>Hm, I struggled a bit to see what you mean there - the best I got would be the sort of "player set their inventory this way and then on re-login stuff moved about because server didn't care about their OCD and sent them alphabetically anyway". I suppose the core of it is that I wasn't all that convinced that the ordering of contained stuff matters at all but I suppose it matters in the sense that it's indeed better to make a jumble of it intentionally if desired rather than simply as a ... side effect of not giving a damn about it. </p>
+<p>Anyways, it's not a huge issue - so far I went about it as it's stated anyway so I'll just keep going then, with this artificial slotID thing in there, sure.</p>
+<p>Is the equip meant to be a move to the "equip" (or e.g.equip-in-left-hand) object sort of thing then?</p>
+						</li>
+
+										<li id="comment-153932" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">100</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153932" title="">Thursday, 27 August 2020</a>
+							</div>
+						<p>That's exactly what I mean tho, if the player sorts his inventory by the rule "potions first, from red to blue ; weapons after, from pointy to blunt" and you show them a list of jackets interspersed with grasses upon relog, he'll throw a fit. And by he I kinda mean me, so.</p>
+<p>I imagine the natural server order is oldest-to-newest, and I suppose some argument for making that the order could be produced ; but the natural player order is a combination of usage frequency, comfort of reach and personal nuttery, and it'll have to be catered to. We should probably offer a button to reset the order, such that all stackables are stacked and items are re-ordered in some fixed, server-esque manner, but that's about as far as order forcing can go I think.</p>
+<p>As to the equipment, essentially the idea is for equipping to set (rather, toggle) a flag on items, such that they're now "equipped". We could implement this as a list of reserved slots (as it's done now) or we could implement this as a genuine flag (in which case I suspect we need another message type, do we ?). </p>
+<p>As it happens "the obvious disadvantage" of the way it's done now isn't either as obvious nor as disadvantageous as it appears to casual inspection : we could use a convention whereby say all items in slots whose ids end in 0 are "equipped", while the rest are not, and then present the two lists as needed in-game (even if we do away with the dolly specifically, a list of equipped items will have to be available in some manner somewhere), taking advantage of the circumstance that there's just as many infinite items slots in one list as in the other.</p>
+<p>I don't have a strong preference either way, each drives some increase in mechanical complexity, so what's your preference ?</p>
+						</li>
+
+										<li id="comment-153933" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">101</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153933" title="">Thursday, 27 August 2020</a>
+							</div>
+						<p>Hmm, I can see the added trouble with both approaches, whether implicit (by convention) flag or explicit flag (since that's about the whole difference anyway, otherwise it's still a flag and nothing else). Weirdly enough, despite my initial reaction of "eeek, not an implicit-by-convention-thing-in-code", the 2nd to 5th pass over the thing still pull more towards this solution, mainly because it doesn't add more bulk to the protocol itself while not imposing any real additional limits either (while in practice the infinity of slots is very strictly limited to 8 octets uint representation, I expect that's practically speaking infinity enough for any euloran character anyway so I don't consider this part any problem as such).</p>
+<p>I suppose the GUI will have to show the equipped slots to the side or something, somehow marked as different from the rest.</p>
+						</li>
+
+										<li id="comment-153935" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">102</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153935" title="">Thursday, 27 August 2020</a>
+							</div>
+						<p>I suppose something like that, an enumeration of one-wide rather than ten or whatever width columns, also scrollable. Maybe two ?</p>
+<p>Anyways, once the in-principle infinity of it is accounted for in the display there should be no problems really.</p>
+<p>And if problems do crop up, well... we can always revisit neh.</p>
+						</li>
+
+										<li id="comment-153936" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">103</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-153936" title="">Thursday, 27 August 2020</a>
+							</div>
+						<p>Ah, the infinity-in-principle is not an issue from the GUI pov, not anymore (since I cut out the predefined idiocy and made it simply create slots as needed, not like they cost anything significant). It's just that there will have to be some additional sorting of the slots somewhere in the processing part so that they are not all a jumble visually - otherwise I could even just paint them/their background differently and be done with it but having them mixed sounds rather annoying to me.</p>
+						</li>
+
+										<li id="comment-154390" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">104</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154390" title="">Saturday, 19 September 2020</a>
+							</div>
+						<p>Some intercontinental testing of the actual client candidate has revealed that the first-pass specification for file transfer over UDP here contemplated doesn't actually work so well in pratice with the multi-mb files we occasionally might wish to transfer. Consequently we're altering the spec to require a revised, more robust solution ; and since we're doing that, other second order considerations lay out otherwise than originally contemplated, leading to further revisions in the file transfer schema.</p>
+						</li>
+
+										<li id="comment-154391" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">105</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154391" title="">Saturday, 19 September 2020</a>
+							</div>
+						<p>And updated.</p>
+						</li>
+
+										<li id="comment-154746" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">106</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154746" title="">Monday, 5 October 2020</a>
+							</div>
+						<p>That bytesize of file at 4.4.f might need to take up more than 2 octets because otherwise it limits all files to 65535 octets and that's just too little for graphics.</p>
+						</li>
+
+										<li id="comment-154749" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">107</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154749" title="">Monday, 5 October 2020</a>
+							</div>
+						<p>It's not the bytesize of the whole file, it's the bytesize of the [useful part of the] "file" object, which meanwhile got re-baptised "chunk" to -- believe it or not -- remove the confusion. And increase clarity.</p>
+<p>I've edited it to clarify.</p>
+						</li>
+
+										<li id="comment-155952" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">108</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-155952" title="">Friday, 13 November 2020</a>
+							</div>
+						<p>Finally got around to updating the 5.2 message keycount to the 19 it should've been from the very beginning.</p>
+						</li>
+
+										<li id="comment-156612" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">109</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-156612" title="">Monday, 7 December 2020</a>
+							</div>
+						<p>Since the size of sectors <a href="http://ossasepia.com/2020/07/24/those-zip-files-of-euloras-client-graphics/#comment-8904">might actually change</a>, maybe it makes sense to update and use some constant e.g. in note vi giving the formula for transforming world coordinates (float) to protocol ones (int) and back. </p>
+<p>Also, since I'm looking at this now anyway - for implementation and Ada reasons (the most important part being that Integer type as such is not guaranteed to have any fixed-size representation from one machine to another and so I'd much rather specify every time exactly how many octets I want for a variable), I'll probably keep all integer values in the protocol/communications part as unsigned rather than signed. I don't think that's any issue in any way really (after all, it's at most a translated interval) but then again, not sure if there's actually any need for signed integers in the whole communication part to start with, is there?</p>
+						</li>
+
+										<li id="comment-156618" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">110</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-156618" title="">Monday, 7 December 2020</a>
+							</div>
+						<p>Nothing readily comes to mind as to why we'd specifically want signed ints in the comm protocol. I'll look through this and revise accordingly this week.</p>
+						</li>
+
+										<li id="comment-159037" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">111</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-159037" title="">Thursday, 21 January 2021</a>
+							</div>
+						<p>Added IP to 5.1 ; replaced " int" with " uint" to make it plainer that indeed nothing about signs is intended or implied ; expanded the proto mechanics heading and substantially reviewed packet types.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-126680">
+					<div class='trackhead'>
+						<div class="commentcount">112</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2018/09/14/smgcomms-implementation-chapter-1/' class='url'>SMG.Comms Implementation - Chapter 1 &laquo; Ossasepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-126680" title="">Friday, 14 September 2018</a>
+					</div>
+					<p>[...] This is a work in progress towards an Ada implementation of the communication protocol discussed on Trilema four months ago. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-126882">
+					<div class='trackhead'>
+						<div class="commentcount">113</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2018/10/13/results-of-testing-udp-take-2/' class='url'>Results of Testing UDP - Take 2 &laquo; Ossasepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-126882" title="">Saturday, 13 October 2018</a>
+					</div>
+					<p>[...] reflects the fact that ALL messages are either 14721 or 14702 octets long in the newest version of Eulora's communication protocol. Here's the summary of the data I [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-126889">
+					<div class='trackhead'>
+						<div class="commentcount">114</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2018/10/16/smg-comms-chapter-2-raw-types/' class='url'>SMG Comms Chapter 2: Raw Types &laquo; Ossasepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-126889" title="">Tuesday, 16 October 2018</a>
+					</div>
+					<p>[...] contained in any message has to be structured according to the protocol's rules described in sections 4, 5 and 7 of the specification. This layer provides the definitions of those data structures as well as the conversion methods [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-126990">
+					<div class='trackhead'>
+						<div class="commentcount">115</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2018/11/10/smg-comms-chapter-7-readwrite-serpent-keysets-tofrom-serpent-messages/' class='url'>SMG Comms Chapter 7: Read/Write Serpent Keysets to/from Serpent Messages &laquo; Ossasepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-126990" title="">Saturday, 10 November 2018</a>
+					</div>
+					<p>[...] The issue is in principle simple enough: write game data to the raw arrays of octets that are SMG messages ensuring the exact format specified by the communication protocol; conversely, read from those same raw arrays of octets that are SMG messages the actual game data. Stated like this, the solution suggesting itself is to define records matching exactly the format specified by the protocol, use representation clauses to control the exact place of all components and then simply convert the whole thing in one go. There are however a few things that I really don't like about this approach of using records matching exactly the full message structure as defined in Eulora's communication protocol: [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-127034">
+					<div class='trackhead'>
+						<div class="commentcount">116</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2018/11/17/smg-comms-chapter-8-keys-management/' class='url'>SMG Comms Chapter 8: Keys Management &laquo; Ossasepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-127034" title="">Saturday, 17 November 2018</a>
+					</div>
+					<p>[...] This chapter makes a few changes to previous code and adds a new part to handle read/write of messages concerning keys management (4.2 and 5.3 in the current protocol specification): [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-129047">
+					<div class='trackhead'>
+						<div class="commentcount">117</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/05/04/euloras-client-core-basic-docs/' class='url'>Eulora's Client Core - Basic Docs &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-129047" title="">Saturday, 4 May 2019</a>
+					</div>
+					<p>[...] in the works and for this reason the least fully-fledged but at any rate, it has to grow around the structuring of data that is discussed in the SMG protocol specification: a potentially infinite hierarchical structure of "objects"4 having each a subset of an overall set [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-129241">
+					<div class='trackhead'>
+						<div class="commentcount">118</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/05/27/euloras-client-core-the-dedicated-requester/' class='url'>Eulora's Client Core: The Dedicated Requester &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-129241" title="">Monday, 27 May 2019</a>
+					</div>
+					<p>[...] counter. This is effectively a specialized cache - where EuCache is for game data, Comm_Link is for communication protocol data. The requirements (including use contexts) and specifics of the two seem to me sufficiently [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130696">
+					<div class='trackhead'>
+						<div class="commentcount">119</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/08/06/the-widgeting-paws-of-pointerism-notes-on-graphics-in-eulora-v/?b=have&amp;e=#select' class='url'>The Widgeting Paws of Pointerism (Notes on Graphics in Eulora, V) &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130696" title="">Tuesday, 6 August 2019</a>
+					</div>
+					<p>[...] have it go and load resources from wherever (and whenever) it is told to. This might even require more discussion in S.MG's boardroom but at the moment and as a result of all the adventure above, I have at least a [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131400">
+					<div class='trackhead'>
+						<div class="commentcount">120</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/09/14/eulora-client-data-hierarchy-v20/?b=me)a&amp;e=#select' class='url'>Eulora Client Data Hierarchy v2.0 &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131400" title="">Saturday, 14 September 2019</a>
+					</div>
+					<p>[...] me) and it requires anyway some feedback and discussion given its scope and crucial position in the SMG Communication Protocol. It's published as it is at this stage and by the promised deadline not because it's "complete and [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131401">
+					<div class='trackhead'>
+						<div class="commentcount">121</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/09/14/eulora-client-data-hierarchy-v20/?b=posit&amp;e=#select' class='url'>Eulora Client Data Hierarchy v2.0 &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131401" title="">Saturday, 14 September 2019</a>
+					</div>
+					<p>[...] position (3 int16 as per protocol specification) [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131402">
+					<div class='trackhead'>
+						<div class="commentcount">122</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/09/14/eulora-client-data-hierarchy-v20/?b=rotat&amp;e=#select' class='url'>Eulora Client Data Hierarchy v2.0 &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131402" title="">Saturday, 14 September 2019</a>
+					</div>
+					<p>[...] rotation (3 int8 as per protocol specification) [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132148">
+					<div class='trackhead'>
+						<div class="commentcount">123</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2019/11/05/eulora-smg-taking-a-different-sort-of-stock/?b=decouplingo&amp;e=deco#select' class='url'>Eulora (S.MG) - Taking a Different Sort of Stock &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132148" title="">Tuesday, 5 November 2019</a>
+					</div>
+					<p>[...] decoupling of client from server &#38; game version - in particular, there should be basically no pushing of "updates" on the user/client; the client should simply be able to discover and request + download new game content of any sort, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145081">
+					<div class='trackhead'>
+						<div class="commentcount">124</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/minigame-smg-september-2018-statement?b=draft%20Comms%20&amp;e=%20for#select' class='url'>MiniGame (S.MG), September 2018 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145081" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] draft Comms Protocol has improved markedly. Botted crafting now works pretty well also! &mdash;&mdash;&mdash;This was same test server for [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145103">
+					<div class='trackhead'>
+						<div class="commentcount">125</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/so-i-designed-a-block-chipher?b=schedule%2C%20be&amp;e=n%20to#select' class='url'>So I designed a block chipher. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145103" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] schedule, because that's what happens to have been specified in Eulora's communications protocol (latest restatement). However, since we're actually re-doing the whole symmetric cipher part there's no reason to [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147305">
+					<div class='trackhead'>
+						<div class="commentcount">126</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/get-back-to-me/?b=it%20through%2C%20&amp;e=ning#select' class='url'>Get back to me... on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147305" title="">Thursday, 23 January 2020</a>
+					</div>
+					<p>[...] it through, and came up with a plan : since we'll be changing the client might as well have a new comm protocol, since we know it'll be new might as well make it good, meaning include proper crypto, meaning [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-152539">
+					<div class='trackhead'>
+						<div class="commentcount">127</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/06/28/eulora-client-data-hierarchy-finally-getting-there/?b=communicatio&amp;e=eans#select' class='url'>Eulora Client Data Hierarchy - Finally Getting There! &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-152539" title="">Sunday, 28 June 2020</a>
+					</div>
+					<p>[...] communication protocol aims to be indeed as short and simple as possible while providing at the same time the full means [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-153044">
+					<div class='trackhead'>
+						<div class="commentcount">128</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/07/24/those-zip-files-of-euloras-client-graphics/?b=lot%20of%20param&amp;e=size#select' class='url'>Those Zip Files of Eulora's Client Graphics &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-153044" title="">Friday, 24 July 2020</a>
+					</div>
+					<p>[...] lot of parameters and very few turn out to be of any use in the end)? More specifically, given the protocol specification, the size of an outdoors sector is fixed and as a result, the client can just create a fixed-size [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154031">
+					<div class='trackhead'>
+						<div class="commentcount">129</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2020/08/31/in-euloran-moving-updates-inner-slots-and-outer-wheels/?b=notice%20in%20th&amp;e=hose#select' class='url'>In Euloran Moving Updates: Inner Slots and Outer Wheels &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154031" title="">Monday, 31 August 2020</a>
+					</div>
+					<p>[...] notice in the illustration above, the GUI offers now the full list of actions defined in the communications protocol but also a few additional "actions" of its own, such as "pos" or "examine". The reason for those [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154942">
+					<div class='trackhead'>
+						<div class="commentcount">130</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/minigame-smg-statement-on-q3-2020/?b=such%20as%20comp&amp;e=tion#select' class='url'>MiniGame (S.MG) Statement on Q3 2020 on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154942" title="">Wednesday, 14 October 2020</a>
+					</div>
+					<p>[...] such as compilation or connectivity) Eulora v 2.0 client. It talks to the Eulora v 2.0 server as per spec, for which purpose it produces its RSA and Serpent keys, encrypts and decrypts communication [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-158579">
+					<div class='trackhead'>
+						<div class="commentcount">131</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/the-problem-of-distributed-counting-and-how-we-avoided-it-at-significant-mental-cost-to-you/?b=In%20lingering&amp;e=re%29.#select' class='url'>The problem of distributed counting, and how we avoided it (at significant mental cost to you) on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-158579" title="">Saturday, 9 January 2021</a>
+					</div>
+					<p>[...] In lingering continuation of an ancient discussion, we will be making some changes to the Eulora communication protocol (still specced here). [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-159920">
+					<div class='trackhead'>
+						<div class="commentcount">132</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2021/02/13/blowhate-torus-blowhate/?b=the%20past%20wee&amp;e=%20and#select' class='url'>Blowhate, Torus Blowhate &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-159920" title="">Saturday, 13 February 2021</a>
+					</div>
+					<p>[...] the past week, Eulora's latest version of client and server have been communicating with one another happily and uninterruptedly - as well as actually RSA-authenticatedly and [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-161502">
+					<div class='trackhead'>
+						<div class="commentcount">133</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2021/03/20/the-space-it-takes-xml-binary-and-raw-mesh-formats/?b=Eulora%27s%20com&amp;e=iles#select' class='url'>The Space It Takes - XML, Binary and Raw Mesh Formats &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-161502" title="">Saturday, 20 March 2021</a>
+					</div>
+					<p>[...] Eulora's communication protocol can handle easily the transfer of any data files that the client might need, the size of such files [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-163837">
+					<div class='trackhead'>
+						<div class="commentcount">134</div>
+						<span class="authorlink"><a href='http://ossasepia.com/2021/05/17/euloras-core-in-glorious-detail-and-picture/?b=up%20covering%20&amp;e=line#select' class='url'>Eulora's Core in Glorious Detail (and Picture!) &laquo; Ossa Sepia</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-163837" title="">Monday, 17 May 2021</a>
+					</div>
+					<p>[...] up covering pretty much everything, from end to end encryption, rsa-based authentication and a new protocol for client-server communication, to flexible file transfer torrents-style, a full graphics pipeline [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="79596" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833303-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-79596")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-79596");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-79596");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

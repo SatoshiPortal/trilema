@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Noob MP, or how it all began on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">It mildly annoys me, as a capable sheep,<br />that people like you exist.<br />~ <a href=http://trilema.com/2016/the-story-of-elliot-rodger-by-elliot-rodger-adnotated-part-one/#comment-118639>nicknaem</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-48592"><div class="post" id="post-48592">                    <h1><a href="http://trilema.com/2013/noob-mp-or-how-it-all-began/" rel="bookmark" title="Permanent Link to Noob MP, or how it all began">Noob MP, or how it all began</a></h1>                        <div class="date">                                     Monday, 15 July, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>09:48:45 <strong>mircea_popescu</strong> hi!<br />
+09:48:45 <strong>mircea_popescu</strong> ;;voiceme<br />
+09:48:45 <strong>gribble</strong> Error: You must authenticate via GPG to get voice.<br />
+09:48:45 <strong>mircea_popescu</strong> ;;gpg<br />
+09:48:45 <strong>gribble</strong> Here are the instructions for authenticating with the bot using GPG: http://wiki.bitcoin-otc.com/wiki/GPG_authentication<br />
+09:48:45 <strong>mircea_popescu</strong> ;;fraud<br />
+09:48:45 <strong>gribble</strong> Be smart, and stay safe - follow these guidelines to avoid fraudsters: http://wiki.bitcoin-otc.com/wiki/Using_bitcoin-otc#Safety:_avoiding_fraud<br />
+09:48:45 <strong>mircea_popescu</strong> umm.., nobody here then ?<br />
+09:48:45 <strong>vragnaroda</strong> yes, there are people here<br />
+09:48:45 <strong>vragnaroda</strong> /names<br />
+09:48:45 <strong>vragnaroda</strong> that shows 287 in here :-)<br />
+09:48:45 <strong>mircea_popescu</strong> @vrag a yea, just, nobody said anything :p<br />
+09:48:45 <strong>mircea_popescu</strong> so, I'd like to buy some bcoin. I have PayPal but I understand people don't really like that ?<br />
+09:48:45 <strong>vragnaroda</strong> that is correct<br />
+09:48:45 <strong>vragnaroda</strong> for someone without even a gpg identity registered, accepting paypal would be retarded<br />
+09:48:45 <strong>mircea_popescu</strong> well it kinda sucks. as it happens I'm a well known Romanian bloger, well trusted and all.<br />
+09:48:45 <strong>mircea_popescu</strong> actually, I;ve been running a digg type service with paypal payouts for a year or so now.<br />
+09:48:45 <strong>vragnaroda</strong> s•for•from•<br />
+09:48:45 <strong>mircea_popescu</strong> <span style="background-color:#d3d3d3" id="select">so basically, how does a well trusted person get that recognised here</span> ?<br />
+09:48:45 <strong>vragnaroda</strong> well, if someone trusts you, great. but i don't see how being a blogger* inspires trust<br />
+09:48:45 <strong>vragnaroda</strong> read ,,gpg<br />
+09:48:45 <strong>gribble</strong> Here are the instructions for authenticating with the bot using GPG: http://wiki.bitcoin-otc.com/wiki/GPG_authentication<br />
+09:48:45 <strong>mircea_popescu</strong> it should if you're the top guy of a languagespace, i imagine.<br />
+09:48:45 <strong>vragnaroda</strong> set up a gpg identity with gribble; trade with people and get ratings<br />
+09:48:45 <strong>mircea_popescu</strong> i did read that, point being, it will certify what ? that i exist ? that i can follow abstruse documentations ? i see zero actual credibility thus added<br />
+09:48:45 <strong>vragnaroda</strong> mircea_popescu: what are you doing here then?<br />
+09:48:45 <strong>mircea_popescu</strong> basically trying to see if there's an actual reasonable way to get your credibility recognised here.<br />
+09:48:45 <strong>mircea_popescu</strong> rather than some very bureaucratic bs.<br />
+09:48:45 <strong>sYN4P515</strong> lol<br />
+09:48:45 <strong>mircea_popescu</strong> what can i tell ya.<br />
+09:48:45 <strong>vragnaroda</strong> uh, yeah, don't say that b/c you're using a nick that's someone's known name that means you're who you claim to be, while saying that using GPG to ensure people are trading with the same you in the future offers no additional credibility<br />
+09:48:45 <strong>vragnaroda</strong> in english, btw, that's called trolling<br />
+09:48:45 <strong>mircea_popescu</strong> o.<br />
+09:48:45 <strong>mircea_popescu</strong> right, irc nicks are arbitrarily assigned aren't they.<br />
+09:48:45 <strong>mircea_popescu</strong> mk. brb.<br />
+09:48:45 <strong>vragnaroda</strong> /nick barack_obama<br />
+09:48:45 <strong>vragnaroda</strong> :P<br />
+09:48:45 <strong>sYN4P515</strong> i still cant get bot to register me ;/<br />
+09:48:45 <strong>vragnaroda</strong> sYN4P515: what does it say?<br />
+09:48:45 <strong>sYN4P515</strong> ;;gpg eregister sYN4P515 FF6B605680F93274<br />
+09:48:45 <strong>gribble</strong> Error: Problem creating encrypted OTP file.<br />
+09:48:45 <strong>vragnaroda</strong> try using register/verify instead of eregister/everify<br />
+09:48:45 <strong>vragnaroda</strong> the steps are a bit different, but it shouldn't be too bad<br />
+09:48:45 <strong>sYN4P515</strong> HOLY SHIT<br />
+09:48:45 <strong>vragnaroda</strong> nanotube: 12:02:02 <strong>@gribble</strong> Error: Problem creating encrypted OTP file.<br />
+09:48:45 <strong>vragnaroda</strong> sYN4P515: sorry, but i can't do anything about that error :(<br />
+09:48:45 <strong>sYN4P515</strong> finally, registered :)<br />
+09:48:45 <strong>sYN4P515</strong> thanks vragnaroda<br />
+09:48:45 <strong>vragnaroda</strong> sYN4P515: yeah, when i started, the e- commands weren't around yet, so there are pastebins all over the internet because of gribble<br />
+09:48:45 <strong>vragnaroda</strong> eauth and eregister are much nicer when they work, though<br />
+09:48:45 <strong>vragnaroda</strong> s/nicer/nicer than the alternatives/<br />
+09:48:45 <strong>sYN4P515</strong> yeah this pastebin stuff is messy<br />
+09:48:45 <strong>mircea_popescu</strong> ;;gpg eregister mircea_popescu 8A736F0E2FB7B452<br />
+09:48:45 <strong>gribble</strong> Request successful for user mircea_popescu, hostmask mircea_popescu!4e60edf7@gateway/web/freenode/ip.78.96.237.247. Get your encrypted OTP from http://bitcoin-otc.com/otps/8A736F0E2FB7B452<br />
+09:48:45 <strong>sYN4P515</strong> hm, maybe i need to be famious romanian blogger to be able to use eregister<br />
+09:48:45 <strong>vragnaroda</strong> lol<br />
+09:48:45 <strong>vragnaroda</strong> ’ blogger is a contradiction. there are only 24 million romanian speakers in total (23 million native speakers).<br />
+09:48:45 <strong>mircea_popescu</strong> about 20 mn really.<br />
+09:48:45 <strong>mircea_popescu</strong> so ?<br />
+09:48:45 <strong>vragnaroda</strong> well, wolframalpha says 23m native and 24m total<br />
+09:48:45 <strong>mircea_popescu</strong> ;;gpg eregister mircea_popescu 2FB7B452<br />
+09:48:45 <strong>gribble</strong> Error: '2FB7B452' is not a valid GPG key id.<br />
+09:48:45 <strong>vragnaroda</strong> so being famous within that small population isn't famous<br />
+09:48:45 <strong>mircea_popescu</strong> wolfram may not be the end-all be-all authority.<br />
+09:48:45 <strong>vragnaroda</strong> you gotta use the long-format one<br />
+09:48:45 <strong>mircea_popescu</strong> i didn't say famous, for one.<br />
+09:48:45 <strong>mircea_popescu</strong> ;;gpg eregister mircea_popescu 8A736F0E2FB7B452<br />
+09:48:45 <strong>gribble</strong> Request successful for user mircea_popescu, hostmask mircea_popescu!4e60edf7@gateway/web/freenode/ip.78.96.237.247. Get your encrypted OTP from http://bitcoin-otc.com/otps/8A736F0E2FB7B452<br />
+09:48:45 <strong>vragnaroda</strong> no, you used a synonym<br />
+09:48:45 <strong>mircea_popescu_</strong> most people think they're respected by being known by fewer than 1mn people.<br />
+09:48:45 <strong>mircea_popescu_</strong> anyway, more's the point, i got a problem here. so i ran gdp, got a key, sent it to mit and whatever<br />
+09:48:45 <strong>mircea_popescu_</strong> ordered the bot to give my pgp message<br />
+09:48:45 <strong>mircea_popescu_</strong> then i run<br />
+09:48:45 <strong>vragnaroda</strong> mircea_popescu: i'm not sure what you meant to say there, but that's not english.<br />
+09:48:45 <strong>mircea_popescu_</strong> wget -q -O - http://bitcoin-otc.com/otps/YOURKEYID | gpg -q --output - --decrypt<br />
+09:48:45 <strong>mircea_popescu_</strong> and the net result is gpg: decryption failed: secret key not available<br />
+09:48:45 <strong>mircea_popescu_</strong> why could that be ?<br />
+09:48:45 <strong>vragnaroda</strong> your secret key isn't available. that sounds like it may have been generated on another machine.<br />
+09:48:45 <strong>mircea_popescu_</strong> uh. i just made it a second ago.<br />
+09:48:45 <strong>mircea_popescu_</strong> on this comp.<br />
+09:48:45 <strong>mircea_popescu_</strong> a wait i got it<br />
+09:48:45 <strong>mircea_popescu_</strong> ;;gpg register mircea_popescu 2FB7B452<br />
+09:48:45 <strong>gribble</strong> Error: '2FB7B452' is not a valid GPG key id.<br />
+09:48:45 <strong>mircea_popescu_</strong> ;;gpg everify freenode:#bitcoin-otc:26e6435be477c9021d30d4ec4b2c103df54acfb0f775b8d0da5bf1bb<br />
+09:48:45 <strong>gribble</strong> Error: Could not find a pending authentication request from your hostmask. Either it expired, or you changed hostmask, or you haven't made one.<br />
+09:48:45 <strong>mircea_popescu_</strong> ;;gpg register mircea_popescu 8A736F0E2FB7B452<br />
+09:48:45 <strong>gribble</strong> Request successful for user mircea_popescu, hostmask mircea_popescu_!4e60edf7@gateway/web/freenode/ip.78.96.237.247. Your challenge string is: freenode:#bitcoin-otc:6b7618a41a94e88c25e78529a268032144525e76fa0e047754bd0766<br />
+09:48:45 <strong>mircea_popescu_</strong> ;;gpg verify http://pastebin.com/QrPJepGR<br />
+09:48:45 <strong>gribble</strong> Error: Failed to retrieve clearsigned data. Check your url.<br />
+09:48:45 <strong>sYN4P515</strong> you pasted only signature without message<br />
+09:48:45 <strong>mircea_popescu_</strong> ;;gpg verify http://paste.pocoo.org/raw/444227/<br />
+09:48:45 <strong>gribble</strong> Error: Failed to retrieve clearsigned data. Check your url.<br />
+09:48:45 <strong>mircea_popescu_</strong> ;;gpg verify http://paste.pocoo.org/raw/444227<br />
+09:48:45 <strong>gribble</strong> Error: Failed to retrieve clearsigned data. Check your url.<br />
+09:48:45 <strong>mircea_popescu_</strong> mk so now i get Error: Failed to retrieve clearsigned data. Check your url.<br />
+09:48:45 <strong>sYN4P515</strong> you pasted only signature without message<br />
+09:48:45 <strong>mircea_popescu_</strong> o o<br />
+09:48:45 <strong>mircea_popescu_</strong> sorry. total noob if it wasn't yet apparent<br />
+09:48:45 <strong>mircea_popescu_</strong> ;;gpg verify http://paste.pocoo.org/raw/444228/<br />
+09:48:45 <strong>gribble</strong> Error: Failed to retrieve clearsigned data. Check your url.<br />
+09:48:45 <strong>mircea_popescu_</strong> grr<br />
+09:48:45 <strong>mircea_popescu_</strong> ;;gpg verify http://paste.pocoo.org/raw/444230/<br />
+09:48:45 <strong>gribble</strong> Registration successful. You are now authenticated for user 'mircea_popescu' with key 8A736F0E2FB7B452<br />
+09:48:45 <strong>mircea_popescu_</strong> o hallelujah!<br />
+09:48:45 <strong>mircea_popescu_</strong> apparently this can be done. by people!<br />
+09:48:45 <strong>sYN4P515</strong> by bloggers, even<br />
+09:48:45 *	vragnaroda  has a sudden urge to kick mircea_popescu_, thereby deauthing him.<br />
+09:48:45 <strong>mircea_popescu_</strong> snarky, are we ? bloggers are nice peopleyou know.<br />
+09:48:45 <strong>mircea_popescu_</strong> now, to the point of contention : my claim wasn't to fame. my claim was to respectability.<br />
+09:48:45 <strong>mircea_popescu_</strong> you should be respectable even if you're not necessarily english, or a star. in fact, neither those two seem pinnacles of respectability.<br />
+09:48:45 <strong>vragnaroda</strong> bloggers are people. some of them are nice. some are assholes. the nice ones tend to be boring, but assuming that someone's honest because of a hobby or profession is idiotic.<br />
+09:48:45 <strong>mircea_popescu_</strong> it's not the assumption they;'re honest because of a hobby. but after a few years of speaking publicly and openly you're more credible than some backroom dealing politician, for instance.<br />
+09:48:45 <strong>mircea_popescu_</strong> simply because you answer. publicly.<br />
+09:48:45 <strong>vragnaroda</strong> no, that does not follow. that is extremely illogical.<br />
+09:48:45 <strong>mircea_popescu_</strong> do tell.<br />
+09:48:45 <strong>vragnaroda</strong> that you tell people things publicly in a somewhat entertaining way does not mean you're trustworthy.<br />
+09:48:45 <strong>mircea_popescu_</strong> cause in the backwoods of romania things are either logical or illogical, they're not illogical by degrees.<br />
+09:48:45 <strong>mircea_popescu_</strong> you don't tell. it's a discussion, they come back and say hey, X was wrong.<br />
+09:48:45 <strong>vragnaroda</strong> no claim to that was made<br />
+09:48:45 <strong>mircea_popescu_</strong> blogging is open source for politics, far as i can see.<br />
+09:48:45 <strong>vragnaroda</strong> what the fuck does that have to do with the price of tea in china?<br />
+09:48:45 <strong>vragnaroda</strong> well, that just means you're blind.<br />
+09:48:45 <strong>mircea_popescu_</strong> mkay. maybe we leave this for some other time.<br />
+09:48:45 <strong>mircea_popescu_</strong> now, getting back on topic, who's the brave soul going to go on a limb and sell me some bc ? I'ma leave the ammount at your discretion.<br />
+09:57:39 <strong>mircea_popescu_</strong> join #bitcoin-otc<br />
+09:57:47 <strong>mircea_popescu_</strong> hmm. how do i join the other chan ?<br />
+09:59:02 <strong>nanotube</strong> mircea_popescu_: /join #bitcoin-otc<br />
+09:59:07 <strong>nanotube</strong> start with /<br />
+09:59:11 <strong>mircea_popescu_</strong> tyvm<br />
+09:59:27 <strong>nanotube</strong> np :)<br />
+10:01:19 <strong>mircea_popescu_</strong> mk so basically let me see if i got this right, you need to wait 72 hours after first autentication here to be able to list orders there ? or am i missing something ?<br />
+10:01:19 *	copumpkin (~pumpkin@unaffiliated/pumpkingod) has joined #bitcoin-otc-foyer<br />
+10:01:46 <strong>nanotube</strong> mircea_popescu_: no, you can list orders by looking on the website order book<br />
+10:01:59 <strong>nanotube</strong> the only thing you need to wait 72 hours for is ability to speak on #bitcoin-otc<br />
+10:02:06 <strong>mircea_popescu_</strong> by list i meant add one. have your order listed.<br />
+10:02:13 <strong>nanotube</strong> you can do that here too<br />
+10:02:18 <strong>nanotube</strong> the buy and sell commands. see the ,,guide<br />
+10:02:19 <strong>gribble</strong> Guide to using #bitcoin-otc: http://wiki.bitcoin-otc.com/wiki/Using_bitcoin-otc<br />
+10:02:25 <strong>mircea_popescu_</strong> o, right ? cool<br />
+10:02:26 <strong>nanotube</strong> (and you can do it in PM with the bot as well)<br />
+10:02:30 <strong>mircea_popescu_</strong> ;;buy 1 btc at 15.00 USD via paypal<br />
+10:02:31 <strong>gribble</strong> Order id 4818 created.<br />
+10:02:36 <strong>nanotube</strong> see? :)<br />
+10:02:36 <strong>mircea_popescu_</strong> o hey. nice.<br />
+10:02:42 <strong>nanotube</strong> ;;view 4818<br />
+10:02:44 <strong>gribble</strong> #4818 Fri 07:02:30 2011 mircea_popescu BUY 1.0 btc @ 15 USD (via paypal)<br />
+10:02:50 <strong>mircea_popescu_</strong> ;;buy 0.1 btc at 1.40 USD via paypal<br />
+10:02:51 <strong>gribble</strong> Order id 4819 created.<br />
+10:03:31 *	Harvie has quit (Remote host closed the connection)<br />
+10:03:44 <strong>mircea_popescu_</strong> and if somebody wants to do a trade, how do they contact me ?<br />
+10:08:00 *	toggles_ is now known as toggles<br />
+10:10:00 *	mircea_popescu_ is now known as mircea_popescu<br />
+10:12:27 <strong>wolfman2000</strong> mircea_popescu: Either they read the order now, or later, and most likely will PM you<br />
+10:13:01 <strong>mircea_popescu</strong> ya but that's what i'm, asking, where do i get the pm ? here ? or does it go to email ?<br />
+10:17:42 <strong>mircea_popescu</strong> so i found somebody named sturles who will sell coins to new ppl to get them ratings. how do i contact this person now ?<br />
+10:18:58 <strong>wolfman2000</strong> If "sturtles" is the actual name, he's not on IRC right now<br />
+10:19:02 <strong>wolfman2000</strong> you will have to wait<br />
+10:19:15 <strong>copumpkin</strong> not sure why that would be particularly valuable<br />
+10:19:36 <strong>copumpkin</strong> if I were a scammer, I'd just pay sturtles a few bucks, buy one coin, and _then_ start scamming everyone<br />
+10:19:43 <strong>copumpkin</strong> which means that a positive rating from him is probably not worth much (to me at least)<br />
+10:19:47 <strong>mircea_popescu</strong> http://bitcoin-otc.com/viewratingdetail.php?nick=sturles like that.<br />
+10:20:10 <strong>mircea_popescu</strong> yes cop, and if you _weren't_ a scammer, what would you do ? hm ?<br />
+10:20:41 <strong>copumpkin</strong> I don't know :)<br />
+10:20:49 <strong>copumpkin</strong> cause I AM A SCAMMER<br />
+10:20:50 <strong>copumpkin</strong> muahahaha<br />
+10:21:12 <strong>copumpkin</strong> oh shit, I gave away my secret<br />
+10:21:14 <strong>copumpkin</strong> now I have to kill you all<br />
+10:21:14 <strong>mircea_popescu</strong> no but srsly. i can appreciate the need to keep scammers out. but there must be some way for legit ppl to get in, logically.<br />
+10:21:34 <strong>nanotube</strong> mircea_popescu: sturles is on -otc now<br />
+10:21:37 <strong>nanotube</strong> you can pm him<br />
+10:21:43 <strong>nanotube</strong> first: /query sturles<br />
+10:21:48 <strong>nanotube</strong> then type your msg<br />
+10:21:54 <strong>mircea_popescu</strong> ty!<br />
+10:21:57 <strong>nanotube</strong> or: /msg sturles your mesasge<br />
+10:22:54 <strong>nanotube</strong> also, sturles has been around here for a while, so as long as he's authed to the bot as sturles (check with the 'ident' command) you should be ok<br />
+10:23:15 <strong>mircea_popescu</strong> ident sturles<br />
+10:23:23 <strong>mircea_popescu</strong> o hey, you're the owner are you ?<br />
+10:23:30 <strong>nanotube</strong> ;;ident sturles<br />
+10:23:31 <strong>gribble</strong> Nick 'sturles', with hostmask 'sturles!~sturles@ulrik.uio.no', is identified as user sturles, with GPG key id EE6880F512F5590F, and key fingerprint DEFF29B442C2F94DF6BB09E0EE6880F512F5590F.<br />
+10:23:32 <strong>mircea_popescu</strong> ;;ident sturles<br />
+10:23:33 <strong>gribble</strong> Nick 'sturles', with hostmask 'sturles!~sturles@ulrik.uio.no', is identified as user sturles, with GPG key id EE6880F512F5590F, and key fingerprint DEFF29B442C2F94DF6BB09E0EE6880F512F5590F.<br />
+10:23:43 <strong>mircea_popescu</strong> ty. syntax is evil.<br />
+10:23:54 <strong>nanotube</strong> seems that he's the real guy :)<br />
+10:24:09 <strong>mircea_popescu</strong> and you tell this because the fingerprint listed matches the one on the website ?<br />
+10:24:33 <strong>nanotube</strong> well, it will match by construction :)<br />
+10:24:42 <strong>nanotube</strong> the main issue is that he's identified as user 'sturles'<br />
+10:24:57 <strong>nanotube</strong> since only one user in the system can be 'sturles'<br />
+10:25:15 <strong>mircea_popescu</strong> aha. so that's strong enough then. cool.<br />
+10:25:23 <strong>nanotube</strong> but of course, yes, that means he owns key EE6880F512F5590F, in order to be able to auth.<br />
+10:25:38 <strong>nanotube</strong> because to auth, he had to do what you had to do - decrypt a message with his key<br />
+10:25:45 <strong>mircea_popescu</strong> right.<br />
+10:25:59 <strong>mircea_popescu</strong> slowly getting the hang of all this. actually very clever all through.<br />
+10:26:06 <strong>nanotube</strong> hehe<br />
+10:26:48 <strong>mircea_popescu</strong> course i don't see many joe q public being able to get through the hoops, but hey.<br />
+11:11:26 <strong>mircea_popescu</strong> ;;rate guix 1 "Very helpful to first timers"<br />
+11:11:27 <strong>gribble</strong> Rating entry successful. Your rating of 1 for user guix has been recorded.<br />
+11:11:34 <strong>nanotube</strong> mircea_popescu: well, until recent times, we haven't had many jonqpublics around here.<br />
+11:26:40 <strong>mircea_popescu</strong> @nano reminds me of the internet.<br />
+11:31:59 <strong>trancegeek</strong> ;;gpg eauth trancegeek<br />
+11:58:14 <strong>mircea_popescu</strong> ;;rate sturles 1 "Very helpful to first timers"<br />
+11:58:15 <strong>gribble</strong> Rating entry successful. Your rating of 1 for user sturles has been recorded.<br />
+12:08:54 <strong>nanotube</strong> mircea_popescu: hehe indeed, the internet was a much nicer place before all the noobs showed up haha<br />
+12:09:42 <strong>mircea_popescu</strong> @nano yes. sadly also a lot less relevant to society in general. trade-offs.<br />
+12:13:30 <strong>nanotube</strong> yes, given that society is largely made up of noobs ;)<br />
+12:13:37 <strong>nanotube</strong> everyone is a noob at something<br />
+12:13:49 <strong>nanotube</strong> doesn't mean we can't complain haha<br />
+12:14:01 <strong>CaptainDDL</strong> ;;rate trancegeek 1 Sold .5 BTC via PP. Quick Transaction, nice guy. :)<br />
+12:14:02 <strong>gribble</strong> Rating entry successful. Your rating of 1 for user trancegeek has been recorded.<br />
+12:15:46 <strong>mircea_popescu</strong> wouldn't it be sad if we weren't noobs at anything. it'd be so... boring.<br />
+12:18:19 <strong>FractalUniverse</strong> n00bs? where? :D<br />
+12:19:39 <strong>no-n00b-for-you</strong> come back 1 yeaR!<br />
+12:20:11 <strong>n00b-n00b</strong> in 1 year it will be too late<br />
+12:20:13 <strong>nanotube</strong> haha<br />
+12:20:40 <strong>n00b-n00b</strong> in fact i should have come 1 year ago :p<br />
+12:21:36 <strong>n00b-n00b</strong> btw how did you oldtimers here learned about bitcoin?<br />
+12:22:25 n00b-n00b nanotube no-n00b-for-you nealmcb_ NeonLicht netxshare new301 nhodges NickelBot nostrum nullrouten nutcase NxTitle<br />
+12:22:30 <strong>nanotube</strong> n00b-n00b: on irc, of course :)<br />
+12:23:59 <strong>n00b-n00b</strong> realy? hmm  i returned to irc just because of bitcoins:) haven't used it for like 10 years :/<br />
+12:24:12 <strong>nanotube</strong> hehe<br />
+12:24:18 <strong>nanotube</strong> well everyone has a different story<br />
+12:25:17 <strong>no-n00b-for-you</strong> believe it or not, it was from my blog commenters.<br />
+12:25:44 <strong>no-n00b-for-you</strong> and yea, i think last i used irc it was 1997 outside. or 1996.<br />
+12:26:17 <strong>nanotube</strong> no-n00b-for-you: so now you can post on your blog about your first successful bitcoin buy eh? :)<br />
+12:31:17 <strong>mircea_popescu</strong> http://trilema.com/2011/din-ciudateniile-viitorului/ that's the post<br />
+12:31:23 <strong>mircea_popescu</strong> just, romanian language, not sure what good it is for you.<br />
+12:33:06 <strong>n00b-n00b</strong> mircea_popescu: roman? looks almost like klingon to me :D<br />
+12:33:24 <strong>n00b-n00b</strong> i can't understand a word<br />
+12:33:44 <strong>mircea_popescu</strong> ehehe. roman-ian! try google translate for shits and giggles<br />
+12:33:54 <strong>mircea_popescu</strong> it'll make about as little sense :D<br />
+12:36:51 <strong>n00b-n00b</strong> how popular is bitcoin in Romania?<br />
+12:37:34 <strong>mircea_popescu</strong> i would say i currently own the most bitcoin of anyone in the country<br />
+12:37:43 <strong>mircea_popescu</strong> and prolly percents of the total outstanding.<br />
+12:38:47 <strong>mircea_popescu</strong> obviously difficult to actually know for sure.<br />
+12:39:33 <strong>n00b-n00b</strong> cool. richest bitcoiner in a country :)<br />
+12:41:20 <strong>mircea_popescu</strong> yep, it's why i moved here really. easy to get #1 spot in things<br />
+12:42:17 <strong>nanotube</strong> mircea_popescu: lol.<br />
+12:42:31 <strong>Catharsis1</strong> good luck with that..<br />
+12:42:54 <strong>Catharsis1</strong> its friday friday!<br />
+12:43:15 <strong>mircea_popescu</strong> hmm, where's vragnaroda go ? we had such an interesting debate going earlier.</p>
+<p>So there you have it, July 22nd 2011. Cool huh.</p>
+
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/in-which-life-moves-on/">In which life moves on.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/for-lack-of-a-nail/">For lack of a nail</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/noob-mp-or-how-it-all-began/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/noob-mp-or-how-it-all-began/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>2 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-140837">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/a-little-bit-of-bitcoin-history?b=mircea_popes&amp;e=%20So%2C#select' class='url'>A little bit of Bitcoin history on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-140837" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] mircea_popescu lmao. 02:09:09 vragnaroda Well, I'd unban you both if it wouldn't make more drama in -otc right now. 02:09:14 vragnaroda So, [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147708">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://fixpoint.welshcomputing.com/2020/jfws-130-top-trilema-picks-to-date/?b=Noob%20MP%2C%20or%20&amp;e=egan#select' class='url'>JFW's 130 top Trilema picks to date &laquo; Fixpoint</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147708" title="">Saturday, 7 March 2020</a>
+					</div>
+					<p>[...] Noob MP, or how it all began [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="48592" /></p>
+				<input type="hidden" name="comment_post_time" value="1624833385-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-48592")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-48592");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-48592");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

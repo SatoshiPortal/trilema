@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Inginerul fata cu viitorul on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Mediocrity is not a lack of intelligence.<br />Mediocrity is intelligence entirely dedicated to self-preservation.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-18802"><div class="post" id="post-18802">                    <h1><a href="http://trilema.com/2011/inginerul-fata-cu-viitorul/" rel="bookmark" title="Permanent Link to Inginerul fata cu viitorul">Inginerul fata cu viitorul</a></h1>                        <div class="date">                                     Wednesday, 27 April, Year 3 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>Techcrunch este o mina de aur pentru antropologi, psihologi, sociologi si restul de invatati preocupati de inefabilul din om. Articolele din anul curent nu sunt indeobste utilizabile in aceste scopuri si se cer aruncate, dar articolele mai vechi sunt intotdeauna interesante. </p>
+<p>Sigur, exista si naivii care au impresia ca Techcrunch poate fi folosit drept sursa de stiri. Ei compun marea massa a celor ce nu conteaza, acei 80-90% din afirmatia ca 80-90% din speculatorii de optiuni pierd bani, acei 80% din legea lui Paretto, acei numerosi cetateni pe care singura imprejurare de-i salveaza de la anonimat e faptul ca n-au murit inca, si deci e inca, cel putin in principiu, posibil...</p>
+<p>Revenind la subiect : un articol mai vechi - din Septembrie 2007 : <a href="http://techcrunch.com/2007/09/22/payperpost-abuses-declining-job-candidate/">PayPerPost Abuses Declining Job Candidate</a>. In limba romana asta ar insemna ceva precum "PayPerPost injura un posibil angajat care le-a refuzat oferta". Suna bizar, ce-i drept, dar in domeniile de inalta calificare precum <em>Computer Engineering</em> potentialii angajati si potentialii angajatori au o relatie mult mai echilibrata decit v-ati putea inchipui extrapolind in baza relatiilor de munca pe tarlaua mogulului localnic X, fabricant de crema de ghete, mezeluri si inghetata pe bat. Asta e.</p>
+<p>Putintel context : Arrington are o problema de natura mai degraba politica (in sensul ca porneste de la <span style="background-color:#d3d3d3" id="select">o judecata de valoare) cu ideea de articole platite, situindu-se astfel exact la antipozi fata de <a href="http://trilema.com/2010/minciuni-la-comanda/">consensul din "piata" locala pe tema</a>*. Pentru a-si sustine aceasta idee politica a lui (si probabil, cunoscindu-l, intr-o oarecare</span> masura si pentru a-si dovedi muschii, bien sur), Arrington executa o campanie de informat publicul asupra companiei respective. </p>
+<p>Care companie se preteaza de altfel destul de bine abordarii, facind tot soiul de traznai dubioase (daca va roade curiozitatea urmariti <a href="http://www.crunchbase.com/company/payperpost">tag-ul</a> de pe TC). Sigur, astea-s genul de chestii care indeobste se trec sub tacere, cel putin daca nu aspiri la statutul de soacra, dar, ca sa citam, </p>
+<blockquote><p>With a company as controversial as PayPerPost, there’s also a good chance the embarrassment will be forwarded to the press.</p></blockquote>
+<p>adica (traducere literala) in cazul unei companii atit <em>de controversate</em> precum e PayPerPost, sunt bune sanse ca intreaga mizerie sa fie trimisa presei, sau cu alte cuvinte (traducere printre rinduri) in cazul unei companii care nu ne place sunt bune sanse sa publicam orice mizerie auzita. </p>
+<p>Intimplarea ne serveste, pentru ca dincolo de ambalajul in care <em>pundit</em>-ul incearca sa-si vinda ideile politice pe baza unor fapte concrete se regasesc chiar faptele concrete respective, sub forma unui pdf care contine un schimb de emailuri! [<a href="http://tctechcrunch.files.wordpress.com/pppabuse.pdf">TechCrunch</a> ; <a href="http://trilema.com/cached_articles/pppabuse.pdf">cache</a>]</p>
+<p>Luati un pahar de apa, un fursec, ceva, pentru ca introducerea continua neobosita. </p>
+<p>Deci, in cadrul acestui schimb de emailuri notat pentru vesnicie sub forma de pdf din ambitia unui oarecare mogulas media de-a indrepta piata in directia visata de el, regasim un dialog foarte interesant intre doua tipuri umane. </p>
+<p>Pe de-o parte, caracterul autoritarian, supercompensator si fixat oral pe tata (pare rau, termeni de specialitate, altii nu-s) al V[ice]P[resedinte]lui companiei. Pe de cealalta parte, caracterul anarhic, pesimist si fixat anal pe mama (pare rau, idem) al posibilului angajat. Dialogul lor ar putea fi banuit de complet artificiu, cam ca si <a href="http://etext.virginia.edu/toc/modeng/public/FreYoun.html">jurnalul unei tinere fete</a>. De fapt de aia m-am si chinuit cu sase sute de cuvinte de introducere si context, tocmai ca sa rezulte clar pentru oricine ca nu, nu eu l-am scris, si nu, nu pentru a fi folosit in scopul in care-l voi folosi a fost creat acest obiect.</p>
+<p>De la bun inceput sa fie spus ca a lectura documentul respectiv in termenii ca A il domina/face de cacao/troleaza/etc pe B inseamna a pierde complet orice valoare a lui, fiind oarecum echivalentul lecturarii lui Strabo in scopul de-a afla care-i scorul la batalii. Afara de cazul ca sunteti un impatimit de pariuri sportive complet obsedat de aceasta preocupare, atare abordare e inadecvata.</p>
+<p>Se confrunta acolo doua filosofii fundamentale asupra lumii si vietii : a face cu a nu face. Ideea progresului nascuta din teama de iad a puritanilor, cu strinsul din buci si scrisnirea dintilor aferente pe de-o parte, ideea inutilitatii efortului, a stabilitatii si perfectiunii universale pe de cealalta. Ca o paranteza : asta-i marele avantaj al unei educatii umaniste solide : nu mai aveti nevoie de-un Umberto Eco care <a href="http://trilema.com/2011/superbia-ex-angelis-demones-facit/">sa va scrie si sa va sublinieze</a> inefabilul din lume, cu atit mai putin aveti nvoie de o trupa de actori care sa se apuce sa-l joace, in timp ce alta trupa-i filmeaza si-i indruma, doar-doar percepeti si dumneavoastra osatura lumii. Nu-i nevoie de toate astea, pentru ca ochiul invatat distinge in adincime prin puterea lui, si toate chestiile alea de se invata si "nu servesc la nimic" servesc totusi la ceva : adincesc partitura lumii asa cum se desfasoara ea in jur.</p>
+<p>Dar sa revenim : confruntarea din discutia-n discutie e inegala, nu doar pentru ca o parte are ultimul cuvint ci mai ales pentru ca partea adversa e destul de slab pregatita, intelectual vorbind. Totusi, chiar si in aceste conditii e posibila victoria celui slab si napastuit.</p>
+<p>Cum oare ? Ei, sa citam (din Napoleon) : <em>N’interrompez jamais un ennemi qui est en train de faire une erreur, ca manque de courtoisie</em>. Inamicul incapabil e adesea cel mai periculos dintre toate tipurile posibile de inamic, pentru ca ne lasa cimp liber (nu neaparat ca asa vrea, cit mai ales ca altfel nu poate) in care sa ne manifestam... greselile. Sau ca sa citez :</p>
+<blockquote><p>Nu cred ca un broker intre sponsori si blogeri poate sa "schimbe lumea publicitatii online", dar chiar si de-o face, tot nu putem vorbi de "schimbat lumea". Aveam impresia ca auto-incoronatii guru de la Apple sunt singurii suficient de increzuti pentru a se exprima astfel - si nici ei nu prea isi mai permit (nu cu o cota de piata de 5-10%).</p></blockquote>
+<p>Problema aici nu-i neaparat ca Apple nu mai prea are o cota de piata de 5-10% astazi**, cit faptul ca "auto-incoronatii" guru de la Apple chiar au schimbat lumea. Sigur, n-au schimbat-o cine stie ce mult, n-au intors-o de-a dreptul cu susul in jos, dar ma gindesc ca nici nu-si doreau ei, cum nici nu-si doreste nimeni atari catastrofe. O schimbare mica dar vizibila, aia-i tot.</p>
+<p>Au trecut din Septembrie 2007 pina in April 2011... nici patru ani. Cam trei ani de experienta asa. Trei ani de experienta in care... s-a schimbat lumea. Sigur, PayPerPost e practic mort, cu ultimul articol de pe blog numit "Putting Inactive Opps On Ice" si publicat anul trecut. Deci chiar daca cei doi ani din evaluarea inginerului par sa fi fost mai degraba in jur de 3, se poate spune ca per total a avut dreptate (si se poate observa ca nu el a avut dreptate, cit Arrington-"<em>squarely in the head</em>" prin vocea lui).</p>
+<p>Dar in ce priveste problema in discutie, raportul dintre zile de munca de 17 ore si respectiv saptamina de munca de 4 ore, ridicolul incercarii de-a "schimba lumea" si asa mai departe... ei... </p>
+<p>Exista un motiv pentru care inginerii primesc salarii fixe. Oricum am nota acest motiv, el va fi reductibil la "inginerii nu-s capabili sa viseze". Nu atit pentru ca nu vor, cit mai ales pentru ca nu pot. Nu-i intereseaza si nu-si doresc. </p>
+<p><em>Not that there's anything wrong with it.</em></p>
+<p>---------<br />
+* Imprejurare care ne sugereaza poate si o explicatie a starii paradoxale in care Romania are 1/20 din populatia SU si totusi undeva intre 1/10,000 si 1/10,000,000 din piata IT de-acolo. Zic si eu, nu dau cu parul (ca un exercitiu in specificul local : ceva non-entitati s-au apucat sa organizeze ceva non-concurs in urma caruia ceva sala prin Facultatea de Jurnalistica Bucuresti a primit numele jegoasei citate, imprejurare care ne sugereaza poate si o explicatie... etc scl).</p>
+<p>** Ci chiar dimpotriva, basca ceva peste saizeci de miliarde de dolari prin conturi, adica PIB-ul Romaniei pe restul anului curent. Si nu, Apple n-are 23 de milioane de angajati, ci cam tot atit de multi angajati cit se gasesc pe bune si in Romania.</p>
+
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2011/concurs-de-ghicit/">Concurs de ghicit</a></div>
+                <div class="alignright"><a href="http://trilema.com/2011/gindirea-creativa/">Gindirea creativa</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2011/inginerul-fata-cu-viitorul/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2011/inginerul-fata-cu-viitorul/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>7 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-47995" class="commentbody"><div class="commenthead"><img alt='lexy229`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">lexy229</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-47995" title="">Wednesday, 27 April 2011</a>
+							</div>
+						<p>Ted Murphy, well known in teh industrah.<br />
+&gt;&gt; <a href="http://rockstartup.com/rockstars/ted.html">http://rockstartup.com/rockstars/ted.html</a></p>
+						</li>
+
+										<li id="comment-47996" class="commentbody"><div class="commenthead"><img alt='pletzalcoatl`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">pletzalcoatl<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-47996" title="">Wednesday, 27 April 2011</a>
+							</div>
+						<p>You know, you are a lot like MA yourself. Including both the insane work throughput and the jackass "bow or I'll tear you a new one" attitude.</p>
+						</li>
+
+										<li id="comment-47997" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-47997" title="">Wednesday, 27 April 2011</a>
+							</div>
+						<p>@<b>lexy229</b> Who said athlete-types are unfit to run geek biz ?</p>
+<p>@<b>pletzalcoatl</b> I have a large attitude shed, and it's full of adequate attitudes. For various circumstances. Just in case.</p>
+						</li>
+
+										<li id="comment-48093" class="commentbody"><div class="commenthead"><img alt='Dr.A`s avatar' src='http://blog.adrian.mihalcioiu.ro/2011/crasma-si-teatrul.html/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink"><a href='http://blog.adrian.mihalcioiu.ro/2011/crasma-si-teatrul.html' class='url'>Dr.A</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-48093" title="">Thursday, 28 April 2011</a>
+							</div>
+						<p>Mie imi pare ca ceea ce numim ingineri sunt printre putinii reprezentanti ai speciei umane  chiar dotati sa viseze competent. Sau tu vorbeai de visul din timpul somnului ? :)</p>
+						</li>
+
+										<li id="comment-48097" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-48097" title="">Thursday, 28 April 2011</a>
+							</div>
+						<p>Hehehe sa nu confundam inginerul ideal cu inginerul real, zic :D</p>
+						</li>
+
+										<li id="comment-48101" class="commentbody"><div class="commenthead"><img alt='Dr.A`s avatar' src='http://blog.adrian.mihalcioiu.ro/2011/crasma-si-teatrul.html/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink"><a href='http://blog.adrian.mihalcioiu.ro/2011/crasma-si-teatrul.html' class='url'>Dr.A</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-educat.png" class="insigna" alt="insigna de cetatean educat" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-1k.png" class="insigna" alt="insigna pentru 1000 de comentarii" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-48101" title="">Thursday, 28 April 2011</a>
+							</div>
+						<p>Apoi inginer ideal e oxymoron.</p>
+						</li>
+
+										<li id="comment-48104" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-48104" title="">Thursday, 28 April 2011</a>
+							</div>
+						<p>Nu-i problema, ca si inginer real e pleonasm.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="18802" /></p>
+				<input type="hidden" name="comment_post_time" value="1624832526-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-18802")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-18802");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-18802");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

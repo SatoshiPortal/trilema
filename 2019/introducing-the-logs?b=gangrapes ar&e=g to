@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Introducing the logs on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Mentula cum doleat imperio, tibi, lector, culus.<br />Non sum diuinus, sed scio quid facias.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-89087"><div class="post" id="post-89087">                    <h1><a href="http://trilema.com/2019/introducing-the-logs/" rel="bookmark" title="Permanent Link to Introducing the logs">Introducing the logs</a></h1>                        <div class="date">                                     Thursday, 21 November, Year 11 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>As you might perhaps remember, a few weeks ago I commissioned Eric Benevides to produce a sort of meld, between Stanislav Datskovskiy's ad-hoc python-based IRC logger bot he made for #trilema the irc channel <a href=http://trilema.com/2019/trilema-goes-dark/>during the previous crisis</a> and the MP-WP LAMP-based web publishing mechanism supporting Trilema the blog. As I take it delivery is imminent, so there's some preparatory changes needed here, chief among which this new Logs category. It will contain, as you might expect, one new article each day, reflecting that day's ongoing going ons in #trilema, the IRC channel. So there we go, that's all good &#038; introduced, hurray for the A-team.</p>
+<p>The other item needing an introduction is the IRC archive dump. As promised I sat down to splice together a complete and definitive version of the IRC logs ; the result is a body made of parts. </p>
+<p>The first part comes from Freenode-#bitcoin-otc.log, a 15376633 byte file bearing a last-mod timestamp of Tue 22 Jul 2014 05:20:43 PM CST in my archives. While it's a historical fact that my public involvement with Bitcoin starts mid-2011, it is also a historical fact that I did not deem the whole IRC milieu important enough to keep archives until the beginning of 2012. If there exist earlier logs, I will make no effort to establish their authenticity, due to a belief that such efforts can not be successful to a degree of permitting <a href=http://logs.ossasepia.com/log/trilema/2016-12-02#1576961>detrimental reliance</a> on their form, in which case what the hell's the point.</p>
+<p>These early proto-logs run daily (with interruptions, logging was not intended to work in my absence in those early days<sup><a href="#footnote_0_89087" id="identifier_0_89087" class="footnote-link footnote-identifier-link" title="In fact, due to the nefarious influence of morons-in-aggregate, we didn't even necessarily think public logs are needed or important back then ; this is still the situation in that first sad remnant of my natural development. 
+There are two morals in this footnote. One is that idiots in organized groups are universally evil in a moral sense and occasionally effectual at being evil in an ethical sense, thus therefore never permit morons to live lest they gather up and ruin the world while you're not looking -- you can't rely on yourself to know when, in some obscure, seemingly at the time unimportant angle of your life their idiocy is still as idiotic as it ever is, but not particularly obvious to you. The other is that the shells I've left behind, through overgrowing them, are numerous indeed -- just as you'd not have likely thought `oh, my personal experience's not that important -- #bitcoin-otc happened before` don't think `oh, #bitcoin-otc is how it all begun`. It's not, I overgrow things, starting from childhood, as part and parcel of what their failure to keep up with me means.">i</a></sup>) until August 11th 2012. Exactly two fragments have been elided for timeline conflict with the flow of history<sup><a href="#footnote_1_89087" id="identifier_1_89087" class="footnote-link footnote-identifier-link" title="Which is to say this channel, that had once been the forum, meanwhile a ruined fane, is only capable of yielding occasional footnotes.">ii</a></sup>. The first one<sup><a href="#footnote_2_89087" id="identifier_2_89087" class="footnote-link footnote-identifier-link" title="
+**** BEGIN LOGGING AT Sat Oct 13 20:40:32 2012
+Oct 13 20:40:32 *	Now talking on #bitcoin-otc
+Oct 13 20:40:32 *	Topic for #bitcoin-otc is: OTC marketplace for Bitcoin trading and exchange. | http://bitcoin-otc.com/ | http://bit.ly/x56Fd5 | Start with the ;;guide | Before trading, talk to people, and check ratings. | Beware the FRAUDSTERS. ;;fraud | Trade Options: http://polimedia.us/btc | BTC → MP @ http://btcpak.com | Logs: http://bit.ly/NFg1Yy | Support bitcoin-otc! 1F1dPZxdxVVigpGdsafnZ3cFBdMGDADFDe
+Oct 13 20:40:32 *	Topic for #bitcoin-otc set by nanotube at Tue Jul 31 07:10:19 2012
+Oct 13 20:40:32 -ChanServ-	[#bitcoin-otc] Welcome! If you're new here, please read the channel rules: http://wiki.bitcoin-otc.com/wiki/Bitcoin-otc_channel_guidelines as well as the OTC systems user guide: http://wiki.bitcoin-otc.com/wiki/Using_bitcoin-otc
+**** ENDING LOGGING AT Sat Oct 13 20:40:35 2012
+">iii</a></sup> came because I don't now remember who argued importantly <a href=http://trilema.com/2014/how-to-make-money-on-the-internet-while-pretending-you-know-what-youre-talking-about-and-accumulating-a-legion-of-mindless-followers-for-fun-and-profit/>in the manner of Internet dweebs</a> that the reason I wasn't on #bitcoin-otc was really that I had been banned, and not personal preference, so I went and tested his theory. It turned out I hadn't been banned and the anon tard returned to the background bogonic radiation, no doubt making strong claims <a href=http://trilema.com/2013/anonimity-not-for-the-poor/>with no basis</a> still, to this very day. The second<sup><a href="#footnote_3_89087" id="identifier_3_89087" class="footnote-link footnote-identifier-link" title="
+**** BEGIN LOGGING AT Wed Jul 23 02:20:27 2014
+Jul 23 02:20:27 *	Now talking on #bitcoin-otc
+Jul 23 02:20:27 *	Topic for #bitcoin-otc is: OTC marketplace for Bitcoin trading and exchange. | http://bitcoin-otc.com/ | http://bit.ly/x56Fd5 | Start with the ;;guide | Before trading, talk to people, and check ratings. | Beware the FRAUDSTERS ;;fraud | VPS for BTC @ vertvps.com code SUMMEROFOTC for 50% off first invoice | Logs: http://bit.ly/NFg1Yy | Support bitcoin-otc! 1F1dPZxdxVVigpGdsafnZ3cFBdMGDADFDe
+Jul 23 02:20:27 *	Topic for #bitcoin-otc set by nanotube at Tue Jun 10 00:39:32 2014
+Jul 23 02:20:27 *	[freenode-info] channel flooding and no channel staff around to help? Please check with freenode support: http://freenode.net/faq.shtml#gettinghelp
+Jul 23 02:20:27 -ChanServ-	[#bitcoin-otc] Welcome! If you're new here, please read the channel rules: http://wiki.bitcoin-otc.com/wiki/Bitcoin-otc_channel_guidelines as well as the OTC systems user guide: http://wiki.bitcoin-otc.com/wiki/Using_bitcoin-otc
+Jul 23 02:20:27 *	gribble gives voice to mircea_popescu
+Jul 23 02:20:31 mircea_popescu	;;view 21136
+Jul 23 02:20:33 *	rchasman has quit (Client Quit)
+Jul 23 02:20:34 gribble	#21136 Tue Jul 22 19:19:11 2014 mircea_popescu SELL 1000000.0 Doge coins deliverable 3 or 6 months @ 3 BTC (Or less, negotiable by volume and interval. Looking to carry a few billion.)
+Jul 23 02:20:35 mircea_popescu	;;view 21135
+Jul 23 02:20:35 Ex0deus	;;tlast
+Jul 23 02:20:35 gribble	620.0
+Jul 23 02:20:38 gribble	#21135 Tue Jul 22 18:54:52 2014 mircea_popescu SELL 5000.0 ethereum coins deliverable March 15th, 2015 @ 1 BTC (Up to 1k BTC's worth accepted. Get in touch.)
+Jul 23 02:20:41 mircea_popescu	there we go.
+**** ENDING LOGGING AT Wed Jul 23 02:20:44 2014
+">iv</a></sup> was part and parcel of the ample yet <a href=http://trilema.com/2013/valiant-prince-mp-explores-the-mother-of-all-echo-chambers-a-saga-of-our-times/?b=lolz%20were%20had&#038;e=bubble#select>allegedly absent</a><sup><a href="#footnote_4_89087" id="identifier_4_89087" class="footnote-link footnote-identifier-link" title="Yet to quote some random anodyne cuck, `the mystique is stronger than ever`.">v</a></sup> body of evidence as to the identity of <a href=http://trilema.com/2016/to-the-dao-and-the-ethereum-community-fuck-you/>the party on top</a>.  Ever heard the self-obvious observation whereby democracy is a dubious social form owing to the happenstance that nine man <span style="background-color:#d3d3d3" id="select">gangrapes are enjoyable to nine tenths of the participants, while the tenth's underage anyway ? No, <a href=http://trilema.com/2015/the-squares-and-the-holes/>making men illegal</a> won't change this, it'll just wreck the "<a href=http://trilema.com/2013/the-sops-or-what-might-you-expect-from-government-clerks/>rule of law</a>" <a href=http://trilema.com/2012/the-crime-of-being-american/>fiction</a> (not that it's rescuable, owing to</span> <a href=http://trilema.com/2012/gpg-contracts/>the cognitive death of the contract</a>).</p>
+<p>A portion was also introduced (from #bitcoin-otc-eu<sup><a href="#footnote_5_89087" id="identifier_5_89087" class="footnote-link footnote-identifier-link" title="The move to #bitcoin-assets followed from here, kakobrekla owned the bitcoin-otc subordinate namespace -eu, and I just proposed we make a proper one.">vi</a></sup>), to cover the interval between April 8th and May 11th 2012<sup><a href="#footnote_6_89087" id="identifier_6_89087" class="footnote-link footnote-identifier-link" title="The only part spliced out from the beginning of the #bitcoin-otc-eu log is this fragment from April 2nd : 
+**** BEGIN LOGGING AT Mon Apr  2 01:58:08 2012
+Apr 02 01:58:08 *	Now talking on #bitcoin-otc-eu
+Apr 02 01:58:08 *	Topic for #bitcoin-otc-eu is: Eurozone #bitcoin-otc || http://bitcoin-otc.com || Include hash tag #eu in order notes to group -eu orders. || View all tagged -eu orders here: http://bitcoin-otc.com/vieworderbook.php?notes=%23eu || Exchange rates: !bc,convert CURRENCYCODE ||  GET BTC WITH ukash/paysafecard ... /msg neliskybot help
+Apr 02 01:58:08 *	Topic for #bitcoin-otc-eu set by kakobrekla!~T42@89-212-41-49.static.t-2.net at Sat Jan 28 15:22:07 2012
+Apr 02 01:59:45 mircea_popescu	;;rate gmaxwell -1 I don't trust him.
+Apr 02 01:59:46 gribble	Rating entry successful. Your rating of -1 for user gmaxwell has been recorded.
+Apr 02 02:52:26 *	allied has quit (Ping timeout: 252 seconds)
+Apr 02 02:55:03 *	allied (~allied2@213.229.88.72) has joined #bitcoin-otc-eu
+**** ENDING LOGGING AT Mon Apr  2 03:02:35 2012
+Yes, that's right, back then ratings didn't take any crypto verification, the whole system relied on Freenode's namespace control. 
+Actually, in the cesspool left behind, it... still does. That's right, to this very day, the pretenders to relevancy pretend to relevancy, and just as idly as ever before.">vii</a></sup>. Throughout the Summer of 2012 committment remained weak on my part for any IRC channel in general speaking, so it's ambiguously unclear what relevancy either of these two could possibly claim for themselves, or whether the timeline should follow #bitcoin-otc.log or #bitcoin-otc-eu.log until August 10th 2012. They both fell off a cliff afterwards anyways, and the exacting attempt at a reconstruction of something out of disparate parts of nothing is too much like everyday work for the mind to relish low payoff applications upon historical detritus.</p>
+<p>The last part comes from my copy of the bitcoin-assets.log as I handed it off to phf for publishing, and so that'll be all.</p>
+<p>In the end this timeline comes to a little over two million seventy thousand lines accreted during the 1538 days between 12 January 2012 and 28 March 2016 ; a grand total of 160 or so Megabytes. People were a lot chattier then, but for little reason and even less benefit -- I indeed doubt there's enough material of actual substance in all that to produce a coupla thousand lines fit for inclusion in contemporaneous logs. Nevertheless, for historicity's sake the whole bundle's going to appear deluvionally right here, on irony's last remaining bastion, just as soon as I'm done formatting it for sql and importing the whole pile. You're... welcome, I guess.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_89087" class="footnote">In fact, due to the nefarious influence of morons-in-aggregate, we didn't even necessarily think public logs are needed or important back then ; this is <a href=http://logs.ossasepia.com/log/trilema/2018-11-27#1875548>still the situation</a> in that first sad remnant of my natural development. </p>
+<p>There are two morals in this footnote. One is that idiots in organized groups are universally evil in a moral sense and occasionally effectual at being evil in an ethical sense, thus therefore never permit morons to live lest they gather up and ruin the world while you're not looking -- you can't rely on yourself to know when, in some obscure, seemingly at the time unimportant angle of your life their idiocy is still as idiotic as it ever is, <em>but not particularly obvious to you</em>. The other is that the shells I've left behind, through overgrowing them, are numerous indeed -- just as you'd not have likely thought "oh, my personal experience's not that important -- #bitcoin-otc happened before" don't think "oh, #bitcoin-otc is how it all begun". It's not, I overgrow things, starting from childhood, as part and parcel of what <a href=http://trilema.com/2019/thelastpsychiatristcom-are-women-prone-to-paranormal-beliefs-adnotated/#footnote_2_86512>their failure to keep up with me</a> <em>means</em>. [<a href="#identifier_0_89087" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_89087" class="footnote">Which is to say this channel, that had once been the forum, meanwhile a ruined fane, is only capable of yielding occasional footnotes. [<a href="#identifier_1_89087" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_89087" class="footnote"><br />
+<blockquote>**** BEGIN LOGGING AT Sat Oct 13 20:40:32 2012</p>
+<p>Oct 13 20:40:32 *	Now talking on #bitcoin-otc<br />
+Oct 13 20:40:32 *	Topic for #bitcoin-otc is: OTC marketplace for Bitcoin trading and exchange. | http://bitcoin-otc.com/ | http://bit.ly/x56Fd5 | Start with the ;;guide | Before trading, talk to people, and check ratings. | Beware the FRAUDSTERS. ;;fraud | Trade Options: http://polimedia.us/btc | BTC → MP @ http://btcpak.com | Logs: http://bit.ly/NFg1Yy | Support bitcoin-otc! 1F1dPZxdxVVigpGdsafnZ3cFBdMGDADFDe<br />
+Oct 13 20:40:32 *	Topic for #bitcoin-otc set by nanotube at Tue Jul 31 07:10:19 2012<br />
+Oct 13 20:40:32 -ChanServ-	[#bitcoin-otc] Welcome! If you're new here, please read the channel rules: http://wiki.bitcoin-otc.com/wiki/Bitcoin-otc_channel_guidelines as well as the OTC systems user guide: http://wiki.bitcoin-otc.com/wiki/Using_bitcoin-otc<br />
+**** ENDING LOGGING AT Sat Oct 13 20:40:35 2012</p></blockquote>
+<p> [<a href="#identifier_2_89087" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_89087" class="footnote"><br />
+<blockquote>**** BEGIN LOGGING AT Wed Jul 23 02:20:27 2014</p>
+<p>Jul 23 02:20:27 *	Now talking on #bitcoin-otc<br />
+Jul 23 02:20:27 *	Topic for #bitcoin-otc is: OTC marketplace for Bitcoin trading and exchange. | http://bitcoin-otc.com/ | http://bit.ly/x56Fd5 | Start with the ;;guide | Before trading, talk to people, and check ratings. | Beware the FRAUDSTERS ;;fraud | VPS for BTC @ vertvps.com code SUMMEROFOTC for 50% off first invoice | Logs: http://bit.ly/NFg1Yy | Support bitcoin-otc! 1F1dPZxdxVVigpGdsafnZ3cFBdMGDADFDe<br />
+Jul 23 02:20:27 *	Topic for #bitcoin-otc set by nanotube at Tue Jun 10 00:39:32 2014<br />
+Jul 23 02:20:27 *	[freenode-info] channel flooding and no channel staff around to help? Please check with freenode support: http://freenode.net/faq.shtml#gettinghelp<br />
+Jul 23 02:20:27 -ChanServ-	[#bitcoin-otc] Welcome! If you're new here, please read the channel rules: http://wiki.bitcoin-otc.com/wiki/Bitcoin-otc_channel_guidelines as well as the OTC systems user guide: http://wiki.bitcoin-otc.com/wiki/Using_bitcoin-otc<br />
+Jul 23 02:20:27 *	gribble gives voice to mircea_popescu<br />
+Jul 23 02:20:31 <b>mircea_popescu</b>	;;view 21136<br />
+Jul 23 02:20:33 *	rchasman has quit (Client Quit)<br />
+Jul 23 02:20:34 <b>gribble</b>	#21136 Tue Jul 22 19:19:11 2014 mircea_popescu SELL 1000000.0 Doge coins deliverable 3 or 6 months @ 3 BTC (Or less, negotiable by volume and interval. Looking to carry a few billion.)<br />
+Jul 23 02:20:35 <b>mircea_popescu</b>	;;view 21135<br />
+Jul 23 02:20:35 <b>Ex0deus</b>	;;tlast<br />
+Jul 23 02:20:35 <b>gribble</b>	620.0<br />
+Jul 23 02:20:38 <b>gribble</b>	#21135 Tue Jul 22 18:54:52 2014 mircea_popescu SELL 5000.0 ethereum coins deliverable March 15th, 2015 @ 1 BTC (Up to 1k BTC's worth accepted. Get in touch.)<br />
+Jul 23 02:20:41 <b>mircea_popescu</b>	there we go.<br />
+**** ENDING LOGGING AT Wed Jul 23 02:20:44 2014</p></blockquote>
+<p> [<a href="#identifier_3_89087" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_89087" class="footnote">Yet to quote some random anodyne cuck, "the mystique is stronger than ever". [<a href="#identifier_4_89087" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_89087" class="footnote">The move to #bitcoin-assets followed from here, kakobrekla owned the bitcoin-otc subordinate namespace -eu, and I just proposed we make a proper one. [<a href="#identifier_5_89087" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_89087" class="footnote">The only part spliced out from the beginning of the #bitcoin-otc-eu log is this fragment from April 2nd : </p>
+<blockquote><p>**** BEGIN LOGGING AT Mon Apr  2 01:58:08 2012</p>
+<p>Apr 02 01:58:08 *	Now talking on #bitcoin-otc-eu<br />
+Apr 02 01:58:08 *	Topic for #bitcoin-otc-eu is: Eurozone #bitcoin-otc || http://bitcoin-otc.com || Include hash tag #eu in order notes to group -eu orders. || View all tagged -eu orders here: http://bitcoin-otc.com/vieworderbook.php?notes=%23eu || Exchange rates: !bc,convert CURRENCYCODE ||  GET BTC WITH ukash/paysafecard ... /msg neliskybot help<br />
+Apr 02 01:58:08 *	Topic for #bitcoin-otc-eu set by kakobrekla!~T42@89-212-41-49.static.t-2.net at Sat Jan 28 15:22:07 2012<br />
+Apr 02 01:59:45 <b>mircea_popescu</b>	;;rate gmaxwell -1 I don't trust him.<br />
+Apr 02 01:59:46 <b>gribble</b>	Rating entry successful. Your rating of -1 for user gmaxwell has been recorded.<br />
+Apr 02 02:52:26 *	allied has quit (Ping timeout: 252 seconds)<br />
+Apr 02 02:55:03 *	allied (~allied2@213.229.88.72) has joined #bitcoin-otc-eu<br />
+**** ENDING LOGGING AT Mon Apr  2 03:02:35 2012</p></blockquote>
+<p>Yes, that's right, back then ratings didn't take any crypto verification, the whole system relied on Freenode's namespace control. </p>
+<p>Actually, in the cesspool left behind, it... still does. That's right, to this very day, the pretenders to relevancy <a href=http://trilema.com/2018/and-in-other-dead-things/?b=No,%20they&#038;e=idiots#select>pretend to relevancy</a>, and just as idly as ever before. [<a href="#identifier_6_89087" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2019/the-broken-windowpane-fallacy-fallacy/">The broken windowpane fallacy fallacy</a></div>
+                <div class="alignright"><a href="http://trilema.com/2019/forum-logs-for-12-jan-2012/">Forum logs for 12 Jan 2012</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2019/introducing-the-logs/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2019/introducing-the-logs/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>40 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-132410" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132410" title="">Thursday, 21 November 2019</a>
+							</div>
+						<p>The xchat log format is maddeningly idiotic. Consider this line : </p>
+<blockquote><p>Jan 12 03:27:11 &lt;pigeons>	yay freddieisdead! </p></blockquote>
+<p>The format is : month SPACE day SPACE hour COLUMN minute COLUMN second SPACE< name >TAB text. How the fuck's anyone supposed to extract anything from this idiocy ? <em>Especially</em> considering space's fucking ambiguously also the most common character in text (and all the others also occur, so you can't even awk -F " |:" because then you've lost some data) ?! Pshaw. </p>
+<p>Oh, and of course, let's not forget -- use the universal BRE/ERE/PCRE globbing character as a MULTIPLE INSTANCE tag, it'll be such a pleasure to grep for the literal string ****.</p>
+<p>Also worth a mention, the deeply deranged handling of categories on MP-WP, which makes it preferable to dump everyting into the default "Zilnic" and <a href=http://trilema.com/2019/how-to-restructure-the-categories-of-articles-on-mp-wp/ >fix it later</a>, rather than harangue immense complexity into shape as we go. </p>
+<p>And, of course, we can't just use printf -- it's a bitch about "awk: (FILENAME=- FNR=236) fatal: not enough arguments to satisfy format string ^ ran out for this one" shenanigans ; so we're stuck with dumbass print, which sticks an ORS after each invocation, so we're stuck nulling ORS and so on and so forth for fucking ever. Why is the format for setting the IRS so different for the format setting the ORS ? Nooobody knowsss... </p>
+<p>Anyways, here's most of the way in bash :</p>
+<p><code>cat logstory.txt | grep -v '\*\*\*\* BEGI' | grep -v '\*\*\*\* ENDI' | grep . | awk -F " " -v ORS="" '{sqltemplate="\");\nINSERT INTO tril_posts(post_author, post_status, post_type, post_date, post_date_gmt, post_title, post_content) VALUES (1, \"publish\", \"future\",\""; text="" ; for(i=5;i&lt;=NF;i++){text=text$i" "}; time= substr($3,0,5);  ; sub(/&lt;/, "#", $4); sub(/>/, "&lt;/b>", $4); sub(/#/, "&lt;b>", $4); if($2 != day){print sqltemplate}; day=$2; print "&lt;tr>&lt;td>"$4"&lt;/td>&lt;td>"text"&lt;/td>&lt;td>&lt;font color=gray>["time"]&lt;/font>&lt;/td>&lt;/tr>"}' > logs.txt</code></p>
+<p>It outputs correct sql, as far as I know -- except for the part where it's a 548 character bash pipe monstrosity, thus well past any possible maintainability threshold, and it ~still~ doesn't do the date part. I want each of the ~1500 entries to be incremented by time, such that they end up published once a minute or something ; but theres no native "add 50 seconds to this timestamp" in awk, and if I end up writing one might as well make this a proper fucking program already.</p>
+						</li>
+
+										<li id="comment-132411" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132411" title="">Thursday, 21 November 2019</a>
+							</div>
+						<p>Ugh, that does indeed seem annoying.</p>
+<p>Unfortunately, the <a href="http://blog.ericbenevides.com/category/logs/page/5/" >archive of logs I'm importing</a> came from an extract of the data in the Stan logger (which only goes back to 2016). </p>
+<p>As for how the archives got into the Stan logger in the first place, Diana Coman wrote a converter for irssi logs, and I wrote one for znc logs.</p>
+<p>All this to say I have not yet wrestled with xchat log formats, though I'm fine to take a poke at it. <a href="http://logs.ericbenevides.com/log/trilema/2019-09-11#1935641" >Data conversion never ends...</a> </p>
+<p>As for the maddening process of assigning the category, fwiw in the mp-wp bot code I indeed ended up doing this as a multi-step thing. Here's the <a href="http://paste.deedbot.org/?id=Ze_k" >relevant snippet</a> from the <a href="http://lobbesblog.com/src/logotron/mp-wp-bot.kv.vpatch" >vpatch</a> if it helps you any. Essentially insert record into posts table, grab post_id, then do the dance with the various relationship tables.</p>
+						</li>
+
+										<li id="comment-132412" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132412" title="">Thursday, 21 November 2019</a>
+							</div>
+						<p>> Unfortunately, the archive of logs I'm importing came from an extract of the data in the Stan logger</p>
+<p>Nevermind that part. <em>How</em> does it do the data to sql part ?</p>
+						</li>
+
+										<li id="comment-132413" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132413" title="">Thursday, 21 November 2019</a>
+							</div>
+						<p>Right now I have it coded in python. It reads a formatted dump line by line comparing the timestamp on current line to previous line. If the current line is a new day, it creates a new article, otherwise it just updates the article for that day (and adds the new line to the data in the post_contents field).</p>
+<p>It also applies all of the various functions such as adding the timestamp delimiters, etc.</p>
+<p>I'm at 'saltmine' atm and commenting from dumbphone, but should be back at my terminal in ~4 hours. I will ping you in chan then and can provide various specifics as you require 'em (or obv. just ask here and I'll provide once back).</p>
+						</li>
+
+										<li id="comment-132414" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132414" title="">Thursday, 21 November 2019</a>
+							</div>
+						<p>Thanks ; if I'm asleep by then we just sync tomorrow or during the weekend.</p>
+						</li>
+
+										<li id="comment-132435" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132435" title="">Saturday, 23 November 2019</a>
+							</div>
+						<p>In other lulz of the united open front : %s "obviously" means unixtime in date (and it obviously has to come in the format +"%s" because duh) while it just as "obviously" means command-line supplied parameter in awk. Because why not, right, nothing's more obvious than the obvious stupidity of obviousness.</p>
+<p>Anyways, it occurs to the suffering agent that if awk dun do time, mysql does, so just let it. Add to that various fixes, trims and whatnot (especially ux refinements provided directly through teh everholy comment section), and the definitive script as actually used turns out to :</p>
+<blockquote><p>cat logstory.txt | grep -v '\*\*\*\* BEGI' | grep -v '\*\*\*\* ENDI' | grep . | sed 's%"%\\"%g' | awk -F " " -v ORS="" -v timecnt=1574519743 -v curryear=2012 -v articleid=89175 '{refcnt++;if($1=="Jan" &#038;& month=="Dec"){curryear++};title="Forum logs for "$2" "$1" "curryear;slug=tolower(title);gsub(" ","-",slug);sqltemplate="&lt;/table>\"); INSERT INTO tril_term_relationships (object_id, term_taxonomy_id) VALUES ("articleid-1", 44);\nINSERT INTO tril_posts(id, post_author, post_status, post_type, post_name, post_date, post_date_gmt, post_title, post_content) VALUES ("articleid",1, \"publish\", \"post\",\""slug"\", FROM_UNIXTIME("timecnt+7200"), FROM_UNIXTIME("timecnt"),\""title"\",\"&lt;table style=\\\"font-size:1em;\\\">"; text="" ; for(i=5;i&lt;=NF;i++){text=text$i" "}; time=substr($3,0,5); sub(/&lt;/, "#", $4); sub(/>/, "&lt;/b>", $4); sub(/#/, "&lt;b>", $4); if($2 != day){timecnt=timecnt+57;print sqltemplate;articleid++;};print "&lt;tr>&lt;td>"$4"&lt;/td>&lt;td>"; if($4=="*"){print "&lt;span style=\\\"color:#d3d3d3;\\\">"};print text;if($4=="*"){print "&lt;/span>"};print"&lt;/td>&lt;td>&lt;span style=\\\"color:#d3d3d3;\\\">[&lt;a id=\\\""refcnt"\\\" href=\\\"http://trilema.com/2019/"slug"#"refcnt"\\\">"time"&lt;/a>]&lt;/span>&lt;/td>&lt;/tr>";day=$2;month=$1;}' > logs.txt</p></blockquote>
+<p>Ain't that a great way to spend 1233 characters!</p>
+<p>I did spend a while mired in a whole pile of </p>
+<blockquote><p>a:3:{i:1574522448;a:1:{s:19:"publish_future_post";a:1:{s:32:"9cf6394663d7edb1f3bc55e81178f572";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;s:5:"89104";}}}}i:1574526765;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}s:7:"version";i:2;}</p></blockquote>
+<p>(from the options table) trying to get the mpwp native publishing scheduler work, but in the end it does not. It's a gnarly format, that comes to a (for array) column 3 (element count). i denotes an integer, s denotes a string, so s:6:"string" would be how you say string. The hash in the example above is actually md5 (yes, lol), serving in the role of poor man's gensym. Yet even with all that, there's another missing piece somewhere, because merely inserting a formed array into the options does not trigger the future publishing whereas producing a future article through the interface and then switching out its id here for your "missed deadline" article WILL publish the sql-inserted article by that new id rather than the interface-produced article. (Also, simply wiping the "twicedaily" wp_update_plugins/wp_update_themes bullcrap results in this php reimplementation of cron used by mpwp simply reinterpreting your hook as a subhook, in a reconstructed hook structure. It'd prolly be good if the driver of this behaviour is found and eviscerated, but I'm guessing it'll have to wait for billymg getting round to it.)</p>
+<p>In any case, I gave up trying to get MPWPs future function to do this, instead I just used a sleep in bash :</p>
+<blockquote><p>cat logs.txt | while read -r line; do echo $line | mysql --host=localhost --user=etc; sleep 57; done</p></blockquote>
+<p>And that was the end of it. Expect normal service to be restored tomorrow, go hunt or something for a day. Ta-da!</p>
+<p>PS. I confess it's pleasant to see things like </p>
+<blockquote><p>PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND<br />
+18076 *      20   0  103m 1248 1000 R 98.0  0.0   0:43.55 awk   </p></blockquote>
+<p>you know ?</p>
+						</li>
+
+										<li id="comment-132439" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132439" title="">Sunday, 24 November 2019</a>
+							</div>
+						<p>Well, the above quoted might've been the script "actually used" to... <em>start</em> the publishing with. The script publishing ended with, however, is slightly different :  </p>
+<blockquote><p>cat logstory.txt | grep -v "^\*" | grep -v "^ " | grep . | sed 's%"%\\"%g' | sed 's%*%\&amp;ast;%g' | awk -F " " -v ORS="" -v timecnt=1574535743 -v curryear=2012 -v articleid=89188 '{refcnt++;if($1=="Jan" &#038;& month=="Dec"){curryear++};title="Forum logs for "$2" "$1" "curryear;slug=tolower(title);gsub(" ","-",slug);sqltemplate="&lt;/table>\"); INSERT INTO tril_term_relationships (object_id, term_taxonomy_id) VALUES ("articleid-1", 44);\nINSERT INTO tril_posts(id, post_author, post_status, post_type, post_name, post_date, post_date_gmt, post_title, post_content) VALUES ("articleid",1, \"publish\", \"post\",\""slug"\", FROM_UNIXTIME("timecnt+7200"), FROM_UNIXTIME("timecnt"),\""title"\",\"&lt;table style=\\\"font-size:1em;width:580px;\\\">"; text="" ; for(i=5;i&lt;=NF;i++){text=text$i" "}; time=substr($3,0,5); sub(/&lt;/, "#", $4); sub(/>/, "&lt;/b>", $4); sub(/#/, "&lt;b>", $4); if($2 != day){timecnt=timecnt+57;print sqltemplate;articleid++;};print "&lt;tr>&lt;td>"$4"&lt;/td>&lt;td class=\\\"breakup\\\">"; if($4=="&ast;"){print "&lt;span style=\\\"color:#d3d3d3;\\\">"};print text;if($4=="*"){print "&lt;/span>"};print"&lt;/td>&lt;td>&lt;span style=\\\"color:#d3d3d3;\\\">[&lt;a id=\\\""refcnt"\\\" href=\\\"http://trilema.com/2019/"slug"#"refcnt"\\\">"time"&lt;/a>]&lt;/span>&lt;/td>&lt;/tr>";day=$2;month=$1;}' > logs4.txt</p></blockquote>
+<p>Particularly valuable in there (other than the implicit major version count) is the magic bullet for the nasty overflow issue (no, the <a href=http://trilema.com/2019/forum-logs-for-12-jan-2012/#comment-132429 >first fix</a> didn't fix it all -- there's a <em>different</em> driver for the observed misbehaviour in very long no-space strings such are common in, well, a crypto context). It turns out the following peculiar gymnastics resolve it : setting the table to an explicit width (58o px in the case of Trilema); setting the <em>middle</em> column to "breakup" class; and finally adding a </p>
+<blockquote><p>.breakup {  word-break: break-all;}</p></blockquote>
+<p>line to the style.css for the theme.</p>
+<p>PS. What's lovelier than typing ctrl-6 alt-\ ctrl-k into nano within a second and change, only for it to eat a minute and over to execute the orders. I really love overwhelming machines!!!</p>
+<p>PPS. Apparently sed 's%*%&amp;ast;%g' does not replace each instance of the * character with the &amp;ast; htmlentity -- because why the fuck would it! Isn't this after all the #1 reason everyone loves the sed replace format, that you can use whatever characters you wish for the separators, and therefore don't have to worry so much about escaping the content ? Fucking 'ell.</p>
+						</li>
+
+										<li id="comment-132520" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132520" title="">Monday, 2 December 2019</a>
+							</div>
+						<p>I want to address this morning's Qs but am in saltmine so cannot speak in forum atm, so I'll reply here I suppose. (just tried to use my own blog but got trapped in my own modqueue... ugh):</p>
+<p><a href="http://logs.ericbenevides.com/log/trilema/2019-12-02#1954028">http://logs.ericbenevides.com/log/trilema/2019-12-02#1954028</a> - I mean, the id is automatically set on the table. My thought was you import dump into staging table, then insert into your main posts table from that.</p>
+<p>As for the staggering of posts, the post_date on each record is staggered by about a minute. Could simply just update the post_date on each (putting them into the future) once it is in the staging table.</p>
+<p><a href="http://logs.ericbenevides.com/log/trilema/2019-12-02#1954031">http://logs.ericbenevides.com/log/trilema/2019-12-02#1954031</a> - Hmm it *should* have the table width but I cannot check atm, so will take your word. It does not have the class="breakup"; I did not know this was required.</p>
+<p><a href="http://logs.ericbenevides.com/log/trilema/2019-12-02#1954033">http://logs.ericbenevides.com/log/trilema/2019-12-02#1954033</a> - I can give you a dump like this, though again remember that post id is autoset on insert.</p>
+<p><a href="http://logs.ericbenevides.com/log/trilema/2019-12-02#1954034">http://logs.ericbenevides.com/log/trilema/2019-12-02#1954034</a> - I'll be honest, I'm not sure what you mean here exactly. What are you escaping with sed?</p>
+<p>In any case, I'll be back at my terminal tonight (6 hrs) once out of mines</p>
+						</li>
+
+										<li id="comment-132522" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132522" title="">Monday, 2 December 2019</a>
+							</div>
+						<p>But I mean holy god, why the hell would you comment on a random log day ?! I've moved it to hang off of the intro post, forget about it.</p>
+<p>> My thought was you import dump into staging table</p>
+<p>What staging table ? I just wanna add your data to trilema, like I added teh historical logs.</p>
+<p>> I did not know this was required.</p>
+<p>It's required because otherwise very long strings with no spaces fuck up the formatting. Whole discussion is <a href=http://trilema.com/2019/forum-logs-for-12-jan-2012/ >here</a>.</p>
+<p>> I can give you a dump like this, though again remember that post id is autoset on insert.</p>
+<p>It's not dude, it is whatever you say it is ; if you don't say what it is it'll default to the next index count.</p>
+<p>> What are you escaping with sed?</p>
+<p>You can't have the following : "INSERT INTO x (a, b) VALUES ("title", "and then he said : "hurr!" and i laugheed");" even if "and then he said : "hurr!" and i laugheed" comes from some variable in code. You must instead say "INSERT INTO x (a, b) VALUES ("title", "and then he said : \\"hurr!\\" and i laugheed");" for our needs here, so all quotes in article content must be replaced by \\". I am also switching the literal * for the &amp;ask; encoded entity so my command line interpreter doesn't hang on it.</p>
+<p>You didn't really much read teh log conversion script I posted, did you.</p>
+						</li>
+
+										<li id="comment-132524" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132524" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p><b>@Mircea Popescu</b></p>
+<p>&gt; But I mean holy god, why the hell would you comment on a random log day</p>
+<p>Phew, yeah sorry. I had a case of brain flatulence earlier today apparently.</p>
+<p>&gt; You didn't really much read teh log conversion script I posted, did you.</p>
+<p>To my shame no, but I have read it now (along with the linked threads). I see where you are coming from. </p>
+<p>Before I turn in for the night I will get you a line-by-line dump of INSERTS into both the posts and term_relationships table as you mentioned in the logs. This dump will also have the correct table style and td class values. </p>
+<p>I'll also make sure the dump is properly escaped. (I was working under the impression that if we were both using teh mysqldump command to export/import then ~it~ should be doing this escaping, although after poking around the interwebs a bit it seems this is not always the case anyways..)</p>
+						</li>
+
+										<li id="comment-132525" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132525" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p>Works ; Ima set it to brew overnight then, and ideally have a files+db package for you tomorrow or the next day. This'll be 1GB+ for the db and a buncha GB for the files. I do intend to give out the db in the standard mysqldump format then, you don't have any publishing constraints on your end and I imagine it'll be simpler this way.</p>
+						</li>
+
+										<li id="comment-132526" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132526" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p>Dump will be when I wake instead. I ended up having to make a few more fixes in addition to the planned fixes above. There were enough changes that I decided it was cleaner to simply re-run my archives-to-blog process overnight.</p>
+<p>I had initially missed that your archives had monotonic line ids (I was using a timestamp in my version), so I went ahead and fixed the bot to output them. The dump I'll be giving you will start at line id 2067223, right where <a href="http://trilema.com/2019/forum-logs-for-27-mar-2016/#2067222" >your archives left off</a>. There are a few smaller formatting fixes I made that will also be included.</p>
+						</li>
+
+										<li id="comment-132527" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132527" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p>Cool deal!</p>
+<p>I vaguely remember now you asked about this back when and I naively cut the knot nodding along ; then sat down to do the early logs changed it and never even said anything. Sorry about that.</p>
+						</li>
+
+										<li id="comment-132531" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132531" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p>Alrighty, here are teh dumps:</p>
+<p><b>tril_posts (with the <a href="http://logs.ericbenevides.com/log/trilema/2019-12-02#1954034" >sed escaping</a> applied)</b><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts_table_sed.sql" >tril_posts_table_sed.sql</a><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts_table_sed.sql.lobbes.sig" >tril_posts_table_sed.sql.lobbes.sig</a></p>
+<p><b>tril_term_relationships</b><br />
+<a href="http://blog.ericbenevides.com/static/tril_term_relationships.sql" >tril_term_relationships.sql</a><br />
+<a href="http://blog.ericbenevides.com/static/tril_term_relationships.sql.lobbes.sig" >tril_term_relationships.sql.lobbes.sig</a></p>
+<p><b>tril_posts (without the sed applied. not sure if you'll need this but I did a test import with it with no issues; figured I'd provide it too)</b><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts_table.sql" >tril_posts_table.sql</a><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts_table.sql.lobbes.sig" >tril_posts_table.sql.lobbes.sig</a></p>
+<p>I'll be around for most of today/tonight if there are any issues.</p>
+						</li>
+
+										<li id="comment-132532" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132532" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p>Darn, why are they in separate files anyway ? </p>
+<p>Understand, I don't import the dumps, I run mysql queries one by one, like described in comment #6 : </p>
+<blockquote><p>cat logs.txt | while read -r line; do echo $line | mysql --host=localhost --user=etc; sleep 57; done</p></blockquote>
+<p>Whatever, not so hard to splice two files together on this end. However... the tail is also broken : </p>
+<blockquote><p>href=\\"#2067925\\">23:59]','<br />
+#trilema logs for 28 Mar 2016',0,'','publish','open','open','','trilema-logs-for<br />
+-28-Mar-2016','','','2019-12-03 08:12:01','2019-12-03 08:12:01','',0,'<b><a href="http://blo">http://blo</a><br />
+g.ericbenevides.com/?p=5261</b>',0,'post','',0);</p></blockquote>
+<p>The guid should obviously match the id (ie, be simply "90800" in that quoted case).</p>
+<p>Finally, I don't want the title to be "#trilema logs for 28 Mar 2016", I want it to be "Forum logs for 26 Mar 2016", I'm not quite ready to give Freenode as much weight as all that either in the direct or by implication ; let that indirection layer stand in favour of republican continuity rather than permit transparency to favour heathen pretense.</p>
+<p>I ~could~ do all these, but esp the guid reparsing would be a pain in the ass, so would you mind re-restating the damned thing ?</p>
+						</li>
+
+										<li id="comment-132533" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132533" title="">Tuesday, 3 December 2019</a>
+							</div>
+						<p>&gt; Darn, why are they in separate files anyway ?</p>
+<p>This is due to my own limitation on how I'm exporting the things (via e.g. "mysqldump --complete-insert --no-create-info --extended-insert=False -u root -p database tril_posts &gt; tril_posts_table.sql").</p>
+<p>&gt; Whatever, not so hard to splice two files together on this end. </p>
+<p>Word.</p>
+<p>&gt; The guid should obviously match the id (ie, be simply "90800" in that quoted case).</p>
+<p>Ah shit, I missed that one. I will fix. Just to make sure I understand, you want the guid == article-id (as opposed to <a href="http://www.siteurl.com/?p=article-id">http://www.siteurl.com/?p=article-id</a>)?</p>
+<p>&gt; I want it to be "Forum logs for 26 Mar 2016", I'm not quite ready to give Freenode as much weight as all that either in the direct or by implication</p>
+<p>This makes sense, and shouldn't be too difficult of a fix.</p>
+<p>I will aim to get an updated dump out tonight.</p>
+						</li>
+
+										<li id="comment-132534" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132534" title="">Wednesday, 4 December 2019</a>
+							</div>
+						<p>> Ah shit, I missed that one. I will fix. Just to make sure I understand, you want the guid == article-id (as opposed to <a href="http://www.siteurl.com/?p=article-id">http://www.siteurl.com/?p=article-id</a>)?</p>
+<p>Apparently the correct format is indeed "http://trilema.com/?p=49529" or such, so sure, go for that. (As it turns out I didn't do this on my own import, but w/e, the fix is one simple update statement away).</p>
+						</li>
+
+										<li id="comment-132535" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132535" title="">Wednesday, 4 December 2019</a>
+							</div>
+						<p>&gt; Apparently the correct format is indeed "http://trilema.com/?p=49529" or such, so sure, go for that.</p>
+<p>Done. Refreshed dump (with guid, post_title, and post_name updates) available at:</p>
+<p><b>tril_posts (with sed escaping)</b><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts_table_sed.sql" >tril_posts_table_sed.sql</a><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts_table_sed.sql.lobbes.sig" >tril_posts_table_sed.sql.lobbes.sig</a></p>
+<p><b>tril_posts (without the sed escaping applied)</b><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts_table.sql" >tril_posts_table.sql</a><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts_table.sql.lobbes.sig" >tril_posts_table.sql.lobbes.sig</a></p>
+						</li>
+
+										<li id="comment-132536" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132536" title="">Wednesday, 4 December 2019</a>
+							</div>
+						<p>In other lulz, </p>
+<blockquote><p>--<br />
+-- Dumping data for table `tril_posts`<br />
+--</p>
+<p>LOCK TABLES `tril_posts` WRITE;<br />
+/&amp;ast;!40000 ALTER TABLE `tril_posts` DISABLE KEYS &amp;ast;/;<br />
+INSERT INTO `tril_posts` (`ID`,[...]</p></blockquote>
+<p>Speaking of the guid error above (which meanwhile was fixed), let us record the fixing for the curious noob :</p>
+<blockquote><p>mysql> update tril_posts set guid = CONCAT("http://trilema.com/?p=", id) where post_status="Publish" and guid="";<br />
+Query OK, 1485 rows affected (0.62 sec)<br />
+Rows matched: 1485  Changed: 1485  Warnings: 0</p></blockquote>
+<p>In yet other lulz, when we get to the splicing : </p>
+<blockquote><p>$ wc -l posts.sql<br />
+1293 posts.sql<br />
+$ wc -l termr.sql<br />
+1293 termr.sql</p></blockquote>
+<p>which seems fine ; however posts.sql starts with "`comment_count`) VALUES (90800" and ends  with "comment_count`) VALUES (92092" whereas term_relationships.sql starts with "term_order`) VALUES (90799" and ends with "term_order`) VALUES (92091". This'd be what's called an off-by-one error, aka fence post error, huh! You know the story of the man named Afanti, when he was taking ten donkeys to town ?</p>
+<p>Anyway, to record that also for the curious noob : </p>
+<blockquote><p>paste posts.sql termr.sql > logs5.txt</p></blockquote>
+<p>:p</p>
+<p>And now we're ready to try publishing the first of these, standby!</p>
+						</li>
+
+										<li id="comment-132537" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-132537" title="">Wednesday, 4 December 2019</a>
+							</div>
+						<p>Meanwhile in extra lulz, </p>
+<blockquote><p>grep -c "2019-12-03 22:03:06" logs7.txt<br />
+1293</p></blockquote>
+<p>So it's time for... logs8.txt I guess : </p>
+<blockquote><p>let timecnt=1575414633; cat logs7.txt | while read -r line; do timecnt=$((timecnt+57)); echo $line | sed "s%\x272019-12-03 22:03:06\x27,\x272019-12-03 22:03:06\x27%FROM_UNIXTIME($timecnt+7200), FROM_UNIXTIME($timecnt)%g" >> logs8.txt; done</p></blockquote>
+<p>Hopefully it's finally right nao.</p>
+						</li>
+
+										<li id="comment-147842" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147842" title="">Monday, 16 March 2020</a>
+							</div>
+						<p>Alrighty, here are the final historical dumps for the old Forum logs dating from 28 Mar 2016 to the end. I set all of the IDs/guids to be the same as last time (starting from 90800, and this time no fence post errors with the relationships table). The "post_date" is also increasing monotonically by 2 seconds this time around. Everything ought to be properly escaped as well. The only thing, obviously, I did not do was splice the files together.</p>
+<p><a href="http://blog.ericbenevides.com/static/tril_posts.sql" >tril_posts.sql</a><br />
+<a href="http://blog.ericbenevides.com/static/tril_posts.sql.sig" >tril_posts.sql.sig</a></p>
+<p><a href="http://blog.ericbenevides.com/static/tril_term_relationships.sql" >tril_term_relationships.sql</a><br />
+<a href="http://blog.ericbenevides.com/static/tril_term_relationships.sql.sig" >tril_term_relationships.sql.sig</a></p>
+<p>Hopefully you can use these as-is, but if for some reason I still missed something let me know and I will fix it.</p>
+						</li>
+
+										<li id="comment-147844" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147844" title="">Monday, 16 March 2020</a>
+							</div>
+						<p>Well, the self-obvious problem with starting with 90800, "like last time" is that last time was back in November and obviously Trilema has had new articles published since then. The latest currently is <a href=http://trilema.com/?p=91534 >?p=91534</a> though lessee here, mayhaps I can fix this muhself.</p>
+						</li>
+
+										<li id="comment-147855" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147855" title="">Tuesday, 17 March 2020</a>
+							</div>
+						<blockquote><p>
+Well, the self-obvious problem with starting with 90800, "like last time" is that last time was back in November and obviously Trilema has had new articles published since then.
+</p></blockquote>
+<p>Yeah, sorry about that one. I realized at the 11th hour last night that "ah shit, I forgot to ask him what his current article count is", but I weighed waiting to figure that one thing out versus just giving you what I had now and I made the call for the latter</p>
+						</li>
+
+										<li id="comment-147857" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147857" title="">Tuesday, 17 March 2020</a>
+							</div>
+						<p>Honestly it works just fine, you can cross it off the list as done.</p>
+						</li>
+
+										<li id="comment-147862" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147862" title="">Tuesday, 17 March 2020</a>
+							</div>
+						<p><b>Eric</b>, It came to my attention that my <a href=http://trilema.com/2020/closure/#comment-147780 >intended payment</a> never did go through, owing to... well, basically, everything being broken everywhere, and thoroughly.</p>
+<p>I can resolve the matter either by having a slavegirl type by hand the pad and verify with deedbot thus (which I don't intend to do, they've got very long worklists atm) ; or else by sending you a non-deedbot payment to an address of your choice (if you prefer) ; or else in the normal course of business, as I get whatever the fuck's wrong with that system teased out today/tomorrow.</p>
+<p>Sorry for the inconvenience.</p>
+						</li>
+
+										<li id="comment-147870" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">26</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147870" title="">Wednesday, 18 March 2020</a>
+							</div>
+						<p><b>Mircea Popescu</b>, nah no worries; this world does seem to become a little less functional each day. </p>
+<p>Feel free to send it over to 17V5hUaYyUpuzyvLZbYtXMLEHKCFqoi4ad if that is easier. Otherwise I'm in no hurry or anything, so I'm fine to wait.</p>
+						</li>
+
+										<li id="comment-147957" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">27</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147957" title="">Saturday, 21 March 2020</a>
+							</div>
+						<p>In other news, I've opened a project to replace outside links to forum log lines with internal references. It will proceed item by item, starting with btcbase.  </p>
+<p>This is more painful than it needs to be on one hand because the offset is not stable (for instance, in the match <a href="http://trilema.com/2020/forum-logs-for-29-jun-2019/#2541597">http://trilema.com/2020/forum-logs-for-29-jun-2019/#2541597</a> / <a href="http://btcbase.org/log/2019-06-29#1920548">http://btcbase.org/log/2019-06-29#1920548</a> the offset is 621049, whereas in the match <a href="http://trilema.com/2019/forum-logs-for-01-jul-2013#739950">http://trilema.com/2019/forum-logs-for-01-jul-2013#739950</a> / <a href="http://btcbase.org/log/?date=01-07-2013#113889">http://btcbase.org/log/?date=01-07-2013#113889</a> the offset is 626061) and on the other hand because my solipsistic pov wrt reconstituting the old logs has produced instances in which Trilema references log lines that aren't actually in my own logs (like for instance in the case of "cads: wow I just read mircea completely demolish some logic, and then make an unfounded claim. An anonymous kid attacked the claim, to which mircea finally admitted the claim was true because he was the elder and does not have to give an explanation and take it or leave it. then the kid actually kowtows and apologizes for being treated this way and even _thanks mircea for replying at all_" ie <a href="http://btcbase.org/log/?date=03-04-2014#601035">http://btcbase.org/log/?date=03-04-2014#601035</a> linked from <a href="http://trilema.com/2014/fred-quimby-and-ancient-evils/">http://trilema.com/2014/fred-quimby-and-ancient-evils/</a> but not available on either <a href="http://trilema.com/2019/forum-logs-for-03-apr-2014/">http://trilema.com/2019/forum-logs-for-03-apr-2014/</a> or <a href="http://trilema.com/2019/forum-logs-for-02-apr-2014/">http://trilema.com/2019/forum-logs-for-02-apr-2014/</a> ).</p>
+<p>As to the former, the actual solution as deployed is to follow log references to the outside logger referenced ; isolate the line in question ; search for it on Trilema ; reconstruct the correct reference and replace it -- a complex, friable pile of string muntzing. As to the latter I know of no possible solution ; I can't be arsed to revisit the logs nor will I destroy outside links -- god knows they die naturally <a href=http://trilema.com/2016/full-loper-os-blogroll-review/ >fast enough</a> anyways.</p>
+<p>So far a few hundred occurences have already been replaced ; there's a few thousand to go. (The selection fix is still on my list but that particular "technology" aka "smart" kids generated pain in the ass will have to wait for a later time.)</p>
+						</li>
+
+										<li id="comment-147958" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">28</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147958" title="">Saturday, 21 March 2020</a>
+							</div>
+						<p>Each time I link to the log as it is, I wince because I'm adding to the pile of links that I'll probably have to change eventually and with the headaches that you mention indeed. Do you plan to publish the recipe for replacing the links from those external log-sites to the logs published as articles on the blog?</p>
+						</li>
+
+										<li id="comment-147959" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">29</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147959" title="">Saturday, 21 March 2020</a>
+							</div>
+						<p>Not really. 'Tis not the republic anymore, you know ?</p>
+						</li>
+
+										<li id="comment-147960" class="commentbody"><div class="commenthead"><img alt='Diana Coman`s avatar' src='http://ossasepia.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">30</div>
+								<span class="authorlink"><a href='http://ossasepia.com' class='url'>Diana Coman</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147960" title="">Saturday, 21 March 2020</a>
+							</div>
+						<p>Hence my question, indeed. (And there's still a ton published and unused otherwise anyways, to add on top to the meh, I can see it.)</p>
+						</li>
+
+										<li id="comment-147963" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">31</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-147963" title="">Sunday, 22 March 2020</a>
+							</div>
+						<p>The exercise brought to fore all sorts of other breakage, for instance half-imported days like <a href="http://trilema.com/2019/forum-logs-for-01-may-2014/">http://trilema.com/2019/forum-logs-for-01-may-2014/</a> ; broken display though the backend seems correct like in <a href="http://trilema.com/2019/forum-logs-for-04-may-2014/">http://trilema.com/2019/forum-logs-for-04-may-2014/</a> ; outright inexplicably missing days like <a href="http://trilema.com/2019/forum-logs-for-05-may-2014/">http://trilema.com/2019/forum-logs-for-05-may-2014/</a> and so on.</p>
+<p>The problems of large natural datasets. Anyways, looks like I'll be fixing "this one little thing" for ~ever.</p>
+						</li>
+
+										<li id="comment-149839" class="commentbody"><div class="commenthead"><img alt='Eric Benevides`s avatar' src='http://www.krankendenken.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">32</div>
+								<span class="authorlink"><a href='http://www.krankendenken.com/' class='url'>Eric Benevides</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-149839" title="">Friday, 1 May 2020</a>
+							</div>
+						<p>I was a bit late to check my deedbot wallet, but I want to confirm that I got your payment; ty!</p>
+						</li>
+
+										<li id="comment-149845" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">33</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-149845" title="">Friday, 1 May 2020</a>
+							</div>
+						<p>Cheers.</p>
+						</li>
+
+										<li id="comment-151577" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">34</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-151577" title="">Thursday, 28 May 2020</a>
+							</div>
+						<p>In other news, I've discovered (as part of handling obscure footnote references for today's <a href=http://trilema.com/2020/robocop/ >Robocop</a> review) that a handful of old logs were fragmentarily imported (because of <a href=http://trilema.com/2016/unicode-is-fucking-stupid-the-definitive-article/ >inane bullshit</a>). Here's the list : </p>
+<p>SELECT id, post_name FROM tril_posts WHERE post_type ="post" AND post_content NOT LIKE "%&lt;/td>&lt;/tr>&lt;/table>" and post_name like "forum-logs%" order by id desc<br />
++-------+----------------------------+<br />
+| id    | post_name                  |<br />
++-------+----------------------------+<br />
+| 90619 | forum-logs-for-14-jan-2016 |<br />
+| 90609 | forum-logs-for-04-jan-2016 |<br />
+| 90575 | forum-logs-for-01-dec-2015 |<br />
+| 90563 | forum-logs-for-19-nov-2015 |<br />
+| 90499 | forum-logs-for-15-sep-2015 |<br />
+| 90416 | forum-logs-for-24-jun-2015 |<br />
+| 90024 | forum-logs-for-01-may-2014 |<br />
+| 89618 | forum-logs-for-21-mar-2013 |<br />
+| 89606 | forum-logs-for-09-mar-2013 |<br />
+| 89475 | forum-logs-for-29-oct-2012 |<br />
+| 89204 | forum-logs-for-14-feb-2012 |<br />
+| 89193 | forum-logs-for-02-feb-2012 |<br />
++-------+----------------------------+<br />
+12 rows in set (8.66 sec)</p>
+<p>Needless to say these are now fixed. Sorry for any inconvenience.</p>
+						</li>
+
+										<li id="comment-152901" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">35</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-152901" title="">Saturday, 18 July 2020</a>
+							</div>
+						<p>As part of intensive sanity checks prompted by the above May discovery, I'm also accounting for log gaps. Here's how to find plot holes in mp-wp dbs : </p>
+<blockquote><p>select l.id +1 as start from mpwp_posts as l left outer join mpwp_posts as r on l.id +1 = r.id where r.id is null and l.id > <a href=http://trilema.com/2019/introducing-the-logs/ >89087</a>;<br />
++-------+<br />
+| start |<br />
++-------+<br />
+| 89293 |<br />
+| 89615 |<br />
+| 89680 |<br />
+| 89780 |<br />
+| 90005 |<br />
+| 90028 |<br />
+| 90232 |<br />
+| 90286 |<br />
+| 90459 |<br />
+| 90474 |<br />
+| 90482 |<br />
+| 90493 |<br />
+| 90570 |<br />
+| 90615 |<br />
+| 90622 |<br />
++-------+<br />
+15 rows in set (0.02 sec)</p></blockquote>
+<p>I've meanwhile filled all these gaps ; the rate of progress through this entirely unnecessary swamp was greatly diminished by the misfortunate circumstance that each and every attempt (of which I've made a dozen or so in the interval) immediately results (really, entirely consists) of interacting with the flaming imbecile idiocy of "IT" withall its endless magic-strings-and-formats-conversions vomit, which makes me want to beat the stupid mothers of all these idle fucktards into a bloody pulp -- especially seeing how there was no real reason to "have problems" and "discover gaps" in the first fucking place.</p>
+<p>Just look at this inane shit : </p>
+<blockquote><p>cat 'logs.txt' | grep "29-jan-2016" | sed 's/*/\&ast;/g' | sed 's/@/&#64;/g' | sed "s%'%\&#39;%g" | tr '"' "'" | sed "s%\\\'%FUCKINGFORMATSFFS%g" | sed 's%FUCKINGFORMATSFFS%"%g' | sed 's%\\\\%\&#47;\&#47;%g'  > missingline.sql</p></blockquote>
+<p>Then add that ctrl-w searches in nano but <b>closes</b> whatever GUI Word and so on and so forth forever, or rather for as long as patience lasts. I really hope you fuckwits all starve forgotten inside small concrete cubes.</p>
+<p>Unrelated to the foregoing, there's nothing logged during August 3rd, 4th, 5th, 6th and 7th 2019, such that the entries for August 2nd and August 8th of that year follow each other directly. This is because <a href=http://trilema.com/2019/trilema-goes-dark/ >those days were silent</a>, a sort of full dress rehearsal for the March <a href=http://trilema.com/2020/closure/ >closure</a>, immediately driven by <a href=http://trilema.com/2019/a-nickels-worth-of-clues/ >Minsk shenanigans</a> but otherwise the necessary continuation of long standing "problems", to call thusly well entrenched <a href=http://trilema.com/2015/the-anal-child/ >idiocy</a>. People close to the center of the world probably recall their "flushing the toilet" comment in private conversation, and everyone else... well, everyone else is everyone else.</p>
+<p>Hopefully with this last (significant!) chunk of my time and patience, the matter of that juvenile, naive attempt of mine can finally be laid to rest, because <a href=http://trilema.com/2016/a-complete-theory-of-politics/?b=The%20alpha&#038;e=male#select>holy god enough already</a>.</p>
+						</li>
+
+										<li id="comment-152914" class="commentbody"><div class="commenthead"><img alt='Federico Weinhold`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">36</div>
+								<span class="authorlink">Federico Weinhold</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-152914" title="">Sunday, 19 July 2020</a>
+							</div>
+						<p>"Es gibt kein Morgen mehr danach<br />
+Wir sind die durch die Hölle gehen<br />
+Gott weint uns keine Träne nach."</p>
+						</li>
+
+										<li id="comment-152915" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">37</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-152915" title="">Sunday, 19 July 2020</a>
+							</div>
+						<p>Gen.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-132418">
+					<div class='trackhead'>
+						<div class="commentcount">38</div>
+						<span class="authorlink"><a href='http://www.krankendenken.com/2019/11/notes-on-importing-log-archives-into-mp-wp/?b=answer%20the&amp;e=answer%20the%20question%20posed%20in%20http%3A%2F%2Ftrilema.com%2F2019%2Fintroducing-the-logs%2F%2' class='url'>Notes on importing log archives into mp wp &laquo; Krankendenken</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132418" title="">Friday, 22 November 2019</a>
+					</div>
+					<p>[...] answer the question posed in <a href="http://trilema.com/2019/introducing-the-logs/#comment-132412">http://trilema.com/2019/introducing-the-logs/#comment-132412</a> , here's how my thing1 imports data into the mpwp mysql tables. I figure I'll keep this to a brief [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-132630">
+					<div class='trackhead'>
+						<div class="commentcount">39</div>
+						<span class="authorlink"><a href='http://dorion-mode.com/2019/12/contribution-guidelines-for-tmsr-os/?b=months%27%20&amp;e=months%27%20Meanwhile%20the%20forum%20moved%20to%20%23trilema%20and%20licensed%20castles%20while%20the%20log%20' class='url'>Contribution Guidelines for TMSR OS &laquo; Dorion Mode</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-132630" title="">Saturday, 14 December 2019</a>
+					</div>
+					<p>[...] months' Meanwhile the forum moved to #trilema and licensed castles while the log is available via trilema, ossasepia and ericbenevides. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147854">
+					<div class='trackhead'>
+						<div class="commentcount">40</div>
+						<span class="authorlink"><a href='http://younghands.club/2020/03/17/ejb-review-of-mar-9-mar-15-plan-for-mar-16-mar-22/?b=I%20delivered%20&amp;e=or%20a#select' class='url'>ejb review of Mar 9-Mar 15 ; plan for Mar 16-Mar 22 &laquo; Young Hands Club</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147854" title="">Tuesday, 17 March 2020</a>
+					</div>
+					<p>[...] I delivered the log history dump at least, but MP has confirmed that since he has left IRC behind him he has little need for a [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="89087" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834627-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-89087")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-89087");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-89087");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

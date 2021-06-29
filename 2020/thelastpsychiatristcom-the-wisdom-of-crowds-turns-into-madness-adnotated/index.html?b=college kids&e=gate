@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>thelastpsychiatrist.com - The Wisdom Of Crowds Turns Into Madness. Adnotated. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">024776FFD3CBD21C872ECCD26AD078C5<br />BA0586E2E57CF68515E3C4828A673A6E
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-95880"><div class="post" id="post-95880">                    <h1><a href="http://trilema.com/2020/thelastpsychiatristcom-the-wisdom-of-crowds-turns-into-madness-adnotated/" rel="bookmark" title="Permanent Link to thelastpsychiatrist.com - The Wisdom Of Crowds Turns Into Madness. Adnotated.">thelastpsychiatrist.com - The Wisdom Of Crowds Turns Into Madness. Adnotated.</a></h1>                        <div class="date">                                     Tuesday, 11 August, Year 12 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p><div id="attachment_95961" class="wp-caption alignleft" style="width: 243px"><a href="http://trilema.com/wp-content/uploads/2020/08/switzerland.jpg"><img src="http://trilema.com/wp-content/uploads/2020/08/switzerland.jpg" alt="less independent than they think" title="switzerland" width="233" height="258" class="size-full wp-image-95961" /></a><p class="wp-caption-text">less independent than they think</p></div> The "Wisdom Of Crowds" concept is that the average guesses of a crowd will be closer to the truth than a [sample of] randomly selected individual guess.<sup><a href="#footnote_0_95880" id="identifier_0_95880" class="footnote-link footnote-identifier-link" title="Rather, the `wisdom of crowds` is a particular class of `meat -- tomorrow` socialist meme. This one proposes that more people are better `because they're varied`, omitting to notice it's shitting into its own trough : yes more people are varied before socialism is a thing ; but once socialism becomes ever more of a thing, the sort of people it spawns are ever less people in the proper, previous sense, and in any case not at all varied. There's relatively little difference between this proposition and the proposition of walking on clouds : yes, they seem solid enough, for as long as you're not there trying to step on them. From down here, from before socialism is a thing, all sort and manner of things and notions work quite well. Afterwards...">i</a></sup></p>
+<p>The reason this works is <del>that</del> because the crowd has different individuals with different types of systematic error, e.g. prejudices. With more individuals, the prejudices negate each other.<sup><a href="#footnote_1_95880" id="identifier_1_95880" class="footnote-link footnote-identifier-link" title="See also the `nuclear family` delusion, very much in the same vein.">ii</a></sup></p>
+<p>The Swiss study took 144 college students<sup><a href="#footnote_2_95880" id="identifier_2_95880" class="footnote-link footnote-identifier-link" title="Has anyone yet made a study on the systemic and systematic biases induced into `the results` of `scientific research` conducted upon... college students ? 
+Pro tip : no, they're not fucking people. They're barely even human, more in a potentiality sort of sense than anything practical, and for fucking sure they can't tell their own arse from a hole in the ground.
+I am willing to bet practical application of `psychological research` conducted on toddlers would outperform practical application of this sad ilk of `psychology research` conducted on college students. Markedly outperform.">iii</a></sup> and asked them a series of questions (population of Switzerland, murder rate, etc). It recorded 5 consecutive guesses, as well as the confidence for the first and last guess.</p>
+<p>I.</p>
+<p>The first interesting finding is that the crowd is sometimes so incredibly wrong that the mean of their responses is just... really wrong. How many assaults were there in Switzerland in 2006? 10? 100? 1000? 10000? 100000? Those are exponentially different guesses, so an arithmetic mean could be way off, factors of ten off.</p>
+<p>In such cases, a geometric mean is much closer to the correct answer. So, point number one, when you are crowdsourcing, choose your mean/distribution appropriately.<sup><a href="#footnote_3_95880" id="identifier_3_95880" class="footnote-link footnote-identifier-link" title="This is actually one hell of a good point, for sure.">iv</a></sup></p>
+<p><a href="http://trilema.com/wp-content/uploads/2020/08/pnas-lorenz-table-1.jpg"><img src="http://trilema.com/wp-content/uploads/2020/08/pnas-lorenz-table-1.jpg" alt="pnas-lorenz-table-1" title="pnas-lorenz-table-1" width="541" height="265" class="aligncenter size-full wp-image-95963" /></a></p>
+<p>II.</p>
+<p>The diversity of guesses is quite large -- everyone comes to the question with their own prejudices and errors.</p>
+<p>But merely by giving the subjects access to the previous round's guesses -- either the mean of the guesses ("aggregated information") or everyone's individual guess, the diversity disappears and everyone's guesses begin to converge.</p>
+<p><a href="http://trilema.com/wp-content/uploads/2020/08/pnas-collective-error.jpg"><img src="http://trilema.com/wp-content/uploads/2020/08/pnas-collective-error.jpg" alt="pnas-collective-error" title="pnas-collective-error" width="537" height="896" class="aligncenter size-full wp-image-95964" /></a></p>
+<p>The first round the guesses were wildly disparate, but as everyone got to see the other guesses, they converge remarkably.</p>
+<p>Why did having the full information (all 12 people's individual guesses) seem to cause less convergence than having the mean of their guesses? It didn't, really; but also because the aggregate is only one number that you converge to; having 12 wildly disparate numbers to converge to is harder.<sup><a href="#footnote_4_95880" id="identifier_4_95880" class="footnote-link footnote-identifier-link" title="What troubles he goes to restate the simple if self-evident `college students can't add` in such a way as to not make too obvious what he doesn't really want to have staring him down...
+How about this : the simple fact that the mean converges so much faster than the `full information` invalidates not only the results of this `study`, but the entire pantsuit edifice of piled &#038; stacked shit-for-brains ? Because no, they don't fucking cut it.
+Anyways, let me tell you a good source of beatings in the life of a young slave is exactly this : an order of `estimate that` coming back with the kind of result that needs geometric means to bring in line -- the misfortunate loving girl ends up wearing the geometry in question on her hide for a while. Point being : yours could add too ; yours could be capable of converging just as fast off a given mean as off a list of a dozen guesses. All it takes is beating them whenever they do not.
+Do it.">v</a></sup> But by the third round, it hardly mattered -- a systematic bias had been introduced into the crowd, which is ironic since it is systematic bias that the Wisdom Of Crowds is supposed to negate. Moo.<sup><a href="#footnote_5_95880" id="identifier_5_95880" class="footnote-link footnote-identifier-link" title="In fairness : those kids knew why they were there. This isn't Tina alone &#038; by herself, recoiling in horror at realisations of her own. This is a bunch of listless yet bored college kids, with nothing better to do that evening but also with enough institutional training (college, yes ?) to know that `the sooner we converge the sooner we're out of here`, past the cattle gate dispensing the twenty bucks or quarter of a `credit` or whatever the fuck truth is being sold for in Switzerland. The cheap building blocks of pantsuit truth manufactories, ethylene truthol.">vi</a></sup></p>
+<p>III.</p>
+<p>People following the herd would be boring but not disastrous, except for the other finding.</p>
+<p><i>Since</i> the guesses converge, <i>since</i> other people are converging with you and you can see that, the confidence in these guesses goes up: a false belief of collective accuracy with no increase in actual accuracy. "It's unanimous!" Yikes.<sup><a href="#footnote_6_95880" id="identifier_6_95880" class="footnote-link footnote-identifier-link" title="Whatever simpy, put your muzzle back on y cuidate mucho.">vii</a></sup></p>
+<p>Also remember, these people weren't being given an expert's guess to converge to, just other (regular) people's. As the authors point out, they didn't even attempt to measure group leader effects, persuasion, talking heads on TV, or twitter.<sup><a href="#footnote_7_95880" id="identifier_7_95880" class="footnote-link footnote-identifier-link" title="If you beat them they would've.">viii</a></sup></p>
+<p>This is not a trivial problem. It isn't just saying that the beliefs converge; it is saying that since the beliefs converge along with greater confidence in their "truthfulness", it becomes more difficult for any individual to not converge as well -- and feel confident about it.<sup><a href="#footnote_8_95880" id="identifier_8_95880" class="footnote-link footnote-identifier-link" title="Well now... it all depends what you mean by `individual`, doesn't it. Yes, I'm sure life becomes ever harder for the pantsuit simp. That's kinda the point of socialism, neh ?">ix</a></sup></p>
+<p>If you do manage to run from the herd you have to climb a high wall.<sup><a href="#footnote_9_95880" id="identifier_9_95880" class="footnote-link footnote-identifier-link" title="Here's the problem with this `high wall` theory : it is only visible to some. This has happened to me with eerie regularity as long as I can remember,
+`how did you ace that examination ?` `well, she asked me questions and I answered them` `but... but... but didn't you know she's the worst, her exams so hard they're impossible ?` `I had no idea.`
+`wait, wait, you fucked so-and-so ?` `yeah...` `how did you manage that ?!` `what do you mean how, I asked her over and she came.` `but... but... but...` `whatever, listen, I'm busy`
+Nor am I the only one, you know ? Plenty of people `sorry, didn't know it was invisible` and other such misinteraction with the `tall wall`. Because tall walls are only tall if you're short enough ; and also they're only visible at all, or walls at all, if you are short enough.
+In other words : this pantsuit's cherished if carefully silent belief that `all people are the same peopl, readily interchangable and otherwise undistinguishable` is in no way different from those pantsuits' equally cherished, perfectly identical belief. Meanwhile people... they ain't the same at all. To begin with, most aren't even people in any sense.">x</a></sup> "Can so many people be so wrong, yet so close together in their guesses? So wrong, yet so confident? Is everyone insane?"</p>
+<p>You can imagine the social implications of a highly energized crowd, or electorate, or laity, or polity, or tax base, all converging on a "truth" of which they are supremely confident by virtue of the fact that others believe the same (which is the result of similar convergence on their part.)<sup><a href="#footnote_10_95880" id="identifier_10_95880" class="footnote-link footnote-identifier-link" title="Actually, you don't need to imagine it, I've documented this recently. They're... amusing, pleasant through their absence and amusing through their idiocy.">xi</a></sup> This is probably supercharged when you have a charismatic figurehead leading convergence, and by "charismatic figurehead" I mean media; no one person came up with this, everyone just knows it's true.<sup><a href="#footnote_11_95880" id="identifier_11_95880" class="footnote-link footnote-identifier-link" title="Well... `everyone`. All the nobodies, sure.">xii</a></sup></p>
+<p>IV.</p>
+<p>So much for the paper. Now consider the more general implications.</p>
+<p>"Well, I'm going to be an independent thinker and not be affected by the herd and make my own educated guess." No, you won't. </p>
+<p> The moment you have the other people's guesses, you cannot shake that information. Your "independent" guess necessarily includes that guess<i> in some way</i>, you can't unlearn it.<sup><a href="#footnote_12_95880" id="identifier_12_95880" class="footnote-link footnote-identifier-link" title="This odd concern seems suspiciously alligned with `cunts are made of soap` belief structures and other such theosophica. So what exactly if my guess `includes` (in some however limited, marginal sense) the... `guesses`, let's call them, of other people ? Is this supposed to be some concern of mine ? Is the proposition here that this'd be somehow detrimental ? To me ?! Da fuck, Trilema already includes everything anyone's written for the past decade, literally everything. Most of it is just not much worth the mention, but it's there nevertheless, Trilema is of course and indisputably the sum total of all written words written since its inception. And even before! And... sooooo ?">xiii</a></sup> Either your guess converges towards the herd, or your guess is characterized as <i>against</i> the herd.<sup><a href="#footnote_13_95880" id="identifier_13_95880" class="footnote-link footnote-identifier-link" title="Characterized, by whom ?">xiv</a></sup> Either way, the herd affected your thinking in ways you don't realize.<sup><a href="#footnote_14_95880" id="identifier_14_95880" class="footnote-link footnote-identifier-link" title="You know, I also have geckos in my house, and they affect my household in ways I don't realise -- or sometimes even do realise. Soooooo ?">xv</a></sup> You're part of the dialectic and you didn't even want to be.<sup><a href="#footnote_15_95880" id="identifier_15_95880" class="footnote-link footnote-identifier-link" title="Dude, I don't care. Seriously. I'm also part of the gravitational pull upon Triton, you know ?">xvi</a></sup> <i>That</i> you don't want to be part of it ensures you are part of it.</p>
+<p>The existence of the convergence of ideas, knowing <i>that</i> a convergence exists, either attracts further groupthink, or sets up a second groupthink in opposition to the first.<sup><a href="#footnote_16_95880" id="identifier_16_95880" class="footnote-link footnote-identifier-link" title="Again : depends who you are. If you're me, no, and if you're not me you really don't matter anyway, the particular way in which you don't matter as inconsequential as everything else about you, and for that matter you altogether.">xvii</a></sup> Groupthink certainly reinforces one idea; and it can cause the setting up of a second large idea in opposition, but it makes a third independent idea highly unlikely (unless, again, it forms in opposition to ideas 1 or 2.)<sup><a href="#footnote_17_95880" id="identifier_17_95880" class="footnote-link footnote-identifier-link" title="This sort of impudent idiocy is what makes me want to drop the adnotation activity on this material. What the fuck am I going to do, sentence him to a year of reading Trilema ?">xviii</a></sup></p>
+<p>In other words, in cases where social influence is impossible to avoid, the wisdom of crowds becomes the madness of crowds <i>even for those who disagree with the crowd.</i> All it takes is one idiot with a megaphone.<sup><a href="#footnote_18_95880" id="identifier_18_95880" class="footnote-link footnote-identifier-link" title="Socialism sucks, get out of it.">xix</a></sup></p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_95880" class="footnote">Rather, the "wisdom of crowds" is a particular class of "meat -- tomorrow" socialist meme. This one proposes that more people are better "because they're varied", omitting to notice it's shitting into its own trough : yes more people are varied <em>before socialism is a thing</em> ; but once socialism becomes ever more of a thing, the sort of people it spawns are ever less people in the proper, previous sense, and in any case not at all varied. There's relatively little difference between this proposition and the proposition of walking on clouds : yes, they seem solid enough, <em>for as long as you're not there trying to step on them</em>. From down here, from before socialism is a thing, all sort and manner of things and notions work quite well. Afterwards... [<a href="#identifier_0_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_95880" class="footnote">See also the <a href="http://trilema.com/2015/the-lulz-in-dating/#footnote_5_63520">"nuclear family" delusion</a>, very much in the same vein. [<a href="#identifier_1_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_95880" class="footnote">Has anyone yet made a study on the systemic and systematic biases induced into "the results" of "scientific research" conducted upon... college students ? </p>
+<p>Pro tip : no, they're not fucking people. They're <a href="http://trilema.com/2014/a-practical-exercise-for-people-who-cant-afford-airfare/">barely even human</a>, more in a potentiality sort of sense than anything practical, and for fucking sure they can't tell their own arse from a hole in the ground.</p>
+<p>I am willing to bet practical application of "psychological research" conducted on toddlers would outperform practical application of this sad ilk of "psychology research" conducted on college students. <em>Markedly</em> outperform. [<a href="#identifier_2_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_95880" class="footnote">This is actually one hell of a good point, for sure. [<a href="#identifier_3_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_95880" class="footnote">What troubles he goes to restate the simple if self-evident "college students can't add" in such a way as to not make <em>too</em> obvious what he doesn't really want to have staring him down...</p>
+<p>How about this : the simple fact that the mean converges so much faster than the "full information" invalidates not only the results of this "study", but <a href="http://trilema.com/2020/thelastpsychiatristcom-how-does-the-shutdown-relate-to-me-adnotated/?b=Interestingly&#038;e=noise#select">the entire pantsuit edifice of piled &#038; stacked shit-for-brains</a> ? Because no, they don't fucking cut it.</p>
+<p>Anyways, let me tell you a good source of beatings in the life of a young slave is exactly this : an order of "estimate that" coming back with the kind of result that needs geometric means to bring in line -- the misfortunate <a href="http://trilema.com/2018/imaginary-questions-nobody-asked-of-me-an-incomplete-compendium/">loving girl</a> ends up wearing the geometry in question on her hide for a while. Point being : yours could add too ; yours could be capable of converging just as fast off a given mean as off a list of a dozen guesses. All it takes is beating them whenever they do not.</p>
+<p>Do it. [<a href="#identifier_4_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_95880" class="footnote">In fairness : those kids <em>knew why they were there</em>. This isn't Tina alone &#038; by herself, recoiling in horror at <a href="http://trilema.com/2020/intinarea/?b=knees%20buckled&#038;e=whispered#select">realisations of her own</a>. This is a bunch of listless yet bored <span style="background-color:#d3d3d3" id="select">college kids, with nothing better to do that evening but also with enough <a href="http://trilema.com/2012/capitolul-i-in-care-profesorul-fad-invitat-de-doua-studente-la-%E2%80%9Eroata-norocului%E2%80%9C-descopera-biftecul-tartar-subcapitolul-i2/?b=Proful&#038;e=examen#select">institutional training</a> (<a href="http://trilema.com/2013/a-very-unfair-perspective/">college</a>, yes ?) to know that "the sooner we converge the sooner we're out of here", past the cattle gate</span> dispensing the twenty bucks or quarter of a "<a href="http://trilema.com/2012/prolog-la-adevarata-poveste-a-nepotului-lui-dracula/?b=nu-l%20luau&#038;e=II#select">credit</a>" or whatever the fuck truth is being sold for in Switzerland. The cheap building blocks of pantsuit <a href="http://trilema.com/2020/san-jose-vive-and-other-narrative-fancies-of-the-failed-female-state/?b=he%20personally%20thinks&#038;e=reality#select">truth manufactories</a>, ethylene truthol. [<a href="#identifier_5_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_95880" class="footnote">Whatever simpy, put your muzzle back on <em>y cuidate mucho</em>. [<a href="#identifier_6_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_95880" class="footnote">If you beat them they would've. [<a href="#identifier_7_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_95880" class="footnote">Well now... it all depends what you mean by "individual", doesn't it. Yes, I'm sure life becomes ever harder for the pantsuit simp. That's kinda the point of socialism, neh ? [<a href="#identifier_8_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_95880" class="footnote">Here's the problem with this "high wall" theory : it is only visible to some. This has happened to me with eerie regularity as long as I can remember,<br />
+<blockquote>"how did you ace that examination ?" "well, she asked me questions and I answered them" "but... but... but didn't you know she's the worst, her exams so hard they're impossible ?" "I had no idea."</p></blockquote>
+<blockquote><p>"wait, wait, you fucked so-and-so ?" "yeah..." "how did you manage that ?!" "what do you mean how, I asked her over and she came." "but... but... but..." "whatever, listen, I'm busy"</p></blockquote>
+<p>Nor am I <a href="http://trilema.com/2019/messrs-doo-i-sprat-international-communications-partners/?b=Yum&#038;e=!#select">the only one</a>, you know ? Plenty of people "sorry, didn't know it was invisible" and other such misinteraction with the "tall wall". Because tall walls are only tall if you're short enough ; and also they're only visible at all, or walls at all, if you are short enough.</p>
+<p>In other words : this pantsuit's cherished if carefully silent belief that "all people are the same peopl, readily interchangable and otherwise undistinguishable" is in no way different from those pantsuits' equally cherished, perfectly identical belief. Meanwhile people... they ain't the same at all. To begin with, most aren't even people in any sense. [<a href="#identifier_9_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_95880" class="footnote">Actually, you don't need to imagine it, I've documented this recently. They're... amusing, pleasant through their absence and amusing through their idiocy. [<a href="#identifier_10_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_95880" class="footnote">Well... "everyone". <a href="http://trilema.com/2016/the-herd-of-independent-minds-or-has-the-avantgarde-its-own-mass-culture/?b=In%20sum&#038;e=individual#select">All the nobodies</a>, sure. [<a href="#identifier_11_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_95880" class="footnote">This odd concern seems suspiciously alligned with "cunts are made of soap" <a href="http://trilema.com/2020/thelastpsychiatristcom-taboos-are-the-ways-christians-try-to-control-us-adnotated/#footnote_16_95878">belief structures</a> and other such theosophica. So what exactly if my guess "includes" (in some however limited, marginal sense) the... "guesses", let's call them, of other people ? Is this supposed to be some concern <em>of mine</em> ? Is the proposition here that this'd be somehow detrimental ? <em>To me ?!</em> Da fuck, Trilema already includes everything anyone's written for the past decade, literally everything. Most of it is just not much worth the mention, <em>but it's there nevertheless</em>, Trilema is of course and indisputably the sum total of all written words written since its inception. And even before! And... sooooo ? [<a href="#identifier_12_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_95880" class="footnote">Characterized, <a href="http://trilema.com/2013/the-dead-jew-and-the-raped-girl/?b=Nobody%20cares&#038;e=prior#select">by whom</a> ? [<a href="#identifier_13_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_95880" class="footnote">You know, I also have geckos in my house, and they affect my household in ways I don't realise -- or sometimes even <a href="http://thewhet.net/2020/08/close-encounters-of-the-costa-rican-kind/?b=the%20sight%20of%20one&#038;e=mouth#select">do</a> realise. Soooooo ? [<a href="#identifier_14_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_95880" class="footnote">Dude, <em>I don't care</em>. Seriously. I'm also part of the gravitational pull upon <a href="http://trilema.com/2017/global-warming-on-triton/">Triton</a>, you know ? [<a href="#identifier_15_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_95880" class="footnote">Again : depends who you are. If you're me, no, and if you're not me you really don't matter anyway, the particular way in which you don't matter as inconsequential as everything else about you, and for that matter you altogether. [<a href="#identifier_16_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_95880" class="footnote">This sort of impudent idiocy is what makes me want to drop the adnotation activity on this material. What the fuck am I going to do, sentence him to a year of reading Trilema ? [<a href="#identifier_17_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_95880" class="footnote">Socialism sucks, get out of it. [<a href="#identifier_18_95880" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2020/the-balls-of-schmaltz-and-the-end/">The balls of schmaltz and the end.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2020/thelastpsychiatristcom-you-are-the-98-adnotated/">thelastpsychiatrist.com - You Are The 98%. Adnotated.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2020/thelastpsychiatristcom-the-wisdom-of-crowds-turns-into-madness-adnotated/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2020/thelastpsychiatristcom-the-wisdom-of-crowds-turns-into-madness-adnotated/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>3 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-154043">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/christos-ballas-tlp-thelastpsychiatristcom-archive/?b=The%20Wisdom%20O&amp;e=ness#select' class='url'>Christos Ballas ("TLP", thelastpsychiatrist.com) archive on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154043" title="">Tuesday, 1 September 2020</a>
+					</div>
+					<p>[...] The Wisdom Of Crowds Turns Into Madness [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-154821">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/a-full-deck-of-beach-cards/?b=exactly%20the%20&amp;e=shod#select' class='url'>A full deck of beach cards on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-154821" title="">Friday, 9 October 2020</a>
+					</div>
+					<p>[...] exactly the right proper shape to receive them. The alternative I think you've seen : idiotic yet cock-sure middle-aged Karens running all over the place, ruining the world with their half-baked, misshod [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-155384">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/pimp-by-robert-beck-aka-iceberg-slim-adnotated-without-permission-chapter-6-drilling-for-oil?b=it%27s%20actuall&amp;e=ruly#select' class='url'>Pimp. By Robert Beck aka Iceberg Slim. Adnotated without permission. Chapter 6 -- Drilling for oil. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-155384" title="">Monday, 26 October 2020</a>
+					</div>
+					<p>[...] it's actually consensus seeking that drives the behaviour in the shit-for-brains, and from there, contagiously, all around. Truly [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="95880" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834167-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-95880")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-95880");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-95880");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

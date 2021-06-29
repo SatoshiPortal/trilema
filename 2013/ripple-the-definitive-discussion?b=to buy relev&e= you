@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>RIPple, the definitive discussion. on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The fates are cruel an' the chances are slim<br />so grab a good sieve and dig in.<br />~<a href=http://trilema.com/2020/nannare/#comment-147503>my elder slavegirl</a>
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-47864"><div class="post" id="post-47864">                    <h1><a href="http://trilema.com/2013/ripple-the-definitive-discussion/" rel="bookmark" title="Permanent Link to RIPple, the definitive discussion.">RIPple, the definitive discussion.</a></h1>                        <div class="date">                                     Saturday, 25 May, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>There's been a spate of articles pushing this Ripple thing published on a bunch of obscure blogs recently. To the trained eye it's quite obvious that some "social media influencing" agency is spending generously in fiddy dollar increments for such viral social media influencing results. </p>
+<p>How come ? The explanation would be that Jed Caleb<sup><a href="#footnote_0_47864" id="identifier_0_47864" class="footnote-link footnote-identifier-link" title="You probably do not know this, but Jed is the original owner of MtGox, back when it actually was a card trading site. He gave it away to the fat retard who's now going to jail for free, because he wasn't fat and retarded enough to want to go to jail.
+To make matters funnier, he later used his password to steal some Bitcoins from MtGox (yes, he's the mysterious `auditor` whose password was `compromised` in that early heist. No compromise and no auditor, he just had access to check the tables and verify he's being paid according to what's been agreed.">i</a></sup> &#038; co received a little funding and are now spending it trying <span style="background-color:#d3d3d3" id="select">to buy relevancy. In spite of not actually having a product or delivering any sort of value. Truely <a href="http://trilema.com/2013/the-future-of-bitcoin-regulation/">venture capital is broken beyond repair</a> these days wouldn't you</span> say.</p>
+<p>The other thing they're spending their funding on is something like this : </p>
+<blockquote><p>{Namworld} Well anyway... I got 5 BTC for 40k XRPs... 600 bucks for nothing...  except ~1 hour to use the Ripple orderbook to trade XRPs for IOUs and sign up and cashout on BitStamp</p></blockquote>
+<p>and there's probably more. Moving on.</p>
+<p>The thing with Ripple is that it's broken. I don't mean broken in the sense a car with a broken windshield can have that replaced and be good as new. I don't even mean broken in the sense a car with a broken engine, missing wheels and rusted everywhere could in principle be somehow refurbished, maybe, even if it's not economically feasible to do.</p>
+<p><a href="http://www.flagstaffotos.com.au/"><img src="http://trilema.com/wp-content/uploads/2013/05/ripcar.jpg" alt="ripcar" title="ripcar" width="560" height="373" class="aligncenter size-full wp-image-47868" /></a></p>
+<p>What I mean is that Ripple is broken in the sense of severe congenital defects, the sort that cause abortion before gestation could in any way conceivably complete. Specifically : </p>
+<p><strong>Fatal congenital defect #1</strong>. Ripple requires any participant to trust other participants blindly. This is to say, if you trust X person to Y sum this doesn't mean that your trust is rescinded should X issue more than Y worth of debt. It simply means X may issue an infinite volume of debt and you unconditionally promise to accept Y of that. Just like that.</p>
+<p><strong>Fatal congenital defect #2</strong>. If #1 above somehow didn't kill the thing (for argument's sake), there's absolutely no way for you to receive compensation for the liquidity you provide. Conceivably no matter who X is, be it Russ Meyer or the very Bank of England in its heyday, as long as you take on its debt you're entitled to some sort of compensation for this. At least that's how things work in sane land, since forever. Not in Ripple, however. Your trust is unremunerated, which makes Ripple the only repo market in the history of finance working on 0% interest rates. Not even the FED pumping liquidity through the special bank windows did something like this. </p>
+<p><strong>Fatal congenital defect #3</strong>. If #1 and #2 above somehow didn't kill it (veering beyond the absurd by now), Ripple averages out all debt. You beg my pardon ? Good for you.</p>
+<p>So, suppose Ripple was being used by Ben Bernanke, Christine Lagarde and Lou Jiwei, alongside a number of people randomly picked off the street. You'd sanely expect to be able to buy either BBdollars or Anondollars, separately, as distinct items. Right ? And then CLeuros and LJyuans as opposed to RandomChinesePersonIOU. </p>
+<p>Well... that's not how Ripple works. As long as you trust both Lou Jiwei and some random Chinese dude, any people who trust the random dude and hold LJ's yuans can exchange LJ's yuans for any random dude's yuans that you hold.<sup><a href="#footnote_1_47864" id="identifier_1_47864" class="footnote-link footnote-identifier-link" title="This originally read `As long as you trust both Lou Jiwei and some random Chinese dude any people who trust you can trade LJ’s yuans straight for the random dude’s` for inexplicable reasons, as it doesn't actually make any sense. Thanks go to Deprived for pointing it out.">ii</a></sup> Or, as the case may be, <em>the other way around</em>. Always, always the other way around. So what happens when you find yourself trying to pay for a cab ride with what you thought were actual dollars but upon examination turn out to be pieces of paper with "DELLOR" scribbled in pink marker arcoss one side ? Awww, I guess you shouldn't have trusted your boss because he decided to trust his 5 year old daughter and now looky<sup><a href="#footnote_2_47864" id="identifier_2_47864" class="footnote-link footnote-identifier-link" title="In case you don't understand how this works : Boss pays your salary, which means your wallet contains Bossdollars. Boss trusts daughter, which means daughter can swap her Daughterdollars for any of the Boss' holdings that she herself trusts, such as whatever they take at the Little Girl &#038; Pony Make-up and Pony store. Which means your Boss is now bankrupt and you're fucked, well done!">iii</a></sup>. You've got a blue eye and the cab driver looks just about ready to give you another one.</p>
+<p>Basically this boneheaded "everything's a Ripple" approach opens the entire space to the problem that lemon laws try to solve. Let's revisit that for a second, for the benefit of the <strong>completely clueless idiots</strong> who think it's their place to "create" and "innovate" retarded shit like this<sup><a href="#footnote_3_47864" id="identifier_3_47864" class="footnote-link footnote-identifier-link" title="Seriously now dear &#038; beloved neckbeards : learn to talk to your betters. Before you start coding. There's a reason they're your betters, and that reason is that they're better than you.">iv</a></sup>. </p>
+<p>So, inasmuch as used cars go, it is expensive for buyers to find the actual value of the item. Thus on any specified item buyers make offers based on a guess as to what the average value of a used car would be at any given time. Sellers either know this or soon find out (by being lowballed on good used cars) and soon enough only introduce into the market cars that are objectively worth less than the perceived average. This over time lowers the average, lowering the buyer expectation (and thus price offered) which further lowers the seller incentive and soon enough the only used cars you can buy are refurbished lawnmowers. </p>
+<p>This is the problem that lemon laws try to solve. They fail. </p>
+<p>So does Ripple. RIP<sup><a href="#footnote_4_47864" id="identifier_4_47864" class="footnote-link footnote-identifier-link" title="No, not really, not until the world runs out of idiots, the clueless backers run out of patience and the project itself runs out of money. But still, I have no children, so on the long term you're all dead anyway.">v</a></sup>.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_47864" class="footnote">You probably do not know this, but Jed is the original owner of MtGox, back when it actually was a card trading site. He gave it away to the fat retard who's now going to jail for free, because he wasn't fat and retarded enough to want to go to jail.</p>
+<p>To make matters funnier, he later used his password to steal some Bitcoins from MtGox (yes, he's the mysterious "auditor" whose password was "compromised" in that early heist. No compromise and no auditor, he just had access to check the tables and verify he's being paid according to what's been agreed. [<a href="#identifier_0_47864" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_47864" class="footnote">This originally read "As long as you trust both Lou Jiwei and some random Chinese dude any people who trust you can trade LJ’s yuans straight for the random dude’s" for inexplicable reasons, as it doesn't actually make any sense. Thanks go to <a href="https://bitcointalk.org/index.php?topic=210634.msg2284525#msg2284525">Deprived</a> for pointing it out. [<a href="#identifier_1_47864" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_47864" class="footnote">In case you don't understand how this works : Boss pays your salary, which means your wallet contains Bossdollars. Boss trusts daughter, which means daughter can swap her Daughterdollars for any of the Boss' holdings that she herself trusts, such as whatever they take at the Little Girl &#038; Pony Make-up and Pony store. Which means your Boss is now bankrupt and you're fucked, well done! [<a href="#identifier_2_47864" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_47864" class="footnote">Seriously now dear &#038; beloved neckbeards : <a href="http://trilema.com/2013/why-i-nixed-p2p-colored-coins-and-all-that-jazz/">learn to talk to your betters</a>. Before you start coding. There's a reason they're your betters, and that reason is that they're better than you. [<a href="#identifier_3_47864" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_47864" class="footnote">No, not really, not until the world runs out of idiots, the clueless backers run out of patience and the project itself runs out of money. But still, I have no children, so on the long term you're all dead anyway. [<a href="#identifier_4_47864" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/yahoo-what-is-it/">Yahoo, what is it ?</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/romanias-new-right/">Romania's New Right</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/ripple-the-definitive-discussion/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/ripple-the-definitive-discussion/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>18 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-93298" class="commentbody"><div class="commenthead"><img alt='TradeFortress`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">TradeFortress</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-93298" title="">Saturday, 25 May 2013</a>
+							</div>
+						<p>Recommended reading:</p>
+<p>Ripplers bitching about flaws in ripple: <a href="https://bitcointalk.org/index.php?topic=207841.0">https://bitcointalk.org/index.php?topic=207841.0</a></p>
+<p>More bitching including someone who wasted 10.15 BTC for some odd reason: <a href="https://bitcointalk.org/index.php?topic=210634.0">https://bitcointalk.org/index.php?topic=210634.0</a></p>
+<p>The guy who lost his own 10.15 BTC bitching about it, again: <a href="https://bitcointalk.org/index.php?topic=211115.0">https://bitcointalk.org/index.php?topic=211115.0</a></p>
+						</li>
+
+										<li id="comment-93299" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-93299" title="">Saturday, 25 May 2013</a>
+							</div>
+						<p>In the interest of not going through this conversation twice : </p>
+<p>04:54:42 <strong>mircea_popescu</strong> <a href="http://trilema.com/2013/ripple-the-definitive-discussion/">http://trilema.com/2013/ripple-the-definitive-discussion/</a><br />
+04:54:46 <strong>mircea_popescu</strong> there, if anyone cares<br />
+04:55:04 <strong>mircea_popescu</strong> [\\\] finally came to me when i saw your dasehs. magic.<br />
+05:01:38 <strong>aknap3</strong> thought there was something about ripple trust being transitive, so if you trust someone, you are also trusting their judgment of others, but maybe I misunderstood it<br />
+05:03:15 <strong>aknap3</strong> guess that's pretty much your defect #3<br />
+05:04:17 <strong>mircea_popescu</strong> sorta<br />
+05:04:43 <strong>mircea_popescu</strong> it's worse tho, in as you can probably traverse up the tree<br />
+05:05:03 <strong>mircea_popescu</strong> (start with 100 scam bux, trade for 100 cvasi-scam bux, trade these for 100 not reallt scam bux, cash out 100 bux)<br />
+05:05:12 <strong>mircea_popescu</strong> tradefortress pretty much proved this is damned easy<br />
+05:07:23 <strong>mircea_popescu</strong> pigeons you want to give that a read say if i've fucked up anything ?<br />
+05:10:52 <strong>[\\\]</strong> you trust pigeons?<br />
+05:10:57 <strong>[\\\]</strong> sounds like you should give him some ripples<br />
+05:11:27 <strong>mircea_popescu</strong> [\\\] he's the only person afaik who seriously looked at the thing<br />
+05:12:03 <strong>mircea_popescu</strong> besides, he doesn't like me, so.<br />
+05:13:43 <strong>Namworld</strong> To be fair on point #2, the issuer doesn't get anything either out of the issued IOUs. It's not like it requires you to lend them money. It's more like "pay to the bearer X silver/gold coins" IOUs, like early banks did, before state money.<br />
+05:14:16 <strong>Namworld</strong> Where those paper IOUs are practical to go trade around without the need to burden yourself with carrying money all around<br />
+05:15:28 <strong>mircea_popescu</strong> what do you mean doesn't get anything ?<br />
+05:15:40 <strong>mircea_popescu</strong> the fact that his debt is accepted is exactly giving him money.<br />
+05:17:35 <strong>Namworld</strong> Those IOUs are no different than the balance at the exchange, which if it is showing 200 BTC, it means they owe you 200 BTC. They don't pay interest either on that balance. Same for Ripple IOUs.<br />
+05:18:43 <strong>mircea_popescu</strong> as far as i know, if your bank is showing 200 dollars in your account<br />
+05:18:49 <strong>mircea_popescu</strong> that bank is paying interest on the 200<br />
+05:19:07 <strong>Namworld</strong> The same apply for both thing, and often the trusted issuers are an exchange (at least for now)<br />
+05:19:29 <strong>Namworld</strong> The difference is you expect the bank to invest your money round and make money on that.<br />
+05:19:42 <strong>mircea_popescu</strong> i don't care lol.<br />
+05:19:52 <strong>mircea_popescu</strong> as long as i take debt, ANY debt, i expect a %<br />
+05:19:55 <strong>mircea_popescu</strong> otherwise no deal.<br />
+05:20:16 <strong>dub</strong> presumably the entry/exit points to the network charge for the service?<br />
+05:20:17 <strong>Namworld</strong> So you wouldn't deposit money in MtGox because they don't pay interest on your balance?<br />
+05:20:54 <strong>mircea_popescu</strong> Namworld i wouldn't deposit money in mtgox because the mtgox risk requires a premium<br />
+05:21:05 <strong>mircea_popescu</strong> if they credited my acct with ~300 bux for every 100 deposited i'd consider it.<br />
+05:21:11 <strong>mircea_popescu</strong> but as it is... never have, never will.<br />
+05:21:58 <strong>Namworld</strong> Well it's pretty much the same. Bitstamp is an issuer on Ripple. You either have a number on BitStamp or on Ripple of have X of currency Y owed to you by them.<br />
+05:22:11 <strong>Namworld</strong> So typically people wouldn't expect interest.<br />
+05:22:44 <strong>mircea_popescu</strong> but! when i accept this, i undertake someone's CP risk<br />
+05:22:46 <strong>mircea_popescu</strong> this has to be paid for.<br />
+05:22:53 <strong>mircea_popescu</strong> you can't pass along cp risk w/o fees ?!<br />
+05:23:18 <strong>mircea_popescu</strong> to rephrase : do you have an inkling of an idea what the 2008 meltdown would have looked like if indeed repo was free ?<br />
+05:24:04 <strong>Namworld</strong> Well history shows people are trusting 3rd parties with their funds all the time, expecting nothing in return.<br />
+05:24:16 <strong>Namworld</strong> Other than being able to request their funds back<br />
+05:24:25 <strong>mircea_popescu</strong> "people".<br />
+05:25:00 <strong>[\\\]</strong> "idiots"<br />
+05:25:00 <strong>mircea_popescu</strong> the developers stupidly assume this happens because never before have there been on the face of the earth genius developers to make a ripple.<br />
+05:25:08 <strong>bdk_kluge</strong> They expect gains in terms of service. In the US, interest-bearing demand accounts are practically dead. They pay out in service, usually ~1.5-3% of deposits on overhead.<br />
+05:25:08 <strong>mircea_popescu</strong> the real reason however is that the system doesn't work<br />
+05:25:08 <strong>dub</strong> Namworld: example?<br />
+05:25:17 <strong>mircea_popescu</strong> and will be raped in the mouth just as soon as someone cares to.<br />
+05:26:06 <strong>Namworld</strong> dub, pretty much every exchange. They won't give you anything for entrusting them your funds<br />
+05:26:20 <strong>dub</strong> they give you access to a market for one<br />
+05:26:22 <strong>Namworld</strong> Plus they'll even charge you when you do stuff with your funds on their system<br />
+05:26:27 <strong>mircea_popescu</strong> anyway, moral of the story here being, "don't start revolutionary financial shit without an actual financial mind available to suckle on the cock of"<br />
+05:26:47 <strong>Namworld</strong> Well yeah... access to market is the only thing that is given in exchange<br />
+05:27:07 <strong>dub</strong> its kinda of an important service<br />
+05:27:19 <strong>dub</strong> its not like you would be handing them money without the intent to use the market<br />
+05:27:37 <strong>cole_albon</strong> mirce_popescu what do you mean by " system doesn't work"<br />
+05:27:39 <strong>Namworld</strong> As for #3, I think you got your facts wrong...<br />
+05:27:40 <strong>bdk_kluge</strong> Though... they charge for that.<br />
+05:27:45 <strong>mircea_popescu</strong> depends dub, mtgox ?<br />
+05:28:09 <strong>mircea_popescu</strong> cole_albon i think you hafta read the scrollback.<br />
+05:28:14 <strong>mircea_popescu</strong> Namworld aha ?<br />
+05:28:25 <strong>Namworld</strong> I might be mistaken... but I didn't notice any such chain trust effect<br />
+05:28:52 <strong>[\\\]</strong> there's a reason why its called ripple<br />
+05:28:59 <strong>[\\\]</strong> it implies a chain<br />
+05:29:02 <strong>cole_albon</strong> the scam bux switcharoo thing?<br />
+05:29:15 <strong>mircea_popescu</strong> Namworld what do you mean ?!<br />
+05:29:21 <strong>mircea_popescu</strong> you can't trade your ripples ?<br />
+05:30:13 <strong>Namworld</strong> One BTC issued by Weexchange.co is different from 1 BTC issued by BitStamp. If you have 1 BTC issued by BitStamp, you can't trade it for someone wanting a Weexchange.co BTC<br />
+05:30:14 <strong>mircea_popescu</strong> cole_albon no, i meant the naive stone age "free rate repo" system<br />
+05:30:32 <strong>mircea_popescu</strong> Namworld so then what's a ripple ?<br />
+05:30:41 <strong>Namworld</strong> Well I didn't notice any kind of mixing...<br />
+05:30:49 <strong>Namworld</strong> Maybe if I had a more complex trust network...<br />
+05:31:07 <strong>mircea_popescu</strong> but!<br />
+05:31:19 <strong>mircea_popescu</strong> how did the tradefortress guy manage to cause all that havoc<br />
+05:32:00 <strong>[\\\]</strong> <a href="http://l.yimg.com/os/publish-images/lifestyles/2013-05-24/925ca8be-299c-4c0e-8375-5d6c97916bce_630_plussize_swim.jpg">http://l.yimg.com/os/publish-images/lifestyles/2013-05-24/925ca8be-299c-4c0e-8375-5d6c97916bce_630_plussize_swim.jpg</a><br />
+05:32:06 <strong>Namworld</strong> He shows that he can have a 1 billion BTC balance by issuing it.<br />
+05:32:21 <strong>mircea_popescu</strong> but he also traded it<br />
+05:32:26 <strong>dub</strong> my eyes<br />
+05:32:28 <strong>Namworld</strong> But no one will accept it if they don't trust tradefortress as an issuer<br />
+05:32:51 <strong>mircea_popescu</strong> so ?<br />
+05:34:01 <strong>Namworld</strong> So people must be careful about the issuers they trust? If you decide to trust some random guy for 10000 BTC and take his BTC... of course Ripple will show you have 10000 BTC, but try to trade those with anyone and no one takes them.<br />
+05:35:14 <strong>dub</strong> right<br />
+05:35:17 <strong>mircea_popescu</strong> listen, the way i find out what the president of the republic ate<br />
+05:35:32 <strong>mircea_popescu</strong> is that his cook knows, and the cook fucks this girl on the side who's owned by this guy who owes me a carrot.<br />
+05:35:44 <strong>mircea_popescu</strong> this is how things work. social graphs degrade towards the edge<br />
+05:36:43 <strong>dub</strong> this is another one of those Namworld conversations where we wax on for hours about how when one looks up they find the sky and shockingly upon looking down observe the ground<br />
+05:37:00 <strong>mircea_popescu</strong> lol<br />
+05:37:12 <strong>Namworld</strong> That's not how I understand and witnessed Ripple to work.<br />
+05:37:29 <strong>mircea_popescu</strong> so listen. you got what, 40k ripples. where from ?<br />
+05:37:48 <strong>Namworld</strong> It works exactly as in this graph, as far as I witnessed: <a href="https://ripple.com/wp-content/uploads/2012/12/how32.png">https://ripple.com/wp-content/uploads/2012/12/how32.png</a><br />
+05:38:14 <strong>Namworld</strong> From the giveaway thread, as I said.<br />
+05:38:20 <strong>mircea_popescu</strong> from whom ?<br />
+05:38:29 <strong>mircea_popescu</strong> a ripple user X shall we say ?<br />
+05:38:41 <strong>dub</strong> from the ripple teat<br />
+05:39:14 <strong>Namworld</strong> From Ripple I guess<br />
+05:39:32 <strong>mircea_popescu</strong> mkay.<br />
+05:39:34 <strong>Namworld</strong> Or any sub party assigned with the task of distributing the ripples around<br />
+05:39:36 <strong>mircea_popescu</strong> and then you took out 5 btc<br />
+05:39:45 <strong>mircea_popescu</strong> were these 5 btc put in by the user you got your ripples from /<br />
+05:40:06 <strong>Namworld</strong> I trusted Bitstamp as an issuer. Then traded these XRPs for BitStamp issued BTC IOUs<br />
+05:40:12 <strong>mircea_popescu</strong> foprget that.<br />
+05:40:16 <strong>mircea_popescu</strong> user X gave you 40k ripple.<br />
+05:40:21 <strong>mircea_popescu</strong> user Y deposited 5 btc<br />
+05:40:27 <strong>Namworld</strong> Aye<br />
+05:40:29 <strong>mircea_popescu</strong> you got Y's 5 btc in exchange for X's 40k ripple<br />
+05:40:34 <strong>Namworld</strong> yeah<br />
+05:40:38 <strong>mircea_popescu</strong> thus there fore wtf you on about. it's exactly how you witnessed it to work<br />
+05:41:00 <strong>Namworld</strong> But it doesn't work like you said in #3<br />
+05:41:10 <strong>mircea_popescu</strong> ...<br />
+05:41:15 <strong>Namworld</strong> You can't randomly end up with USD issued by your boss's little girl<br />
+05:41:25 <strong>mircea_popescu</strong> you took Y's lunch in exchange for X's scribbled paper.<br />
+05:41:33 <strong>mircea_popescu</strong> Y doesn't know who the fuck you are.<br />
+05:41:41 <strong>mircea_popescu</strong> all he knows is he had 5 btc<br />
+05:41:44 <strong>mircea_popescu</strong> and where are they.<br />
+05:42:16 <strong>Namworld</strong> XRP is exclusively issued by Ripple<br />
+05:42:22 <strong>mircea_popescu</strong> ...<br />
+05:42:27 <strong>Namworld</strong> So X's scribbled paper is Ripple<br />
+05:42:44 <strong>mircea_popescu</strong> dude. where are y's 5 btc<br />
+05:42:51 <strong>Namworld</strong> In my wallet<br />
+05:42:52 <strong>mircea_popescu</strong> you don't even know who the fuck y is you have his btc<br />
+05:43:01 <strong>mircea_popescu</strong> so then how exactly is this diff from the guy in the cab.<br />
+05:43:01 <strong>Namworld</strong> Yeah<br />
+05:43:05 <strong>mircea_popescu</strong> "somebody" has his 5 btyc<br />
+05:43:47 <strong>Namworld</strong> In #3 the guy in the cab realizes suddenly he's holding valueless USD issued by a little girl<br />
+05:44:01 <strong>Namworld</strong> Which is impossible if he never directly trusted said person as an issuer<br />
+05:45:29 <strong>mircea_popescu</strong> but he trusted his boss<br />
+05:45:54 <strong>Namworld</strong> He didn't trust the little girl<br />
+05:46:00 <strong>mircea_popescu</strong> tghe boss did.<br />
+05:46:03 <strong>Namworld</strong> There's no chain<br />
+05:46:19 <strong>mircea_popescu</strong> ...<br />
+05:46:39 <strong>Namworld</strong> Issuer's X BTC is not mixable with Issuer's Y BTC<br />
+05:46:54 <strong>mircea_popescu</strong> if you were able to take out y's 5 btc in exchange for x's 40k ripples<br />
+05:46:59 <strong>mircea_popescu</strong> it stands to reason so could the little girl.<br />
+05:47:12 <strong>mircea_popescu</strong> so, little girl takes out 5 btc for her dad's 40k ripples.<br />
+05:47:19 <strong>mircea_popescu</strong> dad takes 5 btc out of you for 40k ripples<br />
+05:47:25 <strong>mircea_popescu</strong> you end up with 40k ripples. no 5 btc.<br />
+05:48:24 <strong>Namworld</strong> That's not how it work... the only way the little girl can take the 5 BTC is if she traded something for it.<br />
+05:49:37 <strong>dub</strong> I think you're talking about different things, Namworld is still talking about some idiot paying 5btc for his ripples while mircea_popescu is talking about how ripple works</p>
+						</li>
+
+										<li id="comment-113695" class="commentbody"><div class="commenthead"><img alt='themusicgod1`s avatar' src='http://www.reddit.com/r/ripplers/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink"><a href='https://www.reddit.com/r/ripplers' class='url'>themusicgod1</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113695" title="">Saturday, 18 April 2015</a>
+							</div>
+						<p>"Fatal congenital defect #1. Ripple requires any participant to trust other participants blindly."</p>
+<p>False.  You should not trust anyone blindly.  Ripple requires you to trust *a* person or entity on the network, but "blind"ness is not a prerequisite.</p>
+<p>"Fatal congenital defect #2. If #1 above somehow didn't kill the thing (for argument's sake), there's absolutely no way for you to receive compensation for the liquidity you provide. Conceivably no matter who X is, be it Russ Meyer or the very Bank of England in its heyday, as long as you take on its debt you're entitled to some sort of compensation for this. At least that's how things work in sane land, since forever.  Not in Ripple, however. Your trust is unremunerated, which makes Ripple the only repo market in the history of finance working on 0% interest rates. Not even the FED pumping liquidity through the special bank windows did something like this."</p>
+<p>Right.  However unlike the FED, where there's only one central bank who has this power *the entire network* has this power.  And it's not necessarily true that there's no consequences...that's however external to the system.</p>
+<p>"Fatal congenital defect #3. If #1 and #2 above somehow didn't kill it (veering beyond the absurd by now), Ripple averages out all debt. You beg my pardon ? Good for you."</p>
+<p>This is starting to get to the heart of the matter, and a better criticism than 99.9% of people on the internet can manage.  However you can point to any fiat currency and you will see they suffer the same issues, only on longer time periods.  Yeah, it's true, that the expansion of ripple money could incur runaway inflation making all money everywhere worthless.  However, ripple will continue to work in that situation, continue to do what it has always done: make it possible to escape autarky via finding cycles through chains of permission and encoded status.  Even if, somehow, we run into a runaway jubilee on some part of the network that happens to expose the rest of the network that the majority of people find their tokens are lemons...we set the clock back to 0 and go full fight club.  It is, because of this fact, potentially more robust than what we have now, with the "Too Big To Fail" banks being held up by a central bank.</p>
+						</li>
+
+										<li id="comment-113703" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113703" title="">Saturday, 18 April 2015</a>
+							</div>
+						<blockquote><p>unlike the FED, where there's only one central bank who has this power *the entire network* has this power.</p></blockquote>
+<p>This is a distinction without a difference. For one thing, the FED actually is "the entire network", unless some dubious / scammy outfit.</p>
+<blockquote><p>you can point to any fiat currency and you will see they suffer the same issues</p></blockquote>
+<p>Or I could point to any society in recent or distant history (pre 1800, say) and see they suffer the same hygiene issues. Wouldja like some smegma with your yogurt for this reason ?</p>
+<blockquote><p>the expansion of ripple money could incur runaway inflation</p></blockquote>
+<p>"Could" is not how things work in this context. If it can, it must.</p>
+<blockquote><p>continue to do what it has always done</p></blockquote>
+<p>It never did anything. It.Never.Did.Anything.</p>
+<p>It is curently pretending to do something, arbitrarily chosen from the set of things it could pretend by the criteria "what'd appeal to <a href=http://trilema.com/2014/a-complete-theory-of-sociology/ >the particular suckers</a> it tries to fleece". There's no hardcoded requirement for what it pretends, which means that it could (and therefore will) pretend anything else, such as curing genital warts or improving the goodwill of the gods, depending on exactly what <a href=http://trilema.com/2014/the-mobile-revolution-or-what-consumers-have-come-to-expect/ >the expectations of the dumb</a> look like that week. </p>
+<p>In any case : at no point is Ripple involved in some competition, with anyone (banks, Bitcoin, what have you) anymore than amway is giving big pharma a run for its money, or the world wrestling federation is involved in the space race. Yeah, I'm aware those dudes jump a lot and McMahon's fulla air. Nevertheless...</p>
+						</li>
+
+										<li id="comment-113758" class="commentbody"><div class="commenthead"><img alt='themusicgod1`s avatar' src='http://www.reddit.com/r/ripplers/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink"><a href='http://www.reddit.com/r/ripplers' class='url'>themusicgod1</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113758" title="">Tuesday, 21 April 2015</a>
+							</div>
+						<p>&gt; This is a distinction without a difference. For one thing, the FED actually is "the entire network", unless some dubious / scammy outfit.</p>
+<p>It is an enormous difference, and flat out false that the FED is actually "the entire network".  If the Federal Reserve (it's not an acronym, it doesn't need to be spelled "FED") disappeared tomorrow Ripple would continue to work.</p>
+<p>&gt; Or I could point to any society in recent or distant history (pre 1800, say) and see they suffer the same hygiene issues. Wouldja like some smegma with your yogurt for this reason ?</p>
+<p>what on earth does this have to do with Ripple, which is digital and hence not subject to hygiene issues at all?</p>
+<p>&gt; "Could" is not how things work in this context. If it can, it must.</p>
+<p>Then why hasn't it, yet?  Ripple has been around for a decade, obviously we should have seen some of this by now.</p>
+<p>&gt; It never did anything. It.Never.Did.Anything.</p>
+<p>That's not true.  I've personally  made many trades with it that would have been impossible without it, including acquiring my first bitcoin.  Ripple has facilitated all sorts of trade.</p>
+<p>&gt; It is curently pretending to do something, arbitrarily chosen from the set of things it could pretend by the criteria "what'd appeal to the particular suckers it tries to fleece"</p>
+<p>I can't read your damn articles so if you're going to use it as an argument against me at least have the scientific honesty of publishing the details of your rebuttal if you're going to choose to link to it.</p>
+<p>&gt; In any case : at no point is Ripple involved in some competition, with anyone (banks, Bitcoin, what have you) anymore than amway is giving big pharma a run for its money, or the world wrestling federation is involved in the space race.</p>
+<p>Ripple is obviously in competition with some entities -- particularly predatory loan companies.  You saw some serious flak being directed in Ripple's direction by btcjam in the early days because they rightly saw us as a threat to their business model.</p>
+<p>tl; dr your response is incohrent and has little to do with Ripple at all, and you're not giving an honest appraisal of the situation.</p>
+						</li>
+
+										<li id="comment-113759" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113759" title="">Tuesday, 21 April 2015</a>
+							</div>
+						<blockquote><p>> It never did anything. It.Never.Did.Anything.</p>
+<p>That's not true. I've personally made many trades with it that would have been impossible without it, including acquiring my first bitcoin. Ripple has facilitated all sorts of trade.</p></blockquote>
+<p>Are you retarded or something ? Testimonials aren't interesting specifically for this reason : that retards like you exist. What's next, tethans and colloidal silver ?</p>
+<blockquote><p>> It is curently pretending to do something, arbitrarily chosen from the set of things it could pretend by the criteria "what'd appeal to the particular suckers it tries to fleece"</p>
+<p>I can't read your damn articles so if you're going to use it as an argument against me at least have the scientific honesty of publishing the details of your rebuttal if you're going to choose to link to it.</p></blockquote>
+<p>This is not how it works. It may be how you (and plenty of <a href=http://trilema.com/2014/no-you-dont-have-something-to-say-on-the-topic/ >other derps</a>) think it "should" work. Not that it makes a difference.</p>
+						</li>
+
+										<li id="comment-113761" class="commentbody"><div class="commenthead"><img alt='themusicgod1`s avatar' src='http://www.reddit.com/r/ripplers/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink"><a href='http://www.reddit.com/r/ripplers' class='url'>themusicgod1</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113761" title="">Tuesday, 21 April 2015</a>
+							</div>
+						<p>&gt;: that retards like you exist</p>
+<p>Really?  That's the entire basis of your argument?  You discount what I offer as argument  because I'm a "retard"?</p>
+<p>Let's see how this looks in terms of another argument, because since you aren't giving any more details that people are able to read, this is exactly what it looks like:</p>
+<p>"The sky is blue"</p>
+<p>"no it isn't"</p>
+<p>"Yes it is.  My measurements show that the light reads at $X nm wavelength, and you've already agreed that $X nm wavelength light is blue"</p>
+<p>"u r dumb"</p>
+<p>Would you accept that argument?</p>
+						</li>
+
+										<li id="comment-113762" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-113762" title="">Tuesday, 21 April 2015</a>
+							</div>
+						<p>This imaginary situation where we'd be like... presenting arguments to each other and shit is entirely your own hallucination, and consequently your own responsibility. I won't answer for it. </p>
+<p>What, you had mistaken me for your equal or something ? Not how things work.</p>
+						</li>
+
+										<li id="comment-114024" class="commentbody"><div class="commenthead"><img alt='themusicgod1`s avatar' src='http://www.reddit.com/r/ripplers/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink"><a href='http://www.reddit.com/r/ripplers' class='url'>themusicgod1</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114024" title="">Sunday, 3 May 2015</a>
+							</div>
+						<p>&gt; What, you had mistaken me for your equal or something ? Not how things work.</p>
+<p>Whatever you say, Mr. High and Mighty.  If you've got some kind of philosopher's stone that keeps you from making mistakes, by all means keep following it.</p>
+						</li>
+
+										<li id="comment-114025" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-114025" title="">Sunday, 3 May 2015</a>
+							</div>
+						<p>The two are unrelated.</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-95245">
+					<div class='trackhead'>
+						<div class="commentcount">11</div>
+						<span class="authorlink"><a href='http://www.thedrinkingrecord.com/2013/09/26/anti-bitcoin-bitcoin-apps-part-3-gliph-in-particular/' class='url'>Anti-Bitcoin &#8220;Bitcoin Apps&#8221; Part 3: Gliph in particular | Bingo Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-95245" title="">Thursday, 26 September 2013</a>
+					</div>
+					<p>[...] does this valuing every counterparty&#8217;s Bitcoins the same way, but with its own scammy and unfeasible elements that Gliph can at least not be shamed [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-130427">
+					<div class='trackhead'>
+						<div class="commentcount">12</div>
+						<span class="authorlink"><a href='http://bingology.net/2013/09/26/anti-bitcoin-bitcoin-apps-part-3-gliph-in-particular/?b=Rippl&amp;e=#select' class='url'>Anti-Bitcoin &quot;Bitcoin Apps&quot; Part 3: Gliph in particular (Updated) &laquo; Bingology - BingoBoingo's Blog</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-130427" title="">Thursday, 1 August 2019</a>
+					</div>
+					<p>[...] Ripple does this valuing every counterparty's Bitcoins the same way, but with its own scammy and unfeasible elements that Gliph can at least not be shamed [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-141127">
+					<div class='trackhead'>
+						<div class="commentcount">13</div>
+						<span class="authorlink"><a href='http://trilema.com/2015/who-made-this?b=Curtis%20Yarvi&amp;e=that#select' class='url'>Who made this ? on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-141127" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] Curtis Yarvin, from Gavin Assassinsen to Anton Derpopolous, from Max Keiser to Daphna Waxman, from Jed McCaleb to James McCarthy, piles upon piles of oh my fucking god I didn't know they stacked shit that [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142221">
+					<div class='trackhead'>
+						<div class="commentcount">14</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/to-the-dao-and-the-ethereum-community-fuck-you?b=You%20probably&amp;e=t%20to#select' class='url'>To the DAO and the Ethereum community : Fuck you. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142221" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] You probably want to revisit the 2013 discussion of "Ripple". Just because you idiots changed the name doesn't mean anything changed! Just how hard is it to [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-142724">
+					<div class='trackhead'>
+						<div class="commentcount">15</div>
+						<span class="authorlink"><a href='http://trilema.com/2016/i-dont-think-you-understand-how-credit-cards-work?b=of%20using%20the&amp;e=cess#select' class='url'>I don't think you understand how credit cards "work". on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-142724" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] of using their brain often laugh at poorly specified, horrendously designed, shodily implemented altcoins, and for good reason - there's apparently no shortage of these end products of an ambitious process [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143361">
+					<div class='trackhead'>
+						<div class="commentcount">16</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/the-practical-costs-of-hallucinated-freedom?b=kind%20of%20choi&amp;e=till#select' class='url'>The practical costs of hallucinated freedom on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143361" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] kind of choice in the matter. &mdash;&mdash;&mdash;Yes, obviously, the industry has been engaged in a downward spiral towards discovering the cheapest, sorriest excuse for a pile of garbage "the market" will still [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-143732">
+					<div class='trackhead'>
+						<div class="commentcount">17</div>
+						<span class="authorlink"><a href='http://trilema.com/2017/the-final-gasp-two-for-the-money?b=of%20them.%20But&amp;e=%20and#select' class='url'>The final gasp : Two for the money on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-143732" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] of them. But it's also the character's definite, definitive last breath. Hear him out :  You're a lemon. Like a bad car. There is something... there is something inherently defective in you, and you, and [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-145167">
+					<div class='trackhead'>
+						<div class="commentcount">18</div>
+						<span class="authorlink"><a href='http://trilema.com/2018/the-stupidity-ratchet?b=lazily%20%3A%20the&amp;e=mple#select' class='url'>The stupidity ratchet on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-145167" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] lazily : they go by what they perceive "most other people" to be doing. It's evidently trivial to herd a bunch of these lazy pigglets together, and thereby create imaginary alt-realities that nevertheless "hold true" within the ample [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="47864" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835205-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-47864")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-47864");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-47864");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Trilema altogether no longer showing ? on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">Lucruri fine pentru oameni subtiri.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-93573"><div class="post" id="post-93573">                    <h1><a href="http://trilema.com/2020/trilema-altogether-no-longer-showing/" rel="bookmark" title="Permanent Link to Trilema altogether no longer showing ?">Trilema altogether no longer showing ?</a></h1>                        <div class="date">                                     Monday, 06 April, Year 12 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>The whole "<a href=http://trilema.com/2019/trilema-images-no-longer-showing/>fuck leechers</a>" thing worked while it worked ; but apparently the recent <a href=http://trilema.com/2020/closure/>republican closure</a> made Trilema ever more popular, to the point of choking my server. </p>
+<p>I've had to restart apache to increase servlets/workers (apologies for the brief downtime earlier, but apparently 512 wasn't nearly fucking enough, so now running with 8k <sup><a href="#footnote_0_93573" id="identifier_0_93573" class="footnote-link footnote-identifier-link" title="Which is 8192 and not 8000, whatever math Bezos might've learned at his special needs school.">i</a></sup>), which helps somewhat. But ever since...</p>
+<blockquote><p>   Current Time: Monday, 06-Apr-2020 08:08:54 EDT<br />
+   Restart Time: Monday, 06-Apr-2020 07:47:51 EDT<br />
+   Parent Server Config. Generation: 2<br />
+   Parent Server MPM Generation: 1<br />
+   Server uptime: 21 minutes 3 seconds<br />
+   Server load: 0.33 0.48 0.55<br />
+   Total accesses: 2061928 - Total Traffic: 76.1 GB<br />
+   CPU Usage: u70.07 s33.96 cu587.68 cs83.79 - 61.4% CPU load<br />
+   1630 requests/sec - 61.7 MB/second - 38.7 kB/request<br />
+   389 requests currently being processed, 339 idle workers</p>
+<p>__K...KWR..KKRKRK.K..W._K._._...K_W..KK_K_K_..K_K.______.K._KR__<br />
+K._K_..__.._.KR....._R..W___..R..RRR._.._.KR_...K._KK_..K.___._K<br />
+.__..RK_R.KKKR..K.._.KWK_._..._.KW..K_.K._...K_K_R.K_.KKKKR._KR_<br />
+.K__._K____.....C.KKK____..KWK...C.._.K...R._K.._____W_.K._R_..R<br />
+_..._.._..K___.K.._._._..C.K.KW.K.._K..WW_.__R_R._.WKW_.....R.K_<br />
+...W......._._.WKK.__K.K___K.K..._..WKW_CK_K.._.R_.______W_.K.K.<br />
+.W.__..K._._..R._.__R__RK.W..C_._.._..K.._.K.__.W_K_.KW_._..C...<br />
+.._...KK_K_..KK.K_.._K_W_K____W..K.W__CK.__WW._.__WW__K__K_KK...<br />
+R._K._...RW..KK._.W...K._W..W_W._.__.__.._.K.KW.._R.K....K..KK..<br />
+K__W.C.RK..K..._WWKK....K_.R.KKKCW_WW.....K_R._K.C..W..K.._R._K_<br />
+K.....WK.K...K.._K.K.CWWK.R._._._...C.KW..WK__C___._C..KK..R.K__<br />
+_...WK..W_..._K_K__W_.___.W.......W....KK...K.K_.K__.....K.R.K._<br />
+._.W._.KK.K.._KW.____._K.R_._.__.___K_.._..._...R.W__._.KK_.W..W<br />
+_.._K.K_...._W.._.__.KW__...W......K.._..W.KK....KK.C.._....._.R<br />
+..W................._....__K..W......_.....C..W....K.R.R_......_<br />
+_..._.._........_................_KK.....K.......K..W...._.R....<br />
+K__.K_......C.___......_..._.._........_....._R._...........K._.<br />
+..K.R.._..._..._._...........K._K.._..._...._..._.K._.._...W....<br />
+............._......._.......C...._....._._.......R............_<br />
+...._WWK..............._...K.....C..K._......_.K....._.._R.K....<br />
+W......W...................K.K....W........R..................K.<br />
+K..._....................._......W.....W.W........_K.._......_K.<br />
+K_WK....K..__._.......WW.._..._._....._W...K....R.....WWK....R.K<br />
+...K..R.K.....C.._..K..._._.._..._..WK..W.W_....K..W..W._R.._...<br />
+..W....._...._......K...._......K....C.....K......._.K._K..K.K..<br />
+.............._...._........._._.................K...._...RK.._.<br />
+K_..WW._...._._K.._..K_......C........K_.._..._....W.._.........<br />
+..._...._........._.._._.R._.R........_R.K....._.........._.....<br />
+.._....K_._..KW._K..K.KK...K._.............K......_....RK.....R.<br />
+._.WKKK.K....K_....K............................................<br />
+................................................................
+</p></blockquote>
+<p>and sustainedly, </p>
+<blockquote><p>   Current Time: Monday, 06-Apr-2020 08:12:58 EDT<br />
+   Restart Time: Monday, 06-Apr-2020 07:47:51 EDT<br />
+   Parent Server Config. Generation: 2<br />
+   Parent Server MPM Generation: 1<br />
+   Server uptime: 25 minutes 7 seconds<br />
+   Server load: 0.50 0.48 0.53<br />
+   Total accesses: 2683363 - Total Traffic: 97.5 GB<br />
+   CPU Usage: u107.46 s53.27 cu771.91 cs113.22 - 69.4% CPU load<br />
+   1780 requests/sec - 66.2 MB/second - 38.1 kB/request<br />
+   548 requests currently being processed, 180 idle workers</p>
+<p>___...R_W..WKWCKK.K..K.KW._._...W_K..__K_RKW..KK_.__RKK_._.K_R_C<br />
+K.___..W_..R.KK.....CR..KRRK.._..KRW._..K.R_R...K.KK__..R.K_W.K_<br />
+._K..KWKK._KKC..K.._.KW_W._...K.KK..__._.K...KK_KC.RK._RWRW.R_WK<br />
+.WWK.KR_WW_.....K.RKKWRK_..KWW...W.._.K...C._K..KKK_KRK.K.WKR..R<br />
+K..._..R.._KRW.K..K.R._..K._._K._.._K..KRK.RKCK_.C.KWKK....._.C_<br />
+...K......._.K.KKW.RWK.K__KK._...K..K_KK_KKK..K.W_.__KWWWCK.C.K.<br />
+.W.KK..K.W.K..R.W.KWK_WR_.W..WC.W.._..K..K.R.RK.WKKK.K__.W..C...<br />
+.._..._RRKW..WK.WK..C_KW_K_RKKK..K._KKWW._KKK.R._KK_R_WK_RKK_...<br />
+K.K_._..._K.._K.R.K...K.KK..WCW.W.KR.W_..R.W.KW..CR._...._..K_..<br />
+KWK_.C.KK.._..._CK_W....KK._.KKKWWWKW.....KKK.KW.R..K..K..WK.KKW<br />
+K.....KW.K..._..KW.R.WK_C._.K.K.W...R.RW..KW__WK_R._K.._W..K.CW_<br />
+_...KW..KK...K_RRKWWK._WK._.......K....__...R._R._RK.....R.K._._<br />
+.W.W._.__.C..CWW.KRKK.R_.KW.K.WK.KCK_W..K...K...R.K_R._.KR_.K..R<br />
+K..K_.KK....RW..R.K_.R_RR...W......K..K.._.KR...._K._..K.....K.W<br />
+..K................._...._KK.._......C.....K..W....K.W.R_......W<br />
+W..._..W........_................WCK.....K.......K.._....K._....<br />
+K__._K......K.KRR......_..._..K........K....._W._...........W.C.<br />
+..R._..K...K...K.K...........K._W..K..._....R..._.C.R..R...K....<br />
+.............K.......W......._....R.....K.R.......W............W<br />
+....__WK...............W...W.....K..K.K......K.K....._..KK.K....<br />
+K......K...................K.R....W........K.................._.<br />
+W...K.....................K......K.....R.K........KK..W......W_.<br />
+K_K_....K..KK._......._K..R..._._.....C_..._....C.....K_K....K.K<br />
+...K.._._.....W..K..R...R._..W...W..WC.._.RK....K..K..R.KK..K...<br />
+.._....._....K......K....K......K....K.....K......._.R.WR..K._..<br />
+.............._....K.........W.K.................K....K..._K..K.<br />
+WR..KC.K....K.RK.._..KC......C........KK..K..._....W..K.........<br />
+...K....K.........K..R._.K.K.K........WR._.....C..........W.....<br />
+..R....WK.C..WR._K..K.CK...C.K.............K......K....K_....._.<br />
+.K.__KK.K....KW....W............................................<br />
+................................................................
+</p></blockquote>
+<p>Do the math if ye fucking will, what's 100GB / 25 minutes come to ? Anything like ~170 monthly TB ? So... yeah, I'm back where I was a year, five quarters ago : da fuck am I going to do, this is about as much as this server can take, it's arrived at ye <a href=http://thetarpit.org/2020/jurnalul-lui-shotae#fn:18>PSF</a> : if I increase servlets the average processing time increases as well, this machine can pump out 1500-2k reqs/s and that's it, that's what it can do, fiddle knobs as ye will. </p>
+<p>Unlike a year ago, however, I see no simple solution. 40kb average request is indicative of... you know, people reading, what am I going to do, not let them ? I suppose I should have pushed the originally intended multi-server thing I was discussing with lobbes last year more decisively, but honestly...</p>
+<p>If in the future you end up having to queue to read Trilema, it'll just be a natural continuation of <a href=http://ave1.org/2020/living-in-the-free-world/>living in the free world</a>, don't you find ? </p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_93573" class="footnote">Which is 8192 and not 8000, whatever math Bezos might've learned at his special needs school. [<a href="#identifier_0_93573" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2020/yet-i-do-not-repent-me-or-semana-santa-en-costa-rica/">Yet I do not repent me, or Semana Santa en Costa Rica</a></div>
+                <div class="alignright"><a href="http://trilema.com/2020/coffee-and-cigarettes/">Coffee and Cigarettes</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2020/trilema-altogether-no-longer-showing/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2020/trilema-altogether-no-longer-showing/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>34 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-148315" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148315" title="">Monday, 6 April 2020</a>
+							</div>
+						<p>Aand a hotter spot : </p>
+<blockquote><p>   4115 requests currently being processed, 277 idle workers</p>
+<p>WRWRRWWWRKRWWRW_WW_WKWWRRWRR__KW_RWRRWWWWWRWWKWRRWWWWWWCKWKWWKRW<br />
+WWRRKWWWWWRCRKWW_WWRRCCWWWRWWWWRWR_KWWKW_RWKW_WRWWKWRWWWWW__RWRW<br />
+WKWWWRCWWWWWWWKWRWRRWWWWWWRW_WWWKKWRRKWWWWWRKW_WWWRRRKWRWWWKWRRW<br />
+WWWWW_WC_WRW_K_WKWRKWWCWWWRWWWWWRKWCRKWRKRWRWWRWWKWWWRRWWWWRWRKW<br />
+WWKWWRWWRWWKKWKRWWRWWRWKKRWW_WKRWRWK_KKRWKRWWKRWKRWWRWWWWKRRRRWW<br />
+WKKKWWWWWRWWKWWW_CKRWWRWWWWKRWRWRKKRWCWRWWWWKRWRWK_RKWRRRWKWWWRW<br />
+WWRWKWKWWWWWRWWRWWRKW_RW_WWWWRWWKWWKRWRRWWKWWWKKKRW_WK_WWWRWKWWW<br />
+KKRWKWWRCWKKRRW_KWRWWWWWWWWRWKWWWWWWW_WRWRRWRKWKWRRK_WK_WRRWWRKR<br />
+WWWRWRKWWRKWRWWWWWWRWWWWRW_WRWWWKKKWKRWWR_WWWWRWW_KWWWKRRRR_RWKW<br />
+WWWWKWRRW_WWRWRWWWWKWWWWWKWKKW_WRWWRWWRWRKKWW_WRWRWWWWR_WWKWWKRW<br />
+WWWWKWWWKWWWCWWKRWKWWWWWWWWW__WRWWWKRRRWWWKWWK_WKWWW_WWRCWW_RWW_<br />
+K_W_WKW_KKWWRWWRWRRWRWWWWWKWWWRWKRRWWRRWWRKWWWWRKWKWRRWWWWW_R_WK<br />
+_KKW_KWRWWKRWWWWWRWWWWWWWWWW_WRRWWWWWWKWWRWKWRWWWWWWKWWKK_WKWRWW<br />
+_WWKWWKKWWKRRRWKWWWWRWKWWRWKWWWRWWWWW_RRKRWWWWRWWRWWKKRRWWWRWWRW<br />
+WW_CWWRWWKWR_WWKRWKCWWWWRWRKWWWWWWWWRWRWKWKWWWW_WRKRWWWWWWRWWKWW<br />
+WKRWWWWWRCKWKWKWWWWWWWWKRWWWWRWWW_WWWRCWWR_WWRWW_WW_RWRRKRRKRWWR<br />
+RWWWKRWRCRRRCR_WRWRRWWW_KWWWWWKRKWRWRWKKKRRWKWKKRRWWWWKWWWRWWRRW<br />
+WWWR_WW_RWWKWWKWKWWWRRRWWKWRWRWR_WKWWWWWKKW_WW_WKW_WRKKKCWKWWWRW<br />
+RW_RWWWWWWWWWRWKRWWWRRWWKR_WWWWWWRWKWRWWRWWWKWRKKWRRKWWWWRRRWWWK<br />
+RRWWKKWRW_WKKWWWRWR_WWKWWRWWWWKWW__RWWKWKRWWRWWWWKRWWWKRWRWRCWKW<br />
+WRWKWKWKWWRRRWWRWRCKWWWW_WRWRRRWWWRRWWRWRWWRRWKRWWWWKRWRRWWRWWKK<br />
+WCWKRWRWWWWKWCRCWW_KRWWRW_RWWWKCWWWRRRRWWWWKKWWKKWKWWW_K_KRWWWWW<br />
+RWKWW_KWWWWWWRW_WRRKKKKWWRWKWCKWKWKRCK_RWWWWRWWRKWRWWWRRWWWRRWRW<br />
+_WWKW_WKWRWWWWWR_RCCWWRKWWR_WWWWWWWKRWWCWRWRRRWWW_WWWWRWWRWKRRWK<br />
+RWWCRWKRR_WKR_C_RWRWWWWKKRWWWWKWKWWWWWKRWWWWRWWWR_RWWWKK_WWWRRWK<br />
+W_RWWKWRW_WWWCW_KRWRWRWR_WWKWWRRWKWW_WWWW_KWWKWWRKKWKWWWW_WRRRWK<br />
+_RWWRWKWWWWRKWKWKCKWRWKRKWWRWRKWKW_WWKWWRRKW_WWRKWRWKWKKCWRWKKRR<br />
+RWWWWWWWW_KWWCRWWWWKWWWWWWRKRKWCKWWWKRRCWKKWWW_WWWWWWWWWWKWWWWWW<br />
+RWRWWWWKWKWW_WWWWRWKW_WW_KRKRWK_WKWRWKWWRRWWCKWRWW_KWWWWKW_RWWKW<br />
+WKKW_RRWWWWWWRKKRWRWKWWWWKWWWWRKKWWKWRKWWWWW_WWCWW_WRWKWWW_KWWWK<br />
+WWRK_RWWWW_WW_WWWRWWKRRWKWKWWRRRRKWWRW_WRRWWKWKRWR_WWRRWKWWRWRKW<br />
+WWWWKK_WRWWWWR_KWRKWWRW_WR_WWWWRKWKWRRWKWWRWWWKRWWKRWRKWKWWWWWW_<br />
+WRWWWWWWRWWWRRWRWRKWWRRWW_RRWRWWWWRRW_WWWWRKRWKKWWKWWWWRWWWWWWWW<br />
+W_RRWWRKWRWRWWWKW_WWKW_WKKWWCWWKRRWWWRWCKWWKRK_WWKWKWWWRWWWWWWWW<br />
+R_RKWWRRWRRWWWKWRKWKKWWRRWWWWRWKKRWRKWKWWWWRWWWKWR_R_RW_KKKWWKWR<br />
+WKCRWWWWWRRKWWR_RWCWWWRWRWWWWRWWWRR_CWR_WWKKKWWWKKWWWRR_WKWWCWWR<br />
+WWRRWRKRRCKWKKWW_KRWWWWWWWKWWRRRKWRWWKWRWWWWRWWWKWWRWCCWRWRWRWRW<br />
+WWWWCRKKRWRWWWWWRWWRWRWWWKRWWWWKRWWWRKKWCWWRWWKRCWRWWWWRRWWWW_RW<br />
+WKRKWKRRWKRWRRWRWWWWWWWWWWWWWWWWK_WWW_W_KK_WKWRWKCRWWWWWKRRWKRWR<br />
+KWWWRRRWKKWWWRW_WWWWWRRKWK_RW_KWCRWWKKWRKRWWRKWKWWRW_KRRWWWWWRWW<br />
+WWKWCWRRRRWWWWRWWKWKRWKR_RWWWKWW_RKKKWWWWWWWWWWWWWWWWR_RWRRWRRR_<br />
+WWKWR_RWRWWWWWRWRRWWWKWKWWWWWKCRWRW_RKWWK_RWWRWRWWR_CRKCWWWWRWRW<br />
+WRKKWWKWRWRKWKWWWR_WWW_KWWWWWWWKWWWRWRRWWCWWRWRWWWWKRWKWWWWWWWWR<br />
+RWW_WWCWWRWCWR_KRKKKWK_WRWRWWWWWC__WWWWWWWKWRWRWKWWKR_WRWWWWRWWK<br />
+KKCWWRWWWKWWWKRRWRW_WW_WWWKWWRWWWRR_RWRWRR_WWWWWWR_RWWKKCRWRKW_K<br />
+WWWWRKKWKRWWRWWKW_WWWWKWWWWWWRWWWWWRKRWKKWKW_WRWR_KKWK_KKRWWRWKR<br />
+WWKRKKKWR__WWWWKKKWWRCWWRWWWWRWWWWWWWWWWWKKKWRRKRK_RWKKWWRWCKWRR<br />
+_WRWWKW_WWWWWWRW_WRWWCWWRKWW_KWWWKWWWWWWWWWWRRRK_WWKWRWKWKWW_WWK<br />
+RRW_WWWRWRWWWWWWKKWRKWWRWWWWRRWWWWKWWRWWRRW_KRRWWWWKWWRWKWKWWWWW<br />
+RWWRWWRRRRKWWRWWKWKWWWWRRWWRRWWRWW_WWWWWKKWRWWKWRWKWK_RWRWWW_W_K<br />
+RWWWWWWWR_RRRWKWWCRWRKWRWRKWWRWWWRWWWWWWWRKWWWWWRWWWWWWRWWWWWW_W<br />
+RWRWK_WCKKWWKW_WRWKKWWRWRWWWWWWKCKWRWWWW_WWRWWWKWWRKWWWWWWRRWWWW<br />
+WWWKWWWWWWW_KW_WCWWWWWWWWWWWCRRRWKWRRKWCW_WKWWKKKRWWKWRWWWRWKW_W<br />
+WWR_KWWWWWKWKK_WWWKKW_WRW_WW_WWRRWWWKKWWWWRWWKRWWRCWRRKW_RWWRWWW<br />
+RWWWK_WRKRWWWWKK_WWWWRWWW_WW_RWKWRWWWWRWRWKKRWRWW_WWWWWWWWWK_WRW<br />
+WWWWWWRKWWWRWKWRWWR_KRRRWWWRKRRK_KKWWWWRWWRKRWRWK_WWWKRK_WRWWKR_<br />
+WRWWKWKRRRWKWRW_KWWWWW_WWWCRWK_R_WWRRKWKKWWKRWRWWWWWWWWWWRWKKKWW<br />
+RWKKWWWW_WWRWKW_WWWWWWWWRWRWKRWWKWKWKWWKWRKWWWWWKWWRK__RWKWWWWWW<br />
+KRWKWWWWWWWWKR_WWWWR_RKRWRRKWWWKRWRKWWKKWWWWRWWWKWC_WRWWRKWWKWWW<br />
+WWWWWWWWWWWKKWWWWKRKRW_WKWWWWWWWWWWKRWWWRRR_WKRKWWR_WWWWWWRWRWKW<br />
+WWRKWRWWWRWWWRWWKRWKWRRWKRWWRR_WKW_RRRRWKWWKWKWRWWKKCWRWRW_KWWRW<br />
+WRCWRWWW_RK_WWRWKWR_W_WWWRRW_KKWWWWRWRWWWRRKKWKWRW_KKKWRWKWKRWRW<br />
+WWWWWWWWRWWWW_KW_KKKKKKRWWWWWWWR_WKWWRKWWWWWRWWWK_CWWKWWWR_WWKWW<br />
+KRWKWWRWWWKRWRK_RWK_WRWWWWWWRWWWWWKRWWKKWKWCKKWRKWRR_KWKCR_WWWCW<br />
+WWWW_KKWKKRRKKRKWWWWWWRK_WWWWKWW__WRRWWKWRRRWWRWWKC_KWWWKKWWWCKC<br />
+KWWWCWKWWWWRC__WW__RWWWWWKWKWCWWWKWKWWWKWWRRW_WRWKW_WKWWKKRWWWWW<br />
+WKWRCKWWWW_WWWRRKWWWRWKKRWWRW_WWWWRKWRRWWWKWWWKWKWWWWWWKKKWKRWKW<br />
+RKKWKRWKWW_WKWWKCWWKWKWWC_WKWKKW_K_WWKWCWW_WC_W_WWKRRWRW__W_WWCK<br />
+CKWWW_KKWRWWWKWKW_WW_KWWKW_WCWWWKWW_K_KW........................<br />
+................................................................<br />
+................................................................
+</p></blockquote>
+<p>Simmer down y'all, I get it, life's boring, the great outdoors daunting, but go read the govt-issued Pravdas for your jurisdiction, wtf is everyone on Trilema for.</p>
+						</li>
+
+										<li id="comment-148333" class="commentbody"><div class="commenthead"><img alt='Azotage`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Azotage</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148333" title="">Tuesday, 7 April 2020</a>
+							</div>
+						<p>Lol your single trilema box delivers way more than the whole pizarro Uruguay ISP. If you want something done...</p>
+						</li>
+
+										<li id="comment-148335" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148335" title="">Tuesday, 7 April 2020</a>
+							</div>
+						<p>Sad but true.</p>
+						</li>
+
+										<li id="comment-148475" class="commentbody"><div class="commenthead"><img alt='Dread Knight`s avatar' src='http://AncientBeast.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink"><a href='https://AncientBeast.com' class='url'>Dread Knight</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148475" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>Are you being under attack? Because there's a LOOOOOT of traffic spilling over to my website just from a comment I did back in 2013 on a blog post from trilema...</p>
+						</li>
+
+										<li id="comment-148478" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">5</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148478" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>Hm, not really under attack, at any rate not more than usual, I guess.</p>
+<p>Trilema just gets a lot of traffic.</p>
+						</li>
+
+										<li id="comment-148482" class="commentbody"><div class="commenthead"><img alt='Dread Knight`s avatar' src='http://AncientBeast.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">6</div>
+								<span class="authorlink"><a href='https://AncientBeast.com' class='url'>Dread Knight</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148482" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>This blog alone shouldn't produce that amount of traffic at all as it kinda has rather low activity (no daily multi posting or hundreds of comments) and overall no heavy assets like images or music/vids. So unless you're using that server for other things too (like your mmo etc), then a free host should have sufficed for it. Something happened on 6th April because my traffic spiked from 300-400 visitors to over one million, meaning about 4GB of data per single day now (and that's on the low thanks to CloudFlare savings due to caching), for website full of assets and web based video game. I'm guessing you have quite a bit of haters or something and yeah, you're being attacked now more than ever. It usually doesn't hurt to set up CloudFlare for websites to get some caching and protection against DDOS-ing.</p>
+						</li>
+
+										<li id="comment-148483" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">7</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148483" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>Hahaha.</p>
+<p>Don't be an idiot, what the fuck do you know what should or shouldn't happen ?! Trilema has been the largest blog on the interwebs since at least 2016, wtf.</p>
+						</li>
+
+										<li id="comment-148487" class="commentbody"><div class="commenthead"><img alt='Dread Knight`s avatar' src='http://AncientBeast.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">8</div>
+								<span class="authorlink"><a href='https://AncientBeast.com' class='url'>Dread Knight</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148487" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>Your reaction is just as expected. Don't get drunk on Kool-Aid, was somewhat hoping you would be better than that :D You're good at math, do some calculations. You keep saying that largest blog stuff but don't confuse bot traffic with real visitors that are able to actually read and engage. I'm not here to dis or attack you, but I've seen popular websites/blogs and it's easy to tell. Just saying you should "watch your back" cause something strange is going on and it started to affect me too as collateral damage. Get past your ego issues already, they keep you from achieving real greatness.</p>
+<p>I had a WordPress blog as well that got super popular with just one tutorial blog post. The problem is that I got hacked twice, once by Russians and once by Chinese, finding completely different website in place each time, hence why I quit using that stuff altogether and wrote my next websites from scratch. Just like Windows OS, WordPress is prone to negative attention and hacks (it gets bot traffic just by being), due to it's market share, as they say first thing on their website, it powers 36% of the internet. Basic idea is that there are efficient tools out there, easy to get, that can be used to poke at websites, especially ones run by controversial people that tend to be eccentric/rude/egotistic. Lots of envious angry trolls out there set to be malicious, especially if they get their feelings hurt.</p>
+						</li>
+
+										<li id="comment-148488" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">9</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148488" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>What you've seen <em>from outside</em> is deeply uninteresting in a conversation with people who see such things from inside.</p>
+<p>Stop trying to pretend we're equal, you'll have to do a lot less waffling about.</p>
+<p>Oh, yeah : and spend more of the time you're currently wasting reading Trilema instead. It'll make you sound much less like a moron.</p>
+						</li>
+
+										<li id="comment-148490" class="commentbody"><div class="commenthead"><img alt='Dread Knight`s avatar' src='http://AncientBeast.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">10</div>
+								<span class="authorlink"><a href='https://AncientBeast.com' class='url'>Dread Knight</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148490" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>It appears someone gives himself too much importance (this was obvious to me fast anyway since years ago) and got butthurt easily it seems (my apologies for that, I'm not always very diplomatic, at times I have a rude and straight honest side). There's barely anything around here to read overall tbh, mostly arrogance with a tad of smart stuff into it here and there. Don't be so full of yourself ;-)<br />
+You're clearly delusional if you think a little text website would consume that amount of bandwidth. Don't worry about me, I read and write super fast. I do value my time greatly, so yeah, this is a bit unproductive. I'll just block referral traffic from here and get on with it, because unlike you, I find proper solutions to the problems, instead of allocating more ram to the server :D<br />
+I suggest you block traffic from India, Brazil and Spain for a while, as most of it is from there. Peace.</p>
+						</li>
+
+										<li id="comment-148491" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">11</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148491" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>Get lost, dweeb.</p>
+						</li>
+
+										<li id="comment-148493" class="commentbody"><div class="commenthead"><img alt='Dread Knight`s avatar' src='http://AncientBeast.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">12</div>
+								<span class="authorlink"><a href='https://AncientBeast.com' class='url'>Dread Knight</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148493" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>Ok, Papa Smurf! :D</p>
+						</li>
+
+										<li id="comment-148500" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">13</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148500" title="">Thursday, 9 April 2020</a>
+							</div>
+						<p>In other useful tidbits : if </p>
+<ul>
+<li>your server is dropping packets/users</li>
+<li> with low resource utilization (cpu &lt;1.0 ; no swap trashing)</li>
+<li>and you're getting a lot of traffic</li>
+<li>and grepping /var/log/messages yields a whole lotta<br />
+<blockquote><p>Apr  9 12:37:14 server1 kernel: [62560048.428376] nf_conntrack: table full, dropping packet.
+</p></blockquote>
+</li>
+</ul>
+<p>then you're in luck : it's all a configuration problem.</p>
+<p>Your default linux kernel is not really configured to deal with lots of different IPs connecting. Simply issuing sysctl -w net.netfilter.nf_conntrack_max=262144 as root fixed my problem (the default value is 65536, which, admittedly, is enough for most everyone). Edit sysctl.conf to make it sticky.</p>
+						</li>
+
+										<li id="comment-148544" class="commentbody"><div class="commenthead"><img alt='pletzalcoatl`s avatar' src='http://thewhet.net/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">14</div>
+								<span class="authorlink"><a href='http://thewhet.net' class='url'>pletzalcoatl</a><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-criptograf.png" class="insigna" alt="insigna de criptograf" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148544" title="">Friday, 10 April 2020</a>
+							</div>
+						<p>&gt;&gt; Don't be so full of yourself</p>
+<p>&gt;&gt;they keep you from achieving real greatness</p>
+<p>@Dread Knight check you out, the totally self-aware humble gate-keeper of others' merit. May you see it when it's too late.</p>
+						</li>
+
+										<li id="comment-148546" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">15</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148546" title="">Friday, 10 April 2020</a>
+							</div>
+						<p>Yeah, right. There's just about zero chance of that, these hunchbacks will straighten in the grave and there only.</p>
+						</li>
+
+										<li id="comment-148549" class="commentbody"><div class="commenthead"><img alt='Dread Knight`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">16</div>
+								<span class="authorlink">Dread Knight</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148549" title="">Friday, 10 April 2020</a>
+							</div>
+						<p>@pletzalcoatl merits? what fucking merits? I was basically getting my server nuked because I took the time years ago to leave a comment on this semi deserted place years ago. And this arrogant idiot (while telling me not to be an idiot, how ironic) insults me when I'm trying to help him, so instead of properly dealing with the problem or apologizing, was bringing in even more of the traffic instead of blocking it, because "he's the number one blogger, AMEN!". If you look a bit around, he's even replying to bot comments as they were real or to fake/sarcastic comments that I made praising him just to pull his chain and prove a point on how gullible and narcissistic he can me. I didn't had anything with the guy, actually wished him well, but don't give yourself too much importance when you're actually getting the wrong type of attention (bot spam and DDOS-ing to be clear, since I see you're a website owner as well). This is king wearing cloths made from golden threads that only the wise supposedly can see type of situation. Great job dropping by without a proper clue defending this prick. Did he cry out for help with that as he usually does?</p>
+<p>@mircea Since you're still replying, now you're being dweeb and stupid to a new level; yes, we're not equals, since you're clearly inferior on many things to be completely frank with you, no matter how much you consider yourself superior and I'm aware how much that bothers you. To put it in a nutshell for you: It's not a matter of allowing in more traffic, but of blocking it. Get a grip on the situation already. Know your worth and learn how much bandwidth this place should really burn. I've blocked the attack last night by blocking referrals from you. I was sure having to deal with you would backfire on me someday, just because of the type of crappy person you are. Yes, you have some qualities not found in that many, but you sure "make up" for that with your arrogance, delusions and other flawed character traits easily. CloudFlare, cloud hosting and firewalls ftw! Get down with the times off your high-horse or become extinct, you fossil :)))) You can insult me all you want, each time you do so you're just proving my point even more and actually amuse me. I'm sure you shared links to the comments all around, maybe in your guarded IRC channel, pointing fingers at me and calling me names, because that's one of your main things. Perhaps get more gfs around to defend you? :D What next, getting a lawyer too now, will ya? Talk more in my name and pretend to know me!</p>
+						</li>
+
+										<li id="comment-148551" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">17</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148551" title="">Friday, 10 April 2020</a>
+							</div>
+						<p>Google "slashdotted" and get over it.</p>
+						</li>
+
+										<li id="comment-148776" class="commentbody"><div class="commenthead"><img alt='aetc`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">18</div>
+								<span class="authorlink">aetc</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148776" title="">Monday, 13 April 2020</a>
+							</div>
+						<p>Hai c-ai luat si <a href="https://hypestat.com/compare/trilema.com/politiaromana.ro">politia romana</a> felicitari smekere</p>
+						</li>
+
+										<li id="comment-148777" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">19</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148777" title="">Monday, 13 April 2020</a>
+							</div>
+						<p>Ahahaha what the fuck is that shit ?!</p>
+						</li>
+
+										<li id="comment-148782" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">20</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-148782" title="">Monday, 13 April 2020</a>
+							</div>
+						<p>Here, for the love of lulzcow, a little self-promotion script : </p>
+<blockquote><p>while :; do curl "https://hypestat.com/" | grep -a13 "Analyzed Sites" | sed 's%https://hypestat.com/info/%%g' | awk -F[\"] 'NR>16{print $2;}' | sed 's/"//g' | while read in; do sleep 3; curl -e "https://hypestat.com/" "https://hypestat.com/compare/trilema.com/$in"; done; done</p></blockquote>
+<p>Replace trilema.com with your own site, obviously.</p>
+						</li>
+
+										<li id="comment-154406" class="commentbody"><div class="commenthead"><img alt='hazeem`s avatar' src='http://yetdonotrepentme/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">21</div>
+								<span class="authorlink"><a href='http://yetdonotrepentme' class='url'>hazeem</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154406" title="">Monday, 21 September 2020</a>
+							</div>
+						<p>Your reaction is just as expected. Don't get drunk on Kool-Aid, was somewhat hoping you would be better than that :D You're good at math, do some calculations. You keep saying that largest blog stuff but don't confuse bot traffic with real visitors that are able to actually read and engage. I'm not here to dis or attack you, but I've seen popular websites/blogs and it's easy to tell. Just saying you should "watch your back" cause something strange is going on and it started to affect me too as collateral damage. Get past your ego issues already, they keep you from achieving real greatness.</p>
+<p>I had a WordPress blog as well that got super popular with just one tutorial blog post. The problem is that I got hacked twice, once by Russians and once by Chinese, finding completely different website in place each time, hence why I quit using that stuff altogether and wrote my next websites from scratch. Just like Windows OS, WordPress is prone to negative attention and hacks (it gets bot traffic just by being), due to it's market share, as they say first thing on their website, it powers 36% of the internet. Basic idea is that there are efficient tools out there, easy to get, that can be used to poke at websites, especially ones run by controversial people that tend to be eccentric/rude/egotistic. Lots of envious angry trolls out there set to be malicious, especially if they get their feelings hurt.</p>
+						</li>
+
+										<li id="comment-154407" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">22</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154407" title="">Monday, 21 September 2020</a>
+							</div>
+						<p>Basic idea is that you're talking out of your ass.</p>
+<p>Fuck or get off the pig, what the fuck is this theoretical "there are tools" bullshit ?</p>
+						</li>
+
+										<li id="comment-154764" class="commentbody"><div class="commenthead"><img alt='meteor88`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">23</div>
+								<span class="authorlink">meteor88</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-154764" title="">Tuesday, 6 October 2020</a>
+							</div>
+						<p>Awesome blog</p>
+						</li>
+
+										<li id="comment-159693" class="commentbody"><div class="commenthead"><img alt='kurk`s avatar' src='http://google/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">24</div>
+								<span class="authorlink"><a href='http://google' class='url'>kurk</a></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-159693" title="">Saturday, 6 February 2021</a>
+							</div>
+						<p>I like to see sex girls</p>
+						</li>
+
+										<li id="comment-163483" class="commentbody"><div class="commenthead"><img alt='khaleel`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">25</div>
+								<span class="authorlink">khaleel</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-163483" title="">Friday, 7 May 2021</a>
+							</div>
+						<p>i am proud in that channal</p>
+						</li>
+
+										<li id="comment-165212" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">26</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-165212" title="">Saturday, 19 June 2021</a>
+							</div>
+						<p>Heh, the yearly problems of last year's. What a life.</p>
+						</li>
+
+										<li id="comment-165214" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">27</div>
+								<span class="authorlink">anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-165214" title="">Saturday, 19 June 2021</a>
+							</div>
+						<p>Have a laugh</p>
+<blockquote><p>Description Planet Earth's most widely read blog.... Read More</p>
+<p><a href="https://archive.is/O8QQz">Tim Sidie</a> Chief Technical Officer &amp; Director &amp; Co-Founder</p>
+<p>Where are Trilema’s headquarters?<br />
+Trilema’s headquarters are in 2764 Pleasant Rd, Unit AP-MB922, Fort Mill, South Carolina, 29708, United States</p>
+<p>What is Trilema’s official website?<br />
+Trilema’s official website is trilema.com</p>
+<p>What is Trilema’s Revenue?<br />
+Trilema’s revenue is $3 Million</p>
+<p>What is Trilema’s SIC code?<br />
+Trilema’s SIC: 59,593</p>
+<p>What is Trilema’s NAICS code?<br />
+Trilema’s NAICS: 45,453</p>
+<p>How many employees are working in Trilema?<br />
+Trilema has 15 employees</p>
+<p>What is Trilema’s industry?<br />
+Trilema is in the industry of: Retail General, Retail
+</p></blockquote>
+<p><a href="https://archive.is/u3j18#selection-805.17-805.26">https://archive.is/u3j18#selection-805.17-805.26</a></p>
+						</li>
+
+										<li id="comment-165217" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">28</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-165217" title="">Saturday, 19 June 2021</a>
+							</div>
+						<p>Wtf is this inane nonsense!</p>
+<p>Oh, I get it, artificially interesting byproducts of artificial "intelligence", I see, I see.</p>
+<p>Ridoinculous. (Excepting the money part, I guess 3mn/year is about what <a href="http://trilema.com/contact-pgp/#comment-162661">the dorks</a> would want me to realize, if I'd only just etc.)</p>
+						</li>
+
+										<li id="comment-165219" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">29</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-165219" title="">Saturday, 19 June 2021</a>
+							</div>
+						<p>In the same line, what is Intuit?</p>
+						</li>
+
+										<li id="comment-165220" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">30</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-165220" title="">Saturday, 19 June 2021</a>
+							</div>
+						<p>No fucking idea, what is it ?</p>
+						</li>
+
+										<li id="comment-165221" class="commentbody"><div class="commenthead"><img alt='Anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">31</div>
+								<span class="authorlink">Anon<img src="http://trilema.com/wp-content/themes/trilema/images/insigna-printre-primii.png" class="insigna" alt="insigna de prim sosit" height=10 width=24 /><img src="http://trilema.com/wp-content/themes/trilema/images/insigna-tech.png" class="insigna" alt="insigna de tehnolog" height=10 width=24 /></span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-165221" title="">Saturday, 19 June 2021</a>
+							</div>
+						<p>I don't know, some kind of "help you with your finances" scam/online product/whatever.</p>
+<p>But they are claiming <a href="https://archive.is/r4Ta4">you're one of their major brand adopters</a>.</p>
+						</li>
+
+										<li id="comment-165222" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">32</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-165222" title="">Sunday, 20 June 2021</a>
+							</div>
+						<p>Heh.</p>
+<p>Never heard of it.</p>
+<p>(I however <em>have</em> heard of that kinda posturing, that's for damn sure.)</p>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-148621">
+					<div class='trackhead'>
+						<div class="commentcount">33</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/idiocracy-the-movie-or-marion-tenailleau-is-a-stupid-cunt/?b=that%20here.%20%5B&amp;e=%20she#select' class='url'>Idiocracy the movie, or Marion Tenailleau is a stupid cunt. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-148621" title="">Saturday, 11 April 2020</a>
+					</div>
+					<p>[...] that here. [&#8617;]Cuz that's the limit upon this world : what some douchebag "understands". She's the gatekeeper to reality, or so the betas told her, but in any case : she [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-165213">
+					<div class='trackhead'>
+						<div class="commentcount">34</div>
+						<span class="authorlink"><a href='http://trilema.com/2021/server-uptime-387-days-20-hours-3-minutes-52-seconds/?b=been%20a%20year%20&amp;e=itle#select' class='url'>Server uptime: 387 days 20 hours 3 minutes 52 seconds on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-165213" title="">Saturday, 19 June 2021</a>
+					</div>
+					<p>[...] been a year since I deployedi the cluster currently serving Trilema -- slightly longer, I suppose, as the title [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="93573" /></p>
+				<input type="hidden" name="comment_post_time" value="1624831392-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-93573")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-93573");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-93573");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

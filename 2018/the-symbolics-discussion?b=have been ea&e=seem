@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>The Symbolics discussion on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">The world’s greatest erotica writer.<br /><a href=http://trilema.com/2019/i-own-erotica-like-zeus-owns-olympus/>By far</a>.
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-79456"><div class="post" id="post-79456">                    <h1><a href="http://trilema.com/2018/the-symbolics-discussion/" rel="bookmark" title="Permanent Link to The Symbolics discussion">The Symbolics discussion</a></h1>                        <div class="date">                                     Monday, 14 May, Year 10 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p style="padding-left: 250px; text-align: right;"><strong>Motto:</strong> anyway, I think I'm going to reprint (and adnotate) the bolix discussion trinque linked, because I fear it's so concise and the language so tense that in a few more years nobody, including myself, will understand what the fuck was being said.</p>
+<p><b>phf</b> mcclim always reminds me of how rms was planning on competing with symbolics by reimplementing everything they had on top of gnu platform.<sup><a href="#footnote_0_79456" id="identifier_0_79456" class="footnote-link footnote-identifier-link" title="This is factually correct, and barely begins to do justice to the personal history of he disaffectionately dubbed `the human mushroom`. As far as my own read of the early history of killer micros stands, Stallman was exactly politruk : an overambitious underachiever who attempted ye olde `crack it two with the hammer to separate the things into something they can stuff in own pockets, and then mount them on their oxcart` wrt emacs, and whose apparent `success` in this colored the entire rest of his career. Ever wondered why `scientists` of the socialist state flavour, much like `politicians` of the same, and much like everything else in that soup specialize ? Ever wonder why the jewelry thief ended up a jewelry thief as opposed to a highway robber or grifter or whatever else `specialization` ? Because yes, it's exactly `the first line in which he had any success at all`.">i</a></sup> that was the goal. only a handful people who actually worked with a genera realize how "special" the result of rms's work was. mcclim's grey athena widget is from-cave attempt at "industry standard" echo of an echo</p>
+<p><b>mircea_popescu</b> why exactly did everyone in the golden lisp era feel such a burning need to compete with each other anyway ? i mean rms, i understand, stray dog mit took in, he'd bark at st peter if st peter came by. but the rest of 'em ?</p>
+<p><b>asciilifeform</b> gnu's confinement ( from poverty ) to 'commodity' (i.e. unix) hardware was a forced 'exile from eden' and the derp response is to postulate 'we're JUST AS GOOD, US TOO!1111' etc. the other idiocies follow from 'we can make roman aqueduct in empty field, and with 0 book-larnin', and it will be Just As Good'.</p>
+<p><b>mircea_popescu</b> yes, though i'm not particularily interested in stallman's moth-eaten brain. there were what, 5 different wanna-be symbolix corps ? commercial lisps ? etc. what sense did any engineer imagine this will make ? seems a lot of [the] retarded one-man-ism that gave the world 5k "airplane inventors" and just as many canvas-made planes that didn't work worth a shit.<sup><a href="#footnote_1_79456" id="identifier_1_79456" class="footnote-link footnote-identifier-link" title="You are aware of the early history of flight, right, back when it was a `the people themselves` affair ?">ii</a></sup></p>
+<p><b>asciilifeform</b> most of the subj of thread is post-rms. iirc there were 3 mit licensees :  symbolics, lmi, and ti. strangely, even though ti was a megacorp already at the time, their offering was the least memorable.</p>
+<p><b>BingoBoingo</b> No mystery. They were likely operating from an internal assumption of leadership and thus snore.</p>
+<p><b>mircea_popescu</b> the question of "why the fuck would anyone even bother with a mit '''license'''" we'll leave for some other time.<sup><a href="#footnote_2_79456" id="identifier_2_79456" class="footnote-link footnote-identifier-link" title="It is not an idle question. Consider : I do not bother with random girly's self-notions, let alone her world-notions. Why would you ? Why would anyone ? 
+Oh, oops, did I link http://trilema.com/2017/how-to-deal-with-little-girls/ ? I meant to link http://trilema.com/2014/how-to-deal-with-pseudoscience/ but the way I do it is that I type the first few words in and let trilema's url autocomplete do the rest for me, so it steered me wrong. 
+Well... `wrong`.
+THEY'RE THE SAME FUCKING THING.">iii</a></sup><br />
+<b>asciilifeform</b> describe the hypothetical 'not bothering'. thing was several thou. man-years of gnarly work, it was not repeatable in a garage. (work on multi$million handmade machines, also, not on commodity iron). in fact the piss ui from this thread, clim, franz lisp, whole shebang of barbarian yurts decorated with smashed roman mosaic, were results of later attempt to 'repeat in garage' regardless.</p>
+<p><b>mircea_popescu</b> mit never had a thousand man-years of work, in its entire history to date, counting all the departments.</p>
+<p><b>asciilifeform</b> ai lab strictly. it was the beginning and immediately the end of the 'interesting' mit.</p>
+<p><b>mircea_popescu</b> right. and if it were an actual man-year of work it'd be a wonder. ie, a dozen people "worked" in the us sense<sup><a href="#footnote_3_79456" id="identifier_3_79456" class="footnote-link footnote-identifier-link" title="No, 1500 or so hours a year do not make `a year`, and especially not the sorts of hours they do.">iv</a></sup> for 18 months.</p>
+<p><b>asciilifeform</b> mno.</p>
+<p><b>mircea_popescu</b> blow me away.</p>
+<p><b>asciilifeform</b> i read the released cadr schematics. and the source. it was genuinely 1000+ man-year of genuine work. ever built wire-wrap anything ? picture ten tonnes of it. and quite reasonably minimal, even.</p>
+<p><b>mircea_popescu</b> this argument will not prevail, because again, mit never paid that many hours.</p>
+<p><b>asciilifeform</b> most of the hours were worked unpaid, by slaves.</p>
+<p><b>mircea_popescu</b> mit also never had this many useful slaves.</p>
+<p><b>asciilifeform</b> again it wasn't 'mit', it was 'mit's ai lab', wholly - at the time - unique assemblage. if mircea_popescu already postulated a conclusion in his head, and doesn't actually give half a fuck about facts<sup><a href="#footnote_4_79456" id="identifier_4_79456" class="footnote-link footnote-identifier-link" title="Item lived 1963 to 2003 as `Project MAC`. If we agree he didn't mean `CSAIL` by it, MAC was launched on a $2mn grant of DARPA's, and led by Robert Fano (And it was called a `project` to get that sweet sweet unpaid slave work, yes, were it called a `laboratory` it'd have worked differently ; and yes the whole `thousand eyes` expectations about the internet and human collaboration were based on linear extension of the experience of that early cvasi-internet but rather-republic, and so on).
+If you don't count a coupla PDP-6s and a PDP-10 in the costs, and if you gleefully ignore HOW government grants are used (check out Samuel Clemens sometime, he explains it for you) you may come to different conclusions ; but otherwise that grant did in fact pay for just about 18 months' worth of work. These are the facts.">v</a></sup>, i will not bother with this thread. 1970s mit ai lab != modern mit just as 1850s usg ain't today's.</p>
+<p><b>mircea_popescu</b> and the problem of "slaves" and "work" is very interestingly repeating. so : if you count all the receptionists in the "work" you're getting an obviously diluted figure. if this were how work worked, i could build spaceship by hiring 1mn chickens/hair stylists in argentina. evidently, argentina isn't building any spaceships.</p>
+<p><b>asciilifeform</b> 0 receptionists. </p>
+<p><b>mircea_popescu</b> slaves, idem. if you count every nigger at mit, derping about "we're one, man" and "i should have money anyway" then yes you get the figures, but if you count THAT as slavery god help you.</p>
+<p><b>asciilifeform</b> it was this club where they let the brightest undergrads burn their lives for 0 pay to build interesting hw.<br />
+<b>mircea_popescu</b> asciilifeform this item did not physically exist. dozen people eighteen months. thatssit. where's the 500 undergrads ~actually~ working for decades ?<sup><a href="#footnote_5_79456" id="identifier_5_79456" class="footnote-link footnote-identifier-link" title="The substance of this disagreement may not even have been evident to him at the time, but the broad point I am (unstatedly) making is that if he'll countenance linear extrapolations from those early, narrowly confined situations, I'm going to return the favour by doing linear extrapolations from today into the narrowly confined situation. Because might as well, neh ?
+In point of fact, the mythical `brightest undergrads burn their lives for 0 pay to build interesting hw` exist the same place `the internet unleashed a new era of intellectual productivity by reducing the barriers to collaboration` bla bla exists : Malleus, and there only.">vi</a></sup></p>
+<p><b>asciilifeform</b> decade. at the ai lab.</p>
+<p><b>mircea_popescu</b> have you seen the premises ? not physically possible to host 100 people working there, let alone 500 wtf.</p>
+<p><b>asciilifeform</b> most of the heavy lifting was done by a dozen or so people, however. (david moon, richard greenblatt, tom knight, buncha smaller ones )</p>
+<p><b>mircea_popescu</b> dozenpeopleeighteenmonths!!!</p>
+<p><b>phf</b> asciilifeform clim fwiw predates micro exodus. was, like common lisp, an attempt by the three vendors to make a unified gui foundation. you can still see scarring in genera where they started transitioning to clim apps from their flavors.<sup><a href="#footnote_6_79456" id="identifier_6_79456" class="footnote-link footnote-identifier-link" title="I entirely agree with this view. Both clim and cl principally stand as misdirected attempts to construct a foundation of meaning outside of absent authority,... at which juncture, permit me to recount an anecdote. I said once that `I've no further patience for this crap (we were watching a film, maybe), the endless disputes of two subbies arguing to establish who should top for the evening`. One particular slavegirl took the expression to heart, and launched a vast personal research project of reviewing different sources (mostly, online communities, like say reddit's relationship advice open mic column) under this light. She shares tidbits occasionally, but universally it is the same thing over and over again : `jesus christ, that is exactly their problem`, repeated ad nauseam &#038; infinitum qs in varying `flavourings`.
+Because it's a thing, what!">vii</a></sup></p>
+<p><b>mircea_popescu</b> NOW -- the question is why did this fucktarded dozen decide the best thing to do is make 3-6-howevermany "Competing" entitites.</p>
+<p><b>phf</b> actually that's the same (i assume rhetorical) question rms was asking</p>
+<p><b>asciilifeform</b> iirc rms really hated noftsker, for some reason</p>
+<p><b>mircea_popescu</b> mno. his question was "why do these 12 people not see the glory of socialism and dedicate their lives to making every receptionist live in luxury she can't pay for".<sup><a href="#footnote_7_79456" id="identifier_7_79456" class="footnote-link footnote-identifier-link" title="Very much RMS's disagreements with other `insiders` can universally be interpreted as well as unerringly predicted on a strict structure of `they're not sufficiently Trotskyst`.">viii</a></sup> why such rotten bullshit would get a flat no in return is directly obvious.</p>
+<p><b>asciilifeform</b> ( iirc it was because he went 'let us have our king from among our ~own~ number, why this imported viking lord ' ). this was pre-gnu rms, as far as is known -- apolitical.</p>
+<p><b>phf</b> hmm, i always thought his question was a lot more naively childish "why'd did all my friends i had fun with left to do these weird `grownup` things".</p>
+<p><b>mircea_popescu</b> of course childish. socialism. that's what it is. the notion that there can be an apolitical something is like the notion that there can be a transparent non menstruating woman etc.<sup><a href="#footnote_8_79456" id="identifier_8_79456" class="footnote-link footnote-identifier-link" title="Arabic fantasies.">ix</a></sup></p>
+<p><b>asciilifeform</b> mircea_popescu rms naively believed (but afaik -- genuinely believed) that one can separate the cutlets from the flies. i.e. the experimenters from the receptionists.</p>
+<p><b>mircea_popescu</b> i expect rms did no such thing ; but that he correctly believed that if structured as ~radical~ socialism, socialism may be made to appear palatable to intelligent people<sup><a href="#footnote_9_79456" id="identifier_9_79456" class="footnote-link footnote-identifier-link" title="For as long as it stays -- and dies! -- small, that is.">x</a></sup> ; at any rate more so than the commodified variant. hence all his imbecillities with "log scale for music payments by downloads" and whatnot other respectable sovietisms.</p>
+<p><b>asciilifeform</b> i have nfi, but must point out that this time was prior to him having written down any such thing.</p>
+<p><b>mircea_popescu</b> she's still a woman even at a time prior to having foaled.</p>
+<p><b>asciilifeform</b> and pre- him receiving the socialist prizes etc. pre-gnu. he was just another d00d in those times.</p>
+<p><b>mircea_popescu</b> i don't think there is any such thing [as just a dood]. i also do not think one can become a socialist. they're all born this way. it's braindamage, basically.</p>
+<p><b>asciilifeform</b> i don't buy this 'was always a trotskyist<sup><a href="#footnote_10_79456" id="identifier_10_79456" class="footnote-link footnote-identifier-link" title="See, I didn't use the word, albeit it very much is the correct word, as illustrated by the footnotes ; that he followed my trees and selected the correct categories is a standing ovation to both his culture and his intelligence ; but memory being the fragmentary device that it is, I fear this feat may have been eaten by moths over time ; so we get this article instead.">xi</a></sup>, from baby' thing. not everyone is born in his particular mental dead end.</p>
+<p><b>mircea_popescu</b> all kids appear healthy, but the brains of a precious few are defective, and as aging exposes them to the challenge of correct diversification, it turns out they ~were all along~ schizophrenic. i currently find the notion persuasive. jane and jennifer are both interchangeable as 3 yos, but as they progress to age 23 it becomes apparent jeniffer just never had the tits in her and so... she's... you know, "modest". and has "morals". and all the rest of the bullshit. because if i make them strip, jane's DD look better than jen's A-.</p>
+<p><b>asciilifeform</b> mircea_popescu never met a 'modest'+tits ?</p>
+<p><b>mircea_popescu</b> asciilifeform shellshocked, yes.<sup><a href="#footnote_11_79456" id="identifier_11_79456" class="footnote-link footnote-identifier-link" title="Recall the story of that wedding ? Or that other one about the chick that I had to have a doctor scare out of anorexia which I seem to have momentarily misplaced. I expect there's more, really, because overwhelming attention is a problem, especially for young women.">xii</a></sup> (ie, little jane stuck too early with too much male attention she doesn't know how to handle (in no small part because her mom's a retarded jen and had not the sense to have sisters etc) will grow defensive. but it's to my eyes rather a different strand. quite evidently so : she's immodest in private.) anyway, to take the thing back to rms and friends : socialism is not a political choice, it's a psychological defense. it expresses itself in fundamentally defective individuals. 'tis what it is.</p>
+<p><b>asciilifeform</b> is this observation or postulation ?</p>
+<p><b>mircea_popescu</b> it's my current mental model. now, obviously other than the people who ~are made of~ shit, you can also have people covered in shit. these, however, can wash. even if they're not necessarily distinguishable on superficial examination -- put the firehose on them and you'll presently find out. which'd be ~why~ specific republican artefacts (above approximated as firehose) result in the "educational split"<sup><a href="#footnote_12_79456" id="identifier_12_79456" class="footnote-link footnote-identifier-link" title="Ie, some thrive, some don't.">xiii</a></sup> so to speak.</p>
+<p><b>asciilifeform</b> could just as easily say 'left-handedness expresses itself in fundamentally defective individuals'</p>
+<p><b>mircea_popescu</b> could, yes. but more appropriately i think you could say "cowardice expresses itself in fundamentally defective individuals, as well as in those who spend too much time in cowards' company".</p>
+<p><b>asciilifeform</b> distinguish, for my education, 'socialism', from how the spartans lived. (they -- also -- 'cowardice' ? )</p>
+<p><b>mircea_popescu</b> socialism is the proposal that the problems of individuals will be addressed by the group. the spartans made no allowance for the problems of individuals. they were interested in resolving the problems of the group, mostly in the shape of not getting wiped by the parthians. but anyway, thinking about it, it'd seem to me the only possible explanation of http://btcbase.org/log/2017-04-09#1641002<sup><a href="#footnote_13_79456" id="identifier_13_79456" class="footnote-link footnote-identifier-link" title="`mircea_popescu NOW -- the question is why did this fucktarded dozen decide the best thing to do is make 3-6-howevermany `Competing` entitites.`">xiv</a></sup> is that the golden dozen lacked ~any conception whatsoever~ of the enmity of mit. like dodo birds, went happily to the necessary eventual slaughter because failed to perceive usg must be destroyed not ignored. in a field arbitrarily (and perhaps not exactly accidentally) limited in this manner<sup><a href="#footnote_14_79456" id="identifier_14_79456" class="footnote-link footnote-identifier-link" title="Something more recently referred to as the problems of `man alone` ">xv</a></sup>, they cultivated their own aesthetic notions of "competition" among themselves, instead of setting boston on fire.</p>
+<p><b>asciilifeform</b> you could redefine this, if you wanted , as 'problem of individual'</p>
+<p><b>mircea_popescu</b> yes, but you couldn't find petition introduced by hoplite because "life's too hard and i want an ipad". how the fuck they managed to think mit is anything but ~the only thing they must destroy~ is beyond me however. seriously, how the fuck does that work.</p>
+<p><b>asciilifeform</b> pretty sure that, e.g., d. moon, saw 'finally we take this tech private, make an honest corp' as breaking off from mit and whatever socialisms dwelled there</p>
+<p><b>mircea_popescu</b> possibly. why didn't it sell with the rest ?<sup><a href="#footnote_15_79456" id="identifier_15_79456" class="footnote-link footnote-identifier-link" title="The meaning of `selling` here is persuasion.">xvi</a></sup> bitcoin-assets split sold with the rest. why didn't moon's corp ?</p>
+<p><b>asciilifeform</b> i'm speaking of symbolics co</p>
+<p><b>mircea_popescu</b> yes. why didn't everyone follow ? moon was eminently followable.</p>
+<p><b>asciilifeform</b> why there was >1 power in 16th c italy. why not everyone simply in florence, lol. knight (inventor of the machine, and designer/hand-builder of almost all of the early iron) was also 'followable', he ended up at lmi.</p>
+<p><b>mircea_popescu</b> so why the split ? why didn't moon follow knight, then. wtf is going on. [I have] serious trouble digesting this chunk of history.</p>
+<p><b>asciilifeform</b> symbolics co. was actually illustration of mircea_popescu's essay re the hanna barbara cartoon thing, what was the d00d's name. the one who said 'i could sell equally this, or canned fish'.<sup><a href="#footnote_16_79456" id="identifier_16_79456" class="footnote-link footnote-identifier-link" title="The article he has in mind is Fred Quimby and ancient evils.">xvii</a></sup></p>
+<p><b>mircea_popescu</b> !~google fred quimby<br />
+jhvh1: <b>mircea_popescu</b> Fred Quimby - Wikipedia: <https://en.wikipedia.org/wiki/Fred_Quimby>; Fred Quimby - IMDb: <http://www.imdb.com/name/nm0703642/>; Was Chuck Jones better for Tom &#038; Jerry than Fred Quimby ...: <http://www.debate.org/opinions/was-chuck-jones-better-for-tom-and-jerry-than-fred-quimby></p>
+<p><b>asciilifeform</b> him!!</p>
+<p><b>mircea_popescu</b> so your proposition is that engineers are cursed by the gods in that they can't follow each other, gotta follow a different kinda guy and if they don't get lucky to find one will just symbolics all over the place ? why the fuck, what, brains dun work ?</p>
+<p><b>asciilifeform</b> not that noftsker, afaik, was a quimby. but lmi's greenblatt, it seems, was an 'anti-quimby'.</p>
+<p><b>mircea_popescu</b> amusingly, apparently everyone there knew this, too. "he's no captain, he's just a dude with a small penis who figures the world owns him reparations for it, so captaining will work by itself"</p>
+<p><b>asciilifeform</b> the reality, even if mircea_popescu doesn't subscribe to it, is that there may very well be more than two types of people alive, and not simply ubermenschen (exact clones of mircea_popescu , presumably ) and untermenschen ('socialists' or anyone who substantially differs psychologically from mircea_popescu ). may not even be (horror!) coded by penii</p>
+<p><b>mircea_popescu</b> but anyway, leaving this hot coal for a moment<sup><a href="#footnote_17_79456" id="identifier_17_79456" class="footnote-link footnote-identifier-link" title="I do protest that's not an apt summary, and he never addresses it, so we'll let it slide as rhetorical flourish.">xviii</a></sup> -- why the everloving fuck did it take them so long to lose virginity! yes, EVENTUALLY moon "finally we take this tech private". but how fucking unobvious can it be that mit is exactly the equivalent of hymen, there to insulate girl from control of her own cunt ? ~any 16 yo figures out her chief order of business is trashing the damned thing, why's it take moon 50 years ?</p>
+<p><b>asciilifeform</b> the lispm was a quite audacious and expensive project, and very difficult to justify commercially without at least a set of functioning machines and well-developed software.</p>
+<p><b>mircea_popescu</b> why do you have to "justify it commercially".</p>
+<p><b>asciilifeform</b> to get investment ?</p>
+<p><b>mircea_popescu</b> what next, i can't justify my saturday night guest list ~matrimonially~ ?</p>
+<p><b>asciilifeform</b> from where was the money to come ?</p>
+<p><b>mircea_popescu</b> i dun know why you think this is how things work, but allow me to reference a relevant bit of history : http://trilema.com/2012/hai-c-am-mai-gasit-una/ ; is it transparent or should i translate ?</p>
+<p><b>asciilifeform</b> either translate, or summarize ?</p>
+<p><b>mircea_popescu</b> golden age of bitcoin forum invesments, dude did horribly poorly ~on investor's money~. how did the investment come considering there wasn't anything there besides "we'll try to win on execution without a clue or a GED, against people with money and significant entrenchment" ? fuck, HOW is airbnb supposed to be worth 50 bux ? it consists of... nothing. groupon, its exact clone 5 years ago, meanwhile imploded. where did the billions come to make ~that~ particular iteration of nothing whatsoever into "biggest ipo ever!11" investment is entirely divorced from this "justifying commercially" business.</p>
+<p><b>asciilifeform</b> you are comparing bezzletrons, that run on pixie dust, to hw makers, who ran on 100% turkey dollar ? pixie dust dun buy megatonne of ic. not today, not then.</p>
+<p><b>mircea_popescu</b> this is not exactly correct, which is why i linked the article i linked. no bezzle went into that nonsense. still, it collected thousands of btc.<sup><a href="#footnote_18_79456" id="identifier_18_79456" class="footnote-link footnote-identifier-link" title="Which is not printed, but mined, at significant cost.">xix</a></sup> [Besides,] i thought symbolics was mostly hand made originally.</p>
+<p><b>asciilifeform</b> and mmm collected billion $ .</p>
+<p><b>mircea_popescu</b> asciilifeform see ? where did THE INVESTMENT!111 come from!</p>
+<p><b>asciilifeform</b> from bamboozling large crowd of derps with slightly more money than sense each ? yes, some folx are friends with chumpatronicist, or bank robber (stalin et al), who will give them a little dough out of whatever private reason of his own.</p>
+<p><b>mircea_popescu</b> market is not weighing machine to start with. it gets there, but it starts as something else. derping about "justifying commercially" is the EXACT equivalent of not talking to girl for nerd reasons.<sup><a href="#footnote_19_79456" id="identifier_19_79456" class="footnote-link footnote-identifier-link" title="This is a much more important point than meets the eye.
+Understand well what it says : the same people, the same people that don't talk to girls because they've not yet decided if they're going to use one or two light bulbs in the eventual guest bathroom in the eventual house they'll inhabit with her and her eventual spawn also don't talk to `investors` because they've not yet decided something entirely similar.">xx</a></sup></p>
+<p><b>asciilifeform</b> funnily enough lmi, after bankruptcy, was bought by one such. he took its remains to canada, and bamboozled their government for years, pretending to make 'french translator machine'.</p>
+<p><b>mircea_popescu</b> which reiterates the question : ~any 16 yo figures out her chief order of business is trashing the damend thing, why's it take moon 50 years ?</p>
+<p><b>asciilifeform</b> it ended with jail for the 'genius', and junkyard for the iron. all of it.</p>
+<p><b>phf</b> mircea_popescu i think people in question weren't even thinking in terms asciilifeform is using. they are all deep academia, without external guiding force they end up recreating windows interface 10 years too late.<sup><a href="#footnote_20_79456" id="identifier_20_79456" class="footnote-link footnote-identifier-link" title="This is again strictly accurate ; and if you are aware of how eg OpenGL managed to a) thoroughly thrash Directx and then b) utterly and for no reason give away their crown, as well as the knife on the enemy's throat you might start noticing the cucksimilarities.">xxi</a></sup></p>
+<p><b>mircea_popescu</b> phf i saw this too, but what's irking me is WHY. let me retell the history of early computing. 1. a dozen mentally retarded girls were afraid of their own cunts<sup><a href="#footnote_21_79456" id="identifier_21_79456" class="footnote-link footnote-identifier-link" title="The cunt is the creative portion of the female body ; males don't have cunts, but some of them do have heads, which similarily to cunts create new items. It would be naive to expect the difficulty of relation between the female and her own cunt is magically avoided by the male and his own head just because his headlips are horizontal whereas cuntlips are vertical.">xxii</a></sup> ; 2. so much so as to need to be 50 before they'd finally deflower<sup><a href="#footnote_22_79456" id="identifier_22_79456" class="footnote-link footnote-identifier-link" title="Were you ever curious what these folk did in their 20s ?">xxiii</a></sup> ; 3. except they did it in such a manner as to replace the insulatory function of that<sup><a href="#footnote_23_79456" id="identifier_23_79456" class="footnote-link footnote-identifier-link" title="The hymen">xxiv</a></sup> with various other ersatz-hymens created out of material collected in the environment<sup><a href="#footnote_24_79456" id="identifier_24_79456" class="footnote-link footnote-identifier-link" title="Such as a nonsensical notion of them needing MIT for any purpose ; and there being `need to justify` and so on, goange.">xxv</a></sup> ; 4 but because they were mentally retarded no possiblity of meaningful communication was open to them<sup><a href="#footnote_25_79456" id="identifier_25_79456" class="footnote-link footnote-identifier-link" title="So they couldn't get together. Period and full stop, exactly like stupid women try avoiding the best part of a relationship with a male : the other cunts abundant about.">xxvi</a></sup> and so 5. therefore they all ended up with random substitute hymens and that's the last time anyone heard of any of them.</p>
+<p><b>asciilifeform</b> phf i was offering to mircea_popescu that not everyone is born to walk around robbing banks to fund hardware manufacture, or 'burning boston' to extirpate 'socialism', some folks were born to theorems. but mircea_popescu won't have it -- either banks, and burning, or untermenschen, apparently.</p>
+<p><b>mircea_popescu</b> im not sure that's even discussed, here. what theorems are involved in handmaking symbolics gear ?</p>
+<p><b>asciilifeform</b> pretty sure that by the time there was a symbolics -- the handmaking was outsourced.</p>
+<p><b>mircea_popescu</b> [What theorems are involved in making] pre-symbolics gear. [?] anyway, in the above retelling, the 4->5 transition is the coup the grace. they couldn't "follow" each other ~because~, in this view, they were bereft of sufficient bandwith to in any sense communicate.<sup><a href="#footnote_26_79456" id="identifier_26_79456" class="footnote-link footnote-identifier-link" title="A problem shared with socialism, because no, there's no distinguishing one ideal system from another. Because this is how classification works -- things that run into the same problems are the same things, clamor ye all day about how `there's more than two kinds` : not as long as they end up in the same ditch they aren't!">xxvii</a></sup> so they couldn't, like, end up with all the same one substitute cuntcap.</p>
+<p><b>asciilifeform</b> then, quite unlike now, new type of comp had to be made by hand from ttl chips -- few gates each; and connected with semi-reliable wrap wiring. it was quite impossible to offload this to 'brute labour', you had to intimately understand how the thing works in order to debug in any way.</p>
+<p><b>phf</b> pre-symbolics the "theorems" were "how do i computer" in general. those guys weren't playing around with custom fpga in their garage that they failed to sell. they were basically figuring out how to build a von neumann machine that can do things, which they did</p>
+<p><b>mircea_popescu</b> this part is fine. now, why did they fail to a) band together and b) control, deliberately, the product. they did a very strict anti-a and anti-b. why! the only reason mit even exists in this picture is because the dozen was "omfg, we DID figure it out, now quick, find someone TO PROTECT US FROM OUR HAVING FIGURED IT OUT!!1" holy shit who thinks like this and why do they.</p>
+<p><b>asciilifeform</b> my understanding was that greenblatt and noftsker had serious disagreement re how to actually do business. (noftsker favoured external capital, and founded the -- temporarily -- successful symbolics co; greenblatt -- the very soon dead lmi, and believed in 'lift by bootstraps', no external capital.) ti corp was not even part of this game, they did not hire -- afaik -- any of the original designers.</p>
+<p><b>phf</b> jealous wizards, i thought that was an archetype.</p>
+<p><b>mircea_popescu</b> for crying out loud. and the rest just happened to fall into s or lmi randomly as the wind blew ?</p>
+<p><b>asciilifeform</b> not knowing any of them in person, i cannot say why some went with one, and others -- other, and third -- with no one, and into the void. presumably agreed with n, or g, or neither. [but] 'i do not know' != 'randomly'.</p>
+<p><b>mircea_popescu</b> this equality doesn't hold. it's not a matter of "we don't know". we know what the environment constraints are, and we do not care what their internal processing is. if they fail to act rationally they did it randomly. but anyway, leaving this hot coal for a while also, consider THE FUCKING INDIGNITY. you're telling me the dozen was split up by a convenient application of... a socialist marote<sup><a href="#footnote_27_79456" id="identifier_27_79456" class="footnote-link footnote-identifier-link" title="In the direct, a puppet made to scare children ; in the figurative a boogaboo, the sort of notion that manipulates idiots.">xxviii</a></sup> ? same thing sunk lisp as the international ?!<sup><a href="#footnote_28_79456" id="identifier_28_79456" class="footnote-link footnote-identifier-link" title="Consider how ye olde `how much need the devil pay you for you to love him` question : how much does the dodgering, tittering dependopotamus at home have to pay you for you to not go out and hunt with your friends ? How much cake must your own fear bake to deter you from taking your rightful place among your peers ? How much of a cunt need you be to act like one ?!">xxix</a></sup> this fills no one with indignation but me ? it's on the level of "great monk died - syphilis". come da fuck on. have better problems!</p>
+<p><b>asciilifeform</b> if 'act rationally' somehow means 'pick a fuhrer! use haruspex if you gotta!' then none of them 'acted rationally', no.</p>
+<p><b>mircea_popescu</b> in the circumstance ? this isn't a given iyo ? the time for "debates" is when you're installed in power and are preparing to withdraw the power from the plebs. you create a trappings-of-power artefact through the magical working of dialectics, heap it upon them in exchange for the actual thing and move on. that's when you do "disputes". when you're the only twelve guys on monkey island you don't fucking disagree. because there's nothing to disagree ~about~. because there can't be. because monkeys. i dunno, seems like i'm repeating myself.</p>
+<p><b>asciilifeform</b> there is such a thing as an actual dispute.</p>
+<p><b>mircea_popescu</b> give me an example.</p>
+<p><b>asciilifeform</b> let's say for sake of argument that greenblatt was 'the true king.' he had <a href=http://trilema.com/2018/the-republic-without-mp/>no mechanism</a> for somehow forcing the others to come along. so off he went, with subset of the possible participants. the rest -- with someone else.</p>
+<p><b>mircea_popescu</b> except for them being not fucking stupid. the mechanism is -- them not being fucking stupid.</p>
+<p><b>asciilifeform</b> even 40+ yrs later, and to quasi-serious student of the subject, imho it is not clear who -- if anyone -- was 'true king'.</p>
+<p><b>mircea_popescu</b> why is this important ?</p>
+<p><b>asciilifeform</b> what, exactly, were -- in mircea_popescu's view -- these people 'fucking stupid' for having not done ?</p>
+<p><b>phf</b> asciilifeform true king is a later invention, actual process is "choose king amongst yourself", and failure to do so is stupidity<sup><a href="#footnote_29_79456" id="identifier_29_79456" class="footnote-link footnote-identifier-link" title="Most timely intervention, in that it's always pleasant to notice others grasp the point involved.">xxx</a></sup></p>
+<p><b>mircea_popescu</b> asciilifeform indulge me for a moment here. so, would you agree that a specific and specified problem (make a computer!) was actually resolved by a number of people ?</p>
+<p><b>asciilifeform</b> i don't actually see it as resolved, even today. attempted - yes. resolved - no.</p>
+<p><b>mircea_popescu</b> so you don't particularily want symbolix metal, it's just some random thing.</p>
+<p><b>asciilifeform</b> not random, no.</p>
+<p><b>mircea_popescu</b> then gimme something.</p>
+<p><b>asciilifeform</b> picture if we had no jet turbine.</p>
+<p><b>mircea_popescu</b> so then why do you deny ?</p>
+<p><b>asciilifeform</b> say it was tried in ww2, and then not again. bolix box would then be me262. fairly primitive, early attempt, but -- not continued.</p>
+<p><b>mircea_popescu</b> you'll have to pick a door (for the needs of this conversation only)</p>
+<p><b>asciilifeform</b> me262 had quite serious problems, from practical pov. the analogy is not a whim of asciilifeform's, it is quite exact -- what bolix et al did, was a 'stretch' of the tech of the time, quite near its breaking point the trouble is that this is how tech actually advances. early steamboats were expensive deathtraps (boiler explosions were still a quite familiar thing in mark twain's time, even)</p>
+<p><b>mircea_popescu</b> look, there's no crevice here to slither into. either you grant "they did" or else you admit they didn't do anything. pick one.</p>
+<p><b>asciilifeform</b> this dichotomy is a hallucination of mircea_popescu's , and i ain't buying.</p>
+<p><b>mircea_popescu</b> aite, then i guess it can't be explained what the people invovled were stupid for having not done.</p>
+<p><b>asciilifeform</b> they took a serious technological risk - and lost, like dirigible; rather than won, like steamboat.</p>
+<p><b>mircea_popescu</b> you will note however that ~all communication~ rests on hallucination in the sense here contemplated. and we're right back to 4->5.</p>
+<p><b>phf</b> there's only one computer asciilifeform acknowledges as "resolved", and that's the computer built by asciilifeform. i suspect similar dynamic was at the root of smbx/lmi.</p>
+<p><b>asciilifeform</b> a bolix-style machine that -- hypothetically - could have cost-competed with the 'i can't believe it's not butter' state of the art, would imho count as 'resolve'.</p>
+<p><b>mircea_popescu</b> phf im starting to understand the problem though. here it is : engineer will not consider inconvenient problems. NO MATTER WHAT. that is why he's an engineer : because paradigm made him a personal promise.<sup><a href="#footnote_30_79456" id="identifier_30_79456" class="footnote-link footnote-identifier-link" title="Consider `he's a kind of a classical-russian-product and otherwise very seriously 'I have chosen my field specifically so I never encounter practical problems'`, said in a different language by someone not in this conversation about someone not in this conversation. It's a problem, what!
+Incidentally, do you know what splitting is, as the psychiatry term of art ? And what the problems with it are ? And how they naturally extend to all extensions, howsoever cleverly formulated ? Good!">xxxi</a></sup> it's a sort of elective jewry.<sup><a href="#footnote_31_79456" id="identifier_31_79456" class="footnote-link footnote-identifier-link" title="God made them some promises also, allegedly.">xxxii</a></sup></p>
+<p><strong>asciilifeform</strong> it is quite impossible to 'unconsider inconvenient problem' in a thread about bolix, which is in a way a parable re engineers going to the bottom of the sea</p>
+<p><b>mircea_popescu</b> you just did.</p>
+<p><b>asciilifeform</b> my contention is simply that they failed to ~resolve~ their problem , in the sense of achieving item#2 from my http://www.loper-os.org/?p=305 essay. because -- cost.</p>
+<p><b>mircea_popescu</b> but that is not the sense contemplated in context.</p>
+<p><b>asciilifeform</b> let's have expansion re the sense contempated by mircea_popescu then. possibly i'm thick.</p>
+<p><b>mircea_popescu</b> i'm not capable nor interested in specifying. fact remains - a dozen dudes either did something or didn't do something. if they did something we can discuss the history of the thing they did and what it says about them ; otherwise, we can not. and no, it's not an ~exact~ dozen, either.</p>
+<p><b>asciilifeform</b> they built something quite like a proper comp. but were unable to build it economically, or live long enough on 'credit card' to live to see the cheap-enough transistor. (they eventually resorted to 'credit card' and ended up simply making a titanic black hole for entire ~industry~ to fall into, when it finally imploded)</p>
+<p><b>mircea_popescu</b> alright, so then let's continue from there. at the time they did this, the world split. there were the people who built the "something quite like a proper comp", on one side. there were the people who did not so build, on the other side. you see this ?</p>
+<p><b>asciilifeform</b> aha...</p>
+<p><b>mircea_popescu</b> crossed this line -> stupid.</p>
+<p><b>asciilifeform</b> what means to cross this line ?</p>
+<p><b>mircea_popescu</b> Crossing this line means transforming a world which is ontologically constituted as "12 men on a monkey island" into an absurd counter-reality where we're invited to lay bets on either team A (two men and monkeys) or team B (three men and monkeys). It is not permissible, under any circumstances, howsoever manipulated, misrepresented, misstated, what have you, for any man to ever participate in any team that contains even a single monkey for as long as there's a different team with any men in it. The expression is "blood is thicker than water", and what it means is that you will not ever fucking cross the line to go be with the monkeys no matter what the fuck happens and what mommy says about how greatly <a href=http://trilema.com/2018/an-examination-of-conflict/>the monkey fucked her</a>.<sup><a href="#footnote_32_79456" id="identifier_32_79456" class="footnote-link footnote-identifier-link" title="This line was completely reconstructed for this second edition. The original read
+well, on top of a world ontologically constituted as `12 men on monkey island` attempting to construct alternate world hallucinatorily constituted as `men and money teams compete for island special olympics`.
+`who do you think will win, mr 13, the team with two guys and monkeys or the team with three guys and monkeys ?`
+mircea_popescu `i think the whole charade is a sickening display, personally.`
+ which is rather salad-y.">xxxiii</a></sup></p>
+<p><b>asciilifeform</b> the monkeys, as discussed in old thread, could easily win, if there is not enough for men to eat on the island. which imho is what happened. environment could not sustain the man.<sup><a href="#footnote_33_79456" id="identifier_33_79456" class="footnote-link footnote-identifier-link" title="The point of who `wins` is entirely fucking uninteresting in context -- it's infinitely better to die with people than to feast on bananas, which is how Goebbels' kids died. (Not Joseph's -- Magda's!) ">xxxiv</a></sup></p>
+<p><b>mircea_popescu</b> who starved ? other than rms.</p>
+<p><b>asciilifeform</b> nobody starved, but the lispm was abandoned, the way moon rocket was, as a 'neato but sorry, -ev' item. because yes the monkeys could win if not enough to eat, BUT you know this because there's 12 starved men. and when the necessary transistors were finally ~free, they went to tlb cache instead so that winblowz could run 5% faster.</p>
+<p><b>mircea_popescu</b> heh. notrly how this works. but yes i'm aware not being stupid results in a dreary lack of monkey island special olympics participation trophies.</p>
+<p><b>asciilifeform</b> who exactly, in mircea_popescu's model, are the monkeys ?</p>
+<p><b>mircea_popescu</b> everyone else.</p>
+<p><b>asciilifeform</b> ok...</p>
+<p><b>mircea_popescu</b> perelman says so!<sup><a href="#footnote_34_79456" id="identifier_34_79456" class="footnote-link footnote-identifier-link" title="The dood literally said -- take your monkey trophies and give them to some monkey, I'm not one of you nor will become.">xxxv</a></sup></p>
+<p><b>trinque</b> dunno what's hard about the notion that look, you do not get computers until you have both the leadership category and engineering category maxed on your character, and that the folks that "tried" in the first round lost because of deficiency of character</p>
+<p><b>asciilifeform</b> trinque one possibility was 'too many chiefs, not enough indians' (tm). which is sorta opposite, as i understand, to your hypothesis.</p>
+<p><b>mircea_popescu</b> i didn't perceive this cheifdom in the chief characters. mebbe my antennae too blunt, but who ? how ?</p>
+<p><b>asciilifeform</b> self-perceived, this chiefdom. greenblatt thought he could lead. etc</p>
+<p><b>mircea_popescu</b> but he was more or less irrelevant. moon, knight etc. anyway, imo the principal point of the discussion is that knowledge, any knowledge, enacts a partition upon the world. this is the only difference - chucka and man are distinguished not by skin color, not by anything else but the overpowering fact that chuka doesn't know what to do with the <a href="http://trilema.com/forum-logs-for-20-mar-2017#2255539">rtg</a> ; or with pushkin ; or with etcetera. disconsidering this fundamental in any manner opens the chasm of hell, in all its presentation from evil to insanity.</p>
+<p><b>asciilifeform</b> so far i follow the logic..</p>
+<p><b>mircea_popescu</b> asciilifeform there's really no more to it.</p>
+<p>There it is, and there it goes. What can you do ?</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_79456" class="footnote">This is factually correct, and barely begins to do justice to the personal history of he disaffectionately dubbed "the human mushroom". As far as my own read of the early history of killer micros stands, Stallman was exactly politruk : an overambitious underachiever who attempted ye olde "<a href=http://trilema.com/2011/romanul-si-marea/?b=baga%20doua&#038;e=pe%20caruta#select>crack it two with the hammer to separate the things into something they can stuff in own pockets, and then mount them on their oxcart</a>" wrt emacs, and whose apparent "success" in this colored the entire rest of his career. Ever wondered why "scientists" of the socialist state flavour, much like "politicians" of the same, and much like everything else in that soup <em>specialize</em> ? Ever wonder why the jewelry thief ended up a jewelry thief as opposed to a highway robber or grifter or whatever else "specialization" ? Because yes, it's exactly "the first line in which he had any success at all". [<a href="#identifier_0_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_79456" class="footnote">You are aware of the early history of flight, right, back when it was a "<a href=http://trilema.com/2013/stage-n-bitcoin-exists/?b=This%20last&#038;e=care%20less#select>the people themselves</a>" affair ? [<a href="#identifier_1_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_79456" class="footnote">It is not an idle question. Consider : I do not bother with random girly's <a href=http://trilema.com/2018/an-examination-of-conflict/>self-notions</a>, let alone her <a href=http://trilema.com/2017/how-to-deal-with-little-girls/>world-notions</a>. Why would you ? Why would anyone ? </p>
+<p>Oh, oops, did I link http://trilema.com/2017/how-to-deal-with-little-girls/ ? I meant to link http://trilema.com/2014/how-to-deal-with-pseudoscience/ but the way I do it is that I type the first few words in and let trilema's url autocomplete do the rest for me, so it steered me wrong. </p>
+<p>Well... "wrong".</p>
+<p></b>THEY'RE THE SAME FUCKING THING</b>. [<a href="#identifier_2_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_79456" class="footnote">No, 1500 or so hours a year do not make "a year", and especially not <a href=http://trilema.com/2017/global-warming-on-triton/#footnote_0_71308>the sorts of hours they do</a>. [<a href="#identifier_3_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_79456" class="footnote">Item lived 1963 to 2003 as "Project MAC". If we agree he didn't mean "CSAIL" by it, MAC was launched on a $2mn grant of DARPA's, and led by Robert Fano (And it was called a "project" to get that sweet sweet unpaid slave work, yes, were it called a "laboratory" it'd have worked differently ; and yes the whole "thousand eyes" expectations about the internet and human collaboration were based on linear extension of the experience of that early cvasi-internet but rather-republic, and so on).</p>
+<p>If you don't count a coupla PDP-6s and a PDP-10 in the costs, and if you gleefully ignore HOW government grants are used (check out Samuel Clemens sometime, he <a href=http://trilema.com/2018/memoranda-of-congress/>explains</a> it for you) you may come to different conclusions ; but otherwise that grant did in fact pay for just about 18 months' worth of work. These are the facts. [<a href="#identifier_4_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_5_79456" class="footnote">The substance of this disagreement may not even have been evident to him at the time, but the broad point I am (unstatedly) making is that if he'll countenance linear extrapolations from those early, narrowly confined situations, I'm going to return the favour by doing linear extrapolations from today <em>into</em> the narrowly confined situation. Because might as well, neh ?</p>
+<p>In point of fact, the mythical "brightest undergrads burn their lives for 0 pay to build interesting hw" exist the same place "the internet unleashed a new era of intellectual productivity by reducing the barriers to collaboration" bla bla exists : Malleus, and there only. [<a href="#identifier_5_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_6_79456" class="footnote">I entirely agree with this view. Both clim and cl principally stand as misdirected attempts to construct a foundation of meaning outside of absent authority,... at which juncture, permit me to recount an anecdote. I said once that "I've no further patience for this crap (we were watching a film, maybe), the endless disputes of two subbies arguing to establish who should top for the evening". One particular slavegirl took the expression to heart, and launched a vast personal research project of reviewing different sources (mostly, online communities, like say reddit's relationship advice open mic column) under this light. She shares tidbits occasionally, but universally it is the same thing over and over again : "jesus christ, that is exactly their problem", repeated ad nauseam &#038; infinitum qs in varying "flavourings".</p>
+<p>Because it's a thing, what! [<a href="#identifier_6_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_7_79456" class="footnote">Very much RMS's disagreements with other "insiders" can universally be interpreted as well as unerringly predicted on a strict structure of "they're not sufficiently Trotskyst". [<a href="#identifier_7_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_8_79456" class="footnote">Arabic fantasies. [<a href="#identifier_8_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_9_79456" class="footnote">For as long as it stays -- and dies! -- small, that is. [<a href="#identifier_9_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_10_79456" class="footnote">See, <em>I didn't</em> use the word, albeit it very much <em>is</em> the correct word, as illustrated by the footnotes ; that he followed my trees and selected the correct categories is a standing ovation to both his culture and his intelligence ; but memory being the fragmentary device that it is, I fear this feat may <span style="background-color:#d3d3d3" id="select">have been eaten by moths over time ; so we get this article instead. [<a href="#identifier_10_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_11_79456" class="footnote">Recall the story of <a href=http://trilema.com/2011/de-pe-cind-eram-io-mai-tinar/>that wedding</a> ? Or that other one about the chick that I had to have a doctor scare out of anorexia which I seem</span> to have momentarily misplaced. I expect there's more, really, because <a href=http://trilema.com/2009/o-problema-de-atentie/?b=luna%20medie&#038;e=fi%20ea#select>overwhelming attention</a> is a problem, especially for young women. [<a href="#identifier_11_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_12_79456" class="footnote">Ie, some thrive, some don't. [<a href="#identifier_12_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_13_79456" class="footnote">"<b>mircea_popescu</b> NOW -- the question is why did this fucktarded dozen decide the best thing to do is make 3-6-howevermany "Competing" entitites." [<a href="#identifier_13_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_14_79456" class="footnote">Something more recently referred to as the problems of "<a href=http://trilema.com/forum-logs-for-16-apr-2018#2424679>man alone</a>"  [<a href="#identifier_14_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_15_79456" class="footnote">The meaning of "selling" here is persuasion. [<a href="#identifier_15_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_16_79456" class="footnote">The article he has in mind is <a href=http://trilema.com/2014/fred-quimby-and-ancient-evils/>Fred Quimby and ancient evils</a>. [<a href="#identifier_16_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_17_79456" class="footnote">I do protest that's not an apt summary, and he never addresses it, so we'll let it slide as rhetorical flourish. [<a href="#identifier_17_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_18_79456" class="footnote">Which is not printed, but mined, at significant cost. [<a href="#identifier_18_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_19_79456" class="footnote">This is a much more important point than meets the eye.</p>
+<p>Understand well what it says : the same people, <b>the same people</b> that don't talk to girls because they've not yet decided if they're going to use one or two light bulbs in the eventual guest bathroom in the eventual house they'll inhabit with her and her eventual spawn also don't talk to "investors" because they've not yet decided something entirely similar. [<a href="#identifier_19_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_20_79456" class="footnote">This is again strictly accurate ; and if you are aware of how eg OpenGL managed to a) thoroughly thrash Directx and then b) utterly and for no reason give away their crown, as well as the knife on the enemy's throat you might start noticing the cucksimilarities. [<a href="#identifier_20_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_21_79456" class="footnote">The cunt is the creative portion of the female body ; males don't have cunts, but some of them do have heads, which similarily to cunts create new items. It would be naive to expect the difficulty of relation between the female and her own cunt is magically avoided by the male and his own head just because his headlips are horizontal whereas cuntlips are vertical. [<a href="#identifier_21_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_22_79456" class="footnote">Were you ever curious what these folk did in their 20s ? [<a href="#identifier_22_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_23_79456" class="footnote">The hymen [<a href="#identifier_23_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_24_79456" class="footnote">Such as a nonsensical notion of <em>them</em> needing MIT for any purpose ; and there being "need to justify" and so on, <em>goange</em>. [<a href="#identifier_24_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_25_79456" class="footnote">So they couldn't get together. Period and full stop, exactly like stupid women try avoiding the best part of a relationship with a male : <a href=http://trilema.com/2011/erotoghid-pentru-femeia-adulta/?b=Daca%20e%20improbabil&#038;e=se%20dezvolta#select>the other cunts</a> abundant about. [<a href="#identifier_25_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_26_79456" class="footnote">A problem shared with socialism, because no, there's no distinguishing one <a href=http://trilema.com/2014/the-problem-of-ideal-social-systems-reprint/>ideal system</a> from another. Because this is how classification works -- things that run into the same problems are the same things, clamor ye all day about how "there's more than two kinds" : not as long as they end up in the same ditch they aren't! [<a href="#identifier_26_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_27_79456" class="footnote">In the direct, a puppet made to scare children ; in the figurative a boogaboo, the sort of notion that manipulates idiots. [<a href="#identifier_27_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_28_79456" class="footnote">Consider how ye olde "<a href=http://trilema.com/2014/pushing-the-soft-tender-flesh-of-a-friend-against-the-sharp-rotating-blades-of-the-immutable-machine/?b=to%20be%20able&#038;e=of%20need#select>how much need the devil pay you for you to love him</a>" question : how much does the dodgering, tittering dependopotamus at home have to pay you for you to not go out and hunt with your friends ? How much cake must your own fear bake to deter you from taking your rightful place among your peers ? How much of a cunt need you be to act like one ?! [<a href="#identifier_28_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_29_79456" class="footnote">Most timely intervention, in that it's always pleasant to notice others grasp the point involved. [<a href="#identifier_29_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_30_79456" class="footnote">Consider "he's a kind of a classical-russian-product and otherwise very seriously 'I have chosen my field specifically so I never encounter practical problems'", said in a different language by someone not in this conversation about someone not in this conversation. It's a problem, what!</p>
+<p>Incidentally, do you know what splitting is, as the psychiatry term of art ? And what the problems with it are ? And how they naturally extend to all extensions, howsoever cleverly formulated ? Good! [<a href="#identifier_30_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_31_79456" class="footnote">God made them some promises also, allegedly. [<a href="#identifier_31_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_32_79456" class="footnote">This line was completely reconstructed for this second edition. The original read<br />
+<blockquote>well, on top of a world ontologically constituted as "12 men on monkey island" attempting to construct alternate world hallucinatorily constituted as "men and money teams compete for island special olympics".</p>
+<p>"who do you think will win, mr 13, the team with two guys and monkeys or the team with three guys and monkeys ?"<br />
+<b>mircea_popescu</b> "i think the whole charade is a sickening display, personally."</p></blockquote>
+<p> which is rather salad-y. [<a href="#identifier_32_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_33_79456" class="footnote">The point of who "wins" is entirely fucking uninteresting in context -- it's infinitely better to die with people than to feast on bananas, which is how Goebbels' kids died. (Not Joseph's -- Magda's!)  [<a href="#identifier_33_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_34_79456" class="footnote">The dood literally said -- take your monkey trophies and give them to some monkey, I'm not one of you nor will become. [<a href="#identifier_34_79456" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2018/an-examination-of-conflict/">An examination of conflict</a></div>
+                <div class="alignright"><a href="http://trilema.com/2018/gay-bullshit-matador-laberinto-de-pasiones-ley-del-deseo/">Gay Bullshit : Matador, Laberinto de pasiones &#038; Ley del deseo</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2018/the-symbolics-discussion/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2018/the-symbolics-discussion/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>4 Responses</p>
+		
+		<ol class="commentlist">
+					</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-131293">
+					<div class='trackhead'>
+						<div class="commentcount">1</div>
+						<span class="authorlink"><a href='http://qntra.net/2019/09/microsoft-invites-stallman/?b=invit&amp;e=#select' class='url'>Microsoft Invites Stallman | Qntra</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131293" title="">Friday, 6 September 2019</a>
+					</div>
+					<p>[...] invited their longtime antagonist Richard Stallman to address the USG agency after decades of ratcheting have finally aligned their interests [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-131324">
+					<div class='trackhead'>
+						<div class="commentcount">2</div>
+						<span class="authorlink"><a href='http://qntra.net/2019/09/mit-media-lab-haunted-by-epstein/?b=MITM&amp;e=#select' class='url'>MIT Media Lab Haunted By Epstein | Qntra</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-131324" title="">Sunday, 8 September 2019</a>
+					</div>
+					<p>[...] MIT Media Lab director Joi Ito is out after revelations that the late Pantsuitist Jeffery Epstein was intimately involved with the lab and the extent of the relationship has been actively concealed (archived). Shortly before Epstein&#39;s death the late Marvin Minsky of MIT was one of the names loudly declared in the press as a beneficiary of Epstein&#39;s networking.   This entry was posted in Africa, Altcoins, Fiat/BTC interfaces, News, North America, Oink, Ransomware, Weather. Bookmark the permalink. [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-146543">
+					<div class='trackhead'>
+						<div class="commentcount">3</div>
+						<span class="authorlink"><a href='http://trilema.com/2019/thelastpsychiatristcom-atkins-v-virgina-and-the-execution-of-the-mentally-retarded-adnotated?b=verday%2C%20heil&amp;e=lped#select' class='url'>thelastpsychiatrist.com - Atkins v. Virgina and the Execution of the Mentally Retarded. Adnotated. on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-146543" title="">Wednesday, 8 January 2020</a>
+					</div>
+					<p>[...] verday, heill, alzeyeill, szeyeill, bacapel, zelfayeill, morayeill, borayeill, alpheyeill, arobilin etc" instead is that he didn't have wifi (and never heard of LJH anyway, so wifi wouldn't have helped [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-147929">
+					<div class='trackhead'>
+						<div class="commentcount">4</div>
+						<span class="authorlink"><a href='http://trilema.com/2020/special-rules-for-harem-scrabble-in-foreign-languages/?b=as%20a%20proxy%20f&amp;e=what#select' class='url'>Special rules for harem scrabble in foreign languages on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-147929" title="">Thursday, 19 March 2020</a>
+					</div>
+					<p>[...] as a proxy for the one, fundamental, all-consuming question of their sad, miserable quasi-lives : who should top for the evening.ii Consequently our goals are with some regularity somewhat [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="79456" /></p>
+				<input type="hidden" name="comment_post_time" value="1624834753-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-79456")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-79456");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-79456");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="private,max-age:9800">
+	<meta name="description" content="Planet Earth's most widely read blog." /> 
+	<meta name="robots" content="index,follow,noarchive" />
+<link rel="icon" href="http://trilema.com/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://trilema.com/wp-content/themes/trilema/style.css" type="text/css" media="screen" />
+
+<style type="text/css">  body {      	background: #fff url('http://trilema.com/wp-content/themes/trilema/images/bg_oct2009.jpg') no-repeat center top; }  </style>
+
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://trilema.com/feed/atom/" />
+	<link rel="alternate" type="application/rss+xml" title="Trilema RSS Feed" href="http://trilema.com/feed/" />
+	<link rel="pingback" href="http://trilema.com/xmlrpc.php" />
+		<title>Cardano : Xmas blown, other statements on Trilema - A blog by Mircea Popescu.</title>
+	<style type="text/css">
+						ol.footnotes li {list-style-type:lower-roman;}
+						ol.footnotes{font-size:0.8em; color:#000000;}		</style>
+
+
+	
+</head>
+<body>
+
+
+<div id="base">
+	<div id="mask_head_ie"></div>
+	<div id="base2">
+		<div id="header">
+			<div id="blogtitle"><a href="http://trilema.com">Trilema</a></div>
+			<div id="subtitle">If "waifu" is "wife"<br />should "kung-fu" be "knife" ?
+</div>
+
+
+
+			
+
+		</div>
+		<div id="mask_foot"></div>
+		<div id="container">
+<div id="content">        <div class="spacer"></div>             <span id="shash-51698"><div class="post" id="post-51698">                    <h1><a href="http://trilema.com/2013/cardano-xmas-blown-other-statements/" rel="bookmark" title="Permanent Link to Cardano : Xmas blown, other statements">Cardano : Xmas blown, other statements</a></h1>                        <div class="date">                                     Thursday, 19 December, Year 5 d.Tr.&nbsp;|&nbsp;Author: <a href="http://trilema.com/author/admin/" title="Posts by Mircea Popescu">Mircea Popescu</a>                                                        </div>
+
+                        <div class="entry">
+<p>To get that out of the way : we won't be making Christmas. </p>
+<p>And now that that's settled, let's go into a little context. Two months ago, when <a href="http://trilema.com/2013/snsa-first-product-the-cardano/">this product was announced</a>, having a company started from scratch design, manufacture and deliver to customers a USB widget made from scratch in two months seemed like insanity.<sup><a href="#footnote_0_51698" id="identifier_0_51698" class="footnote-link footnote-identifier-link" title="As per teh logs :
+mike_c Another question you won't answer yet (even though potential investors would love to know), target release date? 2013? 14? 15? Well, not 13.
+mircea_popescu Should be here before Xmas, so you can all make nice gifts to people.
+mike_c No way. Wow.
+">i</a></sup> The reason it seemed like insanity is because it was insanity. </p>
+<p>That said, we both believed it is <em>possible</em>. This may be the result of our being young and brash, to avoid saying stupid. On the other hand, it may also be the result of reasonable thinking<sup><a href="#footnote_1_51698" id="identifier_1_51698" class="footnote-link footnote-identifier-link" title="Something like this : inasmuch as it is possible and catching the Christmas shopping season is a great thing, we should try for it. Well managed stakeholder expectations should keep blowback to a minimum in case of failure. Supposedly we have exceptional, unmatched strengths in PR, which we now have an opportunity to test, which is valuable.
+As an aside : this sort of comment, as to the form but more importantly as to the substance, is not what you'd ever find in common corporate communications, whether they come from the fiat world or from the feeble attempts of the Obsequious Party to transpose all that broken crap into Bitcoin. You traditionally just don't get to see what management was thinking, what the failures were and how they worked and why, but instead get fed a bunch of crap. Breaking with this tradition is quite deliberate innovation on my part, and if yet poorly understood nevertheless in my estimation is a historical shift. For a more in depth discussion of the PR side of things, see the Strategic superiority, a saga article with its follow-ups.">ii</a></sup>. It is your job, as an investor, to decide which of the two alternatives is more likely, and to price them accordingly, so give this matter some honest thought.<sup><a href="#footnote_2_51698" id="identifier_2_51698" class="footnote-link footnote-identifier-link" title="If you thought the life of the investor is an easy life, just waiting by the poolside for the dividends to roll in, you've been watching too many bad music videos. The life of the investor is the hardest of all, because what he does all day is try to the best of his ability to answer such fundamentally imponderable questions as exemplified above, his work is never done and the welfare of the entire world - especially of those who aren't investors - rests on his shoulders and depends on the overall, aggregated corectness of the answer he gives. It's a big responsibility, being rich, and I would like to take this opportunity to request all those who aren't to observe a moment of silent meditation on the relative importance for them, personally, of all the people that are. Thank you.">iii</a></sup> I can assure you spending that time thinking through this particular instance is worth it, because this is exactly how S.NSA is going to be run for the forseeable future : we won't shy away from pursuing the possible, even if it's insanity.</p>
+<p>That said, let me underscore that we could have definitely made Christmas if we weren't delivering the Cardano. Which is to say, if we were willing to compromise on quality and security, we could have sent to market a product which, for the vast majority of the users<sup><a href="#footnote_3_51698" id="identifier_3_51698" class="footnote-link footnote-identifier-link" title="Take this confused fellow as a fine example. No, he doesn't know he's confused, which is exactly what makes the substitution trick so easy, which is generally why the quality of products, and by extension the quality of life, has been collapsing everywhere in the `civilised` world for decades. 
+People obviously don't have the time and the resources to put every tomato or flashlight they ever buy through a mass spectrometer and so on and so forth. It's not practical to even contemplate. Nevertheless, this intellectual abdication turning the customer into the consumer is (along with the equivalent intellectual abdication turning the investor into the muppet) chiefly responsible for the sorry state of the world around us today. No, voting doesn't even enter into it, politics is the fifth wheel while economy drives and rules society.
+What to do ? I don't know.">iv</a></sup>, would have been indistinguishable from the promised Cardano. </p>
+<p>Instead, the RNG was <a href="http://trilema.com/the-reason-you-cant-have-nice-numbers-and-other-considerations">tested</a> and retested and assembled and <a href="http://trilema.com/unsorted-collection-of-various-cardano-related-updates-spurious-pics">disassembled</a> and reassembled and so on to the point where we are now deriving 7.999989 bits of entropy per byte<sup><a href="#footnote_4_51698" id="identifier_4_51698" class="footnote-link footnote-identifier-link" title="The most recent ent : 
+Entropy = 7.999989 bits per byte.
+Optimum compression would reduce the size of this 17890816 byte file by 0 percent.
+Chi square distribution for 17890816 samples is 274.35, and randomly would exceed this value 19.34 percent of the times.
+Arithmetic mean value of data bytes is 127.5142 (127.5 = random).
+Monte Carlo value for Pi is 3.140690093 (error 0.03 percent).
+Serial correlation coefficient is 0.000254 (totally uncorrelated = 0.0).
+Did you even know this is possible ? Or can you name anyone who comes within two degrees of magnitude ?
+Diehard, since we're on the topic : 
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |           filename             |rands/second|
+ file_input_raw|                  stereo_z_2_dec|  3.20e+07  |
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+   diehard_birthdays|   0|       100|     100|0.50177596|  PASSED
+      diehard_operm5|   0|   1000000|     100|0.00000129|   WEAK
+  diehard_rank_32x32|   0|     40000|     100|0.10522613|  PASSED
+    diehard_rank_6x8|   0|    100000|     100|0.09924189|  PASSED
+   diehard_bitstream|   0|   2097152|     100|0.62514006|  PASSED
+        diehard_opso|   0|   2097152|     100|0.01224782|  PASSED
+        diehard_oqso|   0|   2097152|     100|0.02183151|  PASSED
+         diehard_dna|   0|   2097152|     100|0.49474823|  PASSED
+diehard_count_1s_str|   0|    256000|     100|0.06220408|  PASSED
+diehard_count_1s_byt|   0|    256000|     100|0.20098611|  PASSED
+ diehard_parking_lot|   0|     12000|     100|0.95702998|  PASSED
+    diehard_2dsphere|   2|      8000|     100|0.33022998|  PASSED
+    diehard_3dsphere|   3|      4000|     100|0.98402101|  PASSED
+     diehard_squeeze|   0|    100000|     100|0.00058302|   WEAK
+        diehard_sums|   0|       100|     100|0.28755272|  PASSED
+        diehard_runs|   0|    100000|     100|0.05038667|  PASSED
+        diehard_runs|   0|    100000|     100|0.09322646|  PASSED
+       diehard_craps|   0|    200000|     100|0.00004705|   WEAK
+       diehard_craps|   0|    200000|     100|0.01334599|  PASSED
+ marsaglia_tsang_gcd|   0|  10000000|     100|0.00000000|  FAILED
+ marsaglia_tsang_gcd|   0|  10000000|     100|0.00000000|  FAILED
+         sts_monobit|   1|    100000|     100|0.51032516|  PASSED
+            sts_runs|   2|    100000|     100|0.84314525|  PASSED
+          sts_serial|   1|    100000|     100|0.65788129|  PASSED
+          sts_serial|   2|    100000|     100|0.91677515|  PASSED
+          sts_serial|   3|    100000|     100|0.37269191|  PASSED
+          sts_serial|   3|    100000|     100|0.94573382|  PASSED
+          sts_serial|   4|    100000|     100|0.43436523|  PASSED
+          sts_serial|   4|    100000|     100|0.04859885|  PASSED
+          sts_serial|   5|    100000|     100|0.29535662|  PASSED
+          sts_serial|   5|    100000|     100|0.62491480|  PASSED
+          sts_serial|   6|    100000|     100|0.99374970|  PASSED
+          sts_serial|   6|    100000|     100|0.65111035|  PASSED
+          sts_serial|   7|    100000|     100|0.13202759|  PASSED
+          sts_serial|   7|    100000|     100|0.07121462|  PASSED
+          sts_serial|   8|    100000|     100|0.64145643|  PASSED
+          sts_serial|   8|    100000|     100|0.41803955|  PASSED
+          sts_serial|   9|    100000|     100|0.69706086|  PASSED
+          sts_serial|   9|    100000|     100|0.97987919|  PASSED
+          sts_serial|  10|    100000|     100|0.03635437|  PASSED
+          sts_serial|  10|    100000|     100|0.17417466|  PASSED
+          sts_serial|  11|    100000|     100|0.45122427|  PASSED
+          sts_serial|  11|    100000|     100|0.86268254|  PASSED
+          sts_serial|  12|    100000|     100|0.20714322|  PASSED
+          sts_serial|  12|    100000|     100|0.56859750|  PASSED
+          sts_serial|  13|    100000|     100|0.54336148|  PASSED
+          sts_serial|  13|    100000|     100|0.43241228|  PASSED
+          sts_serial|  14|    100000|     100|0.74077925|  PASSED
+          sts_serial|  14|    100000|     100|0.89844957|  PASSED
+          sts_serial|  15|    100000|     100|0.46207567|  PASSED
+          sts_serial|  15|    100000|     100|0.69814610|  PASSED
+          sts_serial|  16|    100000|     100|0.15710384|  PASSED
+          sts_serial|  16|    100000|     100|0.76796776|  PASSED
+         rgb_bitdist|   1|    100000|     100|0.16167887|  PASSED
+         rgb_bitdist|   2|    100000|     100|0.33520833|  PASSED
+         rgb_bitdist|   3|    100000|     100|0.88656135|  PASSED
+         rgb_bitdist|   4|    100000|     100|0.96996233|  PASSED
+         rgb_bitdist|   5|    100000|     100|0.77656640|  PASSED
+         rgb_bitdist|   6|    100000|     100|0.34492309|  PASSED
+         rgb_bitdist|   7|    100000|     100|0.89541304|  PASSED
+         rgb_bitdist|   8|    100000|     100|0.72937297|  PASSED
+         rgb_bitdist|   9|    100000|     100|0.52460579|  PASSED
+         rgb_bitdist|  10|    100000|     100|0.21435198|  PASSED
+         rgb_bitdist|  11|    100000|     100|0.75576751|  PASSED
+         rgb_bitdist|  12|    100000|     100|0.97690207|  PASSED
+rgb_minimum_distance|   2|     10000|    1000|0.03806057|  PASSED
+rgb_minimum_distance|   3|     10000|    1000|0.08314313|  PASSED
+rgb_minimum_distance|   4|     10000|    1000|0.00122756|   WEAK
+rgb_minimum_distance|   5|     10000|    1000|0.21491370|  PASSED
+    rgb_permutations|   2|    100000|     100|0.00096420|   WEAK
+    rgb_permutations|   3|    100000|     100|0.89350849|  PASSED
+    rgb_permutations|   4|    100000|     100|0.43208314|  PASSED
+    rgb_permutations|   5|    100000|     100|0.63790685|  PASSED
+
+Compare this to the results of a similar-sized 32 Mb samble obtained from Fourmilab's HotBits :
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |           filename             |rands/second|
+ file_input_raw|             FourmilabHotBits.32|  3.16e+07  |
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+   diehard_birthdays|   0|       100|     100|0.97810207|  PASSED
+      diehard_operm5|   0|   1000000|     100|0.00000001|  FAILED
+  diehard_rank_32x32|   0|     40000|     100|0.00000000|  FAILED
+    diehard_rank_6x8|   0|    100000|     100|0.22585977|  PASSED
+   diehard_bitstream|   0|   2097152|     100|0.05263876|  PASSED
+        diehard_opso|   0|   2097152|     100|0.00000164|   WEAK
+        diehard_oqso|   0|   2097152|     100|0.00018452|   WEAK
+         diehard_dna|   0|   2097152|     100|0.07343064|  PASSED
+diehard_count_1s_str|   0|    256000|     100|0.61838852|  PASSED
+diehard_count_1s_byt|   0|    256000|     100|0.00001355|   WEAK
+ diehard_parking_lot|   0|     12000|     100|0.91059716|  PASSED
+    diehard_2dsphere|   2|      8000|     100|0.02680202|  PASSED
+    diehard_3dsphere|   3|      4000|     100|0.27168254|  PASSED
+     diehard_squeeze|   0|    100000|     100|0.00000000|  FAILED
+        diehard_sums|   0|       100|     100|0.06910440|  PASSED
+        diehard_runs|   0|    100000|     100|0.44680796|  PASSED
+        diehard_runs|   0|    100000|     100|0.98000201|  PASSED
+       diehard_craps|   0|    200000|     100|0.00000019|  FAILED
+       diehard_craps|   0|    200000|     100|0.00005416|   WEAK
+ marsaglia_tsang_gcd|   0|  10000000|     100|0.00000000|  FAILED
+ marsaglia_tsang_gcd|   0|  10000000|     100|0.00000000|  FAILED
+         sts_monobit|   1|    100000|     100|0.92548082|  PASSED
+            sts_runs|   2|    100000|     100|0.00000000|  FAILED
+          sts_serial|   1|    100000|     100|0.69456066|  PASSED
+          sts_serial|   2|    100000|     100|0.00022837|   WEAK
+          sts_serial|   3|    100000|     100|0.00006475|   WEAK
+          sts_serial|   3|    100000|     100|0.46187750|  PASSED
+          sts_serial|   4|    100000|     100|0.00001796|   WEAK
+          sts_serial|   4|    100000|     100|0.04192517|  PASSED
+          sts_serial|   5|    100000|     100|0.00000000|  FAILED
+          sts_serial|   5|    100000|     100|0.00761729|  PASSED
+          sts_serial|   6|    100000|     100|0.00000137|   WEAK
+          sts_serial|   6|    100000|     100|0.49123670|  PASSED
+          sts_serial|   7|    100000|     100|0.00007570|   WEAK
+          sts_serial|   7|    100000|     100|0.59487738|  PASSED
+          sts_serial|   8|    100000|     100|0.05402529|  PASSED
+          sts_serial|   8|    100000|     100|0.84722663|  PASSED
+          sts_serial|   9|    100000|     100|0.00784684|  PASSED
+          sts_serial|   9|    100000|     100|0.48566666|  PASSED
+          sts_serial|  10|    100000|     100|0.04599012|  PASSED
+          sts_serial|  10|    100000|     100|0.56543996|  PASSED
+          sts_serial|  11|    100000|     100|0.53070228|  PASSED
+          sts_serial|  11|    100000|     100|0.03605884|  PASSED
+          sts_serial|  12|    100000|     100|0.47944178|  PASSED
+          sts_serial|  12|    100000|     100|0.30283293|  PASSED
+          sts_serial|  13|    100000|     100|0.31824257|  PASSED
+          sts_serial|  13|    100000|     100|0.47247814|  PASSED
+          sts_serial|  14|    100000|     100|0.78559973|  PASSED
+          sts_serial|  14|    100000|     100|0.88459449|  PASSED
+          sts_serial|  15|    100000|     100|0.98743522|  PASSED
+          sts_serial|  15|    100000|     100|0.86360229|  PASSED
+          sts_serial|  16|    100000|     100|0.51008511|  PASSED
+          sts_serial|  16|    100000|     100|0.12008057|  PASSED
+         rgb_bitdist|   1|    100000|     100|0.99137592|  PASSED
+         rgb_bitdist|   2|    100000|     100|0.00025939|   WEAK
+         rgb_bitdist|   3|    100000|     100|0.11368193|  PASSED
+         rgb_bitdist|   4|    100000|     100|0.00024729|   WEAK
+         rgb_bitdist|   5|    100000|     100|0.80461904|  PASSED
+         rgb_bitdist|   6|    100000|     100|0.61728343|  PASSED
+         rgb_bitdist|   7|    100000|     100|0.00326461|   WEAK
+         rgb_bitdist|   8|    100000|     100|0.31193867|  PASSED
+         rgb_bitdist|   9|    100000|     100|0.72468779|  PASSED
+         rgb_bitdist|  10|    100000|     100|0.85652228|  PASSED
+         rgb_bitdist|  11|    100000|     100|0.59083335|  PASSED
+         rgb_bitdist|  12|    100000|     100|0.98879788|  PASSED
+rgb_minimum_distance|   2|     10000|    1000|0.00544199|  PASSED
+rgb_minimum_distance|   3|     10000|    1000|0.12709516|  PASSED
+rgb_minimum_distance|   4|     10000|    1000|0.00000006|  FAILED
+rgb_minimum_distance|   5|     10000|    1000|0.00000483|   WEAK
+    rgb_permutations|   2|    100000|     100|0.19688334|  PASSED
+    rgb_permutations|   3|    100000|     100|0.02445464|  PASSED
+    rgb_permutations|   4|    100000|     100|0.15673912|  PASSED
+    rgb_permutations|   5|    100000|     100|0.27246398|  PASSED
+
+Sum-up : 73 tests performed. Cardano RNG : Failed 2, Weak 5, Passed 66. Radioactive decay : Failed 9, Weak 13, Passed 51. Now go take your current entropy source, put it through diehard and see what happens. ">v</a></sup> Out of <del datetime="2013-12-19T19:44:05+00:00">Avalanche</del> Johnson noise boards. Every single part of the design has been individually tested, under a microscope, with probes, with other probes and with third probes. No Stone unturnAd!</p>
+<p>We've also had some minor friction with the difficulties of operating in the real world, such as suppliers taking time to deliver, and shipping of physical objects not being instantaenous and laser coolant hoses bursting open and sprinkling antifreeze all over the floor, of course. It would be completely disingenuous to claim that these have much to do with the delays in production however : the problems we face are chiefly of our own creation, and principally to be found in our own minds. Which is exactly as it should be.</p>
+<p>We're now shooting for January. Which, after all, is barely two weeks away from last October.</p>
+&mdash;&mdash;&mdash;<ol class="footnotes"><li id="footnote_0_51698" class="footnote">As per <a href=http://trilema.com/forum-logs-for-10-oct-2013#929588>teh logs</a> :</p>
+<blockquote><p><strong>mike_c</strong> Another question you won't answer yet (even though potential investors would love to know), target release date? 2013? 14? 15? Well, not 13.</p>
+<p><strong>mircea_popescu</strong> Should be here before Xmas, so you can all make nice gifts to people.<br />
+<strong>mike_c</strong> No way. Wow.</p></blockquote>
+<p> [<a href="#identifier_0_51698" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_51698" class="footnote">Something like this : inasmuch as it is possible and catching the Christmas shopping season is a great thing, we should try for it. Well managed stakeholder expectations should keep blowback to a minimum in case of failure. Supposedly we have exceptional, unmatched strengths in PR, which we now have an opportunity to test, which is valuable.</p>
+<p>As an aside : this sort of comment, as to the form but more importantly as to the substance, is not what you'd ever find in common corporate communications, whether they come from the fiat world or from the feeble attempts of the <a href="http://trilema.com/2012/the-politics-of-bitcoin/">Obsequious Party</a> to transpose all that broken crap into Bitcoin. You traditionally just don't get to see what management was thinking, what the failures were and how they worked and why, but instead get fed a bunch of crap. Breaking with this tradition is quite deliberate innovation on my part, and if yet poorly understood nevertheless in my <span style="background-color:#d3d3d3" id="select">estimation is a historical shift. For a more in depth discussion of the PR side of things, see the <a href=http://trilema.com/2012/strategic-superiority-a-saga/>Strategic superiority, a saga</a> article with its follow-ups. [<a href="#identifier_1_51698" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_2_51698" class="footnote">If you thought the life of the investor is an easy life, just</span> waiting by the poolside for the dividends to roll in, you've been watching too many bad music videos. The life of the investor is the hardest of all, because what he does all day is try to the best of his ability to answer such fundamentally imponderable questions as exemplified above, his work is never done and the welfare of the entire world - especially of those who <em>aren't</em> investors - rests on his shoulders and depends on <a href="https://bitcointalk.org/index.php?topic=106391.0">the overall, aggregated corectness</a> of the answer he gives. It's a big responsibility, being rich, and I would like to take this opportunity to request all those who aren't to observe a moment of silent meditation on the relative importance for them, personally, of all the people that are. Thank you. [<a href="#identifier_2_51698" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_3_51698" class="footnote">Take <a href="http://trilema.com/2013/snsa-first-product-the-cardano/#comment-95590">this confused fellow</a> as a fine example. No, he doesn't <em>know</em> he's confused, which is exactly what makes the substitution trick so easy, which is generally why the quality of products, and by extension the quality of life, has been collapsing everywhere in the "civilised" world for decades. </p>
+<p>People obviously don't have the time and the resources to put every tomato or flashlight they ever buy through a mass spectrometer and so on and so forth. It's not practical to even contemplate. Nevertheless, this intellectual abdication turning the customer into the consumer is (along with the equivalent intellectual abdication turning the investor into the muppet) chiefly responsible for the sorry state of the world around us today. No, voting doesn't even enter into it, politics is the fifth wheel while economy drives and rules society.</p>
+<p>What to do ? I don't know. [<a href="#identifier_3_51698" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_4_51698" class="footnote">The most recent ent : </p>
+<blockquote><p>Entropy = 7.999989 bits per byte.<br />
+Optimum compression would reduce the size of this 17890816 byte file by 0 percent.<br />
+Chi square distribution for 17890816 samples is 274.35, and randomly would exceed this value 19.34 percent of the times.<br />
+Arithmetic mean value of data bytes is 127.5142 (127.5 = random).<br />
+Monte Carlo value for Pi is 3.140690093 (error 0.03 percent).<br />
+Serial correlation coefficient is 0.000254 (totally uncorrelated = 0.0).</p></blockquote>
+<p>Did you even know this is possible ? Or can you name anyone who comes within two degrees of magnitude ?</p>
+<p>Diehard, since we're on the topic : </p>
+<blockquote><pre>#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |           filename             |rands/second|
+ file_input_raw|                  stereo_z_2_dec|  3.20e+07  |
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+   diehard_birthdays|   0|       100|     100|0.50177596|  PASSED
+      diehard_operm5|   0|   1000000|     100|0.00000129|   WEAK
+  diehard_rank_32x32|   0|     40000|     100|0.10522613|  PASSED
+    diehard_rank_6x8|   0|    100000|     100|0.09924189|  PASSED
+   diehard_bitstream|   0|   2097152|     100|0.62514006|  PASSED
+        diehard_opso|   0|   2097152|     100|0.01224782|  PASSED
+        diehard_oqso|   0|   2097152|     100|0.02183151|  PASSED
+         diehard_dna|   0|   2097152|     100|0.49474823|  PASSED
+diehard_count_1s_str|   0|    256000|     100|0.06220408|  PASSED
+diehard_count_1s_byt|   0|    256000|     100|0.20098611|  PASSED
+ diehard_parking_lot|   0|     12000|     100|0.95702998|  PASSED
+    diehard_2dsphere|   2|      8000|     100|0.33022998|  PASSED
+    diehard_3dsphere|   3|      4000|     100|0.98402101|  PASSED
+     diehard_squeeze|   0|    100000|     100|0.00058302|   WEAK
+        diehard_sums|   0|       100|     100|0.28755272|  PASSED
+        diehard_runs|   0|    100000|     100|0.05038667|  PASSED
+        diehard_runs|   0|    100000|     100|0.09322646|  PASSED
+       diehard_craps|   0|    200000|     100|0.00004705|   WEAK
+       diehard_craps|   0|    200000|     100|0.01334599|  PASSED
+ marsaglia_tsang_gcd|   0|  10000000|     100|0.00000000|  FAILED
+ marsaglia_tsang_gcd|   0|  10000000|     100|0.00000000|  FAILED
+         sts_monobit|   1|    100000|     100|0.51032516|  PASSED
+            sts_runs|   2|    100000|     100|0.84314525|  PASSED
+          sts_serial|   1|    100000|     100|0.65788129|  PASSED
+          sts_serial|   2|    100000|     100|0.91677515|  PASSED
+          sts_serial|   3|    100000|     100|0.37269191|  PASSED
+          sts_serial|   3|    100000|     100|0.94573382|  PASSED
+          sts_serial|   4|    100000|     100|0.43436523|  PASSED
+          sts_serial|   4|    100000|     100|0.04859885|  PASSED
+          sts_serial|   5|    100000|     100|0.29535662|  PASSED
+          sts_serial|   5|    100000|     100|0.62491480|  PASSED
+          sts_serial|   6|    100000|     100|0.99374970|  PASSED
+          sts_serial|   6|    100000|     100|0.65111035|  PASSED
+          sts_serial|   7|    100000|     100|0.13202759|  PASSED
+          sts_serial|   7|    100000|     100|0.07121462|  PASSED
+          sts_serial|   8|    100000|     100|0.64145643|  PASSED
+          sts_serial|   8|    100000|     100|0.41803955|  PASSED
+          sts_serial|   9|    100000|     100|0.69706086|  PASSED
+          sts_serial|   9|    100000|     100|0.97987919|  PASSED
+          sts_serial|  10|    100000|     100|0.03635437|  PASSED
+          sts_serial|  10|    100000|     100|0.17417466|  PASSED
+          sts_serial|  11|    100000|     100|0.45122427|  PASSED
+          sts_serial|  11|    100000|     100|0.86268254|  PASSED
+          sts_serial|  12|    100000|     100|0.20714322|  PASSED
+          sts_serial|  12|    100000|     100|0.56859750|  PASSED
+          sts_serial|  13|    100000|     100|0.54336148|  PASSED
+          sts_serial|  13|    100000|     100|0.43241228|  PASSED
+          sts_serial|  14|    100000|     100|0.74077925|  PASSED
+          sts_serial|  14|    100000|     100|0.89844957|  PASSED
+          sts_serial|  15|    100000|     100|0.46207567|  PASSED
+          sts_serial|  15|    100000|     100|0.69814610|  PASSED
+          sts_serial|  16|    100000|     100|0.15710384|  PASSED
+          sts_serial|  16|    100000|     100|0.76796776|  PASSED
+         rgb_bitdist|   1|    100000|     100|0.16167887|  PASSED
+         rgb_bitdist|   2|    100000|     100|0.33520833|  PASSED
+         rgb_bitdist|   3|    100000|     100|0.88656135|  PASSED
+         rgb_bitdist|   4|    100000|     100|0.96996233|  PASSED
+         rgb_bitdist|   5|    100000|     100|0.77656640|  PASSED
+         rgb_bitdist|   6|    100000|     100|0.34492309|  PASSED
+         rgb_bitdist|   7|    100000|     100|0.89541304|  PASSED
+         rgb_bitdist|   8|    100000|     100|0.72937297|  PASSED
+         rgb_bitdist|   9|    100000|     100|0.52460579|  PASSED
+         rgb_bitdist|  10|    100000|     100|0.21435198|  PASSED
+         rgb_bitdist|  11|    100000|     100|0.75576751|  PASSED
+         rgb_bitdist|  12|    100000|     100|0.97690207|  PASSED
+rgb_minimum_distance|   2|     10000|    1000|0.03806057|  PASSED
+rgb_minimum_distance|   3|     10000|    1000|0.08314313|  PASSED
+rgb_minimum_distance|   4|     10000|    1000|0.00122756|   WEAK
+rgb_minimum_distance|   5|     10000|    1000|0.21491370|  PASSED
+    rgb_permutations|   2|    100000|     100|0.00096420|   WEAK
+    rgb_permutations|   3|    100000|     100|0.89350849|  PASSED
+    rgb_permutations|   4|    100000|     100|0.43208314|  PASSED
+    rgb_permutations|   5|    100000|     100|0.63790685|  PASSED</pre>
+</blockquote>
+<p>Compare this to the results of a similar-sized 32 Mb samble obtained from <a href="http://www.fourmilab.ch/hotbits/">Fourmilab's HotBits</a> :</p>
+<blockquote><pre>#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |           filename             |rands/second|
+ file_input_raw|             FourmilabHotBits.32|  3.16e+07  |
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+   diehard_birthdays|   0|       100|     100|0.97810207|  PASSED
+      diehard_operm5|   0|   1000000|     100|0.00000001|  FAILED
+  diehard_rank_32x32|   0|     40000|     100|0.00000000|  FAILED
+    diehard_rank_6x8|   0|    100000|     100|0.22585977|  PASSED
+   diehard_bitstream|   0|   2097152|     100|0.05263876|  PASSED
+        diehard_opso|   0|   2097152|     100|0.00000164|   WEAK
+        diehard_oqso|   0|   2097152|     100|0.00018452|   WEAK
+         diehard_dna|   0|   2097152|     100|0.07343064|  PASSED
+diehard_count_1s_str|   0|    256000|     100|0.61838852|  PASSED
+diehard_count_1s_byt|   0|    256000|     100|0.00001355|   WEAK
+ diehard_parking_lot|   0|     12000|     100|0.91059716|  PASSED
+    diehard_2dsphere|   2|      8000|     100|0.02680202|  PASSED
+    diehard_3dsphere|   3|      4000|     100|0.27168254|  PASSED
+     diehard_squeeze|   0|    100000|     100|0.00000000|  FAILED
+        diehard_sums|   0|       100|     100|0.06910440|  PASSED
+        diehard_runs|   0|    100000|     100|0.44680796|  PASSED
+        diehard_runs|   0|    100000|     100|0.98000201|  PASSED
+       diehard_craps|   0|    200000|     100|0.00000019|  FAILED
+       diehard_craps|   0|    200000|     100|0.00005416|   WEAK
+ marsaglia_tsang_gcd|   0|  10000000|     100|0.00000000|  FAILED
+ marsaglia_tsang_gcd|   0|  10000000|     100|0.00000000|  FAILED
+         sts_monobit|   1|    100000|     100|0.92548082|  PASSED
+            sts_runs|   2|    100000|     100|0.00000000|  FAILED
+          sts_serial|   1|    100000|     100|0.69456066|  PASSED
+          sts_serial|   2|    100000|     100|0.00022837|   WEAK
+          sts_serial|   3|    100000|     100|0.00006475|   WEAK
+          sts_serial|   3|    100000|     100|0.46187750|  PASSED
+          sts_serial|   4|    100000|     100|0.00001796|   WEAK
+          sts_serial|   4|    100000|     100|0.04192517|  PASSED
+          sts_serial|   5|    100000|     100|0.00000000|  FAILED
+          sts_serial|   5|    100000|     100|0.00761729|  PASSED
+          sts_serial|   6|    100000|     100|0.00000137|   WEAK
+          sts_serial|   6|    100000|     100|0.49123670|  PASSED
+          sts_serial|   7|    100000|     100|0.00007570|   WEAK
+          sts_serial|   7|    100000|     100|0.59487738|  PASSED
+          sts_serial|   8|    100000|     100|0.05402529|  PASSED
+          sts_serial|   8|    100000|     100|0.84722663|  PASSED
+          sts_serial|   9|    100000|     100|0.00784684|  PASSED
+          sts_serial|   9|    100000|     100|0.48566666|  PASSED
+          sts_serial|  10|    100000|     100|0.04599012|  PASSED
+          sts_serial|  10|    100000|     100|0.56543996|  PASSED
+          sts_serial|  11|    100000|     100|0.53070228|  PASSED
+          sts_serial|  11|    100000|     100|0.03605884|  PASSED
+          sts_serial|  12|    100000|     100|0.47944178|  PASSED
+          sts_serial|  12|    100000|     100|0.30283293|  PASSED
+          sts_serial|  13|    100000|     100|0.31824257|  PASSED
+          sts_serial|  13|    100000|     100|0.47247814|  PASSED
+          sts_serial|  14|    100000|     100|0.78559973|  PASSED
+          sts_serial|  14|    100000|     100|0.88459449|  PASSED
+          sts_serial|  15|    100000|     100|0.98743522|  PASSED
+          sts_serial|  15|    100000|     100|0.86360229|  PASSED
+          sts_serial|  16|    100000|     100|0.51008511|  PASSED
+          sts_serial|  16|    100000|     100|0.12008057|  PASSED
+         rgb_bitdist|   1|    100000|     100|0.99137592|  PASSED
+         rgb_bitdist|   2|    100000|     100|0.00025939|   WEAK
+         rgb_bitdist|   3|    100000|     100|0.11368193|  PASSED
+         rgb_bitdist|   4|    100000|     100|0.00024729|   WEAK
+         rgb_bitdist|   5|    100000|     100|0.80461904|  PASSED
+         rgb_bitdist|   6|    100000|     100|0.61728343|  PASSED
+         rgb_bitdist|   7|    100000|     100|0.00326461|   WEAK
+         rgb_bitdist|   8|    100000|     100|0.31193867|  PASSED
+         rgb_bitdist|   9|    100000|     100|0.72468779|  PASSED
+         rgb_bitdist|  10|    100000|     100|0.85652228|  PASSED
+         rgb_bitdist|  11|    100000|     100|0.59083335|  PASSED
+         rgb_bitdist|  12|    100000|     100|0.98879788|  PASSED
+rgb_minimum_distance|   2|     10000|    1000|0.00544199|  PASSED
+rgb_minimum_distance|   3|     10000|    1000|0.12709516|  PASSED
+rgb_minimum_distance|   4|     10000|    1000|0.00000006|  FAILED
+rgb_minimum_distance|   5|     10000|    1000|0.00000483|   WEAK
+    rgb_permutations|   2|    100000|     100|0.19688334|  PASSED
+    rgb_permutations|   3|    100000|     100|0.02445464|  PASSED
+    rgb_permutations|   4|    100000|     100|0.15673912|  PASSED
+    rgb_permutations|   5|    100000|     100|0.27246398|  PASSED</pre>
+</blockquote>
+<p>Sum-up : 73 tests performed. Cardano RNG : <font color=red>Failed 2</font>, Weak 5, Passed 66. Radioactive decay : <font color=red>Failed 9</font>, Weak 13, Passed 51. Now go take your current entropy source, put it through <a href="http://www.phy.duke.edu/~rgb/General/dieharder.php">diehard</a> and see what happens.  [<a href="#identifier_4_51698" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol>
+              <div>
+                <div class="alignleft">&laquo; <a href="http://trilema.com/2013/xidiffdec-has-settled/">X.IDIFF.DEC has settled.</a></div>
+                <div class="alignright"><a href="http://trilema.com/2013/a-deal-can-be-anything/">A deal can be anything.</a> &raquo;</div>
+              </div>
+
+<div class="clear"></div>
+                                                    </div>
+                  <div class="info">
+                             </span><span class="category">Category: Uncategorized</span>
+   </div>
+                   <div class="info_bot"></div>
+            </div>
+          <div id="postmetadata">
+                        Comments feed : <a href='http://trilema.com/2013/cardano-xmas-blown-other-statements/feed/'>RSS 2.0</a>.                                             Leave your own <a href="#respond">comment</a> below, or send a <a href="http://trilema.com/2013/cardano-xmas-blown-other-statements/trackback/" rel="trackback">trackback</a>.                                   </div>
+  
+<!-- You can start editing here. -->
+		<p class="commenttitle"><a name="comments"></a>6 Responses</p>
+		
+		<ol class="commentlist">
+									<li id="comment-96967" class="commentbody"><div class="commenthead"><img alt='anon`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">1</div>
+								<span class="authorlink">anon</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96967" title="">Thursday, 19 December 2013</a>
+							</div>
+						<p>Does anything ever pass  marsaglia_tsang_gcd anyway?</p>
+						</li>
+
+										<li id="comment-96968" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">2</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96968" title="">Thursday, 19 December 2013</a>
+							</div>
+						<p>Not afaik.</p>
+						</li>
+
+										<li id="comment-96981" class="commentbody"><div class="commenthead"><img alt='Alex`s avatar' src='http://trilema.com/default_avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">3</div>
+								<span class="authorlink">Alex</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96981" title="">Friday, 20 December 2013</a>
+							</div>
+						<p>Speak of security and encription.. :</p>
+<p><a href="http://www.cs.tau.ac.il/~tromer/acoustic/">http://www.cs.tau.ac.il/~tromer/acoustic/</a></p>
+<p>Said problem has been promptly fixed in the GnuPG package</p>
+<p><a href="http://lists.gnupg.org/pipermail/gnupg-devel/2013-December/028102.html">http://lists.gnupg.org/pipermail/gnupg-devel/2013-December/028102.html</a></p>
+<p>Wondering if your product needs to consider the implications of the said paper.</p>
+						</li>
+
+										<li id="comment-96987" class="adminbody"><div class="adminhead"><img alt='Mircea Popescu`s avatar' src='http://trilema.com/avatar.png' class='avatar avatar-32 photo' height='32' width='32' />								<div class="commentcount">4</div>
+								<span class="authorlink">Mircea Popescu</span>&nbsp;								<span class=""></span>
+													<br />
+								<a class="commentlink" href="#comment-96987" title="">Friday, 20 December 2013</a>
+							</div>
+						<p>To quote the chan,</p>
+<blockquote><p>00:50:50 (BingoBoingo>	;;later tell asciilifeform The Cardano is going to be soundproof, right? <a href="http://it.slashdot.org/story/13/12/18/2122226/scientists-extract-rsa-key-from-gnupg-using-sound-of-cpu">http://it.slashdot.org/story/13/12/18/2122226/scientists-extract-rsa-key-from-gnupg-using-sound-of-cpu</a><br />
+00:50:51 (gribble>	The operation succeeded.<br />
+00:50:51 (mikaeldice>	A tiny bounty, but no entry fees.  I don't want to take people's money, even if it'd make the challenge more interesting.  At the same time, with little to gain, I would make the bounty much smaller<br />
+00:52:03 (mike_c>	the gain is proof of your system, right?  unless you are expecting to get hacked and the gain is for you to learn about holes.<br />
+00:53:03 (asciilifeform>	BingoBoingo: this attack is simply a variant of the traditional 'Differential Power Analysis'<br />
+00:53:15 (mikaeldice>	Dual purpose:  If nobody hacks it, this adds evidence of 'sufficiency' with the security, and if someone does hack it then I can patch the holes and reinit the prize until no more holes are found<br />
+00:53:17 (BingoBoingo>	Ah<br />
+00:53:20 (asciilifeform>	the sound is coming from the power supply inductor<br />
+00:53:49 (asciilifeform>	this is really from the fact that a pc cpu is a monster hog<br />
+00:54:23 *	lewicki (~lewicki@unaffiliated/lewicki) has joined #bitcoin-assets<br />
+00:54:26 (asciilifeform>	and typically exists in one of two states - 'halt', with reduced power draw, and 'run' (interrupt throws cpu out of halt state.)<br />
+00:54:42 (asciilifeform>	idle loop in modern os scheduler sits the cpu in 'halt'<br />
+00:56:08 (asciilifeform>	virtually any device containing a switched power supply 'hisses' this way<br />
+00:56:55 (asciilifeform>	there are no inductors (switching power supply or otherwise) in cardano...<br />
+00:57:41 (asciilifeform>	nor is the 'low power state' feature of the microcontroller made use of; nor is there an operating system, in the usual sense, or a scheduler...<br />
+00:58:10 *	Duffer1 (~chatzilla@c-98-232-231-188.hsd1.or.comcast.net) has joined #bitcoin-assets<br />
+00:58:10 (the20year2>	mikaeldice: for us it was just a way to crowdsource funding on something that traditional investors wouldn't bite into<br />
+00:59:29 (the20year2>	The hope/assumption in the beginning was that we would be able to outpace the appreciation of bitcoin through the way we are handling real estate. Growth has been fantastic, but it hasn't outpaced bitcoin like we'd hoped. So, then the hope later on, and it  hasn't come to fruitition was a reverse hedge against BTC.USD drops like what we've been seeing. I tried to get investments again when BTC hit $1200 and few I talked<br />
+00:59:57 (assbot>	[MPEX] [S.MPOE] 10724 @ 0.00090502 = 9.7054 BTC [-]<br />
+01:00:58 (assbot>	[HAVELOCK] [AM1] 1 @ 0.27 BTC [+]<br />
+01:03:00 (assbot>	[MPEX] [S.MPOE] 45400 @ 0.0009093 = 41.2822 BTC [+] {5}<br />
+01:04:02 (zz_>	asiclifeform:  isn't the CPU running at a few Ghz, while sound (20Khz?  What exactly would the cellphone pick up?<br />
+01:05:33 (mike_c>	that is actually the crux of the paper.<br />
+01:05:43 (asciilifeform>	zz_: it's picking up 'idle' vs 'halted'<br />
+01:05:51 (asciilifeform>	from which one can deduce execution path.<br />
+01:05:59 (asciilifeform>	this is a variation on the old theme of cache probe attack<br />
+01:06:07 (assbot>	[MPEX] [S.MPOE] 8950 @ 0.00090502 = 8.0999 BTC [-]<br />
+01:06:07 (asciilifeform>	(as noted in the paper)<br />
+01:06:59 *	nubbins` (~nubbins`@stjhnf0148w-142134201245.dhcp-dynamic.FibreOp.nl.bellaliant.net) has joined #bitcoin-assets<br />
+01:07:00 (zz_>	didn't read the PDF.  Guess that would help.<br />
+01:07:27 (mike_c>	tldr: "In a nutshell, the key extraction attack relies on crafting chosen ciphertexts that cause numerical<br />
+01:07:27 (mike_c>	cancellations deep inside GnuPG’s modular exponentiation algorithm. This causes the special value<br />
+01:07:27 (mike_c>	zero to appear frequently in the innermost loop of the algorithm, where it afects control fow. A single<br />
+01:07:28 (mike_c>	iteration of that loop is much too fast for direct acoustic observation, but the efect is repeated and<br />
+01:07:28 (mike_c>	amplifed over many thousands of iterations, resulting in a gross leakage effect that is discernible in the<br />
+01:07:28 (mike_c>	acoustic spectrum over hundreds of milliseconds"<br />
+01:07:49 (mike_c>	that pasted poorly<br />
+01:08:22 (asciilifeform>	the bit about leaking electrolytic caps 'buzzing' is unsurprising.<br />
+01:09:04 (mike_c>	so the good news, as far as i can tell, is that you have to be decrypting a known, specially crafted message.<br />
+01:09:43 (asciilifeform>	'More generally, we observed strong positive correlation between machine<br />
+01:09:43 (asciilifeform>	age, in terms of calendar time and usage, and the cryptanalytic usefulness of their acoustic emanations.'<br />
+01:10:15 (asciilifeform>	that statement, even if true - i can almost see the censor's red ink slipping that in.</p></blockquote>
+						</li>
+
+						</ol>
+
+
+
+	<ol class="commentlist">
+				<li class="trackbody" id="comment-102831">
+					<div class='trackhead'>
+						<div class="commentcount">5</div>
+						<span class="authorlink"><a href='http://bitcoinpete.com/2014/07/17/proof-that-mycelium-knows-how-to-make-a-better-rng-for-its-entropy-dongle-and-isnt/' class='url'>Proof That Mycelium Knows How To Make A Better RNG For Its Entropy Dongle. And Isn&#8217;t. | When Bitcoin Met Pete</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-102831" title="">Friday, 18 July 2014</a>
+					</div>
+					<p>[...] were you looking for people with tech expertise or with complaint expertise ? anyway, <a href="http://trilema.com/2013/cardano-xmas-blown-other-statements/ footnote">http://trilema.com/2013/cardano-xmas-blown-other-statements/ footnote</a> 5 prolly of most interest to you Rassah: mircea_popescu: Typically they are one and the [...]</p>
+				</li>
+
+				<li class="trackbody" id="comment-139677">
+					<div class='trackhead'>
+						<div class="commentcount">6</div>
+						<span class="authorlink"><a href='http://trilema.com/2014/snsa-december-2013-statement?b=of%20the%20numer&amp;e=%20add#select' class='url'>S.NSA, December 2013 Statement on Trilema - A blog by Mircea Popescu.</a></span>&nbsp;(via Pingback)						<span class=""></span>
+						<br />
+						<a class="commentlink" href="#comment-139677" title="">Tuesday, 7 January 2020</a>
+					</div>
+					<p>[...] of the numerous prototypes as well as all the labour that went into creating this jewel (for it is a jewel) will not be invoiced, on the rationale that tracking all the respective numerous things would add [...]</p>
+				</li>
+
+	</ol>
+
+
+		<strong id="respond">Add your cents!</strong>
+ <small>&raquo; <br /><ul>If this is your first comment, it will wait to be approved. This usually takes a few hours. Subsequent comments are not delayed.</ul></small>
+			<form action="http://trilema.com/wp-comments-post.php" method="post" id="commentform">
+	
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+					<p><input type="text" name="authorfa84cd8" id="authorfa84cd8" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="emailfa84cd8" id="emailfa84cd8" value="" size="22" tabindex="2" />
+						<label for="email"><small>E-Mail
+</small></label></p>
+					<p><input type="text" name="urlfa84cd8" id="urlfa84cd8" value="" size="22" tabindex="3" />
+
+						<label for="url"><small>Website (optional)</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags:&nbsp;&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<!--- This is just a decoy ;)
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+						<label for="author"><small>Name&nbsp;(required)</small></label></p>
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+						<label for="email"><small>E-Mail (will not be published , required)</small></label></p>
+					<p><input type="text" name="url" id="url" value="http://pest" size="22" tabindex="3" />
+
+-->
+
+				<p><textarea name="comment" id="comment" cols="60" rows="12" tabindex="4"></textarea></p>
+				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send" />
+				<input type="hidden" name="comment_post_ID" value="51698" /></p>
+				<input type="hidden" name="comment_post_time" value="1624835257-201.206.191.92" /></p>
+
+				
+			</form>
+  		</div><div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar1">
+                <ul>
+         
+
+<ul>
+                        <h5>Recent Comments</h5>
+      <ul>
+      	<li><a href=http://trilema.com/2011/ce-am-pierdut-si-voi-n-ati-avut/#comment-165319 >Mircea Popescu</a> It's baaaaack!!!</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165310 >Mircea Popescu</a> Well, it's a both-ways tower defense, you build the pathway and the op...</li>
+	<li><a href=http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/#comment-165307 >Diana Coman</a>  the game went offline (it does that after five or so minutes of inactivity...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165303 >Mircea Popescu</a> Ahahaha. If we met back when I was still in that line I'd have totally...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165302 >pletzalcoatl</a> You were thinking a pallid Danny DeVito in a purple crushed velvet suit...</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165300 >Mircea Popescu</a> You're not fooling anyone, you know.</li>
+	<li><a href=http://trilema.com/2019/forum-logs-for-05-nov-2015/#comment-165297 >Tyrone White</a> What's up to all</li>
+	<li><a href=http://trilema.com/2021/hoe-jokes/#comment-165274 >Mircea Popescu</a> &updated.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165253 >Mircea Popescu</a> PS. s/undertaker/liquidator/ on re-read. Nfi what I was thinking.</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165251 >Mircea Popescu</a> Meh. More nudes less obscure software packages, I don't watsup or w/e.</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165250 >Mircea Popescu</a> Obscure TV actor, plenty of those. (I didn't, for instance, review the...</li>
+	<li><a href=http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/#comment-165239 >CarpraC</a> Since this post brought up ancient actors, their experience and quality, what...</li>
+	<li><a href=http://trilema.com/2016/lxs-ninxs/#comment-165227 >temptease</a> call me whatsapp +79910404425</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165222 >Mircea Popescu</a> Heh. Never heard of it. (I however have heard of that kinda posturing,...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165221 >Anon</a> I don't know, some kind of "help you with your finances" scam/online...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165220 >Mircea Popescu</a> No fucking idea, what is it ?</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165219 >Anon</a> In the same line, what is Intuit?</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165218 >Mircea Popescu</a> Heh. Nothing lasts forever, and the "independent woman" least of all.</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165217 >Mircea Popescu</a> Wtf is this inane nonsense! Oh, I get it, artificially interesting...</li>
+	<li><a href=http://trilema.com/2020/kitty-freipurr-von-meow-and-other-tales-of-bring-your-own-adventure-to-tamarindo/#comment-165216 >lexy229</a> &gt; how exactly did you figure out what to do to have your avatar show up by...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165214 >anon</a> Have a laugh Description Planet Earth's most widely read blog.... Read More Tim...</li>
+	<li><a href=http://trilema.com/2020/trilema-altogether-no-longer-showing/#comment-165212 >Mircea Popescu</a> Heh, the yearly problems of last year's. What a life.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165102 >Mircea Popescu</a> Really, it's top100-ish pretty much everywhere.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165101 >anon</a> #117 in Russia too.</li>
+	<li><a href=http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/#comment-165100 >Joshue</a> Meanwhile when it comes to being famous in Gibraltar...</li>
+      </ul>
+   
+
+        <br />
+</ul>
+        </div>
+                <div id="sidebar2">
+                <ul>
+                        <li><h5>Recent Articles</h5><ul>
+                	<li><a href='http://trilema.com/2021/n-i-meaning-h-went-to-m-and/' title='N &#038; I (meaning H) went to M and...'>N &#038; I (meaning H) went to M and...</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-complete-strategy-guide-also-by-very-far-the-best-on-the-internet/' title='Royal Revolt II complete strategy guide, also by very far the best on the Internet.'>Royal Revolt II complete strategy guide, also by very far the best on the Internet.</a></li>
+	<li><a href='http://trilema.com/2021/laltra-meta-del-cielo/' title='L&#039;altra metà del cielo'>L'altra metà del cielo</a></li>
+	<li><a href='http://trilema.com/2021/hoe-jokes/' title='Hoe Jokes'>Hoe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/the-apprenticeship-of-duddy-kravitz/' title='The Apprenticeship of Duddy Kravitz'>The Apprenticeship of Duddy Kravitz</a></li>
+	<li><a href='http://trilema.com/2021/moe-jokes/' title='Moe Jokes'>Moe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/joe-jokes/' title='Joe Jokes'>Joe Jokes</a></li>
+	<li><a href='http://trilema.com/2021/carried-away/' title='Carried Away'>Carried Away</a></li>
+	<li><a href='http://trilema.com/2021/the-value-of-subhuman-life-and-other-non-themes-of-scummy-preoccupation/' title='The value of subhuman life, and other non-themes of scummy preoccupation'>The value of subhuman life, and other non-themes of scummy preoccupation</a></li>
+	<li><a href='http://trilema.com/2021/have-you-ever-read-les-liaisons-dangereuses/' title='Have you ever read Les Liaisons dangereuses ?'>Have you ever read Les Liaisons dangereuses ?</a></li>
+	<li><a href='http://trilema.com/2021/royal-revolt-ii-kicks-ass/' title='Royal Revolt II Kicks Ass!'>Royal Revolt II Kicks Ass!</a></li>
+	<li><a href='http://trilema.com/2021/on-being-female-and-being-a-woman/' title='On being female, and being a woman.'>On being female, and being a woman.</a></li>
+	<li><a href='http://trilema.com/2021/il-gatto-mammone/' title='Il gatto mammone'>Il gatto mammone</a></li>
+	<li><a href='http://trilema.com/2021/hey-bitches-smell-my-armpits/' title='Hey bitches! Smell my armpits!'>Hey bitches! Smell my armpits!</a></li>
+	<li><a href='http://trilema.com/2021/shield-for-murder/' title='Shield for murder'>Shield for murder</a></li>
+	<li><a href='http://trilema.com/2021/moral-myopia/' title='Moral myopia'>Moral myopia</a></li>
+	<li><a href='http://trilema.com/2021/amarcord/' title='Amarcord'>Amarcord</a></li>
+	<li><a href='http://trilema.com/2021/la-minorenne/' title='La minorenne'>La minorenne</a></li>
+	<li><a href='http://trilema.com/2021/the-deplorable-generation/' title='The deplorable generation'>The deplorable generation</a></li>
+	<li><a href='http://trilema.com/2021/breaking-usg-president-belect-pidden-announces-plans-to-sign-epochal-factaltering-change-footnote-executive-history/' title='BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!'>BREAKING : USG President-Belect Pidden Announces Plans To Sign Epochal Factaltering Change Footnote Executive History!</a></li>
+</ul></li>
+                
+
+        
+<li class="pagenav"><h5>Pages</h5><ul><li class="page_item page-item-220"><a href="http://trilema.com/archives-categories/" title="Archives &#038; Categories">Archives &#038; Categories</a></li>
+<li class="page_item page-item-34333"><a href="http://trilema.com/contact-pgp/" title="Contact ; PGP">Contact ; PGP</a></li>
+<li class="page_item page-item-181"><a href="http://trilema.com/copyright-notice/" title="Copyright Notice">Copyright Notice</a></li>
+<li class="page_item page-item-62578"><a href="http://trilema.com/eulora-shop/" title="Eulora Shop">Eulora Shop</a></li>
+<li class="page_item page-item-94098"><a href="http://trilema.com/in-the-press/" title="In the press">In the press</a></li>
+<li class="page_item page-item-39332"><a href="http://trilema.com/thesaurus-vocabulary/" title="Thesaurus &#038; Vocabulary">Thesaurus &#038; Vocabulary</a></li>
+</ul></li>
+<h5>Say NO! to platforms</h5>      
+<center><a href=http://trilema.com/2019/no-platforms/><img src=http://trilema.com/wp-content/uploads/2019/08/no-facebook.png></img></a></center>
+
+                                                        </ul>
+        </div>
+
+        <div id="sidebar_bot">
+</div>
+
+<div id="banners">
+
+</div>
+</div>
+		</div>		
+<div id="footer">			
+<a href="http://trilema.com/feed/" title="RSS Feed"><img src="http://trilema.com/wp-content/themes/trilema/images/rss.jpg" alt="Subscribe RSS" class="rss"/>
+</a>		
+Copyright &copy; 2008 - 
+2021 for all text and images.			
+<br /> 
+Trilema is. Everything else's just hearsay. 
+
+
+</div>	
+</div>
+</div>
+
+	
+<script type="text/javascript">function findPos(obj) {
+  var curtop = 0;
+  while (obj && obj.offsetParent) {
+    curtop += obj.offsetTop; // todo: + webkit-transform
+    obj = obj.offsetParent;
+  }
+  return curtop;
+}
+var artificial = null;
+var prevhash = "";
+function scrollToHash() {
+  if (document.location.hash.replace(/^#/, "")==prevhash.replace(/^#/, ""))
+    return;
+  prevhash = document.location.hash;
+  if (document.location.hash.match(/#selection-[0-9.]+%/)) {
+    var p = parseFloat(document.location.hash.substring(1));
+    if (0 < p && p < 100 /*&& p%5 != 0*/) {
+      var content = document.getElementById("shash-51698")
+      var y = findPos(content) + (content.offsetHeight)*p/100;
+      window.scrollTo(0, y-16);
+    }
+  }
+
+  var adr = document.location.hash.match(/#selection-(\d+).(\d+)-(\d+).(\d+)/);
+  if (adr) {
+    var pos=0,begin=null,end=null;
+    function recur(e) {
+      if (e.nodeType==1) pos = (pos&~1)+2;
+      if (e.nodeType==3) pos = pos|1;
+      if (pos==adr[1]) begin=[e, adr[2]];
+      if (pos==adr[3]) end  =[e, adr[4]];
+      for (var i=0; i<e.childNodes.length; i++)
+        recur(e.childNodes[i]);
+      if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+        pos = (pos&~1)+2;
+    }
+    // remove old "artificial" span if any
+    if (artificial) {
+      artificial.previousSibling.data += artificial.childNodes[0].data;
+      artificial.parentNode.removeChild(artificial);
+    }
+    var content = document.getElementById("shash-51698");
+    recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+    if (begin!=null && end!=null) {
+      // scroll to selection
+      if (begin[0].nodeType==3) {
+        var text = document.createTextNode(begin[0].data.substr(0, begin[1]));
+        artificial = document.createElement("SPAN");
+        artificial.appendChild(document.createTextNode(begin[0].data.substr(begin[1])));
+
+        begin[0].parentNode.insertBefore(text, begin[0]);
+        begin[0].parentNode.replaceChild(artificial, begin[0]);
+
+        if (end[0]===begin[0])
+          end = [artificial.childNodes[0], end[1]-begin[1]];
+        begin = [artificial.childNodes[0], 0];
+        /* window.scrollTo(0, findPos(artificial)-8); */ artificial.scrollIntoView(true);
+      } else if (begin[0].nodeType==1) {
+        /* window.scrollTo(0, findPos(begin[0])-8);   */ begin[0].scrollIntoView(true);
+      }
+
+      if (window.getSelection) {
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(begin[0], begin[1]);
+        range.setEnd  (  end[0],   end[1]);
+        sel.addRange(range);
+      } else if (document.selection) { // IE
+      }
+    }
+  }
+}
+window.onhashchange = scrollToHash;
+var initScrollToHashDone = false;
+function initScrollToHash() {
+  if (!initScrollToHashDone) {
+    initScrollToHashDone = true;
+    scrollToHash();
+  }
+}
+window.onload = initScrollToHash;
+setTimeout(initScrollToHash, 500); /* onload can be delayed by counter code */
+
+//document.onselectionchange = /* only webkit has working document.onselectionchange */
+document.onmousedown = document.onmouseup = function(e) {
+  var newhash = "";
+  if (window.getSelection) {
+    var sel=window.getSelection();
+    if (!sel.isCollapsed) {
+      var pos=0,begin=[0,0],end=[0,0];
+      var range=sel.getRangeAt(0);
+      function recur(e) {
+        if (e===artificial) {
+          if (range.startContainer===e.childNodes[0]) begin=[pos, e.previousSibling.data.length+range.startOffset];
+          if (range.endContainer  ===e.childNodes[0]) end  =[pos, e.previousSibling.data.length+range.endOffset ];
+        } else {
+          if (e.nodeType==1) pos = (pos&~1)+2;
+          if (e.nodeType==3) pos = pos|1;
+          if (range.startContainer===e) begin=[pos, range.startOffset];
+          if (range.endContainer  ===e) end  =[pos, range.endOffset ];
+          for (var i=0; i<e.childNodes.length; i++)
+            recur(e.childNodes[i]);
+          if (e.childNodes.length>0 && e.lastChild.nodeType==3)
+            pos = (pos&~1)+2;
+        }
+      }
+
+      var content = document.getElementById("shash-51698");
+      recur(content.childNodes[content.childNodes[0].nodeType==3 ? 1 : 0]);
+      if (begin[0]>0 && end[0]>0) {
+        newhash = "selection-"+begin[0]+"."+begin[1]+"-"+end[0]+"."+end[1];
+      }
+    }
+  } else if (document.selection) { // IE
+  }
+
+  try {
+    var oldhash = location.hash.replace(/^#/, "");
+    if (oldhash != newhash) {
+      prevhash = newhash; /* avoid firing window.onhashchange and scrolling */
+      if (history.replaceState)
+        history.replaceState('', document.title, newhash=="" ? window.location.pathname : '#'+newhash);
+      else
+        location.hash = newhash;
+    }
+  } catch(e) {
+  }
+};
+</script></body></html>
